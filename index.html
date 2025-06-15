@@ -320,12 +320,12 @@
     function updateRefIndicator() {
       // Eğer ref.txt seçili ise placeholder sade olsun, input temiz olsun ve disabled değil
       if(selectedRefFile.toLowerCase() === 'ref.txt') {
-        input.placeholder = '# Ref';
+        input.placeholder = '# Search';
         input.value = '';
         input.disabled = false; // İstersen burayı true yapabilirsin ama isteğe bağlı
       } else {
         // Diğer dosyalar seçilince placeholder gösterilsin
-        input.placeholder = `# Ref (${stripTxtExtension(selectedRefFile)})`;
+        input.placeholder = `# Search (${stripTxtExtension(selectedRefFile)})`;
         // input.value kalabilir, kullanıcı yazabilir
         input.disabled = false;
       }
