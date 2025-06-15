@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WormHole</title>
   <style>
+    /* (Aynı stil kodları, öncekiyle aynı) */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -184,8 +185,6 @@
     body.dark-mode .inventory-button:hover {
       background-color: #004085;
     }
-
-    /* Modal stilleri */
     #modal {
       display: none;
       position: fixed;
@@ -265,7 +264,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>. BridGe</h1>
+    <h1># BridGe</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
@@ -302,27 +301,47 @@
     const modalBody = document.getElementById('modalBody');
 
     let searchHistory = [];
-    const dataMap = {};
+    let dataMap = {};
     let stockData = [];
+    let selectedRefFile = 'ref.txt';
 
     title.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
 
-    async function fetchDataFiles() {
+    document.querySelector('.history-header h2').addEventListener('click', () => {
+      showRefSelector();
+    });
+
+    // Yardımcı: Dosya adından .txt uzantısını kaldırır (eğer varsa)
+    function stripTxtExtension(fileName) {
+      return fileName.replace(/\.txt$/i, '');
+    }
+
+    function updateRefIndicator() {
+      input.placeholder = `# Ref (${stripTxtExtension(selectedRefFile)})`;
+    }
+
+    async function fetchDataFiles(refFile = 'ref.txt') {
+      selectedRefFile = refFile;
       try {
-        const refResponse = await fetch('can.txt');
+        const refResponse = await fetch(refFile);
+        if (!refResponse.ok) throw new Error(`${refFile} bulunamadı`);
         const refText = await refResponse.text();
+        dataMap = {};
         refText.trim().split('\n').forEach(line => {
           const [key, value] = line.trim().split(/\s+/);
           if (key && value) dataMap[key] = value;
         });
 
         const stockResponse = await fetch('stok.txt');
+        if (!stockResponse.ok) throw new Error('stok.txt bulunamadı');
         const stockText = await stockResponse.text();
         stockData = stockText.trim().split('\n').map(line => line.trim().split(/\t/));
+
+        updateRefIndicator();
       } catch (err) {
-        showAlert('Dosyalar yüklenirken hata oluştu: ' + err, "Hata");
+        showAlert('Dosyalar yüklenirken hata oluştu: ' + err.message, "Hata");
       }
     }
 
@@ -361,7 +380,6 @@
       modal.focus();
     }
 
-    // Modal içinde alert yerine mesaj gösterimi
     function showAlert(message, title = "Uyarı") {
       document.getElementById('modalTitle').textContent = title;
       modalBody.innerHTML = `<p style="font-size:1.1em; padding: 1em 0; margin:0;">${message}</p>`;
@@ -374,8 +392,8 @@
       searchHistory.forEach(item => {
         const li = document.createElement('li');
 
-        const span = document.createElement('span');
         const matched = dataMap[item];
+        const span = document.createElement('span');
         span.textContent = matched ? `${item}\t${matched}` : item;
         span.className = 'search-text';
 
@@ -384,22 +402,11 @@
         inventoryButton.className = 'inventory-button';
         inventoryButton.onclick = () => {
           let searchValue = item;
-          if (/^\d{13}$/.test(searchValue)) {
-            const foundRow = stockData.find(row => row[0] === searchValue);
-            if (foundRow) {
-              showInModal(foundRow);
-            } else {
-              showAlert('Sap ile girişi kontrol edin.', "Bilgi");
-            }
-          } else if (matched) {
-            const foundRow = stockData.find(row => row[0] === matched);
-            if (foundRow) {
-              showInModal(foundRow);
-            } else {
-              showAlert('Sap ile girişi kontrol edin.', "Bilgi");
-            }
+          const foundRow = stockData.find(row => row[0] === (matched || searchValue));
+          if (foundRow) {
+            showInModal(foundRow);
           } else {
-            showAlert('Veri bulunamadı.', "Bilgi");
+            showAlert('Sap ile girişi kontrol edin.', "Bilgi");
           }
         };
 
@@ -422,6 +429,26 @@
         historyList.appendChild(li);
       });
     }
+
+    function showRefSelector() {
+      // Dosya adlarını sadece uzantısız göster
+      const files = ['ref.txt', 'ref1.txt', 'ref2.txt', 'ref3.txt'];
+      let html = '<div style="display: flex; flex-direction: column; gap: 1em;">';
+      html += files.map(file =>
+        `<button onclick="selectRefFile('${file}')" style="padding: 0.6em; border-radius: 6px; font-size: 1em; cursor: pointer;">${stripTxtExtension(file)}</button>`
+      ).join('');
+      html += '</div>';
+      document.getElementById('modalTitle').textContent = 'Ref Dosyası Seçin';
+      modalBody.innerHTML = html;
+      modal.style.display = 'flex';
+      modal.focus();
+    }
+
+    window.selectRefFile = function(fileName) {
+      fetchDataFiles(fileName);
+      modal.style.display = 'none';
+      modalBody.innerHTML = '';
+    };
 
     closeModalBtn.addEventListener('click', () => {
       modal.style.display = 'none';
