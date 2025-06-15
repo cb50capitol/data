@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WormHole</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1em;
+      background-color: #f5f5f5;
+      color: #222;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    h1, h2 {
+      text-align: center;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .search-container {
+      display: flex;
+      gap: 0.5em;
+      align-items: stretch;
+      margin-top: 1em;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      min-width: 100px;
+      max-width: calc(100% - 80px);
+      padding: 0.75em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      height: 42px;
+      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    }
+    #searchButton {
+      flex: 0 0 70px;
+      padding: 0 1em;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #e0e0e0;
+      cursor: pointer;
+      height: 42px;
+      transition: background-color 0.3s ease;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #searchButton:hover {
+      background-color: #ccc;
+    }
+    .history {
+      margin-top: 2em;
+    }
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5em;
+    }
+    .history-header .button-group {
+      display: flex;
+      gap: 0.5em;
+    }
+    .history-header h2 {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .clear-button {
+      padding: 0.4em 0.8em;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .clear-button:hover {
+      background-color: #b02a37;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 0;
+      border-bottom: 1px solid #eee;
+      gap: 0.5em;
+      transition: color 0.5s ease;
+    }
+    .search-text {
+      flex: 1;
+    }
+    .go-button {
+      padding: 0.4em 0.8em;
+      background-color: #28a745;
+      color: white !important;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .go-button:hover {
+      background-color: #218838;
+      color: white !important;
+    }
+    .inventory-button {
+      background-color: #007bff;
+      color: white !important;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      padding: 0.4em 0.8em;
+      transition: background-color 0.3s ease;
+    }
+    .inventory-button:hover {
+      background-color: #0056b3;
+      color: white !important;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    body.dark-mode .container {
+      background-color: #1e1e1e;
+      color: #eee;
+      box-shadow: none;
+    }
+    body.dark-mode input[type="text"] {
+      background-color: #333;
+      color: #eee;
+      border-color: #555;
+    }
+    body.dark-mode #searchButton {
+      background-color: #444;
+      border-color: #666;
+      color: #eee;
+    }
+    body.dark-mode #searchButton:hover {
+      background-color: #666;
+    }
+    body.dark-mode .clear-button {
+      background-color: #a33;
+      color: #eee;
+    }
+    body.dark-mode .clear-button:hover {
+      background-color: #700;
+    }
+    body.dark-mode .go-button {
+      background-color: #218838;
+      color: #eee !important;
+    }
+    body.dark-mode .go-button:hover {
+      background-color: #1c7430;
+    }
+    body.dark-mode .inventory-button {
+      background-color: #0056b3;
+      color: #eee !important;
+    }
+    body.dark-mode .inventory-button:hover {
+      background-color: #004085;
+    }
+
+    /* Modal styling */
+    #modalOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+    }
+    #modalContent {
+      background: white;
+      max-width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      border-radius: 10px;
+      padding: 1.5em 2em;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      font-size: 1em;
+      color: #222;
+      white-space: pre-line;
+    }
+    #modalClose {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      background: #dc3545;
+      border: none;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    #modalClose:hover {
+      background: #b02a37;
+    }
+    body.dark-mode #modalContent {
+      background: #1e1e1e;
+      color: #eee;
+      box-shadow: none;
+    }
+    body.dark-mode #modalClose {
+      background: #a33;
+    }
+    body.dark-mode #modalClose:hover {
+      background: #700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>. BridGe</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
+      <button id="searchButton" type="button" title="Ara">Scan</button>
+    </div>
+    <div class="history">
+      <div class="history-header">
+        <h2>Log</h2>
+        <div class="button-group">
+          <button id="clearButton" class="clear-button">Void</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div id="modalContent">
+      <button id="modalClose" aria-label="Kapat">&times;</button>
+      <h2 id="modalTitle" style="text-align:center; margin-top: 0;">Bölüm Detayları</h2>
+      <pre id="modalText" style="white-space: pre-wrap;"></pre>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const historyList = document.getElementById('historyList');
+    const clearButton = document.getElementById('clearButton');
+    const searchButton = document.getElementById('searchButton');
+    const title = document.querySelector('h1');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const modalText = document.getElementById('modalText');
+
+    let searchHistory = [];
+    let dataMap = {};
+    let stockData = [];
+
+    // ref.txt dosyasını yükle ve dataMap oluştur
+    fetch('ref.txt')
+      .then(response => {
+        if (!response.ok) throw new Error('ref.txt yüklenemedi');
+        return response.text();
+      })
+      .then(text => {
+        dataMap = {};
+        text.trim().split('\n').forEach(line => {
+          const [key, value] = line.trim().split(/\s+/);
+          if (key && value) dataMap[key] = value;
+        });
+      })
+      .catch(err => {
+        console.error('ref.txt yüklenirken hata:', err);
+      });
+
+    // stok.txt dosyasını yükle
+    fetch('stok.txt')
+      .then(response => {
+        if (!response.ok) throw new Error('stok.txt yüklenemedi');
+        return response.text();
+      })
+      .then(text => {
+        stockData = text.trim().split('\n').map(line => line.trim().split(/\s+/));
+      })
+      .catch(err => {
+        console.error('stok.txt yüklenirken hata:', err);
+      });
+
+    // Dark mode toggle via title click
+    title.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    function doSearch() {
+      const value = input.value.trim();
+      if (value !== '') {
+        searchHistory.unshift(value);
+        searchHistory = searchHistory.slice(0, 15);
+        updateHistory();
+        input.value = '';
+      }
+    }
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+    searchButton.addEventListener('click', doSearch);
+    searchButton.addEventListener('touchstart', doSearch);
+
+    clearButton.addEventListener('click', () => {
+      searchHistory = [];
+      updateHistory();
+    });
+
+    function updateHistory() {
+      historyList.innerHTML = '';
+      searchHistory.forEach(item => {
+        const li = document.createElement('li');
+
+        const span = document.createElement('span');
+        const matched = dataMap[item];
+        span.textContent = matched ? `${item}\t${matched}` : item;
+        span.className = 'search-text';
+
+        const goButton = document.createElement('button');
+        goButton.textContent = 'Pathway';
+        goButton.className = 'go-button';
+        goButton.onclick = () => {
+          if (matched) {
+            const trimmed = matched.slice(0, -3);
+            const url = `https://www.boyner.com.tr/search?q=${trimmed}`;
+            window.open(url, '_blank');
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        const inventoryButton = document.createElement('button');
+        inventoryButton.textContent = 'Section';
+        inventoryButton.className = 'inventory-button';
+        inventoryButton.onclick = () => {
+          if (matched) {
+            const foundRow = stockData.find(row => row[0] === matched);
+            if (foundRow) {
+              // Modal göster
+              modalText.textContent = foundRow.join('\n');
+              openModal();
+            } else {
+              alert('stok.txt dosyasında veri bulunamadı.');
+            }
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        li.appendChild(span);
+        li.appendChild(inventoryButton);
+        li.appendChild(goButton);
+        historyList.appendChild(li);
+      });
+    }
+
+    function openModal() {
+      modalOverlay.style.display = 'flex';
+      modalOverlay.focus();
+      // Scroll top modal içerik için (isteğe bağlı)
+      modalText.scrollTop = 0;
+    }
+    function closeModal() {
+      modalOverlay.style.display = 'none';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', e => {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+    // Escape ile modal kapatma
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
