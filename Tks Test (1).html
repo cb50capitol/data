@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arama Sayfası</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1em;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2em;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75em;
+      margin-top: 1em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .history {
+      margin-top: 2em;
+    }
+
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5em;
+    }
+
+    .history-header h2 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .clear-button {
+      padding: 0.4em 0.8em;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .clear-button:hover {
+      background-color: #b02a37;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 0;
+      border-bottom: 1px solid #eee;
+      gap: 0.5em;
+    }
+
+    .search-text {
+      flex: 1;
+    }
+
+    .go-button {
+      padding: 0.4em 0.8em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .go-button:hover {
+      background-color: #0056b3;
+    }
+
+    .inventory-button {
+      background-color: #28a745;
+    }
+
+    .inventory-button:hover {
+      background-color: #1e7e34;
+    }
+
+    .search-container {
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+    }
+
+    #searchButton {
+      padding: 0.4em 0.6em;
+      font-size: 0.9em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #e0e0e0;
+      cursor: pointer;
+    }
+
+    #searchButton:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Görsel Arama</h1>
+    <!-- Yeni Arama Alanı -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Liste Sıra No" inputmode="numeric" pattern="[0-9]*" />
+      <!-- Butonun type'ını "button" olarak belirliyoruz -->
+      <button id="searchButton" type="button" title="Ara">Ara</button>
+    </div>
+
+    <div class="history">
+      <div class="history-header">
+        <h2>Log</h2>
+        <button id="clearButton" class="clear-button">Temizle</button>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const historyList = document.getElementById('historyList');
+    const clearButton = document.getElementById('clearButton');
+    const searchButton = document.getElementById('searchButton');
+    let searchHistory = [];
+
+    const dataMap = {};
+
+    // Arama yapılacak fonksiyon
+    function doSearch() {
+      const value = input.value.trim();
+      if (value !== '') {
+        searchHistory.unshift(value);
+        searchHistory = searchHistory.slice(0, 15);
+        updateHistory();
+        input.value = '';
+      }
+    }
+
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        doSearch();
+      }
+    });
+
+    // "Ara" butonuna tıklama olayını hem "click" hem de "touchstart" ile dinliyoruz
+    searchButton.addEventListener('click', function () {
+      doSearch();
+    });
+
+    searchButton.addEventListener('touchstart', function () {
+      doSearch();
+    });
+
+    clearButton.addEventListener('click', function () {
+      searchHistory = [];
+      updateHistory();
+    });
+
+    function updateHistory() {
+      historyList.innerHTML = '';
+      searchHistory.forEach(item => {
+        const li = document.createElement('li');
+
+        const span = document.createElement('span');
+        const matched = dataMap[item];
+        span.textContent = matched ? `${item}\t${matched}` : item;
+        span.className = 'search-text';
+
+        // Ürüne Git butonu
+        const goButton = document.createElement('button');
+        goButton.textContent = 'Ürüne Git';
+        goButton.className = 'go-button';
+        goButton.onclick = () => {
+          if (matched) {
+            const trimmed = matched.slice(0, -3);
+            const url = `https://www.boyner.com.tr/search?q=${trimmed}`;
+            window.open(url, '_blank');
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        // Envanter butonu
+        const inventoryButton = document.createElement('button');
+        inventoryButton.textContent = 'Envanter';
+        inventoryButton.className = 'go-button inventory-button';
+        inventoryButton.onclick = () => {
+          if (matched) {
+            try {
+              const textarea = document.createElement('textarea');
+              textarea.value = matched;
+              document.body.appendChild(textarea);
+              textarea.select();
+              document.execCommand('copy');
+              document.body.removeChild(textarea);
+
+              const invUrl = 'https://script.google.com/macros/s/AKfycbwAw40MKVlnh1hQNS1W8ZzRqJaRgLGYzd1iZfpb3-O_Bs4LXpa3u7P-11QKrZjRxTdY/exec';
+              window.open(invUrl, '_blank');
+            } catch (err) {
+              alert('Kopyalama başarısız oldu: ' + err);
+            }
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        li.appendChild(span);
+        li.appendChild(inventoryButton);
+        li.appendChild(goButton);
+        historyList.appendChild(li);
+      });
+    }
+
+    // ✅ VERİLERİ BURAYA YAPIŞTIR
+    const rawData = 
+`1 5003165591003
+2 5003165468006
+3 5003046777001
+4 5002989410005
+5 5003242753004
+6 5003265818003
+7 5003087712008
+8 5003230495001
+9 5003118926006
+10 5002633830002
+11 5002803551005
+12 5003180162001
+13 5003175286002
+14 5003238030001
+15 5003270796002`;
+
+    rawData.trim().split('\n').forEach(line => {
+      const [key, value] = line.trim().split(/\s+/);
+      if (key && value) {
+        dataMap[key] = value;
+      }
+    });
+  </script>
+</body>
+</html>
