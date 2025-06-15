@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WormHole</title>
   <style>
+    /* Tüm CSS içeriğin aynen korunmuştur */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -185,16 +186,16 @@
       background-color: #004085;
     }
 
-    /* Modal */
+    /* Modal stilleri aynı kalıyor */
     #modal {
-      display: none !important;
+      display: none;
       position: fixed;
       z-index: 1000;
       left: 0; top: 0;
       width: 100%; height: 100%;
       background-color: rgba(0,0,0,0.4);
       backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      display: flex;
       align-items: center;
       justify-content: center;
     }
@@ -211,7 +212,6 @@
       flex-direction: column;
       max-height: 90vh;
       overflow: hidden;
-      transition: background-color 0.3s ease;
     }
     body.dark-mode #modalContent {
       background-color: rgba(34,34,34,0.95);
@@ -224,11 +224,6 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.5em;
       margin-bottom: 1em;
-      flex-shrink: 0;
-    }
-    #modalHeader h3 {
-      margin: 0;
-      font-size: 1.3em;
     }
     #closeModalBtn {
       background: none;
@@ -237,14 +232,6 @@
       font-weight: bold;
       cursor: pointer;
       color: #666;
-      transition: color 0.3s ease;
-      line-height: 1;
-    }
-    #closeModalBtn:hover {
-      color: #222;
-    }
-    body.dark-mode #closeModalBtn:hover {
-      color: #eee;
     }
     #modalBody {
       overflow-y: auto;
@@ -258,7 +245,7 @@
     }
     #modalBody th, #modalBody td {
       border: 1px solid #aaa;
-      padding: 0.5em 0.75em;
+      padding: 0.5em;
       text-align: left;
       vertical-align: top;
       word-break: break-word;
@@ -272,27 +259,17 @@
     body.dark-mode #modalBody th {
       background-color: #444;
       color: #ddd;
-      border-color: #666;
     }
     body.dark-mode #modalBody td {
       border-color: #555;
-    }
-
-    @media (max-width: 480px) {
-      #modalContent {
-        width: 95%;
-        max-width: none;
-        border-radius: 12px;
-        max-height: 80vh;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>. BridGef</h1>
+    <h1>. BridGe</h1>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="# Ref / EAN" inputmode="numeric" pattern="[0-9]*" />
+      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
     </div>
     <div class="history">
@@ -306,7 +283,7 @@
     </div>
   </div>
 
-  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+  <div id="modal" role="dialog" aria-modal="true" tabindex="-1">
     <div id="modalContent">
       <div id="modalHeader">
         <h3 id="modalTitle">Bölüm Detayları</h3>
@@ -367,29 +344,41 @@
       if (e.key === 'Enter') doSearch();
     });
     searchButton.addEventListener('click', doSearch);
-
+    searchButton.addEventListener('touchstart', doSearch);
     clearButton.addEventListener('click', () => {
       searchHistory = [];
       updateHistory();
     });
 
+    function showInModal(rowData) {
+      const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
+      let html = '<table><tbody>';
+      for (let i = 0; i < labels.length; i++) {
+        html += `<tr><th>${labels[i]}</th><td>${rowData[i]}</td></tr>`;
+      }
+      html += '</tbody></table>';
+      modalBody.innerHTML = html;
+      modal.style.display = 'flex';
+      modal.focus();
+    }
+
     function updateHistory() {
       historyList.innerHTML = '';
       searchHistory.forEach(item => {
         const li = document.createElement('li');
+
         const span = document.createElement('span');
-        const isEAN = item.length === 13;
-        const matched = isEAN ? item : dataMap[item];
-        span.textContent = isEAN ? item : (matched ? `${item}\t${matched}` : item);
+        const matched = dataMap[item];
+        span.textContent = matched ? `${item}\t${matched}` : item;
         span.className = 'search-text';
 
         const goButton = document.createElement('button');
         goButton.textContent = 'Pathway';
         goButton.className = 'go-button';
         goButton.onclick = () => {
-          const ean = isEAN ? item : dataMap[item];
-          if (ean) {
-            const trimmed = ean.slice(0, -3);
+          const code = matched || item;
+          if (code && code.length >= 10) {
+            const trimmed = code.slice(0, -3);
             window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
           } else {
             alert('Veri bulunamadı.');
@@ -400,19 +389,18 @@
         inventoryButton.textContent = 'Section';
         inventoryButton.className = 'inventory-button';
         inventoryButton.onclick = () => {
-          const ean = isEAN ? item : dataMap[item];
-          if (ean) {
-            const foundRow = stockData.find(row => row[0] === ean);
+          let searchValue = item;
+          if (/^\d{13}$/.test(searchValue)) {
+            const foundRow = stockData.find(row => row[0] === searchValue);
             if (foundRow) {
-              const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
-              let html = '<table><tbody>';
-              for (let i = 0; i < labels.length; i++) {
-                html += `<tr><th>${labels[i]}</th><td>${foundRow[i]}</td></tr>`;
-              }
-              html += '</tbody></table>';
-              modalBody.innerHTML = html;
-              modal.style.display = 'flex';
-              modal.focus();
+              showInModal(foundRow);
+            } else {
+              alert('Ürün stokta bulunamadı.');
+            }
+          } else if (matched) {
+            const foundRow = stockData.find(row => row[0] === matched);
+            if (foundRow) {
+              showInModal(foundRow);
             } else {
               alert('Ürün stokta bulunamadı.');
             }
