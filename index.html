@@ -361,7 +361,7 @@
       modal.focus();
     }
 
-    // Yeni fonksiyon: Modal içinde alert yerine mesaj gösterimi
+    // Modal içinde alert yerine mesaj gösterimi
     function showAlert(message, title = "Uyarı") {
       document.getElementById('modalTitle').textContent = title;
       modalBody.innerHTML = `<p style="font-size:1.1em; padding: 1em 0; margin:0;">${message}</p>`;
@@ -378,19 +378,6 @@
         const matched = dataMap[item];
         span.textContent = matched ? `${item}\t${matched}` : item;
         span.className = 'search-text';
-
-        const goButton = document.createElement('button');
-        goButton.textContent = 'Pathway';
-        goButton.className = 'go-button';
-        goButton.onclick = () => {
-          const code = matched || item;
-          if (code && code.length >= 10) {
-            const trimmed = code.slice(0, -3);
-            window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
-          } else {
-            showAlert('Veri bulunamadı.', "Bilgi");
-          }
-        };
 
         const inventoryButton = document.createElement('button');
         inventoryButton.textContent = 'Section';
@@ -416,9 +403,22 @@
           }
         };
 
+        const goButton = document.createElement('button');
+        goButton.textContent = 'Pathway';
+        goButton.className = 'go-button';
+        goButton.onclick = () => {
+          const code = matched || item;
+          if (code && code.length >= 10) {
+            const trimmed = code.slice(0, -3);
+            window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
+          } else {
+            showAlert('Veri bulunamadı.', "Bilgi");
+          }
+        };
+
         li.appendChild(span);
-        li.appendChild(goButton);
         li.appendChild(inventoryButton);
+        li.appendChild(goButton);
         historyList.appendChild(li);
       });
     }
