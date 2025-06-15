@@ -418,17 +418,19 @@
             showAlert('Sap ile girişi kontrol edin.', "Bilgi");
           }
         };
+const goButton = document.createElement('button');
+goButton.textContent = 'Pathway';
+goButton.className = 'go-button';
+goButton.onclick = () => {
+  const code = matched || item;
+  if (code && code.length >= 10) {
+    const trimmed = code.slice(0, -3);
+    window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
+  } else {
+    showAlert('Veri bulunamadı.', "Bilgi");
+  }
+};
 
-        const goButton = document.createElement('button');
-        goButton.textContent = 'Pathway';
-        goButton.className = 'go-button';
-        goButton.onclick = () => {
-          if (matched) {
-            window.open(`https://www.boyner.com.tr/search?q=${matched}`, '_blank');
-          } else {
-            alert('Eşleşen bir veri bulunamadı.');
-          }
-        };
 
         li.appendChild(span);
         li.appendChild(inventoryButton);
