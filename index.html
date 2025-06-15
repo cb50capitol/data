@@ -139,14 +139,28 @@
     searchButton.addEventListener('click', doSearch);
     clearButton.addEventListener('click', ()=>{ searchHistory=[]; updateHistory(); });
 
-    function showInModal(row){
-      const labels=['Sku','Ean','Ürün','Lokasyon','Section','Adet'];
-      let h='<table><tbody>';
-      for(let i=0;i<labels.length;i++) h+=`<tr><th>${labels[i]}</th><td>${row[i]||''}</td></tr>`;
-      h+='</tbody></table>';
-      modalBody.innerHTML=h;
-      document.getElementById('modalTitle').textContent='Bölüm Detayları';
-      modal.style.display='flex';
+    function showInModal(sku){
+      const matches = stockData.filter(row => row[0] === sku);
+      if (matches.length === 0) {
+        showAlert('Sap ile girişi kontrol edin.','Bilgi');
+        return;
+      }
+
+      const labels = ['Sku','Ean','Ürün'];
+      let h = '<table><tbody>';
+      for (let i = 0; i < labels.length; i++) {
+        h += `<tr><th>${labels[i]}</th><td>${matches[0][i] || ''}</td></tr>`;
+      }
+      h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
+      h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
+      matches.forEach(row => {
+        h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`;
+      });
+      h += '</tbody></table>';
+
+      modalBody.innerHTML = h;
+      document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
+      modal.style.display = 'flex';
     }
 
     function showAlert(msg,t='Uyarı'){
@@ -165,7 +179,7 @@
         span.className='search-text';
         const inv=document.createElement('button');
         inv.textContent='Section'; inv.className='inventory-button';
-        inv.onclick=()=>{ const f=stockData.find(r=>r[0]===code); f?showInModal(f):showAlert('Sap ile girişi kontrol edin.','Bilgi'); };
+        inv.onclick=()=> showInModal(code);
         const go=document.createElement('button');
         go.textContent='Pathway'; go.className='go-button';
         go.onclick=()=> {
