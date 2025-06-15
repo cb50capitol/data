@@ -5,260 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WormHole</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 1em;
-      background-color: #f5f5f5;
-      color: #222;
-      transition: background-color 0.5s ease, color 0.5s ease;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background-color: white;
-      padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 2em;
-      transition: background-color 0.5s ease, color 0.5s ease;
-    }
-    h1, h2 {
-      text-align: center;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-    .search-container {
-      display: flex;
-      gap: 0.5em;
-      align-items: stretch;
-      margin-top: 1em;
-    }
-    input[type="text"] {
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: 0;
-      min-width: 100px;
-      max-width: calc(100% - 80px);
-      padding: 0.75em;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-sizing: border-box;
-      height: 42px;
-      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
-    }
-    #searchButton {
-      flex: 0 0 70px;
-      padding: 0 1em;
-      font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      background-color: #e0e0e0;
-      cursor: pointer;
-      height: 42px;
-      transition: background-color 0.3s ease;
-      color: #222;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #searchButton:hover {
-      background-color: #ccc;
-    }
-    .history {
-      margin-top: 2em;
-    }
-    .history-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.5em;
-    }
-    .history-header .button-group {
-      display: flex;
-      gap: 0.5em;
-    }
-    .history-header h2 {
-      margin: 0;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-    .clear-button {
-      padding: 0.4em 0.8em;
-      background-color: #dc3545;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
-    .clear-button:hover {
-      background-color: #b02a37;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5em 0;
-      border-bottom: 1px solid #eee;
-      gap: 0.5em;
-      transition: color 0.5s ease;
-    }
-    .search-text {
-      flex: 1;
-      word-break: break-word;
-    }
-    .go-button {
-      padding: 0.4em 0.8em;
-      background-color: #28a745;
-      color: white !important;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .go-button:hover {
-      background-color: #218838;
-      color: white !important;
-    }
-    .inventory-button {
-      background-color: #007bff;
-      color: white !important;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      padding: 0.4em 0.8em;
-      transition: background-color 0.3s ease;
-    }
-    .inventory-button:hover {
-      background-color: #0056b3;
-      color: white !important;
-    }
-    body.dark-mode {
-      background-color: #121212;
-      color: #eee;
-    }
-    body.dark-mode .container {
-      background-color: #1e1e1e;
-      color: #eee;
-      box-shadow: none;
-    }
-    body.dark-mode input[type="text"] {
-      background-color: #333;
-      color: #eee;
-      border-color: #555;
-    }
-    body.dark-mode #searchButton {
-      background-color: #444;
-      border-color: #666;
-      color: #eee;
-    }
-    body.dark-mode #searchButton:hover {
-      background-color: #666;
-    }
-    body.dark-mode .clear-button {
-      background-color: #a33;
-      color: #eee;
-    }
-    body.dark-mode .clear-button:hover {
-      background-color: #700;
-    }
-    body.dark-mode .go-button {
-      background-color: #218838;
-      color: #eee !important;
-    }
-    body.dark-mode .go-button:hover {
-      background-color: #1c7430;
-    }
-    body.dark-mode .inventory-button {
-      background-color: #0056b3;
-      color: #eee !important;
-    }
-    body.dark-mode .inventory-button:hover {
-      background-color: #004085;
-    }
-    #modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.4);
-      backdrop-filter: blur(5px);
-      align-items: center;
-      justify-content: center;
-    }
-    #modalContent {
-      background-color: rgba(255,255,255,0.95);
-      max-width: 360px;
-      width: 90%;
-      border-radius: 14px;
-      padding: 1.5em 2em 2em;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-      color: #222;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      max-height: 90vh;
-      overflow: hidden;
-    }
-    body.dark-mode #modalContent {
-      background-color: rgba(34,34,34,0.95);
-      color: #eee;
-    }
-    #modalHeader {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.5em;
-      margin-bottom: 1em;
-    }
-    #closeModalBtn {
-      background: none;
-      border: none;
-      font-size: 1.6em;
-      font-weight: bold;
-      cursor: pointer;
-      color: #666;
-    }
-    #modalBody {
-      overflow-y: auto;
-      flex-grow: 1;
-      max-height: calc(90vh - 100px);
-      font-size: 0.95em;
-    }
-    #modalBody table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    #modalBody th, #modalBody td {
-      border: 1px solid #aaa;
-      padding: 0.5em;
-      text-align: left;
-      vertical-align: top;
-      word-break: break-word;
-    }
-    #modalBody th {
-      background-color: #eee;
-      width: 30%;
-      font-weight: 600;
-      color: #333;
-    }
-    body.dark-mode #modalBody th {
-      background-color: #444;
-      color: #ddd;
-    }
-    body.dark-mode #modalBody td {
-      border-color: #555;
-    }
+    body { font-family: Arial,sans-serif; margin:0; padding:1em; background:#f5f5f5; color:#222; transition:background .5s,color .5s;}
+    .container { max-width:600px; margin:auto; background:#fff; padding:2em; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align:center; font-size:1.5em; cursor:pointer; margin:0; }
+
+    .search-container { position:relative; margin-top:1em; }
+    .search-container input { width:100%; padding:0.75em 2.5em 0.75em 1em; font-size:1em; border:1px solid #ccc; border-radius:999px; box-sizing:border-box; height:48px; background:#fff; color:#222; transition:border .2s;}
+    .search-container input:focus { outline:none; border-color:#007bff; }
+
+    #searchButton { position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; padding:0; cursor:pointer; height:32px; width:32px; display:flex; align-items:center; justify-content:center; color:#555; }
+    #searchButton svg { width:20px; height:20px; fill:currentColor; }
+    #searchButton:hover { color:#000; }
+
+    .history { margin-top:2em;}
+    .history-header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; }
+    .clear-button { padding:0.4em 0.8em; background:#dc3545; color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:1em; }
+    .clear-button:hover { background:#b02a37; }
+    ul { list-style:none; padding-left:0; }
+    li { display:flex; justify-content:space-between; align-items:center; padding:0.5em 0; border-bottom:1px solid #eee; gap:0.5em; }
+    .search-text { flex:1; word-break:break-word; }
+    .go-button, .inventory-button { padding:0.4em 0.8em; border:none; border-radius:6px; cursor:pointer; color:#fff; }
+    .go-button { background:#28a745; }
+    .go-button:hover { background:#218838; }
+    .inventory-button { background:#007bff; }
+    .inventory-button:hover { background:#0056b3; }
+
+    .ref-selector-button { background:#000; border:none; padding:0.4em 1em; border-radius:8px; font-size:1em; font-weight:bold; cursor:pointer; display:inline-flex; gap:0.2em; }
+    .ref-selector-button .log { color:yellow; }
+    .ref-selector-button .in { color:white; }
+    .ref-selector-button:hover { opacity:0.85; }
+
+    body.dark-mode { background:#121212; color:#eee; }
+    body.dark-mode .container { background:#1e1e1e; color:#eee; }
+    body.dark-mode input { background:#333; color:#eee; border-color:#555; }
+    body.dark-mode input:focus { border-color:#66b0ff; }
+    body.dark-mode #searchButton { color:#ccc; }
+    body.dark-mode #searchButton:hover { color:#fff; }
+    body.dark-mode .clear-button { background:#a33; }
+    body.dark-mode .clear-button:hover { background:#700; }
+    body.dark-mode .go-button { background:#218838; }
+    body.dark-mode .go-button:hover { background:#1c7430; }
+    body.dark-mode .inventory-button { background:#0056b3; }
+    body.dark-mode .inventory-button:hover { background:#004085; }
+    body.dark-mode .ref-selector-button { background:#222; }
+
+    #modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.4); backdrop-filter:blur(5px); align-items:center; justify-content:center; }
+    #modalContent { background:rgba(255,255,255,0.95); max-width:360px; width:90%; border-radius:14px; padding:1.5em 2em 2em; box-shadow:0 8px 24px rgba(0,0,0,0.25); color:#222; display:flex; flex-direction:column; max-height:90vh; overflow:hidden; }
+    body.dark-mode #modalContent { background:rgba(34,34,34,0.95); color:#eee; }
+    #modalHeader { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; margin-bottom:1em; }
+    #closeModalBtn { background:none; border:none; font-size:1.6em; font-weight:bold; cursor:pointer; color:#666; }
+    #modalBody { overflow-y:auto; flex-grow:1; max-height:calc(90vh - 100px); font-size:0.95em; }
+    #modalBody table { width:100%; border-collapse:collapse; }
+    #modalBody th, #modalBody td { border:1px solid #aaa; padding:0.5em; text-align:left; }
+    #modalBody th { background:#eee; width:30%; }
+    body.dark-mode #modalBody th { background:#444; color:#ddd; }
+    body.dark-mode #modalBody td { border-color:#555; }
   </style>
 </head>
 <body>
@@ -266,20 +67,20 @@
     <h1># BridGe</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
-      <button id="searchButton" type="button" title="Ara">Scan</button>
+      <button id="searchButton" type="button" title="Ara">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
+      </button>
     </div>
     <div class="history">
       <div class="history-header">
-        <h2>Log</h2>
-        <div class="button-group">
-          <button id="clearButton" class="clear-button">Void</button>
-        </div>
+        <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
+        <button id="clearButton" class="clear-button">Void</button>
       </div>
       <ul id="historyList"></ul>
     </div>
   </div>
 
-  <div id="modal" role="dialog" aria-modal="true" tabindex="-1">
+  <div id="modal" role="dialog" tabindex="-1">
     <div id="modalContent">
       <div id="modalHeader">
         <h3 id="modalTitle">Bölüm Detayları</h3>
@@ -298,191 +99,104 @@
     const modal = document.getElementById('modal');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modalBody = document.getElementById('modalBody');
+    const refSelectorButton = document.getElementById('refSelectorButton');
 
-    let searchHistory = [];
-    let dataMap = {};
-    let stockData = [];
-    let selectedRefFile = 'Genel.txt';
+    let searchHistory = [], dataMap = {}, stockData = [], selectedRefFile = 'Genel.txt';
 
-    title.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
+    title.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
+    refSelectorButton.addEventListener('click', showRefSelector);
 
-    document.querySelector('.history-header h2').addEventListener('click', () => {
-      showRefSelector();
-    });
-
-    // Dosya adından .txt uzantısını kaldırır
-    function stripTxtExtension(fileName) {
-      return fileName.replace(/\.txt$/i, '');
-    }
-
+    function stripTxtExtension(n) { return n.replace(/\.txt$/i, ''); }
     function updateRefIndicator() {
-      // Eğer ref.txt seçili ise placeholder sade olsun, input temiz olsun ve disabled değil
-      if(selectedRefFile.toLowerCase() === 'genel.txt') {
-        input.placeholder = '# Search';
-        input.value = '';
-        input.disabled = false; // İstersen burayı true yapabilirsin ama isteğe bağlı
-      } else {
-        // Diğer dosyalar seçilince placeholder gösterilsin
-        input.placeholder = `# Search (${stripTxtExtension(selectedRefFile)})`;
-        // input.value kalabilir, kullanıcı yazabilir
-        input.disabled = false;
-      }
+      input.placeholder = selectedRefFile.toLowerCase()==='genel.txt'? '# Search' : `# Search (${stripTxtExtension(selectedRefFile)})`;
+      input.disabled = false;
     }
 
-    async function fetchDataFiles(refFile = 'Genel.txt') {
-      selectedRefFile = refFile;
+    async function fetchDataFiles(file='Genel.txt') {
+      selectedRefFile = file;
       try {
-        const refResponse = await fetch(refFile);
-        if (!refResponse.ok) throw new Error(`${refFile} bulunamadı`);
-        const refText = await refResponse.text();
-        dataMap = {};
-        refText.trim().split('\n').forEach(line => {
-          const [key, value] = line.trim().split(/\s+/);
-          if (key && value) dataMap[key] = value;
-        });
-
-        const stockResponse = await fetch('stok.txt');
-        if (!stockResponse.ok) throw new Error('stok.txt bulunamadı');
-        const stockText = await stockResponse.text();
-        stockData = stockText.trim().split('\n').map(line => line.trim().split('\t'));
-
+        const resp = await fetch(file);
+        if(!resp.ok) throw new Error(`${file} bulunamadı`);
+        const text = await resp.text();
+        dataMap = {}; text.trim().split('\n').forEach(l=>{ const [k,v]=l.trim().split(/\s+/); if(k&&v)dataMap[k]=v; });
+        const sr = await fetch('stok.txt'); if(!sr.ok) throw new Error('stok.txt bulunamadı');
+        stockData = (await sr.text()).trim().split('\n').map(r=>r.trim().split('\t'));
         updateRefIndicator();
-      } catch (err) {
-        showAlert('Dosyalar yüklenirken hata oluştu: ' + err.message, "Hata");
-      }
+      } catch(err) { showAlert('Dosyalar yüklenirken hata: '+err.message, 'Hata'); }
     }
 
     fetchDataFiles();
 
-    function doSearch() {
-      const value = input.value.trim();
-      if (value !== '') {
-        searchHistory.unshift(value);
-        searchHistory = searchHistory.slice(0, 15);
-        updateHistory();
-        input.value = '';
-      }
-    }
-
-    input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') doSearch();
-    });
-    searchButton.addEventListener('click', doSearch);
-    searchButton.addEventListener('touchstart', doSearch);
-    clearButton.addEventListener('click', () => {
-      searchHistory = [];
+    function doSearch(){
+      const v=input.value.trim();
+      if(!v)return;
+      searchHistory.unshift(v);
+      searchHistory=searchHistory.slice(0,15);
       updateHistory();
-    });
+      input.value='';
+    }
+    input.addEventListener('keydown', e=>{ if(e.key==='Enter') doSearch(); });
+    searchButton.addEventListener('click', doSearch);
+    clearButton.addEventListener('click', ()=>{ searchHistory=[]; updateHistory(); });
 
-    function showInModal(rowData) {
-      const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
-      let html = '<table><tbody>';
-      for (let i = 0; i < labels.length; i++) {
-        html += `<tr><th>${labels[i]}</th><td>${rowData[i]}</td></tr>`;
-      }
-      html += '</tbody></table>';
-      modalBody.innerHTML = html;
-      document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
-      modal.style.display = 'flex';
-      modal.focus();
+    function showInModal(row){
+      const labels=['Sku','Ean','Ürün','Lokasyon','Section','Adet'];
+      let h='<table><tbody>';
+      for(let i=0;i<labels.length;i++) h+=`<tr><th>${labels[i]}</th><td>${row[i]||''}</td></tr>`;
+      h+='</tbody></table>';
+      modalBody.innerHTML=h;
+      document.getElementById('modalTitle').textContent='Bölüm Detayları';
+      modal.style.display='flex';
     }
 
-    function showAlert(message, title = "Uyarı") {
-      document.getElementById('modalTitle').textContent = title;
-      modalBody.innerHTML = `<p style="font-size:1.1em; padding: 1em 0; margin:0;">${message}</p>`;
-      modal.style.display = 'flex';
-      modal.focus();
+    function showAlert(msg,t='Uyarı'){
+      document.getElementById('modalTitle').textContent=t;
+      modalBody.innerHTML=`<p style="font-size:1.1em;padding:1em 0;margin:0;">${msg}</p>`;
+      modal.style.display='flex';
     }
 
-    function updateHistory() {
-      historyList.innerHTML = '';
-      searchHistory.forEach(item => {
-        const matched = dataMap[item];
-        const li = document.createElement('li');
-
-        const span = document.createElement('span');
-        span.textContent = matched ? `${item}\t${matched}` : item;
-        span.className = 'search-text';
-
-        const inventoryButton = document.createElement('button');
-        inventoryButton.textContent = 'Section';
-        inventoryButton.className = 'inventory-button';
-        inventoryButton.onclick = () => {
-          let searchValue = item;
-          const foundRow = stockData.find(row => row[0] === (matched || searchValue));
-          if (foundRow) {
-            showInModal(foundRow);
-          } else {
-            showAlert('Sap ile girişi kontrol edin.', "Bilgi");
-          }
+    function updateHistory(){
+      historyList.innerHTML='';
+      searchHistory.forEach(item=>{
+        const m=dataMap[item], code=m||item;
+        const li=document.createElement('li');
+        const span=document.createElement('span');
+        span.textContent=m?`${item}\t${m}`:item;
+        span.className='search-text';
+        const inv=document.createElement('button');
+        inv.textContent='Section'; inv.className='inventory-button';
+        inv.onclick=()=>{ const f=stockData.find(r=>r[0]===code); f?showInModal(f):showAlert('Sap ile girişi kontrol edin.','Bilgi'); };
+        const go=document.createElement('button');
+        go.textContent='Pathway'; go.className='go-button';
+        go.onclick=()=> {
+          if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank');
+          else showAlert('Veri bulunamadı.','Bilgi');
         };
-const goButton = document.createElement('button');
-goButton.textContent = 'Pathway';
-goButton.className = 'go-button';
-goButton.onclick = () => {
-  const code = matched || item;
-  if (code && code.length >= 10) {
-    const trimmed = code.slice(0, -3);
-    window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
-  } else {
-    showAlert('Veri bulunamadı.', "Bilgi");
-  }
-};
-
-
-        li.appendChild(span);
-        li.appendChild(inventoryButton);
-        li.appendChild(goButton);
-
+        li.append(span, inv, go);
         historyList.appendChild(li);
       });
     }
 
-    // Modal için ref dosyası seçimi fonksiyonu
-    function showRefSelector() {
-      const refFiles = [
-        'Genel.txt',
-        'Aybars.txt',
-        'OsmanB.txt',
-        'Berkay.txt',
-        'OsmanG.txt',
-        'Berkant.txt',
-        'Faruk.txt',
-        'Ferhat.txt'
-      ];
-
-      const modalTitle = document.getElementById('modalTitle');
-      modalTitle.textContent = 'Referans Dosyası Seçimi';
-
-      let html = '<div style="display:flex; flex-direction: column; gap: 0.6em;">';
-      refFiles.forEach(file => {
-        const fileName = stripTxtExtension(file);
-        html += `<button style="padding: 0.6em 1em; border-radius: 8px; border: 1px solid #666; background: #ddd; font-weight: 600; cursor: pointer;"
-          onclick="selectRefFile('${file}')">${fileName}</button>`;
-      });
-      html += '</div>';
-
-      modalBody.innerHTML = html;
-      modal.style.display = 'flex';
+    function showRefSelector(){
+      const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
+      document.getElementById('modalTitle').textContent='Referans Dosyası Seçimi';
+      modalBody.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 0.5em;">
+          ${files.map(f => `
+            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;text-align:left;" onclick="selectRefFile('${f}')">
+              ${stripTxtExtension(f)}
+            </button>`).join('')}
+        </div>`;
+      modal.style.display='flex';
     }
 
-    function selectRefFile(file) {
-      modal.style.display = 'none';
-      fetchDataFiles(file);
-    }
+    window.selectRefFile=f=>{
+      modal.style.display='none';
+      fetchDataFiles(f);
+    };
 
-    closeModalBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    // Kapatmak için modal dışına tıklama
-    window.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+    closeModalBtn.addEventListener('click',()=>modal.style.display='none');
+    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='none'; });
   </script>
 </body>
 </html>
