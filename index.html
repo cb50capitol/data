@@ -63,6 +63,7 @@
   </style>
 </head>
 <body>
+  <body>
   <div class="container">
     <h1># BridGe</h1>
     <div class="search-container">
@@ -197,7 +198,7 @@
       modalBody.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 0.5em;">
           ${files.map(f => `
-            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;text-align:left;" onclick="selectRefFile('${f}')">
+            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;" onclick="selectRefFile('${f}')">
               ${stripTxtExtension(f)}
             </button>`).join('')}
         </div>`;
