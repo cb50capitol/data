@@ -28,37 +28,44 @@
       font-size: 1.5em;
       cursor: pointer;
     }
+
+    /* GÜNCELLENEN ARAMA ALANI */
     .search-container {
       display: flex;
-      gap: 0.5em;
-      align-items: stretch;
+      gap: 0;
+      align-items: center;
       margin-top: 1em;
+      background-color: white;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      border: 1px solid #ccc;
     }
     input[type="text"] {
       flex-grow: 1;
-      padding: 0.75em;
+      padding: 0.75em 1em;
       font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      height: 42px;
-      box-sizing: border-box;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      background-color: transparent;
     }
     #searchButton {
-      flex: 0 0 70px;
-      padding: 0 1em;
+      padding: 0 1.2em;
       font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      background-color: #e0e0e0;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      height: 100%;
       cursor: pointer;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      transition: background-color 0.3s ease;
+      border-left: 1px solid #ccc;
     }
     #searchButton:hover {
-      background-color: #ccc;
+      background-color: #0056b3;
     }
+
     .history {
       margin-top: 2em;
     }
@@ -127,14 +134,17 @@
       background-color: #1e1e1e;
       color: #eee;
     }
+    body.dark-mode .search-container {
+      background-color: #222;
+      border-color: #444;
+    }
     body.dark-mode input[type="text"] {
-      background-color: #333;
+      background-color: transparent;
       color: #eee;
-      border-color: #555;
     }
     body.dark-mode #searchButton {
       background-color: #444;
-      border-color: #666;
+      border-left: 1px solid #666;
       color: #eee;
     }
     body.dark-mode #searchButton:hover {
@@ -158,6 +168,7 @@
     body.dark-mode .inventory-button:hover {
       background-color: #004085;
     }
+
     #modal {
       display: none;
       position: fixed;
@@ -228,8 +239,6 @@
     body.dark-mode #modalBody td {
       border-color: #555;
     }
-
-    /* Yeni: Log'in butonu */
     .ref-selector-button {
       background-color: #000;
       border: none;
@@ -314,7 +323,7 @@
     }
 
     function updateRefIndicator() {
-      if(selectedRefFile.toLowerCase() === 'genel.txt') {
+      if (selectedRefFile.toLowerCase() === 'genel.txt') {
         input.placeholder = '# Search';
         input.value = '';
         input.disabled = false;
