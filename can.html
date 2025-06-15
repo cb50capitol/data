@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WormHole</title>
   <style>
-    /* (Aynı stil kodları, öncekiyle aynı) */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -313,13 +312,23 @@
       showRefSelector();
     });
 
-    // Yardımcı: Dosya adından .txt uzantısını kaldırır (eğer varsa)
+    // Dosya adından .txt uzantısını kaldırır
     function stripTxtExtension(fileName) {
       return fileName.replace(/\.txt$/i, '');
     }
 
     function updateRefIndicator() {
-      input.placeholder = `# Ref (${stripTxtExtension(selectedRefFile)})`;
+      // Eğer ref.txt seçili ise placeholder sade olsun, input temiz olsun ve disabled değil
+      if(selectedRefFile.toLowerCase() === 'ref.txt') {
+        input.placeholder = '# Ref';
+        input.value = '';
+        input.disabled = false; // İstersen burayı true yapabilirsin ama isteğe bağlı
+      } else {
+        // Diğer dosyalar seçilince placeholder gösterilsin
+        input.placeholder = `# Ref (${stripTxtExtension(selectedRefFile)})`;
+        // input.value kalabilir, kullanıcı yazabilir
+        input.disabled = false;
+      }
     }
 
     async function fetchDataFiles(refFile = 'ref.txt') {
@@ -337,7 +346,7 @@
         const stockResponse = await fetch('stok.txt');
         if (!stockResponse.ok) throw new Error('stok.txt bulunamadı');
         const stockText = await stockResponse.text();
-        stockData = stockText.trim().split('\n').map(line => line.trim().split(/\t/));
+        stockData = stockText.trim().split('\n').map(line => line.trim().split('\t'));
 
         updateRefIndicator();
       } catch (err) {
@@ -390,9 +399,9 @@
     function updateHistory() {
       historyList.innerHTML = '';
       searchHistory.forEach(item => {
+        const matched = dataMap[item];
         const li = document.createElement('li');
 
-        const matched = dataMap[item];
         const span = document.createElement('span');
         span.textContent = matched ? `${item}\t${matched}` : item;
         span.className = 'search-text';
@@ -414,51 +423,62 @@
         goButton.textContent = 'Pathway';
         goButton.className = 'go-button';
         goButton.onclick = () => {
-          const code = matched || item;
-          if (code && code.length >= 10) {
-            const trimmed = code.slice(0, -3);
-            window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
+          if (matched) {
+            window.open(`https://www.turkishsite.com/${matched}`, '_blank');
           } else {
-            showAlert('Veri bulunamadı.', "Bilgi");
+            alert('Eşleşen bir veri bulunamadı.');
           }
         };
 
         li.appendChild(span);
         li.appendChild(inventoryButton);
         li.appendChild(goButton);
+
         historyList.appendChild(li);
       });
     }
 
+    // Modal için ref dosyası seçimi fonksiyonu
     function showRefSelector() {
-      // Dosya adlarını sadece uzantısız göster
-      const files = ['ref.txt', 'ref1.txt', 'ref2.txt', 'ref3.txt'];
-      let html = '<div style="display: flex; flex-direction: column; gap: 1em;">';
-      html += files.map(file =>
-        `<button onclick="selectRefFile('${file}')" style="padding: 0.6em; border-radius: 6px; font-size: 1em; cursor: pointer;">${stripTxtExtension(file)}</button>`
-      ).join('');
+      const refFiles = [
+        'ref.txt',
+        'Aybars.txt',
+        'OsmanB.txt',
+        'Berkay.txt',
+        'OsmanG.txt',
+        'Berkant.txt',
+        'Faruk.txt',
+        'Ferhat.txt'
+      ];
+
+      const modalTitle = document.getElementById('modalTitle');
+      modalTitle.textContent = 'Referans Dosyası Seçimi';
+
+      let html = '<div style="display:flex; flex-direction: column; gap: 0.6em;">';
+      refFiles.forEach(file => {
+        const fileName = stripTxtExtension(file);
+        html += `<button style="padding: 0.6em 1em; border-radius: 8px; border: 1px solid #666; background: #ddd; font-weight: 600; cursor: pointer;"
+          onclick="selectRefFile('${file}')">${fileName}</button>`;
+      });
       html += '</div>';
-      document.getElementById('modalTitle').textContent = 'Ref Dosyası Seçin';
+
       modalBody.innerHTML = html;
       modal.style.display = 'flex';
-      modal.focus();
     }
 
-    window.selectRefFile = function(fileName) {
-      fetchDataFiles(fileName);
+    function selectRefFile(file) {
       modal.style.display = 'none';
-      modalBody.innerHTML = '';
-    };
+      fetchDataFiles(file);
+    }
 
     closeModalBtn.addEventListener('click', () => {
       modal.style.display = 'none';
-      modalBody.innerHTML = '';
     });
 
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
+    // Kapatmak için modal dışına tıklama
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
         modal.style.display = 'none';
-        modalBody.innerHTML = '';
       }
     });
   </script>
