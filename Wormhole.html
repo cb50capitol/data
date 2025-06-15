@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WormHole</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1em;
+      background-color: #f5f5f5;
+      color: #222;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    h1, h2 {
+      text-align: center;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .search-container {
+      display: flex;
+      gap: 0.5em;
+      align-items: stretch;
+      margin-top: 1em;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      min-width: 100px;
+      max-width: calc(100% - 80px);
+      padding: 0.75em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      height: 42px;
+      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    }
+    #searchButton {
+      flex: 0 0 70px;
+      padding: 0 1em;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #e0e0e0;
+      cursor: pointer;
+      height: 42px;
+      transition: background-color 0.3s ease;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #searchButton:hover {
+      background-color: #ccc;
+    }
+    .history {
+      margin-top: 2em;
+    }
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5em;
+    }
+    .history-header .button-group {
+      display: flex;
+      gap: 0.5em;
+    }
+    .history-header h2 {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .clear-button {
+  padding: 0.4em 0.8em;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #b02a37;
+}
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 0;
+      border-bottom: 1px solid #eee;
+      gap: 0.5em;
+      transition: color 0.5s ease;
+    }
+    .search-text {
+      flex: 1;
+    }
+    .go-button {
+      padding: 0.4em 0.8em;
+      background-color: #28a745;
+      color: white !important;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .go-button:hover {
+      background-color: #218838;
+      color: white !important;
+    }
+    .inventory-button {
+      background-color: #007bff;
+      color: white !important;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      padding: 0.4em 0.8em;
+      transition: background-color 0.3s ease;
+    }
+    .inventory-button:hover {
+      background-color: #0056b3;
+      color: white !important;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    body.dark-mode .container {
+      background-color: #1e1e1e;
+      color: #eee;
+      box-shadow: none;
+    }
+    body.dark-mode input[type="text"] {
+      background-color: #333;
+      color: #eee;
+      border-color: #555;
+    }
+    body.dark-mode #searchButton {
+      background-color: #444;
+      border-color: #666;
+      color: #eee;
+    }
+    body.dark-mode #searchButton:hover {
+      background-color: #666;
+    }
+    body.dark-mode .clear-button {
+      background-color: #a33;
+      color: #eee;
+    }
+    body.dark-mode .clear-button:hover {
+      background-color: #700;
+    }
+    body.dark-mode .go-button {
+      background-color: #218838;
+      color: #eee !important;
+    }
+    body.dark-mode .go-button:hover {
+      background-color: #1c7430;
+    }
+    body.dark-mode .inventory-button {
+      background-color: #0056b3;
+      color: #eee !important;
+    }
+    body.dark-mode .inventory-button:hover {
+      background-color: #004085;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>. BridGe</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
+      <button id="searchButton" type="button" title="Ara">Scan</button>
+    </div>
+    <div class="history">
+      <div class="history-header">
+        <h2>Log</h2>
+        <div class="button-group">
+          <button id="clearButton" class="clear-button">Void</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+  <script>
+    const input = document.getElementById('searchInput');
+    const historyList = document.getElementById('historyList');
+    const clearButton = document.getElementById('clearButton');
+    const searchButton = document.getElementById('searchButton');
+    const title = document.querySelector('h1');
+    let searchHistory = [];
+    const dataMap = {};
+
+    // Dark mode toggle via title click
+    title.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    function doSearch() {
+      const value = input.value.trim();
+      if (value !== '') {
+        searchHistory.unshift(value);
+        searchHistory = searchHistory.slice(0, 15);
+        updateHistory();
+        input.value = '';
+      }
+    }
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+    searchButton.addEventListener('click', doSearch);
+    searchButton.addEventListener('touchstart', doSearch);
+
+    clearButton.addEventListener('click', () => {
+      searchHistory = [];
+      updateHistory();
+    });
+
+    function updateHistory() {
+      historyList.innerHTML = '';
+      searchHistory.forEach(item => {
+        const li = document.createElement('li');
+
+        const span = document.createElement('span');
+        const matched = dataMap[item];
+        span.textContent = matched ? `${item}\t${matched}` : item;
+        span.className = 'search-text';
+
+        const goButton = document.createElement('button');
+        goButton.textContent = 'Pathway';
+        goButton.className = 'go-button';
+        goButton.onclick = () => {
+          if (matched) {
+            const trimmed = matched.slice(0, -3);
+            const url = `https://www.boyner.com.tr/search?q=${trimmed}`;
+            window.open(url, '_blank');
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        const inventoryButton = document.createElement('button');
+        inventoryButton.textContent = 'Section';
+        inventoryButton.className = 'inventory-button';
+        inventoryButton.onclick = () => {
+          if (matched) {
+            try {
+              const textarea = document.createElement('textarea');
+              textarea.value = matched;
+              document.body.appendChild(textarea);
+              textarea.select();
+              document.execCommand('copy');
+              document.body.removeChild(textarea);
+
+              const invUrl = 'https://script.google.com/macros/s/AKfycbwAw40MKVlnh1hQNS1W8ZzRqJaRgLGYzd1iZfpb3-O_Bs4LXpa3u7P-11QKrZjRxTdY/exec';
+              window.open(invUrl, '_blank');
+            } catch (err) {
+              alert('Kopyalama başarısız oldu: ' + err);
+            }
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        li.appendChild(span);
+        li.appendChild(inventoryButton);
+        li.appendChild(goButton);
+        historyList.appendChild(li);
+      });
+    }
+
+    const rawData = `
+    Baslangic
+1 666
+2 5003173540001
+3 5003240470003
+4 5003173540005
+5 5003173509002
+6 5003240389003
+7 5003173540002
+8 5003173509003
+9 5003173540004
+10 5003173509004
+11 5003240470002
+12 5003230164003
+13 5003240283005
+14 5003240470004
+15 5003173509005
+16 5003173509001
+17 5003240283001
+18 5003240229001
+19 5003240267001
+20 5003240229005
+21 5003240267005
+22 5003240481004
+23 5003240267003
+24 5003240283002
+25 5003240229004
+26 5003240267002
+27 5003240283003
+28 5003240267004
+29 5003240283004
+30 5003240229002
+31 5003240229003
+32 5003240378005
+33 5003240395003
+34 5003240378004
+35 5003240395004
+36 5003240465005
+37 5003240449003
+38 5003240465003
+39 5003240378002
+40 5003240467001
+41 5003240395001
+42 5003240467005
+43 5003240395002
+44 5003240470003
+45 5003240480003
+46 5003240480002
+47 5003240468001
+48 5003240468005
+49 5003240459004
+50 5003240449005
+51 5003240480005
+52 5003240468003
+53 5003240468004
+54 5003240468002
+55 5003240459003
+56 5003240449002
+57 5003240449004
+58 5003240459002
+59 5003118238002
+60 5003118238002
+61 5003240470004
+62 5003118238004
+63 5003240480003
+64 5003240480001
+65 5003240459005
+66 5003240459004
+67 5003240480002
+68 5003118238004
+69 5003118238005
+70 5003240481005
+71 5003240470005
+72 5003173509002
+73 5003173509003
+74 5003173509004
+75 5003240378002
+76 5003173540003
+77 5003173540003
+78 5003230193005
+79 5003240389002
+80 5003240389003
+81 5003240395003
+82 5003240395004
+83 5003240467003
+84 5003240395005
+85 5003240467002
+86 5003240449003
+87 5003240465003
+88 5003240467003
+89 5003240465001
+90 5003240465002
+91 5003240465004
+92 5003240465002
+93 5003240465004
+94 5003240467002
+95 5003240470001
+96 5003240481004
+97 5003270969001
+98 5002617134001
+99 5003271010005
+100 5003270980001
+101 5003270842002
+102 5003270915004
+103 5002617134003
+104 5003144906002
+105 5003270994004
+106 5003270980004
+107 5003270994001
+108 5003270858003
+109 5003270985004
+110 5003144886004
+111 5003270897004
+112 5003270893004
+113 5003012579005
+114 5003271052005
+115 5003270926006
+116 5003270985001
+117 5003271010004
+118 5003270915001
+119 5003144915004
+120 5003270911002
+121 5003144876004
+122 5003144886001
+123 5003271052003
+124 5003270893001
+125 5003270999005
+126 5003144876001
+127 5003270926004
+128 5003270999004
+129 5003270985005
+130 5003271014004
+131 5003271014001
+132 5002617134004
+133 5000154243004
+134 5003270878001
+135 5003144907001
+136 5003270911007
+137 5003270964001
+138 5003270987005
+139 5003270975001
+140 5003270923004
+141 5003144915005
+142 5003270980005
+143 5003270987004
+144 5003270999001
+145 5003270897005
+146 5003270982001
+147 5003270975004
+148 5003270987001
+149 5003270779001
+150 5003144886005
+151 5003144907004
+152 5003271003004
+153 5003270858005
+154 5003270942001
+155 5003270923005
+156 5000154243003
+157 5003270982005
+158 5003270842007
+159 5003144886006
+160 5003144906005
+161 5003144915001
+162 5000154243005
+163 5003270964004
+164 5002617134005
+165 5003270842005
+166 5003271003001
+167 5003270969005
+168 5003144906004
+169 5003270975005
+170 5003270858006
+171 5003270942004
+172 5003270926001
+173 5003012579003
+174 5003270878005
+175 5003144907006
+176 5003270982004
+177 5003270969004
+178 5003270878006
+179 5003270911006
+180 5003270878004
+181 5003270878002
+182 5003271014003
+183 5003271010003
+184 5003270893002
+185 5003270779003
+186 5003144906003
+187 5003270985002
+188 5003270926003
+189 5003270999003
+190 5003271010002
+191 5000154243001
+192 5003270982003
+193 5003270994002
+194 5003270982002
+195 5003271010001
+196 5003144907002
+197 5003270942002
+198 5003271052004
+199 5003270923001
+200 5003012579002
+201 5003144907005
+202 5003270897002
+203 5003270987002
+204 5003270915005
+205 5003270964002
+206 5003270964005
+207 5003270923003
+208 5003270858004
+209 5003270911005
+210 5003144886002
+211 5003270779004
+212 5003144876002
+213 5003144907003
+214 5003144876003
+215 5003270893003
+216 5003012579004
+217 5003270926002
+218 5003271003003
+219 5003270999002
+220 5003270923002
+221 5003270987003
+Bitis
+`;
+    rawData.trim().split('\n').forEach(line => {
+      const [key, value] = line.trim().split(/\s+/);
+      if (key && value) dataMap[key] = value;
+    });
+  </script>
+</body>
+</html>
