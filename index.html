@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WormHole</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1em;
+    background-color: #f5f5f5;
+    color: #222;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  h1, h2 {
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .search-container {
+    display: flex;
+    gap: 0.5em;
+    align-items: stretch;
+    margin-top: 1em;
+  }
+  input[type="text"] {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 100px;
+    max-width: calc(100% - 80px);
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 42px;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  }
+  #searchButton {
+    flex: 0 0 70px;
+    padding: 0 1em;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    height: 42px;
+    transition: background-color 0.3s ease;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #searchButton:hover {
+    background-color: #ccc;
+  }
+  .history {
+    margin-top: 2em;
+  }
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5em;
+  }
+  .history-header .button-group {
+    display: flex;
+    gap: 0.5em;
+  }
+  .history-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .clear-button {
+    padding: 0.4em 0.8em;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  .clear-button:hover {
+    background-color: #b02a37;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #eee;
+    gap: 0.5em;
+    transition: color 0.5s ease;
+  }
+  .search-text {
+    flex: 1;
+  }
+  .go-button {
+    padding: 0.4em 0.8em;
+    background-color: #28a745;
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .go-button:hover {
+    background-color: #218838;
+    color: white !important;
+  }
+  .inventory-button {
+    background-color: #007bff;
+    color: white !important;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    padding: 0.4em 0.8em;
+    transition: background-color 0.3s ease;
+  }
+  .inventory-button:hover {
+    background-color: #0056b3;
+    color: white !important;
+  }
+  body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+  }
+  body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #eee;
+    box-shadow: none;
+  }
+  body.dark-mode input[type="text"] {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+  }
+  body.dark-mode #searchButton {
+    background-color: #444;
+    border-color: #666;
+    color: #eee;
+  }
+  body.dark-mode #searchButton:hover {
+    background-color: #666;
+  }
+  body.dark-mode .clear-button {
+    background-color: #a33;
+    color: #eee;
+  }
+  body.dark-mode .clear-button:hover {
+    background-color: #700;
+  }
+  body.dark-mode .go-button {
+    background-color: #218838;
+    color: #eee !important;
+  }
+  body.dark-mode .go-button:hover {
+    background-color: #1c7430;
+  }
+  body.dark-mode .inventory-button {
+    background-color: #0056b3;
+    color: #eee !important;
+  }
+  body.dark-mode .inventory-button:hover {
+    background-color: #004085;
+  }
+
+  /* Modal Styles */
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 2em 1em;
+    box-sizing: border-box;
+  }
+  #modalContent {
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 12px;
+    padding: 1em 2em 2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #222;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 1em;
+    line-height: 1.4em;
+    word-break: break-word;
+  }
+  #modalClose {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.4em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  #modalClose:hover {
+    color: #000;
+  }
+  .modal-row {
+    display: flex;
+    padding: 0.3em 0;
+  }
+  .modal-label {
+    font-weight: bold;
+    width: 90px;
+    flex-shrink: 0;
+  }
+  .modal-value {
+    flex-grow: 1;
+    white-space: normal;
+  }
+
+  @media (max-width: 480px) {
+    #modalContent {
+      width: 90%;
+      max-width: none;
+      border-radius: 12px;
+      height: auto;
+      max-height: 70vh;
+      padding: 1em;
+      font-size: 0.95em;
+    }
+    .modal-label {
+      width: 75px;
+      font-size: 0.9em;
+    }
+    .modal-value {
+      font-size: 0.9em;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>. BridGe</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
+      <button id="searchButton" type="button" title="Ara">Scan</button>
+    </div>
+    <div class="history">
+      <div class="history-header">
+        <h2>Log</h2>
+        <div class="button-group">
+          <button id="clearButton" class="clear-button">Void</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div id="modalContent">
+      <button id="modalClose" aria-label="Kapat">&times;</button>
+      <h2 id="modalTitle" style="text-align:center; margin-top:0;">Bölüm Detayları</h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+<script>
+  // ref.txt ve stok.txt verileri buraya örnek olarak sabitlenmiştir.
+  // Sen bunu fetch ile dosyalardan çekebilirsin.
+
+  // ref.txt örnek (Ref numarasına göre karşılığı):
+  const refData = {
+    "1": "5003240481004 8720639829316",
+    "2": "8720639829316 5003240481004",
+    // başka ref verileri...
+  };
+
+  // stok.txt satırları (tab ile ayrılmış 6 sütun)
+  const stockDataRaw = `
+5003240481004\t8720639829316\tYW0YW01807 Calvin Klein Sneaker, 39, Siyah\tDP-KADIN AYK DEPO\tAL-0049\t1
+8720639829316\t5003240481004\tYW0YW01808 Calvin Klein Sneaker, 40, Beyaz\tDP-KADIN AYK DEPO\tAL-0050\t2
+`;
+
+  // stok.txt satırlarını diziye çevir
+  const stockData = stockDataRaw.trim().split('\n').map(line => line.split('\t'));
+
+  // DOM elemanları
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
+  const historyList = document.getElementById('historyList');
+  const clearButton = document.getElementById('clearButton');
+
+  const modal = document.getElementById('modal');
+  const modalBody = document.getElementById('modalBody');
+  const modalClose = document.getElementById('modalClose');
+
+  // Geçmişi localStorage'dan al
+  let history = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+  function saveHistory() {
+    localStorage.setItem('searchHistory', JSON.stringify(history));
+  }
+
+  function renderHistory() {
+    historyList.innerHTML = '';
+    history.forEach(item => {
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.textContent = item;
+      span.className = 'search-text';
+
+      // Section butonu
+      const sectionBtn = document.createElement('button');
+      sectionBtn.textContent = 'Section';
+      sectionBtn.className = 'inventory-button';
+      sectionBtn.title = 'Stok detayını göster';
+
+      sectionBtn.addEventListener('click', () => {
+        // ref.txt'den stok kodunu al
+        const refVal = item;
+        const refResult = refData[refVal];
+        if (!refResult) {
+          alert('Ref bulunamadı!');
+          return;
+        }
+        // ref.txt sonucu stok kodu olarak ilk sütun kullanılıyor
+        const stokKod = refResult.split(' ')[0];
+        // stok.txt içinde ara
+        const foundRow = stockData.find(row => row[0] === stokKod);
+        if (!foundRow) {
+          alert('Stok bulunamadı!');
+          return;
+        }
+        // Modal içeriği hazırla
+        modalBody.innerHTML = `
+          <div class="modal-row"><div class="modal-label">SKU</div><div class="modal-value">${foundRow[0]}</div></div>
+          <div class="modal-row"><div class="modal-label">EAN</div><div class="modal-value">${foundRow[1]}</div></div>
+          <div class="modal-row"><div class="modal-label">Ürün</div><div class="modal-value">${foundRow[2]}</div></div>
+          <div class="modal-row"><div class="modal-label">Lokasyon</div><div class="modal-value">${foundRow[3]}</div></div>
+          <div class="modal-row"><div class="modal-label">Section</div><div class="modal-value">${foundRow[4]}</div></div>
+          <div class="modal-row"><div class="modal-label">Adet</div><div class="modal-value">${foundRow[5]}</div></div>
+        `;
+        modal.style.display = 'block';
+      });
+
+      li.appendChild(span);
+      li.appendChild(sectionBtn);
+      historyList.appendChild(li);
+    });
+  }
+
+  clearButton.addEventListener('click', () => {
+    if (confirm('Geçmişi temizlemek istediğinize emin misiniz?')) {
+      history = [];
+      saveHistory();
+      renderHistory();
+    }
+  });
+
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  function addToHistory(value) {
+    if (!value) return;
+    if (!history.includes(value)) {
+      history.unshift(value);
+      if (history.length > 50) history.pop(); // max 50 kayıt
+      saveHistory();
+      renderHistory();
+    }
+  }
+
+  searchButton.addEventListener('click', () => {
+    const val = searchInput.value.trim();
+    if (!val) return alert('Lütfen Ref giriniz.');
+    addToHistory(val);
+    searchInput.value = '';
+  });
+
+  // Başlangıçta geçmişi göster
+  renderHistory();
+
+</script>
+</body>
+</html>
