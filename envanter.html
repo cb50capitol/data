@@ -15,13 +15,12 @@
     }
 
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       background-color: white;
       padding: 2em;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
     h1, h2 {
@@ -86,11 +85,24 @@
 
     #result {
       margin-top: 1em;
-      padding: 1em;
-      background-color: #f0f0f0;
-      border-radius: 8px;
-      font-family: monospace;
-      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      font-size: 0.95em;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.6em;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
     }
 
     body.dark-mode {
@@ -128,9 +140,16 @@
       background-color: #700;
     }
 
-    body.dark-mode #result {
+    body.dark-mode table {
+      color: #eee;
+    }
+
+    body.dark-mode tr:nth-child(even) {
       background-color: #2a2a2a;
-      color: #ddd;
+    }
+
+    body.dark-mode th, body.dark-mode td {
+      border-color: #555;
     }
   </style>
 </head>
@@ -152,13 +171,25 @@
   </div>
 
   <script>
-    document.querySelector('h1').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
+    const searchInput = document.getElementById("searchInput");
+    const resultBox = document.getElementById("result");
 
-    document.getElementById("searchButton").addEventListener("click", () => {
-      const ref = document.getElementById("searchInput").value.trim();
-      const resultBox = document.getElementById("result");
+    function displayResult(match) {
+      const columns = match.split(/\t+/);
+      let table = "<table><tr>";
+      columns.forEach((_, i) => {
+        table += `<th>Kolon ${i + 1}</th>`;
+      });
+      table += "</tr><tr>";
+      columns.forEach(col => {
+        table += `<td>${col}</td>`;
+      });
+      table += "</tr></table>";
+      resultBox.innerHTML = table;
+    }
+
+    function search() {
+      const ref = searchInput.value.trim();
       if (!ref) {
         resultBox.textContent = "Lütfen bir değer girin.";
         return;
@@ -174,20 +205,34 @@
           const match = lines.find(line => line.startsWith(ref + '\t') || line.startsWith(ref + ' '));
 
           if (match) {
-            resultBox.textContent = match;
+            displayResult(match);
           } else {
             resultBox.textContent = "Kayıt bulunamadı.";
           }
+
+          searchInput.value = ""; // input sıfırlanır
         })
         .catch(err => {
           resultBox.textContent = "Hata: " + err.message;
         });
+    }
+
+    document.getElementById("searchButton").addEventListener("click", search);
+
+    searchInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        search();
+      }
     });
 
     function clearResult() {
-      document.getElementById("result").textContent = "Sonuçlar burada görüntülenecek...";
-      document.getElementById("searchInput").value = "";
+      resultBox.textContent = "Sonuçlar burada görüntülenecek...";
+      searchInput.value = "";
     }
+
+    document.querySelector('h1').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
   </script>
 </body>
 </html>
