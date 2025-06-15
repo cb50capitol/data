@@ -237,7 +237,7 @@
       color: #eee;
     }
 
-    /* Table inside modal */
+    /* Table inside modal (not used now but kept for reference) */
     #modalText table {
       width: 100%;
       border-collapse: collapse;
@@ -339,8 +339,7 @@
         });
 
         // stok.txt : tab-separated columns, example:
-        // SKU EAN Ürün1 Ürün2 Ürün3 Lokasyon1 Lokasyon2 Lokasyon3 Section Adet
-        // Load stok.txt into stockData as array of arrays (rows)
+        // SKU EAN Ürün Lokasyon Section Adet
         const stockResponse = await fetch('stok.txt');
         const stockText = await stockResponse.text();
         stockData = stockText.trim().split('\n').map(line => line.trim().split(/\t/));
@@ -403,28 +402,19 @@
           if (matched) {
             const foundRow = stockData.find(row => row[0] === matched);
             if (foundRow) {
-              const sku = foundRow[0] || '';
-              const ean = foundRow[1] || '';
-              // Ürün bilgisi 3 sütundan oluşuyor, boş olanları temizle ve araya boşluk koy
-              const urun = [foundRow[2], foundRow[3], foundRow[4]].filter(Boolean).join(' ');
-              // Lokasyon bilgisi 3 sütun
-              const lokasyon = [foundRow[5], foundRow[6], foundRow[7]].filter(Boolean).join(' ');
-              const section = foundRow[8] || '';
-              const adet = foundRow[9] || '';
-
-              modalText.innerHTML = `
-                <table>
-                  <tr><th>SKU</th><td>${sku}</td></tr>
-                  <tr><th>EAN</th><td>${ean}</td></tr>
-                  <tr><th>Ürün</th><td>${urun}</td></tr>
-                  <tr><th>Lokasyon</th><td>${lokasyon}</td></tr>
-                  <tr><th>Section</th><td>${section}</td></tr>
-                  <tr><th>Adet</th><td>${adet}</td></tr>
-                </table>
-              `;
-              openModal();
+              // foundRow = [SKU, EAN, Ürün, Lokasyon, Section, Adet]
+              // Modal’da alt alta göstereceğiz:
+              modalText.innerHTML = `<pre style="white-space: pre-wrap; font-family: inherit; font-size: 1em; margin: 0;">
+${foundRow[0]}
+${foundRow[1]}
+${foundRow[2]}
+${foundRow[3]}
+${foundRow[4]}
+${foundRow[5]}
+              </pre>`;
+              modal.style.display = 'block';
             } else {
-              alert('stok.txt dosyasında veri bulunamadı.');
+              alert('Ürün stokta bulunamadı.');
             }
           } else {
             alert('Veri bulunamadı.');
@@ -432,26 +422,18 @@
         };
 
         li.appendChild(span);
-        li.appendChild(inventoryButton);
         li.appendChild(goButton);
+        li.appendChild(inventoryButton);
         historyList.appendChild(li);
       });
     }
 
-    // Modal functions
-    function openModal() {
-      modal.style.display = 'block';
-      // Scroll modal top on open
-      modal.scrollTop = 0;
-    }
-    function closeModal() {
+    closeModalBtn.addEventListener('click', () => {
       modal.style.display = 'none';
-    }
-    closeModalBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', e => {
-      if (e.target === modal) closeModal();
     });
-
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
   </script>
 </body>
 </html>
