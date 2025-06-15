@@ -180,7 +180,13 @@
     function showRefSelector(){
       const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
       document.getElementById('modalTitle').textContent='Referans Dosyası Seçimi';
-      modalBody.innerHTML=files.map(f=>`<button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;" onclick="selectRefFile('${f}')">${stripTxtExtension(f)}</button>`).join('');
+      modalBody.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 0.5em;">
+          ${files.map(f => `
+            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;text-align:left;" onclick="selectRefFile('${f}')">
+              ${stripTxtExtension(f)}
+            </button>`).join('')}
+        </div>`;
       modal.style.display='flex';
     }
 
@@ -190,7 +196,7 @@
     };
 
     closeModalBtn.addEventListener('click',()=>modal.style.display='none');
-    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='flex'; });
+    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='none'; });
   </script>
 </body>
 </html>
