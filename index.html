@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WormHole</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1em;
+      background-color: #f5f5f5;
+      color: #222;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    h1, h2 {
+      text-align: center;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .search-container {
+      display: flex;
+      gap: 0.5em;
+      align-items: stretch;
+      margin-top: 1em;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      min-width: 100px;
+      max-width: calc(100% - 80px);
+      padding: 0.75em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      height: 42px;
+      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    }
+    #searchButton {
+      flex: 0 0 70px;
+      padding: 0 1em;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #e0e0e0;
+      cursor: pointer;
+      height: 42px;
+      transition: background-color 0.3s ease;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #searchButton:hover {
+      background-color: #ccc;
+    }
+    .history {
+      margin-top: 2em;
+    }
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5em;
+    }
+    .history-header .button-group {
+      display: flex;
+      gap: 0.5em;
+    }
+    .history-header h2 {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .clear-button {
+      padding: 0.4em 0.8em;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .clear-button:hover {
+      background-color: #b02a37;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 0;
+      border-bottom: 1px solid #eee;
+      gap: 0.5em;
+      transition: color 0.5s ease;
+    }
+    .search-text {
+      flex: 1;
+    }
+    .go-button {
+      padding: 0.4em 0.8em;
+      background-color: #28a745;
+      color: white !important;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .go-button:hover {
+      background-color: #218838;
+      color: white !important;
+    }
+    .inventory-button {
+      background-color: #007bff;
+      color: white !important;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      padding: 0.4em 0.8em;
+      transition: background-color 0.3s ease;
+    }
+    .inventory-button:hover {
+      background-color: #0056b3;
+      color: white !important;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    body.dark-mode .container {
+      background-color: #1e1e1e;
+      color: #eee;
+      box-shadow: none;
+    }
+    body.dark-mode input[type="text"] {
+      background-color: #333;
+      color: #eee;
+      border-color: #555;
+    }
+    body.dark-mode #searchButton {
+      background-color: #444;
+      border-color: #666;
+      color: #eee;
+    }
+    body.dark-mode #searchButton:hover {
+      background-color: #666;
+    }
+    body.dark-mode .clear-button {
+      background-color: #a33;
+      color: #eee;
+    }
+    body.dark-mode .clear-button:hover {
+      background-color: #700;
+    }
+    body.dark-mode .go-button {
+      background-color: #218838;
+      color: #eee !important;
+    }
+    body.dark-mode .go-button:hover {
+      background-color: #1c7430;
+    }
+    body.dark-mode .inventory-button {
+      background-color: #0056b3;
+      color: #eee !important;
+    }
+    body.dark-mode .inventory-button:hover {
+      background-color: #004085;
+    }
+
+    /* Modal Styles */
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0,0,0,0.5);
+      padding: 2em 1em;
+      box-sizing: border-box;
+    }
+    #modalContent {
+      background-color: white;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 12px;
+      padding: 1em 2em 2em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #222;
+    }
+    body.dark-mode #modalContent {
+      background-color: #222;
+      color: #eee;
+    }
+    #modalHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5em;
+      margin-bottom: 1em;
+    }
+    #modalHeader h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+    #closeModalBtn {
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    #closeModalBtn:hover {
+      color: #222;
+    }
+    body.dark-mode #closeModalBtn:hover {
+      color: #eee;
+    }
+
+    /* Table inside modal */
+    #modalText table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+    }
+    #modalText th, #modalText td {
+      border: 1px solid #ccc;
+      padding: 0.6em 0.8em;
+      text-align: left;
+      vertical-align: top;
+    }
+    #modalText th {
+      background-color: #f0f0f0;
+      width: 30%;
+      font-weight: 600;
+    }
+    body.dark-mode #modalText th {
+      background-color: #333;
+      color: #eee;
+    }
+    body.dark-mode #modalText td {
+      border-color: #555;
+      color: #eee;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      #modalContent {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        height: 90vh;
+        overflow-y: auto;
+      }
+      #modalText table {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>. BridGe</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
+      <button id="searchButton" type="button" title="Ara">Scan</button>
+    </div>
+    <div class="history">
+      <div class="history-header">
+        <h2>Log</h2>
+        <div class="button-group">
+          <button id="clearButton" class="clear-button">Void</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal">
+    <div id="modalContent">
+      <div id="modalHeader">
+        <h3>Bölüm Detayları</h3>
+        <button id="closeModalBtn" aria-label="Kapat">&times;</button>
+      </div>
+      <div id="modalText"></div>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    const historyList = document.getElementById('historyList');
+    const clearButton = document.getElementById('clearButton');
+    const searchButton = document.getElementById('searchButton');
+    const title = document.querySelector('h1');
+
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalText = document.getElementById('modalText');
+
+    let searchHistory = [];
+    const dataMap = {};
+    let stockData = [];
+
+    // Dark mode toggle via title click
+    title.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Fetch ref.txt and stok.txt on load
+    async function fetchDataFiles() {
+      try {
+        // ref.txt : key value (e.g. 1 5003240481004)
+        const refResponse = await fetch('ref.txt');
+        const refText = await refResponse.text();
+        refText.trim().split('\n').forEach(line => {
+          const [key, value] = line.trim().split(/\s+/);
+          if (key && value) dataMap[key] = value;
+        });
+
+        // stok.txt : tab-separated columns, example:
+        // SKU EAN Ürün1 Ürün2 Ürün3 Lokasyon1 Lokasyon2 Lokasyon3 Section Adet
+        // Load stok.txt into stockData as array of arrays (rows)
+        const stockResponse = await fetch('stok.txt');
+        const stockText = await stockResponse.text();
+        stockData = stockText.trim().split('\n').map(line => line.trim().split(/\t/));
+
+      } catch (err) {
+        alert('Dosyalar yüklenirken hata oluştu: ' + err);
+      }
+    }
+
+    fetchDataFiles();
+
+    function doSearch() {
+      const value = input.value.trim();
+      if (value !== '') {
+        searchHistory.unshift(value);
+        searchHistory = searchHistory.slice(0, 15);
+        updateHistory();
+        input.value = '';
+      }
+    }
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+    searchButton.addEventListener('click', doSearch);
+    searchButton.addEventListener('touchstart', doSearch);
+
+    clearButton.addEventListener('click', () => {
+      searchHistory = [];
+      updateHistory();
+    });
+
+    function updateHistory() {
+      historyList.innerHTML = '';
+      searchHistory.forEach(item => {
+        const li = document.createElement('li');
+
+        const span = document.createElement('span');
+        const matched = dataMap[item];
+        span.textContent = matched ? `${item}\t${matched}` : item;
+        span.className = 'search-text';
+
+        const goButton = document.createElement('button');
+        goButton.textContent = 'Pathway';
+        goButton.className = 'go-button';
+        goButton.onclick = () => {
+          if (matched) {
+            const trimmed = matched.slice(0, -3);
+            const url = `https://www.boyner.com.tr/search?q=${trimmed}`;
+            window.open(url, '_blank');
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        const inventoryButton = document.createElement('button');
+        inventoryButton.textContent = 'Section';
+        inventoryButton.className = 'inventory-button';
+        inventoryButton.onclick = () => {
+          if (matched) {
+            const foundRow = stockData.find(row => row[0] === matched);
+            if (foundRow) {
+              const sku = foundRow[0] || '';
+              const ean = foundRow[1] || '';
+              // Ürün bilgisi 3 sütundan oluşuyor, boş olanları temizle ve araya boşluk koy
+              const urun = [foundRow[2], foundRow[3], foundRow[4]].filter(Boolean).join(' ');
+              // Lokasyon bilgisi 3 sütun
+              const lokasyon = [foundRow[5], foundRow[6], foundRow[7]].filter(Boolean).join(' ');
+              const section = foundRow[8] || '';
+              const adet = foundRow[9] || '';
+
+              modalText.innerHTML = `
+                <table>
+                  <tr><th>SKU</th><td>${sku}</td></tr>
+                  <tr><th>EAN</th><td>${ean}</td></tr>
+                  <tr><th>Ürün</th><td>${urun}</td></tr>
+                  <tr><th>Lokasyon</th><td>${lokasyon}</td></tr>
+                  <tr><th>Section</th><td>${section}</td></tr>
+                  <tr><th>Adet</th><td>${adet}</td></tr>
+                </table>
+              `;
+              openModal();
+            } else {
+              alert('stok.txt dosyasında veri bulunamadı.');
+            }
+          } else {
+            alert('Veri bulunamadı.');
+          }
+        };
+
+        li.appendChild(span);
+        li.appendChild(inventoryButton);
+        li.appendChild(goButton);
+        historyList.appendChild(li);
+      });
+    }
+
+    // Modal functions
+    function openModal() {
+      modal.style.display = 'block';
+      // Scroll modal top on open
+      modal.scrollTop = 0;
+    }
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+
+  </script>
+</body>
+</html>
