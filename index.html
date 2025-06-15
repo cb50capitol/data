@@ -113,6 +113,7 @@
     }
     .search-text {
       flex: 1;
+      word-break: break-word;
     }
     .go-button {
       padding: 0.4em 0.8em;
@@ -198,12 +199,16 @@
     }
     #modalContent {
       background-color: white;
-      max-width: 400px;
+      max-width: 320px;
       margin: auto;
       border-radius: 12px;
-      padding: 1em 2em 2em;
+      padding: 1em 1.5em 1.5em;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       color: #222;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
     }
     body.dark-mode #modalContent {
       background-color: #222;
@@ -216,6 +221,7 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.5em;
       margin-bottom: 1em;
+      flex-shrink: 0;
     }
     #modalHeader h3 {
       margin: 0;
@@ -229,6 +235,7 @@
       cursor: pointer;
       color: #666;
       transition: color 0.3s ease;
+      line-height: 1;
     }
     #closeModalBtn:hover {
       color: #222;
@@ -237,50 +244,45 @@
       color: #eee;
     }
 
-    /* Table inside modal (not used now but kept for reference) */
-    #modalText table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1em;
+    #modalBody {
+      overflow-y: auto;
+      flex-grow: 1;
     }
-    #modalText th, #modalText td {
-      border: 1px solid #ccc;
-      padding: 0.6em 0.8em;
-      text-align: left;
-      vertical-align: top;
+
+    #modalBody dl {
+      margin: 0;
     }
-    #modalText th {
-      background-color: #f0f0f0;
-      width: 30%;
-      font-weight: 600;
+    #modalBody dt {
+      font-weight: 700;
+      margin-top: 0.8em;
+      width: 80px;
+      float: left;
+      color: #555;
     }
-    body.dark-mode #modalText th {
-      background-color: #333;
-      color: #eee;
+    body.dark-mode #modalBody dt {
+      color: #bbb;
     }
-    body.dark-mode #modalText td {
-      border-color: #555;
-      color: #eee;
+    #modalBody dd {
+      margin-left: 90px;
+      margin-top: 0;
+      margin-bottom: 0.8em;
+      word-break: break-word;
     }
 
     /* Responsive */
     @media (max-width: 480px) {
       #modalContent {
-        width: 100%;
+        width: 90%;
         max-width: none;
-        border-radius: 0;
-        height: 90vh;
-        overflow-y: auto;
-      }
-      #modalText table {
-        font-size: 0.9em;
+        border-radius: 12px;
+        height: 80vh;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>. BridGe1</h1>
+    <h1>. BridGe2</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
@@ -297,13 +299,15 @@
   </div>
 
   <!-- Modal -->
-  <div id="modal">
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
     <div id="modalContent">
       <div id="modalHeader">
-        <h3>Bölüm Detayları</h3>
+        <h3 id="modalTitle">Bölüm Detayları</h3>
         <button id="closeModalBtn" aria-label="Kapat">&times;</button>
       </div>
-      <div id="modalText"></div>
+      <div id="modalBody">
+        <!-- Buraya dl formatında veri gelecek -->
+      </div>
     </div>
   </div>
 
@@ -316,7 +320,7 @@
 
     const modal = document.getElementById('modal');
     const closeModalBtn = document.getElementById('closeModalBtn');
-    const modalText = document.getElementById('modalText');
+    const modalBody = document.getElementById('modalBody');
 
     let searchHistory = [];
     const dataMap = {};
@@ -402,17 +406,16 @@
           if (matched) {
             const foundRow = stockData.find(row => row[0] === matched);
             if (foundRow) {
-              // foundRow = [SKU, EAN, Ürün, Lokasyon, Section, Adet]
-              // Modal’da alt alta göstereceğiz:
-              modalText.innerHTML = `<pre style="white-space: pre-wrap; font-family: inherit; font-size: 1em; margin: 0;">
-${foundRow[0]}
-${foundRow[1]}
-${foundRow[2]}
-${foundRow[3]}
-${foundRow[4]}
-${foundRow[5]}
-              </pre>`;
+              // Modal’da başlıklarla göster
+              const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
+              let html = '<dl>';
+              for(let i=0; i<labels.length; i++) {
+                html += `<dt>${labels[i]}</dt><dd>${foundRow[i]}</dd>`;
+              }
+              html += '</dl>';
+              modalBody.innerHTML = html;
               modal.style.display = 'block';
+              modal.focus();
             } else {
               alert('Ürün stokta bulunamadı.');
             }
