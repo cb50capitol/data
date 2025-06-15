@@ -194,7 +194,7 @@
       width: 100%; height: 100%;
       overflow-y: auto;
       background-color: rgba(0,0,0,0.5);
-      padding: 2em 1em;
+      padding: 0; /* değiştirildi */
       box-sizing: border-box;
     }
     #modalContent {
@@ -209,6 +209,7 @@
       display: flex;
       flex-direction: column;
       max-height: 90vh;
+      height: auto; /* değiştirildi */
     }
     body.dark-mode #modalContent {
       background-color: #222;
@@ -283,14 +284,15 @@
         width: 90%;
         max-width: none;
         border-radius: 12px;
-        height: 80vh;
+        height: auto; /* değiştirildi */
+        max-height: 80vh;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>. BridGe3</h1>
+    <h1>. BridGe4</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
