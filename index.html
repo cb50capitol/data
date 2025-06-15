@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WormHole</title>
   <style>
-    /* Tüm CSS içeriğin aynen korunmuştur */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -186,19 +185,18 @@
       background-color: #004085;
     }
 
-    /* Modal stilleri aynı kalıyor */
+    /* Modal stilleri */
     #modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  backdrop-filter: blur(5px);
-  align-items: center;
-  justify-content: center;
-}
-
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+    }
     #modalContent {
       background-color: rgba(255,255,255,0.95);
       max-width: 360px;
@@ -267,7 +265,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>. BridGe23</h1>
+    <h1>. BridGe</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
@@ -324,7 +322,7 @@
         const stockText = await stockResponse.text();
         stockData = stockText.trim().split('\n').map(line => line.trim().split(/\t/));
       } catch (err) {
-        alert('Dosyalar yüklenirken hata oluştu: ' + err);
+        showAlert('Dosyalar yüklenirken hata oluştu: ' + err, "Hata");
       }
     }
 
@@ -358,6 +356,15 @@
       }
       html += '</tbody></table>';
       modalBody.innerHTML = html;
+      document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
+      modal.style.display = 'flex';
+      modal.focus();
+    }
+
+    // Yeni fonksiyon: Modal içinde alert yerine mesaj gösterimi
+    function showAlert(message, title = "Uyarı") {
+      document.getElementById('modalTitle').textContent = title;
+      modalBody.innerHTML = `<p style="font-size:1.1em; padding: 1em 0; margin:0;">${message}</p>`;
       modal.style.display = 'flex';
       modal.focus();
     }
@@ -381,7 +388,7 @@
             const trimmed = code.slice(0, -3);
             window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
           } else {
-            alert('Veri bulunamadı.');
+            showAlert('Veri bulunamadı.', "Bilgi");
           }
         };
 
@@ -395,17 +402,17 @@
             if (foundRow) {
               showInModal(foundRow);
             } else {
-              alert('Ürün stokta bulunamadı.');
+              showAlert('Ürün stokta bulunamadı.', "Bilgi");
             }
           } else if (matched) {
             const foundRow = stockData.find(row => row[0] === matched);
             if (foundRow) {
               showInModal(foundRow);
             } else {
-              alert('Ürün stokta bulunamadı.');
+              showAlert('Ürün stokta bulunamadı.', "Bilgi");
             }
           } else {
-            alert('Veri bulunamadı.');
+            showAlert('Veri bulunamadı.', "Bilgi");
           }
         };
 
