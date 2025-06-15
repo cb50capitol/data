@@ -249,24 +249,32 @@
       flex-grow: 1;
     }
 
-    #modalBody dl {
-      margin: 0;
+    /* Tablo görünümü için */
+    #modalBody table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95em;
     }
-    #modalBody dt {
-      font-weight: 700;
-      margin-top: 0.8em;
-      width: 80px;
-      float: left;
-      color: #555;
-    }
-    body.dark-mode #modalBody dt {
-      color: #bbb;
-    }
-    #modalBody dd {
-      margin-left: 90px;
-      margin-top: 0;
-      margin-bottom: 0.8em;
+    #modalBody th, #modalBody td {
+      border: 1px solid #aaa;
+      padding: 0.5em 0.75em;
+      text-align: left;
+      vertical-align: top;
       word-break: break-word;
+    }
+    #modalBody th {
+      background-color: #eee;
+      width: 30%;
+      font-weight: 600;
+      color: #333;
+    }
+    body.dark-mode #modalBody th {
+      background-color: #444;
+      color: #ddd;
+      border-color: #666;
+    }
+    body.dark-mode #modalBody td {
+      border-color: #555;
     }
 
     /* Responsive */
@@ -282,7 +290,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>. BridGe2</h1>
+    <h1>. BridGe3</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
@@ -306,7 +314,7 @@
         <button id="closeModalBtn" aria-label="Kapat">&times;</button>
       </div>
       <div id="modalBody">
-        <!-- Buraya dl formatında veri gelecek -->
+        <!-- Buraya tablo gelecek -->
       </div>
     </div>
   </div>
@@ -406,13 +414,13 @@
           if (matched) {
             const foundRow = stockData.find(row => row[0] === matched);
             if (foundRow) {
-              // Modal’da başlıklarla göster
+              // Modal’da tablo ile göster
               const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
-              let html = '<dl>';
+              let html = '<table><tbody>';
               for(let i=0; i<labels.length; i++) {
-                html += `<dt>${labels[i]}</dt><dd>${foundRow[i]}</dd>`;
+                html += `<tr><th>${labels[i]}</th><td>${foundRow[i]}</td></tr>`;
               }
-              html += '</dl>';
+              html += '</tbody></table>';
               modalBody.innerHTML = html;
               modal.style.display = 'block';
               modal.focus();
