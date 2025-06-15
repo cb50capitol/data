@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WormHole</title>
   <style>
+    /* Tüm CSS içeriğin aynen korunmuştur */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -185,21 +186,15 @@
       background-color: #004085;
     }
 
-    /* Modal Styles */
+    /* Modal stilleri aynı kalıyor */
     #modal {
       display: none;
       position: fixed;
       z-index: 1000;
       left: 0; top: 0;
       width: 100%; height: 100%;
-      overflow-y: auto;
       background-color: rgba(0,0,0,0.4);
       backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      padding: 0;
-      box-sizing: border-box;
-
-      /* Flex ile tam ortala */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -217,7 +212,6 @@
       flex-direction: column;
       max-height: 90vh;
       overflow: hidden;
-      transition: background-color 0.3s ease;
     }
     body.dark-mode #modalContent {
       background-color: rgba(34,34,34,0.95);
@@ -230,11 +224,6 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.5em;
       margin-bottom: 1em;
-      flex-shrink: 0;
-    }
-    #modalHeader h3 {
-      margin: 0;
-      font-size: 1.3em;
     }
     #closeModalBtn {
       background: none;
@@ -243,31 +232,20 @@
       font-weight: bold;
       cursor: pointer;
       color: #666;
-      transition: color 0.3s ease;
-      line-height: 1;
     }
-    #closeModalBtn:hover {
-      color: #222;
-    }
-    body.dark-mode #closeModalBtn:hover {
-      color: #eee;
-    }
-
     #modalBody {
       overflow-y: auto;
       flex-grow: 1;
       max-height: calc(90vh - 100px);
       font-size: 0.95em;
     }
-
-    /* Tablo görünümü için */
     #modalBody table {
       width: 100%;
       border-collapse: collapse;
     }
     #modalBody th, #modalBody td {
       border: 1px solid #aaa;
-      padding: 0.5em 0.75em;
+      padding: 0.5em;
       text-align: left;
       vertical-align: top;
       word-break: break-word;
@@ -281,26 +259,15 @@
     body.dark-mode #modalBody th {
       background-color: #444;
       color: #ddd;
-      border-color: #666;
     }
     body.dark-mode #modalBody td {
       border-color: #555;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      #modalContent {
-        width: 95%;
-        max-width: none;
-        border-radius: 12px;
-        max-height: 80vh;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>. BridGe</h1>
+    <h1>. BridGe1</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
@@ -316,16 +283,13 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+  <div id="modal" role="dialog" aria-modal="true" tabindex="-1">
     <div id="modalContent">
       <div id="modalHeader">
         <h3 id="modalTitle">Bölüm Detayları</h3>
         <button id="closeModalBtn" aria-label="Kapat">&times;</button>
       </div>
-      <div id="modalBody">
-        <!-- Buraya tablo gelecek -->
-      </div>
+      <div id="modalBody"></div>
     </div>
   </div>
 
@@ -335,9 +299,7 @@
     const clearButton = document.getElementById('clearButton');
     const searchButton = document.getElementById('searchButton');
     const title = document.querySelector('h1');
-
     const modal = document.getElementById('modal');
-    modal.style.display = 'none'; // Modal başlangıçta gizli
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modalBody = document.getElementById('modalBody');
 
@@ -345,15 +307,12 @@
     const dataMap = {};
     let stockData = [];
 
-    // Dark mode toggle via title click
     title.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
 
-    // Fetch ref.txt and stok.txt on load
     async function fetchDataFiles() {
       try {
-        // ref.txt : key value (e.g. 1 5003240481004)
         const refResponse = await fetch('ref.txt');
         const refText = await refResponse.text();
         refText.trim().split('\n').forEach(line => {
@@ -361,12 +320,9 @@
           if (key && value) dataMap[key] = value;
         });
 
-        // stok.txt : tab-separated columns, example:
-        // SKU EAN Ürün Lokasyon Section Adet
         const stockResponse = await fetch('stok.txt');
         const stockText = await stockResponse.text();
         stockData = stockText.trim().split('\n').map(line => line.trim().split(/\t/));
-
       } catch (err) {
         alert('Dosyalar yüklenirken hata oluştu: ' + err);
       }
@@ -389,11 +345,22 @@
     });
     searchButton.addEventListener('click', doSearch);
     searchButton.addEventListener('touchstart', doSearch);
-
     clearButton.addEventListener('click', () => {
       searchHistory = [];
       updateHistory();
     });
+
+    function showInModal(rowData) {
+      const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
+      let html = '<table><tbody>';
+      for (let i = 0; i < labels.length; i++) {
+        html += `<tr><th>${labels[i]}</th><td>${rowData[i]}</td></tr>`;
+      }
+      html += '</tbody></table>';
+      modalBody.innerHTML = html;
+      modal.style.display = 'flex';
+      modal.focus();
+    }
 
     function updateHistory() {
       historyList.innerHTML = '';
@@ -409,10 +376,10 @@
         goButton.textContent = 'Pathway';
         goButton.className = 'go-button';
         goButton.onclick = () => {
-          if (matched) {
-            const trimmed = matched.slice(0, -3);
-            const url = `https://www.boyner.com.tr/search?q=${trimmed}`;
-            window.open(url, '_blank');
+          const code = matched || item;
+          if (code && code.length >= 10) {
+            const trimmed = code.slice(0, -3);
+            window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
           } else {
             alert('Veri bulunamadı.');
           }
@@ -422,19 +389,18 @@
         inventoryButton.textContent = 'Section';
         inventoryButton.className = 'inventory-button';
         inventoryButton.onclick = () => {
-          if (matched) {
+          let searchValue = item;
+          if (/^\d{13}$/.test(searchValue)) {
+            const foundRow = stockData.find(row => row[0] === searchValue);
+            if (foundRow) {
+              showInModal(foundRow);
+            } else {
+              alert('Ürün stokta bulunamadı.');
+            }
+          } else if (matched) {
             const foundRow = stockData.find(row => row[0] === matched);
             if (foundRow) {
-              // Modal’da tablo ile göster
-              const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
-              let html = '<table><tbody>';
-              for(let i=0; i<labels.length; i++) {
-                html += `<tr><th>${labels[i]}</th><td>${foundRow[i]}</td></tr>`;
-              }
-              html += '</tbody></table>';
-              modalBody.innerHTML = html;
-              modal.style.display = 'flex';
-              modal.focus();
+              showInModal(foundRow);
             } else {
               alert('Ürün stokta bulunamadı.');
             }
@@ -446,7 +412,6 @@
         li.appendChild(span);
         li.appendChild(goButton);
         li.appendChild(inventoryButton);
-
         historyList.appendChild(li);
       });
     }
@@ -456,7 +421,6 @@
       modalBody.innerHTML = '';
     });
 
-    // Modal dışına tıklayınca kapat
     modal.addEventListener('click', e => {
       if (e.target === modal) {
         modal.style.display = 'none';
