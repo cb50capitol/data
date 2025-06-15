@@ -267,7 +267,7 @@
   <div class="container">
     <h1>. BridGe</h1>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
+      <input type="text" id="searchInput" placeholder="# Ref or Sku" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
     </div>
     <div class="history">
@@ -389,7 +389,7 @@
             if (foundRow) {
               showInModal(foundRow);
             } else {
-              showAlert('Ürün stokta bulunamadı.', "Bilgi");
+              showAlert('Sap ile girişi kontrol edin.', "Bilgi");
             }
           } else if (matched) {
             const foundRow = stockData.find(row => row[0] === matched);
