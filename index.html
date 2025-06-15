@@ -422,8 +422,8 @@
         inventoryButton.textContent = 'Section';
         inventoryButton.className = 'inventory-button';
         inventoryButton.onclick = () => {
-          if (item.length === 11) {
-            // 11 haneli ise stok.txt'de EAN kolonunda arama yap
+          if (item.length === 13) {
+            // 13 haneli ise stok.txt'de EAN kolonunda arama yap
             const foundRow = stockData.find(row => row[1] === item);
             if (foundRow) {
               const labels = ['Sku', 'Ean', 'Ürün', 'Lokasyon', 'Section', 'Adet'];
