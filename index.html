@@ -319,7 +319,7 @@
 
     function updateRefIndicator() {
       // Eğer ref.txt seçili ise placeholder sade olsun, input temiz olsun ve disabled değil
-      if(selectedRefFile.toLowerCase() === 'ref.txt') {
+      if(selectedRefFile.toLowerCase() === 'Genel.txt') {
         input.placeholder = '# Search';
         input.value = '';
         input.disabled = false; // İstersen burayı true yapabilirsin ama isteğe bağlı
@@ -443,7 +443,7 @@ goButton.onclick = () => {
     // Modal için ref dosyası seçimi fonksiyonu
     function showRefSelector() {
       const refFiles = [
-        'ref.txt',
+        'Genel.txt',
         'Aybars.txt',
         'OsmanB.txt',
         'Berkay.txt',
