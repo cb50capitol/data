@@ -23,7 +23,7 @@
       margin-bottom: 2em;
       transition: background-color 0.5s ease, color 0.5s ease;
     }
-    h1, h2 {
+    h1 {
       text-align: center;
       font-size: 1.5em;
       cursor: pointer;
@@ -36,17 +36,12 @@
     }
     input[type="text"] {
       flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: 0;
-      min-width: 100px;
-      max-width: calc(100% - 80px);
       padding: 0.75em;
       font-size: 1em;
       border: 1px solid #ccc;
       border-radius: 8px;
-      box-sizing: border-box;
       height: 42px;
-      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+      box-sizing: border-box;
     }
     #searchButton {
       flex: 0 0 70px;
@@ -57,8 +52,6 @@
       background-color: #e0e0e0;
       cursor: pointer;
       height: 42px;
-      transition: background-color 0.3s ease;
-      color: #222;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,15 +69,6 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.5em;
     }
-    .history-header .button-group {
-      display: flex;
-      gap: 0.5em;
-    }
-    .history-header h2 {
-      margin: 0;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
     .clear-button {
       padding: 0.4em 0.8em;
       background-color: #dc3545;
@@ -93,7 +77,6 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 1em;
-      transition: background-color 0.3s ease;
     }
     .clear-button:hover {
       background-color: #b02a37;
@@ -109,7 +92,6 @@
       padding: 0.5em 0;
       border-bottom: 1px solid #eee;
       gap: 0.5em;
-      transition: color 0.5s ease;
     }
     .search-text {
       flex: 1;
@@ -122,11 +104,9 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
     .go-button:hover {
       background-color: #218838;
-      color: white !important;
     }
     .inventory-button {
       background-color: #007bff;
@@ -135,11 +115,9 @@
       border: none;
       cursor: pointer;
       padding: 0.4em 0.8em;
-      transition: background-color 0.3s ease;
     }
     .inventory-button:hover {
       background-color: #0056b3;
-      color: white !important;
     }
     body.dark-mode {
       background-color: #121212;
@@ -148,7 +126,6 @@
     body.dark-mode .container {
       background-color: #1e1e1e;
       color: #eee;
-      box-shadow: none;
     }
     body.dark-mode input[type="text"] {
       background-color: #333;
@@ -165,21 +142,18 @@
     }
     body.dark-mode .clear-button {
       background-color: #a33;
-      color: #eee;
     }
     body.dark-mode .clear-button:hover {
       background-color: #700;
     }
     body.dark-mode .go-button {
       background-color: #218838;
-      color: #eee !important;
     }
     body.dark-mode .go-button:hover {
       background-color: #1c7430;
     }
     body.dark-mode .inventory-button {
       background-color: #0056b3;
-      color: #eee !important;
     }
     body.dark-mode .inventory-button:hover {
       background-color: #004085;
@@ -203,7 +177,6 @@
       padding: 1.5em 2em 2em;
       box-shadow: 0 8px 24px rgba(0,0,0,0.25);
       color: #222;
-      position: relative;
       display: flex;
       flex-direction: column;
       max-height: 90vh;
@@ -243,14 +216,10 @@
       border: 1px solid #aaa;
       padding: 0.5em;
       text-align: left;
-      vertical-align: top;
-      word-break: break-word;
     }
     #modalBody th {
       background-color: #eee;
       width: 30%;
-      font-weight: 600;
-      color: #333;
     }
     body.dark-mode #modalBody th {
       background-color: #444;
@@ -259,18 +228,45 @@
     body.dark-mode #modalBody td {
       border-color: #555;
     }
+
+    /* Yeni: Log'in butonu */
+    .ref-selector-button {
+      background-color: #000;
+      border: none;
+      padding: 0.4em 1em;
+      border-radius: 8px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      gap: 0.2em;
+    }
+    .ref-selector-button .log {
+      color: yellow;
+    }
+    .ref-selector-button .in {
+      color: white;
+    }
+    .ref-selector-button:hover {
+      opacity: 0.85;
+    }
+    body.dark-mode .ref-selector-button {
+      background-color: #222;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1># BridGe</h1>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="# Ref" inputmode="numeric" pattern="[0-9]*" />
+      <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">Scan</button>
     </div>
     <div class="history">
       <div class="history-header">
-        <h2>Log</h2>
+        <button id="refSelectorButton" class="ref-selector-button">
+          <span class="log">Log</span><span class="in">'in</span>
+        </button>
         <div class="button-group">
           <button id="clearButton" class="clear-button">Void</button>
         </div>
@@ -298,40 +294,37 @@
     const modal = document.getElementById('modal');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modalBody = document.getElementById('modalBody');
+    const refSelectorButton = document.getElementById('refSelectorButton');
 
     let searchHistory = [];
     let dataMap = {};
     let stockData = [];
-    let selectedRefFile = 'ref.txt';
+    let selectedRefFile = 'Genel.txt';
 
     title.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
 
-    document.querySelector('.history-header h2').addEventListener('click', () => {
+    refSelectorButton.addEventListener('click', () => {
       showRefSelector();
     });
 
-    // Dosya adından .txt uzantısını kaldırır
     function stripTxtExtension(fileName) {
       return fileName.replace(/\.txt$/i, '');
     }
 
     function updateRefIndicator() {
-      // Eğer ref.txt seçili ise placeholder sade olsun, input temiz olsun ve disabled değil
-      if(selectedRefFile.toLowerCase() === 'ref.txt') {
-        input.placeholder = '# Ref';
+      if(selectedRefFile.toLowerCase() === 'genel.txt') {
+        input.placeholder = '# Search';
         input.value = '';
-        input.disabled = false; // İstersen burayı true yapabilirsin ama isteğe bağlı
+        input.disabled = false;
       } else {
-        // Diğer dosyalar seçilince placeholder gösterilsin
-        input.placeholder = `# Ref (${stripTxtExtension(selectedRefFile)})`;
-        // input.value kalabilir, kullanıcı yazabilir
+        input.placeholder = `# Search (${stripTxtExtension(selectedRefFile)})`;
         input.disabled = false;
       }
     }
 
-    async function fetchDataFiles(refFile = 'ref.txt') {
+    async function fetchDataFiles(refFile = 'Genel.txt') {
       selectedRefFile = refFile;
       try {
         const refResponse = await fetch(refFile);
@@ -370,7 +363,6 @@
       if (e.key === 'Enter') doSearch();
     });
     searchButton.addEventListener('click', doSearch);
-    searchButton.addEventListener('touchstart', doSearch);
     clearButton.addEventListener('click', () => {
       searchHistory = [];
       updateHistory();
@@ -386,14 +378,12 @@
       modalBody.innerHTML = html;
       document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
       modal.style.display = 'flex';
-      modal.focus();
     }
 
     function showAlert(message, title = "Uyarı") {
       document.getElementById('modalTitle').textContent = title;
       modalBody.innerHTML = `<p style="font-size:1.1em; padding: 1em 0; margin:0;">${message}</p>`;
       modal.style.display = 'flex';
-      modal.focus();
     }
 
     function updateHistory() {
@@ -410,47 +400,38 @@
         inventoryButton.textContent = 'Section';
         inventoryButton.className = 'inventory-button';
         inventoryButton.onclick = () => {
-          let searchValue = item;
-          const foundRow = stockData.find(row => row[0] === (matched || searchValue));
+          const foundRow = stockData.find(row => row[0] === (matched || item));
           if (foundRow) {
             showInModal(foundRow);
           } else {
             showAlert('Sap ile girişi kontrol edin.', "Bilgi");
           }
         };
-const goButton = document.createElement('button');
-goButton.textContent = 'Pathway';
-goButton.className = 'go-button';
-goButton.onclick = () => {
-  const code = matched || item;
-  if (code && code.length >= 10) {
-    const trimmed = code.slice(0, -3);
-    window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
-  } else {
-    showAlert('Veri bulunamadı.', "Bilgi");
-  }
-};
 
+        const goButton = document.createElement('button');
+        goButton.textContent = 'Pathway';
+        goButton.className = 'go-button';
+        goButton.onclick = () => {
+          const code = matched || item;
+          if (code && code.length >= 10) {
+            const trimmed = code.slice(0, -3);
+            window.open(`https://www.boyner.com.tr/search?q=${trimmed}`, '_blank');
+          } else {
+            showAlert('Veri bulunamadı.', "Bilgi");
+          }
+        };
 
         li.appendChild(span);
         li.appendChild(inventoryButton);
         li.appendChild(goButton);
-
         historyList.appendChild(li);
       });
     }
 
-    // Modal için ref dosyası seçimi fonksiyonu
     function showRefSelector() {
       const refFiles = [
-        'ref.txt',
-        'Aybars.txt',
-        'OsmanB.txt',
-        'Berkay.txt',
-        'OsmanG.txt',
-        'berkant.txt',
-        'Faruk.txt',
-        'Ferhat.txt'
+        'Genel.txt', 'Aybars.txt', 'OsmanB.txt', 'Berkay.txt',
+        'OsmanG.txt', 'Berkant.txt', 'Faruk.txt', 'Ferhat.txt'
       ];
 
       const modalTitle = document.getElementById('modalTitle');
@@ -459,8 +440,7 @@ goButton.onclick = () => {
       let html = '<div style="display:flex; flex-direction: column; gap: 0.6em;">';
       refFiles.forEach(file => {
         const fileName = stripTxtExtension(file);
-        html += `<button style="padding: 0.6em 1em; border-radius: 8px; border: 1px solid #666; background: #ddd; font-weight: 600; cursor: pointer;"
-          onclick="selectRefFile('${file}')">${fileName}</button>`;
+        html += `<button style="padding: 0.6em 1em; border-radius: 8px; border: 1px solid #666; background: #ddd; font-weight: 600; cursor: pointer;" onclick="selectRefFile('${file}')">${fileName}</button>`;
       });
       html += '</div>';
 
@@ -477,7 +457,6 @@ goButton.onclick = () => {
       modal.style.display = 'none';
     });
 
-    // Kapatmak için modal dışına tıklama
     window.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.style.display = 'none';
