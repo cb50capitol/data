@@ -63,7 +63,6 @@
   </style>
 </head>
 <body>
-  <body>
   <div class="container">
     <h1># BridGe</h1>
     <div class="search-container">
@@ -116,11 +115,12 @@
     async function fetchDataFiles(file='Genel.txt') {
       selectedRefFile = file;
       try {
-        const resp = await fetch(file);
+        const cacheBuster = `?v=${Date.now()}`;
+        const resp = await fetch(file + cacheBuster);
         if(!resp.ok) throw new Error(`${file} bulunamadı`);
         const text = await resp.text();
         dataMap = {}; text.trim().split('\n').forEach(l=>{ const [k,v]=l.trim().split(/\s+/); if(k&&v)dataMap[k]=v; });
-        const sr = await fetch('stok.txt'); if(!sr.ok) throw new Error('stok.txt bulunamadı');
+        const sr = await fetch('stok.txt' + cacheBuster); if(!sr.ok) throw new Error('stok.txt bulunamadı');
         stockData = (await sr.text()).trim().split('\n').map(r=>r.trim().split('\t'));
         updateRefIndicator();
       } catch(err) { showAlert('Dosyalar yüklenirken hata: '+err.message, 'Hata'); }
