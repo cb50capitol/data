@@ -64,7 +64,7 @@
 </head>
 <body>
   <div class="container">
-    <h1># BridGe</h1>
+    <h1># BridGe.</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">
@@ -115,11 +115,12 @@
     async function fetchDataFiles(file='Genel.txt') {
       selectedRefFile = file;
       try {
-        const resp = await fetch(file);
+        const cacheBuster = `?v=${Date.now()}`;
+        const resp = await fetch(file + cacheBuster);
         if(!resp.ok) throw new Error(`${file} bulunamadı`);
         const text = await resp.text();
         dataMap = {}; text.trim().split('\n').forEach(l=>{ const [k,v]=l.trim().split(/\s+/); if(k&&v)dataMap[k]=v; });
-        const sr = await fetch('stok.txt'); if(!sr.ok) throw new Error('stok.txt bulunamadı');
+        const sr = await fetch('stok.txt' + cacheBuster); if(!sr.ok) throw new Error('stok.txt bulunamadı');
         stockData = (await sr.text()).trim().split('\n').map(r=>r.trim().split('\t'));
         updateRefIndicator();
       } catch(err) { showAlert('Dosyalar yüklenirken hata: '+err.message, 'Hata'); }
@@ -151,7 +152,7 @@
       for (let i = 0; i < labels.length; i++) {
         h += `<tr><th>${labels[i]}</th><td>${matches[0][i] || ''}</td></tr>`;
       }
-      h += '</tbody></table><br/><strong>Lokasyonlar:</strong><br/>';
+      h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
       h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
       matches.forEach(row => {
         h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`;
@@ -181,7 +182,7 @@
         inv.textContent='Section'; inv.className='inventory-button';
         inv.onclick=()=> showInModal(code);
         const go=document.createElement('button');
-        go.textContent='Pathway'; go.className='go-button';
+        go.textContent='Boyner'; go.className='go-button';
         go.onclick=()=> {
           if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank');
           else showAlert('Veri bulunamadı.','Bilgi');
@@ -197,7 +198,7 @@
       modalBody.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 0.5em;">
           ${files.map(f => `
-            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;text-align:left;" onclick="selectRefFile('${f}')">
+            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;" onclick="selectRefFile('${f}')">
               ${stripTxtExtension(f)}
             </button>`).join('')}
         </div>`;
