@@ -74,7 +74,7 @@
     <div class="history">
       <div class="history-header">
         <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
-        <button id="clearButton" class="clear-button">Void</button>
+        <button id="clearButton" class="clear-button">Clear</button>
       </div>
       <ul id="historyList"></ul>
     </div>
@@ -179,10 +179,10 @@
         span.textContent=m?`${item}\t${m}`:item;
         span.className='search-text';
         const inv=document.createElement('button');
-        inv.textContent='Section'; inv.className='inventory-button';
+        inv.textContent='Inventory '; inv.className='inventory-button';
         inv.onclick=()=> showInModal(code);
         const go=document.createElement('button');
-        go.textContent='Boyner'; go.className='go-button';
+        go.textContent='Explore'; go.className='go-button';
         go.onclick=()=> {
           if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank');
           else showAlert('Veri bulunamadı.','Bilgi');
