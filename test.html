@@ -31,39 +31,9 @@
     .inventory-button:hover { background:#0056b3; }
 
     .ref-selector-button { background:#000; border:none; padding:0.4em 1em; border-radius:8px; font-size:1em; font-weight:bold; cursor:pointer; display:inline-flex; gap:0.2em; }
-    .ref-selector-button .log { color: #FFD700; }
+    .ref-selector-button .log { color:yellow; }
     .ref-selector-button .in { color:white; }
     .ref-selector-button:hover { opacity:0.85; }
-
-    .plus-button {
-      background: transparent;
-      color: #007bff;
-      border: 1px solid #007bff;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      font-size: 1em;
-      line-height: 1;
-      padding: 0;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-    }
-    .plus-button:hover {
-      background: #007bff;
-      color: white;
-    }
-    body.dark-mode .plus-button {
-      background: transparent;
-      color: #FFD700;
-      border-color: #FFD700;
-    }
-    body.dark-mode .plus-button:hover {
-      background: #FFD700;
-      color: #121212;
-    }
 
     body.dark-mode { background:#121212; color:#eee; }
     body.dark-mode .container { background:#1e1e1e; color:#eee; }
@@ -90,36 +60,11 @@
     #modalBody th { background:#eee; width:30%; }
     body.dark-mode #modalBody th { background:#444; color:#ddd; }
     body.dark-mode #modalBody td { border-color:#555; }
-
-    /* Kayan yazı */
-    #scrollBanner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #dc3545;
-      color: white;
-      font-weight: bold;
-      overflow: hidden;
-      padding: 0.5em 0;
-      text-align: center;
-      z-index: 9999;
-    }
-    #scrollBanner span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 15s linear forwards;
-      white-space: nowrap;
-    }
-    @keyframes scroll-left {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1># Capitol.</h1>
+    <h1># BridGe.</h1>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
       <button id="searchButton" type="button" title="Ara">
@@ -197,7 +142,10 @@
 
     function showInModal(sku){
       const matches = stockData.filter(row => row[0] === sku);
-      if (matches.length === 0) return showAlert('Sap ile girişi kontrol edin.','Bilgi');
+      if (matches.length === 0) {
+        showAlert('Sap ile girişi kontrol edin.','Bilgi');
+        return;
+      }
 
       const labels = ['Sku','Ean','Ürün'];
       let h = '<table><tbody>';
@@ -206,7 +154,9 @@
       }
       h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
       h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
-      matches.forEach(row => { h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`; });
+      matches.forEach(row => {
+        h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`;
+      });
       h += '</tbody></table>';
 
       modalBody.innerHTML = h;
@@ -225,49 +175,43 @@
       searchHistory.forEach(item=>{
         const m=dataMap[item], code=m||item;
         const li=document.createElement('li');
-
-        const plusBtn = document.createElement('button');
-        plusBtn.textContent = '+'; plusBtn.className = 'plus-button'; plusBtn.title = 'Bir üstünü ara';
-        plusBtn.onclick = () => { const next = (parseInt(item, 10) + 1).toString(); input.value = next; doSearch(); };
-
         const span=document.createElement('span');
-        span.textContent=m?`${item}\t${m}`:item; span.className='search-text';
-
+        span.textContent=m?`${item}\t${m}`:item;
+        span.className='search-text';
         const inv=document.createElement('button');
-        inv.textContent='Section'; inv.className='inventory-button'; inv.onclick=()=> showInModal(code);
-
+        inv.textContent='Section'; inv.className='inventory-button';
+        inv.onclick=()=> showInModal(code);
         const go=document.createElement('button');
-        go.textContent='Online'; go.className='go-button';
-        go.onclick=()=> { if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank'); else showAlert('Veri bulunamadı.','Bilgi'); };
-
-        li.append(plusBtn, span, inv, go);
+        go.textContent='Explore'; go.className='go-button';
+        go.onclick=()=> {
+          if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank');
+          else showAlert('Veri bulunamadı.','Bilgi');
+        };
+        li.append(span, inv, go);
         historyList.appendChild(li);
       });
     }
 
     function showRefSelector(){
       const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
-      document.getElementById('modalTitle').textContent = 'Referans Dosyası Seçimi';
-      modalBody.innerHTML = files.map(f=>`<button style="margin:4px 0; padding:6px 14px; width:100%; font-weight:bold; border-radius:10px; cursor:pointer; background:#007bff; color:#fff; border:none;">${stripTxtExtension(f)}</button>`).join('');
-      modal.style.display = 'flex';
-      Array.from(modalBody.querySelectorAll('button')).forEach((btn,i)=>{ btn.onclick = () => { fetchDataFiles(files[i]); modal.style.display = 'none'; }; });
+      document.getElementById('modalTitle').textContent='Referans Dosyası Seçimi';
+      modalBody.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 0.5em;">
+          ${files.map(f => `
+            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;" onclick="selectRefFile('${f}')">
+              ${stripTxtExtension(f)}
+            </button>`).join('')}
+        </div>`;
+      modal.style.display='flex';
     }
 
-    closeModalBtn.addEventListener('click', () => { modal.style.display = 'none'; });
-    modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
+    window.selectRefFile=f=>{
+      modal.style.display='none';
+      fetchDataFiles(f);
+    };
 
-    // Kayan yazı ekle
-    window.addEventListener('load', () => {
-      const banner = document.createElement('div');
-      banner.id = 'scrollBanner';
-      banner.innerHTML = `<span>📢 Boyner App kurulu ise 'Online' butonu ürüne yönlendirmeyebilir. 📢 LOG son 15 sorguyu sıralar. 📢 Transfer toplama listesi varsayılan olarak 'Genel' tanımlıdır güncel liste alındığında uygun dosya seçilmelidir.📢</span>`;
-      document.body.appendChild(banner);
-      setTimeout(() => {
-        banner.style.opacity = '0';
-        banner.style.transition = 'opacity 1s';
-        setTimeout(() => banner.remove(), 1000);
-      }, 14000);
-    });
+    closeModalBtn.addEventListener('click',()=>modal.style.display='none');
+    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='none'; });
   </script>
 </body>
 </html>
