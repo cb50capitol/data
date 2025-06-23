@@ -31,38 +31,39 @@
     .inventory-button:hover { background:#0056b3; }
 
     .ref-selector-button { background:#000; border:none; padding:0.4em 1em; border-radius:8px; font-size:1em; font-weight:bold; cursor:pointer; display:inline-flex; gap:0.2em; }
-    .ref-selector-button .log { color:yellow; }
+    .ref-selector-button .log { color: #FFD700; }
     .ref-selector-button .in { color:white; }
     .ref-selector-button:hover { opacity:0.85; }
 
-.plus-button {
-  background: transparent;
-  color: #007bff;
-  border: 1px solid #007bff;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  font-size: 1em;
-  line-height: 1;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-.plus-button:hover {
-  background: #007bff;
-  color: white;
-}
-body.dark-mode .plus-button {
-  color: #66b0ff;
-  border-color: #66b0ff;
-}
-body.dark-mode .plus-button:hover {
-  background: #66b0ff;
-  color: #121212;
-}
+    .plus-button {
+      background: transparent;
+      color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 1em;
+      line-height: 1;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .plus-button:hover {
+      background: #007bff;
+      color: white;
+    }
+    body.dark-mode .plus-button {
+      background: transparent;
+      color: #FFD700;
+      border-color: #FFD700;
+    }
+    body.dark-mode .plus-button:hover {
+      background: #FFD700;
+      color: #121212;
+    }
 
     body.dark-mode { background:#121212; color:#eee; }
     body.dark-mode .container { background:#1e1e1e; color:#eee; }
@@ -77,7 +78,6 @@ body.dark-mode .plus-button:hover {
     body.dark-mode .inventory-button { background:#0056b3; }
     body.dark-mode .inventory-button:hover { background:#004085; }
     body.dark-mode .ref-selector-button { background:#222; }
-    body.dark-mode .plus-button { background: linear-gradient(to right, #ffb300, #f57c00); color: #222; }
 
     #modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.4); backdrop-filter:blur(5px); align-items:center; justify-content:center; }
     #modalContent { background:rgba(255,255,255,0.95); max-width:360px; width:90%; border-radius:14px; padding:1.5em 2em 2em; box-shadow:0 8px 24px rgba(0,0,0,0.25); color:#222; display:flex; flex-direction:column; max-height:90vh; overflow:hidden; }
@@ -238,24 +238,20 @@ body.dark-mode .plus-button:hover {
 
     function showRefSelector(){
       const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
-      document.getElementById('modalTitle').textContent='Referans Dosyası Seçimi';
-      modalBody.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 0.5em;">
-          ${files.map(f => `
-            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;" onclick="selectRefFile('${f}')">
-              ${stripTxtExtension(f)}
-            </button>`).join('')}
-        </div>`;
-      modal.style.display='flex';
+      document.getElementById('modalTitle').textContent = 'Referans Dosyası Seçimi';
+      modalBody.innerHTML = files.map(f=>`<button style="margin:4px 0; padding:6px 14px; width:100%; font-weight:bold; border-radius:10px; cursor:pointer; background:#007bff; color:#fff; border:none;">${stripTxtExtension(f)}</button>`).join('');
+      modal.style.display = 'flex';
+
+      Array.from(modalBody.querySelectorAll('button')).forEach((btn,i)=>{
+        btn.onclick = () => {
+          fetchDataFiles(files[i]);
+          modal.style.display = 'none';
+        };
+      });
     }
 
-    window.selectRefFile=f=>{
-      modal.style.display='none';
-      fetchDataFiles(f);
-    };
-
-    closeModalBtn.addEventListener('click',()=>modal.style.display='none');
-    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='none'; });
+    closeModalBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+    modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
   </script>
 </body>
 </html>
