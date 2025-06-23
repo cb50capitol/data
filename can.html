@@ -90,6 +90,31 @@
     #modalBody th { background:#eee; width:30%; }
     body.dark-mode #modalBody th { background:#444; color:#ddd; }
     body.dark-mode #modalBody td { border-color:#555; }
+
+    /* Kayan yazı */
+    #scrollBanner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #dc3545;
+      color: white;
+      font-weight: bold;
+      overflow: hidden;
+      padding: 0.5em 0;
+      text-align: center;
+      z-index: 9999;
+    }
+    #scrollBanner span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 10s linear forwards;
+      white-space: nowrap;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
@@ -172,10 +197,7 @@
 
     function showInModal(sku){
       const matches = stockData.filter(row => row[0] === sku);
-      if (matches.length === 0) {
-        showAlert('Sap ile girişi kontrol edin.','Bilgi');
-        return;
-      }
+      if (matches.length === 0) return showAlert('Sap ile girişi kontrol edin.','Bilgi');
 
       const labels = ['Sku','Ean','Ürün'];
       let h = '<table><tbody>';
@@ -184,9 +206,7 @@
       }
       h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
       h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
-      matches.forEach(row => {
-        h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`;
-      });
+      matches.forEach(row => { h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`; });
       h += '</tbody></table>';
 
       modalBody.innerHTML = h;
@@ -207,29 +227,18 @@
         const li=document.createElement('li');
 
         const plusBtn = document.createElement('button');
-        plusBtn.textContent = '+';
-        plusBtn.className = 'plus-button';
-        plusBtn.title = 'Bir üstünü ara';
-        plusBtn.onclick = () => {
-          const next = (parseInt(item, 10) + 1).toString();
-          input.value = next;
-          doSearch();
-        };
+        plusBtn.textContent = '+'; plusBtn.className = 'plus-button'; plusBtn.title = 'Bir üstünü ara';
+        plusBtn.onclick = () => { const next = (parseInt(item, 10) + 1).toString(); input.value = next; doSearch(); };
 
         const span=document.createElement('span');
-        span.textContent=m?`${item}\t${m}`:item;
-        span.className='search-text';
+        span.textContent=m?`${item}\t${m}`:item; span.className='search-text';
 
         const inv=document.createElement('button');
-        inv.textContent='Section'; inv.className='inventory-button';
-        inv.onclick=()=> showInModal(code);
+        inv.textContent='Section'; inv.className='inventory-button'; inv.onclick=()=> showInModal(code);
 
         const go=document.createElement('button');
-        go.textContent='Explore'; go.className='go-button';
-        go.onclick=()=> {
-          if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank');
-          else showAlert('Veri bulunamadı.','Bilgi');
-        };
+        go.textContent='Online'; go.className='go-button';
+        go.onclick=()=> { if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank'); else showAlert('Veri bulunamadı.','Bilgi'); };
 
         li.append(plusBtn, span, inv, go);
         historyList.appendChild(li);
@@ -241,17 +250,24 @@
       document.getElementById('modalTitle').textContent = 'Referans Dosyası Seçimi';
       modalBody.innerHTML = files.map(f=>`<button style="margin:4px 0; padding:6px 14px; width:100%; font-weight:bold; border-radius:10px; cursor:pointer; background:#007bff; color:#fff; border:none;">${stripTxtExtension(f)}</button>`).join('');
       modal.style.display = 'flex';
-
-      Array.from(modalBody.querySelectorAll('button')).forEach((btn,i)=>{
-        btn.onclick = () => {
-          fetchDataFiles(files[i]);
-          modal.style.display = 'none';
-        };
-      });
+      Array.from(modalBody.querySelectorAll('button')).forEach((btn,i)=>{ btn.onclick = () => { fetchDataFiles(files[i]); modal.style.display = 'none'; }; });
     }
 
     closeModalBtn.addEventListener('click', () => { modal.style.display = 'none'; });
     modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
+
+    // Kayan yazı ekle
+    window.addEventListener('load', () => {
+      const banner = document.createElement('div');
+      banner.id = 'scrollBanner';
+      banner.innerHTML = `<span>📢 Boyner App kurulu ise 'Online' butonu ürüne yönlendirmeyebilir. 📢 Transfer toplama listesi varsayılan olarak 'Genel' tanımlıdır güncel liste alındığında uygun dosya seçilmelidir.📢</span>`;
+      document.body.appendChild(banner);
+      setTimeout(() => {
+        banner.style.opacity = '0';
+        banner.style.transition = 'opacity 1s';
+        setTimeout(() => banner.remove(), 1000);
+      }, 10000);
+    });
   </script>
 </body>
 </html>
