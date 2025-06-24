@@ -22,23 +22,55 @@
       margin-bottom: 1rem;
     }
 
-    .card {
-      background: #ffffff;
-      border-left: 4px solid #0d6efd;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      padding: 1.25rem;
-      font-size: 16px;
-      line-height: 1.6;
+    .card-alt {
+      background: #fdfdfd;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 1.5rem;
+      font-size: 15px;
+      line-height: 1.5;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: all 0.2s ease-in-out;
     }
 
-    .card div {
-      margin-bottom: 10px;
+    .card-alt:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 16.5px;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+    }
+
+    .card-grid div {
+      font-size: 14.5px;
+    }
+
+    .card-grid div span {
+      font-weight: 500;
+      color: #495057;
     }
 
     .col-custom {
       padding: 0.5rem;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -0.5rem;
     }
 
     @media (min-width: 576px) {
@@ -51,12 +83,6 @@
       .col-custom {
         width: 100%;
       }
-    }
-
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      margin: -0.5rem;
     }
   </style>
 </head>
@@ -119,7 +145,7 @@ async function loadData() {
     if (!response.ok) throw new Error('test.txt dosyası okunamadı');
     const text = await response.text();
     const lines = text.split('\n').filter(l => l.trim().length > 0);
-    lines.shift(); // Başlığı çıkar
+    lines.shift(); // başlığı atla
     data = lines.map(parseTSVLine);
     populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
     filterModal.show();
@@ -185,16 +211,18 @@ function renderCards(rows) {
     col.className = "col-custom";
 
     const card = document.createElement('div');
-    card.className = "card";
+    card.className = "card-alt";
 
     card.innerHTML = `
-      <div><strong>Tanım:</strong> ${row[4]}</div>
-      <div><strong>Model:</strong> ${row[5]}</div>
-      <div><strong>Malzeme:</strong> ${row[6]}</div>
-      <div><strong>EAN/UPC:</strong> ${row[7]}</div>
-      <div><strong>Müşteri:</strong> ${row[8]}</div>
-      <div><strong>SAS:</strong> ${row[9]}</div>
-      <div><strong>Stok:</strong> ${row[10]}</div>
+      <div class="card-title">${row[4]}</div>
+      <div class="card-grid">
+        <div><span>Model:</span> ${row[5]}</div>
+        <div><span>Malzeme:</span> ${row[6]}</div>
+        <div><span>EAN/UPC:</span> ${row[7]}</div>
+        <div><span>Müşteri:</span> ${row[8]}</div>
+        <div><span>SAS:</span> ${row[9]}</div>
+        <div><span>Stok:</span> ${row[10]}</div>
+      </div>
     `;
 
     col.appendChild(card);
