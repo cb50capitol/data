@@ -50,6 +50,7 @@
       margin-bottom: 8px;
       font-size: 15px;
       color: #333;
+      flex-wrap: wrap;
     }
 
     .info-item i {
@@ -57,6 +58,18 @@
       text-align: center;
       color: #0d6efd;
       margin-right: 8px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-left: 10px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      cursor: pointer;
     }
 
     .col-custom {
@@ -202,6 +215,8 @@ function renderCards(rows) {
     return;
   }
 
+  const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+
   rows.forEach(row => {
     const col = document.createElement('div');
     col.className = "col-custom";
@@ -209,15 +224,47 @@ function renderCards(rows) {
     const card = document.createElement('div');
     card.className = "card-alt";
 
+    const sasCount = parseInt(row[9]) || 0;
+    const ean = row[7];
+    let checkboxHTML = "";
+
+    for (let i = 0; i < sasCount; i++) {
+      const checkboxId = `${ean}_sas_${i}`;
+      const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
+      checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
+    }
+
     card.innerHTML = `
       <div class="card-title">${row[4]}</div>
       <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
       <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-      <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+      <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${ean}</div>
       <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
-      <div class="info-item"><i class="fas fa-warehouse"></i> <strong>SAS:</strong> ${row[9]}</div>
+      <div class="info-item">
+        <i class="fas fa-warehouse me-1"></i>
+        <strong class="me-2">SAS:</strong> ${row[9]}
+        <div class="checkbox-group ms-2">
+          ${checkboxHTML}
+        </div>
+      </div>
       <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
     `;
+
+    // Checkbox'lara event listener ekle
+    const checkboxes = card.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', function () {
+        const id = this.id;
+        const checkedState = this.checked;
+        const saved = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+        if (checkedState) {
+          saved[id] = true;
+        } else {
+          delete saved[id];
+        }
+        localStorage.setItem("checkedBoxes", JSON.stringify(saved));
+      });
+    });
 
     col.appendChild(card);
     cardContainer.appendChild(col);
