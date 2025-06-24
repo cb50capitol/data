@@ -125,7 +125,8 @@
             <select id="marka" class="form-select" required></select>
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" id="clearStorageBtn" class="btn btn-danger">Geçmişi Temizle</button>
           <button type="submit" class="btn btn-primary">Filtrele</button>
         </div>
       </form>
@@ -143,6 +144,7 @@ const markaSelect = document.getElementById('marka');
 const cardContainer = document.getElementById('cardContainer');
 const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
+const clearStorageBtn = document.getElementById('clearStorageBtn');
 
 function parseTSVLine(line) {
   return line.split('\t').map(cell => cell.trim());
@@ -238,19 +240,16 @@ function renderCards(rows) {
       <div class="card-title">${row[4]}</div>
       <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
       <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-      <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${ean}</div>
+      <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
       <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
       <div class="info-item">
         <i class="fas fa-warehouse me-1"></i>
         <strong class="me-2">SAS:</strong> ${row[9]}
-        <div class="checkbox-group ms-2">
-          ${checkboxHTML}
-        </div>
+        <div class="checkbox-group ms-2">${checkboxHTML}</div>
       </div>
       <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
     `;
 
-    // Checkbox'lara event listener ekle
     const checkboxes = card.querySelectorAll("input[type='checkbox']");
     checkboxes.forEach(cb => {
       cb.addEventListener('change', function () {
@@ -271,9 +270,13 @@ function renderCards(rows) {
   });
 }
 
-window.addEventListener('load', () => {
-  loadData();
+// Geçmişi Temizle Butonu
+clearStorageBtn.addEventListener('click', () => {
+  localStorage.removeItem("checkedBoxes");
+  alert("Geçmiş temizlendi.");
 });
+
+window.addEventListener('load', loadData);
 </script>
 </body>
 </html>
