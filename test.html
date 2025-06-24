@@ -3,215 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WormHole</title>
+  <title>Transfer Listesi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { font-family: Arial,sans-serif; margin:0; padding:1em; background:#f5f5f5; color:#222; transition:background .5s,color .5s;}
-    .container { max-width:600px; margin:auto; background:#fff; padding:2em; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    h1 { text-align:center; font-size:1.5em; cursor:pointer; margin:0; }
-
-    .search-container { position:relative; margin-top:1em; }
-    .search-container input { width:100%; padding:0.75em 2.5em 0.75em 1em; font-size:1em; border:1px solid #ccc; border-radius:999px; box-sizing:border-box; height:48px; background:#fff; color:#222; transition:border .2s;}
-    .search-container input:focus { outline:none; border-color:#007bff; }
-
-    #searchButton { position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; padding:0; cursor:pointer; height:32px; width:32px; display:flex; align-items:center; justify-content:center; color:#555; }
-    #searchButton svg { width:20px; height:20px; fill:currentColor; }
-    #searchButton:hover { color:#000; }
-
-    .history { margin-top:2em;}
-    .history-header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; }
-    .clear-button { padding:0.4em 0.8em; background:#dc3545; color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:1em; }
-    .clear-button:hover { background:#b02a37; }
-    ul { list-style:none; padding-left:0; }
-    li { display:flex; justify-content:space-between; align-items:center; padding:0.5em 0; border-bottom:1px solid #eee; gap:0.5em; }
-    .search-text { flex:1; word-break:break-word; }
-    .go-button, .inventory-button { padding:0.4em 0.8em; border:none; border-radius:6px; cursor:pointer; color:#fff; }
-    .go-button { background:#28a745; }
-    .go-button:hover { background:#218838; }
-    .inventory-button { background:#007bff; }
-    .inventory-button:hover { background:#0056b3; }
-
-    .ref-selector-button { background:#000; border:none; padding:0.4em 1em; border-radius:8px; font-size:1em; font-weight:bold; cursor:pointer; display:inline-flex; gap:0.2em; }
-    .ref-selector-button .log { color:yellow; }
-    .ref-selector-button .in { color:white; }
-    .ref-selector-button:hover { opacity:0.85; }
-
-    body.dark-mode { background:#121212; color:#eee; }
-    body.dark-mode .container { background:#1e1e1e; color:#eee; }
-    body.dark-mode input { background:#333; color:#eee; border-color:#555; }
-    body.dark-mode input:focus { border-color:#66b0ff; }
-    body.dark-mode #searchButton { color:#ccc; }
-    body.dark-mode #searchButton:hover { color:#fff; }
-    body.dark-mode .clear-button { background:#a33; }
-    body.dark-mode .clear-button:hover { background:#700; }
-    body.dark-mode .go-button { background:#218838; }
-    body.dark-mode .go-button:hover { background:#1c7430; }
-    body.dark-mode .inventory-button { background:#0056b3; }
-    body.dark-mode .inventory-button:hover { background:#004085; }
-    body.dark-mode .ref-selector-button { background:#222; }
-
-    #modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.4); backdrop-filter:blur(5px); align-items:center; justify-content:center; }
-    #modalContent { background:rgba(255,255,255,0.95); max-width:360px; width:90%; border-radius:14px; padding:1.5em 2em 2em; box-shadow:0 8px 24px rgba(0,0,0,0.25); color:#222; display:flex; flex-direction:column; max-height:90vh; overflow:hidden; }
-    body.dark-mode #modalContent { background:rgba(34,34,34,0.95); color:#eee; }
-    #modalHeader { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; margin-bottom:1em; }
-    #closeModalBtn { background:none; border:none; font-size:1.6em; font-weight:bold; cursor:pointer; color:#666; }
-    #modalBody { overflow-y:auto; flex-grow:1; max-height:calc(90vh - 100px); font-size:0.95em; }
-    #modalBody table { width:100%; border-collapse:collapse; }
-    #modalBody th, #modalBody td { border:1px solid #aaa; padding:0.5em; text-align:left; }
-    #modalBody th { background:#eee; width:30%; }
-    body.dark-mode #modalBody th { background:#444; color:#ddd; }
-    body.dark-mode #modalBody td { border-color:#555; }
+    body {
+      background-color: #f8f9fa;
+      padding: 1rem;
+    }
+    .card {
+      border-left: 4px solid #0d6efd;
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+      word-wrap: break-word;
+    }
+    .card div {
+      margin-bottom: 6px;
+    }
+    #filterInfo {
+      font-style: italic;
+      color: #6c757d;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1># BridGe.</h1>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
-      <button id="searchButton" type="button" title="Ara">
-        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
-      </button>
-    </div>
-    <div class="history">
-      <div class="history-header">
-        <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
-        <button id="clearButton" class="clear-button">Clear</button>
-      </div>
-      <ul id="historyList"></ul>
+
+<div class="container mt-4">
+  <h1 class="mb-4">Transfer Listesi</h1>
+  <div id="filterInfo" class="mb-3"></div>
+  <div class="row g-3" id="cardContainer"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="filterForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="filterModalLabel">Filtre Seçimi</h5>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="transfer" class="form-label">Transfer Listesi</label>
+            <select id="transfer" class="form-select" required></select>
+          </div>
+          <div class="mb-3">
+            <label for="kategori" class="form-label">Kategori</label>
+            <select id="kategori" class="form-select" required></select>
+          </div>
+          <div class="mb-3">
+            <label for="marka" class="form-label">Marka</label>
+            <select id="marka" class="form-select" required></select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Filtrele</button>
+        </div>
+      </form>
     </div>
   </div>
+</div>
 
-  <div id="modal" role="dialog" tabindex="-1">
-    <div id="modalContent">
-      <div id="modalHeader">
-        <h3 id="modalTitle">Bölüm Detayları</h3>
-        <button id="closeModalBtn" aria-label="Kapat">&times;</button>
-      </div>
-      <div id="modalBody"></div>
-    </div>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let data = [];
 
-  <script>
-    const input = document.getElementById('searchInput');
-    const historyList = document.getElementById('historyList');
-    const clearButton = document.getElementById('clearButton');
-    const searchButton = document.getElementById('searchButton');
-    const title = document.querySelector('h1');
-    const modal = document.getElementById('modal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const modalBody = document.getElementById('modalBody');
-    const refSelectorButton = document.getElementById('refSelectorButton');
+const transferSelect = document.getElementById('transfer');
+const kategoriSelect = document.getElementById('kategori');
+const markaSelect = document.getElementById('marka');
+const cardContainer = document.getElementById('cardContainer');
+const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
+const filterInfoDiv = document.getElementById('filterInfo');
 
-    let searchHistory = [], dataMap = {}, stockData = [], selectedRefFile = 'Genel.txt';
+// CSV satırlarını parçala, virgüllere göre ayırır, trim yapar
+function parseCSVLine(line) {
+  // Basit virgülle ayırma, eğer değerlerde virgül yoksa sorun olmaz.
+  // Daha karmaşık CSV için ekstra parser gerekebilir.
+  return line.split(',').map(cell => cell.trim());
+}
 
-    title.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
-    refSelectorButton.addEventListener('click', showRefSelector);
+// test.txt dosyasını fetch ile oku
+async function loadData() {
+  try {
+    const response = await fetch('test.txt');
+    if (!response.ok) throw new Error('test.txt dosyası okunamadı');
+    const text = await response.text();
+    const lines = text.split('\n').filter(l => l.trim().length > 0);
+    data = lines.map(parseCSVLine);
+    
+    populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
+    filterModal.show();
+  } catch (error) {
+    alert('Veri yüklenirken hata oluştu: ' + error.message);
+  }
+}
 
-    function stripTxtExtension(n) { return n.replace(/\.txt$/i, ''); }
-    function updateRefIndicator() {
-      input.placeholder = selectedRefFile.toLowerCase()==='genel.txt'? '# Search' : `# Search (${stripTxtExtension(selectedRefFile)})`;
-      input.disabled = false;
-    }
+// Select kutularını doldur
+function populateSelect(selectElement, items) {
+  selectElement.innerHTML = '<option value="">Seçiniz</option>';
+  items.forEach(item => {
+    const opt = document.createElement('option');
+    opt.value = item;
+    opt.textContent = item;
+    selectElement.appendChild(opt);
+  });
+}
 
-    async function fetchDataFiles(file='Genel.txt') {
-      selectedRefFile = file;
-      try {
-        const cacheBuster = `?v=${Date.now()}`;
-        const resp = await fetch(file + cacheBuster);
-        if(!resp.ok) throw new Error(`${file} bulunamadı`);
-        const text = await resp.text();
-        dataMap = {}; text.trim().split('\n').forEach(l=>{ const [k,v]=l.trim().split(/\s+/); if(k&&v)dataMap[k]=v; });
-        const sr = await fetch('stok.txt' + cacheBuster); if(!sr.ok) throw new Error('stok.txt bulunamadı');
-        stockData = (await sr.text()).trim().split('\n').map(r=>r.trim().split('\t'));
-        updateRefIndicator();
-      } catch(err) { showAlert('Dosyalar yüklenirken hata: '+err.message, 'Hata'); }
-    }
+transferSelect.addEventListener('change', () => {
+  const selectedTransfer = transferSelect.value;
+  const categories = data
+    .filter(row => row[0] === selectedTransfer)
+    .map(row => row[1]);
+  populateSelect(kategoriSelect, [...new Set(categories)]);
+  markaSelect.innerHTML = "";
+});
 
-    fetchDataFiles();
+kategoriSelect.addEventListener('change', () => {
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const brands = data
+    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
+    .map(row => row[3]);
+  populateSelect(markaSelect, [...new Set(brands)]);
+});
 
-    function doSearch(){
-      const v=input.value.trim();
-      if(!v)return;
-      searchHistory.unshift(v);
-      searchHistory=searchHistory.slice(0,15);
-      updateHistory();
-      input.value='';
-    }
-    input.addEventListener('keydown', e=>{ if(e.key==='Enter') doSearch(); });
-    searchButton.addEventListener('click', doSearch);
-    clearButton.addEventListener('click', ()=>{ searchHistory=[]; updateHistory(); });
+function showFilterInfo(transfer, kategori, altKategori) {
+  filterInfoDiv.textContent = `${transfer} > ${kategori} > ${altKategori}`;
+}
 
-    function showInModal(sku){
-      const matches = stockData.filter(row => row[0] === sku);
-      if (matches.length === 0) {
-        showAlert('Sap ile girişi kontrol edin.','Bilgi');
-        return;
-      }
+document.getElementById('filterForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-      const labels = ['Sku','Ean','Ürün'];
-      let h = '<table><tbody>';
-      for (let i = 0; i < labels.length; i++) {
-        h += `<tr><th>${labels[i]}</th><td>${matches[0][i] || ''}</td></tr>`;
-      }
-      h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
-      h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
-      matches.forEach(row => {
-        h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`;
-      });
-      h += '</tbody></table>';
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const selectedMarka = markaSelect.value;
 
-      modalBody.innerHTML = h;
-      document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
-      modal.style.display = 'flex';
-    }
+  showFilterInfo(selectedTransfer, selectedKategori, selectedMarka);
 
-    function showAlert(msg,t='Uyarı'){
-      document.getElementById('modalTitle').textContent=t;
-      modalBody.innerHTML=`<p style="font-size:1.1em;padding:1em 0;margin:0;">${msg}</p>`;
-      modal.style.display='flex';
-    }
+  const filteredData = data.filter(row =>
+    row[0] === selectedTransfer &&
+    row[1] === selectedKategori &&
+    row[3] === selectedMarka
+  );
 
-    function updateHistory(){
-      historyList.innerHTML='';
-      searchHistory.forEach(item=>{
-        const m=dataMap[item], code=m||item;
-        const li=document.createElement('li');
-        const span=document.createElement('span');
-        span.textContent=m?`${item}\t${m}`:item;
-        span.className='search-text';
-        const inv=document.createElement('button');
-        inv.textContent='Section'; inv.className='inventory-button';
-        inv.onclick=()=> showInModal(code);
-        const go=document.createElement('button');
-        go.textContent='Explore'; go.className='go-button';
-        go.onclick=()=> {
-          if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank');
-          else showAlert('Veri bulunamadı.','Bilgi');
-        };
-        li.append(span, inv, go);
-        historyList.appendChild(li);
-      });
-    }
+  renderCards(filteredData);
+  filterModal.hide();
+});
 
-    function showRefSelector(){
-      const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
-      document.getElementById('modalTitle').textContent='Referans Dosyası Seçimi';
-      modalBody.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 0.5em;">
-          ${files.map(f => `
-            <button style="padding:.6em 1em;border-radius:8px;border:1px solid #666;background:#ddd;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;" onclick="selectRefFile('${f}')">
-              ${stripTxtExtension(f)}
-            </button>`).join('')}
-        </div>`;
-      modal.style.display='flex';
-    }
+function renderCards(rows) {
+  cardContainer.innerHTML = "";
+  if (rows.length === 0) {
+    cardContainer.innerHTML = `<div class="alert alert-warning">Hiçbir sonuç bulunamadı.</div>`;
+    return;
+  }
 
-    window.selectRefFile=f=>{
-      modal.style.display='none';
-      fetchDataFiles(f);
-    };
+  rows.forEach(row => {
+    const col = document.createElement('div');
+    col.className = "col-12 col-md-4";
 
-    closeModalBtn.addEventListener('click',()=>modal.style.display='none');
-    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='none'; });
-  </script>
+    const card = document.createElement('div');
+    card.className = "card shadow-sm p-3 h-100";
+
+    const content = `
+      <div><strong>Tanım:</strong> ${row[4]}</div>
+      <div><strong>Model:</strong> ${row[5]}</div>
+      <div><strong>Malzeme:</strong> ${row[6]}</div>
+      <div><strong>EAN/UPC:</strong> ${row[7]}</div>
+      <div><strong>Müşteri:</strong> ${row[8]}</div>
+      <div><strong>SAS:</strong> ${row[9]}</div>
+      <div><strong>Stok:</strong> ${row[10]}</div>
+    `;
+
+    card.innerHTML = content;
+    col.appendChild(card);
+    cardContainer.appendChild(col);
+  });
+}
+
+// Sayfa yüklendiğinde veriyi yükle
+window.addEventListener('load', () => {
+  loadData();
+});
+</script>
 </body>
 </html>
