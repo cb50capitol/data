@@ -12,14 +12,26 @@
     }
     .card {
       border-left: 4px solid #0d6efd;
-      max-width: 320px;
-      margin: 0 auto;
       padding: 1rem;
       box-sizing: border-box;
       word-wrap: break-word;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 15px;
+      line-height: 1.4;
     }
     .card div {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+    }
+    #cardContainer > .col-6 {
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-bottom: 16px;
     }
     #filterInfo {
       font-style: italic;
@@ -157,7 +169,7 @@ function renderCards(rows) {
 
   rows.forEach(row => {
     const col = document.createElement('div');
-    col.className = "col-6 col-md-4";
+    col.className = "col-6 col-md-6";  // Mobil ve masaüstünde 2 sütun
 
     const card = document.createElement('div');
     card.className = "card shadow-sm p-3 h-100";
