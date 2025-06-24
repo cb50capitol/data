@@ -31,6 +31,9 @@
       padding: 1.5rem;
       transition: all 0.2s ease;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card-alt:hover {
@@ -80,6 +83,29 @@
       display: flex;
       flex-wrap: wrap;
       margin: -0.5rem;
+    }
+
+    .online-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .online-btn:hover {
+      background-color: #218838;
+      color: white;
+      text-decoration: none;
     }
 
     @media (min-width: 576px) {
@@ -236,20 +262,31 @@ function renderCards(rows) {
       checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
     }
 
+    // Malzeme link: malzemenin son 3 hanesini kesiyoruz
+    let malzemeKisa = row[6];
+    if (malzemeKisa.length > 3) {
+      malzemeKisa = malzemeKisa.slice(0, -3);
+    }
+    const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
+
     card.innerHTML = `
-      <div class="card-title">${row[4]}</div>
-      <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
-      <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-      <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
-      <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
-      <div class="info-item">
-        <i class="fas fa-warehouse me-1"></i>
-        <strong class="me-2">SAS:</strong> ${row[9]}
-        <div class="checkbox-group ms-2">${checkboxHTML}</div>
+      <div>
+        <div class="card-title">${row[4]}</div>
+        <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
+        <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
+        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+        <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
+        <div class="info-item">
+          <i class="fas fa-warehouse me-1"></i>
+          <strong class="me-2">SAS:</strong> ${row[9]}
+          <div class="checkbox-group ms-2">${checkboxHTML}</div>
+        </div>
+        <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
       </div>
-      <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
+      <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
     `;
 
+    // Checkbox event listeners
     const checkboxes = card.querySelectorAll("input[type='checkbox']");
     checkboxes.forEach(cb => {
       cb.addEventListener('change', function () {
