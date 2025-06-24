@@ -76,22 +76,20 @@ const cardContainer = document.getElementById('cardContainer');
 const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
 
-// CSV satırlarını parçala, virgüllere göre ayırır, trim yapar
-function parseCSVLine(line) {
-  // Basit virgülle ayırma, eğer değerlerde virgül yoksa sorun olmaz.
-  // Daha karmaşık CSV için ekstra parser gerekebilir.
-  return line.split(',').map(cell => cell.trim());
+function parseTSVLine(line) {
+  return line.split('\t').map(cell => cell.trim());
 }
 
-// test.txt dosyasını fetch ile oku
 async function loadData() {
   try {
     const response = await fetch('test.txt');
     if (!response.ok) throw new Error('test.txt dosyası okunamadı');
     const text = await response.text();
     const lines = text.split('\n').filter(l => l.trim().length > 0);
-    data = lines.map(parseCSVLine);
-    
+    // Başlık satırını atla
+    lines.shift();
+    data = lines.map(parseTSVLine);
+
     populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
     filterModal.show();
   } catch (error) {
@@ -99,7 +97,6 @@ async function loadData() {
   }
 }
 
-// Select kutularını doldur
 function populateSelect(selectElement, items) {
   selectElement.innerHTML = '<option value="">Seçiniz</option>';
   items.forEach(item => {
@@ -181,7 +178,6 @@ function renderCards(rows) {
   });
 }
 
-// Sayfa yüklendiğinde veriyi yükle
 window.addEventListener('load', () => {
   loadData();
 });
