@@ -269,22 +269,24 @@ function renderCards(rows) {
     }
     const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
 
-    card.innerHTML = `
-      <div>
-        <div class="card-title">${row[4]}</div>
-        <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
-        <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
-        <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
-        <div class="info-item">
-          <i class="fas fa-warehouse me-1"></i>
-          <strong class="me-2">SAS:</strong> ${row[9]}
-          <div class="checkbox-group ms-2">${checkboxHTML}</div>
-        </div>
-        <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
-      </div>
-      <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
-    `;
+  card.innerHTML = `
+  <div>
+    <div class="card-title">${row[4]}</div>
+    <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
+    <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
+    <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+    <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
+    <div class="info-item">
+      <i class="fas fa-warehouse me-1"></i>
+      <strong class="me-2">SAS:</strong> ${row[9]}
+      <div class="checkbox-group ms-2">${checkboxHTML}</div>
+    </div>
+    <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
+    <div class="info-item"><i class="fas fa-file-alt"></i> <strong>İş Emri:</strong> ${row[11]}</div>
+  </div>
+  <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
+`;
+
 
     // Checkbox event listeners
     const checkboxes = card.querySelectorAll("input[type='checkbox']");
