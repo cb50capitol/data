@@ -355,9 +355,13 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
 });
 
 clearStorageBtn.addEventListener('click', () => {
-  localStorage.clear();
-  location.reload();
+  const confirmed = confirm("Geçmişi temizlemek istediğinizden emin misiniz?");
+  if (confirmed) {
+    localStorage.clear();
+    location.reload();
+  }
 });
+
 
 document.getElementById('scrollBottomBtn').addEventListener('click', () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
