@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title># Liste</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WormHole</title>
+  <title>Transfer Listesi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <style>
+<style>
+    body { font-family: Arial,sans-serif; margin:0; padding:1em; background:#f5f5f5; color:#222; transition:background .5s,color .5s;}
+    .container { max-width:600px; margin:auto; background:#fff; padding:2em; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align:center; font-size:1.5em; cursor:pointer; margin:0; }
+
+    .search-container { position:relative; margin-top:1em; }
+    .search-container input { width:100%; padding:0.75em 2.5em 0.75em 1em; font-size:1em; border:1px solid #ccc; border-radius:999px; box-sizing:border-box; height:48px; background:#fff; color:#222; transition:border .2s;}
+    .search-container input:focus { outline:none; border-color:#007bff; }
+
+    #searchButton { position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; padding:0; cursor:pointer; height:32px; width:32px; display:flex; align-items:center; justify-content:center; color:#555; }
+    #searchButton svg { width:20px; height:20px; fill:currentColor; }
+    #searchButton:hover { color:#000; }
+
+    .history { margin-top:2em;}
+    .history-header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; }
+    .clear-button { padding:0.4em 0.8em; background:#dc3545; color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:1em; }
+    .clear-button:hover { background:#b02a37; }
+    ul { list-style:none; padding-left:0; }
+    li { display:flex; justify-content:space-between; align-items:center; padding:0.5em 0; border-bottom:1px solid #eee; gap:0.5em; }
+    .search-text { flex:1; word-break:break-word; }
+    .go-button, .inventory-button { padding:0.4em 0.8em; border:none; border-radius:6px; cursor:pointer; color:#fff; }
+    .go-button { background:#28a745; }
+    .go-button:hover { background:#218838; }
+    .inventory-button { background:#007bff; }
+    .inventory-button:hover { background:#0056b3; }
+
+    .ref-selector-button { background:#000; border:none; padding:0.4em 1em; border-radius:8px; font-size:1em; font-weight:bold; cursor:pointer; display:inline-flex; gap:0.2em; }
+    .ref-selector-button .log { color: #FFD700; }
+    .ref-selector-button .in { color:white; }
+    .ref-selector-button:hover { opacity:0.85; }
+
+    .plus-button {
+      background: transparent;
+      color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 1em;
+      line-height: 1;
+      padding: 0;
     body {
       background-color: #f0f2f5;
       padding: 1rem;
@@ -23,7 +64,7 @@
       color: #0d6efd;
       border-radius: 20px;
       padding: 6px 14px;
-      cursor: pointer;
+cursor: pointer;
       font-weight: 500;
       margin-bottom: 1rem;
       transition: background-color 0.2s ease;
@@ -41,11 +82,16 @@
       padding: 1.5rem;
       transition: all 0.3s ease;
       height: 100%;
-      display: flex;
+display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
-    }
+}
+    .plus-button:hover {
+      background: #007bff;
 
     .card-alt:hover {
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
@@ -62,7 +108,7 @@
       top: 10px;
       right: 10px;
       background-color: #198754;
-      color: white;
+color: white;
       font-weight: 700;
       padding: 4px 8px;
       border-radius: 12px;
@@ -78,7 +124,11 @@
       font-size: 17px;
       margin-bottom: 1rem;
       color: #0d6efd;
-    }
+}
+    body.dark-mode .plus-button {
+      background: transparent;
+      color: #FFD700;
+      border-color: #FFD700;
 
     .info-item {
       display: flex;
@@ -87,15 +137,51 @@
       font-size: 15px;
       color: #333;
       flex-wrap: wrap;
-    }
+}
+    body.dark-mode .plus-button:hover {
+      background: #FFD700;
+      color: #121212;
 
     .info-item i {
       width: 20px;
       text-align: center;
       color: #0d6efd;
       margin-right: 8px;
-    }
+}
 
+    body.dark-mode { background:#121212; color:#eee; }
+    body.dark-mode .container { background:#1e1e1e; color:#eee; }
+    body.dark-mode input { background:#333; color:#eee; border-color:#555; }
+    body.dark-mode input:focus { border-color:#66b0ff; }
+    body.dark-mode #searchButton { color:#ccc; }
+    body.dark-mode #searchButton:hover { color:#fff; }
+    body.dark-mode .clear-button { background:#a33; }
+    body.dark-mode .clear-button:hover { background:#700; }
+    body.dark-mode .go-button { background:#218838; }
+    body.dark-mode .go-button:hover { background:#1c7430; }
+    body.dark-mode .inventory-button { background:#0056b3; }
+    body.dark-mode .inventory-button:hover { background:#004085; }
+    body.dark-mode .ref-selector-button { background:#222; }
+
+    #modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.4); backdrop-filter:blur(5px); align-items:center; justify-content:center; }
+    #modalContent { background:rgba(255,255,255,0.95); max-width:360px; width:90%; border-radius:14px; padding:1.5em 2em 2em; box-shadow:0 8px 24px rgba(0,0,0,0.25); color:#222; display:flex; flex-direction:column; max-height:90vh; overflow:hidden; }
+    body.dark-mode #modalContent { background:rgba(34,34,34,0.95); color:#eee; }
+    #modalHeader { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; margin-bottom:1em; }
+    #closeModalBtn { background:none; border:none; font-size:1.6em; font-weight:bold; cursor:pointer; color:#666; }
+    #modalBody { overflow-y:auto; flex-grow:1; max-height:calc(90vh - 100px); font-size:0.95em; }
+    #modalBody table { width:100%; border-collapse:collapse; }
+    #modalBody th, #modalBody td { border:1px solid #aaa; padding:0.5em; text-align:left; }
+    #modalBody th { background:#eee; width:30%; }
+    body.dark-mode #modalBody th { background:#444; color:#ddd; }
+    body.dark-mode #modalBody td { border-color:#555; }
+
+    /* Kayan yazı */
+    #scrollBanner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #dc3545;
     .checkbox-group {
       display: flex;
       flex-wrap: wrap;
@@ -120,7 +206,10 @@
 
     .online-btn {
       background-color: #28a745;
-      color: white;
+color: white;
+      font-weight: bold;
+      overflow: hidden;
+      padding: 0.5em 0;
       border: none;
       padding: 8px 14px;
       border-radius: 6px;
@@ -132,7 +221,7 @@
       margin-top: 15px;
       text-decoration: none;
       display: inline-block;
-      text-align: center;
+text-align: center;
     }
 
     .online-btn:hover {
@@ -167,10 +256,15 @@
       cursor: pointer;
       transition: background 0.3s, color 0.3s, opacity 0.4s;
       opacity: 0.3;
-      z-index: 9999;
+z-index: 9999;
       user-select: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
+}
+    #scrollBanner span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear forwards;
+      white-space: nowrap;
 
     .scroll-arrow:hover {
       background: rgba(0,0,0,0.3);
@@ -180,7 +274,10 @@
 
     #scrollBottomBtn {
       bottom: 10px;
-    }
+}
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
 
     #scrollTopBtn {
       bottom: 60px;
@@ -188,11 +285,34 @@
 
     .scroll-arrow i {
       font-size: 20px;
-    }
-  </style>
+}
+</style>
 </head>
 <body>
+  <div class="container">
+    <h1># Capitol.</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
+      <button id="searchButton" type="button" title="Ara">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
+      </button>
+    </div>
+    <div class="history">
+      <div class="history-header">
+        <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
+        <button id="clearButton" class="clear-button">Clear</button>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
 
+  <div id="modal" role="dialog" tabindex="-1">
+    <div id="modalContent">
+      <div id="modalHeader">
+        <h3 id="modalTitle">Bölüm Detayları</h3>
+        <button id="closeModalBtn" aria-label="Kapat">&times;</button>
+      </div>
+      <div id="modalBody"></div>
 <div class="container mt-4">
   <h1>Transfer Listesi</h1>
   <div id="filterInfo"></div>
@@ -226,10 +346,31 @@
           <button type="submit" class="btn btn-primary">Filtrele</button>
         </div>
       </form>
-    </div>
-  </div>
+</div>
+</div>
 </div>
 
+  <script>
+    const input = document.getElementById('searchInput');
+    const historyList = document.getElementById('historyList');
+    const clearButton = document.getElementById('clearButton');
+    const searchButton = document.getElementById('searchButton');
+    const title = document.querySelector('h1');
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalBody = document.getElementById('modalBody');
+    const refSelectorButton = document.getElementById('refSelectorButton');
+
+    let searchHistory = [], dataMap = {}, stockData = [], selectedRefFile = 'Genel.txt';
+
+    title.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
+    refSelectorButton.addEventListener('click', showRefSelector);
+
+    function stripTxtExtension(n) { return n.replace(/\.txt$/i, ''); }
+    function updateRefIndicator() {
+      input.placeholder = selectedRefFile.toLowerCase()==='genel.txt'? '# Search' : `# Search (${stripTxtExtension(selectedRefFile)})`;
+      input.disabled = false;
+    }
 <div id="scrollTopBtn" class="scroll-arrow" title="Sayfanın üstüne git">
   <i class="fas fa-chevron-up"></i>
 </div>
@@ -237,10 +378,24 @@
   <i class="fas fa-chevron-down"></i>
 </div>
 
+    async function fetchDataFiles(file='Genel.txt') {
+      selectedRefFile = file;
+      try {
+        const cacheBuster = `?v=${Date.now()}`;
+        const resp = await fetch(file + cacheBuster);
+        if(!resp.ok) throw new Error(`${file} bulunamadı`);
+        const text = await resp.text();
+        dataMap = {}; text.trim().split('\n').forEach(l=>{ const [k,v]=l.trim().split(/\s+/); if(k&&v)dataMap[k]=v; });
+        const sr = await fetch('stok.txt' + cacheBuster); if(!sr.ok) throw new Error('stok.txt bulunamadı');
+        stockData = (await sr.text()).trim().split('\n').map(r=>r.trim().split('\t'));
+        updateRefIndicator();
+      } catch(err) { showAlert('Dosyalar yüklenirken hata: '+err.message, 'Hata'); }
+    }
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 let data = [];
 
+    fetchDataFiles();
 const transferSelect = document.getElementById('transfer');
 const kategoriSelect = document.getElementById('kategori');
 const markaSelect = document.getElementById('marka');
@@ -249,14 +404,54 @@ const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
 const clearStorageBtn = document.getElementById('clearStorageBtn');
 
+    function doSearch(){
+      const v=input.value.trim();
+      if(!v)return;
+      searchHistory.unshift(v);
+      searchHistory=searchHistory.slice(0,15);
+      updateHistory();
+      input.value='';
+    }
+    input.addEventListener('keydown', e=>{ if(e.key==='Enter') doSearch(); });
+    searchButton.addEventListener('click', doSearch);
+    clearButton.addEventListener('click', ()=>{ searchHistory=[]; updateHistory(); });
+
+    function showInModal(sku){
+      const matches = stockData.filter(row => row[0] === sku);
+      if (matches.length === 0) return showAlert('Sap ile girişi kontrol edin.','Bilgi');
+
+      const labels = ['Sku','Ean','Ürün'];
+      let h = '<table><tbody>';
+      for (let i = 0; i < labels.length; i++) {
+        h += `<tr><th>${labels[i]}</th><td>${matches[0][i] || ''}</td></tr>`;
+      }
+      h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
+      h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
+      matches.forEach(row => { h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`; });
+      h += '</tbody></table>';
+
+      modalBody.innerHTML = h;
+      document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
+      modal.style.display = 'flex';
+    }
 filterInfoDiv.addEventListener('click', () => {
   filterModal.show();
 });
 
+    function showAlert(msg,t='Uyarı'){
+      document.getElementById('modalTitle').textContent=t;
+      modalBody.innerHTML=`<p style="font-size:1.1em;padding:1em 0;margin:0;">${msg}</p>`;
+      modal.style.display='flex';
+    }
 function parseTSVLine(line) {
   return line.split('\t').map(cell => cell.trim());
 }
 
+    function updateHistory(){
+      historyList.innerHTML='';
+      searchHistory.forEach(item=>{
+        const m=dataMap[item], code=m||item;
+        const li=document.createElement('li');
 async function loadData() {
   try {
     const response = await fetch('test.txt');
@@ -272,6 +467,9 @@ async function loadData() {
   }
 }
 
+        const plusBtn = document.createElement('button');
+        plusBtn.textContent = '+'; plusBtn.className = 'plus-button'; plusBtn.title = 'Bir üstünü ara';
+        plusBtn.onclick = () => { const next = (parseInt(item, 10) + 1).toString(); input.value = next; doSearch(); };
 function populateSelect(selectElement, items) {
   selectElement.innerHTML = '<option value="">Seçiniz</option>';
   items.forEach(item => {
@@ -282,6 +480,8 @@ function populateSelect(selectElement, items) {
   });
 }
 
+        const span=document.createElement('span');
+        span.textContent=m?`${item}\t${m}`:item; span.className='search-text';
 transferSelect.addEventListener('change', () => {
   const selectedTransfer = transferSelect.value;
   const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
@@ -289,6 +489,8 @@ transferSelect.addEventListener('change', () => {
   markaSelect.innerHTML = "";
 });
 
+        const inv=document.createElement('button');
+        inv.textContent='Section'; inv.className='inventory-button'; inv.onclick=()=> showInModal(code);
 kategoriSelect.addEventListener('change', () => {
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
@@ -296,6 +498,9 @@ kategoriSelect.addEventListener('change', () => {
   populateSelect(markaSelect, [...new Set(brands)]);
 });
 
+        const go=document.createElement('button');
+        go.textContent='Online'; go.className='go-button';
+        go.onclick=()=> { if(code.length>=10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0,-3)}`, '_blank'); else showAlert('Veri bulunamadı.','Bilgi'); };
 document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const selectedTransfer = transferSelect.value;
@@ -311,6 +516,9 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   filterModal.hide();
 });
 
+        li.append(plusBtn, span, inv, go);
+        historyList.appendChild(li);
+      });
 function renderCards(rows) {
   cardContainer.innerHTML = "";
   if (rows.length === 0) {
@@ -335,12 +543,18 @@ function renderCards(rows) {
       const checkboxId = `${ean}_sas_${i}`;
       const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
       checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
-    }
+}
 
+    function showRefSelector(){
+      const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
+      document.getElementById('modalTitle').textContent = 'Referans Dosyası Seçimi';
+      modalBody.innerHTML = files.map(f=>`<button style="margin:4px 0; padding:6px 14px; width:100%; font-weight:bold; border-radius:10px; cursor:pointer; background:#007bff; color:#fff; border:none;">${stripTxtExtension(f)}</button>`).join('');
+      modal.style.display = 'flex';
+      Array.from(modalBody.querySelectorAll('button')).forEach((btn,i)=>{ btn.onclick = () => { fetchDataFiles(files[i]); modal.style.display = 'none'; }; });
     let malzemeKisa = row[6];
     if (malzemeKisa.length > 3) {
       malzemeKisa = malzemeKisa.slice(0, -3);
-    }
+}
     const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
 
     card.innerHTML = `
@@ -382,6 +596,20 @@ function renderCards(rows) {
       if (allChecked && allCheckboxes.length > 0) {
         parentCard.classList.add("completed");
 
+    closeModalBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+    modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
+
+    // Kayan yazı ekle
+    window.addEventListener('load', () => {
+      const banner = document.createElement('div');
+      banner.id = 'scrollBanner';
+      banner.innerHTML = `<span>📢 Boyner App kurulu ise 'Online' butonu ürüne yönlendirmeyebilir. 📢 LOG son 15 sorguyu sıralar. 📢 Transfer toplama listesi varsayılan olarak 'Genel' tanımlıdır güncel liste alındığında uygun dosya seçilmelidir.📢</span>`;
+      document.body.appendChild(banner);
+      setTimeout(() => {
+        banner.style.opacity = '0';
+        banner.style.transition = 'opacity 1s';
+        setTimeout(() => banner.remove(), 1000);
+      }, 14000);
         let badge = parentCard.querySelector(".countdown-badge");
         if (!badge) {
           badge = document.createElement("div");
@@ -419,7 +647,8 @@ function renderCards(rows) {
           countdownTimers.delete(parentCard);
         }
       }
-    });
+});
+  </script>
   });
 
   cardContainer.querySelectorAll('.col-custom').forEach(col => {
