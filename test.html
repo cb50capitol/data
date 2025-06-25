@@ -356,7 +356,6 @@ function renderCards(rows) {
             const stillAllChecked = Array.from(allCheckboxes).every(cb => cb.checked);
             if (stillAllChecked) {
               cardContainer.appendChild(parentCol);
-              parentCol.scrollIntoView({ behavior: "smooth", block: "end" });
               badge.style.opacity = "0";
               setTimeout(() => badge.remove(), 300);
             } else {
