@@ -142,6 +142,44 @@
         width: 100%;
       }
     }
+
+    /* === Sağdaki yukarı ve aşağı oklar için stil === */
+    .scroll-arrow {
+      position: fixed;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, opacity 0.4s;
+      opacity: 0.3;
+      z-index: 9999;
+      user-select: none;
+    }
+    .scroll-arrow:hover {
+      background: rgba(0,0,0,0.3);
+      color: #0d6efd;
+      opacity: 1;
+    }
+
+    #scrollTopBtn {
+      top: 50%;
+      transform: translateY(-70px);
+    }
+
+    #scrollBottomBtn {
+      top: 50%;
+      transform: translateY(30px);
+    }
+
+    .scroll-arrow i {
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
@@ -181,6 +219,14 @@
       </form>
     </div>
   </div>
+</div>
+
+<!-- Sayfanın sağında yukarı ve aşağı oklar -->
+<div id="scrollTopBtn" class="scroll-arrow" title="Sayfanın üstüne git">
+  <i class="fas fa-chevron-up"></i>
+</div>
+<div id="scrollBottomBtn" class="scroll-arrow" title="Sayfanın sonuna git">
+  <i class="fas fa-chevron-down"></i>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -387,6 +433,18 @@ clearStorageBtn.addEventListener("click", () => {
 });
 
 window.addEventListener("load", loadData);
+
+// Scroll oklar
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+scrollBottomBtn.addEventListener('click', () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
 </script>
 
 </body>
