@@ -279,8 +279,10 @@ transferSelect.addEventListener('change', () => {
 kategoriSelect.addEventListener('change', () => {
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
-  const marks = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori).map(row => row[3]);
-  populateSelect(markaSelect, [...new Set(marks)]);
+  const brands = data
+    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
+    .map(row => row[3]);
+  populateSelect(markaSelect, [...new Set(brands)]);
 });
 
 document.getElementById('filterForm').addEventListener('submit', function(e) {
@@ -302,14 +304,6 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   filterModal.hide();
 });
 
-clearStorageBtn.addEventListener('click', () => {
-  if (confirm("Tüm kayıtlı checkbox seçimlerini temizlemek istediğinize emin misiniz?")) {
-    localStorage.removeItem("checkedBoxes");
-    alert("Seçimler temizlendi. Lütfen tekrar filtreleme yapınız.");
-    filterModal.show();
-  }
-});
-
 function renderCards(rows) {
   cardContainer.innerHTML = "";
   if (rows.length === 0) {
@@ -318,7 +312,6 @@ function renderCards(rows) {
   }
 
   const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-  const countdownTimers = new Map();
 
   rows.forEach(row => {
     const col = document.createElement('div');
@@ -338,7 +331,9 @@ function renderCards(rows) {
     }
 
     let malzemeKisa = row[6];
-    if (malzemeKisa.length > 3) malzemeKisa = malzemeKisa.slice(0, -3);
+    if (malzemeKisa.length > 3) {
+      malzemeKisa = malzemeKisa.slice(0, -3);
+    }
     const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
 
     card.innerHTML = `
@@ -359,93 +354,97 @@ function renderCards(rows) {
       <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
     `;
 
-    const checkboxes = card.querySelectorAll("input[type='checkbox']");
-    const allCheckedOnLoad = checkboxes.length > 0 && Array.from(checkboxes).every(cb => cb.checked);
-
-    if (allCheckedOnLoad && sasCount > 0) {
-      card.classList.add("completed");
-
-      const badge = document.createElement("div");
-      badge.className = "countdown-badge";
-      badge.textContent = "3";
-      card.appendChild(badge);
-
-      let count = 3;
-      const intervalId = setInterval(() => {
-        count--;
-        if (count > 0) {
-          badge.textContent = count;
-        } else {
-          clearInterval(intervalId);
-          badge.remove();
-        }
-      }, 1000);
-    }
-
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener("change", () => {
-        const saved = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-        saved[checkbox.id] = checkbox.checked;
-        localStorage.setItem("checkedBoxes", JSON.stringify(saved));
-
-        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-
-        if (allChecked && sasCount > 0) {
-          card.classList.add("completed");
-
-          let badge = card.querySelector(".countdown-badge");
-          if (!badge) {
-            badge = document.createElement("div");
-            badge.className = "countdown-badge";
-            card.appendChild(badge);
-          }
-
-          if (card._intervalId) clearInterval(card._intervalId);
-
-          let count = 3;
-          badge.textContent = count;
-
-          card._intervalId = setInterval(() => {
-            count--;
-            if (count > 0) {
-              badge.textContent = count;
-            } else {
-              clearInterval(card._intervalId);
-              badge.style.opacity = "0";
-              setTimeout(() => badge.remove(), 300);
-            }
-          }, 1000);
-
-        } else {
-          card.classList.remove("completed");
-          const badge = card.querySelector(".countdown-badge");
-          if (badge) badge.remove();
-          if (card._intervalId) clearInterval(card._intervalId);
-        }
-      });
-    });
-
     col.appendChild(card);
     cardContainer.appendChild(col);
   });
+
+  const countdownTimers = new Map();
+
+  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+      const id = checkbox.id;
+      savedCheckboxes[id] = checkbox.checked;
+      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
+
+      const parentCard = checkbox.closest(".card-alt");
+      const parentCol = checkbox.closest(".col-custom");
+      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
+      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+
+      if (allChecked && allCheckboxes.length > 0) {
+        parentCard.classList.add("completed");
+
+        let badge = parentCard.querySelector(".countdown-badge");
+        if (!badge) {
+          badge = document.createElement("div");
+          badge.className = "countdown-badge";
+          parentCard.appendChild(badge);
+        }
+
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+          countdownTimers.delete(parentCard);
+        }
+
+        let count = 3;
+        badge.textContent = count;
+
+        const intervalId = setInterval(() => {
+          count--;
+          if (count > 0) {
+            badge.textContent = count;
+          } else {
+            clearInterval(intervalId);
+            countdownTimers.delete(parentCard);
+
+            const stillAllChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+            if (stillAllChecked) {
+              cardContainer.appendChild(parentCol);
+              badge.style.opacity = "0";
+              setTimeout(() => badge.remove(), 300);
+            } else {
+              badge.remove();
+              parentCard.classList.remove("completed");
+            }
+          }
+        }, 1000);
+
+        countdownTimers.set(parentCard, intervalId);
+
+      } else {
+        parentCard.classList.remove("completed");
+        const badge = parentCard.querySelector(".countdown-badge");
+        if (badge) badge.remove();
+
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+          countdownTimers.delete(parentCard);
+        }
+      }
+    });
+  });
 }
 
-// Sayfa yüklendiğinde veriyi yükle ve modalı göster
-window.addEventListener('load', () => {
-  loadData();
+clearStorageBtn.addEventListener("click", () => {
+  localStorage.removeItem("checkedBoxes");
+  alert("Geçmiş temizlendi.");
 });
 
-// Sayfanın üstüne ve sonuna git butonları
+window.addEventListener("load", loadData);
+
+// Scroll oklar
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const scrollBottomBtn = document.getElementById('scrollBottomBtn');
 
 scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 scrollBottomBtn.addEventListener('click', () => {
-  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 });
 </script>
+
 </body>
 </html>
