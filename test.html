@@ -440,9 +440,12 @@ const confirmClearModal = new bootstrap.Modal(document.getElementById('confirmCl
 const confirmClearBtn = document.getElementById('confirmClearBtn');
 
 clearStorageBtn.addEventListener('click', () => {
-  // "Geçmişi Temizle" butonuna basınca onay modalını göster
-  confirmClearModal.show();
+  if (confirm('Emin misiniz?')) {
+    localStorage.clear();
+    location.reload();
+  }
 });
+
 
 confirmClearBtn.addEventListener('click', () => {
   // Onay verildiğinde localStorage temizle ve sayfayı yenile
