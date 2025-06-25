@@ -336,30 +336,29 @@ function renderCards(rows) {
 
   // Checkboxlara event listener ekle
   cardContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      const id = checkbox.id;
-      savedCheckboxes[id] = checkbox.checked;
-      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
+  checkbox.addEventListener('change', () => {
+    const id = checkbox.id;
+    savedCheckboxes[id] = checkbox.checked;
+    localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
 
-      // Kartı ve row'u bul
-      let parentCard = checkbox.closest('.card-alt');
-      let parentCol = checkbox.closest('.col-custom');
+    let parentCard = checkbox.closest('.card-alt');
+    let parentCol = checkbox.closest('.col-custom');
 
-      // Karttaki tüm checkboxların durumunu kontrol et
-      const allCheckboxes = parentCard.querySelectorAll('input[type="checkbox"]');
-      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+    const allCheckboxes = parentCard.querySelectorAll('input[type="checkbox"]');
+    const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
 
-      if (allChecked && allCheckboxes.length > 0) {
-        parentCard.classList.add("completed");
-        // Kartı sona taşı
-        cardContainer.appendChild(parentCol);
-      } else {
-        parentCard.classList.remove("completed");
-        // Kartın pozisyonunu değiştirmiyoruz (isteğe bağlı: başa veya eski konuma dönebilir)
-      }
-    });
+    if (allChecked && allCheckboxes.length > 0) {
+      parentCard.classList.add("completed");
+      cardContainer.appendChild(parentCol);
+
+      // Kartı kaydır
+      parentCol.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    } else {
+      parentCard.classList.remove("completed");
+    }
   });
-}
+});
+
 
 clearStorageBtn.addEventListener('click', () => {
   localStorage.removeItem("checkedBoxes");
