@@ -18,9 +18,19 @@
     }
 
     #filterInfo {
-      font-style: italic;
-      color: #6c757d;
+      display: inline-block;
+      background-color: #e9ecef;
+      color: #0d6efd;
+      border-radius: 20px;
+      padding: 6px 14px;
+      cursor: pointer;
+      font-weight: 500;
       margin-bottom: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    #filterInfo:hover {
+      background-color: #dbe2ea;
     }
 
     .card-alt {
@@ -143,7 +153,6 @@
       }
     }
 
-    /* === Sağ alt köşedeki yukarı ve aşağı oklar için stil === */
     .scroll-arrow {
       position: fixed;
       right: 10px;
@@ -162,6 +171,7 @@
       user-select: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+
     .scroll-arrow:hover {
       background: rgba(0,0,0,0.3);
       color: #0d6efd;
@@ -173,7 +183,7 @@
     }
 
     #scrollTopBtn {
-      bottom: 60px; /* scrollBottomBtn’un üstünde, arada 10px boşluk */
+      bottom: 60px;
     }
 
     .scroll-arrow i {
@@ -220,7 +230,6 @@
   </div>
 </div>
 
-<!-- Sayfanın sağ alt köşesinde yukarı ve aşağı oklar -->
 <div id="scrollTopBtn" class="scroll-arrow" title="Sayfanın üstüne git">
   <i class="fas fa-chevron-up"></i>
 </div>
@@ -240,6 +249,10 @@ const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
 const clearStorageBtn = document.getElementById('clearStorageBtn');
 
+filterInfoDiv.addEventListener('click', () => {
+  filterModal.show();
+});
+
 function parseTSVLine(line) {
   return line.split('\t').map(cell => cell.trim());
 }
@@ -250,7 +263,7 @@ async function loadData() {
     if (!response.ok) throw new Error('test.txt dosyası okunamadı');
     const text = await response.text();
     const lines = text.split('\n').filter(l => l.trim().length > 0);
-    lines.shift(); // başlığı çıkar
+    lines.shift();
     data = lines.map(parseTSVLine);
     populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
     filterModal.show();
@@ -279,27 +292,21 @@ transferSelect.addEventListener('change', () => {
 kategoriSelect.addEventListener('change', () => {
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
-  const brands = data
-    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
-    .map(row => row[3]);
+  const brands = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori).map(row => row[3]);
   populateSelect(markaSelect, [...new Set(brands)]);
 });
 
 document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
-
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
   const selectedMarka = markaSelect.value;
-
   filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
-
   const filteredData = data.filter(row =>
     row[0] === selectedTransfer &&
     row[1] === selectedKategori &&
     row[3] === selectedMarka
   );
-
   renderCards(filteredData);
   filterModal.hide();
 });
@@ -382,8 +389,8 @@ function renderCards(rows) {
           parentCard.appendChild(badge);
         }
 
-        let countdown = 5;
-        badge.textContent = `Kapatılıyor: ${countdown}s`;
+        let countdown = 3;
+        badge.textContent = `${countdown}`;
 
         if (countdownTimers.has(parentCard)) {
           clearInterval(countdownTimers.get(parentCard));
@@ -392,7 +399,7 @@ function renderCards(rows) {
         const intervalId = setInterval(() => {
           countdown--;
           if (countdown > 0) {
-            badge.textContent = `Kapatılıyor: ${countdown}s`;
+            badge.textContent = `${countdown}`;
           } else {
             clearInterval(intervalId);
             countdownTimers.delete(parentCard);
@@ -414,8 +421,6 @@ function renderCards(rows) {
       }
     });
   });
-
-  // ** Sayfa açıldığında checkbox durumlarına göre kartların tamamlandı mı diye kontrol et, tamamlandı ise kartı yeşile boya ve sona taşı **
 
   cardContainer.querySelectorAll('.col-custom').forEach(col => {
     const card = col.querySelector('.card-alt');
@@ -450,6 +455,5 @@ document.getElementById('scrollTopBtn').addEventListener('click', () => {
 
 loadData();
 </script>
-
 </body>
 </html>
