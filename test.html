@@ -41,14 +41,12 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
 
-    /* Yeşile dönme için */
     .card-alt.completed {
       border-color: #198754;
       background-color: #d1e7dd;
       position: relative;
     }
 
-    /* Sağ üst köşedeki geri sayım kutusu */
     .countdown-badge {
       position: absolute;
       top: 10px;
@@ -287,7 +285,6 @@ function renderCards(rows) {
       checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
     }
 
-    // Malzeme link: malzemenin son 3 hanesini kesiyoruz
     let malzemeKisa = row[6];
     if (malzemeKisa.length > 3) {
       malzemeKisa = malzemeKisa.slice(0, -3);
@@ -316,12 +313,11 @@ function renderCards(rows) {
     cardContainer.appendChild(col);
   });
 
-  // Checkbox event listener ve geri sayım için yönetim
-  const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-  const countdownTimers = new Map(); // checkboxId => timerId
+  const countdownTimers = new Map();
 
   cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
     checkbox.addEventListener('change', () => {
+      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
       const id = checkbox.id;
       savedCheckboxes[id] = checkbox.checked;
       localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
@@ -331,11 +327,9 @@ function renderCards(rows) {
       const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
       const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
 
-      // Eğer tamamı işaretlendiyse
       if (allChecked && allCheckboxes.length > 0) {
         parentCard.classList.add("completed");
 
-        // Sağ üst köşede countdown badge varsa sil
         let badge = parentCard.querySelector(".countdown-badge");
         if (!badge) {
           badge = document.createElement("div");
@@ -343,13 +337,11 @@ function renderCards(rows) {
           parentCard.appendChild(badge);
         }
 
-        // Eğer önceki timer varsa iptal et
         if (countdownTimers.has(parentCard)) {
           clearInterval(countdownTimers.get(parentCard));
           countdownTimers.delete(parentCard);
         }
 
-        // 3 saniyelik geri sayım başlat
         let count = 3;
         badge.textContent = count;
 
@@ -361,14 +353,13 @@ function renderCards(rows) {
             clearInterval(intervalId);
             countdownTimers.delete(parentCard);
 
-            // Eğer checkbox halen işaretliyse karta son konumu ver
             const stillAllChecked = Array.from(allCheckboxes).every(cb => cb.checked);
             if (stillAllChecked) {
               cardContainer.appendChild(parentCol);
               parentCol.scrollIntoView({ behavior: "smooth", block: "end" });
-              badge.style.opacity = "0"; // gizle
+              badge.style.opacity = "0";
+              setTimeout(() => badge.remove(), 300);
             } else {
-              // Checkbox işareti kaldırılmışsa badge kaldır
               badge.remove();
               parentCard.classList.remove("completed");
             }
@@ -378,7 +369,6 @@ function renderCards(rows) {
         countdownTimers.set(parentCard, intervalId);
 
       } else {
-        // Tamam işaretli değilse badge kaldır, timer iptal
         parentCard.classList.remove("completed");
         const badge = parentCard.querySelector(".countdown-badge");
         if (badge) badge.remove();
@@ -392,7 +382,6 @@ function renderCards(rows) {
   });
 }
 
-// Geçmişi Temizle Butonu
 clearStorageBtn.addEventListener("click", () => {
   localStorage.removeItem("checkedBoxes");
   alert("Geçmiş temizlendi.");
@@ -400,5 +389,6 @@ clearStorageBtn.addEventListener("click", () => {
 
 window.addEventListener("load", loadData);
 </script>
+
 </body>
 </html>
