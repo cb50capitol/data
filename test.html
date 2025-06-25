@@ -436,10 +436,21 @@ function renderCards(rows) {
   });
 }
 
+const confirmClearModal = new bootstrap.Modal(document.getElementById('confirmClearModal'));
+const confirmClearBtn = document.getElementById('confirmClearBtn');
+
 clearStorageBtn.addEventListener('click', () => {
+  // "Geçmişi Temizle" butonuna basınca onay modalını göster
+  confirmClearModal.show();
+});
+
+confirmClearBtn.addEventListener('click', () => {
+  // Onay verildiğinde localStorage temizle ve sayfayı yenile
   localStorage.clear();
+  confirmClearModal.hide();
   location.reload();
 });
+
 
 document.getElementById('scrollBottomBtn').addEventListener('click', () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
@@ -450,5 +461,25 @@ document.getElementById('scrollTopBtn').addEventListener('click', () => {
 
 loadData();
 </script>
+
+  <!-- Onay Modalı -->
+<div class="modal fade" id="confirmClearModal" tabindex="-1" aria-labelledby="confirmClearModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmClearModalLabel">Onay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        Geçmişi temizlemek istediğinize emin misiniz?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+        <button type="button" class="btn btn-danger" id="confirmClearBtn">Evet, Temizle</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
