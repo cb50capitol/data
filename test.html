@@ -29,20 +29,40 @@
       border: 1px solid #dee2e6;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       padding: 1.5rem;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
     }
 
     .card-alt:hover {
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
 
+    /* Yeşile dönme için */
     .card-alt.completed {
-      background-color: #d4edda;
-      border-color: #c3e6cb;
+      border-color: #198754;
+      background-color: #d1e7dd;
+      position: relative;
+    }
+
+    /* Sağ üst köşedeki geri sayım kutusu */
+    .countdown-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #198754;
+      color: white;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 14px;
+      user-select: none;
+      pointer-events: none;
+      z-index: 10;
+      transition: opacity 0.3s ease;
     }
 
     .card-title {
@@ -250,9 +270,6 @@ function renderCards(rows) {
 
   const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
 
-  // Önce tüm kartları oluşturup bir diziye atalım
-  let cards = [];
-
   rows.forEach(row => {
     const col = document.createElement('div');
     col.className = "col-custom";
@@ -289,83 +306,99 @@ function renderCards(rows) {
           <strong class="me-2">SAS:</strong> ${row[9]}
           <div class="checkbox-group ms-2">${checkboxHTML}</div>
         </div>
-        <div class="info-item"><i class="fas fa-tags"></i> <strong>İndirim:</strong> ${row[10]}</div>
+        <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
+        <div class="info-item"><i class="fas fa-file-alt"></i> <strong>İş Emri:</strong> ${row[11]}</div>
       </div>
       <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
     `;
 
     col.appendChild(card);
-    cards.push({ col, card, row });
+    cardContainer.appendChild(col);
   });
 
-  // Kartların checkbox durumuna göre tamamlanma kontrolü ve sıralama
-  // Tamamlananlar (tüm checkbox işaretli) sona taşınacak, ve yeşil arka plan alacak
-  // İlk renderda localStorage’dan da okunacak
+  // Checkbox event listener ve geri sayım için yönetim
+  const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+  const countdownTimers = new Map(); // checkboxId => timerId
 
-  // Kartların tamamlanma durumlarını belirle ve sırala
-  cards.forEach(({ card, row }) => {
-    const ean = row[7];
-    const sasCount = parseInt(row[9]) || 0;
-    let tamamlandi = true;
+  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const id = checkbox.id;
+      savedCheckboxes[id] = checkbox.checked;
+      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
 
-    for (let i = 0; i < sasCount; i++) {
-      const checkboxId = `${ean}_sas_${i}`;
-      const checked = savedCheckboxes[checkboxId];
-      if (!checked) {
-        tamamlandi = false;
-        break;
+      const parentCard = checkbox.closest(".card-alt");
+      const parentCol = checkbox.closest(".col-custom");
+      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
+      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+
+      // Eğer tamamı işaretlendiyse
+      if (allChecked && allCheckboxes.length > 0) {
+        parentCard.classList.add("completed");
+
+        // Sağ üst köşede countdown badge varsa sil
+        let badge = parentCard.querySelector(".countdown-badge");
+        if (!badge) {
+          badge = document.createElement("div");
+          badge.className = "countdown-badge";
+          parentCard.appendChild(badge);
+        }
+
+        // Eğer önceki timer varsa iptal et
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+          countdownTimers.delete(parentCard);
+        }
+
+        // 3 saniyelik geri sayım başlat
+        let count = 3;
+        badge.textContent = count;
+
+        const intervalId = setInterval(() => {
+          count--;
+          if (count > 0) {
+            badge.textContent = count;
+          } else {
+            clearInterval(intervalId);
+            countdownTimers.delete(parentCard);
+
+            // Eğer checkbox halen işaretliyse karta son konumu ver
+            const stillAllChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+            if (stillAllChecked) {
+              cardContainer.appendChild(parentCol);
+              parentCol.scrollIntoView({ behavior: "smooth", block: "end" });
+              badge.style.opacity = "0"; // gizle
+            } else {
+              // Checkbox işareti kaldırılmışsa badge kaldır
+              badge.remove();
+              parentCard.classList.remove("completed");
+            }
+          }
+        }, 1000);
+
+        countdownTimers.set(parentCard, intervalId);
+
+      } else {
+        // Tamam işaretli değilse badge kaldır, timer iptal
+        parentCard.classList.remove("completed");
+        const badge = parentCard.querySelector(".countdown-badge");
+        if (badge) badge.remove();
+
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+          countdownTimers.delete(parentCard);
+        }
       }
-    }
-
-    if (tamamlandi && sasCount > 0) {
-      card.classList.add("completed");
-    } else {
-      card.classList.remove("completed");
-    }
+    });
   });
+}
 
-  // Sırala: tamamlanmış kartlar sona
-  cards.sort((a, b) => {
-    const aTamam = a.card.classList.contains("completed");
-    const bTamam = b.card.classList.contains("completed");
-    return aTamam === bTamam ? 0 : aTamam ? 1 : -1;
-  });
-
-  // Son olarak container'a ekle
-  cards.forEach(({ col }) => cardContainer.appendChild(col));
-
-  // Checkboxlara event listener ekle
-  cardContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-  checkbox.addEventListener('change', () => {
-    const id = checkbox.id;
-    savedCheckboxes[id] = checkbox.checked;
-    localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
-
-    let parentCard = checkbox.closest('.card-alt');
-    let parentCol = checkbox.closest('.col-custom');
-
-    const allCheckboxes = parentCard.querySelectorAll('input[type="checkbox"]');
-    const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
-
-    if (allChecked && allCheckboxes.length > 0) {
-      parentCard.classList.add("completed");
-      cardContainer.appendChild(parentCol);
-
-      // Kartı kaydır
-      parentCol.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    } else {
-      parentCard.classList.remove("completed");
-    }
-  });
-});
-
-
-clearStorageBtn.addEventListener('click', () => {
+// Geçmişi Temizle Butonu
+clearStorageBtn.addEventListener("click", () => {
   localStorage.removeItem("checkedBoxes");
-  location.reload();
+  alert("Geçmiş temizlendi.");
 });
 
-loadData();
+window.addEventListener("load", loadData);
 </script>
 </body>
 </html>
