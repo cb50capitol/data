@@ -12,17 +12,17 @@
       padding: 1rem;
       font-family: "Segoe UI", sans-serif;
     }
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
+    h1 { font-size: 1.8rem; }
     #filterInfo {
       font-style: italic;
       color: #6c757d;
       margin-bottom: 1rem;
     }
-
+    #filterInfo a {
+      text-decoration: none;
+      color: #0d6efd;
+      font-weight: bold;
+    }
     .card-alt {
       background: #ffffff;
       border-radius: 12px;
@@ -36,17 +36,13 @@
       justify-content: space-between;
       position: relative;
     }
-
     .card-alt:hover {
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
-
     .card-alt.completed {
       border-color: #198754;
       background-color: #d1e7dd;
-      position: relative;
     }
-
     .countdown-badge {
       position: absolute;
       top: 10px;
@@ -57,128 +53,85 @@
       padding: 4px 8px;
       border-radius: 12px;
       font-size: 14px;
-      user-select: none;
-      pointer-events: none;
-      z-index: 10;
-      transition: opacity 0.3s ease;
     }
-
     .card-title {
       font-weight: 600;
       font-size: 17px;
       margin-bottom: 1rem;
       color: #0d6efd;
     }
-
     .info-item {
       display: flex;
       align-items: center;
       margin-bottom: 8px;
       font-size: 15px;
-      color: #333;
-      flex-wrap: wrap;
     }
-
     .info-item i {
       width: 20px;
       text-align: center;
       color: #0d6efd;
       margin-right: 8px;
     }
-
     .checkbox-group {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-left: 10px;
     }
-
     input[type="checkbox"] {
       transform: scale(1.2);
       cursor: pointer;
     }
-
     .col-custom {
       padding: 0.5rem;
     }
-
     .card-container {
       display: flex;
       flex-wrap: wrap;
       margin: -0.5rem;
     }
-
     .online-btn {
       background-color: #28a745;
       color: white;
-      border: none;
       padding: 8px 14px;
       border-radius: 6px;
       font-weight: 600;
       font-size: 14px;
-      cursor: pointer;
-      align-self: flex-start;
-      transition: background-color 0.3s ease;
       margin-top: 15px;
       text-decoration: none;
       display: inline-block;
-      text-align: center;
     }
-
     .online-btn:hover {
       background-color: #218838;
-      color: white;
-      text-decoration: none;
     }
-
     @media (min-width: 576px) {
-      .col-custom {
-        width: 50%;
-      }
+      .col-custom { width: 50%; }
     }
-
     @media (max-width: 575.98px) {
-      .col-custom {
-        width: 100%;
-      }
+      .col-custom { width: 100%; }
     }
-
-    /* === Sağ alt köşedeki yukarı ve aşağı oklar için stil === */
     .scroll-arrow {
       position: fixed;
       right: 10px;
-      background: rgba(0,0,0,0.1);
-      border-radius: 50%;
       width: 40px;
       height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: rgba(0,0,0,0.1);
+      border-radius: 50%;
       color: #000;
       cursor: pointer;
-      transition: background 0.3s, color 0.3s, opacity 0.4s;
       opacity: 0.3;
       z-index: 9999;
-      user-select: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     .scroll-arrow:hover {
       background: rgba(0,0,0,0.3);
       color: #0d6efd;
       opacity: 1;
     }
-
-    #scrollBottomBtn {
-      bottom: 10px;
-    }
-
-    #scrollTopBtn {
-      bottom: 60px; /* scrollBottomBtn’un üstünde, arada 10px boşluk */
-    }
-
-    .scroll-arrow i {
-      font-size: 20px;
-    }
+    #scrollBottomBtn { bottom: 10px; }
+    #scrollTopBtn { bottom: 60px; }
   </style>
 </head>
 <body>
@@ -220,18 +173,17 @@
   </div>
 </div>
 
-<!-- Sayfanın sağ alt köşesinde yukarı ve aşağı oklar -->
-<div id="scrollTopBtn" class="scroll-arrow" title="Sayfanın üstüne git">
+<!-- Scroll arrows -->
+<div id="scrollTopBtn" class="scroll-arrow" title="Yukarı">
   <i class="fas fa-chevron-up"></i>
 </div>
-<div id="scrollBottomBtn" class="scroll-arrow" title="Sayfanın sonuna git">
+<div id="scrollBottomBtn" class="scroll-arrow" title="Aşağı">
   <i class="fas fa-chevron-down"></i>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 let data = [];
-
 const transferSelect = document.getElementById('transfer');
 const kategoriSelect = document.getElementById('kategori');
 const markaSelect = document.getElementById('marka');
@@ -239,6 +191,7 @@ const cardContainer = document.getElementById('cardContainer');
 const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
 const clearStorageBtn = document.getElementById('clearStorageBtn');
+const countdownTimers = new Map();
 
 function parseTSVLine(line) {
   return line.split('\t').map(cell => cell.trim());
@@ -247,62 +200,87 @@ function parseTSVLine(line) {
 async function loadData() {
   try {
     const response = await fetch('test.txt');
-    if (!response.ok) throw new Error('test.txt dosyası okunamadı');
     const text = await response.text();
-    const lines = text.split('\n').filter(l => l.trim().length > 0);
-    lines.shift(); // başlığı çıkar
+    const lines = text.trim().split('\n');
+    lines.shift();
     data = lines.map(parseTSVLine);
     populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
     filterModal.show();
-  } catch (error) {
-    alert('Veri yüklenirken hata oluştu: ' + error.message);
+  } catch (err) {
+    alert('Veri yüklenirken hata: ' + err.message);
   }
 }
 
-function populateSelect(selectElement, items) {
-  selectElement.innerHTML = '<option value="">Seçiniz</option>';
+function populateSelect(select, items) {
+  select.innerHTML = '<option value="">Seçiniz</option>';
   items.forEach(item => {
     const opt = document.createElement('option');
     opt.value = item;
     opt.textContent = item;
-    selectElement.appendChild(opt);
+    select.appendChild(opt);
   });
 }
 
 transferSelect.addEventListener('change', () => {
-  const selectedTransfer = transferSelect.value;
-  const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
+  const categories = data.filter(row => row[0] === transferSelect.value).map(row => row[1]);
   populateSelect(kategoriSelect, [...new Set(categories)]);
   markaSelect.innerHTML = "";
 });
 
 kategoriSelect.addEventListener('change', () => {
-  const selectedTransfer = transferSelect.value;
-  const selectedKategori = kategoriSelect.value;
-  const brands = data
-    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
-    .map(row => row[3]);
+  const brands = data.filter(row =>
+    row[0] === transferSelect.value &&
+    row[1] === kategoriSelect.value
+  ).map(row => row[3]);
   populateSelect(markaSelect, [...new Set(brands)]);
 });
 
 document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
-
-  const selectedTransfer = transferSelect.value;
-  const selectedKategori = kategoriSelect.value;
-  const selectedMarka = markaSelect.value;
-
-  filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
-
-  const filteredData = data.filter(row =>
-    row[0] === selectedTransfer &&
-    row[1] === selectedKategori &&
-    row[3] === selectedMarka
-  );
-
-  renderCards(filteredData);
+  const t = transferSelect.value;
+  const k = kategoriSelect.value;
+  const m = markaSelect.value;
+  filterInfoDiv.innerHTML = `
+    <a href="#" class="filter-link" data-type="transfer" data-value="${t}">${t}</a> >
+    <a href="#" class="filter-link" data-type="kategori" data-value="${k}">${k}</a> >
+    <a href="#" class="filter-link" data-type="marka" data-value="${m}">${m}</a>
+  `;
+  applyFilter(t, k, m);
   filterModal.hide();
 });
+
+filterInfoDiv.addEventListener('click', function(e) {
+  if (e.target.classList.contains('filter-link')) {
+    e.preventDefault();
+    const type = e.target.dataset.type;
+    const value = e.target.dataset.value;
+    if (type === 'transfer') {
+      applyFilter(value, "", "");
+    } else if (type === 'kategori') {
+      applyFilter(transferSelect.value, value, "");
+    } else if (type === 'marka') {
+      applyFilter(transferSelect.value, kategoriSelect.value, value);
+    }
+  }
+});
+
+function applyFilter(transferVal, kategoriVal, markaVal) {
+  transferSelect.value = transferVal;
+  const cats = data.filter(row => row[0] === transferVal).map(row => row[1]);
+  populateSelect(kategoriSelect, [...new Set(cats)]);
+  kategoriSelect.value = kategoriVal;
+
+  const brands = data.filter(row => row[0] === transferVal && row[1] === kategoriVal).map(row => row[3]);
+  populateSelect(markaSelect, [...new Set(brands)]);
+  markaSelect.value = markaVal;
+
+  const filtered = data.filter(row =>
+    row[0] === transferVal &&
+    row[1] === kategoriVal &&
+    row[3] === markaVal
+  );
+  renderCards(filtered);
+}
 
 function renderCards(rows) {
   cardContainer.innerHTML = "";
@@ -310,42 +288,32 @@ function renderCards(rows) {
     cardContainer.innerHTML = `<div class="alert alert-warning w-100">Hiçbir sonuç bulunamadı.</div>`;
     return;
   }
-
   const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
 
   rows.forEach(row => {
     const col = document.createElement('div');
     col.className = "col-custom";
-
     const card = document.createElement('div');
     card.className = "card-alt";
 
     const sasCount = parseInt(row[9]) || 0;
     const ean = row[7];
     let checkboxHTML = "";
-
     for (let i = 0; i < sasCount; i++) {
-      const checkboxId = `${ean}_sas_${i}`;
-      const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
-      checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
+      const id = `${ean}_sas_${i}`;
+      const checked = savedCheckboxes[id] ? "checked" : "";
+      checkboxHTML += `<input type="checkbox" class="form-check-input" id="${id}" ${checked} />`;
     }
 
-    let malzemeKisa = row[6];
-    if (malzemeKisa.length > 3) {
-      malzemeKisa = malzemeKisa.slice(0, -3);
-    }
-    const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
-
+    const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(row[6].slice(0, -3))}`;
     card.innerHTML = `
       <div>
         <div class="card-title">${row[4]}</div>
         <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
         <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${ean}</div>
         <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
-        <div class="info-item">
-          <i class="fas fa-warehouse me-1"></i>
-          <strong class="me-2">SAS:</strong> ${row[9]}
+        <div class="info-item"><i class="fas fa-warehouse me-1"></i><strong>SAS:</strong> ${row[9]}
           <div class="checkbox-group ms-2">${checkboxHTML}</div>
         </div>
         <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
@@ -353,103 +321,70 @@ function renderCards(rows) {
       </div>
       <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
     `;
-
     col.appendChild(card);
     cardContainer.appendChild(col);
-  });
 
-  const countdownTimers = new Map();
+    card.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const id = checkbox.id;
+        savedCheckboxes[id] = checkbox.checked;
+        localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
+        const all = card.querySelectorAll("input[type='checkbox']");
+        const allChecked = Array.from(all).every(cb => cb.checked);
 
-  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-      const id = checkbox.id;
-      savedCheckboxes[id] = checkbox.checked;
-      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
-
-      const parentCard = checkbox.closest(".card-alt");
-      const parentCol = checkbox.closest(".col-custom");
-      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
-      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
-
-      if (allChecked && allCheckboxes.length > 0) {
-        parentCard.classList.add("completed");
-
-        let badge = parentCard.querySelector(".countdown-badge");
-        if (!badge) {
-          badge = document.createElement("div");
-          badge.className = "countdown-badge";
-          parentCard.appendChild(badge);
-        }
-
-        let countdown = 5;
-        badge.textContent = `Kapatılıyor: ${countdown}s`;
-
-        if (countdownTimers.has(parentCard)) {
-          clearInterval(countdownTimers.get(parentCard));
-        }
-
-        const intervalId = setInterval(() => {
-          countdown--;
-          if (countdown > 0) {
-            badge.textContent = `Kapatılıyor: ${countdown}s`;
-          } else {
-            clearInterval(intervalId);
-            countdownTimers.delete(parentCard);
-            badge.remove();
-            cardContainer.appendChild(parentCol);
+        if (allChecked && all.length > 0) {
+          card.classList.add("completed");
+          let badge = card.querySelector(".countdown-badge");
+          if (!badge) {
+            badge = document.createElement("div");
+            badge.className = "countdown-badge";
+            card.appendChild(badge);
           }
-        }, 1000);
+          let count = 3;
+          badge.textContent = `Kapatılıyor: ${count}s`;
 
-        countdownTimers.set(parentCard, intervalId);
-
-      } else {
-        parentCard.classList.remove("completed");
-        const badge = parentCard.querySelector(".countdown-badge");
-        if (badge) badge.remove();
-        if (countdownTimers.has(parentCard)) {
-          clearInterval(countdownTimers.get(parentCard));
-          countdownTimers.delete(parentCard);
+          if (countdownTimers.has(card)) clearInterval(countdownTimers.get(card));
+          const interval = setInterval(() => {
+            count--;
+            if (count > 0) {
+              badge.textContent = `Kapatılıyor: ${count}s`;
+            } else {
+              clearInterval(interval);
+              badge.remove();
+              cardContainer.appendChild(col);
+            }
+          }, 1000);
+          countdownTimers.set(card, interval);
+        } else {
+          card.classList.remove("completed");
+          const badge = card.querySelector(".countdown-badge");
+          if (badge) badge.remove();
         }
-      }
+      });
     });
-  });
 
-  // ** Sayfa açıldığında checkbox durumlarına göre kartların tamamlandı mı diye kontrol et, tamamlandı ise kartı yeşile boya ve sona taşı **
-
-  cardContainer.querySelectorAll('.col-custom').forEach(col => {
-    const card = col.querySelector('.card-alt');
-    const checkboxes = card.querySelectorAll('input[type="checkbox"]');
-    if (checkboxes.length > 0) {
-      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-      if (allChecked) {
-        card.classList.add('completed');
-        const badge = card.querySelector('.countdown-badge');
-        if (badge) badge.remove();
-        cardContainer.appendChild(col);
-      } else {
-        card.classList.remove('completed');
-        const badge = card.querySelector('.countdown-badge');
-        if (badge) badge.remove();
-      }
+    const allCheckboxes = card.querySelectorAll("input[type='checkbox']");
+    const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+    if (allChecked && allCheckboxes.length > 0) {
+      card.classList.add("completed");
+      cardContainer.appendChild(col);
     }
   });
 }
 
 clearStorageBtn.addEventListener('click', () => {
-  localStorage.clear();
+  localStorage.removeItem("checkedBoxes");
   location.reload();
 });
 
-document.getElementById('scrollBottomBtn').addEventListener('click', () => {
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-});
 document.getElementById('scrollTopBtn').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+document.getElementById('scrollBottomBtn').addEventListener('click', () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 });
 
 loadData();
 </script>
-
 </body>
 </html>
