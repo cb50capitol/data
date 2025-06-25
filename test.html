@@ -325,22 +325,28 @@ function renderCards(rows) {
 
     const sasCount = parseInt(row[9]) || 0;
     const ean = row[7];
-    let checkboxHTML = "";
 
+    // Malzeme kodunu alıyoruz
+    let malzemeKisa = row[6];
+    if (malzemeKisa.length > 3) {
+      malzemeKisa = malzemeKisa.slice(0, -3);
+    }
+
+    // Burada ürün resmi url'sini oluşturuyoruz
+    const imageUrl = `https://statics-mp.boyner.com.tr/mnresize/300/-/Boynerimages/${malzemeKisa}_276_01.jpg?v=1747831704`;
+
+    let checkboxHTML = "";
     for (let i = 0; i < sasCount; i++) {
       const checkboxId = `${ean}_sas_${i}`;
       const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
       checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
     }
 
-    let malzemeKisa = row[6];
-    if (malzemeKisa.length > 3) {
-      malzemeKisa = malzemeKisa.slice(0, -3);
-    }
     const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
 
     card.innerHTML = `
       <div>
+        <img src="${imageUrl}" alt="Ürün Resmi" style="max-width: 100%; border-radius: 8px; margin-bottom: 10px;" />
         <div class="card-title">${row[4]}</div>
         <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
         <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
@@ -359,62 +365,6 @@ function renderCards(rows) {
 
     col.appendChild(card);
     cardContainer.appendChild(col);
-  });
-
-  const countdownTimers = new Map();
-
-  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-      const id = checkbox.id;
-      savedCheckboxes[id] = checkbox.checked;
-      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
-
-      const parentCard = checkbox.closest(".card-alt");
-      const parentCol = checkbox.closest(".col-custom");
-      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
-      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
-
-      if (allChecked && allCheckboxes.length > 0) {
-        parentCard.classList.add("completed");
-
-        let badge = parentCard.querySelector(".countdown-badge");
-        if (!badge) {
-          badge = document.createElement("div");
-          badge.className = "countdown-badge";
-          parentCard.appendChild(badge);
-        }
-
-        let countdown = 1;
-        badge.textContent = `${countdown}`;
-
-        if (countdownTimers.has(parentCard)) {
-          clearInterval(countdownTimers.get(parentCard));
-        }
-
-        const intervalId = setInterval(() => {
-          countdown--;
-          if (countdown > 0) {
-            badge.textContent = `${countdown}`;
-          } else {
-            clearInterval(intervalId);
-            countdownTimers.delete(parentCard);
-            badge.remove();
-            cardContainer.appendChild(parentCol);
-          }
-        }, 1000);
-
-        countdownTimers.set(parentCard, intervalId);
-      } else {
-        parentCard.classList.remove("completed");
-        const badge = parentCard.querySelector(".countdown-badge");
-        if (badge) badge.remove();
-        if (countdownTimers.has(parentCard)) {
-          clearInterval(countdownTimers.get(parentCard));
-          countdownTimers.delete(parentCard);
-        }
-      }
-    });
   });
 
   cardContainer.querySelectorAll('.col-custom').forEach(col => {
