@@ -382,31 +382,22 @@ function renderCards(rows) {
           parentCard.appendChild(badge);
         }
 
+        let countdown = 5;
+        badge.textContent = `Kapatılıyor: ${countdown}s`;
+
         if (countdownTimers.has(parentCard)) {
           clearInterval(countdownTimers.get(parentCard));
-          countdownTimers.delete(parentCard);
         }
 
-        let count = 3;
-        badge.textContent = count;
-
         const intervalId = setInterval(() => {
-          count--;
-          if (count > 0) {
-            badge.textContent = count;
+          countdown--;
+          if (countdown > 0) {
+            badge.textContent = `Kapatılıyor: ${countdown}s`;
           } else {
             clearInterval(intervalId);
             countdownTimers.delete(parentCard);
-
-            const stillAllChecked = Array.from(allCheckboxes).every(cb => cb.checked);
-            if (stillAllChecked) {
-              cardContainer.appendChild(parentCol);
-              badge.style.opacity = "0";
-              setTimeout(() => badge.remove(), 300);
-            } else {
-              badge.remove();
-              parentCard.classList.remove("completed");
-            }
+            badge.remove();
+            cardContainer.appendChild(parentCol);
           }
         }, 1000);
 
@@ -416,7 +407,6 @@ function renderCards(rows) {
         parentCard.classList.remove("completed");
         const badge = parentCard.querySelector(".countdown-badge");
         if (badge) badge.remove();
-
         if (countdownTimers.has(parentCard)) {
           clearInterval(countdownTimers.get(parentCard));
           countdownTimers.delete(parentCard);
@@ -424,26 +414,41 @@ function renderCards(rows) {
       }
     });
   });
+
+  // ** Sayfa açıldığında checkbox durumlarına göre kartların tamamlandı mı diye kontrol et, tamamlandı ise kartı yeşile boya ve sona taşı **
+
+  cardContainer.querySelectorAll('.col-custom').forEach(col => {
+    const card = col.querySelector('.card-alt');
+    const checkboxes = card.querySelectorAll('input[type="checkbox"]');
+    if (checkboxes.length > 0) {
+      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      if (allChecked) {
+        card.classList.add('completed');
+        const badge = card.querySelector('.countdown-badge');
+        if (badge) badge.remove();
+        cardContainer.appendChild(col);
+      } else {
+        card.classList.remove('completed');
+        const badge = card.querySelector('.countdown-badge');
+        if (badge) badge.remove();
+      }
+    }
+  });
 }
 
-clearStorageBtn.addEventListener("click", () => {
-  localStorage.removeItem("checkedBoxes");
-  alert("Geçmiş temizlendi.");
+clearStorageBtn.addEventListener('click', () => {
+  localStorage.clear();
+  location.reload();
 });
 
-window.addEventListener("load", loadData);
-
-// Scroll oklar
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-const scrollBottomBtn = document.getElementById('scrollBottomBtn');
-
-scrollTopBtn.addEventListener('click', () => {
+document.getElementById('scrollBottomBtn').addEventListener('click', () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
+document.getElementById('scrollTopBtn').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-scrollBottomBtn.addEventListener('click', () => {
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-});
+loadData();
 </script>
 
 </body>
