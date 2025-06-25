@@ -40,6 +40,11 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
 
+    .card-alt.completed {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
+
     .card-title {
       font-weight: 600;
       font-size: 17px;
@@ -245,6 +250,9 @@ function renderCards(rows) {
 
   const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
 
+  // Önce tüm kartları oluşturup bir diziye atalım
+  let cards = [];
+
   rows.forEach(row => {
     const col = document.createElement('div');
     col.className = "col-custom";
@@ -269,53 +277,96 @@ function renderCards(rows) {
     }
     const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
 
-  card.innerHTML = `
-  <div>
-    <div class="card-title">${row[4]}</div>
-    <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
-    <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-    <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
-    <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
-    <div class="info-item">
-      <i class="fas fa-warehouse me-1"></i>
-      <strong class="me-2">SAS:</strong> ${row[9]}
-      <div class="checkbox-group ms-2">${checkboxHTML}</div>
-    </div>
-    <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
-    <div class="info-item"><i class="fas fa-file-alt"></i> <strong>İş Emri:</strong> ${row[11]}</div>
-  </div>
-  <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
-`;
-
-
-    // Checkbox event listeners
-    const checkboxes = card.querySelectorAll("input[type='checkbox']");
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', function () {
-        const id = this.id;
-        const checkedState = this.checked;
-        const saved = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-        if (checkedState) {
-          saved[id] = true;
-        } else {
-          delete saved[id];
-        }
-        localStorage.setItem("checkedBoxes", JSON.stringify(saved));
-      });
-    });
+    card.innerHTML = `
+      <div>
+        <div class="card-title">${row[4]}</div>
+        <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
+        <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
+        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+        <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
+        <div class="info-item">
+          <i class="fas fa-warehouse me-1"></i>
+          <strong class="me-2">SAS:</strong> ${row[9]}
+          <div class="checkbox-group ms-2">${checkboxHTML}</div>
+        </div>
+        <div class="info-item"><i class="fas fa-tags"></i> <strong>İndirim:</strong> ${row[10]}</div>
+      </div>
+      <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
+    `;
 
     col.appendChild(card);
-    cardContainer.appendChild(col);
+    cards.push({ col, card, row });
+  });
+
+  // Kartların checkbox durumuna göre tamamlanma kontrolü ve sıralama
+  // Tamamlananlar (tüm checkbox işaretli) sona taşınacak, ve yeşil arka plan alacak
+  // İlk renderda localStorage’dan da okunacak
+
+  // Kartların tamamlanma durumlarını belirle ve sırala
+  cards.forEach(({ card, row }) => {
+    const ean = row[7];
+    const sasCount = parseInt(row[9]) || 0;
+    let tamamlandi = true;
+
+    for (let i = 0; i < sasCount; i++) {
+      const checkboxId = `${ean}_sas_${i}`;
+      const checked = savedCheckboxes[checkboxId];
+      if (!checked) {
+        tamamlandi = false;
+        break;
+      }
+    }
+
+    if (tamamlandi && sasCount > 0) {
+      card.classList.add("completed");
+    } else {
+      card.classList.remove("completed");
+    }
+  });
+
+  // Sırala: tamamlanmış kartlar sona
+  cards.sort((a, b) => {
+    const aTamam = a.card.classList.contains("completed");
+    const bTamam = b.card.classList.contains("completed");
+    return aTamam === bTamam ? 0 : aTamam ? 1 : -1;
+  });
+
+  // Son olarak container'a ekle
+  cards.forEach(({ col }) => cardContainer.appendChild(col));
+
+  // Checkboxlara event listener ekle
+  cardContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const id = checkbox.id;
+      savedCheckboxes[id] = checkbox.checked;
+      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
+
+      // Kartı ve row'u bul
+      let parentCard = checkbox.closest('.card-alt');
+      let parentCol = checkbox.closest('.col-custom');
+
+      // Karttaki tüm checkboxların durumunu kontrol et
+      const allCheckboxes = parentCard.querySelectorAll('input[type="checkbox"]');
+      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+
+      if (allChecked && allCheckboxes.length > 0) {
+        parentCard.classList.add("completed");
+        // Kartı sona taşı
+        cardContainer.appendChild(parentCol);
+      } else {
+        parentCard.classList.remove("completed");
+        // Kartın pozisyonunu değiştirmiyoruz (isteğe bağlı: başa veya eski konuma dönebilir)
+      }
+    });
   });
 }
 
-// Geçmişi Temizle Butonu
 clearStorageBtn.addEventListener('click', () => {
   localStorage.removeItem("checkedBoxes");
-  alert("Geçmiş temizlendi.");
+  location.reload();
 });
 
-window.addEventListener('load', loadData);
+loadData();
 </script>
 </body>
 </html>
