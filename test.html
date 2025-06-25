@@ -216,10 +216,6 @@
             <label for="kategori" class="form-label">Kategori</label>
             <select id="kategori" class="form-select" required></select>
           </div>
-          <div class="mb-3 d-none" id="altKategoriWrapper">
-            <label for="altKategori" class="form-label">Alt Kategori</label>
-            <select id="altKategori" class="form-select"></select>
-          </div>
           <div class="mb-3">
             <label for="marka" class="form-label">Marka</label>
             <select id="marka" class="form-select" required></select>
@@ -230,25 +226,6 @@
           <button type="submit" class="btn btn-primary">Filtrele</button>
         </div>
       </form>
-    </div>
-  </div>
-</div>
-
-<!-- Onay Modal -->
-<div class="modal fade" id="confirmClearModal" tabindex="-1" aria-labelledby="confirmClearModalLabel" aria-hidden="true" data-bs-backdrop="static">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="confirmClearModalLabel">Onay Gerekiyor</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-      </div>
-      <div class="modal-body">
-        Geçmişi temizlemek istediğinizden emin misiniz?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
-        <button type="button" id="confirmClearBtn" class="btn btn-danger">Evet, Temizle</button>
-      </div>
     </div>
   </div>
 </div>
@@ -266,16 +243,11 @@ let data = [];
 
 const transferSelect = document.getElementById('transfer');
 const kategoriSelect = document.getElementById('kategori');
-const altKategoriSelect = document.getElementById('altKategori');
 const markaSelect = document.getElementById('marka');
 const cardContainer = document.getElementById('cardContainer');
 const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
 const clearStorageBtn = document.getElementById('clearStorageBtn');
-const altKategoriWrapper = document.getElementById('altKategoriWrapper');
-
-const confirmClearModal = new bootstrap.Modal(document.getElementById('confirmClearModal'));
-const confirmClearBtn = document.getElementById('confirmClearBtn');
 
 filterInfoDiv.addEventListener('click', () => {
   filterModal.show();
@@ -293,209 +265,195 @@ async function loadData() {
     const lines = text.split('\n').filter(l => l.trim().length > 0);
     lines.shift();
     data = lines.map(parseTSVLine);
-    populateTransferSelect();
-  } catch (e) {
-    alert(e.message);
+    populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
+    filterModal.show();
+  } catch (error) {
+    alert('Veri yüklenirken hata oluştu: ' + error.message);
   }
 }
 
-function populateTransferSelect() {
-  const transfers = [...new Set(data.map(row => row[0]))].sort();
-  transferSelect.innerHTML = '<option value="">Seçiniz</option>';
-  transfers.forEach(t => {
+function populateSelect(selectElement, items) {
+  selectElement.innerHTML = '<option value="">Seçiniz</option>';
+  items.forEach(item => {
     const opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t;
-    transferSelect.appendChild(opt);
-  });
-}
-
-function populateKategoriSelect(selectedTransfer) {
-  const filtered = data.filter(row => row[0] === selectedTransfer);
-  const kategoriler = [...new Set(filtered.map(row => row[1]))].sort();
-  kategoriSelect.innerHTML = '<option value="">Seçiniz</option>';
-  kategoriler.forEach(k => {
-    const opt = document.createElement('option');
-    opt.value = k;
-    opt.textContent = k;
-    kategoriSelect.appendChild(opt);
-  });
-}
-
-function populateAltKategoriSelect(selectedTransfer, selectedKategori) {
-  const filtered = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
-  const altKategoriler = [...new Set(filtered.map(row => row[2]))].sort();
-  if (altKategoriler.length > 1 || (altKategoriler.length === 1 && altKategoriler[0] !== '')) {
-    altKategoriWrapper.classList.remove('d-none');
-    altKategoriSelect.innerHTML = '<option value="">Seçiniz</option>';
-    altKategoriler.forEach(a => {
-      const opt = document.createElement('option');
-      opt.value = a;
-      opt.textContent = a;
-      altKategoriSelect.appendChild(opt);
-    });
-  } else {
-    altKategoriWrapper.classList.add('d-none');
-    altKategoriSelect.innerHTML = '';
-  }
-}
-
-function populateMarkaSelect(selectedTransfer, selectedKategori, selectedAltKategori) {
-  const filtered = data.filter(row => {
-    return row[0] === selectedTransfer
-      && row[1] === selectedKategori
-      && (selectedAltKategori === '' || row[2] === selectedAltKategori);
-  });
-  const markalar = [...new Set(filtered.map(row => row[3]))].sort();
-  markaSelect.innerHTML = '<option value="">Seçiniz</option>';
-  markalar.forEach(m => {
-    const opt = document.createElement('option');
-    opt.value = m;
-    opt.textContent = m;
-    markaSelect.appendChild(opt);
+    opt.value = item;
+    opt.textContent = item;
+    selectElement.appendChild(opt);
   });
 }
 
 transferSelect.addEventListener('change', () => {
-  const val = transferSelect.value;
-  if (val) {
-    populateKategoriSelect(val);
-  } else {
-    kategoriSelect.innerHTML = '';
-    altKategoriSelect.innerHTML = '';
-    markaSelect.innerHTML = '';
-    altKategoriWrapper.classList.add('d-none');
-  }
+  const selectedTransfer = transferSelect.value;
+  const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
+  populateSelect(kategoriSelect, [...new Set(categories)]);
+  markaSelect.innerHTML = "";
 });
 
 kategoriSelect.addEventListener('change', () => {
-  const transferVal = transferSelect.value;
-  const kategoriVal = kategoriSelect.value;
-  if (transferVal && kategoriVal) {
-    populateAltKategoriSelect(transferVal, kategoriVal);
-    markaSelect.innerHTML = '';
-  } else {
-    altKategoriSelect.innerHTML = '';
-    markaSelect.innerHTML = '';
-    altKategoriWrapper.classList.add('d-none');
-  }
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const brands = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori).map(row => row[3]);
+  populateSelect(markaSelect, [...new Set(brands)]);
 });
 
-altKategoriSelect.addEventListener('change', () => {
-  const transferVal = transferSelect.value;
-  const kategoriVal = kategoriSelect.value;
-  const altKategoriVal = altKategoriSelect.value;
-  if (transferVal && kategoriVal) {
-    populateMarkaSelect(transferVal, kategoriVal, altKategoriVal);
-  } else {
-    markaSelect.innerHTML = '';
-  }
-});
-
-document.getElementById('filterForm').addEventListener('submit', (e) => {
+document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const transferVal = transferSelect.value;
-  const kategoriVal = kategoriSelect.value;
-  const altKategoriVal = altKategoriSelect.value;
-  const markaVal = markaSelect.value;
-
-  if (!transferVal || !kategoriVal || !markaVal) {
-    alert('Lütfen tüm zorunlu alanları doldurun.');
-    return;
-  }
-
-  // Kaydet localStorage
-  localStorage.setItem('transfer', transferVal);
-  localStorage.setItem('kategori', kategoriVal);
-  localStorage.setItem('altKategori', altKategoriVal);
-  localStorage.setItem('marka', markaVal);
-
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const selectedMarka = markaSelect.value;
+  filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
+  const filteredData = data.filter(row =>
+    row[0] === selectedTransfer &&
+    row[1] === selectedKategori &&
+    row[3] === selectedMarka
+  );
+  renderCards(filteredData);
   filterModal.hide();
-  displayFilterInfo();
-  showCards();
 });
 
-function displayFilterInfo() {
-  const transferVal = localStorage.getItem('transfer');
-  const kategoriVal = localStorage.getItem('kategori');
-  const altKategoriVal = localStorage.getItem('altKategori');
-  const markaVal = localStorage.getItem('marka');
-
-  if (transferVal && kategoriVal && markaVal) {
-    filterInfoDiv.textContent = `${transferVal} > ${kategoriVal}${altKategoriVal ? ' > ' + altKategoriVal : ''} > ${markaVal}`;
-  } else {
-    filterInfoDiv.textContent = 'Filtre Seçiniz';
-  }
-}
-
-function showCards() {
-  cardContainer.innerHTML = '';
-  const transferVal = localStorage.getItem('transfer');
-  const kategoriVal = localStorage.getItem('kategori');
-  const altKategoriVal = localStorage.getItem('altKategori');
-  const markaVal = localStorage.getItem('marka');
-
-  if (!transferVal || !kategoriVal || !markaVal) {
+function renderCards(rows) {
+  cardContainer.innerHTML = "";
+  if (rows.length === 0) {
+    cardContainer.innerHTML = `<div class="alert alert-warning w-100">Hiçbir sonuç bulunamadı.</div>`;
     return;
   }
 
-  const filtered = data.filter(row => {
-    return row[0] === transferVal
-      && row[1] === kategoriVal
-      && (altKategoriVal === '' || row[2] === altKategoriVal)
-      && row[3] === markaVal;
+  const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+
+  rows.forEach(row => {
+    const col = document.createElement('div');
+    col.className = "col-custom";
+
+    const card = document.createElement('div');
+    card.className = "card-alt";
+
+    const sasCount = parseInt(row[9]) || 0;
+    const ean = row[7];
+    let checkboxHTML = "";
+
+    for (let i = 0; i < sasCount; i++) {
+      const checkboxId = `${ean}_sas_${i}`;
+      const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
+      checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
+    }
+
+    let malzemeKisa = row[6];
+    if (malzemeKisa.length > 3) {
+      malzemeKisa = malzemeKisa.slice(0, -3);
+    }
+    const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
+
+    card.innerHTML = `
+      <div>
+        <div class="card-title">${row[4]}</div>
+        <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
+        <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
+        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+        <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
+        <div class="info-item">
+          <i class="fas fa-warehouse me-1"></i>
+          <strong class="me-2">SAS:</strong> ${row[9]}
+          <div class="checkbox-group ms-2">${checkboxHTML}</div>
+        </div>
+        <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
+        <div class="info-item"><i class="fas fa-file-alt"></i> <strong>İş Emri:</strong> ${row[11]}</div>
+      </div>
+      <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
+    `;
+
+    col.appendChild(card);
+    cardContainer.appendChild(col);
   });
 
-  filtered.forEach(row => {
-    const card = document.createElement('div');
-    card.classList.add('col-custom');
-    const completed = row[9] === '1';
-    card.innerHTML = `
-      <div class="card-alt ${completed ? 'completed' : ''}">
-        <h4 class="card-title">${row[4]}</h4>
-        <div class="info-item"><i class="fa fa-money-bill"></i> ${row[5]}</div>
-        <div class="info-item"><i class="fa fa-calendar-days"></i> ${row[7]}</div>
-        <div class="info-item"><i class="fa fa-store"></i> ${row[6]}</div>
-        <a href="${row[8]}" target="_blank" class="online-btn">Online</a>
-        ${completed ? `<div class="countdown-badge">Tamamlandı</div>` : ''}
-      </div>
-    `;
-    cardContainer.appendChild(card);
+  const countdownTimers = new Map();
+
+  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+      const id = checkbox.id;
+      savedCheckboxes[id] = checkbox.checked;
+      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
+
+      const parentCard = checkbox.closest(".card-alt");
+      const parentCol = checkbox.closest(".col-custom");
+      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
+      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+
+      if (allChecked && allCheckboxes.length > 0) {
+        parentCard.classList.add("completed");
+
+        let badge = parentCard.querySelector(".countdown-badge");
+        if (!badge) {
+          badge = document.createElement("div");
+          badge.className = "countdown-badge";
+          parentCard.appendChild(badge);
+        }
+
+        let countdown = 3;
+        badge.textContent = `${countdown}`;
+
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+        }
+
+        const intervalId = setInterval(() => {
+          countdown--;
+          if (countdown > 0) {
+            badge.textContent = `${countdown}`;
+          } else {
+            clearInterval(intervalId);
+            countdownTimers.delete(parentCard);
+            badge.remove();
+            cardContainer.appendChild(parentCol);
+          }
+        }, 1000);
+
+        countdownTimers.set(parentCard, intervalId);
+
+      } else {
+        parentCard.classList.remove("completed");
+        const badge = parentCard.querySelector(".countdown-badge");
+        if (badge) badge.remove();
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+          countdownTimers.delete(parentCard);
+        }
+      }
+    });
+  });
+
+  cardContainer.querySelectorAll('.col-custom').forEach(col => {
+    const card = col.querySelector('.card-alt');
+    const checkboxes = card.querySelectorAll('input[type="checkbox"]');
+    if (checkboxes.length > 0) {
+      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      if (allChecked) {
+        card.classList.add('completed');
+        const badge = card.querySelector('.countdown-badge');
+        if (badge) badge.remove();
+        cardContainer.appendChild(col);
+      } else {
+        card.classList.remove('completed');
+        const badge = card.querySelector('.countdown-badge');
+        if (badge) badge.remove();
+      }
+    }
   });
 }
 
-// Scroll butonları
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-const scrollBottomBtn = document.getElementById('scrollBottomBtn');
-
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-});
-
-scrollBottomBtn.addEventListener('click', () => {
-  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-});
-
-// Geçmişi Temizle butonu: Modal onay ile
 clearStorageBtn.addEventListener('click', () => {
-  confirmClearModal.show();
-});
-
-confirmClearBtn.addEventListener('click', () => {
   localStorage.clear();
   location.reload();
 });
 
-// Sayfa açılırken
-window.addEventListener('load', () => {
-  // Eğer localStorage’da kayıtlı filtre varsa göster
-  if (localStorage.getItem('transfer') && localStorage.getItem('kategori') && localStorage.getItem('marka')) {
-    displayFilterInfo();
-    showCards();
-  } else {
-    filterModal.show();
-  }
+document.getElementById('scrollBottomBtn').addEventListener('click', () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 });
+document.getElementById('scrollTopBtn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+loadData();
 </script>
 </body>
 </html>
