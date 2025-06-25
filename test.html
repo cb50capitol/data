@@ -234,21 +234,20 @@
   </div>
 </div>
 
-<!-- Temizleme Onay Modal -->
-<div class="modal fade" id="clearConfirmModal" tabindex="-1" aria-labelledby="clearConfirmModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<!-- Onay Modal -->
+<div class="modal fade" id="confirmClearModal" tabindex="-1" aria-labelledby="confirmClearModalLabel" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-danger">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title" id="clearConfirmModalLabel"><i class="fas fa-exclamation-triangle me-2"></i> Onay Gerekiyor</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmClearModalLabel">Onay Gerekiyor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
       </div>
-      <div class="modal-body text-center">
-        <p class="fs-5">Geçmişi temizlemek istediğinizden emin misiniz?</p>
-        <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Uyarı" style="width:80px; opacity:0.6; margin-bottom: 15px;">
+      <div class="modal-body">
+        Geçmişi temizlemek istediğinizden emin misiniz?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
-        <button type="button" id="confirmClearBtn" class="btn btn-danger">Evet, temizle</button>
+        <button type="button" id="confirmClearBtn" class="btn btn-danger">Evet, Temizle</button>
       </div>
     </div>
   </div>
@@ -275,7 +274,7 @@ const filterInfoDiv = document.getElementById('filterInfo');
 const clearStorageBtn = document.getElementById('clearStorageBtn');
 const altKategoriWrapper = document.getElementById('altKategoriWrapper');
 
-const clearConfirmModal = new bootstrap.Modal(document.getElementById('clearConfirmModal'));
+const confirmClearModal = new bootstrap.Modal(document.getElementById('confirmClearModal'));
 const confirmClearBtn = document.getElementById('confirmClearBtn');
 
 filterInfoDiv.addEventListener('click', () => {
@@ -294,216 +293,192 @@ async function loadData() {
     const lines = text.split('\n').filter(l => l.trim().length > 0);
     lines.shift();
     data = lines.map(parseTSVLine);
-    populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
-    filterModal.show();
-  } catch (error) {
-    alert('Veri yüklenirken hata oluştu: ' + error.message);
+    populateTransferSelect();
+  } catch (e) {
+    alert(e.message);
   }
 }
 
-function populateSelect(selectElement, items) {
-  selectElement.innerHTML = '<option value="">Seçiniz</option>';
-  items.forEach(item => {
+function populateTransferSelect() {
+  const transfers = [...new Set(data.map(row => row[0]))].sort();
+  transferSelect.innerHTML = '<option value="">Seçiniz</option>';
+  transfers.forEach(t => {
     const opt = document.createElement('option');
-    opt.value = item;
-    opt.textContent = item;
-    selectElement.appendChild(opt);
+    opt.value = t;
+    opt.textContent = t;
+    transferSelect.appendChild(opt);
+  });
+}
+
+function populateKategoriSelect(selectedTransfer) {
+  const filtered = data.filter(row => row[0] === selectedTransfer);
+  const kategoriler = [...new Set(filtered.map(row => row[1]))].sort();
+  kategoriSelect.innerHTML = '<option value="">Seçiniz</option>';
+  kategoriler.forEach(k => {
+    const opt = document.createElement('option');
+    opt.value = k;
+    opt.textContent = k;
+    kategoriSelect.appendChild(opt);
+  });
+}
+
+function populateAltKategoriSelect(selectedTransfer, selectedKategori) {
+  const filtered = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
+  const altKategoriler = [...new Set(filtered.map(row => row[2]))].sort();
+  if (altKategoriler.length > 1 || (altKategoriler.length === 1 && altKategoriler[0] !== '')) {
+    altKategoriWrapper.classList.remove('d-none');
+    altKategoriSelect.innerHTML = '<option value="">Seçiniz</option>';
+    altKategoriler.forEach(a => {
+      const opt = document.createElement('option');
+      opt.value = a;
+      opt.textContent = a;
+      altKategoriSelect.appendChild(opt);
+    });
+  } else {
+    altKategoriWrapper.classList.add('d-none');
+    altKategoriSelect.innerHTML = '';
+  }
+}
+
+function populateMarkaSelect(selectedTransfer, selectedKategori, selectedAltKategori) {
+  const filtered = data.filter(row => {
+    return row[0] === selectedTransfer
+      && row[1] === selectedKategori
+      && (selectedAltKategori === '' || row[2] === selectedAltKategori);
+  });
+  const markalar = [...new Set(filtered.map(row => row[3]))].sort();
+  markaSelect.innerHTML = '<option value="">Seçiniz</option>';
+  markalar.forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = m;
+    markaSelect.appendChild(opt);
   });
 }
 
 transferSelect.addEventListener('change', () => {
-  const selectedTransfer = transferSelect.value;
-  const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
-  populateSelect(kategoriSelect, [...new Set(categories)]);
-  markaSelect.innerHTML = "";
-  altKategoriSelect.innerHTML = "";
-  altKategoriWrapper.classList.add("d-none");
+  const val = transferSelect.value;
+  if (val) {
+    populateKategoriSelect(val);
+  } else {
+    kategoriSelect.innerHTML = '';
+    altKategoriSelect.innerHTML = '';
+    markaSelect.innerHTML = '';
+    altKategoriWrapper.classList.add('d-none');
+  }
 });
 
 kategoriSelect.addEventListener('change', () => {
-  const selectedTransfer = transferSelect.value;
-  const selectedKategori = kategoriSelect.value;
-
-  if (!selectedKategori) {
-    altKategoriWrapper.classList.add("d-none");
-    altKategoriSelect.innerHTML = "";
-    markaSelect.innerHTML = "";
-    return;
-  }
-
-  // Alt kategori varsa veride varsa göster
-  const altKats = data
-    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
-    .map(row => row[2])
-    .filter(alt => alt && alt !== '-');
-
-  if (altKats.length > 0) {
-    populateSelect(altKategoriSelect, [...new Set(altKats)]);
-    altKategoriWrapper.classList.remove("d-none");
+  const transferVal = transferSelect.value;
+  const kategoriVal = kategoriSelect.value;
+  if (transferVal && kategoriVal) {
+    populateAltKategoriSelect(transferVal, kategoriVal);
+    markaSelect.innerHTML = '';
   } else {
-    altKategoriWrapper.classList.add("d-none");
-    altKategoriSelect.innerHTML = "";
+    altKategoriSelect.innerHTML = '';
+    markaSelect.innerHTML = '';
+    altKategoriWrapper.classList.add('d-none');
   }
-
-  // Marka listesi
-  let filtered = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
-  if (altKategoriSelect.value) {
-    filtered = filtered.filter(row => row[2] === altKategoriSelect.value);
-  }
-  const markas = filtered.map(row => row[3]);
-  populateSelect(markaSelect, [...new Set(markas)]);
 });
 
 altKategoriSelect.addEventListener('change', () => {
-  const selectedTransfer = transferSelect.value;
-  const selectedKategori = kategoriSelect.value;
-  const selectedAltKategori = altKategoriSelect.value;
-
-  let filtered = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
-  if (selectedAltKategori) {
-    filtered = filtered.filter(row => row[2] === selectedAltKategori);
+  const transferVal = transferSelect.value;
+  const kategoriVal = kategoriSelect.value;
+  const altKategoriVal = altKategoriSelect.value;
+  if (transferVal && kategoriVal) {
+    populateMarkaSelect(transferVal, kategoriVal, altKategoriVal);
+  } else {
+    markaSelect.innerHTML = '';
   }
-  const markas = filtered.map(row => row[3]);
-  populateSelect(markaSelect, [...new Set(markas)]);
 });
 
 document.getElementById('filterForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  filterModal.hide();
+  const transferVal = transferSelect.value;
+  const kategoriVal = kategoriSelect.value;
+  const altKategoriVal = altKategoriSelect.value;
+  const markaVal = markaSelect.value;
 
-  const transfer = transferSelect.value;
-  const kategori = kategoriSelect.value;
-  const altKategori = altKategoriSelect.value;
-  const marka = markaSelect.value;
-
-  if (!transfer || !kategori || !marka) {
-    alert('Lütfen tüm zorunlu alanları seçiniz.');
+  if (!transferVal || !kategoriVal || !markaVal) {
+    alert('Lütfen tüm zorunlu alanları doldurun.');
     return;
   }
 
-  const filteredData = data.filter(row => {
-    return row[0] === transfer &&
-           row[1] === kategori &&
-           (altKategoriWrapper.classList.contains('d-none') || row[2] === altKategori) &&
-           row[3] === marka;
-  });
+  // Kaydet localStorage
+  localStorage.setItem('transfer', transferVal);
+  localStorage.setItem('kategori', kategoriVal);
+  localStorage.setItem('altKategori', altKategoriVal);
+  localStorage.setItem('marka', markaVal);
 
-  localStorage.setItem('lastFilter', JSON.stringify({ transfer, kategori, altKategori, marka }));
-
-  filterInfoDiv.textContent = `Son filtre: ${transfer} / ${kategori}` +
-    (altKategoriWrapper.classList.contains('d-none') ? '' : ` / ${altKategori}`) +
-    ` / ${marka}`;
-
-  renderCards(filteredData);
+  filterModal.hide();
+  displayFilterInfo();
+  showCards();
 });
 
-function renderCards(filteredData) {
-  cardContainer.innerHTML = '';
+function displayFilterInfo() {
+  const transferVal = localStorage.getItem('transfer');
+  const kategoriVal = localStorage.getItem('kategori');
+  const altKategoriVal = localStorage.getItem('altKategori');
+  const markaVal = localStorage.getItem('marka');
 
-  if (filteredData.length === 0) {
-    cardContainer.innerHTML = '<p class="text-center text-muted">Filtreye uygun veri bulunamadı.</p>';
+  if (transferVal && kategoriVal && markaVal) {
+    filterInfoDiv.textContent = `${transferVal} > ${kategoriVal}${altKategoriVal ? ' > ' + altKategoriVal : ''} > ${markaVal}`;
+  } else {
+    filterInfoDiv.textContent = 'Filtre Seçiniz';
+  }
+}
+
+function showCards() {
+  cardContainer.innerHTML = '';
+  const transferVal = localStorage.getItem('transfer');
+  const kategoriVal = localStorage.getItem('kategori');
+  const altKategoriVal = localStorage.getItem('altKategori');
+  const markaVal = localStorage.getItem('marka');
+
+  if (!transferVal || !kategoriVal || !markaVal) {
     return;
   }
 
-  filteredData.forEach(row => {
-    const [transfer, kategori, altKategori, marka, fiyat, link, tarih] = row;
+  const filtered = data.filter(row => {
+    return row[0] === transferVal
+      && row[1] === kategoriVal
+      && (altKategoriVal === '' || row[2] === altKategoriVal)
+      && row[3] === markaVal;
+  });
 
-    // Tarih alanı "dd/mm/yyyy" formatında olabilir
-    const now = new Date();
-    let deadline = null;
-    if (tarih) {
-      const parts = tarih.split('/');
-      if(parts.length === 3){
-        deadline = new Date(+parts[2], parts[1] - 1, +parts[0]);
-      }
-    }
-
-    let remainingDays = null;
-    if (deadline) {
-      const diffMs = deadline.getTime() - now.getTime();
-      remainingDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-    }
-
+  filtered.forEach(row => {
     const card = document.createElement('div');
-    card.className = 'col-custom';
-
-    const cardContent = document.createElement('div');
-    cardContent.className = 'card-alt';
-    if (remainingDays !== null && remainingDays <= 0) {
-      cardContent.classList.add('completed');
-    }
-
-    const title = document.createElement('h5');
-    title.className = 'card-title';
-    title.textContent = `${transfer} - ${kategori} ${altKategori ? ('/ ' + altKategori) : ''}`;
-
-    cardContent.appendChild(title);
-
-    // Bilgiler
-    const infoItems = [
-      { icon: 'fa-tag', label: 'Marka:', value: marka },
-      { icon: 'fa-money-bill-wave', label: 'Fiyat:', value: fiyat ? fiyat + ' ₺' : '-' },
-      { icon: 'fa-calendar-days', label: 'Tarih:', value: tarih || '-' }
-    ];
-
-    infoItems.forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'info-item';
-      div.innerHTML = `<i class="fas ${item.icon}"></i> <strong>${item.label}</strong> ${item.value}`;
-      cardContent.appendChild(div);
-    });
-
-    // Link butonu
-    if(link){
-      const linkBtn = document.createElement('a');
-      linkBtn.className = 'online-btn';
-      linkBtn.href = link;
-      linkBtn.target = '_blank';
-      linkBtn.textContent = 'Detaya Git';
-      cardContent.appendChild(linkBtn);
-    }
-
-    // Gün sayısı (deadline)
-    if (remainingDays !== null) {
-      const badge = document.createElement('div');
-      badge.className = 'countdown-badge';
-      badge.textContent = remainingDays > 0 ? `${remainingDays} gün kaldı` : 'Süre doldu';
-      cardContent.appendChild(badge);
-    }
-
-    card.appendChild(cardContent);
+    card.classList.add('col-custom');
+    const completed = row[9] === '1';
+    card.innerHTML = `
+      <div class="card-alt ${completed ? 'completed' : ''}">
+        <h4 class="card-title">${row[4]}</h4>
+        <div class="info-item"><i class="fa fa-money-bill"></i> ${row[5]}</div>
+        <div class="info-item"><i class="fa fa-calendar-days"></i> ${row[7]}</div>
+        <div class="info-item"><i class="fa fa-store"></i> ${row[6]}</div>
+        <a href="${row[8]}" target="_blank" class="online-btn">Online</a>
+        ${completed ? `<div class="countdown-badge">Tamamlandı</div>` : ''}
+      </div>
+    `;
     cardContainer.appendChild(card);
   });
 }
 
-// Sayfa yüklendiğinde son filtre varsa otomatik yükle
-window.addEventListener('load', () => {
-  loadData().then(() => {
-    const lastFilter = JSON.parse(localStorage.getItem('lastFilter'));
-    if (lastFilter) {
-      transferSelect.value = lastFilter.transfer || '';
-      transferSelect.dispatchEvent(new Event('change'));
-      setTimeout(() => {
-        kategoriSelect.value = lastFilter.kategori || '';
-        kategoriSelect.dispatchEvent(new Event('change'));
-        setTimeout(() => {
-          altKategoriSelect.value = lastFilter.altKategori || '';
-          altKategoriSelect.dispatchEvent(new Event('change'));
-          setTimeout(() => {
-            markaSelect.value = lastFilter.marka || '';
-            markaSelect.dispatchEvent(new Event('change'));
-            document.getElementById('filterForm').dispatchEvent(new Event('submit'));
-          }, 200);
-        }, 200);
-      }, 200);
-    } else {
-      filterModal.show();
-    }
-  });
+// Scroll butonları
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
+scrollBottomBtn.addEventListener('click', () => {
+  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+});
+
+// Geçmişi Temizle butonu: Modal onay ile
 clearStorageBtn.addEventListener('click', () => {
-  clearConfirmModal.show();
+  confirmClearModal.show();
 });
 
 confirmClearBtn.addEventListener('click', () => {
@@ -511,12 +486,15 @@ confirmClearBtn.addEventListener('click', () => {
   location.reload();
 });
 
-document.getElementById('scrollTopBtn').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-document.getElementById('scrollBottomBtn').addEventListener('click', () => {
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+// Sayfa açılırken
+window.addEventListener('load', () => {
+  // Eğer localStorage’da kayıtlı filtre varsa göster
+  if (localStorage.getItem('transfer') && localStorage.getItem('kategori') && localStorage.getItem('marka')) {
+    displayFilterInfo();
+    showCards();
+  } else {
+    filterModal.show();
+  }
 });
 </script>
 </body>
