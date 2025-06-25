@@ -143,14 +143,14 @@
       }
     }
 
-    /* === Sağdaki yukarı ve aşağı oklar için stil === */
+    /* === Sağ alt köşedeki yukarı ve aşağı oklar için stil === */
     .scroll-arrow {
       position: fixed;
       right: 10px;
-      width: 40px;
-      height: 40px;
       background: rgba(0,0,0,0.1);
       border-radius: 50%;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -160,6 +160,7 @@
       opacity: 0.3;
       z-index: 9999;
       user-select: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     .scroll-arrow:hover {
       background: rgba(0,0,0,0.3);
@@ -167,14 +168,12 @@
       opacity: 1;
     }
 
-    #scrollTopBtn {
-      top: 50%;
-      transform: translateY(-70px);
+    #scrollBottomBtn {
+      bottom: 10px;
     }
 
-    #scrollBottomBtn {
-      top: 50%;
-      transform: translateY(30px);
+    #scrollTopBtn {
+      bottom: 60px; /* scrollBottomBtn’un üstünde, arada 10px boşluk */
     }
 
     .scroll-arrow i {
@@ -221,7 +220,7 @@
   </div>
 </div>
 
-<!-- Sayfanın sağında yukarı ve aşağı oklar -->
+<!-- Sayfanın sağ alt köşesinde yukarı ve aşağı oklar -->
 <div id="scrollTopBtn" class="scroll-arrow" title="Sayfanın üstüne git">
   <i class="fas fa-chevron-up"></i>
 </div>
