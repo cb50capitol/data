@@ -272,31 +272,37 @@ altKategoriSelect.addEventListener('change', () => {
 
 document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
+
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
   const selectedAltKategori = altKategoriSelect.value;
   const selectedMarka = markaSelect.value;
 
-  let filteredData = data.filter(row => 
-    row[0] === selectedTransfer &&
-    row[1] === selectedKategori &&
-    row[3] === selectedMarka &&
-    (
-      selectedKategori === "Shoes & Bags"
-        ? row[2] === selectedAltKategori
-        : true // Diğer kategorilerde alt kategori kontrolü yapma
-    )
-  );
+  let filteredData;
 
   if (selectedKategori === "Shoes & Bags") {
+    // Tüm alanlar filtreleniyor
+    filteredData = data.filter(row =>
+      row[0] === selectedTransfer &&
+      row[1] === selectedKategori &&
+      row[2] === selectedAltKategori &&
+      row[3] === selectedMarka
+    );
     filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedAltKategori} > ${selectedMarka}`;
   } else {
+    // Alt kategori ne olursa olsun görmezden geliyoruz!
+    filteredData = data.filter(row =>
+      row[0] === selectedTransfer &&
+      row[1] === selectedKategori &&
+      row[3] === selectedMarka
+    );
     filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
   }
 
   renderCards(filteredData);
   filterModal.hide();
 });
+
 
 
 function renderCards(rows) {
