@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html>More actions
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title># Liste</title>
   <title>Transfer Listesi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
@@ -12,11 +13,7 @@
       padding: 1rem;
       font-family: "Segoe UI", sans-serif;
     }
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
+    h1 { font-size: 1.8rem; }
     #filterInfo {
       display: inline-block;
       background-color: #e9ecef;
@@ -28,11 +25,7 @@
       margin-bottom: 1rem;
       transition: background-color 0.2s ease;
     }
-
-    #filterInfo:hover {
-      background-color: #dbe2ea;
-    }
-
+    #filterInfo:hover { background-color: #dbe2ea; }
     .card-alt {
       background: #ffffff;
       border-radius: 12px;
@@ -46,17 +39,12 @@
       justify-content: space-between;
       position: relative;
     }
-
-    .card-alt:hover {
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    }
-
+    .card-alt:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
     .card-alt.completed {
       border-color: #198754;
       background-color: #d1e7dd;
       position: relative;
     }
-
     .countdown-badge {
       position: absolute;
       top: 10px;
@@ -72,14 +60,7 @@
       z-index: 10;
       transition: opacity 0.3s ease;
     }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 17px;
-      margin-bottom: 1rem;
-      color: #0d6efd;
-    }
-
+    .card-title { font-weight: 600; font-size: 17px; margin-bottom: 1rem; color: #0d6efd; }
     .info-item {
       display: flex;
       align-items: center;
@@ -88,36 +69,28 @@
       color: #333;
       flex-wrap: wrap;
     }
-
     .info-item i {
       width: 20px;
       text-align: center;
       color: #0d6efd;
       margin-right: 8px;
     }
-
     .checkbox-group {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-left: 10px;
     }
-
     input[type="checkbox"] {
       transform: scale(1.2);
       cursor: pointer;
     }
-
-    .col-custom {
-      padding: 0.5rem;
-    }
-
+    .col-custom { padding: 0.5rem; }
     .card-container {
       display: flex;
       flex-wrap: wrap;
       margin: -0.5rem;
     }
-
     .online-btn {
       background-color: #28a745;
       color: white;
@@ -134,25 +107,17 @@
       display: inline-block;
       text-align: center;
     }
-
     .online-btn:hover {
       background-color: #218838;
       color: white;
       text-decoration: none;
     }
-
     @media (min-width: 576px) {
-      .col-custom {
-        width: 50%;
-      }
+      .col-custom { width: 50%; }
     }
-
     @media (max-width: 575.98px) {
-      .col-custom {
-        width: 100%;
-      }
+      .col-custom { width: 100%; }
     }
-
     .scroll-arrow {
       position: fixed;
       right: 10px;
@@ -171,28 +136,17 @@
       user-select: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-
     .scroll-arrow:hover {
       background: rgba(0,0,0,0.3);
       color: #0d6efd;
       opacity: 1;
     }
-
-    #scrollBottomBtn {
-      bottom: 10px;
-    }
-
-    #scrollTopBtn {
-      bottom: 60px;
-    }
-
-    .scroll-arrow i {
-      font-size: 20px;
-    }
+    #scrollBottomBtn { bottom: 10px; }
+    #scrollTopBtn { bottom: 60px; }
+    .scroll-arrow i { font-size: 20px; }
   </style>
 </head>
 <body>
-
 <div class="container mt-4">
   <h1>Transfer Listesi</h1>
   <div id="filterInfo"></div>
@@ -215,6 +169,10 @@
           <div class="mb-3">
             <label for="kategori" class="form-label">Kategori</label>
             <select id="kategori" class="form-select" required></select>
+          </div>
+          <div class="mb-3" id="altKategoriWrapper" style="display:none;">
+            <label for="altKategori" class="form-label">Alt Kategori</label>
+            <select id="altKategori" class="form-select"></select>
           </div>
           <div class="mb-3">
             <label for="marka" class="form-label">Marka</label>
@@ -243,6 +201,8 @@ let data = [];
 
 const transferSelect = document.getElementById('transfer');
 const kategoriSelect = document.getElementById('kategori');
+const altKategoriWrapper = document.getElementById('altKategoriWrapper');
+const altKategoriSelect = document.getElementById('altKategori');
 const markaSelect = document.getElementById('marka');
 const cardContainer = document.getElementById('cardContainer');
 const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
@@ -287,12 +247,41 @@ transferSelect.addEventListener('change', () => {
   const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
   populateSelect(kategoriSelect, [...new Set(categories)]);
   markaSelect.innerHTML = "";
+  altKategoriSelect.innerHTML = "";
+  altKategoriWrapper.style.display = "none";
 });
 
 kategoriSelect.addEventListener('change', () => {
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
-  const brands = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori).map(row => row[3]);
+
+  if (selectedKategori === "Shoes & Bags") {
+    const altKategoriler = data
+      .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
+      .map(row => row[2]);
+    populateSelect(altKategoriSelect, [...new Set(altKategoriler)]);
+    altKategoriWrapper.style.display = "block";
+    markaSelect.innerHTML = "";
+  } else {
+    altKategoriWrapper.style.display = "none";
+    altKategoriSelect.innerHTML = "";
+
+    const brands = data
+      .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
+      .map(row => row[3]);
+    populateSelect(markaSelect, [...new Set(brands)]);
+  }
+});
+
+altKategoriSelect.addEventListener('change', () => {
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const selectedAltKategori = altKategoriSelect.value;
+
+  const brands = data
+    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori && row[2] === selectedAltKategori)
+    .map(row => row[3]);
+
   populateSelect(markaSelect, [...new Set(brands)]);
 });
 
@@ -300,13 +289,21 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
+  const selectedAltKategori = altKategoriSelect.value;
   const selectedMarka = markaSelect.value;
-  filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
+
+  filterInfoDiv.textContent =
+    `${selectedTransfer} > ${selectedKategori}` +
+    (selectedKategori === "Shoes & Bags" ? ` > ${selectedAltKategori}` : '') +
+    ` > ${selectedMarka}`;
+
   const filteredData = data.filter(row =>
     row[0] === selectedTransfer &&
     row[1] === selectedKategori &&
+    (selectedKategori !== "Shoes & Bags" || row[2] === selectedAltKategori) &&
     row[3] === selectedMarka
   );
+
   renderCards(filteredData);
   filterModal.hide();
 });
@@ -329,6 +326,16 @@ function renderCards(rows) {
 
     const sasCount = parseInt(row[9]) || 0;
     const ean = row[7];
+
+    // Malzeme kodunu alıyoruz
+    let malzemeKisa = row[6];
+    if (malzemeKisa.length > 3) {
+      malzemeKisa = malzemeKisa.slice(0, -3);
+    }
+
+    // Burada ürün resmi url'sini oluşturuyoruz
+    const imageUrl = `https://statics-mp.boyner.com.tr/mnresize/300/-/Boynerimages/${malzemeKisa}_276_01.jpg?v=1747831704`;
+
     let checkboxHTML = "";
 
     for (let i = 0; i < sasCount; i++) {
@@ -345,6 +352,7 @@ function renderCards(rows) {
 
     card.innerHTML = `
       <div>
+        <img src="${imageUrl}" alt="Ürün Resmi" style="max-width: 100%; border-radius: 8px; margin-bottom: 10px;" />
         <div class="card-title">${row[4]}</div>
         <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
         <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
@@ -389,7 +397,7 @@ function renderCards(rows) {
           parentCard.appendChild(badge);
         }
 
-        let countdown = 3;
+        let countdown = 1;
         badge.textContent = `${countdown}`;
 
         if (countdownTimers.has(parentCard)) {
@@ -409,7 +417,6 @@ function renderCards(rows) {
         }, 1000);
 
         countdownTimers.set(parentCard, intervalId);
-
       } else {
         parentCard.classList.remove("completed");
         const badge = parentCard.querySelector(".countdown-badge");
@@ -442,9 +449,14 @@ function renderCards(rows) {
 }
 
 clearStorageBtn.addEventListener('click', () => {
+  if (confirm('Emin misiniz?')) {
+    localStorage.clear();
+    location.reload();
+  }
   localStorage.clear();
   location.reload();
 });
+
 
 document.getElementById('scrollBottomBtn').addEventListener('click', () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
