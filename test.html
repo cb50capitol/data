@@ -8,16 +8,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
     body {
-  body {
       background-color: #f0f2f5;
       padding: 1rem;
       font-family: "Segoe UI", sans-serif;
     }
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
+    h1 { font-size: 1.8rem; }
     #filterInfo {
       display: inline-block;
       background-color: #e9ecef;
@@ -29,11 +24,7 @@
       margin-bottom: 1rem;
       transition: background-color 0.2s ease;
     }
-
-    #filterInfo:hover {
-      background-color: #dbe2ea;
-    }
-
+    #filterInfo:hover { background-color: #dbe2ea; }
     .card-alt {
       background: #ffffff;
       border-radius: 12px;
@@ -47,17 +38,12 @@
       justify-content: space-between;
       position: relative;
     }
-
-    .card-alt:hover {
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    }
-
+    .card-alt:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
     .card-alt.completed {
       border-color: #198754;
       background-color: #d1e7dd;
       position: relative;
     }
-
     .countdown-badge {
       position: absolute;
       top: 10px;
@@ -73,14 +59,7 @@
       z-index: 10;
       transition: opacity 0.3s ease;
     }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 17px;
-      margin-bottom: 1rem;
-      color: #0d6efd;
-    }
-
+    .card-title { font-weight: 600; font-size: 17px; margin-bottom: 1rem; color: #0d6efd; }
     .info-item {
       display: flex;
       align-items: center;
@@ -89,36 +68,28 @@
       color: #333;
       flex-wrap: wrap;
     }
-
     .info-item i {
       width: 20px;
       text-align: center;
       color: #0d6efd;
       margin-right: 8px;
     }
-
     .checkbox-group {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-left: 10px;
     }
-
     input[type="checkbox"] {
       transform: scale(1.2);
       cursor: pointer;
     }
-
-    .col-custom {
-      padding: 0.5rem;
-    }
-
+    .col-custom { padding: 0.5rem; }
     .card-container {
       display: flex;
       flex-wrap: wrap;
       margin: -0.5rem;
     }
-
     .online-btn {
       background-color: #28a745;
       color: white;
@@ -135,25 +106,17 @@
       display: inline-block;
       text-align: center;
     }
-
     .online-btn:hover {
       background-color: #218838;
       color: white;
       text-decoration: none;
     }
-
     @media (min-width: 576px) {
-      .col-custom {
-        width: 50%;
-      }
+      .col-custom { width: 50%; }
     }
-
     @media (max-width: 575.98px) {
-      .col-custom {
-        width: 100%;
-      }
+      .col-custom { width: 100%; }
     }
-
     .scroll-arrow {
       position: fixed;
       right: 10px;
@@ -172,29 +135,17 @@
       user-select: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-
     .scroll-arrow:hover {
       background: rgba(0,0,0,0.3);
       color: #0d6efd;
       opacity: 1;
     }
-
-    #scrollBottomBtn {
-      bottom: 10px;
-    }
-
-    #scrollTopBtn {
-      bottom: 60px;
-    }
-
-    .scroll-arrow i {
-      font-size: 20px;
-    }
-    } 
+    #scrollBottomBtn { bottom: 10px; }
+    #scrollTopBtn { bottom: 60px; }
+    .scroll-arrow i { font-size: 20px; }
   </style>
 </head>
 <body>
-
 <div class="container mt-4">
   <h1>Transfer Listesi</h1>
   <div id="filterInfo"></div>
@@ -218,7 +169,7 @@
             <label for="kategori" class="form-label">Kategori</label>
             <select id="kategori" class="form-select" required></select>
           </div>
-          <div class="mb-3 d-none" id="altKategoriWrapper">
+          <div class="mb-3" id="altKategoriWrapper" style="display:none;">
             <label for="altKategori" class="form-label">Alt Kategori</label>
             <select id="altKategori" class="form-select"></select>
           </div>
@@ -249,13 +200,13 @@ let data = [];
 
 const transferSelect = document.getElementById('transfer');
 const kategoriSelect = document.getElementById('kategori');
+const altKategoriWrapper = document.getElementById('altKategoriWrapper');
 const altKategoriSelect = document.getElementById('altKategori');
 const markaSelect = document.getElementById('marka');
 const cardContainer = document.getElementById('cardContainer');
 const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
 const filterInfoDiv = document.getElementById('filterInfo');
 const clearStorageBtn = document.getElementById('clearStorageBtn');
-const altKategoriWrapper = document.getElementById('altKategoriWrapper');
 
 filterInfoDiv.addEventListener('click', () => {
   filterModal.show();
@@ -296,29 +247,40 @@ transferSelect.addEventListener('change', () => {
   populateSelect(kategoriSelect, [...new Set(categories)]);
   markaSelect.innerHTML = "";
   altKategoriSelect.innerHTML = "";
-  altKategoriWrapper.classList.add("d-none");
+  altKategoriWrapper.style.display = "none";
 });
 
 kategoriSelect.addEventListener('change', () => {
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
-  const brands = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori).map(row => row[3]);
 
-  // Alt Kategori kontrolü
   if (selectedKategori === "Shoes & Bags") {
-    altKategoriWrapper.classList.remove("d-none");
     const altKategoriler = data
       .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
       .map(row => row[2]);
     populateSelect(altKategoriSelect, [...new Set(altKategoriler)]);
+    altKategoriWrapper.style.display = "block";
+    markaSelect.innerHTML = "";
   } else {
-    altKategoriWrapper.classList.add("d-none");
+    altKategoriWrapper.style.display = "none";
     altKategoriSelect.innerHTML = "";
+
+    const brands = data
+      .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
+      .map(row => row[3]);
+    populateSelect(markaSelect, [...new Set(brands)]);
   }
+});
+
+altKategoriSelect.addEventListener('change', () => {
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const selectedAltKategori = altKategoriSelect.value;
 
   const brands = data
-    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori)
+    .filter(row => row[0] === selectedTransfer && row[1] === selectedKategori && row[2] === selectedAltKategori)
     .map(row => row[3]);
+
   populateSelect(markaSelect, [...new Set(brands)]);
 });
 
@@ -328,25 +290,18 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   const selectedKategori = kategoriSelect.value;
   const selectedAltKategori = altKategoriSelect.value;
   const selectedMarka = markaSelect.value;
-  filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
-  const filteredData = data.filter(row =>
 
-  let filteredData = data.filter(row =>
+  filterInfoDiv.textContent =
+    `${selectedTransfer} > ${selectedKategori}` +
+    (selectedKategori === "Shoes & Bags" ? ` > ${selectedAltKategori}` : '') +
+    ` > ${selectedMarka}`;
+
+  const filteredData = data.filter(row =>
     row[0] === selectedTransfer &&
     row[1] === selectedKategori &&
+    (selectedKategori !== "Shoes & Bags" || row[2] === selectedAltKategori) &&
     row[3] === selectedMarka
   );
-
-  if (selectedKategori === "Shoes & Bags") {
-    filteredData = filteredData.filter(row => row[2] === selectedAltKategori);
-  }
-
-  let displayText = `${selectedTransfer} > ${selectedKategori}`;
-  if (selectedKategori === "Shoes & Bags") {
-    displayText += ` > ${selectedAltKategori}`;
-  }
-  displayText += ` > ${selectedMarka}`;
-  filterInfoDiv.textContent = displayText;
 
   renderCards(filteredData);
   filterModal.hide();
@@ -354,7 +309,6 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
 
 function renderCards(rows) {
   cardContainer.innerHTML = "";
-cardContainer.innerHTML = "";
   if (rows.length === 0) {
     cardContainer.innerHTML = `<div class="alert alert-warning w-100">Hiçbir sonuç bulunamadı.</div>`;
     return;
@@ -431,7 +385,7 @@ cardContainer.innerHTML = "";
           parentCard.appendChild(badge);
         }
 
-        let countdown = 3;
+        let countdown = 1;
         badge.textContent = `${countdown}`;
 
         if (countdownTimers.has(parentCard)) {
@@ -451,7 +405,6 @@ cardContainer.innerHTML = "";
         }, 1000);
 
         countdownTimers.set(parentCard, intervalId);
-
       } else {
         parentCard.classList.remove("completed");
         const badge = parentCard.querySelector(".countdown-badge");
@@ -482,13 +435,27 @@ cardContainer.innerHTML = "";
     }
   });
 }
-}  
 
+const confirmClearModal = new bootstrap.Modal(document.getElementById('confirmClearModal'));
+const confirmClearBtn = document.getElementById('confirmClearBtn');
 
 clearStorageBtn.addEventListener('click', () => {
+  // "Geçmişi Temizle" butonuna basınca onay modalını göster
+  confirmClearModal.show();
+  if (confirm('Emin misiniz?')) {
+    localStorage.clear();
+    location.reload();
+  }
+});
+
+
+confirmClearBtn.addEventListener('click', () => {
+  // Onay verildiğinde localStorage temizle ve sayfayı yenile
   localStorage.clear();
+  confirmClearModal.hide();
   location.reload();
 });
+
 
 document.getElementById('scrollBottomBtn').addEventListener('click', () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
@@ -499,5 +466,25 @@ document.getElementById('scrollTopBtn').addEventListener('click', () => {
 
 loadData();
 </script>
+
+  <!-- Onay Modalı -->
+<div class="modal fade" id="confirmClearModal" tabindex="-1" aria-labelledby="confirmClearModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmClearModalLabel">Onay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        Geçmişi temizlemek istediğinize emin misiniz?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+        <button type="button" class="btn btn-danger" id="confirmClearBtn">Evet, Temizle</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
