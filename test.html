@@ -149,7 +149,7 @@
 <body>
 
 <div class="container mt-4">
-  <h1>Transfer Listesi</h1>
+  <h1># Liste</h1>
   <div id="filterInfo">Filtre Seç</div>
   <div class="card-container" id="cardContainer"></div>
 </div>
@@ -392,8 +392,10 @@ function renderCards(rows) {
 }
 
 clearStorageBtn.addEventListener('click', () => {
-  localStorage.clear();
-  location.reload();
+  if (confirm('Emin misiniz?')) {
+    localStorage.clear();
+    location.reload();
+  }
 });
 document.getElementById('scrollBottomBtn').addEventListener('click', () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
