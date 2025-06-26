@@ -7,14 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
-    body {
-      background-color: #f0f2f5;
-      padding: 1rem;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
-    h1 {
-      font-size: 1.8rem;
-    }
+    body { background-color: #f0f2f5; padding: 1rem; font-family: "Segoe UI", sans-serif; }
+    h1 { font-size: 1.8rem; }
     #filterInfo {
       display: inline-block;
       background-color: #e9ecef;
@@ -25,11 +19,8 @@
       font-weight: 500;
       margin-bottom: 1rem;
       transition: background-color 0.2s ease;
-      user-select: none;
     }
-    #filterInfo:hover {
-      background-color: #dbe2ea;
-    }
+    #filterInfo:hover { background-color: #dbe2ea; }
     .card-alt {
       background: #ffffff;
       border-radius: 12px;
@@ -43,9 +34,7 @@
       justify-content: space-between;
       position: relative;
     }
-    .card-alt:hover {
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    }
+    .card-alt:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
     .card-alt.completed {
       border-color: #198754;
       background-color: #d1e7dd;
@@ -85,7 +74,6 @@
       text-align: center;
       color: #0d6efd;
       margin-right: 8px;
-      flex-shrink: 0;
     }
     .checkbox-group {
       display: flex;
@@ -97,16 +85,7 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .col-custom {
-      padding: 0.5rem;
-      box-sizing: border-box;
-      width: 100%;
-    }
-    @media (min-width: 576px) {
-      .col-custom {
-        width: 50%;
-      }
-    }
+    .col-custom { padding: 0.5rem; }
     .card-container {
       display: flex;
       flex-wrap: wrap;
@@ -133,6 +112,12 @@
       color: white;
       text-decoration: none;
     }
+    @media (min-width: 576px) {
+      .col-custom { width: 50%; }
+    }
+    @media (max-width: 575.98px) {
+      .col-custom { width: 100%; }
+    }
     .scroll-arrow {
       position: fixed;
       right: 10px;
@@ -156,22 +141,16 @@
       color: #0d6efd;
       opacity: 1;
     }
-    #scrollBottomBtn {
-      bottom: 10px;
-    }
-    #scrollTopBtn {
-      bottom: 60px;
-    }
-    .scroll-arrow i {
-      font-size: 20px;
-    }
+    #scrollBottomBtn { bottom: 10px; }
+    #scrollTopBtn { bottom: 60px; }
+    .scroll-arrow i { font-size: 20px; }
   </style>
 </head>
 <body>
 
 <div class="container mt-4">
   <h1># Liste</h1>
-  <div id="filterInfo" title="Filtreyi değiştirmek için tıklayın">Filtre Seç</div>
+  <div id="filterInfo">Filtre Seç</div>
   <div class="card-container" id="cardContainer"></div>
 </div>
 
@@ -194,7 +173,7 @@
           </div>
           <div class="mb-3" id="altKategoriGroup" style="display: none;">
             <label for="altKategori" class="form-label">Alt Kategori</label>
-            <select id="altKategori" class="form-select"></select>
+            <select id="altKategori" class="form-select" required></select>
           </div>
           <div class="mb-3">
             <label for="marka" class="form-label">Marka</label>
@@ -238,7 +217,7 @@ async function loadData() {
     if (!response.ok) throw new Error('test.txt dosyası okunamadı');
     const text = await response.text();
     const lines = text.split('\n').filter(l => l.trim().length > 0);
-    lines.shift(); // Başlık satırını atla
+    lines.shift();
     data = lines.map(parseTSVLine);
     populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
     filterModal.show();
@@ -247,184 +226,185 @@ async function loadData() {
   }
 }
 
-function populateSelect(selectElem, items, includeEmpty = false) {
-  selectElem.innerHTML = '';
-  if (includeEmpty) selectElem.innerHTML = `<option value="">Seçiniz</option>`;
+function populateSelect(selectElement, items) {
+  selectElement.innerHTML = '<option value="">Seçiniz</option>';
   items.forEach(item => {
-    selectElem.innerHTML += `<option value="${item}">${item}</option>`;
+    const opt = document.createElement('option');
+    opt.value = item;
+    opt.textContent = item;
+    selectElement.appendChild(opt);
   });
-}
-
-function uniqueSorted(arr) {
-  return [...new Set(arr)].sort();
 }
 
 transferSelect.addEventListener('change', () => {
-  const filtered = data.filter(row => row[0] === transferSelect.value);
-  populateSelect(kategoriSelect, uniqueSorted(filtered.map(r => r[1])));
-  altKategoriGroup.style.display = 'none';
-  altKategoriSelect.innerHTML = '';
-  markaSelect.innerHTML = '';
+  const selectedTransfer = transferSelect.value;
+  const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
+  populateSelect(kategoriSelect, [...new Set(categories)]);
+  altKategoriGroup.style.display = "none";
+  markaSelect.innerHTML = "";
 });
 
 kategoriSelect.addEventListener('change', () => {
-  const filtered = data.filter(row =>
-    row[0] === transferSelect.value &&
-    row[1] === kategoriSelect.value
-  );
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const rows = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
 
-  if (kategoriSelect.value === 'Shoes & Bags') {
-    altKategoriGroup.style.display = 'block';
-    populateSelect(altKategoriSelect, uniqueSorted(filtered.map(r => r[2])), true);
+  if (selectedKategori === "Shoes & Bags") {
+    altKategoriGroup.style.display = "block";
+    const altKategoriler = rows.map(row => row[2]);
+    populateSelect(altKategoriSelect, [...new Set(altKategoriler)]);
+    markaSelect.innerHTML = "";
   } else {
-    altKategoriGroup.style.display = 'none';
-    altKategoriSelect.innerHTML = '';
+    altKategoriGroup.style.display = "none";
+    const markalar = rows.map(row => row[3]);
+    populateSelect(markaSelect, [...new Set(markalar)]);
   }
-
-  let markaItems;
-  if (kategoriSelect.value === 'Shoes & Bags') {
-    markaItems = filtered.filter(r => r[2] === altKategoriSelect.value).map(r => r[3]);
-  } else {
-    markaItems = filtered.map(r => r[3]);
-  }
-  markaItems = uniqueSorted(markaItems);
-  populateSelect(markaSelect, markaItems, true);
 });
 
 altKategoriSelect.addEventListener('change', () => {
-  const filtered = data.filter(row =>
-    row[0] === transferSelect.value &&
-    row[1] === kategoriSelect.value &&
-    row[2] === altKategoriSelect.value
-  );
-  const markaItems = uniqueSorted(filtered.map(r => r[3]));
-  populateSelect(markaSelect, markaItems, true);
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const selectedAltKategori = altKategoriSelect.value;
+  const rows = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori && row[2] === selectedAltKategori);
+  const markalar = rows.map(row => row[3]);
+  populateSelect(markaSelect, [...new Set(markalar)]);
 });
 
-clearStorageBtn.addEventListener('click', () => {
-  localStorage.clear();
-  alert('Geçmiş temizlendi!');
-});
-
-document.getElementById('filterForm').addEventListener('submit', e => {
+document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
+  const selectedTransfer = transferSelect.value;
+  const selectedKategori = kategoriSelect.value;
+  const selectedAltKategori = altKategoriSelect.value;
+  const selectedMarka = markaSelect.value;
 
-  const transferVal = transferSelect.value;
-  const kategoriVal = kategoriSelect.value;
-  const altKategoriVal = altKategoriSelect.value;
-  const markaVal = markaSelect.value;
-
-  if (!transferVal || !kategoriVal || !markaVal) {
-    alert('Lütfen Transfer Listesi, Kategori ve Marka alanlarını seçiniz.');
-    return;
-  }
-  if (kategoriVal === 'Shoes & Bags' && !altKategoriVal) {
-    alert('Lütfen Alt Kategori seçiniz.');
-    return;
-  }
-
-  let filteredData;
-  if (kategoriVal === 'Shoes & Bags') {
-    filteredData = data.filter(row =>
-      row[0] === transferVal &&
-      row[1] === kategoriVal &&
-      row[2] === altKategoriVal &&
-      row[3] === markaVal
-    );
+  let filteredData = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
+  if (selectedKategori === "Shoes & Bags") {
+    filteredData = filteredData.filter(row => row[2] === selectedAltKategori && row[3] === selectedMarka);
+    filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedAltKategori} > ${selectedMarka}`;
   } else {
-    filteredData = data.filter(row =>
-      row[0] === transferVal &&
-      row[1] === kategoriVal &&
-      row[3] === markaVal
-    );
+    filteredData = filteredData.filter(row => row[3] === selectedMarka);
+    filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
   }
 
-  if (filteredData.length === 0) {
-    alert('Seçilen filtreye uygun ürün bulunamadı.');
-  }
-
-  displayCards(filteredData);
-  updateFilterInfo(transferVal, kategoriVal, altKategoriVal, markaVal);
+  renderCards(filteredData);
   filterModal.hide();
-  localStorage.setItem('filter', JSON.stringify({transferVal, kategoriVal, altKategoriVal, markaVal}));
 });
 
-function updateFilterInfo(transferVal, kategoriVal, altKategoriVal, markaVal) {
-  let text = `${transferVal} > ${kategoriVal}`;
-  if (kategoriVal === 'Shoes & Bags' && altKategoriVal) text += ` > ${altKategoriVal}`;
-  text += ` > ${markaVal}`;
-  filterInfoDiv.textContent = text;
-}
-
-function displayCards(filteredData) {
-  cardContainer.innerHTML = '';
-  if (filteredData.length === 0) {
-    cardContainer.innerHTML = '<p>Filtreye uygun ürün bulunamadı.</p>';
+function renderCards(rows) {
+  cardContainer.innerHTML = "";
+  if (rows.length === 0) {
+    cardContainer.innerHTML = `<div class="alert alert-warning w-100">Hiçbir sonuç bulunamadı.</div>`;
     return;
   }
 
-  filteredData.forEach(row => {
-    const [transferList, kategori, altKategori, marka, tanim, model, malzeme, ean, musteri, sas, stok, isEmri] = row;
+  const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+  const countdownTimers = new Map();
+
+  rows.forEach(row => {
+    const col = document.createElement('div');
+    col.className = "col-custom";
+
     const card = document.createElement('div');
-    card.className = 'col-custom';
+    card.className = "card-alt";
+
+    const sasCount = parseInt(row[9]) || 0;
+    const ean = row[7];
+    let checkboxHTML = "";
+
+    for (let i = 0; i < sasCount; i++) {
+      const checkboxId = `${ean}_sas_${i}`;
+      const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
+      checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
+    }
+
+    let malzemeKisa = row[6];
+    if (malzemeKisa.length > 3) {
+      malzemeKisa = malzemeKisa.slice(0, -3);
+    }
+    const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
+
     card.innerHTML = `
-      <div class="card-alt${isEmri.trim() ? ' completed' : ''}">
-        <div class="card-title">${marka}</div>
-        <div class="info-item"><i class="fas fa-list"></i> ${tanim}</div>
-        <div class="info-item"><i class="fas fa-box"></i> Model: ${model}</div>
-        <div class="info-item"><i class="fas fa-cubes"></i> Malzeme: ${malzeme}</div>
-        <div class="info-item"><i class="fas fa-barcode"></i> EAN/UPC: ${ean}</div>
-        <div class="info-item"><i class="fas fa-user"></i> Müşteri: ${musteri}</div>
-        <div class="info-item"><i class="fas fa-layer-group"></i> Stok: ${stok}</div>
-        <div><a href="#" class="online-btn">Online Sipariş</a></div>
+      <div>
+        <div class="card-title">${row[4]}</div>
+        <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
+        <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
+        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
+        <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
+        <div class="info-item"><i class="fas fa-warehouse me-1"></i> <strong class="me-2">SAS:</strong> ${row[9]}
+          <div class="checkbox-group ms-2">${checkboxHTML}</div>
+        </div>
+        <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
+        <div class="info-item"><i class="fas fa-file-alt"></i> <strong>İş Emri:</strong> ${row[11]}</div>
       </div>
+      <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
     `;
-    cardContainer.appendChild(card);
+
+    col.appendChild(card);
+    cardContainer.appendChild(col);
+  });
+
+  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
+      const id = checkbox.id;
+      savedCheckboxes[id] = checkbox.checked;
+      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
+
+      const parentCard = checkbox.closest(".card-alt");
+      const parentCol = checkbox.closest(".col-custom");
+      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
+      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
+
+      if (allChecked && allCheckboxes.length > 0) {
+        parentCard.classList.add("completed");
+        let badge = parentCard.querySelector(".countdown-badge");
+        if (!badge) {
+          badge = document.createElement("div");
+          badge.className = "countdown-badge";
+          parentCard.appendChild(badge);
+        }
+        let countdown = 1;
+        badge.textContent = `${countdown}`;
+        if (countdownTimers.has(parentCard)) clearInterval(countdownTimers.get(parentCard));
+        const intervalId = setInterval(() => {
+          countdown--;
+          if (countdown > 0) {
+            badge.textContent = `${countdown}`;
+          } else {
+            clearInterval(intervalId);
+            countdownTimers.delete(parentCard);
+            badge.remove();
+            cardContainer.appendChild(parentCol);
+          }
+        }, 1000);
+        countdownTimers.set(parentCard, intervalId);
+      } else {
+        parentCard.classList.remove("completed");
+        const badge = parentCard.querySelector(".countdown-badge");
+        if (badge) badge.remove();
+        if (countdownTimers.has(parentCard)) {
+          clearInterval(countdownTimers.get(parentCard));
+          countdownTimers.delete(parentCard);
+        }
+      }
+    });
   });
 }
 
-function loadFilterFromStorage() {
-  const saved = localStorage.getItem('filter');
-  if (!saved) return;
-
-  const { transferVal, kategoriVal, altKategoriVal, markaVal } = JSON.parse(saved);
-  transferSelect.value = transferVal;
-  transferSelect.dispatchEvent(new Event('change'));
-
-  setTimeout(() => {
-    kategoriSelect.value = kategoriVal;
-    kategoriSelect.dispatchEvent(new Event('change'));
-  }, 100);
-
-  setTimeout(() => {
-    if (kategoriVal === 'Shoes & Bags') {
-      altKategoriSelect.value = altKategoriVal;
-      altKategoriSelect.dispatchEvent(new Event('change'));
-    }
-  }, 200);
-
-  setTimeout(() => {
-    markaSelect.value = markaVal;
-    displayCards(data.filter(row => {
-      if (row[0] !== transferVal) return false;
-      if (row[1] !== kategoriVal) return false;
-      if (kategoriVal === 'Shoes & Bags' && row[2] !== altKategoriVal) return false;
-      if (row[3] !== markaVal) return false;
-      return true;
-    }));
-    updateFilterInfo(transferVal, kategoriVal, altKategoriVal, markaVal);
-  }, 300);
-}
-
-loadData().then(() => loadFilterFromStorage());
-
-document.getElementById('scrollTopBtn').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+clearStorageBtn.addEventListener('click', () => {
+  if (confirm('Emin misiniz?')) {
+    localStorage.clear();
+    location.reload();
+  }
 });
 document.getElementById('scrollBottomBtn').addEventListener('click', () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 });
-</script>
+document.getElementById('scrollTopBtn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
+loadData();
+</script>
 </body>
 </html>
