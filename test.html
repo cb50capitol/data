@@ -217,7 +217,7 @@ async function loadData() {
     if (!response.ok) throw new Error('test.txt dosyası okunamadı');
     const text = await response.text();
     const lines = text.split('\n').filter(l => l.trim().length > 0);
-    lines.shift();
+    lines.shift(); // Başlık satırını kaldır
     data = lines.map(parseTSVLine);
     populateSelect(transferSelect, [...new Set(data.map(row => row[0]))]);
     filterModal.show();
@@ -241,6 +241,7 @@ transferSelect.addEventListener('change', () => {
   const categories = data.filter(row => row[0] === selectedTransfer).map(row => row[1]);
   populateSelect(kategoriSelect, [...new Set(categories)]);
   altKategoriGroup.style.display = "none";
+  altKategoriSelect.required = false;   // gizliyken required kapat
   markaSelect.innerHTML = "";
 });
 
@@ -251,13 +252,17 @@ kategoriSelect.addEventListener('change', () => {
 
   if (selectedKategori === "Shoes & Bags") {
     altKategoriGroup.style.display = "block";
+    altKategoriSelect.required = true;  // gösterirken required aç
     const altKategoriler = rows.map(row => row[2]);
     populateSelect(altKategoriSelect, [...new Set(altKategoriler)]);
     markaSelect.innerHTML = "";
+    markaSelect.required = true;
   } else {
     altKategoriGroup.style.display = "none";
+    altKategoriSelect.required = false; // gizliyken required kapat
     const markalar = rows.map(row => row[3]);
     populateSelect(markaSelect, [...new Set(markalar)]);
+    markaSelect.required = true;
   }
 });
 
@@ -272,139 +277,100 @@ altKategoriSelect.addEventListener('change', () => {
 
 document.getElementById('filterForm').addEventListener('submit', function(e) {
   e.preventDefault();
+  // Konsola log eklendi, submitin çalıştığını görmek için
+  console.log('Form submit tetiklendi');
+
   const selectedTransfer = transferSelect.value;
   const selectedKategori = kategoriSelect.value;
   const selectedAltKategori = altKategoriSelect.value;
   const selectedMarka = markaSelect.value;
 
-  let filteredData = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
+  // Filtrelenmiş satırları bul
+  let filteredRows = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
+
   if (selectedKategori === "Shoes & Bags") {
-    filteredData = filteredData.filter(row => row[2] === selectedAltKategori && row[3] === selectedMarka);
-    filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedAltKategori} > ${selectedMarka}`;
+    filteredRows = filteredRows.filter(row => row[2] === selectedAltKategori && row[3] === selectedMarka);
   } else {
-    filteredData = filteredData.filter(row => row[3] === selectedMarka);
-    filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
+    filteredRows = filteredRows.filter(row => row[3] === selectedMarka);
   }
 
-  renderCards(filteredData);
+  renderCards(filteredRows);
+
   filterModal.hide();
+
+  // Filtre bilgisi göster
+  let infoText = `${selectedTransfer} > ${selectedKategori}`;
+  if (selectedKategori === "Shoes & Bags") {
+    infoText += ` > ${selectedAltKategori}`;
+  }
+  infoText += ` > ${selectedMarka}`;
+  filterInfoDiv.textContent = infoText;
+
+  // Filtre bilgisini localStorage'a kaydet
+  localStorage.setItem('filterInfo', infoText);
+});
+
+clearStorageBtn.addEventListener('click', () => {
+  localStorage.removeItem('filterInfo');
+  filterInfoDiv.textContent = 'Filtre Seç';
+  filterModal.show();
+  cardContainer.innerHTML = '';
 });
 
 function renderCards(rows) {
   cardContainer.innerHTML = "";
   if (rows.length === 0) {
-    cardContainer.innerHTML = `<div class="alert alert-warning w-100">Hiçbir sonuç bulunamadı.</div>`;
+    cardContainer.innerHTML = "<p>Filtreye uygun sonuç bulunamadı.</p>";
     return;
   }
 
-  const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-  const countdownTimers = new Map();
-
   rows.forEach(row => {
-    const col = document.createElement('div');
-    col.className = "col-custom";
-
+    // Örnek: row = [transfer, kategori, altKategori, marka, ilanNo, satıcı, fiyat, adres, baslangic, bitis, tamamlandi]
+    // Her satır için kart oluşturuyoruz
     const card = document.createElement('div');
-    card.className = "card-alt";
-
-    const sasCount = parseInt(row[9]) || 0;
-    const ean = row[7];
-    let checkboxHTML = "";
-
-    for (let i = 0; i < sasCount; i++) {
-      const checkboxId = `${ean}_sas_${i}`;
-      const isChecked = savedCheckboxes[checkboxId] ? "checked" : "";
-      checkboxHTML += `<input type="checkbox" class="form-check-input" id="${checkboxId}" ${isChecked} />`;
-    }
-
-    let malzemeKisa = row[6];
-    if (malzemeKisa.length > 3) {
-      malzemeKisa = malzemeKisa.slice(0, -3);
-    }
-    const onlineLink = `https://www.boyner.com.tr/search?q=${encodeURIComponent(malzemeKisa)}`;
-
+    card.classList.add('col-custom');
     card.innerHTML = `
-      <div>
-        <div class="card-title">${row[4]}</div>
-        <div class="info-item"><i class="fas fa-barcode"></i> <strong>Model:</strong> ${row[5]}</div>
-        <div class="info-item"><i class="fas fa-box"></i> <strong>Malzeme:</strong> ${row[6]}</div>
-        <div class="info-item"><i class="fas fa-qrcode"></i> <strong>EAN/UPC:</strong> ${row[7]}</div>
-        <div class="info-item"><i class="fas fa-user"></i> <strong>Müşteri:</strong> ${row[8]}</div>
-        <div class="info-item"><i class="fas fa-warehouse me-1"></i> <strong class="me-2">SAS:</strong> ${row[9]}
-          <div class="checkbox-group ms-2">${checkboxHTML}</div>
-        </div>
-        <div class="info-item"><i class="fas fa-cubes"></i> <strong>Stok:</strong> ${row[10]}</div>
-        <div class="info-item"><i class="fas fa-file-alt"></i> <strong>İş Emri:</strong> ${row[11]}</div>
+      <div class="card-alt ${row[10] === "TRUE" ? "completed" : ""}">
+        <div class="countdown-badge">${row[10] === "TRUE" ? "Tamamlandı" : getTimeRemaining(row[9])}</div>
+        <h3 class="card-title">${row[4]}</h3>
+        <div class="info-item"><i class="fas fa-user"></i> ${row[5]}</div>
+        <div class="info-item"><i class="fas fa-tag"></i> ${row[6]} TL</div>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> ${row[7]}</div>
+        <a href="#" class="online-btn">Online</a>
       </div>
-      <a href="${onlineLink}" target="_blank" class="online-btn">Online</a>
     `;
-
-    col.appendChild(card);
-    cardContainer.appendChild(col);
-  });
-
-  cardContainer.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      const savedCheckboxes = JSON.parse(localStorage.getItem("checkedBoxes") || "{}");
-      const id = checkbox.id;
-      savedCheckboxes[id] = checkbox.checked;
-      localStorage.setItem("checkedBoxes", JSON.stringify(savedCheckboxes));
-
-      const parentCard = checkbox.closest(".card-alt");
-      const parentCol = checkbox.closest(".col-custom");
-      const allCheckboxes = parentCard.querySelectorAll("input[type='checkbox']");
-      const allChecked = Array.from(allCheckboxes).every(cb => cb.checked);
-
-      if (allChecked && allCheckboxes.length > 0) {
-        parentCard.classList.add("completed");
-        let badge = parentCard.querySelector(".countdown-badge");
-        if (!badge) {
-          badge = document.createElement("div");
-          badge.className = "countdown-badge";
-          parentCard.appendChild(badge);
-        }
-        let countdown = 1;
-        badge.textContent = `${countdown}`;
-        if (countdownTimers.has(parentCard)) clearInterval(countdownTimers.get(parentCard));
-        const intervalId = setInterval(() => {
-          countdown--;
-          if (countdown > 0) {
-            badge.textContent = `${countdown}`;
-          } else {
-            clearInterval(intervalId);
-            countdownTimers.delete(parentCard);
-            badge.remove();
-            cardContainer.appendChild(parentCol);
-          }
-        }, 1000);
-        countdownTimers.set(parentCard, intervalId);
-      } else {
-        parentCard.classList.remove("completed");
-        const badge = parentCard.querySelector(".countdown-badge");
-        if (badge) badge.remove();
-        if (countdownTimers.has(parentCard)) {
-          clearInterval(countdownTimers.get(parentCard));
-          countdownTimers.delete(parentCard);
-        }
-      }
-    });
+    cardContainer.appendChild(card);
   });
 }
 
-clearStorageBtn.addEventListener('click', () => {
-  if (confirm('Emin misiniz?')) {
-    localStorage.clear();
-    location.reload();
+function getTimeRemaining(bitisStr) {
+  // Basit örnek: bitisStr = "YYYY-MM-DD HH:mm:ss"
+  // Gelecek tarih ise kalan süreyi göster, geçtiyse "Süresi Doldu"
+  const now = new Date();
+  const bitis = new Date(bitisStr);
+  const diffMs = bitis - now;
+  if (diffMs <= 0) return "Süresi Doldu";
+
+  const diffDays = Math.floor(diffMs / (1000*60*60*24));
+  const diffHours = Math.floor((diffMs / (1000*60*60)) % 24);
+  const diffMinutes = Math.floor((diffMs / (1000*60)) % 60);
+
+  return `${diffDays}g ${diffHours}s ${diffMinutes}d`;
+}
+
+// Sayfa açıldığında localStorage'dan filtre bilgisini alıp göster
+window.addEventListener('load', () => {
+  const savedFilterInfo = localStorage.getItem('filterInfo');
+  if (savedFilterInfo) {
+    filterInfoDiv.textContent = savedFilterInfo;
   }
-});
-document.getElementById('scrollBottomBtn').addEventListener('click', () => {
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-});
-document.getElementById('scrollTopBtn').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  loadData();
 });
 
-loadData();
+// Scroll butonları
+document.getElementById('scrollTopBtn').addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+document.getElementById('scrollBottomBtn').addEventListener('click', () => window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'}));
 </script>
+
 </body>
 </html>
