@@ -277,18 +277,27 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   const selectedAltKategori = altKategoriSelect.value;
   const selectedMarka = markaSelect.value;
 
-  let filteredData = data.filter(row => row[0] === selectedTransfer && row[1] === selectedKategori);
+  let filteredData = data.filter(row => 
+    row[0] === selectedTransfer &&
+    row[1] === selectedKategori &&
+    row[3] === selectedMarka &&
+    (
+      selectedKategori === "Shoes & Bags"
+        ? row[2] === selectedAltKategori
+        : true // Diğer kategorilerde alt kategori kontrolü yapma
+    )
+  );
+
   if (selectedKategori === "Shoes & Bags") {
-    filteredData = filteredData.filter(row => row[2] === selectedAltKategori && row[3] === selectedMarka);
     filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedAltKategori} > ${selectedMarka}`;
   } else {
-    filteredData = filteredData.filter(row => row[3] === selectedMarka);
     filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedMarka}`;
   }
 
   renderCards(filteredData);
   filterModal.hide();
 });
+
 
 function renderCards(rows) {
   cardContainer.innerHTML = "";
