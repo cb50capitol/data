@@ -281,7 +281,7 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   let filteredData;
 
   if (selectedKategori === "Shoes & Bags") {
-    // Tüm alanlar filtreleniyor
+    // Alt kategori ve marka birlikte kontrol ediliyor
     filteredData = data.filter(row =>
       row[0] === selectedTransfer &&
       row[1] === selectedKategori &&
@@ -290,7 +290,7 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
     );
     filterInfoDiv.textContent = `${selectedTransfer} > ${selectedKategori} > ${selectedAltKategori} > ${selectedMarka}`;
   } else {
-    // Alt kategori ne olursa olsun görmezden geliyoruz!
+    // Alt kategori ne olursa olsun önemsenmiyor, sadece transfer, kategori ve marka kontrol ediliyor
     filteredData = data.filter(row =>
       row[0] === selectedTransfer &&
       row[1] === selectedKategori &&
@@ -302,6 +302,7 @@ document.getElementById('filterForm').addEventListener('submit', function(e) {
   renderCards(filteredData);
   filterModal.hide();
 });
+
 
 
 
