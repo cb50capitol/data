@@ -1,296 +1,763 @@
-Transfer Listesi	Kategori	Alt Kategori	Marka	Tanim	Model	Malzeme	EAN/UPC	Müsteri	SAS	Stok	Is Emri
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Class, 2XL, Lacivert - Beyaz	4A9000000003	5003005800001	8683689560205	YM07	1	8	4230762682
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Class, 2XL, Lacivert - Beyaz	4A9000000003	5003005800001	8683689560205	CB43	1	8	4230764218
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T, M, Lacivert	4A9000000003	5003005754004	8683689529097	CM48	1	6	4230760952
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, M, Lacivert Melanj	4A9000000004	5003005757006	8683689530079	CB35	1	2	4230762208
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, M, Lacivert Melanj	4A9000000004	5003005757006	8683689530079	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Vizon	ACE001252246_VIZ	5003252750004	8684310694429	CB48	1	3	4230762149
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 48, Gri	ACE001252272_GRI	5003252764002	8684310674605	CB59	1	2	4230761361
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, XL, Mavi	ACE020252064_MAV	5003252759005	8684310719207	CB60	1	2	4230760677
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, M, Haki	ACE020252161_HAK	5003252821004	8684310588384	CM63	1	2	4230765105
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, M, Beyaz	ACE091252009_BYZ	5003252880005	8684310752396	CB60	1	2	4230760677
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Ekru	ACE091252270_EKR	5003251991002	8684310631875	CB43	1	3	4230764218
-Haziran Genel Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, S, Ekru	ACE091252270_EKR	5003251991004	8684310631899	CB45	1	2	4230762043
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Armani Exchange	Armani Exchange El Çant, Standart, Siyah	942927CC78300020	5003018708001	8053616916229	CM24	1	2	4230762057
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Armani Exchange	Armani Exchange Omuz Ça, Standart, Siyah	9491380A87400020	5003141841001	8058947190683	CB45	1	1	4230762043
-Haziran Genel Transfer Data	Mens	006Apparel	Back and Bond	Back and Bond Gömlek, 2XL, Yeşil	B33S20065	5003161644004	8959770034024	CM24	1	2	4230762057
-Haziran Genel Transfer Data	Kids	006Apparel	Benetton	Benetton T-Shirt, 11-12 Yaş, Koyu Mavi	3I1XC10N3	5003255855002	2990023285325	CM47	1	2	4230764489
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, M, Gri	4B4800000003	5003136482003	8684310084206	CB47	1	1	4230765856
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business Ceket, 52-6, Bej	BBE004252208_BEJ	5003252230003	8684310518251	CB49	1	1	4230762499
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business Ceket, 52-6, Bej	BBE004252208_BEJ	5003252230003	8684310518251	CM76	1	1	4230763023
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, 2XL, Siyah	BBE091252307_SYH	5003251969001	8684310751566	CM36	1	2	4230763708
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, L, Beyaz	BBE091252365_BYZ	5003252030002	8684310754017	CM76	2	2	4230763023
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, 2XL, Beyaz	BBE091252421_BYZ	5003252060001	8684310713168	CM44	1	2	4230762301
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, S, Beyaz	BBE091252421_BYZ	5003252060004	8684310713137	CM68	1	1	4230760965
-Haziran Genel Transfer Data	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, XL, Beyaz	BBE091252421_BYZ	5003252060005	8684310713151	CM32	1	3	4230760685
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Plaj Terliği, 38, Koyu Kahve	ARIZONA EVA	5003148891003	4066648354543	CM83	1	3	4230765042
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 12 Yaş, Siyah	IB0IB02426BEH	5003237138002	8721107537191	CB15	1	2	4230774979
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 10 Yaş, Gri	IB0IB02433PD1	5003237213001	8721107541488	CB43	1	1	4230775028
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 12 Yaş, Gri	IB0IB02433PD1	5003237213002	8721107541747	CB23	2	2	4230775032
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 14 Yaş, Gri	IB0IB02433PD1	5003237213003	8721107541976	CB15	1	1	4230774979
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 16 Yaş, Gri	IB0IB02433PD1	5003237213004	8721107542157	CM47	1	2	4230775025
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 10 Yaş, Siyah	IB0IB024410GJ	5003237216001	8721107528953	CB15	1	2	4230774979
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 12 Yaş, Siyah	IB0IB024410GJ	5003237216002	8721107529523	CB43	1	1	4230775028
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 14 Yaş, Siyah	IB0IB024410GJ	5003237216003	8721107529981	CB49	1	1	4230774974
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 14 Yaş, Ekru	IB0IB02445YAS	5003237197003	8721107534732	CM47	1	3	4230775025
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 8 Yaş, Ekru	IB0IB02445YAS	5003237197005	8721107533599	CM27	1	1	4230775027
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 16 Yaş, Sarı	IB0IB02452ZA6	5003237222004	8721107544861	CM47	1	2	4230775025
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 10 Yaş, Siyah	IB0IB02453BEH	5003237209001	8721107540870	CB49	2	2	4230774974
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 14 Yaş, Siyah	IB0IB02453BEH	5003237209003	8721107541464	CB35	1	1	4230775026
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 16 Yaş, Siyah	IB0IB02453BEH	5003237209004	8721107541570	CB15	2	2	4230774979
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 14 Yaş, Beyaz	IB0IB02456YAF	5003237230003	8721107538235	CB35	1	1	4230775026
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Set 2li, 14 Yaş, Gri	IB0IB02503PD1	5003237156003	8721107527659	CB15	2	2	4230774979
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 12 Yaş, Koyu Pembe	IG0IG02136XIX	5003237240002	8721107539447	CM27	1	2	4230775027
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 16 Yaş, Koyu Pembe	IG0IG02136XIX	5003237240004	8721107539614	CB43	1	2	4230775028
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 16 Yaş, Koyu Pembe	IG0IG02136XIX	5003237240004	8721107539614	CB23	1	2	4230775032
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Tayt, 10 Yaş, Siyah	IG0IG02137BEH	5003069594001	8720108252348	CB49	2	2	4230774974
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 12 Yaş, Beyaz	IG0IG02863YAF	5003237242002	8721107536200	CB35	2	2	4230775026
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 10 Yaş, Siyah	IG0IG02868BEH	5003237168001	8721107544120	CM27	1	2	4230775027
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 12 Yaş, Siyah	IG0IG02869BEH	5003237169002	8721107538143	CM47	1	1	4230775025
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 14 Yaş, Ekru	IG0IG02882YAS	5003237184003	8721107542942	CB43	1	1	4230775028
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 16 Yaş, Ekru	IG0IG02882YAS	5003237184004	8721107542959	CB43	1	2	4230775028
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 10 Yaş, Siyah	IU0IU00678BEH	5003237218001	8721107023274	CM47	1	2	4230775025
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein T-Shirt, 10 Yaş, Beyaz	IU0IU00678YAF	5003237251001	8721107023694	CB35	2	2	4230775026
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 14 Yaş, Siyah	IU0IU00703BEH	5003237164003	8721107531724	CB49	1	2	4230774974
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 14 Yaş, Siyah	IU0IU00703BEH	5003237164003	8721107531724	CB15	1	2	4230774979
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 8 Yaş, Siyah	IU0IU00703BEH	5003237164005	8721107531540	CB15	1	1	4230774979
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Omuz Çanta, Standart, Siyah	K60K6122210GQ	5003173435001	8720639016648	CB59	2	3	4230761361
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Çapraz Çanta, Standart, Bej	K60K612808	5003239065001	8721107062570	CM27	1	1	4230765456
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Omuz Çanta, Standart, Siyah	K60K613031	5003239222001	8721107422190	CB45	1	1	4230762043
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Omuz Çanta, Standart, Siyah	K60K613052	5003239253001	8721107065373	CM68	1	1	4230760965
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Omuz Çanta, Standart, Siyah	K60K613052	5003239253001	8721107065373	CM36	1	1	4230763708
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Çapraz Çan, Standart, Siyah	K60K613053	5003239047001	8721107065427	CB35	1	2	4230762208
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Çapr, Standart, Kırık Beyaz	K60K613179	5003239077001	8719849156947	CM83	1	2	4230765042
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Çapraz Çan, Standart, Siyah	LV04K3084G	5003239103001	8721107875385	CM27	2	1	4230765456
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 10 Yaş, Siyah	MONOGRAM RELAXED SHORTS	5003126755001	8720109313505	CB49	1	3	4230774974
-Manuel Transferler Run ID 72140	Kids	006Apparel	Calvin Klein	Calvin Klein Şort, 10 Yaş, Siyah	MONOGRAM RELAXED SHORTS	5003126755001	8720109313505	CB15	2	3	4230774979
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Calvin Klein	Calvin Klein Plaj Terliği, 42, Beyaz	SLIDE AOP PRINT	5003239560003	8721107371344	YM07	1	2	4230762682
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Camper	Camper Sandalet, 38, Krem	K201489-009	5003248647004	8432936947708	CM36	1	3	4230763708
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Clarks	Clarks Sneaker, 40, Beyaz	26176397	5003145563005	5063090668074	CM83	1	2	4230765042
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Cotton Bar	Cotton Bar Günlük Ayakkabı, 40, Lacivert	JAGAN	5003230491001	8684024591823	CB59	1	2	4230761361
-Haziran Genel Transfer Data	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Beyaz	D5SM-TST3783	5003231203002	8684024600068	CM27	2	2	4230765456
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Discovery Expedition	Discovery Expedition Plaj Terli, 43, Gri	TUDFUL	5003098815004	8684024162412	CB59	1	3	4230761361
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Dkny	Dkny El Çantası, Standart, Beyaz	R51DYJ07	5003258198001	732465667138	CM83	1	1	4230765042
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Fabrika	Fabrika Postacı Çantası, Standart, Siyah	01FB1026	5002912686001	8683595003537	CM68	1	2	4230760965
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Fabrika	Fabrika El Çantası, Standart, Antrasit	01FB1041	5003145999001	8683595013819	CM68	1	2	4230760965
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 36, Siyah	ARLINE	5003234299001	8684024617769	CM44	1	1	4230762301
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Omuz Çantası, Bedensiz, Taba	BECKY-ALLISON	5003230462001	8684024590260	CM83	1	1	4230765042
-Haziran Genel Transfer Data	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, XS, Kırık Beyaz	F5SL-TST0377	5003224207001	8684024543136	CB45	1	2	4230762043
-Haziran Genel Transfer Data	Mens	006Apparel	Fabrika	Fabrika Polo T-Shirt, M, Haki	F5SM-TST 2779	5003224130002	8684024538781	YM10	1	1	4230762822
-Haziran Genel Transfer Data	Mens	006Apparel	Fabrika	Fabrika Polo T-Shirt, M, Haki	F5SM-TST 2779	5003224130002	8684024538781	CM36	1	1	4230763708
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 40, Gümüş	KALKEN NEW	5003098597005	8684024157173	YM02	1	2	4230763203
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Günlük Ayakkabı, 43, Beyaz	PERUN	5003230716004	8684024598006	CM68	1	2	4230760965
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Plaj Terliği, 41, Petrol	TOMAS	5003098154002	8684024151874	CM50	1	2	4230760687
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Plaj Terliği, 43, Siyah	TOMAS	5003098161004	8684024151751	CM27	2	6	4230765456
-Haziran Genel Transfer Data	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Polo T-Shirt, M, Mavi	CM SERIUS	5003083533002	8684024077341	CB45	1	1	4230762043
-Haziran Genel Transfer Data	Ladies	006Apparel	Fabrika Comfort	Fabrika Comfort T-Shirt, S, Lacivert	FC5SL-TST0212	5003223968001	8684024535308	CB35	1	2	4230762208
-Haziran Genel Transfer Data	Ladies	006Apparel	Fabrika Comfort	Fabrika Comfort T-Shirt, S, Lacivert	FC5SL-TST0212	5003223968001	8684024535308	CB15	1	2	4230763870
-Haziran Genel Transfer Data	Ladies	006Apparel	Fabrika Comfort	Fabrika Comfort T-Shirt, M, Siyah - Ekru	FC5SL-TST0214	5003224017002	8684024534684	YM10	1	2	4230762822
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Fossil	Fossil Omuz Çantası, Standart, Beyaz	05FM25Y1209	5003255145001	8683595026727	CM63	1	1	4230765105
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Fossil	Fossil Çapraz Çanta, Standart, Siyah	05FM25Y1223	5003255156001	8683595027199	CM36	1	1	4230763708
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Guess	Guess Sırt Çantası, Standart, Siyah	CRTSA SFNO SMRT CMPC	5003121178001	7622336918465	CM38	1	1	4230760954
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Guess	Guess Sırt Çantası, Standart, Siyah	CRTSA SFNO SMRT CMPC	5003121178001	7622336918465	CM22	1	1	4230762493
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Guess	Guess Sneaker, 38, Beyaz	FLJELBLEA12-WHIPI	5003248503003	7626101664748	CB48	1	2	4230762149
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Omuz Çantası, Standart, Siyah	HWNG9496780	5003243138001	7626741558841	CM79	1	1	4230763473
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Omuz Çantası, Standart, Kahve	HWSG8654010	5003243128001	7626741561209	CM68	1	1	4230760965
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Omuz Çantası, Standart, Kahve	HWSG8654010	5003243128001	7626741561209	CM79	1	1	4230763473
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess El Çantası, Standart, Kahve	HWSG9540060	5003243131001	7626741562848	CB48	1	1	4230762149
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess El Çantası, Standart, Pembe	HWTG9496170	5003243098001	7620837317473	CM63	1	1	4230765105
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Omuz Çantası, Standart, Kemik	HWZG7879720	5003243156001	7626741562473	CM27	1	2	4230765456
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Guess	Guess Postacı Çantası, Standart, Siyah	TORINO CROSSBODY DOU - TORINO TOP Z	5003246813001	7626741087037	CM27	1	2	4230765456
-Haziran Genel Transfer Data	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, S, Siyah	12136516_JJEBASIC POLO SS NOOS	5003243697004	5713736375810	CM48	1	2	4230760952
-Haziran Genel Transfer Data	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Pantolo, 32-30, Siyah	12152346_JJIGLENN	5002366657008	5713757028870	CB47	1	2	4230765856
-Manuel Transferler Run ID 72140	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Pantolo, 36-34, Siyah	12246951_JJIMIKE JJORIGINAL SQ 356	5003052107013	5715429440522	CB46	1	1	4230760547
-Haziran Genel Transfer Data	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	12268415_JJECORP GRAPHIC TEE  SS O-	5003243830004	5715671965521	CM38	1	2	4230760954
-Haziran Genel Transfer Data	Mens	006Apparel	Jeep	Jeep Kargo Şort, 2XL, Siyah	J5SM-SHT7677	5003225838005	8684024554804	CM50	1	2	4230760687
-Haziran Genel Transfer Data	Mens	006Apparel	Jeep	Jeep Kargo Şort, 2XL, Siyah	J5SM-SHT7677	5003225838005	8684024554804	YM02	1	2	4230763203
-Haziran Genel Transfer Data	Mens	006Apparel	Jeep	Jeep T-Shirt, S, Haki	J5SM-TST7339	5003222994001	8684024484446	CB46	1	2	4230761829
-Haziran Genel Transfer Data	Ladies	006Apparel	Koton	Koton Pantolon, 42, Siyah Melanj	5SAK40031UW	5003250022003	8684290414123	CM32	1	2	4230760685
-Haziran Genel Transfer Data	Ladies	006Apparel	Koton	Koton Elbise, M, Lila	5SAL80020IK	5003261124002	8684290837014	CM32	1	2	4230760685
-Haziran Genel Transfer Data	Ladies	006Apparel	Lee Cooper	Lee Cooper Denim Gömlek, S, Renksiz	252 LCF 141002 BOHO DENIM	5003258277002	8682272649419	CM50	1	2	4230760687
-Haziran Genel Transfer Data	Ladies	006Apparel	Lee Cooper	Lee Cooper T-Shirt, M, Beyaz	252 LCF 242015 ROSA BEYAZ	5003258387002	8682272630172	CB60	1	2	4230760677
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Lumberjack	Lumberjack Sneaker, 39, Beyaz	A10193231912010	5003262073004	8684365973982	CB35	1	2	4230762208
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Lumberjack	Lumberjack Sneaker, 37, Siyah	A10193930512010	5003262046002	8684620106612	YM07	1	2	4230762682
-Haziran Genel Transfer Data	Street wear	006Apparel	Mavi	Mavi T-Shirt, S, Koyu Lacivert	M0611711-84371_MAVİ LOGO TİŞÖRT	5003110949004	8684249142855	CM68	1	4	4230760965
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi Gömlek, XS, Gri	M1210747-70133_UZUN KOLLU GÖMLEK	5003241547004	8684518339566	CM38	1	3	4230760954
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi Gömlek, S, Kırmızı	M1210747-80791_UZUN KOLLU GÖMLEK	5003241593003	8684518339689	CB15	1	2	4230763870
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi Gömlek, M, Mavi	M1211069-89153_UZUN KOLLU GÖMLEK	5003241643002	8684518133553	CM44	2	2	4230762301
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi Denim Elbise, M, Renksiz	M1310716-90476_FW25 LON-AMS 23 E	5003241683002	8684518721798	CM38	1	4	4230760954
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi Denim Elbise, S, Renksiz	M1310716-90476_FW25 LON-AMS 23 E	5003241683003	8684518721781	CB45	1	2	4230762043
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Beyaz	M1600955-620	5002821558004	8682454894941	CM38	2	4	4230760954
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Beyaz	M1600955-620	5002821558004	8682454894941	CB15	1	4	4230763870
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Beyaz	M1600961-620	5002810092004	8682454896082	CB45	2	2	4230762043
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi Kazak, S, Siyah	M1600963-900	5003227542004	8682454896426	CB45	2	5	4230762043
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Gri	M1600965-70075-BASIC SHORT SLEEVE T	5003111405002	8684080992053	CB60	1	3	4230760677
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Gri	M1600965-70075-BASIC SHORT SLEEVE T	5003111405002	8684080992053	CM48	1	3	4230760952
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Gri	M1600965-70087-BASIC SHORT SLEEVE T	5003111420003	8684080991834	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Beyaz	M1611585-620-YUVARLAK YAKA KISA KOL	5003111394003	8683696628035	CB46	1	7	4230761829
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Kırmızı	M1612260-86680_BİSİKLET YAKA TİŞÖRT	5003241640003	8684518156521	CM48	1	1	4230760952
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Kırmızı	M1612260-86680_BİSİKLET YAKA TİŞÖRT	5003241640003	8684518156521	CB47	1	1	4230765856
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Antrasit	M1613072-70763_KISA KOLLU CROP TİŞÖ	5003241500001	8684518551807	YM02	1	2	4230763203
-Haziran Genel Transfer Data	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Antrasit	M1613152-70087_MV BASKILI TİŞÖRT	5003241504003	8684518605333	CB35	1	2	4230762208
-Haziran Genel Transfer Data	Ladies	006Apparel	Mustang	Mustang Denim Pantolon, 27-30, Lacivert	GEORGIA SKINNY FLARED	5003173185005	8684024437671	CM79	1	2	4230763473
-Haziran Genel Transfer Data	Ladies	006Apparel	Mustang	Mustang T-Shirt, XL, Beyaz	M5SL-TST1864	5003230311005	8684024589431	CM36	1	2	4230763708
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network Pantolon, 52, Lacivert	1093929	5003254682004	8683798916764	CM47	2	5	4230764489
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network Pantolon, 48, Lacivert	1094007	5003258964002	8683798795437	CM27	1	2	4230765456
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network Denim Pantolon, 33-32, Siyah	1094068	5003250522008	8683798801930	CM38	1	2	4230760954
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network Denim Pantolon, 32-30, Antrasit	1094070	5003254638006	8683798802166	CM36	1	3	4230763708
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network T-Shirt, L, Ekru	1094079	5003259082002	8683798803880	CB48	1	1	4230762149
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network T-Shirt, L, Ekru	1094079	5003259082002	8683798803880	CM63	2	1	4230765105
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network Gömlek, L, Haki	1094102	5003259138002	8683798807451	CB38	3	4	4230760470
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network Gömlek, L, Lacivert - Beyaz	1094103	5003259165002	8683798807550	CM63	1	3	4230765105
-Haziran Genel Transfer Data	Mens	006Apparel	Network	Network T-Shirt, XL, Siyah	VİON-18	5003114798004	8683798114702	CM47	1	2	4230764489
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 42.5, Siyah	109 MS109BG-NB LIFESTYLE MEN SHOES	5003181776004	197967462429	CM22	2	3	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 42.5, Siyah	109 MS109BG-NB LIFESTYLE MEN SHOES	5003181776004	197967462429	GB08	1	3	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 44.5, Siyah	109 MS109BG-NB LIFESTYLE MEN SHOES	5003181776007	197967462450	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 40, Siyah	109 MS109BG-NB LIFESTYLE MEN SHOES	5003181776001	197967462382	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 43, Siyah	109 MS109BG-NB LIFESTYLE MEN SHOES	5003181776005	197967462436	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 45, Siyah	109 MS109BG-NB LIFESTYLE MEN SHOES	5003181776008	197967462467	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 42.5, Antrasit	109 MS109LAG-NB LIFESTYLE MEN SHOES	5003175552004	197967461842	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 46.5, Antrasit	109 MS109LAG-NB LIFESTYLE MEN SHOES	5003175552009	197967461903	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayak, 40, Antrasit	109 MS109LAG-NB LIFESTYLE MEN SHOES	5003175552001	197967461804	CB58	1	1	4230757513
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44.5, Gri	109 MS109LG-NB Lifestyle Men Shoes	5003249340007	197967461583	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 46.5, Gri	109 MS109LG-NB Lifestyle Men Shoes	5003249340009	197967461613	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 44, Gri	109 MS109LG-NB Lifestyle Men Shoes	5003249340006	197967461576	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 37.5, Gri	109 WS109LLG-NB Lifestyle Shoes	5003249341003	197967466946	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 40.5, Gri	109 WS109LLG-NB Lifestyle Shoes	5003249341007	197967466984	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 38, Gri	109 WS109LLG-NB Lifestyle Shoes	5003249341004	197967466953	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 39, Gri	109 WS109LLG-NB Lifestyle Shoes	5003249341005	197967466960	CB58	2	2	4230757513
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 40.5, Gri	109 WS109PGG LIFESTYLE WOMEN SHOES	5003175566007	197967466687	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 39, Gri	109 WS109PGG LIFESTYLE WOMEN SHOES	5003175566005	197967466663	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42, Siyah	327 U327OB-NB LIFESTYLE MEN SHOES	5003234317002	197966120740	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle A, 39, Yeşil - Bej	327 WS327FTB-Lifestyle Women Shoes	5003279001005	197967966422	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 44.5, Siyah	408 ML408BS-NB MENS LIFESTYLE SHOES	5003109531006	197375138060	CB58	1	1	4230757513
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 45, Siyah	408 ML408BS-NB MENS LIFESTYLE SHOES	5003109531007	197375138077	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 46.5, Beyaz	408 ML408DS-NB LIFESTYLE MEN SHOES	5003155472008	197376540350	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 46.5, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946008	198686029856	CB58	1	1	4230757513
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946005	198686029818	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyl, 46.5, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084008	197375137735	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyl, 46.5, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084008	197375137735	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifesty, 37.5, Beyaz - Bordo	408 ML408WR-NB Lifestyle Women Shoe	5003266419002	198686029894	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 40, Beyaz - Bordo	408 ML408WR-NB Lifestyle Women Shoe	5003266419006	198686029931	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 44.5, Antrasit	565 ML565ANT-NB LIFESTYLE MEN SHOES	5003035989007	196652681930	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 46.5, Antrasit	565 ML565ANT-NB LIFESTYLE MEN SHOES	5003035989009	196652681961	CB13	1	2	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 46.5, Antrasit	565 ML565ANT-NB LIFESTYLE MEN SHOES	5003035989009	196652681961	CB56	1	2	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 44.5, Siyah	565 ML565BLK-NB LIFESTYLE MEN SHOES	5003032842007	196652681381	CM22	2	2	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 46.5, Siyah	565 ML565BLK-NB LIFESTYLE MEN SHOES	5003032842009	196652681411	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 40, Siyah	565 ML565BLK-NB LIFESTYLE MEN SHOES	5003032842001	196652681312	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44, Siyah	565 ML565BLK-NB LIFESTYLE MEN SHOES	5003032842006	196652681374	CB23	2	2	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 45, Siyah	565 ML565BLK-NB LIFESTYLE MEN SHOES	5003032842008	196652681398	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42.5, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295004	197376542095	CB56	2	2	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44.5, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295007	197376542125	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 46.5, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295009	197376542156	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 43, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295005	197376542101	CB23	2	2	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 44, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295006	197376542118	CB58	1	2	4230757513
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 44, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295006	197376542118	CM22	1	2	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 45, Bej	565 ML565BVG-NB Lifestyle Men Shoes	5003249295008	197376542132	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42.5, Gri	565 ML565GGR-NB Lifestyle Men Shoes	5003249315004	198686031613	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 43, Gri	565 ML565GGR-NB Lifestyle Men Shoes	5003249315005	198686031620	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 46.5, Lacivert	565 ML565NVY NB LIFESTYLE MEN SHOES	5003012498009	196652679920	CB23	1	3	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 46.5, Lacivert	565 ML565NVY NB LIFESTYLE MEN SHOES	5003012498009	196652679920	CM22	1	3	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ay, 46.5, Lacivert	565 ML565NVY NB LIFESTYLE MEN SHOES	5003012498009	196652679920	GB08	1	3	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayak, 44, Lacivert	565 ML565NVY NB LIFESTYLE MEN SHOES	5003012498006	196652679883	CB58	1	1	4230757513
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 40.5, Beyaz	565 WL565AWG LIFESTYLE WOMEN SHOES	5003175537007	197967567551	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 38, Beyaz	565 WL565AWG LIFESTYLE WOMEN SHOES	5003175537004	197967567520	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 39, Beyaz	565 WL565AWG LIFESTYLE WOMEN SHOES	5003175537005	197967567537	CB23	1	2	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 39, Beyaz	565 WL565AWG LIFESTYLE WOMEN SHOES	5003175537005	197967567537	CM22	1	2	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 37.5, Gri	565 WL565BBL-NB Lifestyle Shoes	5003249334003	198686123738	CB56	1	1	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 37, Gri	565 WL565BBL-NB Lifestyle Shoes	5003249334002	198686123721	CB13	1	1	4230757490
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 39, Gri	565 WL565BBL-NB Lifestyle Shoes	5003249334005	198686123752	GB08	1	1	4230757515
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 37.5, Gri	565 WL565GRY LIFESTYLE WOMENS SHOES	5003032794003	196652674741	CB23	2	2	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 40.5, Gri	565 WL565GRY LIFESTYLE WOMENS SHOES	5003032794007	196652674789	CB56	2	2	4230757492
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 38, Gri	565 WL565GRY LIFESTYLE WOMENS SHOES	5003032794004	196652674758	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 39, Gri	565 WL565GRY LIFESTYLE WOMENS SHOES	5003032794005	196652674765	CM22	5	5	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 38, Bej	565 WL565LLC-NB Lifestyle Shoes	5003249323004	198686123523	CB23	1	1	4230757491
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 43, Yeşil	574 U574ESA-NB Lifestyle Men Shoes	5003226449004	197376889244	CM22	1	1	4230757514
-Manuel Transferler Run ID 72140	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 39, Pembe - Beyaz	574 WL574BEM-NB Lifestyle Women Sho	5003271231005	197967942532	CB58	1	1	4230757513
-Haziran Genel Transfer Data	Active & Outdoor	002Active Apparel	Nike	Nike Tayt, S, Siyah	CZ9831-010 W NP 365 SHORT 5IN	5002892852003	194502755084	CB54	1	2	4230764230
-Haziran Genel Transfer Data	Active & Outdoor	002Active Apparel	Nike	Nike Tayt, S, Siyah	CZ9831-010 W NP 365 SHORT 5IN	5002892852003	194502755084	CM27	1	2	4230765456
-Haziran Genel Transfer Data	Active & Outdoor	002Active Apparel	Nike	Nike T-Shirt, M, Siyah	DV9315-010 M NK DF UV MILER SS	5002990826002	196153874497	CB59	1	1	4230761361
-Haziran Genel Transfer Data	Active & Outdoor	002Active Apparel	Nike	Nike T-Shirt, M, Siyah	DV9315-010 M NK DF UV MILER SS	5002990826002	196153874497	CB48	1	1	4230762149
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Pierre Cardin	Pierre Cardin Postacı Ç, Standart, Siyah	01PC00100-S	5003234415001	8683932053201	CB49	1	1	4230762499
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Pierre Cardin	Postacı Çantası, Standart, Siyah	01PC002000-MO S	5003151858001	8683932039489	YM07	1	-1	4230762682
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Pierre Cardin	Pierre Cardin Çapraz Ça, Standart, Siyah	05PC24K808-MN S	5003182334001	8683932060926	CM32	1	1	4230760685
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Ceket, 36, Bej	GAMER-C	5003228634002	8683858309345	CM68	1	4	4230760965
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Ceket, 36, Bej	GAMER-C	5003228634002	8683858309345	YM02	1	4	4230763203
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Ceket, 36, Bej	GAMER-C	5003228634002	8683858309345	CM36	1	4	4230763708
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Ceket, 38, Bej	GAMER-C	5003228634003	8683858309352	CM32	1	2	4230760685
-Haziran Genel Transfer Data	Mens	006Apparel	Pierre Cardin	Pierre Cardin Gömlek, M, Siyah	MYRAT	5003137796006	8683857000465	CM79	1	2	4230763473
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, S, Turuncu	PARNI-B	5003255070004	8683858965688	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Etek, XS, Turuncu	PARNI-E	5003255055005	8683858965404	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Pierre Cardin	Pierre Cardin Topuklu Ayakkab, 40, Siyah	PC-52272	5003141923005	8683179969921	YM02	1	2	4230763203
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Pierre Cardin	Pierre Cardin Topuklu Ayakkab, 39, Siyah	PC-52274	5002996318004	8683179970453	CM50	1	2	4230760687
-Haziran Genel Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, M, Lacivert	RIHA	5003255090003	8683858992431	CM50	1	3	4230760687
-Manuel Transferler Run ID 72140	Active & Outdoor	040Outdoor Apparel	Quiksilver	Quiksilver Şort Mayo, XL, Mavi	EQYJV04100 EVERYDAY STRAIGHT VOLLEY	5003272487004	3616750845647	CM50	1	1	4230797847
-Manuel Transferler Run ID 72140	Active & Outdoor	040Outdoor Apparel	Quiksilver	Quiksilver Şort Mayo, XL, Siyah	EQYJV04121 EVERYDAY STRAIGHT VOLLEY	5003272534004	3616750845586	CM50	1	1	4230797847
-Manuel Transferler Run ID 72140	Active & Outdoor	040Outdoor Apparel	Quiksilver	Quiksilver Şort Mayo, M, Lacivert	EQYJV04127 EVERYDAY FLEX VOLLEY 15	5003272555002	3616750843841	CM50	1	1	4230797847
-Manuel Transferler Run ID 72140	Active & Outdoor	040Outdoor Apparel	Quiksilver	Quiksilver Şort Mayo, M, Siyah	EQYJV04127 EVERYDAY FLEX VOLLEY 15	5003272560002	3616750843780	CM50	1	2	4230797847
-Manuel Transferler Run ID 72140	Active & Outdoor	040Outdoor Apparel	Quiksilver	Quiksilver Şort Mayo, S, Kırmızı	EQYJV04134 EVERYDAY VERT VOLLEY 16	5003272536003	3616750849706	CM50	1	1	4230797847
-Manuel Transferler Run ID 72140	Active & Outdoor	040Outdoor Apparel	Quiksilver	Quiksilver Şort Mayo, XL, Kırmızı	EQYJV04134 EVERYDAY VERT VOLLEY 16	5003272536004	3616750849713	CM50	1	1	4230797847
-Toplu Satış Transfer Data	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Koşu Ayakkabısı, 42.5, Siyah	L47948300ALPHAGLIDE	5003254800003	195751982757	CB39	1	1	4230846404
-Manuel Transferler Run ID 72141	Active & Outdoor	003Active Shoes	Skechers	Skechers Life, 36.5, Siyah - Beyaz - Gri	11947 BKWG D'LITES -  NEW JOURNEY	5002664610006	190872452707	CB73	1	4	4230824966
-Manuel Transferler Run ID 72141	Active & Outdoor	003Active Shoes	Skechers	Skechers Life, 38.5, Siyah - Beyaz - Gri	11947 BKWG D'LITES -  NEW JOURNEY	5002664610008	190872452745	CB73	1	4	4230824966
-Manuel Transferler Run ID 72141	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ay, 39, Beyaz - Siyah	13148 WBK D'LITES	5002742964007	193113227522	CB73	1	5	4230824966
-Manuel Transferler Run ID 72141	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle, 37.5, Beyaz - Siyah	13148 WBK D'LITES	5002742964004	193113227492	CB73	1	6	4230824966
-Haziran Genel Transfer Data	Street wear	006Apparel	The Crow	The Crow Pantolon, L, Gri Melanj	BILL	5002896383002	8681715124605	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Street wear	006Apparel	The Crow	The Crow Şort, L, Gri Melanj	TC7009	5003002516002	8681715009926	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Street wear	006Apparel	The Crow	The Crow T-Shirt, L, Beyaz	TC9021-100 TRAIL BaskılıTshirt	5003010416003	8681715010373	CB47	1	2	4230765856
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Tommy Hilfiger	Tommy Hilfiger El Çanta, Standart, Siyah	AW0AW16907	5003239115001	8720638200307	CB49	1	1	4230762499
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Çapraz, Standart, Kırmızı	AW0AW16978	5003238987001	8720638201403	YM07	1	1	4230762682
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Omuz, Standart, Lacivert	AW0AW17192	5003239190001	8720638741343	CB48	2	2	4230762149
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 37, Pembe	EN0EN02696	5003240295002	8720638206880	CB60	1	2	4230760677
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 39, Siyah	FW0FW08322	5003240360004	8720638197416	CB59	1	3	4230761361
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 39, Siyah	FW0FW08322	5003240360004	8720638197416	CM24	1	3	4230762057
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Dolgu Topuk, 36, Lacivert	FW0FW08668	5003240251001	8720638823544	CB43	1	2	4230764218
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 10 Yaş, Lacivert	KB0KB09533C1G	5003237285001	8721106796537	CB15	2	4	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 10 Yaş, Lacivert	KB0KB09533C1G	5003237285001	8721106796537	CM27	1	4	4230773224
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 10 Yaş, Lacivert	KB0KB09533C1G	5003237285001	8721106796537	CB43	1	4	4230773225
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 10 Yaş, Lacivert	KB0KB09533C1G	5003237285001	8721106796537	CB15	1	4	4230775103
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 12 Yaş, Lacivert	KB0KB09533C1G	5003237285002	8721106796544	CM47	1	1	4230773226
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 12 Yaş, Lacivert	KB0KB09533C1G	5003237285002	8721106796544	CB43	1	1	4230775105
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 16 Yaş, Lacivert	KB0KB09533C1G	5003237285004	8721106796568	CB15	1	4	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 16 Yaş, Lacivert	KB0KB09533C1G	5003237285004	8721106796568	CB43	2	4	4230773225
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 16 Yaş, Lacivert	KB0KB09533C1G	5003237285004	8721106796568	CM47	1	4	4230773226
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 16 Yaş, Lacivert	KB0KB09533C1G	5003237285004	8721106796568	CB43	2	4	4230775104
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 8 Yaş, Lacivert	KB0KB09533C1G	5003237285005	8721106796520	CB15	2	2	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 8 Yaş, Lacivert	KB0KB09533C1G	5003237285005	8721106796520	CB15	2	2	4230775103
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 16 Yaş, Gri	KB0KB09533PMT	5003237304004	8721106256031	CB43	1	1	4230773225
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 8 Yaş, Gri	KB0KB09533PMT	5003237304005	8721106255034	CB43	1	1	4230773225
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Şort, 8 Yaş, Mavi	KB0KB09642C1O	5003237291005	8721106231618	CB43	1	1	4230773225
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger, 16 Yaş, Lacivert - Beyaz	KB0KB09661YBR	5003237310004	8721106325225	CM27	2	2	4230773224
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger, 16 Yaş, Lacivert - Beyaz	KB0KB09661YBR	5003237310004	8721106325225	CM47	2	2	4230775109
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger, 8 Yaş, Lacivert - Beyaz	KB0KB09661YBR	5003237310005	8721106325089	CM27	2	2	4230773224
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger, 8 Yaş, Lacivert - Beyaz	KB0KB09661YBR	5003237310005	8721106325089	CM47	1	2	4230775109
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 10 Yaş, Siyah	KB0KB09666BDS	5003237301001	8721106270303	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 12 Yaş, Siyah	KB0KB09666BDS	5003237301002	8721106270358	CB15	2	2	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 12 Yaş, Siyah	KB0KB09666BDS	5003237301002	8721106270358	CB15	1	2	4230775103
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 16 Yaş, Siyah	KB0KB09666BDS	5003237301004	8721106270532	CB15	2	2	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 8 Yaş, Siyah	KB0KB09666BDS	5003237301005	8721106270105	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 8 Yaş, Siyah	KB0KB09666BDS	5003237301005	8721106270105	CB43	1	1	4230775105
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 10 Yaş, Beyaz	KB0KB09666YBR	5003237236001	8721106274356	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Set 2li, 16 Yaş, Beyaz	KB0KB09666YBR	5003237236004	8721106274585	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T, 8 Yaş, Kırmızı - Beyaz	KG0KG08420YBR	5003237259005	8721106248319	CM47	1	1	4230773226
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T, 8 Yaş, Kırmızı - Beyaz	KG0KG08420YBR	5003237259005	8721106248319	CB49	1	1	4230775102
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger, 14 Yaş, Kırmızı - Beyaz	KG0KG08420YBR	5003237259003	8721106248708	CM47	1	1	4230773226
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger, 16 Yaş, Kırmızı - Beyaz	KG0KG08420YBR	5003237259004	8721106248739	CM47	1	1	4230773226
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 10 Yaş, Beyaz	KG0KG08525YBR	5003237307001	8721106247640	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 12 Yaş, Beyaz	KG0KG08525YBR	5003237307002	8721106247787	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 12 Yaş, Beyaz	KG0KG08525YBR	5003237307002	8721106247787	CB49	1	1	4230775102
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger T-Shirt, 14 Yaş, Beyaz	KG0KG08525YBR	5003237307003	8721106248050	CB15	2	2	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Zıbın, 0-3 Ay, Beyaz	KN0KN01974YBR	5003237350001	8720638538196	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Zıbın, 12-18 Ay, Beyaz	KN0KN01974YBR	5003237350002	8720638538608	CB15	1	1	4230773223
-Manuel Transferler Run ID 72140	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Zıbın, 18-24 Ay, Beyaz	KN0KN01974YBR	5003237350003	8720638538653	CB15	1	1	4230773223
-Haziran Genel Transfer Data	Shoes & Bags	031Mens Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Sırt Çan, Standart, Siyah	TH FOUNDATION BACKPACK	5003239331001	8720638230069	CB59	1	2	4230761361
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Plaj Terliğ, 42, Lacivert	TOMMY JEANS POOL SLIDE ESS	5003117703003	8720646217441	CM68	1	2	4230760965
-Haziran Genel Transfer Data	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Plaj Terliğ, 42, Lacivert	TOMMY JEANS POOL SLIDE ESS	5003117703003	8720646217441	CM44	1	2	4230762301
-Haziran Genel Transfer Data	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Gömlek, 40, Haki	CRISCOLOR024K	5003222548005	8683857988183	CM27	1	2	4230765456
-Haziran Genel Transfer Data	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Gömlek, 36, Açık İndigo	ELMY025Y	5003257816003	8683858737681	CM48	1	2	4230760952
-Toplu Satış Transfer Data	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Polo T-Shi, XL, Lacivert	GTP-IY025	5003257570008	8683858650379	CM40	2	3	4230836717
-Haziran Genel Transfer Data	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 8-9 Yaş, Beyaz	GTS01KIDS	5003254913010	8683858664475	CB46	1	5	4230761829
-Haziran Genel Transfer Data	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 8-9 Yaş, Beyaz	GTS01KIDS	5003254913010	8683858664475	CM79	1	5	4230763473
-Haziran Genel Transfer Data	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Pantol, 10-11 Yaş, Beyaz	MICHESKIDS	5003256224001	8683858706076	CB60	1	2	4230760677
-Haziran Genel Transfer Data	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Elbise, 34, Pudra	NALIO	5003134206001	8683857375044	CB35	1	2	4230762208
-Haziran Genel Transfer Data	Mens	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Kazak, 2XL, Siyah	RAHAL	5003263621001	8683858740919	CB15	1	3	4230763870
-Haziran Genel Transfer Data	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Polo T-Shi, XL, Açık Mor	TP0125	5003257724007	8683858650805	CM22	1	2	4230762493
-Haziran Genel Transfer Data	Shoes & Bags	030Ladies Bags & SLG	U.S. Polo Assn.	U.S. Polo Assn. Omuz Çant, Standart, Taş	US25233	5003249098001	8683214202082	CB59	1	1	4230761361
-Haziran Genel Transfer Data	Shoes & Bags	032Ladies Shoes	Valentino	Valentino Sneaker, 39, Siyah	95A3603VIT550	5003152525004	8057635195900	CB54	1	2	4230764230
+Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
+İADE	Street wear	Accessories	THE CROW	  TC7701 THE CROW KEMER The Crow Kemer, 100 cm, Siyah - Kahve	0	5002752812001	8681715119274	FIRMASINA IADE	1	1	3241238
+İADE	Shoes & Bags	Ladies Shoes	CATERPILLAR	015G100095 Caterpillar Bot, 40, Kahve	0	5003172594005	8683756297409	CD01 EKOL DEPO'YA IADE	1	1	3244057
+İADE	Active & Outdoor	Active Apparel	SKECHERS	040M LW Fleece Crew Neck Sweatshirt Skechers Sweatshirt, L, Gri	0	5003064998001	8683030229782	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Apparel	SKECHERS	040M LW Fleece Crew Neck Sweatshirt Skechers Sweatshirt, M, Gri	0	5003064998002	8683030229775	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Shoes & Bags	Ladies Bags & SLG	PIERRE CARDIN	05PC24K838-BF S Pierre Cardin El Çantas, Standart, Siyah	0	5003182379001	8683932062692	CD01 EKOL DEPO'YA IADE	1	1	3240758
+İADE	Shoes & Bags	Ladies Bags & SLG	PIERRE CARDIN	05PO22Y1538-F DFYS Pierre Cardin Çapr, Standart, Koyu Yeşil	0	5003015126001	8683932024225	CD01 EKOL DEPO'YA IADE	1	1	3247153
+İADE	Shoes & Bags	Ladies Bags & SLG	PIERRE CARDIN	05PO24Y990-CS S/ Pierre Cardin Omuz Çant, Standart, Siyah	0	5003222062001	8683932069646	CD01 EKOL DEPO'YA IADE	1	1	3240758
+İADE	Shoes & Bags	Ladies Bags & SLG	PIERRE CARDIN	06PC23Y704-MN S Pierre Cardin Cüzdan, Standart, Siyah	0	5003007287001	8683932009987	CD01 EKOL DEPO'YA IADE	1	1	3247153
+İADE	Active & Outdoor	Active Shoes	REEBOK	100074479 CLUB C DOUBLE Reebok Lifestyle Ayakkabı, 39, Siyah	0	5003143388005	1200143077597	CD01 EKOL DEPO'YA IADE	1	1	3240923
+İADE	Active & Outdoor	Active Shoes	ASICS	1011B485-010 PATRIOT 13 Asics Koşu Ayakkabısı, 42, Siyah - Mavi	0	5003177049003	4550457847032	CD01 EKOL DEPO'YA IADE	1	1	3246008
+İADE	Active & Outdoor	Active Shoes	ASICS	1011B603-008 JOLT 4 Asics Koşu Ayakkabısı, 44.5, Siyah	0	5003177066006	4550457859011	CD01 EKOL DEPO'YA IADE	1	1	3246008
+İADE	Active & Outdoor	Active Shoes	ASICS	1012B414-005 GEL-SONOMA 7 GTX Asics Koşu Ayakkabısı, 37.5, Siyah	0	5003177103002	4550457899345	CD01 EKOL DEPO'YA IADE	1	1	3246008
+İADE	Active & Outdoor	Active Shoes	ASICS	1012B414-005 GEL-SONOMA 7 GTX Asics Koşu Ayakkabısı, 38, Siyah	0	5003177103003	4550457899369	CD01 EKOL DEPO'YA IADE	1	1	3246008
+İADE	Ladies	Accessories	AKER EŞARP	1041BRL921 Aker Esarp Şal, Standart, Lacivert	0	5002498052001	8697733745630	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	1041BRL932 Aker Esarp Şal, Standart, Haki	0	5002498072001	8697733745678	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	1041BRL943 Aker Esarp Şal, Standart, Kırmızı	0	5002498075001	8697733746897	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	1042BRL941 Aker Esarp Şal, Standart, Bordo	0	5002498090001	8697733745845	FIRMASINA IADE	1	1	3243821
+İADE	Kids	Active Shoes	ASICS	1044A077-401-GEL-DEDICATE 8 GS Asics Tenis Ayakkabısı, 35, Lacivert	0	5003175440002	4550457675130	CD01 EKOL DEPO'YA IADE	1	1	3244188
+İADE	Ladies	Accessories	AKER EŞARP	1046BRL Aker Eşarp Şal, Standart, Pudra	0	5003011122001	8697733770670	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	1050800916 Aker Eşarp Şal, Standart, Ekru	0	5002714259001	8697733769797	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	1050800971 Aker Eşarp Şal, Standart, Açık Gri	0	5002714273001	8697733769940	FIRMASINA IADE	1	1	3243821
+İADE	Active & Outdoor	Accessories & Equipments	NEW ERA	10531954 MLB 9FIFTY LOSDOD TEAM New Era Şapka, M-L, Siyah	0	5003081926001	886947155481	CD01 EKOL DEPO'YA IADE	1	1	3235773
+İADE	Ladies	Accessories	AKER EŞARP	1060300930 Aker Eşarp Şal, Standart, Ekru	0	5002408347001	8697733718160	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	1060500321 Aker Eşarp Şal, Standart, Lacivert	0	5002741723001	8697733786121	FIRMASINA IADE	1	1	3243821
+İADE	Mens	Apparel	NETWORK	1091736 Network Kazak, M, Lacivert	0	5003214789003	8683798622757	CD01 EKOL DEPO'YA IADE	1	1	3244298
+İADE	Mens	Apparel	NETWORK	1091907 Network Pantolon, 48, Lacivert	0	5003180669002	8683798643028	CD01 EKOL DEPO'YA IADE	1	1	3244298
+İADE	Mens	Apparel	NETWORK	1092049 Network Sweatshirt, M, Siyah	0	5003180751002	8683798654581	CD01 EKOL DEPO'YA IADE	1	1	3244298
+İADE	Active & Outdoor	Accessories & Equipments	NEW ERA	11588488 CLEAN TRUCKER 2 NEYYAN SCA New Era Şapka, Standart, Kırmızı	0	5003138614001	192093838049	CD01 EKOL DEPO'YA IADE	2	2	3235773
+İADE	Ladies	Accessories	LEVIDOR	11785 Levidor Şal, Standart, Çok Renkli	0	5003281161001	8683168916288	CD01 EKOL DEPO'YA IADE	1	1	3236591
+İADE	Street wear	Apparel	JACK & JONES	12128982 Jack & Jones Denim, 32-34, Koyu Antrasit	0	5000173285010	5713618535417	CD01 EKOL DEPO'YA IADE	1	1	3238317
+İADE	Street wear	Apparel	JACK & JONES	12151955_JJECORP LOGO TEE SS O-NECK Jack & Jones T-Shirt, M, Siyah	0	5003178224003	5715602802154	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12181054_JJITIM JJORIGINAL JOS 119 Jack & Jones Denim Pantolon, 30-32, Gri	0	5003178225002	5714915751777	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12190854_JJIGLENN JJORIGINAL AM 809 Jack & Jones Denim Panto, 31-32, Renksiz	0	5002740889005	5715096624966	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12193754_JPSTPAUL Jack & Jones Kargo Pantolon, 31-32, Krem	0	5002759863006	5715101250043	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12207655_JORMATE SWEAT HOOD FST Jack & Jones Sweatshirt, L, Lacivert	0	5002830177002	5715214675238	CD01 EKOL DEPO'YA IADE	1	1	3231212
+İADE	Street wear	Apparel	JACK & JONES	12223628_JJIGLENN JJIFOX JOS 547 50 Jack & Jones Denim Pant, 32-32, Lacivert	0	5002993120007	5715319120725	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12253727_JPSTWILL JJCLOUD SWEAT PAN Jack & Jones Eşofman Altı, L, Gri	0	5003178273002	5715600690067	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12256521_JJECALEB VARSITY SWEAT HOO Jack & Jones Sweatshirt, M, Siyah	0	5003178293003	5715602831505	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12256534_JJELEGACY SWEAT HOOD NOOS Jack & Jones Sweatshirt, XL, Siyah	0	5003178255005	5715602831819	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12256801_JJHAKKAI TEE SS CREW NECK Jack & Jones T-Shirt, 2XL, Siyah	0	5003178285001	5715604738925	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12256831_JJOLIVE SWEAT CREW NECK Jack & Jones Sweatshirt, XL, Ekru	0	5003178302005	5715604746166	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12258128_JJMAPPED TEE SS CREW NECK Jack & Jones T-Shirt, L, Ekru	0	5003178313002	5715515943296	CD01 EKOL DEPO'YA IADE	2	2	3244613
+İADE	Street wear	Apparel	JACK & JONES	12261428_JCORAYMER SWEAT CREW NECK Jack & Jones Sweatshirt, L, Siyah	0	5003178391002	5715600385864	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12261873_JPRBLAJARED SWEAT CREW NEC Jack & Jones Sweatshirt, 2XL, Beyaz	0	5003178394001	5715607568383	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12262094_JCOMOUNTAIN LOGO SWEAT CRE Jack & Jones Sweatshirt, M, Siyah	0	5003178405003	5715607944354	CD01 EKOL DEPO'YA IADE	2	2	3244613
+İADE	Street wear	Apparel	JACK & JONES	12262958_JORPORTLAND BOX SWEAT CREW Jack & Jones Sweatshirt, L, Beyaz	0	5003178442002	5715601342446	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12262958_JORPORTLAND BOX SWEAT CREW Jack & Jones Sweatshirt, S, Beyaz	0	5003178442004	5715608606510	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Kids	Apparel	JACK & JONES	12263205 Jack & Jones Eşofman Altı, 14 Yaş, Siyah	0	5003176796003	5715610326703	CD01 EKOL DEPO'YA IADE	1	1	3244586
+İADE	Street wear	Apparel	JACK & JONES	12264635_JJPEAK SWEAT HOOD LN Jack & Jones Sweatshirt, M, Lacivert	0	5003178417003	5715604749969	CD01 EKOL DEPO'YA IADE	2	2	3244613
+İADE	Street wear	Apparel	JACK & JONES	12267766_JCOLINCOLN TEE SS CREW NEC Jack & Jones T-Shirt, S, Siyah	0	5003163096004	5715677749514	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	12267766_JCOLINCOLN TEE SS CREW NEC Jack & Jones T-Shirt, XL, Siyah	0	5003163096005	5715677749545	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Active & Outdoor	Active Shoes	SKECHERS	124960TK BBK GO WALK FLEX Skechers Yürüyüş Ayakkabısı, 36.5, Siyah	0	5003063702006	8683030246499	CD01 EKOL DEPO'YA IADE	1	1	3231901
+İADE	Active & Outdoor	Active Shoes	SKECHERS	129000 GYLM GO RUN ELEVATE 2.0 Skechers Koşu Ayakkabısı, 36.5, Gri	0	5003183179006	197976363113	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Shoes	SKECHERS	13143 LAV D'LÄ°TES-COOL CHANGE Skechers Lifestyle Ayakkabı, 37.5, Mor	0	5002940347004	195204888544	CD01 EKOL DEPO'YA IADE	1	1	3231901
+İADE	Active & Outdoor	Active Shoes	SKECHERS	13143 LAV D'LÄ°TES-COOL CHANGE Skechers Lifestyle Ayakkabı, 38, Mor	0	5002940347005	195204888551	CD01 EKOL DEPO'YA IADE	1	1	3231901
+İADE	Kids	Apparel	NAME İT	13227828 Name İt Parka, 8 Yaş, Siyah	0	5003182652006	5715509887674	CD01 EKOL DEPO'YA IADE	1	1	3245956
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1361602-410 UA HG Armour Lng Shorts Under Armour Tayt, L, Lacivert	0	5003176620001	194514309756	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1369771 UA Fly Fast 3.0 Ankle Tigh Under Armour Tayt, M, Siyah	0	5002933604002	195252740580	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1373764-025 UA Vanish Woven 2in1 St Under Armour Şort, XL, Gri	0	5003176548004	197777336958	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1379587-025 UA M's Ch. Train Pant Under Armour Eşofman Altı, M, Gri	0	5003176247002	196884772345	CD01 EKOL DEPO'YA IADE	1	1	3232511
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1379592-001 UA M's Ch. Tracksuit Under Armour Eşofman Takımı, S, Siyah	0	5003176371003	196883830152	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1379592-006 UA M's Ch. Tracksuit Under Armour Eşofman Takımı, S, Siyah	0	5003176372003	197777487193	CD01 EKOL DEPO'YA IADE	2	2	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1379755-025 UA Rival Fleece Crew Under Armour Sweatshirt, S, Gri	0	5003057175003	196884798604	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1386502-001 UA Icon Flc Varsity Jkt Under Armour Zip Ceket, M, Siyah	0	5003176762002	197777199959	CD01 EKOL DEPO'YA IADE	2	2	3246458
+İADE	Kids	Active Apparel	UNDER ARMOUR	1386528-001-UA Icon Knit Crop Track Under Armour Eşofman T, 13-14 Yaş, Siyah	0	5003180152002	197777186300	CD01 EKOL DEPO'YA IADE	1	1	3246557
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1387108-114 Curry Hvyweight Trend T Under Armour T-Shirt, M, Beyaz	0	5003176678002	197777657442	CD01 EKOL DEPO'YA IADE	1	1	3238905
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1388902-001 UNSTOPPABLE INS JACKET Under Armour Zip Ceket, M, Siyah	0	5003176734002	197778093577	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Apparel	UNDER ARMOUR	1388902-001 UNSTOPPABLE INS JACKET Under Armour Zip Ceket, S, Siyah	0	5003176734003	197778093591	CD01 EKOL DEPO'YA IADE	1	1	3246458
+İADE	Active & Outdoor	Active Shoes	SKECHERS	150141TK DKRS TRACK Skechers Lifestyle Ayakk, 40, Koyu Pembe	0	5003063653005	8683030245430	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Shoes	SKECHERS	172084 WSL GO RUN PERSİSTENCE 2 Skechers Koşu Ayakkabısı, 39, Beyaz	0	5003205426004	197976058583	CD01 EKOL DEPO'YA IADE	1	1	3231901
+İADE	Shoes & Bags	Mens Shoes	DIRK BIKKEMBERGS	19125/CP Dirk Bikkembergs Sneaker, 42, Beyaz	0	5003041072003	8000000263575	CD01 EKOL DEPO'YA IADE	1	1	3239864
+İADE	Active & Outdoor	Active Shoes	PUMA	19370305 SOFTRIDE VITAL Puma Koşu Ayakkabısı, 42.5, Siyah	0	5002928244008	4062453245342	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19370305 SOFTRIDE VITAL Puma Koşu Ayakkabısı, 44, Siyah	0	5002928244005	4062453245366	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19520105 Flyer Flex Puma Koşu Ayakkabısı, 41, Siyah	0	5002995036001	4063699726381	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19520105 Flyer Flex Puma Koşu Ayakkabısı, 42, Siyah	0	5002995036002	4063699726398	0	4	4	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19520105 Flyer Flex Puma Koşu Ayakkabısı, 42.5, Siyah	0	5002995036003	4063699726404	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19520105 Flyer Flex Puma Koşu Ayakkabısı, 43, Siyah	0	5002995036004	4063699726411	0	6	6	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19520105 Flyer Flex Puma Koşu Ayakkabısı, 44, Siyah	0	5002995036005	4063699726428	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	19520105 Flyer Flex Puma Koşu Ayakkabısı, 45, Siyah	0	5002995036006	4063699726442	0	3	3	3247984
+İADE	Shoes & Bags	Ladies Shoes	LEGERO	2-000249-1000 Legero Sneaker, 36, Beyaz	0	5003128283001	9010159513161	CD01 EKOL DEPO'YA IADE	1	1	3235865
+İADE	Shoes & Bags	Ladies Shoes	LEGERO	2-000334 Legero Sneaker, 39, Siyah	0	5003182257004	9010159430277	CD01 EKOL DEPO'YA IADE	1	1	3235865
+İADE	Ladies	Accessories	AKER EŞARP	2020100971 Aker Eşarp Şal, Standart, Antrasit	0	5002518199001	8697733748167	FIRMASINA IADE	2	2	3243821
+İADE	Active & Outdoor	Active Shoes	SKECHERS	216504 BKGY GO WALK FLEX - ANZA Skechers Yürüyüş Ayak, 43.5, Siyah - Gri	0	5003183287008	197976517158	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Street wear	Apparel	ONLY & SONS	22022369_ONSAVI BEAM LIFE DARK BLUE Only & Sons Denim Pantol, 32-32, Renksiz	0	5002930143004	5715212817395	CD01 EKOL DEPO'YA IADE	1	1	3237604
+İADE	Active & Outdoor	Active Shoes	SKECHERS	220835 OLV MAX CUSHİONİNG PREMİER 2 Skechers Outdoor Ayakkabısı, 43.5, Gri	0	5003183307008	197976365155	CD01 EKOL DEPO'YA IADE	2	2	3231901
+İADE	Active & Outdoor	Active Shoes	SKECHERS	220866 BBK GO RUN CONSİSTENT 2.0 Skechers Koşu Ayakkabısı, 42, Siyah	0	5003179899003	197627546025	CD01 EKOL DEPO'YA IADE	1	1	3231901
+İADE	Ladies	Apparel	LEE COOPER	232 LCF 144001 ESTA DENIM Lee Cooper Elbise, XS, Renksiz	0	5003003872004	8682272406890	CD01 EKOL DEPO'YA IADE	1	1	3246647
+İADE	Active & Outdoor	Active Shoes	SKECHERS	232656 BKCC SKECH-AİR VENTURA - CAT Skechers Lifestyle Ayak, 44, Siyah - Gri	0	5003183116005	198376040338	CD01 EKOL DEPO'YA IADE	2	2	3231901
+İADE	Active & Outdoor	Active Shoes	SKECHERS	232954 WCC SKECH-AİR VENTURA - VULS Skechers Outdoor Ayakkabısı, 42, Gri	0	5003205465003	198376041151	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Street wear	Apparel	KARL LAGERFELD JEANS	236D1603_KLJ MONOGRAM SHIRT Karl Lagerfeld Jeans Gömlek, L, Beyaz	0	5003107408001	8720744509677	CD01 EKOL DEPO'YA IADE	1	1	3246041
+İADE	Active & Outdoor	Active Shoes	SKECHERS	237620 BKCC SUMMİTS AT - UPPER DRAF Skechers Lifestyle Ay, 42.5, Siyah - Gri	0	5003123620008	197627174259	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Kids	Apparel	AEROPOSTALE	23AERO-B1 Aeropostale Puffer Yel, 11-12 Yaş, Siyah	0	5002983341004	8683133776732	CD01 EKOL DEPO'YA IADE	1	1	3246002
+İADE	Ladies	Apparel	SELEN	23KSL6056 Selen Mont, 38, Siyah	0	5003075848001	8682019234588	CD01 EKOL DEPO'YA IADE	1	1	3240916
+İADE	Kids	Apparel	AEROPOSTALE	23SAG-18 Aeropostale Sweatshirt, 13-14 Yaş, Ekru	0	5002978706005	8683133738853	CD01 EKOL DEPO'YA IADE	1	1	3246002
+İADE	Street wear	Apparel	LEE COOPER	241 LCM 241020 WORLD SIYAH Lee Cooper Sweatshirt, L, Siyah	0	5003070800001	8682272502790	CD01 EKOL DEPO'YA IADE	1	1	3246773
+İADE	Ladies	Apparel	LEE COOPER	242 LCF 121010 SUSIE EASTER BLACK Lee Cooper Denim Pant, 28-30, Koyu Siyah	0	5003134552005	8682272523245	CD01 EKOL DEPO'YA IADE	1	1	3246647
+İADE	Street wear	Apparel	LEE COOPER	242 LCM 121026 JAGGER ELLERY BLUE L Lee Cooper Denim Pantolo, 32-32, Renksiz	0	5003132064006	8682272534715	CD01 EKOL DEPO'YA IADE	1	1	3234331
+İADE	Street wear	Apparel	LEE COOPER	242 LCM 242025 TWINS GÜL KURUSU Lee Cooper Polo T-Shirt, M, Gül Kurusu	0	5003132301003	8682272554089	CD01 EKOL DEPO'YA IADE	1	1	3237043
+İADE	Ladies	Apparel	SELEN	24YSL8829-BB Selen Yelek, 44, Mavi	0	5003145944002	8682019274805	CD01 EKOL DEPO'YA IADE	1	1	3247017
+İADE	Kids	Active Shoes	SKECHERS	252061L BKSL-RAZOR Skechers Futbol Ayakkabısı, 32, Siyah	0	5003183536001	197976563285	CD01 EKOL DEPO'YA IADE	1	1	3238742
+İADE	Shoes & Bags	Ladies Shoes	CAMPER	27205-286 Camper Klasik Ayakkabı, 39, Siyah	0	5003050634004	8432561822906	FIRMASINA IADE	1	1	3237370
+İADE	Active & Outdoor	Active Shoes	UNDER ARMOUR	3026727-001 UA Charged Edge Under Armour Lifestyle Ayak, 44.5, Siyah	0	5003122055006	196883919079	CD01 EKOL DEPO'YA IADE	1	1	3238905
+İADE	Active & Outdoor	Active Shoes	UNDER ARMOUR	3027707-700 UA U Magnetico Select 4 Under Armour Futbol Ayakkabısı, 41, Sarı	0	5003176355001	197777557629	CD01 EKOL DEPO'YA IADE	1	1	3238905
+İADE	Kids	Active Shoes	SKECHERS	303575L AQPR-MİCROSPEC ADVANCE Skechers Yürüyüş Ayakkab, 29, Çok Renkli	0	5003179709002	197976294448	CD01 EKOL DEPO'YA IADE	2	2	3245830
+İADE	Active & Outdoor	Active Shoes	PUMA	30966813 Puma Shuffle Puma Lifestyle Ayak, 42.5, Beyaz - Yeşil	0	5002732038004	4063699648232	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	30966813 Puma Shuffle Puma Lifestyle Ayak, 45.5, Beyaz - Yeşil	0	5002732038008	4063699648270	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	30966813 Puma Shuffle Puma Lifestyle Ayakka, 42, Beyaz - Yeşil	0	5002732038003	4063699648225	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	30966813 Puma Shuffle Puma Lifestyle Ayakka, 43, Beyaz - Yeşil	0	5002732038005	4063699648249	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	36986336 Caracal W Puma Lifestyle Ayakkabı, 40, Beyaz	0	5002995160007	4064536100661	0	3	3	3247984
+İADE	Kids	Active Shoes	PUMA	37048801 Puma Rebound Layup SL V PS Puma Yürüyüş Ayakkabısı, 28, Siyah	0	5003056777001	4060981200017	0	1	1	3247990
+İADE	Kids	Active Shoes	PUMA	37048801 Puma Rebound Layup SL V PS Puma Yürüyüş Ayakkabısı, 29, Siyah	0	5003056777002	4060981199861	0	2	2	3247990
+İADE	Kids	Active Shoes	PUMA	37048801 Puma Rebound Layup SL V PS Puma Yürüyüş Ayakkabısı, 30, Siyah	0	5003056777003	4060981199892	0	2	2	3247990
+İADE	Kids	Active Shoes	PUMA	37048801 Puma Rebound Layup SL V PS Puma Yürüyüş Ayakkabısı, 31, Siyah	0	5003056777004	4060981199793	0	1	1	3247990
+İADE	Active & Outdoor	Active Shoes	PUMA	37703601 Resolve Modern W Puma Koşu Ayakkabısı, 37, Siyah	0	5002995038002	4065449677578	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	37799502 Redeem Profoam Puma Koşu Ayakkabısı, 40, Beyaz	0	5002995080001	4065453461873	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	37799502 Redeem Profoam Puma Koşu Ayakkabısı, 42, Beyaz	0	5002995080003	4065453461903	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	37799502 Redeem Profoam Puma Koşu Ayakkabısı, 43, Beyaz	0	5002995080005	4065453461927	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	37799502 Redeem Profoam Puma Koşu Ayakkabısı, 44, Beyaz	0	5002995080006	4065453461934	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	37799502 Redeem Profoam Puma Koşu Ayakkabısı, 45, Beyaz	0	5002995080007	4065453461958	0	2	2	3247984
+İADE	Active & Outdoor	Active Apparel	SKECHERS	38-001M Essential Hoodie Sweatshirt Skechers Sweatshirt, L, Siyah	0	5003065003001	8683030230382	CD01 EKOL DEPO'YA IADE	2	2	3244725
+İADE	Active & Outdoor	Active Apparel	SKECHERS	38-001M Essential Hoodie Sweatshirt Skechers Sweatshirt, XL, Siyah	0	5003065003004	8683030230399	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 36, Gri	0	5003065921008	4065449585347	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 37, Gri	0	5003065921009	4065449585361	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 37.5, Gri	0	5003065921010	4065449585385	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 38, Gri	0	5003065921011	4065449585392	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 38.5, Gri	0	5003065921012	4065449585408	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 39, Gri	0	5003065921013	4065449585415	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 40, Gri	0	5003065921001	4065449585422	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 41, Gri	0	5003065921002	4065449585446	0	2	2	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 42, Gri	0	5003065921003	4065449585453	0	4	4	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 42.5, Gri	0	5003065921004	4065449585460	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 43, Gri	0	5003065921005	4065449585477	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 44, Gri	0	5003065921006	4065449585484	0	3	3	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	38015010Puma Shuffle Perf Puma Lifestyle Ayakkabı, 45, Gri	0	5003065921007	4065449585507	0	3	3	3247984
+İADE	Kids	Active Shoes	PUMA	38431105-Puma Rickie Jr Puma Yürüyüş Ayakkabısı, 35.5, Beyaz	0	5003169099006	4064536250960	0	1	1	3247990
+İADE	Kids	Active Shoes	PUMA	38431105-Puma Rickie Jr Puma Yürüyüş Ayakkabısı, 37, Beyaz	0	5003169099002	4064536250984	0	1	1	3247990
+İADE	Kids	Active Shoes	PUMA	38431105-Puma Rickie Jr Puma Yürüyüş Ayakkabısı, 38.5, Beyaz	0	5003169099004	4064536251035	0	1	1	3247990
+İADE	Kids	Apparel	BENETTON	3ATNC10KQ 100 Benetton T-Shirt, 10-11 Yaş, Siyah	0	5003184314001	2990023056307	FIRMASINA IADE	1	1	3234778
+İADE	Kids	Apparel	BENETTON	3ATNC10L0 0R2 Benetton T-Shirt, 6-7 Yaş, Ekru	0	5003184289004	2990023055119	FIRMASINA IADE	1	1	3234778
+İADE	Kids	Apparel	BENETTON	3EB5C10KS 507 Benetton Sweatshirt, 10-11 Yaş, Antrasit	0	5003184238001	2990023051388	FIRMASINA IADE	1	1	3234778
+İADE	Kids	Apparel	BENETTON	3EB5C10KS 507 Benetton Sweatshirt, 8-9 Yaş, Antrasit	0	5003184238006	2990023051418	FIRMASINA IADE	1	1	3234778
+İADE	Kids	Apparel	BENETTON	3EB5C203U 252 Benetton Sweatshirt, 7-8 Yaş, Lacivert	0	5003184246005	2990023051043	FIRMASINA IADE	1	1	3234778
+İADE	Kids	Apparel	BENETTON	3J68CF01O 252 Benetton Eşofman Altı, 6-7 Yaş, Lacivert	0	5002944902004	8033261819847	FIRMASINA IADE	2	2	3234778
+İADE	Kids	Apparel	BENETTON	3J68CF01O 501 Benetton Eşofman Al, 6-7 Yaş, Gri Melanj	0	5002944907004	8033261819779	FIRMASINA IADE	1	1	3234778
+İADE	Active & Outdoor	Active Shoes	NEW BALANCE	411 M411BB2-NB RUNNING MEN'S SHOES New Balance Koşu Ayakkabısı, 44, Siyah	0	5003216501005	196941052090	CD01 EKOL DEPO'YA IADE	1	1	3246433
+İADE	Kids	Underwear	BLACKSPADE	42-9996-Termal Çor Blackspade Spor, 9-12 Yaş, Koyu Antrasit	0	5001803788002	8698773161923	FIRMASINA IADE	1	1	3234790
+İADE	Active & Outdoor	Active Apparel	SKECHERS	43-001W Essential Hoodie Sweatshirt Skechers Sweatshirt, L, Siyah	0	5003064989001	8683030232744	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Kids	Active Apparel	NIKE	45D295-B1Q-JDG BROOKLYN ESSENTIALS Nike Eşofman Altı, 14-16 Yaş, Mavi	0	5003178813003	196923558701	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A0124200091 Altınyıldız Classics Panto, 56, Lacivert	0	5003136334005	8684310099422	CD01 EKOL DEPO'YA IADE	1	1	3246650
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A0124200200_BEJ Altınyıldız Classics Pantolon, 32, Bej	0	5003253458003	8684310166506	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A0124200200_BEJ Altınyıldız Classics Pantolon, 33, Bej	0	5003253458004	8684310166513	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A0124200200_TAS Altınyıldız Classics Pantolon, 33, Taş	0	5003253500004	8684310166698	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A0124200200_TAS Altınyıldız Classics Pantolon, 34, Taş	0	5003253500005	8684310166704	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A1025100001_OVERCOAT Altınyıldız Classics Mont, 58, Bej	0	5003206908007	8684310294810	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A2000000021 Altınyıldız Classics Gömle, S, Açık Mavi	0	5002421277003	2850001266459	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A2000000060 Altınyıldız Classics Gömlek, M, Beyaz	0	5003242148001	2850001854328	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Accessories	ALTINYILDIZ CLASSICS	4A2922200017 Altınyıldız Classics Mend, Standart, Gri	0	5002909247001	2850002192955	FIRMASINA IADE	5	5	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3023200017 Altınyıldız Classics Takım El, 48, Siyah	0	5003005654003	8683689606934	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3023200022 Altınyıldız Classics Takım, 46, Antrasit	0	5003005627001	8683689605173	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3024100009 Altınyıldız Classics Takım, 48-6, Siyah	0	5003066511002	8683689817972	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3024100009 Altınyıldız Classics Takım, 50-6, Siyah	0	5003066511003	8683689808741	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3024100016 Altınyıldız Classics Takım, 50-6, Siyah	0	5003066496004	8683689808666	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3024200004 Altınyıldız Classics Tak, 50-6, Lacivert	0	5003136444003	8684310016979	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3024200004 Altınyıldız Classics Tak, 52-6, Lacivert	0	5003136444004	8684310016788	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4A3024200014 Altınyıldız Classics Takım, 52-6, Vizon	0	5003136492004	8684310017075	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Accessories	ALTINYILDIZ CLASSICS	4A4123100506 Altınyıldı, Standart, Kırmızı - Lacivert	0	5002968651001	8683689556536	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Accessories	ALTINYILDIZ CLASSICS	4A4123100507 Altınyıldız Class, Standart, Siyah - Gri	0	5002968670001	8683689556505	FIRMASINA IADE	3	3	3241584
+İADE	Mens	Accessories	ALTINYILDIZ CLASSICS	4A4123100510 Altınyıldız Class, Standart, Siyah - Gri	0	5002979775001	8683689556529	FIRMASINA IADE	4	4	3241584
+İADE	Mens	Apparel	BEYMEN BUSINESS	4B0123100044_SYH Beymen Business Pantolon, 52, Siyah	0	5003252928004	8684310072562	FIRMASINA IADE	3	3	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	4B0124100039_TRR Beymen Business Pan, 48, Antrasit Melanj	0	5003252940002	8683689896557	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	4B0124100039_TRR Beymen Business Pan, 50, Antrasit Melanj	0	5003252940003	8683689770611	FIRMASINA IADE	2	2	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	4B0124100041 Beymen Business Pantolon, 62, Antrasit	0	5003224726007	8683689896786	FIRMASINA IADE	2	2	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	4B0725100005_KABAN Beymen Business Kaban, 50, Siyah	0	5003207677003	8684310310428	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Accessories	BEYMEN BUSINESS	4B2924100011 Beymen Business M, Standart, Gri - Siyah	0	5003097054001	8684310077987	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4C0724100002 Altınyıldız Classics Kaban, 50, Antrasit	0	5003208884003	8683689770062	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4C0724100002 Altınyıldız Classics Kaban, 52, Antrasit	0	5003208884004	8683689920306	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4C0724100004 Altınyıldız Classics Kaban, 52, Haki	0	5003066680004	8683689920566	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4C0924100001 Altınyıldız Classics Yelek, 50, Gri	0	5003208924003	8683689952277	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	4C0924100001 Altınyıldız Classics Yelek, 52, Gri	0	5003208924004	8683689952284	FIRMASINA IADE	1	1	3241584
+İADE	Active & Outdoor	Active Shoes	NEW BALANCE	500 GM500NLN-NB LIFESTYLE MEN SHOES New Balance Lifestyle Ay, 42.5, Lacivert	0	5003206999004	197967465918	CD01 EKOL DEPO'YA IADE	1	1	3246433
+İADE	Active & Outdoor	Active Shoes	NEW BALANCE	500 GW500BLB LIFESTYLE WOMEN SHOES New Balance Lifestyle Ayakk, 37.5, Siyah	0	5003207050003	197967466342	CD01 EKOL DEPO'YA IADE	1	1	3240002
+İADE	Active & Outdoor	Active Apparel	PUMA	52307401 Puma Fit Eversculpt HW 7/8 Puma Tayt, L, Siyah	0	5003039329001	4065453005923	CD01 EKOL DEPO'YA IADE	1	1	3246594
+İADE	Kids	Underwear	BLACKSPADE	52-9255 Blackspade Şapka, Standart, Siyah	0	5000835824001	8698773034746	FIRMASINA IADE	5	5	3234790
+İADE	Active & Outdoor	Active Shoes	NEW BALANCE	574 U574RBG-NB LIFESTYLE WOMEN SHOE New Balance Lifestyle Ayakk, 37.5, Siyah	0	5003185403002	197376886991	CD01 EKOL DEPO'YA IADE	1	1	3246433
+İADE	Active & Outdoor	Active Shoes	NEW BALANCE	574 WL574AJ2 LIFESTYLE WOMEN SHOES New Balance Lifestyle, 40.5, Açık Yeşil	0	5003056125007	196941305011	CD01 EKOL DEPO'YA IADE	1	1	3246433
+İADE	Active & Outdoor	Active Shoes	NEW BALANCE	574 WL574DK2 LIFESTYLE WOMEN SHOES New Balance Lifestyle Ayakkab, 39, Siyah	0	5003221712005	197966555788	CD01 EKOL DEPO'YA IADE	1	1	3246433
+İADE	Active & Outdoor	Active Shoes	NIKE	580518-106 NIKE AIR MAX IVO Nike Koşu Ayakkabısı, 40, Beyaz	0	5003148096001	885178654541	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Ladies	Apparel	KOTON	5WAK00110EW Koton Manto, 34, Siyah	0	5003170060001	8684288551908	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK00110EW Koton Manto, 44, Siyah	0	5003170060006	8684288551953	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK20059EW Koton Ceket, 34, Ekru	0	5003170027001	8684288554152	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK40002PW Koton Pantolon, 36, Siyah	0	5003183768002	8684287411913	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK40002PW Koton Pantolon, 38, Siyah	0	5003183768003	8684287411920	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK40023UW Koton Pantolon, 36, Lacivert	0	5003170054002	8684288607841	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK60006UW Koton Gömlek, 40, Siyah	0	5003170100004	8684288455916	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK70102PW Koton Etek, 34, Siyah	0	5003225045001	8684630140316	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK80003UW Koton Elbise, 38, Siyah	0	5003183769003	8684287546813	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAK90187HT Koton Kazak, M, Ekru	0	5003225034002	8684288163538	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Ladies	Apparel	KOTON	5WAL40009IK Koton Eşofman Altı, S, Siyah	0	5003170152003	8684287434882	CD01 EKOL DEPO'YA IADE	1	1	3233523
+İADE	Ladies	Apparel	KOTON	5WAL40009IK Koton Eşofman Altı, XS, Siyah	0	5003170152005	8684287434905	CD01 EKOL DEPO'YA IADE	1	1	3233523
+İADE	Ladies	Apparel	KOTON	5WAL40009MW Koton Pantolon, 34, Siyah	0	5003170147001	8684287435667	CD01 EKOL DEPO'YA IADE	1	1	3233523
+İADE	Ladies	Apparel	KOTON	5WAL40020MD Koton Pantolon, 27, Koyu İndigo	0	5003170171003	8684287443655	CD01 EKOL DEPO'YA IADE	1	1	3244464
+İADE	Kids	Apparel	KOTON	5WKB40010TD Koton Denim Pantolon, 11-12 Yaş, Siyah	0	5003231499001	8684288489089	CD01 EKOL DEPO'YA IADE	1	1	3245591
+İADE	Kids	Apparel	KOTON	5WKB40057TW Koton Chino Pantol, 11-12 Yaş, Camel	0	5003224782001	8684289609509	CD01 EKOL DEPO'YA IADE	1	1	3232799
+İADE	Kids	Apparel	KOTON	5WKB40066TW Koton Pantolon, 6-7 Yaş, Siyah	0	5003224776004	8684290091324	CD01 EKOL DEPO'YA IADE	1	1	3232799
+İADE	Kids	Apparel	KOTON	5WKG10406AK Koton T-Shirt, 7-8 Yaş, Ekru	0	5003224815005	8684289590807	CD01 EKOL DEPO'YA IADE	1	1	3245591
+İADE	Active & Outdoor	Accessories & Equipments	NEW ERA	60435588 CAMO 9FIFTY PC MCLAREN  XM New Era Şapka, S-M, Yeşil	0	5003144601002	197373922227	CD01 EKOL DEPO'YA IADE	1	1	3235773
+İADE	Ladies	Accessories	PIERRE CARDIN	6592799917 Pierre Cardin Eşarp, Standart, Kırmızı	0	5002796308001	8697733836598	FIRMASINA IADE	1	1	3243817
+İADE	Active & Outdoor	Active Apparel	PUMA	67600701-HER Straight Pants Puma Eşofman Altı, L, Siyah	0	5003056514001	4099683965269	0	1	1	3247984
+İADE	Active & Outdoor	Active Apparel	PUMA	67600701-HER Straight Pants Puma Eşofman Altı, M, Siyah	0	5003056514002	4099683965252	0	1	1	3247984
+İADE	Active & Outdoor	Active Apparel	PUMA	67600701-HER Straight Pants Puma Eşofman Altı, S, Siyah	0	5003056514003	4099683965245	0	1	1	3247984
+İADE	Active & Outdoor	Active Apparel	PUMA	67600701-HER Straight Pants Puma Eşofman Altı, XL, Siyah	0	5003056514004	4099683965221	0	1	1	3247984
+İADE	Active & Outdoor	Active Apparel	PUMA	67788983 HER High-Waist Pants TR Puma Eşofman Altı, L, Ten	0	5003118547004	4099685449538	CD01 EKOL DEPO'YA IADE	1	1	3246594
+İADE	Active & Outdoor	Active Apparel	PUMA	67896986 PUMA SQUAD Hoodie Puma Sweatshirt, 2XL, Yeşil	0	5003118676001	4099685650859	CD01 EKOL DEPO'YA IADE	1	1	3246594
+İADE	Ladies	Accessories	AKER EŞARP	6812797972 Aker Eşarp Şal, Standart, Çok Renkli	0	5002634365001	8697733766864	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	6812797998 Aker Eşarp Eşarp, Standart, Mor	0	5002899442001	8697733841813	FIRMASINA IADE	1	1	3243821
+İADE	Active & Outdoor	Accessories & Equipments	NIKWAX	772P24 Nikwax Temizleme Süng, Standart, Renksiz	0	5002340246001	5020716772003	CD01 EKOL DEPO'YA IADE	1	1	3245550
+İADE	Ladies	Accessories	AKER EŞARP	797Y19 Aker Sport Aker Eşarp Eşarp, Standart, Lacivert	0	5002388501001	8697733718887	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8015816913 Aker Eşarp Eşarp, Standart, Kahve	0	5002871164001	8697733844333	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8015816922 Aker Eşarp Eşarp, Standart, Mavi	0	5002871174001	8697733845347	FIRMASINA IADE	4	4	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8016816912 Aker Eşarp Eşarp, Standart, Siyah	0	5002871185001	8697733844067	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8016816921 Aker Eşarp Eşarp, Standart, Mavi	0	5002871213001	8697733845019	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8109816951 Aker Eşarp Eşarp, Standart, Haki	0	5002871298001	8697733850082	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8208713991 Aker Eşarp Eşarp, Standart, Pudra	0	5002800325001	8697733798636	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8235713921 Aker Eşarp Eşarp, Standart, Lacivert	0	5002800505001	8697733810970	FIRMASINA IADE	1	1	3243821
+İADE	Shoes & Bags	Ladies Bags & SLG	GAP	8238 Gap Omuz Çantası, Standart, Taş	0	5003087906001	8683876082381	CD01 EKOL DEPO'YA IADE	1	1	3245715
+İADE	Ladies	Accessories	AKER EŞARP	8269713931 Aker Eşarp Eşarp, Standart, Kahve	0	5002800787001	8697733793358	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	PIERRE CARDIN	8341438991 Pierre Cardin Eşarp, Standart, Bordo	0	5002968206001	8697733831500	FIRMASINA IADE	1	1	3243817
+İADE	Ladies	Accessories	AKER EŞARP	8449701371 Aker Eşarp Eşarp, Standart, Gri	0	5003095294001	8697733833436	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8582701314 Aker Eşarp Eşarp, Standart, Siyah	0	5003098078001	8697733858026	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8602795922 Aker Eşarp Eşarp, Standart, Mavi	0	5002979081001	8697733861705	FIRMASINA IADE	1	1	3243821
+İADE	Ladies	Accessories	AKER EŞARP	8604795962 Aker Eşarp Eşarp, Standart, Vizon	0	5002979084001	8697733861828	FIRMASINA IADE	1	1	3243821
+İADE	Active & Outdoor	Accessories & Equipments	SPEEDO	8-709290001 SPEEDO Speedo Bone, Standart, Siyah	0	5001606497001	5051746540195	CD01 EKOL DEPO'YA IADE	1	1	3236173
+İADE	Active & Outdoor	Active Shoes	SKECHERS	88888036TK WSL BURST 2.0 Skechers Yürüyüş Ayak, 37, Beyaz - Gümüş	0	5003123623002	8683030636511	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Kids	Active Shoes	HUMMEL	900642-3241-HML ZAC JR. Hummel Koşu Ayakkabısı, 34, Pembe	0	5003174238009	8682902909159	CD01 EKOL DEPO'YA IADE	2	2	3237031
+İADE	Kids	Active Accessories	CONVERSE	9A5579-F69-CAN CNV MULTIVERSE Converse Sırt Ça, Standart, Lila - Siyah	0	5003176960001	196923177469	CD01 EKOL DEPO'YA IADE	1	1	3235762
+İADE	Active & Outdoor	Active Shoes	CONVERSE	A08101C CHUCK TAYLOR ALL STAR GR Converse Lifestyle Ayakkabı, 40, Siyah	0	5003123042006	194434671223	CD01 EKOL DEPO'YA IADE	1	1	3246397
+İADE	Active & Outdoor	Active Shoes	CONVERSE	A08578C.213-Chuck Taylor All Star H Converse Lifestyle Ayakkabı, 38, Turuncu	0	5003186282003	194434999426	CD01 EKOL DEPO'YA IADE	1	1	3246397
+İADE	Active & Outdoor	Active Shoes	CONVERSE	A08581C.216-Chuck Taylor All Star H Converse Lifestyle Ayakkabı, 43, Vizon	0	5003186283003	194435000190	CD01 EKOL DEPO'YA IADE	1	1	3246397
+İADE	Shoes & Bags	Ladies Shoes	LUMBERJACK	A10154357312010 Lumberjack Sneaker, 39, Beyaz	0	5003140235004	8684096675742	CD01 EKOL DEPO'YA IADE	1	1	3246466
+İADE	Shoes & Bags	Ladies Shoes	LUMBERJACK	A10178321812010 Lumberjack Kar Botu, 39, Bej	0	5003181792004	8684365047652	CD01 EKOL DEPO'YA IADE	1	1	3246466
+İADE	Shoes & Bags	Ladies Shoes	LUMBERJACK	A10191544612010 Lumberjack Kar Botu, 39, Siyah	0	5003181793004	8684365737409	CD01 EKOL DEPO'YA IADE	1	1	3246466
+İADE	Ladies	Apparel	AEROPOSTALE	A3WL-KZK5 Aeropostale Kazak, L, Siyah - Beyaz	0	5003039696004	8683133946074	CD01 EKOL DEPO'YA IADE	1	1	3244950
+İADE	Ladies	Apparel	AEROPOSTALE	A3WL-PNT5 Aeropostale Denim Pantolon, 28, Siyah	0	5003034889004	8683133925192	CD01 EKOL DEPO'YA IADE	1	1	3244950
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE001251279_SYH Altınyıldız Classics Denim Pa, 32, Siyah	0	5003253475002	8684310681160	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE001251279_SYH Altınyıldız Classics Denim Pa, 33, Siyah	0	5003253475003	8684310681177	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE012510181_PANTOLON YAN CEP Altınyıldız Classics Pantolon, 46, Kahve	0	5003207685001	8684310551760	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE012510181_PANTOLON YAN CEP Altınyıldız Classics Pantolon, 50, Kahve	0	5003207685003	8684310551784	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE012510181_PANTOLON YAN CEP Altınyıldız Classics Pantolon, 50, Siyah	0	5003207043003	8684310551920	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE012510181_PANTOLON YAN CEP Altınyıldız Classics Pantolon, 56, Kahve	0	5003207685006	8684310551814	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE012510181_PANTOLON YAN CEP Altınyıldız Classics Pantolon, 58, Kahve	0	5003207685007	8684310551821	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE012510181_PANTOLON YAN CEP Altınyıldız Classics Pantolon, 58, Siyah	0	5003207043007	8684310551968	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510104_CEKET TERI Altınyıldız Classics Ce, 46-6, Bej - Gri	0	5003207082001	8684310353135	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510104_CEKET TERI Altınyıldız Classics Ce, 48-6, Bej - Gri	0	5003207082002	8684310353142	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510104_CEKET TERI Altınyıldız Classics Ce, 52-6, Bej - Gri	0	5003207082004	8684310353166	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510104_CEKET TERI Altınyıldız Classics Ce, 54-6, Bej - Gri	0	5003207082005	8684310353173	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510112_CEKET TACT Altınyıldız Classics C, 46-6, Açık Kahve	0	5003207072001	8684310323671	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510112_CEKET TACT Altınyıldız Classics C, 54-6, Açık Kahve	0	5003207072005	8684310323718	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510112_CEKET TACT Altınyıldız Classics C, 56-6, Açık Kahve	0	5003207072006	8684310323725	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510156_CEKET TASU-2 Altınyıldız Classics Cek, 46-6, Lacivert	0	5003207093001	8684310385877	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE042510156_CEKET TASU-2 Altınyıldız Classics Cek, 56-6, Lacivert	0	5003207093006	8684310385914	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE049251314_BMJ Altınyıldız Classics Kaza, S, Bej Melanj	0	5003234000004	8684310709598	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE052510022_PALTO Altınyıldız Classics Palto, 50, Lacivert	0	5003207715003	8684310542126	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE072510019_KABAN Altınyıldız Classics Kaban, 50, Lacivert	0	5003207086003	8684310338385	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE072510024_KABAN Altınyıldız Classics Kaban, 48, Siyah	0	5003207110002	8684310399836	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE072510024_KABAN Altınyıldız Classics Kaban, 52, Siyah	0	5003207110004	8684310399829	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE092510003_YELEK CASUAL Altınyıldız Classics Yelek, 46, Bej	0	5003207720001	8684310396460	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE092510003_YELEK CASUAL Altınyıldız Classics Yelek, 48, Bej	0	5003207720002	8684310396552	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510015_GÖMLEK PAR DY Altınyıldız Classics Gömlek, M, Bej	0	5003207131003	8684310352992	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510022_GÖMLEK PAR DY Altınyıldız Classics Gömle, XL, Antrasit	0	5003207113005	8684310340012	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510022_GÖMLEK PAR DY Altınyıldız Classics Gömlek, L, Antrasit	0	5003207113002	8684310339986	FIRMASINA IADE	3	3	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510026_GÖMLEK PAR NM Altınyıldız Classics G, 2XL, Beyaz - Bej	0	5003207115001	8684310340128	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510026_GÖMLEK PAR NM Altınyıldız Classics Göm, L, Beyaz - Bej	0	5003207115002	8684310340081	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510026_GÖMLEK PAR NM Altınyıldız Classics Göm, S, Beyaz - Bej	0	5003207115004	8684310340104	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510035_GÖMLEK PAR NM Altınyıldız Classics Gömlek, L, Mavi	0	5003207123002	8684310340661	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510053_GÖMLEK PAR NM Altınyıldız Class, 3XL, Beyaz - Lacivert	0	5003207078002	8684310537566	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510053_GÖMLEK PAR NM Altınyıldız Class, 4XL, Beyaz - Lacivert	0	5003207078003	8684310537573	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510053_GÖMLEK PAR NM Altınyıldız Classic, M, Beyaz - Lacivert	0	5003207078005	8684310340333	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510073_GÖMLEK PAR DY Altınyıldız Classics Gö, L, Beyaz - Haki	0	5003207079002	8684310340500	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510301_GÖMLEK CEN DY Altınyıldız Classics Gömle, M, Açık Mavi	0	5003207134005	8684310361895	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510302_GÖMLEK PAR NM Altınyıldız Classics Gömle, M, Açık Mavi	0	5003207119003	8684310361734	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510302_GÖMLEK PAR NM Altınyıldız Classics Gömlek, L, Siyah	0	5003207150002	8684310363127	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510302_GÖMLEK PAR NM Altınyıldız Classics Gömlek, M, Siyah	0	5003207150003	8684310361758	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömle, XL, Açık Gri	0	5003207126005	8684310363189	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömle, XL, Antrasit	0	5003207127005	8684310363226	FIRMASINA IADE	3	3	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömle, XL, Lacivert	0	5003207137005	8684310363387	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömlek, M, Açık Gri	0	5003207126003	8684310361840	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömlek, M, Antrasit	0	5003207127003	8684310361857	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömlek, M, Lacivert	0	5003207137003	8684310361826	FIRMASINA IADE	2	2	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömlek, S, Açık Gri	0	5003207126004	8684310363172	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510303_GÖMLEK PAR DY Altınyıldız Classics Gömlek, S, Lacivert	0	5003207137004	8684310363370	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE202510304_GÖMLEK PAR DY Altınyıldız Classics Gömlek, S, Lacivert	0	5003207138004	8684310363493	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE482510019_TSHIRT POLO YAKA Altınyıldız Classics T-Shirt, L, Haki	0	5003207146002	8684310350202	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE492510016_TRIKO V YAKA Altınyıldız Classics Kazak, XL, Lacivert	0	5003207214005	8684310365312	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE492511200_TRIKO YARIM BALIKCI YA Altınyıldız Classics Kaza, L, Gri Melanj	0	5003207320002	8684310350011	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE492511200_TRIKO YARIM BALIKCI YA Altınyıldız Classics Kaza, M, Gri Melanj	0	5003207320003	8684310350028	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ACE492511200_TRIKO YARIM BALIKCI YA Altınyıldız Classics Kazak, L, Siyah	0	5003207287002	8684310351858	FIRMASINA IADE	2	2	3241584
+İADE	Active & Outdoor	Active Shoes	JOMA	ACUS2402FG AGUILA CUP 2402 WHITE BL Joma Futbol Ayakkabıs, 41, Beyaz - Siyah	0	5003183767001	8445954231421	CD01 EKOL DEPO'YA IADE	1	1	3233300
+İADE	Shoes & Bags	Ladies Bags & SLG	FABRIKA	ADARA-CANDE Fabrika Çapraz Çanta, Bedensiz, Siyah	0	5003153622001	8684024311506	CD01 EKOL DEPO'YA IADE	1	1	3237977
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO 01 CRAYZ Aeropostale Kemer, 110 cm, Lacivert	0	5002924909001	8683133521035	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO 11 DNA Aeropostale Kemer, 110 cm, Siyah	0	5002924947001	8683133522001	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO 13 BOL Aeropostale Kemer, 120 cm, Siyah	0	5002924971002	8683133521653	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO 14 LOD Aeropostale Kemer, 110 cm, Siyah	0	5002924958001	8683133521998	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO 15 AS Aeropostale Kemer, 110 cm, Siyah	0	5002924972001	8683133521677	IADE X-DOCK DEPO	3	3	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Crayz 005 Aeropostale Kemer, 110 cm, Siyah	0	5003045769001	8683133984878	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Diego 011 Aeropostale Kemer, 110 cm, Siyah	0	5003045832001	8683133985653	IADE X-DOCK DEPO	3	3	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Gana 001 Aeropostale Kemer, 110 cm, Siyah	0	5003045812001	8683133985042	IADE X-DOCK DEPO	4	4	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Hapy 009 Aeropostale Kemer, 110 cm, Siyah	0	5003045814001	8683133985073	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Kare 003 Aeropostale Kemer, 110 cm, Siyah	0	5003045784001	8683133985363	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Kot 004 Aeropostale Kemer, 110 cm, Siyah	0	5003045798001	8683133984793	IADE X-DOCK DEPO	2	2	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Nato 002 Aeropostale Kemer, 110 cm, Lacivert	0	5003045801001	8683133985271	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Retro 012 Aeropostale Kemer, 110 cm, Lacivert	0	5003045851001	8683133985967	IADE X-DOCK DEPO	4	4	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Retro 012 Aeropostale Kemer, 130 cm, Lacivert	0	5003045851003	8683133985981	IADE X-DOCK DEPO	1	1	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Src 007 Aeropostale Kemer, 110 cm, Siyah	0	5003045788001	8683133985783	IADE X-DOCK DEPO	2	2	3241433
+İADE	Shoes & Bags	Mens Bags & SLG	AEROPOSTALE	AERO Src 007 Aeropostale Kemer, 130 cm, Siyah	0	5003045788003	8683133985806	IADE X-DOCK DEPO	1	1	3241433
+İADE	Active & Outdoor	Active Shoes	JOMA	AGUS2321FG AGUILA 2321 BLACK FIRM G Joma Futbol Ayakkabısı, 44, Siyah	0	5003183782005	8445757272799	CD01 EKOL DEPO'YA IADE	1	1	3239976
+İADE	Shoes & Bags	Mens Shoes	FABRIKA	ALANDRA Fabrika Bot, 41, Vizon	0	5003043318002	8683133974428	CD01 EKOL DEPO'YA IADE	1	1	3237977
+İADE	Active & Outdoor	Outdoor Apparel	BILLABONG	ALL DAY LB Billabong Şort Mayo, S, Lacivert	0	5002681201003	3664564967901	CD01 EKOL DEPO'YA IADE	1	1	3239220
+İADE	Shoes & Bags	Mens Shoes	DISCOVERY EXPEDITION	ANSAN NEW Discovery Expedition Outdoor A, 44, Haki	0	5003039557005	8683133943790	CD01 EKOL DEPO'YA IADE	1	1	3239590
+İADE	Active & Outdoor	Active Shoes	PUMA	Anzarun Lite 37112801 Puma Lifestyle Ayakkabı, 37, Siyah	0	5002543087002	4062451626679	0	1	1	3247984
+İADE	Active & Outdoor	Active Shoes	PUMA	Anzarun Lite 37112801 Puma Lifestyle Ayakkabı, 40, Siyah	0	5002543087005	4062451626853	0	1	1	3247984
+İADE	Active & Outdoor	Active Apparel	NIKE	AR6029-085 M NK DF TEE DFC CREW SOL Nike T-Shirt, L, Beyaz	0	5003152080001	196977712364	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Shoes & Bags	Mens Shoes	FABRIKA	ASCOLI Fabrika Sneaker, 43, Siyah	0	5002919280004	8683133427030	CD01 EKOL DEPO'YA IADE	1	1	3237977
+İADE	Ladies	Apparel	FABRIKA	BARCEL-2 Fabrika Etek, 36, Yeşil	0	5002913241002	8683133367640	CD01 EKOL DEPO'YA IADE	1	1	3239960
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE012510083_PANTOLON KLASIK YAN CE Beymen Business Pantolon, 48, Lacivert	0	5003207278002	8684310355023	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE012510092_PANTOLON YAN CEP BELİ Beymen Business Pantolon, 56, Lacivert	0	5003207313005	8684310360966	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE012510164_PANTOLON KLASIK YAN CE Beymen Business Pantolon, 56, Lacivert	0	5003207336005	8684310389899	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE012510170_PANTOLON KLASIK YAN CE Beymen Business Pantolon, 48, Siyah	0	5003207383002	8684310361482	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE012510176_PANTOLON YAN CEP PARCA Beymen Business Pantolon, 58, Bej	0	5003207412006	8684310553221	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE202510086_GÖMLEK TALI Beymen Business Göml, 4XL, Siyah - Beyaz	0	5003207446003	8684310537610	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE202510104_GÖMLEK VERNI Beymen Business Gömlek, M, Beyaz - Gri	0	5003207447003	8684310357157	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE202510308_GÖMLEK VERNİ Beymen Business Gömlek, S, Beyaz	0	5003207456004	8684310381763	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE202510308_GÖMLEK VERNİ Beymen Business Gömlek, XL, Beyaz	0	5003207456005	8684310381770	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE202510309_GÖMLEK TALİ Beymen Business Gömlek, 4XL, Açık Mavi	0	5003207438003	8684310537658	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE202510310_GÖMLEK VERNİ Beymen Business G, 2XL, Lacivert - Beyaz	0	5003207484001	8684310382784	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE492510130_TRIKO BISIKLET YAKA Beymen Business Kazak, M, Ekru	0	5003207491003	8684310343617	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE492510207_TRIKO BISIKLET YAKA Beymen Business Kazak, S, Siyah	0	5003207543004	8684310345178	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BEYMEN BUSINESS	BBE492510216_TRIKO TAM BALIKCI YAKA Beymen Business Kazak, M, Vizon	0	5003207494003	8684310343310	FIRMASINA IADE	1	1	3241560
+İADE	Mens	Apparel	BROOKS BROTHERS	BBFW24MJC015 Brooks Brothers Mont, L, Haki	0	5003235697003	8684497210924	FIRMASINA IADE	1	1	3247286
+İADE	Mens	Apparel	BROOKS BROTHERS	BBFW24MKL006 Brooks Brothers Kazak, M, Mavi	0	5003209268003	8684497130185	FIRMASINA IADE	1	1	3247286
+İADE	Mens	Apparel	BROOKS BROTHERS	BBFW24MPT002 Brooks Brothers Pantolon, 50, Lacivert	0	5003209371003	8684497152507	FIRMASINA IADE	1	1	3247286
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Beetle Camper Günlük Ayakkabı, 40, Koyu Yeşil	0	5003185210001	8432936747148	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Beetle Camper Sneaker, 45, Beyaz	0	5003169073006	8432561707814	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Mens Shoes	SKECHERS	BENGAO  -  HOMBRE Skechers Günlük Ayakkabı, 41, Koyu Kahve	0	5003177220002	194428031538	CD01 EKOL DEPO'YA IADE	1	1	3233520
+İADE	Shoes & Bags	Mens Shoes	FABRIKA	BENJI-AMYAS Fabrika Sneaker, 40, Siyah	0	5003156231001	8684024349141	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Kids	Shoes	BENETTON	BN-1420 Benetton Terlik, 32, Siyah	0	5003251530002	8684390309145	CD01 EKOL DEPO'YA IADE	1	1	3236141
+İADE	Shoes & Bags	Mens Shoes	DISCOVERY EXPEDITION	BORYONG NEW Discovery Expedition Outdoor B, 42, Haki	0	5003039554003	8683133943004	CD01 EKOL DEPO'YA IADE	1	1	3244265
+İADE	Kids	Apparel	BARBIE	BRB4WG-ELB6098 Barbie Abiye Elbise, 5-6 Yaş, Gümüş	0	5003153343002	8684024309633	CD01 EKOL DEPO'YA IADE	1	1	3246306
+İADE	Kids	Apparel	BARBIE	BRB4WG-SWT6143 Barbie Sweatshirt, 9-10 Yaş, Fuşya	0	5003153304004	8684024307714	CD01 EKOL DEPO'YA IADE	1	1	3246306
+İADE	Kids	Apparel	BARBIE	BRB5SG-ELB6535 Barbie Abiye Elbise, 11-12 Yaş, Lila	0	5003221732005	8684024471996	CD01 EKOL DEPO'YA IADE	2	2	3247798
+İADE	Kids	Apparel	BARBIE	BRB5SG-ELB6535 Barbie Abiye Elbise, 5-6 Yaş, Lila	0	5003221732002	8684024471965	CD01 EKOL DEPO'YA IADE	3	3	3247798
+İADE	Kids	Apparel	BARBIE	BRB5SG-ELB6535 Barbie Abiye Elbise, 7-8 Yaş, Lila	0	5003221732003	8684024471972	CD01 EKOL DEPO'YA IADE	1	1	3247798
+İADE	Kids	Apparel	BARBIE	BRB5SG-ELB6535 Barbie Abiye Elbise, 9-10 Yaş, Lila	0	5003221732004	8684024471989	CD01 EKOL DEPO'YA IADE	2	2	3247798
+İADE	Kids	Accessories	BARBIE	BrbBre-1 Barbie Bere, 4-7 Yaş, Fuşya	0	5003166998001	8684024418212	CD01 EKOL DEPO'YA IADE	1	1	3246306
+İADE	Kids	Accessories	BARBIE	BrbBre-1 Barbie Bere, 8-11 Yaş, Açık Pembe	0	5003167008002	8684024418632	CD01 EKOL DEPO'YA IADE	1	1	3246306
+İADE	Kids	Shoes	BULLDOZER	BUL-240851 Bulldozer Bot, 31, Siyah	0	5003080429001	6000030957538	CD01 EKOL DEPO'YA IADE	1	1	3239150
+İADE	Shoes & Bags	Ladies Shoes	BULLDOZER	BUL-250604 Bulldozer Bot, 37, Siyah	0	5003211697002	6000040528926	CD01 EKOL DEPO'YA IADE	1	1	3244286
+İADE	Shoes & Bags	Ladies Shoes	BULLDOZER	BUL-250751 Bulldozer Bot, 39, Kahve	0	5003211689004	6000040426192	CD01 EKOL DEPO'YA IADE	1	1	3244286
+İADE	Mens	Apparel	PRIVÉ	BXE012510178_PANTOLON 5 CEP Privé Pantolon, 58, Camel	0	5003207526006	8684310553863	FIRMASINA IADE	1	1	3241519
+İADE	Mens	Apparel	PRIVÉ	BXE202510368_GÖMLEK CEN DY Privé Gömlek, 3XL, İndigo	0	5003207580002	8684310556109	FIRMASINA IADE	1	1	3241519
+İADE	Mens	Apparel	PRIVÉ	BXE202510368_GÖMLEK CEN DY Privé Gömlek, M, İndigo	0	5003207580005	8684310556130	FIRMASINA IADE	1	1	3241519
+İADE	Mens	Apparel	PRIVÉ	BXE202510373_GÖMLEK CEN DY Privé Gömlek, 4XL, Ekru	0	5003207648003	8684310555492	FIRMASINA IADE	1	1	3241519
+İADE	Mens	Apparel	PRIVÉ	BXE202510374_GÖMLEK CEN NM Privé Gömlek, 2XL, Bej	0	5003207548001	8684310555645	FIRMASINA IADE	1	1	3241519
+İADE	Kids	Apparel	CATERPILLAR	C3WB-MNT-02 Caterpillar Mont, 7-8 Yaş, Siyah	0	5003036066002	8683133930516	CD01 EKOL DEPO'YA IADE	1	1	3245327
+İADE	Kids	Apparel	CATERPILLAR	C3WB-PNT05 Caterpillar Kargo P, 13-14 Yaş, Lacivert	0	5003043021005	8683133970727	CD01 EKOL DEPO'YA IADE	1	1	3245327
+İADE	Kids	Apparel	CATERPILLAR	C3WG-MNT01 Caterpillar Kaban, 11-12 Yaş, Pembe	0	5003036079004	8683133931018	CD01 EKOL DEPO'YA IADE	1	1	3245327
+İADE	Kids	Apparel	CATERPILLAR	C3WG-MNT04 Caterpillar Mont, 13-14 Yaş, Koyu Haki	0	5003036067005	8683133930592	CD01 EKOL DEPO'YA IADE	1	1	3245327
+İADE	Ladies	Apparel	JEEP	C4SL-SHT4033 Jeep Şort, 42, Siyah	0	5003092693005	8684024136758	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Shoes & Bags	Ladies Shoes	FABRIKA	CASEY Fabrika Topuklu Ayakkabı, 39, Ekru	0	5003098670004	8684024160050	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Active & Outdoor	Active Apparel	NIKE	CD3129-224 M NSW CLUB PANT CARGO BB Nike Eşofman Altı, L, Kahve	0	5003186092001	197596575149	CD01 EKOL DEPO'YA IADE	1	1	3233597
+İADE	Active & Outdoor	Active Shoes	NIKE	CD4165-003 Nike Lifestyle Ayakkabı, 41, Siyah	0	5002623591003	193154112672	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Kids	Shoes	HAMMER JACK	CELOS F BOT Hammer Jack Outdoor Bot, 35, Mor	0	5003059041006	8682010483732	CD01 EKOL DEPO'YA IADE	1	1	3246533
+İADE	Active & Outdoor	Active Shoes	CONVERSE	CHUCK TAYLOR ALL STAR Converse Lifestyle Ayakkabı, 44, Siyah	0	5001894626002	886952781873	CD01 EKOL DEPO'YA IADE	2	2	3231832
+İADE	Shoes & Bags	Ladies Bags & SLG	FABRIKA	CLAUDINA Fabrika Cüzdan, Bedensiz, Siyah	0	5003156136001	8684024347109	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Ladies	Apparel	FABRIKA COMFORT	CM-VIETNAM Fabrika Comfort Pantolon, 36, Bordo	0	5002913234001	8683133367787	CD01 EKOL DEPO'YA IADE	1	1	3239754
+İADE	Ladies	Apparel	FABRIKA COMFORT	CM-VIETNAM Fabrika Comfort Pantolon, 40, Siyah	0	5002653751003	8681940429490	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Shoes & Bags	Ladies Bags & SLG	NAUTICA	CN6510T Nautica Çapraz Çanta, Standart, Siyah	0	5003174473001	8683214190914	CD01 EKOL DEPO'YA IADE	1	1	3238502
+İADE	Kids	Apparel	DISCOVERY EXPEDITION	D3WB-MNT5 Discovery Expedition, 9-10 Yaş, Turuncu	0	5003036537003	8683133931926	CD01 EKOL DEPO'YA IADE	1	1	3245059
+İADE	Kids	Apparel	DISCOVERY EXPEDITION	D3WB-SWT1 Discovery Expedition Pol, 6 Yaş, Turuncu	0	5003008202001	8683133851101	CD01 EKOL DEPO'YA IADE	1	1	3245059
+İADE	Kids	Apparel	DISCOVERY EXPEDITION	D3WB-SWT9 Discovery Expedition S, 13-14 Yaş, Siyah	0	5003017615004	8683133867157	CD01 EKOL DEPO'YA IADE	1	1	3245059
+İADE	Kids	Apparel	DISCOVERY EXPEDITION	D3WG-SWT15 Discovery Expedition S, 13-14 Yaş, Somon	0	5003040935005	8683133964498	CD01 EKOL DEPO'YA IADE	1	1	3245059
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WL-SWT27 Discovery Expedition Polar S, M, Turkuaz	0	5003008267003	8683133853143	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Equipments	DISCOVERY EXPEDITION	D3WM-BR 02 Discovery Expedition Be, Standart, Siyah	0	5003055434001	8684024002442	CD01 EKOL DEPO'YA IADE	2	2	3245617
+İADE	Active & Outdoor	Outdoor Equipments	DISCOVERY EXPEDITION	D3WM-BYNLK 03 Discovery Expedition Boy, Standart, Haki	0	5003055435001	8684024002459	CD01 EKOL DEPO'YA IADE	4	4	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-MNT16 Discovery Expedition Mont, M, Siyah	0	5003018625002	8683133871093	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-MNT16 Discovery Expedition Mont, XL, Siyah	0	5003018625004	8683133873110	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-PNT2 Discovery Expedition Outdoor, 2XL, Siyah	0	5003039759005	8683133948900	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-SWT12 Discovery Expedition Sweatmont, M, Haki	0	5003040395002	8683133958756	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-SWT26 Discovery Expedition Sweatshi, XL, Siyah	0	5003003447004	8683133839673	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-SWT26 Discovery Expedition Sweatshir, L, Siyah	0	5003003447003	8683133839666	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D3WM-SWT27 Discovery Expedition Sweatshir, S, Siyah	0	5003003477001	8683133839291	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Kids	Apparel	DISCOVERY EXPEDITION	D4SB-SWT3028 Discovery Expedition S, 11-12 Yaş, Siyah	0	5003107121004	8684024199098	CD01 EKOL DEPO'YA IADE	1	1	3245059
+İADE	Kids	Apparel	DISCOVERY EXPEDITION	D4SB-SWT3028 Discovery Expedition S, 13-14 Yaş, Siyah	0	5003107121005	8684024199203	CD01 EKOL DEPO'YA IADE	1	1	3245059
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SL-MNT3001 Discovery Expedition Mont, L, Bej	0	5003095864004	8684024140458	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SL-TYT3014 Discovery Expedition Tayt, L, Antrasit	0	5003099120004	8684024170103	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3253 Discovery Expedition T-S, S, Kırık Beyaz	0	5003099037001	8684024168391	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3270 Discovery Expedition T-Shirt, L, Gri	0	5003099104003	8684024169497	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3273 Discovery Expedition T, 2XL, Kırık Beyaz	0	5003098969005	8684024164874	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3273 Discovery Expedition T-S, M, Kırık Beyaz	0	5003098969002	8684024164843	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3273 Discovery Expedition T-S, S, Kırık Beyaz	0	5003098969001	8684024164836	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3278 Discovery Expedition T-Shirt, M, Beyaz	0	5003099018002	8684024165741	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4SM-TST3280 Discovery Expedition T-Shirt, 2XL, Gri	0	5003099050005	8684024166588	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4WM-EA3297 Discovery Expedition Eşof, XL, Açık Mavi	0	5003162316004	8684024389208	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4WM-EA3955 Discovery Expedition, S, Antrasit Melanj	0	5003162443001	8684024393625	CD01 EKOL DEPO'YA IADE	1	1	3231258
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	D4WM-SWT3332 Discovery Expedition Swea, S, Açık Kahve	0	5003162376001	8684024391683	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Shoes & Bags	Ladies Shoes	FABRIKA COMFORT	D-ALIYA Fabrika Comfort Düz Ayakkabı, 38, Siyah	0	5003154117003	8684024313319	CD01 EKOL DEPO'YA IADE	1	1	3245782
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Dean Camper Bot, 41, Siyah	0	5003185184003	8432936780886	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Ladies Shoes	JEEP	D-KATIE Jeep Sneaker, 38, Vizon	0	5003176655003	8684024443382	CD01 EKOL DEPO'YA IADE	1	1	3245915
+İADE	Active & Outdoor	Active Shoes	NIKE	DM0821-104 WMNS NIKE JUNIPER TRAIL Nike Koşu Ayakkabısı, 38, Beyaz	0	5003152361001	197593790354	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DM0821-104 WMNS NIKE JUNIPER TRAIL Nike Koşu Ayakkabısı, 41, Beyaz	0	5003152361004	197593795052	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM171081BJSCANTON SLIM CG4269 Tommy Jeans Denim Pantol, 33-30, Renksiz	0	5003175014006	8720637070802	CD01 EKOL DEPO'YA IADE	1	1	3246545
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM18457BDS Tommy Jeans Sweatshirt, M, Siyah	0	5003122851002	8720645832775	CD01 EKOL DEPO'YA IADE	1	1	3246545
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM19525C1G SOLID CLASSICS SHIRT Tommy Jeans Gömlek, M, Lacivert	0	5003175049002	8720636553542	CD01 EKOL DEPO'YA IADE	1	1	3246545
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM19755VLP REG TJ P Tommy Jeans Sweatshirt, L, Bordo	0	5003175159001	8720637250327	CD01 EKOL DEPO'YA IADE	1	1	3237567
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM19786BDS ESSENTIAL DOWN Tommy Jeans Mont, L, Siyah	0	5003175087001	8720637318300	CD01 EKOL DEPO'YA IADE	1	1	3246545
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM20170YBR RLX GRAFFITI SIGNATUR Tommy Jeans Sweatshirt, L, Beyaz	0	5003175108001	8720636588858	CD01 EKOL DEPO'YA IADE	1	1	3246545
+İADE	Street wear	Apparel	TOMMY JEANS	DM0DM204041A5SCANTON SLIM RWB DH603 Tommy Jeans Denim Pantol, 34-32, Renksiz	0	5003175130008	8720637320600	CD01 EKOL DEPO'YA IADE	1	1	3246545
+İADE	Active & Outdoor	Active Apparel	NIKE	DQ5874-010 W NK DF UNIVERSA MR 7/8 Nike Tayt, L, Siyah - Gri - Gümüş	0	5003059847001	195871773419	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV1237-102 NIKE MOTIVA Nike Yürüyüş Ayakkabısı, 40, Beyaz	0	5003186047001	197596850956	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV1237-102 NIKE MOTIVA Nike Yürüyüş Ayakkabısı, 42, Beyaz	0	5003186047003	197596562675	CD01 EKOL DEPO'YA IADE	2	2	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV1237-102 NIKE MOTIVA Nike Yürüyüş Ayakkabısı, 42.5, Beyaz	0	5003186047008	197596203011	CD01 EKOL DEPO'YA IADE	3	3	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV1237-102 NIKE MOTIVA Nike Yürüyüş Ayakkabısı, 43, Beyaz	0	5003186047004	197596521788	CD01 EKOL DEPO'YA IADE	3	3	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV1237-102 NIKE MOTIVA Nike Yürüyüş Ayakkabısı, 44.5, Beyaz	0	5003186047009	197596657036	CD01 EKOL DEPO'YA IADE	2	2	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV1237-102 NIKE MOTIVA Nike Yürüyüş Ayakkabısı, 46, Beyaz	0	5003186047007	197596968477	CD01 EKOL DEPO'YA IADE	2	2	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	DV4337-040 LEGEND 10 ACADEMY FG/MG Nike Futbol Ayakkabısı, 40, Siyah	0	5003148019001	196608057925	CD01 EKOL DEPO'YA IADE	1	1	3240035
+İADE	Active & Outdoor	Active Shoes	NIKE	DV4342-002 LEGEND 10 ACADEMY TF Nike Halı Saha Ayakkabısı, 42, Siyah	0	5003185935003	197597350059	CD01 EKOL DEPO'YA IADE	1	1	3233597
+İADE	Active & Outdoor	Active Shoes	NIKE	DV5695 100 W NIKE AIR MAX INTRLK LI Nike Koşu Ayakkabısı, 37.5, Beyaz	0	5002926383006	195870822477	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	DV7789-402-W NSW NK CLSC HR 7/8 TIG Nike Tayt, XS, Mavi	0	5003118494004	196976260804	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	DX1021-010 W NK TRAIL RPL MR 3 BR Nike Şort, M, Siyah - Gri - Gümüş	0	5003061818002	196155068849	CD01 EKOL DEPO'YA IADE	2	2	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	DX1041-536 W NK TRAIL REPEL JKT Nike Ceket, S, Mor	0	5003059770003	196608673750	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Kids	Active Shoes	NIKE	DX7616-300-NIKE STAR RUNNER 4 NN TD Nike Yürüyüş Ayakkabısı, 26, Çok Renkli	0	5003161542005	197594211407	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Active & Outdoor	Accessories & Equipments	EASTPAK	EK0A5BG50081 DAY PAK'R S Eastpak Sırt Çantası, Standart, Siyah	0	5003044568001	196011848042	CD01 EKOL DEPO'YA IADE	1	1	3236981
+İADE	Ladies	Apparel	FABRIKA	ELANES Fabrika Şort, 34, Haki	0	5002976338001	8683133706760	CD01 EKOL DEPO'YA IADE	1	1	3239960
+İADE	Mens	Apparel	AEROPOSTALE	E-LEAF Aeropostale Gömlek, M, Ekru	0	5002977335002	8683133726188	CD01 EKOL DEPO'YA IADE	1	1	3245397
+İADE	Shoes & Bags	Ladies Shoes	TOMMY HILFIGER	EN0EN02317BDS Tommy Hilfiger Bot, 39, Siyah	0	5003047904004	8720645471783	CD01 EKOL DEPO'YA IADE	1	1	3244305
+İADE	Active & Outdoor	Outdoor Apparel	QUIKSILVER	EQYTJ03479MISSION PRINTED JK Quiksilver Kayak Montu, M, Mavi	0	5003221440002	3616750098388	CD01 EKOL DEPO'YA IADE	1	1	3232567
+İADE	Active & Outdoor	Outdoor Apparel	QUIKSILVER	EQYZT07605_BACK FLASH SS Quiksilver T-Shirt, M, Turuncu	0	5003148239002	3613379758891	CD01 EKOL DEPO'YA IADE	1	1	3237732
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ET0124200027_HAK Altınyıldız Classics Pantolon, 58, Haki	0	5003252959007	8684310271217	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ET0124200027_LAC Altınyıldız Classics Panto, 56, Lacivert	0	5003252971006	8684310271279	FIRMASINA IADE	1	1	3241584
+İADE	Mens	Apparel	ALTINYILDIZ CLASSICS	ET0724100203_BEJ Altınyıldız Classics Kaban, 60, Bej	0	5003253199008	8683689959573	FIRMASINA IADE	1	1	3241584
+İADE	Street wear	Apparel	JACK & JONES	EXC 12181903_JJEBASIC SWEAT CREW Jack & Jones Sweatshirt, 2XL, Siyah	0	5002930277005	5714924711656	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	EXC 12181903_JJEBASIC SWEAT CREW Jack & Jones Sweatshirt, L, Gri	0	5003178219002	5715210716065	CD01 EKOL DEPO'YA IADE	1	1	3231212
+İADE	Street wear	Apparel	JACK & JONES	EXC 12181903_JJEBASIC SWEAT CREW Jack & Jones Sweatshirt, M, Gri	0	5003178219003	5715210716058	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	EXC 12275175_JORKEN SWEAT CREW NECK Jack & Jones Sweatshirt, S, Siyah	0	5003178510004	5715675314479	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Shoes & Bags	Ladies Bags & SLG	FABRIKA	EYLUL-POLITZIA Fabrika Omuz Çantası, Standart, Taba	0	5002790360001	8683132115846	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Ladies	Apparel	FABRIKA	F3WL-BLZ3 Fabrika Bluz, 38, Kahve	0	5003030190003	8683133902957	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F3WL-CKT1 Fabrika Blazer, 38, Lacivert	0	5003028808003	8683133896119	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F3WL-CKT14 Fabrika Blazer, 38, Siyah	0	5003028891003	8683133897130	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F3WL-CKT16 Fabrika Ceket, 36, Siyah	0	5003028873002	8683133897383	CD01 EKOL DEPO'YA IADE	1	1	3232693
+İADE	Ladies	Apparel	FABRIKA	F3WL-EA6 Fabrika Eşofman Altı, S, Siyah	0	5003038436002	8683133939830	CD01 EKOL DEPO'YA IADE	1	1	3232693
+İADE	Ladies	Apparel	FABRIKA	F3WL-SWT3 Fabrika Sweatshirt, L, Siyah	0	5003030187004	8683133903435	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F3WL-TST6 Fabrika T-Shirt, XS, Lacivert	0	5003031162001	8683133904685	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Mens	Apparel	FABRIKA	F3WM-CKT176 Fabrika Ceket, 46, Antrasit Melanj	0	5003031369001	8683133908669	CD01 EKOL DEPO'YA IADE	1	1	3231216
+İADE	Mens	Apparel	FABRIKA	F3WM-CKT179 Fabrika Ceket, 46, Antrasit Melanj	0	5003031358001	8683133908331	CD01 EKOL DEPO'YA IADE	1	1	3231216
+İADE	Mens	Apparel	E 4.0 DESIGN STUDIO X FABRIKA	F3WM-CKTF08 E 4.0 Design Studio x Fabrika, S, Siyah	0	5003086814001	8684024088958	CD01 EKOL DEPO'YA IADE	1	1	3233558
+İADE	Mens	Apparel	E 4.0 DESIGN STUDIO X FABRIKA	F3WM-PNT F 10 E 4.0 Design Studio x F, 46, Açık İndigo	0	5003087158001	8684024089559	CD01 EKOL DEPO'YA IADE	1	1	3233558
+İADE	Mens	Apparel	FABRIKA	F3WM-PNT904 Fabrika Chino Pantolon, 44, Gri	0	5003008034002	8683133849986	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F3WM-PNT905 Fabrika Chino Pantolon, 50, Siyah	0	5003008052003	8683133850487	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Ladies	Apparel	E 4.0 DESIGN STUDIO X FABRIKA	F4SL-BLZ W33 E 4.0 Design Studio x Fabrika, M, Beyaz	0	5003159949003	8684024367916	CD01 EKOL DEPO'YA IADE	1	1	3235415
+İADE	Ladies	Apparel	E 4.0 DESIGN STUDIO X FABRIKA	F4SL-BLZ W33 E 4.0 Design Studio x Fabrika, M, Siyah	0	5003159999003	8684024367817	CD01 EKOL DEPO'YA IADE	1	1	3235415
+İADE	Ladies	Apparel	FABRIKA	F4SL-ETK0172 Fabrika Etek, 42, Lacivert - Beyaz	0	5003087560005	8684024100513	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F4SL-GML0429 Fabrika Gömlek, 34, Turuncu	0	5003087536001	8684024101589	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F4SL-TST0670 Fabrika T-Shirt, S, Lacivert	0	5003087340002	8684024092337	CD01 EKOL DEPO'YA IADE	1	1	3239960
+İADE	Ladies	Apparel	FABRIKA	F4SL-TST0722 Fabrika T-Shirt, L, Beyaz	0	5003087267004	8684024089849	CD01 EKOL DEPO'YA IADE	2	2	3244077
+İADE	Ladies	Apparel	FABRIKA	F4SL-TST0722 Fabrika T-Shirt, M, Beyaz	0	5003087267003	8684024089832	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Mens	Apparel	FABRIKA	F4SM-EA 0772 Fabrika Eşofman Altı, L, Siyah	0	5003083528003	8684024079239	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-EA 0772 Fabrika Eşofman Altı, S, Siyah	0	5003083528001	8684024079215	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-GML 0113 Fabrika Gömlek, L, Lacivert	0	5003087295003	8684024091293	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0123 Fabrika Chino Pantolon, 52, Lacivert	0	5003087678004	8684024106515	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0123 Fabrika Chino Pantolon, 52, Siyah	0	5003087710004	8684024105679	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0320 Fabrika Chino Pantolon, 48, Lacivert	0	5003083606002	8684024081911	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0320 Fabrika Chino Pantolon, 50, Lacivert	0	5003083606003	8684024081928	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0320 Fabrika Chino Pantolon, 52, Lacivert	0	5003083606004	8684024081935	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0320 Fabrika Chino Pantolon, 56, Lacivert	0	5003083606006	8684024081959	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0720 Fabrika Chino Pantolon, 48, Lacivert	0	5003085571002	8684024084455	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0720 Fabrika Chino Pantolon, 52, Siyah	0	5003085517004	8684024085254	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-PNT 0736 Fabrika Chino Pantolon, 48, Lacivert	0	5003083636002	8684024082529	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-TKM 0363 Fabrika Takım Elbise, 48, Siyah	0	5003085548002	8684024085322	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-TKM 0363 Fabrika Takım Elbise, 56, Siyah	0	5003085548006	8684024085360	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-TST 0945 Fabrika T-Shirt, S, Lacivert	0	5003160506001	8684024377960	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-TST 0981 Fabrika Polo T-Shirt, S, Lacivert	0	5003083488001	8684024075637	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4SM-TST 0981 Fabrika Polo T-Shirt, S, Yeşil	0	5003083495001	8684024075514	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Ladies	Apparel	FABRIKA	F4WL-EA0137 Fabrika Eşofman Altı, XL, Açık Bej	0	5003155489005	8684024332020	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	F4WL-ELB0712 Fabrika Elbise, 38, Siyah	0	5003155555003	8684024334000	CD01 EKOL DEPO'YA IADE	1	1	3232693
+İADE	Ladies	Apparel	FABRIKA	F4WL-MNT0988 Fabrika Mont, 40, Kahve	0	5003159572004	8684024367701	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	E 4.0 DESIGN STUDIO X FABRIKA	F4WL-PNT W72 E 4.0 Design Studio x Fabrika, 29, Beyaz	0	5003202540005	8684024451738	CD01 EKOL DEPO'YA IADE	1	1	3235415
+İADE	Mens	Apparel	FABRIKA	F4WM-GML 2425 Fabrika Gömlek, XL, Lacivert	0	5003154832004	8684024329044	CD01 EKOL DEPO'YA IADE	2	2	3244623
+İADE	Mens	Apparel	FABRIKA	F4WM-HRK 2781 Fabrika Hırka, S, Gri Melanj	0	5003154813001	8684024330224	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4WM-PNT 2802 Fabrika Denim Pantolon, 31-32, Lacivert	0	5003156041002	8684024342104	CD01 EKOL DEPO'YA IADE	1	1	3244623
+İADE	Mens	Apparel	FABRIKA	F4WM-PNT 2802 Fabrika Denim Pantolon, 36-34, Lacivert	0	5003156041009	8684024342173	CD01 EKOL DEPO'YA IADE	2	2	3244623
+İADE	Shoes & Bags	Travel	FABRIKA	FAB - 016 BÜYÜK Fabrika Çekçekli Kumaş V, Standart, Haki	0	5002684308001	8681155104496	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Kids	Active Shoes	NIKE	FB2689-003-NIKE AIR ZOOM CROSSOVER Nike Basketbol Ayakkab, 36.5, Gri - Mavi	0	5003226768009	197600892040	CD01 EKOL DEPO'YA IADE	1	1	3244009
+İADE	Active & Outdoor	Active Apparel	NIKE	FB4650-010-W NY DF CROP TANK NV+ Nike Atlet, L, Siyah	0	5003102628001	196608685586	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB4650-010-W NY DF CROP TANK NV+ Nike Atlet, M, Siyah	0	5003102628002	196608685579	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB7415-063-M NK CLUB+ FT CB HOODIE Nike Sweatshirt, L, Gri	0	5003102824001	196968261536	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB7540-655 M NK IMP LGHT WINDRNNER Nike Rüzgarlık, M, Kırmızı - Pembe	0	5003059818002	196608721161	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB7628-618 W RUN DVN DF HR 3 SHORT Nike Şort, M, Kırmızı - Pembe	0	5003061834002	196608728276	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB7642-010 W NK TRAIL GRTX INFINIUM Nike Ceket, S, Siyah - Gri - Gümüş	0	5003059763003	196608730262	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB8597-291 M NK DF TRAIL LS TOP Nike T-Shirt, M, Kahve	0	5003059948002	196608748472	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FB8597-291 M NK DF TRAIL LS TOP Nike T-Shirt, S, Kahve	0	5003059948003	196608748465	CD01 EKOL DEPO'YA IADE	2	2	3243989
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC3WL-MNT4 Fabrika Comfort Mont, 44, Siyah	0	5003028907005	8683133899318	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC3WL-SWT13 Fabrika Comfort Sweatshirt, XL, Siyah	0	5003031181004	8683133905170	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4SL-SHT0900 Fabrika Comfort Şo, 44, Lacivert - Beyaz	0	5003087656005	8684024105525	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-ELB0341 Fabrika Comfort Elbise, 38, Lacivert	0	5003155576002	8684024333973	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-ELB0341 Fabrika Comfort Elbise, 40, Lacivert	0	5003155576003	8684024333980	CD01 EKOL DEPO'YA IADE	1	1	3231644
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-ELB0341 Fabrika Comfort Elbise, 42, Lacivert	0	5003155576004	8684024333997	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-ELB0341 Fabrika Comfort Elbise, 44, Lacivert	0	5003155576005	8684024334505	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-ETK0143 Fabrika Comfort Denim Etek, 36, İndigo	0	5003156085001	8684024345778	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-ETK0420 Fabrika Comfort Etek, 44, Siyah	0	5003155584005	8684024334659	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-KZK0833 Fabrika Comfort Kazak, L, Açık Bej	0	5003154741003	8684024324599	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Ladies	Apparel	FABRIKA COMFORT	FC4WL-SWT0126 Fabrika Comfort Sweatshirt, M, Mavi	0	5003155516002	8684024332488	CD01 EKOL DEPO'YA IADE	1	1	3243962
+İADE	Kids	Active Apparel	NIKE	FD3114-063 K NSW CLUB FLC FZ Nike Eşo, 12-13 Yaş, Siyah - Gri - Gümüş	0	5003087645002	196607245477	CD01 EKOL DEPO'YA IADE	2	2	3244009
+İADE	Kids	Active Apparel	NIKE	FD3971-063-K NSW TEE FOOTBALL BALL Nike T-Shirt, 8-10 Yaş, Gri	0	5003159957001	196608477563	CD01 EKOL DEPO'YA IADE	1	1	3244009
+İADE	Active & Outdoor	Active Shoes	NIKE	FD4329-004 NIKE AIR MAX NUAXIS Nike Lifestyle Ayakkabı, 42, Siyah	0	5003181843003	197596375602	CD01 EKOL DEPO'YA IADE	1	1	3233597
+İADE	Active & Outdoor	Active Shoes	NIKE	FD6476-005 W NIKE DOWNSHIFTER 13 Nike Koşu Ayakkabısı, 38, Gri	0	5003148104003	197593761361	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Shoes	NIKE	FD6476-005 W NIKE DOWNSHIFTER 13 Nike Koşu Ayakkabısı, 38.5, Gri	0	5003148104004	197593760487	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Shoes & Bags	Ladies Shoes	LUMBERJACK	FEST WMN 1PR Lumberjack Outdoor Ayakkabısı, 38, Siyah	0	5002753454003	8682894276819	CD01 EKOL DEPO'YA IADE	1	1	3246466
+İADE	Active & Outdoor	Active Shoes	NIKE	FJ6044-001 NIKE CALM SANDAL Nike Sandalet, 41, Siyah	0	5003152431002	197593812421	CD01 EKOL DEPO'YA IADE	2	2	3233597
+İADE	Kids	Active Shoes	NIKE	FJ8077-001-NIKE STAR RUNNER 4 NN GS Nike Yürüyüş Ayakkabısı, 38, Siyah	0	5003120956005	196975943371	CD01 EKOL DEPO'YA IADE	1	1	3244009
+İADE	Active & Outdoor	Active Shoes	NIKE	FN0228-001 NIKE JOURNEY RUN Nike Koşu Ayakkabısı, 46, Siyah	0	5003152376007	197593674111	CD01 EKOL DEPO'YA IADE	1	1	3233597
+İADE	Active & Outdoor	Active Apparel	NIKE	FN0827-893-M NK DF TEE LS TRAIL Nike T-Shirt, XL, Turuncu	0	5003102896004	196968808069	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Kids	Active Shoes	NIKE	FN4991-100-NIKE REVOLUTION 7 NN SE Nike Yürüyüş Ayakkabısı, 36, Beyaz	0	5003161519006	197594216242	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Kids	Active Apparel	NIKE	FN8589-675-G NSW SS TOP JSY LBR Nike T-Shirt, 12-13 Yaş, Pembe	0	5003120811003	196974669890	CD01 EKOL DEPO'YA IADE	1	1	3244009
+İADE	Active & Outdoor	Active Apparel	NIKE	FQ2612-111 PSG M NK DF STRK SS TOP Nike Forma, XL, Beyaz	0	5003186141004	197595072410	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Active & Outdoor	Active Apparel	NIKE	FQ3796-511 M NSW TEE 12MO JDI SP24 Nike T-Shirt, L, Mor	0	5003152120001	196977730986	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Shoes & Bags	Ladies Shoes	U.S. POLO ASSN.	FRANCO GSN 3FX U.S. Polo Assn. Sneaker, 39, Siyah	0	5003006432004	8683879444438	CD01 EKOL DEPO'YA IADE	1	1	3238635
+İADE	Shoes & Bags	Mens Bags & SLG	FABRIKA	Frk300 ÜÇLÜ DİZME CRYZ KARTLIK Fabrika Kartlık, Standart, Kahve	0	5002979918001	8683133762339	CD01 EKOL DEPO'YA IADE	1	1	3247024
+İADE	Shoes & Bags	Mens Bags & SLG	FABRIKA	Frk300 ÜÇLÜ DİZME CRYZ KARTLIK Fabrika Kartlık, Standart, Siyah	0	5002979920001	8683133762421	CD01 EKOL DEPO'YA IADE	9	9	3247024
+İADE	Shoes & Bags	Mens Bags & SLG	FABRIKA	Frk300 ÜÇLÜ DİZME CRYZ KARTLIK Fabrika Kartlık, Standart, Taba	0	5002979879001	8683133762506	CD01 EKOL DEPO'YA IADE	3	3	3247024
+İADE	Shoes & Bags	Ladies Shoes	TOMMY HILFIGER	FW0FW07945DW6 Tommy Hilfiger Sneaker, 38, Siyah	0	5003173855003	8720636866925	CD01 EKOL DEPO'YA IADE	1	1	3244305
+İADE	Active & Outdoor	Active Apparel	NIKE	FZ0224-063 M NK DF SI PANT Nike Eşofman Altı, XL, Gri	0	5003186115004	197599464372	CD01 EKOL DEPO'YA IADE	1	1	3233597
+İADE	Kids	Active Shoes	NIKE	FZ0944-002-AIR MAX SOLO (PS) Nike Yürüyüş Ayakkabısı, 25, Siyah	0	5003205017001	197599112334	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Kids	Active Shoes	NIKE	FZ0944-002-AIR MAX SOLO (PS) Nike Yürüyüş Ayakkabısı, 26, Siyah	0	5003205017002	197599109396	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Active & Outdoor	Active Apparel	NIKE	FZ1121-010 M NK PINNACLE RPL RUN DI Nike Sweatshirt, XL, Siyah	0	5003225653004	197601100137	CD01 EKOL DEPO'YA IADE	1	1	3243989
+İADE	Kids	Active Apparel	NIKE	FZ4955-410-K NIKE AIR PO HOODIE Nike Sweatshirt, 10-12 Yaş, Mavi	0	5003226730002	197600452763	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Kids	Active Apparel	NIKE	FZ4955-410-K NIKE AIR PO HOODIE Nike Sweatshirt, 12-13 Yaş, Mavi	0	5003226730003	197600464025	CD01 EKOL DEPO'YA IADE	1	1	3233256
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-EMERSON Discovery Expedition Outdoor Ay, 43, Gri	0	5003157390004	8684024361044	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-EMERSON Discovery Expedition Outdoor, 41, Siyah	0	5003157375002	8684024360948	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Shoes & Bags	Ladies Shoes	HARLEY DAVIDSON	GEMMA NEW Harley Davidson Bot, 39, Siyah	0	5002913990004	8681531987903	CD01 EKOL DEPO'YA IADE	1	1	3244137
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-EPIR Discovery Expedition Bot, 42, Gri	0	5003046379003	8683133987428	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-MORE-FENTON Discovery Expedition Outdoor Bo, 43, Kum	0	5003157068004	8684024360603	CD01 EKOL DEPO'YA IADE	2	2	3245617
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-MORE-FENTON Discovery Expedition Outdoor, 42, Siyah	0	5003157076003	8684024359898	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-NEGALA NEW Discovery Expeditio, 41, Siyah - Kırmızı	0	5003040409002	8683133960803	CD01 EKOL DEPO'YA IADE	2	2	3245617
+İADE	Active & Outdoor	Outdoor Shoes	DISCOVERY EXPEDITION	G-VALENSIYA NEW Discovery Expedition Outdoor A, 41, Haki	0	5003040460002	8683133960858	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Active Shoes	ADIDAS	GW3036 HOOPS 3.0 adidas Lifestyle Ayak, 38.5, Beyaz - Gri	0	5002813206006	4064053690287	CD01 EKOL DEPO'YA IADE	1	1	3232058
+İADE	Active & Outdoor	Active Shoes	ADIDAS	GY5427 HOOPS 3.0 adidas Lifestyle, 45.5, Beyaz - Lacivert	0	5002813197011	4064053686556	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Kids	Active Shoes	REEBOK	GZ6093 CL LTHR Reebok Yürüyüş Ayakkabısı, 37, Siyah	0	5003058770004	4065422063824	CD01 EKOL DEPO'YA IADE	1	1	3237124
+İADE	Kids	Active Shoes	ADIDAS	H06307 Tensaur Sport 2.0 CF K adidas Yürüyüş Ayakkabısı, 32, Beyaz	0	5002996880008	4066746193860	CD01 EKOL DEPO'YA IADE	1	1	3244805
+İADE	Active & Outdoor	Outdoor Apparel	HELLY HANSEN	HHA.62047 Helly Hansen Yağmurluk, M, Siyah	0	5002407328003	7040053219816	CD01 EKOL DEPO'YA IADE	1	1	3246086
+İADE	Ladies	Apparel	CALVIN KLEIN JEANS	HIGH RISE SKINNY Calvin Klein Jeans Denim Pant, 25, Siyah	0	5003173608001	8720639446285	CD01 EKOL DEPO'YA IADE	1	1	3237959
+İADE	Shoes & Bags	Ladies Bags & SLG	GUESS	HWESG951305-CGK Guess El Çantası, Standart, Antrasit	0	5003177383001	7625408610410	CD01 EKOL DEPO'YA IADE	1	1	3245104
+İADE	Shoes & Bags	Ladies Bags & SLG	GUESS	HWQA8748210-LTR Guess Çapraz Çanta, Standart, Açık Pembe	0	5003121065001	7624926738255	CD01 EKOL DEPO'YA IADE	2	2	3245104
+İADE	Shoes & Bags	Ladies Bags & SLG	GUESS	HWSB9202200-DVL Guess Çapraz Çanta, Standart, Krem	0	5003121058001	7624926736831	CD01 EKOL DEPO'YA IADE	1	1	3245104
+İADE	Kids	Active Apparel	ADIDAS	IC0112 G 3S TS adidas Eşofman Takımı, 152 cm, Siyah	0	5003047843003	4066752486550	CD01 EKOL DEPO'YA IADE	1	1	3244805
+İADE	Active & Outdoor	Accessories & Equipments	ADIDAS	IC1290 T SPW ANK 3P adidas Spor Çorap, L, Fuşya - Beyaz	0	5002988633004	4066746305942	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Shoes	ADIDAS	ID5571 KANTANA adidas Lifestyle Ayakkabı, 40, Beyaz	0	5003117340006	4066764018503	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Shoes	ADIDAS	ID6918-ADIZERO RC 5        FTW adidas Koşu Ayakkabısı, 44, Bej	0	5003046405002	4066755096510	CD01 EKOL DEPO'YA IADE	1	1	3239714
+İADE	Kids	Active Shoes	ADIDAS	ID9156-VL COURT 3.0 CF I adidas Yürüyüş Ayakkabısı, 25.5, Siyah	0	5003167220008	4067892605382	CD01 EKOL DEPO'YA IADE	1	1	3244805
+İADE	Active & Outdoor	Active Shoes	ADIDAS	IE0604 F50 LEAGUE FG/MG adidas Futbol Ayakkabısı, 42, Beyaz	0	5003165808004	4067889676661	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Shoes	ADIDAS	IE5145 TERREX TRAILMAKER 2 adidas Outdoor Ayakkabısı, 45.5, Gri	0	5003117240009	4066764326561	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Shoes	ADIDAS	IG8026 TERREX adidas Outdoor Ayakkabısı, 45.5, Yeşil	0	5003117190008	4066764300134	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Shoes	ADIDAS	IG8717 COPA PURE 2 LEAGUE FG adidas Futbol Ayakkabısı, 42, Siyah	0	5003165378004	4067889119090	CD01 EKOL DEPO'YA IADE	1	1	3239714
+İADE	Kids	Active Shoes	ADIDAS	IH2853-FortaRun 3.0 EL C adidas Yürüyüş Ayakkabısı, 28, Beyaz	0	5003167250001	4067888967326	CD01 EKOL DEPO'YA IADE	1	1	3231434
+İADE	Kids	Active Shoes	ADIDAS	IH2859-FortaRun 3.0 EL C adidas Yürüyüş Ayakkabısı, 28.5, Siyah	0	5003167199009	4067888966350	CD01 EKOL DEPO'YA IADE	1	1	3244805
+İADE	Active & Outdoor	Active Shoes	ADIDAS	IH3579 RESPONSE RUNNER U adidas Koşu Ayakkabısı, 46.5, Siyah	0	5003165456011	4067897811214	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Shoes	ADIDAS	IH5426 BREAKNET SLEEK adidas Lifestyle Ayakkabı, 38, Beyaz	0	5003165591003	4067888090536	CD01 EKOL DEPO'YA IADE	1	1	3232058
+İADE	Active & Outdoor	Active Apparel	ADIDAS	IJ8781 W adidas Eşofman Takımı, L, Siyah	0	5003117011001	4066757147180	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Active & Outdoor	Active Apparel	ADIDAS	IK7920 TF TRAIN T adidas T-Shirt, S, Siyah	0	5003165831003	4067893395404	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Kids	Apparel	CALVIN KLEIN	IU0IU00658BEH Calvin Klein Eşofman Takı, 14 Yaş, Siyah	0	5003171017003	8720639122295	CD01 EKOL DEPO'YA IADE	1	1	3244215
+İADE	Kids	Active Apparel	ADIDAS	IV9490-J FI AOP PT adidas Eşofman Altı, 140 cm, Siyah	0	5003167018002	4067896630311	CD01 EKOL DEPO'YA IADE	1	1	3244805
+İADE	Active & Outdoor	Active Apparel	ADIDAS	IZ2351 TREFOIL T-SHIRT adidas T-Shirt, M, Bej	0	5003165804002	4067898833512	CD01 EKOL DEPO'YA IADE	1	1	3244357
+İADE	Street wear	Apparel	CALVIN KLEIN JEANS	J30J323426CH2 BADGE CREW NECK Calvin Klein Jeans Sweatshirt, M, Yeşil	0	5003175145002	8720639290932	CD01 EKOL DEPO'YA IADE	2	2	3237713
+İADE	Street wear	Apparel	CALVIN KLEIN JEANS	J30J323426CH2 BADGE CREW NECK Calvin Klein Jeans Sweatshirt, XL, Yeşil	0	5003175145004	8720639291489	CD01 EKOL DEPO'YA IADE	1	1	3237713
+İADE	Street wear	Apparel	CALVIN KLEIN JEANS	J30J3236911BJ Calvin Klein Jeans Denim, 33-32, Renksiz	0	5003123104007	8720107893177	CD01 EKOL DEPO'YA IADE	1	1	3244366
+İADE	Street wear	Apparel	CALVIN KLEIN JEANS	J30J3256300GM MONOLOGO CREW NECK Calvin Klein Jeans Sweatshirt, S, Siyah	0	5003175216003	8720639457908	CD01 EKOL DEPO'YA IADE	1	1	3237713
+İADE	Street wear	Apparel	CALVIN KLEIN JEANS	J30J325630VAI MONOLOGO CREW NECK Calvin Klein Jeans Sweatshirt, XL, Bordo	0	5003175204004	8720639458271	CD01 EKOL DEPO'YA IADE	1	1	3237713
+İADE	Street wear	Apparel	CALVIN KLEIN JEANS	J30J326102BEH ESSENTIALS DOWN LONG Calvin Klein Jeans Mont, XL, Siyah	0	5003175307004	8720639457090	CD01 EKOL DEPO'YA IADE	1	1	3244366
+İADE	Ladies	Apparel	JEEP	J4WL-EA7400 Jeep Eşofman Altı, M, Siyah	0	5003163168003	8684024400651	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Ladies	Apparel	JEEP	J4WL-KBN7059 Jeep Kaban, XS, Haki	0	5003163227001	8684024400453	CD01 EKOL DEPO'YA IADE	1	1	3234110
+İADE	Ladies	Apparel	JEEP	J4WL-KZK7126 Jeep Kazak, L, Ekru	0	5003163025004	8684024397722	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Ladies	Apparel	JEEP	J4WL-MNT7098 Jeep Mont, XL, Vizon	0	5003161583005	8684024384586	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Ladies	Apparel	JEEP	J4WL-SWT7014 Jeep Sweatshirt, S, Ekru	0	5003163214002	8684024400217	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Ladies	Apparel	JEEP	J4WL-SWT7044 Jeep Sweatshirt, S, Turuncu	0	5003163006002	8684024397111	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Ladies	Apparel	JEEP	J4WL-SWT7096 Jeep Sweatshirt, S, Ekru	0	5003162978002	8684024397364	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Ladies	Apparel	JEEP	J4WL-SWT7135 Jeep Sweatshirt, M, Haki	0	5003163216003	8684024400927	CD01 EKOL DEPO'YA IADE	1	1	3244405
+İADE	Active & Outdoor	Outdoor Apparel	JACK WOLFSKIN	Jack Wolfskin Ather Down Hoody M Jack Wolfskin Mont, S, Siyah	0	5003079268003	4064993897418	CD01 EKOL DEPO'YA IADE	1	1	3239973
+İADE	Active & Outdoor	Outdoor Apparel	JACK WOLFSKIN	Jack Wolfskin Glacier Canyon Parka Jack Wolfskin Parka, L, Haki	0	5003079299001	4064993841084	CD01 EKOL DEPO'YA IADE	1	1	3245408
+İADE	Active & Outdoor	Outdoor Apparel	JACK WOLFSKIN	Jack Wolfskin Glastal Winter Pants Jack Wolfskin Outdoor Pantolo, 46, Siyah	0	5003079279001	4064993888157	CD01 EKOL DEPO'YA IADE	1	1	3245408
+İADE	Shoes & Bags	Mens Shoes	FABRIKA	JASON-AMOS Fabrika Bot, 42, Kahve	0	5003156223003	8684024349646	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Shoes & Bags	Mens Shoes	FABRIKA	JASON-AMOS Fabrika Bot, 44, Siyah	0	5003156243005	8684024349820	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Street wear	Apparel	JACK & JONES	JCOPRIME EMBROIDERY SOFTSHELL Jack & Jones Mont, M, Siyah	0	5003120433003	5715513485309	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Kids	Active Shoes	ADIDAS	JH8653-TENSAUR SWITCH CF C adidas Yürüyüş Ayakkabısı, 28, Siyah	0	5003209655001	4067904313540	CD01 EKOL DEPO'YA IADE	1	1	3239810
+İADE	Kids	Active Shoes	ADIDAS	JI2265-RUN 72 J adidas Yürüyüş Ayakkabısı, 37, Siyah	0	5003220003002	4067904324157	CD01 EKOL DEPO'YA IADE	1	1	3239810
+İADE	Kids	Active Shoes	ADIDAS	JI2266-RUN 72 J adidas Yürüyüş Ayakkabısı, 37, Beyaz	0	5003219994002	4067904382331	CD01 EKOL DEPO'YA IADE	1	1	3231434
+İADE	Kids	Active Shoes	ADIDAS	JI4686-RUN 72 EL C adidas Yürüyüş Ayakkabısı, 31.5, Beyaz	0	5003219975011	4067904235835	CD01 EKOL DEPO'YA IADE	1	1	3231434
+İADE	Street wear	Apparel	JACK & JONES	JJCORY TEE SS CREW NECK Jack & Jones T-Shirt, L, Beyaz	0	5003120980002	5715509388515	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJCORY TEE SS CREW NECK Jack & Jones T-Shirt, M, Beyaz	0	5003120980003	5715509388508	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJCORY TEE SS CREW NECK Jack & Jones T-Shirt, S, Lacivert	0	5003120436004	5715509388348	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Kids	Apparel	JACK & JONES	JJELOGO SWEAT HOOD 2 COL 22/23 NOOS Jack & Jones Sweatsh, 12 Yaş, Koyu Yeşil	0	5003053914002	5715430226108	CD01 EKOL DEPO'YA IADE	1	1	3244586
+İADE	Street wear	Apparel	JACK & JONES	JJIMIKE JJORIGINAL AM 389 NOOS Jack & Jones Denim Pantolo, 34-32, Siyah	0	5003120503011	5715423938346	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJITIM JJORIGINAL AM 784 SN Jack & Jones Denim Panto, 33-30, Renksiz	0	5003120495008	5715506030240	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJZION TEE SS CREW NECK Jack & Jones T-Shirt, 2XL, Beyaz	0	5003120982001	5715509501228	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJZION TEE SS CREW NECK Jack & Jones T-Shirt, XL, Beyaz	0	5003120982005	5715509501198	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJZION TEE SS CREW NECK Jack & Jones T-Shirt, XL, Turuncu	0	5003120517005	5715509500726	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JJZION TEE SS CREW NECK Jack & Jones T-Shirt, XL, Yeşil	0	5003120469005	5715509500849	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JORBILL POPLIN OVERSIZED SHIRT SS Jack & Jones Gömlek, L, Mavi	0	5003186513002	5715511548648	CD01 EKOL DEPO'YA IADE	1	1	3231212
+İADE	Street wear	Apparel	JACK & JONES	JPRBLUFLORES PRINT SHIRT S/S LN Jack & Jones Gömlek, XL, Kahve	0	5003120629005	5715520299005	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JPRBLUHUNTER TEE SS CREW NECK EXC Jack & Jones T-Shirt, M, Beyaz	0	5003120653003	5715610482195	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JPRBLUSHIELD TEE SS CREW NECK EXC Jack & Jones T-Shirt, L, Beyaz	0	5003120690002	5715607961016	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JPRBLUSHIELD TEE SS CREW NECK EXC Jack & Jones T-Shirt, S, Siyah	0	5003120681004	5715610483697	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Street wear	Apparel	JACK & JONES	JPSTACE JJSUMMER LINEN BLEND SHORT Jack & Jones Chino Şort, L, Siyah	0	5003120720002	5715432447662	CD01 EKOL DEPO'YA IADE	1	1	3244613
+İADE	Kids	Apparel	JACK & JONES	JPSTRICK JJORIGINAL JNR Jack & Jones Şort, 9 Yaş, Mor	0	5003119539009	5715510726634	CD01 EKOL DEPO'YA IADE	1	1	3235069
+İADE	Kids	Active Shoes	JOMA	JSPACW2413V-SPACE JR 2413 PINK Joma Yürüyüş Ayakkabısı, 30, Pembe	0	5003183488005	8445954845864	CD01 EKOL DEPO'YA IADE	1	1	3238461
+İADE	Shoes & Bags	Ladies Shoes	CAMPER	K201438-015 Camper Sneaker, 40, Siyah	0	5003050646006	8432561828281	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Ladies Shoes	CAMPER	K201613-002 Camper Sneaker, 40, Beyaz	0	5003126513005	8432561864845	FIRMASINA IADE	1	1	3237370
+İADE	Street wear	Accessories	CALVIN KLEIN JEANS	K50K511160BDS Calvin Klein Jeans Bere, S, Siyah	0	5003111672001	8720108591744	CD01 EKOL DEPO'YA IADE	1	1	3244366
+İADE	Street wear	Accessories	CALVIN KLEIN JEANS	K50K511199BDS Calvin Klein Jeans Atkı - Bere, S, Siyah	0	5003111680001	8720108588799	CD01 EKOL DEPO'YA IADE	1	1	3244366
+İADE	Shoes & Bags	Ladies Bags & SLG	CALVIN KLEIN	K60K612117BEH Calvin Klein Çapraz Çan, Standart, Siyah	0	5003173372001	8720639006908	CD01 EKOL DEPO'YA IADE	1	1	3244675
+İADE	Shoes & Bags	Ladies Bags & SLG	CALVIN KLEIN	K60K6126770GM Calvin Klein Omuz Çanta, Standart, Siyah	0	5003173501001	8720639578788	CD01 EKOL DEPO'YA IADE	1	1	3238572
+İADE	Ladies	Accessories	CALVIN KLEIN	K60K613119BEH Calvin Klein Şapka, Standart, Siyah	0	5003238228001	8721107065540	CD01 EKOL DEPO'YA IADE	1	1	3236334
+İADE	Kids	Shoes	CAMPER	K800602-001 Peu Touring Kids Camper Günlük Ayakkabı, 35, Siyah	0	5003186311005	8432936798157	FIRMASINA IADE	1	1	3237365
+İADE	Active & Outdoor	Outdoor Shoes	SALOMON	L47447600X ULTRA 360 MID GTX Salomon Bot, 43, Siyah - Gri	0	5003204201003	195751578783	CD01 EKOL DEPO'YA IADE	1	1	3245331
+İADE	Street wear	Apparel	LEE	L701KIRQ Lee Denim Pantolon, 30-30, Mavi	0	5002318573002	5400806143485	CD01 EKOL DEPO'YA IADE	1	1	3238801
+İADE	Ladies	Apparel	FABRIKA	LELI Fabrika Elbise, 38, Siyah	0	5002962237003	8683133628581	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Shoes & Bags	Mens Shoes	CALVIN KLEIN	LUGGED CHELSEA BOOT LTH Calvin Klein Bot, 44, Siyah	0	5003172638005	8720639481828	CD01 EKOL DEPO'YA IADE	1	1	3244675
+İADE	Street wear	Apparel	MAVI	M0035182405_MARCUS Mavi Denim Pantolon, 38-32, Renksiz	0	5002929414032	8683460648689	CD01 EKOL DEPO'YA IADE	1	1	3247132
+İADE	Street wear	Apparel	MAVI	M0042483797_JAMES Mavi Denim Pantolon, 32-32, Renksiz	0	5002929439020	8683460642250	CD01 EKOL DEPO'YA IADE	1	1	3240347
+İADE	Street wear	Apparel	SUPERDRY	M1011915A1KM_EMBOSSED ARCHIVE GRAPH Superdry T-Shirt, M, Koyu Yeşil	0	5003135425002	5063068051303	CD01 EKOL DEPO'YA IADE	1	1	3236210
+İADE	Ladies	Apparel	MAVI	M1310499-83016 Mavi Elbise, M, Çok Renkli	0	5003269436002	8684024704940	CD01 EKOL DEPO'YA IADE	1	1	3245140
+İADE	Ladies	Apparel	MUSTANG	M4WL-HRK-1801 Mustang Hırka, XS, Siyah	0	5003166982001	8684024416355	CD01 EKOL DEPO'YA IADE	1	1	3233835
+İADE	Ladies	Apparel	MUSTANG	M4WL-SWT-1030 Mustang Sweatshirt, XS, Ekru	0	5003166845001	8684024416102	CD01 EKOL DEPO'YA IADE	1	1	3245724
+İADE	Ladies	Apparel	MUSTANG	M4WL-SWT-1890 Mustang Sweatshirt, L, Ekru	0	5003166746004	8684024415136	CD01 EKOL DEPO'YA IADE	1	1	3245724
+İADE	Street wear	Apparel	MUSTANG	M4WM- GML- 1480 Mustang Gömlek, S, Kırık Beyaz	0	5003168694001	8684024424961	CD01 EKOL DEPO'YA IADE	1	1	3245122
+İADE	Street wear	Apparel	MUSTANG	M4WM-EA-1851 Mustang Eşofman Altı, S, Siyah	0	5003168890001	8684024427726	CD01 EKOL DEPO'YA IADE	1	1	3245122
+İADE	Street wear	Apparel	MUSTANG	M4WM-GML-1824 Mustang Denim Gömlek, XL, Siyah	0	5003168855004	8684024427283	CD01 EKOL DEPO'YA IADE	1	1	3245122
+İADE	Street wear	Apparel	MUSTANG	M4WM-KZK-1998 Mustang Kazak, XL, Bej	0	5003168848004	8684024428822	CD01 EKOL DEPO'YA IADE	1	1	3245122
+İADE	Street wear	Apparel	MUSTANG	M4WM-KZK-1998 Mustang Kazak, XL, Haki	0	5003168911004	8684024428761	CD01 EKOL DEPO'YA IADE	1	1	3233242
+İADE	Street wear	Apparel	MUSTANG	M4WM-MNT-1674 Mustang Puffer Mont, L, Siyah	0	5003168741003	8684024425616	CD01 EKOL DEPO'YA IADE	1	1	3233242
+İADE	Kids	Active Accessories	NIKE	MA0880-650 JDB HBR BACKPACK Nike Sırt Çantası, Standart, Yeşil	0	5003051102001	196327722074	CD01 EKOL DEPO'YA IADE	1	1	3244009
+İADE	Kids	Apparel	LIMON	MAGIC GIRL D3 Limon Sweatshirt, 7-8 Yaş, Siyah	0	5002725817005	8681940875303	CD01 EKOL DEPO'YA IADE	1	1	3238644
+İADE	Ladies	Apparel	FABRIKA	MENDELE Fabrika Elbise, 36, Pembe - Çok Renkli	0	5002976433002	8683133710651	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	FABRIKA	MINELA Fabrika Elbise, 42, Siyah - Beyaz	0	5002976298005	8683133705299	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	LIMON	ML4WL-KZK-9010 Limon Kazak, M, Ekru	0	5003173878003	8684024440398	CD01 EKOL DEPO'YA IADE	1	1	3237917
+İADE	Street wear	Accessories	THE CROW	MONO The Crow Kemer, 115 cm, Lacivert	0	5002980063004	8681715141633	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Accessories	THE CROW	MONO The Crow Kemer, 120 cm, Taba	0	5002980026005	8681715141657	FIRMASINA IADE	3	3	3241238
+İADE	Shoes & Bags	Mens Shoes	JEEP	MORLEY Jeep Sneaker, 41, Haki	0	5003172796002	8684024436605	CD01 EKOL DEPO'YA IADE	1	1	3245915
+İADE	Kids	Apparel	LIMON	MSA-24 Limon T-Shirt, 11-12 Yaş, Beyaz	0	5003143397004	8684024293246	CD01 EKOL DEPO'YA IADE	2	2	3236251
+İADE	Active & Outdoor	Active Shoes	JOMA	N10W2401FG NUMERO-10 2401 BLACK WHI Joma Futbol Ayakkabıs, 42, Siyah - Beyaz	0	5003183759002	8445954853364	CD01 EKOL DEPO'YA IADE	2	2	3233300
+İADE	Active & Outdoor	Outdoor Shoes	THE NORTH FACE	NF0A5JCMU5I1_M VECTIV LEVITUM The North Face Koşu Ayak, 42.5, Lacivert	0	5003144821004	197063195122	CD01 EKOL DEPO'YA IADE	1	1	3240465
+İADE	Kids	Active Shoes	THE NORTH FACE	NF0A7W5VVJY1 Y FASTPACK HIKER MID W The North Face Outdoor Bot, 36, Mavi	0	5003073195004	196573303126	CD01 EKOL DEPO'YA IADE	1	1	3246536
+İADE	Kids	Accessories	NAME İT	NKNLIGHT GLOVES 7FO Name İt Eldiven, 5-7 Yaş, Siyah	0	5003096284001	5715424785123	CD01 EKOL DEPO'YA IADE	1	1	3239279
+İADE	Kids	Active Apparel	NAPAPIJRI	NP0A4GNDMBU1 K M-BOX 1 Napapijri Eşofman Altı, 10 Yaş, Siyah	0	5003072843001	196013758226	CD01 EKOL DEPO'YA IADE	1	1	3235332
+İADE	Ladies	Apparel	NEON ROSE	NRTR54 Neon Rose Tulum, 36, Çok Renkli	0	5000104687001	5051936068065	CD01 EKOL DEPO'YA IADE	1	1	3246118
+İADE	Ladies	Apparel	ONLY	ONLARIS LIFE LS BELT SHIRT DRESS CC Only Elbise, M, Açık Kahve	0	5003247293002	5715674398685	CD01 EKOL DEPO'YA IADE	1	1	3236449
+İADE	Ladies	Apparel	ONLY	ONLNEWSTARLINE AW PARKA CC OTW Only Mont, M, Yeşil	0	5003064386002	5715424810474	CD01 EKOL DEPO'YA IADE	1	1	3244522
+İADE	Ladies	Apparel	ONLY	ONLSALLY RAINCOAT OTW NOOS Only Mont, S, Açık Kahve	0	5003202835003	5715516323721	CD01 EKOL DEPO'YA IADE	1	1	3244522
+İADE	Street wear	Apparel	ONLY & SONS	ONSWAYNE WOOL BOMBER OTW Only & Sons Mont, L, Gri	0	5003181040001	5715607311675	CD01 EKOL DEPO'YA IADE	1	1	3245239
+İADE	Street wear	Apparel	ONLY & SONS	ONSWAYNE WOOL BOMBER OTW Only & Sons Mont, S, Siyah	0	5003181041003	5715670162259	CD01 EKOL DEPO'YA IADE	1	1	3245239
+İADE	Shoes & Bags	Mens Bags & SLG	FABRIKA	outfrkbyn006 Fabrika Cüzdan, Standart, Siyah	0	5003108020001	8684024208349	CD01 EKOL DEPO'YA IADE	1	1	3240729
+İADE	Active & Outdoor	Outdoor Shoes	SALOMON	OUTsnap CSWP Salomon Bot, 43, Siyah	0	5002489318008	193128079130	CD01 EKOL DEPO'YA IADE	1	1	3239797
+İADE	Shoes & Bags	Ladies Bags & SLG	FABRIKA	PALMIRO Fabrika Çapraz Çanta, Bedensiz, Haki	0	5003099105001	8684024171124	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Mens	Apparel	FABRIKA	PART19FLANEL Fabrika Klasik Pantolon, 50, Lacivert	0	5002436907003	8681941467743	CD01 EKOL DEPO'YA IADE	1	1	3238702
+İADE	Shoes & Bags	Ladies Shoes	HARLEY DAVIDSON	PEKING Harley Davidson Bot, 37, Siyah	0	5002733604002	8681531915234	CD01 EKOL DEPO'YA IADE	1	1	3244137
+İADE	Shoes & Bags	Ladies Shoes	HARLEY DAVIDSON	PEKING Harley Davidson Bot, 38, Siyah	0	5002733604003	8681531915241	CD01 EKOL DEPO'YA IADE	1	1	3244137
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Pelotas Ariel Camper Günlük Ayakkabı, 40, Koyu Gri	0	5003153615001	8432561765111	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Pelotas Soller Camper Günlük Ayakkabı, 45, Siyah	0	5003185221007	8432936760673	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Pelotas XLF Camper Günlük Ayakkabı, 40, Siyah	0	5002732987002	8432936037966	FIRMASINA IADE	1	1	3237370
+İADE	Shoes & Bags	Mens Shoes	CAMPER	Pelotas XLF Camper Günlük Ayakkabı, 45, Kahve	0	5002733001006	8432936044094	FIRMASINA IADE	1	1	3237370
+İADE	Mens	Apparel	BROOKS BROTHERS	Polo Yaka Düğmeli U.K Rayon Kazak Brooks Brothers Kazak, XL, Lacivert	0	5003182484004	8684497133100	FIRMASINA IADE	1	1	3247286
+İADE	Kids	Apparel	FUNKY ROCKS	PR-104 Funky Rocks Mont, 9-10 Yaş, Mavi	0	5002886276004	8683133231743	CD01 EKOL DEPO'YA IADE	1	1	3238306
+İADE	Street wear	Apparel	THE CROW	RAİN MAN The Crow Ceket, 2XL, Siyah	0	5002619612001	8681715108421	FIRMASINA IADE	1	1	3241238
+İADE	Active & Outdoor	Active Shoes	JOMA	RVITAS2441 VITALY 2441 NEGRO VER Joma Lifestyle Ayakkabı, 42, Siyah	0	5003128816003	8445954284649	CD01 EKOL DEPO'YA IADE	1	1	3245887
+İADE	Active & Outdoor	Active Shoes	JOMA	RVITLW2415 VITALY LADY 2415 LIGHT G Joma Koşu Ayakkabısı, 38, Açık Yeşil	0	5003183781003	8445954870576	CD01 EKOL DEPO'YA IADE	1	1	3233300
+İADE	Active & Outdoor	Active Apparel	SKECHERS	rwear Pop Up Detailed Padded Jacket Skechers Ceket, S, Siyah	0	5003064926003	8683030213521	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Apparel	SKECHERS	S231242-411 M Outerwear Padded Jack Skechers Mont, S, Lacivert	0	5003205460004	8683030705217	CD01 EKOL DEPO'YA IADE	1	1	3231901
+İADE	Active & Outdoor	Active Apparel	SKECHERS	S241045-001 Micro Collection M 7 in Skechers Şort, L, Siyah	0	5003123699001	8683030647401	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Apparel	SKECHERS	S241054-001 Graphic T-Shirt M Short Skechers T-Shirt, M, Siyah	0	5003123741003	8683030647517	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Apparel	SKECHERS	S242101-001 W Outerwear Padded Jack Skechers Mont, XS, Siyah	0	5003205480005	8683030708034	CD01 EKOL DEPO'YA IADE	2	2	3244725
+İADE	Active & Outdoor	Outdoor Shoes	SALOMON	Salomon THUNDERCROSS GTX Salomon Koşu Ayakkabısı, 42.5, Haki	0	5003068816003	195751424455	CD01 EKOL DEPO'YA IADE	1	1	3231441
+İADE	Active & Outdoor	Outdoor Shoes	SALOMON	Salomon X-ADVENTURE GTX Salomon Koşu Ayakkabısı, 42, Siyah	0	5003068827002	195751294027	CD01 EKOL DEPO'YA IADE	1	1	3245331
+İADE	Ladies	Apparel	FABRIKA	SENRA Fabrika Elbise, 42, Siyah - Çok Renkli	0	5002976379005	8683133708450	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Shoes & Bags	Ladies Shoes	FABRIKA COMFORT	SEVERO Fabrika Comfort Bot, 39, Bej	0	5003043861004	8683133977191	CD01 EKOL DEPO'YA IADE	1	1	3245782
+İADE	Shoes & Bags	Ladies Bags & SLG	AEROPOSTALE	SKUBA-ALBANS Aeropostale Bel Çantası, Standart, Siyah	0	5002986804001	8683133788681	CD01 EKOL DEPO'YA IADE	1	1	3244154
+İADE	Active & Outdoor	Active Apparel	SKECHERS	Soft Touch Eco Crew Neck Sweatshirt Skechers Sweatshirt, L, Siyah	0	5003064977001	8683030231440	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Active Apparel	SKECHERS	Soft Touch Eco Crew Neck Sweatshirt Skechers Sweatshirt, M, Siyah	0	5003064977002	8683030231433	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	STK-210 Discovery Expedition Mont, L, Haki	0	5003018642003	8683133872229	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	STK-210 Discovery Expedition Mont, M, Haki	0	5003018642002	8683133872212	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Equipments	DISCOVERY EXPEDITION	STONE-BACK NEW Discovery Expedit, Bedensiz, Gri - Siyah	0	5003039908001	8683133956189	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Equipments	DISCOVERY EXPEDITION	STONE-BELT NEW Discovery Expedit, Bedensiz, Gri - Siyah	0	5003051783001	8683133997557	CD01 EKOL DEPO'YA IADE	2	2	3245617
+İADE	Shoes & Bags	Ladies Shoes	FABRIKA	SUMARE Fabrika Çizme, 37, Siyah	0	5002928654002	8683133541736	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Shoes & Bags	Mens Shoes	LUMBERJACK	SWORD 4FX Lumberjack Sneaker, 43, Siyah	0	5003140459004	8684096147997	CD01 EKOL DEPO'YA IADE	1	1	3238122
+İADE	Shoes & Bags	Mens Shoes	LUMBERJACK	SWORD 4FX Lumberjack Sneaker, 44, Siyah	0	5003140459005	8684096148000	CD01 EKOL DEPO'YA IADE	1	1	3232201
+İADE	Street wear	Apparel	THE CROW	TAM FERMUARLI The Crow Sweatshirt, 2XL, Beyaz	0	5002961743001	8681715145174	CD01 EKOL DEPO'YA IADE	1	1	3246711
+İADE	Street wear	Apparel	THE CROW	TAM FERMUARLI The Crow Sweatshirt, M, Beyaz	0	5002961743003	8681715144993	CD01 EKOL DEPO'YA IADE	1	1	3246711
+İADE	Street wear	Apparel	THE CROW	TC 5079KAPŞONSUZ The Crow Ceket, M, Siyah	0	5002972051002	8681715125619	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1903BASKILI The Crow Sweatshirt, S, Siyah	0	5002959067001	8681715136745	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1905_ZOOM The Crow Sweatshirt, L, Ekru	0	5003179214002	8681715030210	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1905BASKILI TSHIRT The Crow Sweatshirt, S, Lacivert	0	5002978639004	8681715145457	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1943_BOSTON The Crow Sweatshirt, L, Haki	0	5003179235002	8681715029719	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1943_BOSTON The Crow Sweatshirt, M, Siyah	0	5003179215003	8681715029627	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1945_LORD The Crow Sweatshirt, S, Kum	0	5003179250004	8681715029535	FIRMASINA IADE	2	2	3241238
+İADE	Street wear	Apparel	THE CROW	TC1947_CROW The Crow Sweatshirt, S, Kum	0	5003179290004	8681715028170	FIRMASINA IADE	2	2	3241238
+İADE	Street wear	Apparel	THE CROW	TC1947_CROW The Crow Sweatshirt, XL, Siyah	0	5003179226005	8681715028088	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC1949_BRAND The Crow Sweatshirt, XL, Kum	0	5003179216005	8681715028385	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC2904_I WILL YOU BEE THERE FOR YOU The Crow Sweatshirt, L, Beyaz	0	5003179217002	8681715030944	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3002YARIM FERMUARLI The Crow Sweatshirt, 2XL, Lacivert	0	5002961410005	8681715144849	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3002YARIM FERMUARLI The Crow Sweatshirt, XL, Beyaz	0	5002961386004	8681715144825	CD01 EKOL DEPO'YA IADE	1	1	3246711
+İADE	Street wear	Apparel	THE CROW	TC3002YARIM FERMUARLI The Crow Sweatshirt, XL, Lacivert	0	5002961410004	8681715144788	CD01 EKOL DEPO'YA IADE	1	1	3246711
+İADE	Street wear	Apparel	THE CROW	TC3006_SNOOP The Crow Gömlek, 2XL, Haki	0	5003111945005	8681715015880	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3006_SNOOP The Crow Gömlek, M, Haki	0	5003111945002	8681715015859	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3905_DR STRANCE The Crow Sweatshirt, 2XL, Antrasit	0	5003179241001	8681715032771	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3905_DR STRANCE The Crow Sweatshirt, M, Antrasit	0	5003179241003	8681715032740	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3905_DR STRANCE The Crow Sweatshirt, S, Antrasit	0	5003179241004	8681715032757	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3905KAPŞONLU YARIM  FERMUARLI The Crow Sweatshirt, L, Ekru	0	5002978647002	8681715141022	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3905KAPŞONLU YARIM  FERMUARLI The Crow Sweatshirt, S, Siyah	0	5002978589004	8681715141145	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3905KAPŞONLU YARIM  FERMUARLI The Crow Sweatshirt, XL, Siyah	0	5002978589005	8681715141152	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3906KAPŞONLU TAM FERMUARLI The Crow Sweatshirt, M, Siyah	0	5002978690003	8681715141329	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3906KAPŞONLU TAM FERMUARLI The Crow Sweatshirt, XL, Siyah	0	5002978690005	8681715141336	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3907 The Crow Sweatshirt, L, Siyah	0	5003051473002	8681715012780	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC3909 The Crow Sweatshirt, M, Siyah	0	5003051446003	8681715012896	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC4041_BRUCE WILLIS The Crow Sweatshirt, 2XL, Haki	0	5003179206001	8681715031033	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5082 The Crow Ceket, 2XL, Siyah	0	5003051525001	8681715011172	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5082 The Crow Ceket, S, Siyah	0	5003051525004	8681715011158	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5083 The Crow Ceket, 2XL, Siyah	0	5003051519001	8681715011271	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5083 The Crow Ceket, S, Beyaz	0	5003051566004	8681715011301	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5083 The Crow Ceket, XL, Siyah	0	5003051519005	8681715011264	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5093_ROMA The Crow Mont, L, Haki	0	5003179229002	8681715026930	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5097_SEATTLE The Crow Ceket, M, Kırmızı	0	5003179257003	8681715027395	FIRMASINA IADE	2	2	3241238
+İADE	Street wear	Apparel	THE CROW	TC5097_SEATTLE The Crow Ceket, M, Siyah	0	5003179262003	8681715027340	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5097_SEATTLE The Crow Ceket, S, Siyah	0	5003179262004	8681715027357	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5097_SEATTLE The Crow Ceket, XL, Kırmızı	0	5003179257005	8681715027418	FIRMASINA IADE	2	2	3241238
+İADE	Street wear	Apparel	THE CROW	TC5097_SEATTLE The Crow Ceket, XL, Siyah	0	5003179262005	8681715027364	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5100_CHELSEA The Crow Mont, L, Siyah	0	5003179270002	8681715027777	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5100_CHELSEA The Crow Mont, S, Siyah	0	5003179270004	8681715027791	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Apparel	THE CROW	TC5104_JONS The Crow Mont, S, Ekru	0	5003179263004	8681715030869	FIRMASINA IADE	1	1	3241238
+İADE	Street wear	Accessories	THE CROW	THE CROW KEMER The Crow Kemer, 110 cm, Siyah - Kahve	0	5002752844002	8681715119298	FIRMASINA IADE	1	1	3241238
+İADE	Ladies	Apparel	FABRIKA	TIGEL Fabrika Mont, 42, Beyaz - Bej	0	5002976329005	8683133708030	CD01 EKOL DEPO'YA IADE	1	1	3244077
+İADE	Ladies	Apparel	TOMMY JEANS	TJW ALASKA PUFFER EXT Tommy Jeans Puffer Mont, L, Lacivert	0	5003174822001	8720637885895	CD01 EKOL DEPO'YA IADE	1	1	3231495
+İADE	Ladies	Apparel	TOMMY JEANS	TJW BASIC HOODED DOWN JACKET EXT Tommy Jeans Puffer Mont, M, Siyah	0	5003174825002	8720636973043	CD01 EKOL DEPO'YA IADE	1	1	3231495
+İADE	Ladies	Apparel	TOMMY JEANS	TJW RLX PREP LUXE 2 TEE Tommy Jeans T-Shirt, S, Lacivert	0	5003174876003	8720637198346	CD01 EKOL DEPO'YA IADE	1	1	3231495
+İADE	Ladies	Apparel	TOMMY JEANS	TJW VAIL PUFFER EXT Tommy Jeans Puffer Mont, L, Lacivert	0	5003174903001	8720637886762	CD01 EKOL DEPO'YA IADE	1	1	3231495
+İADE	Ladies	Apparel	TOMMY JEANS	TJW VERTICAL QUILT LINER EXT Tommy Jeans Puffer Mont, M, Lacivert	0	5003174904002	8720636976532	CD01 EKOL DEPO'YA IADE	1	1	3239657
+İADE	Active & Outdoor	Active Shoes	JOMA	TKSHOW2401 SHOCK MEN 2401 BLACK BRO Joma Yürüyüş Ayakkabı, 42, Siyah - Kahve	0	5003183850003	8445954878855	CD01 EKOL DEPO'YA IADE	1	1	3233300
+İADE	Shoes & Bags	Ladies Shoes	FABRIKA	TRISHNA Fabrika Sandalet, 40, Siyah	0	5003098587005	8684024157500	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Shoes & Bags	Travel	GUESS	TWS74529830-CHG Guess Çekçekli Sert, Standart, Antrasit	0	5003050543001	7622336867220	CD01 EKOL DEPO'YA IADE	1	1	3245104
+İADE	Shoes & Bags	Ladies Bags & SLG	U.S. POLO ASSN.	US24502 U.S. Polo Assn. Çapraz, Standart, Kahve	0	5003174533001	8683214181936	CD01 EKOL DEPO'YA IADE	1	1	3245655
+İADE	Shoes & Bags	Ladies Bags & SLG	U.S. POLO ASSN.	US24624 U.S. Polo Assn. Ça, Standart, Açık Kahve	0	5003174593001	8683214180243	CD01 EKOL DEPO'YA IADE	1	1	3245655
+İADE	Shoes & Bags	Ladies Bags & SLG	U.S. POLO ASSN.	US24700 U.S. Polo Assn. El Çant, Standart, Kahve	0	5003174641001	8683214185316	CD01 EKOL DEPO'YA IADE	1	1	3238635
+İADE	Ladies	Apparel	FAIK SÖNMEZ	US25TSH065 Faik Sönmez T-Shirt, M, Siyah	0	5003276618002	8697496004517	CD01 EKOL DEPO'YA IADE	1	1	3237268
+İADE	Shoes & Bags	Ladies Shoes	CATERPILLAR	VERMONT FUR Caterpillar Bot, 37, Tarçın	0	5002455115002	8681531579108	CD01 EKOL DEPO'YA IADE	1	1	3232587
+İADE	Active & Outdoor	Active Apparel	SKECHERS	W Fleece Full Zip Hoodie Sweatshirt Skechers Sweatshirt, L, Gri	0	5003065012001	8683030229836	CD01 EKOL DEPO'YA IADE	1	1	3244725
+İADE	Kids	Shoes	IGOR	W10100 CHUFO CUELLO Igor Yağmur Botu, 26, Fuşya	0	5000183926004	8421224662423	CD01 EKOL DEPO'YA IADE	1	1	3244909
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	W-HARLES Discovery Expeditio, XS, Antrasit Melanj	0	5002990584001	8683133810764	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	W-HARLES Discovery Expedition, L, Antrasit Melanj	0	5002990584004	8683133810795	CD01 EKOL DEPO'YA IADE	1	1	3239243
+İADE	Kids	Shoes	CATERPILLAR	WORCESTER Caterpillar Sandalet, 32, Neon Sarı	0	5003007698004	8683756074796	CD01 EKOL DEPO'YA IADE	1	1	3245853
+İADE	Kids	Shoes	CATERPILLAR	WORCESTER Caterpillar Sandalet, 33, Gri - Sarı	0	5003007697005	8683756075229	CD01 EKOL DEPO'YA IADE	1	1	3245853
+İADE	Active & Outdoor	Outdoor Apparel	DISCOVERY EXPEDITION	W-SERU Discovery Expedition Pantolon, S, Siyah	0	5002990977002	8683133817022	CD01 EKOL DEPO'YA IADE	1	1	3245617
+İADE	Ladies	Apparel	TOMMY HILFIGER	WW0WW46113YCF Tommy Hilfiger T-Shirt, S, Beyaz	0	5003238683003	8721106691405	CD01 EKOL DEPO'YA IADE	1	1	3236285
+İADE	Active & Outdoor	Outdoor Shoes	SALOMON	X ULTRA 4 GTX Salomon Outdoor Ayakkabısı, 42.5, Gri	0	5002944099003	193128887919	CD01 EKOL DEPO'YA IADE	1	1	3245331
+İADE	Active & Outdoor	Outdoor Shoes	SALOMON	X ULTRA 4 GTX Salomon Outdoor Ayakkabısı, 43, Gri	0	5002944099004	193128887926	CD01 EKOL DEPO'YA IADE	1	1	3245331
+İADE	Ladies	Apparel	FABRIKA	YMN-24 Fabrika Elbise, 36, Siyah	0	5002943576002	8683133590741	CD01 EKOL DEPO'YA IADE	1	1	3239960
+İADE	Shoes & Bags	Mens Shoes	FABRIKA	YODER-VOLYA Fabrika Bot, 40, Siyah	0	5003155808001	8684024336776	CD01 EKOL DEPO'YA IADE	1	1	3245624
+İADE	Active & Outdoor	Outdoor Equipments	DISCOVERY EXPEDITION	ZERO-CAMP NEW Discovery Expedition Be, Bedensiz, Siyah	0	5003039925001	8683133956257	CD01 EKOL DEPO'YA IADE	1	1	3245617
