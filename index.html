@@ -247,10 +247,18 @@ function updateHistory(){
     const m=dataMap[item], code=m||item;
     const li=document.createElement('li');
 
-    const plusBtn = document.createElement('button');
-    plusBtn.textContent = '+'; plusBtn.className = 'plus-button';
-    plusBtn.title = 'Bir üstünü ara';
-    plusBtn.onclick = () => { const next = (parseInt(item, 10) + 1).toString(); input.value = next; doSearch(); };
+    let plusBtn = null;
+    if (item.length !== 13) {
+      plusBtn = document.createElement('button');
+      plusBtn.textContent = '+';
+      plusBtn.className = 'plus-button';
+      plusBtn.title = 'Bir üstünü ara';
+      plusBtn.onclick = () => {
+        const next = (parseInt(item, 10) + 1).toString();
+        input.value = next;
+        doSearch();
+      };
+    }
 
     const span=document.createElement('span');
     span.textContent=m?`${item}\t${m}`:item;
@@ -267,10 +275,12 @@ function updateHistory(){
       else showAlert('Veri bulunamadı.','Bilgi');
     };
 
-    li.append(plusBtn, span, inv, go);
+    if (plusBtn) li.append(plusBtn);
+    li.append(span, inv, go);
     historyList.appendChild(li);
   });
 }
+
 
 function showRefSelector(){
   const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
