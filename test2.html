@@ -303,35 +303,42 @@ window.selectRefFile=f=>{
 closeModalBtn.addEventListener('click', ()=>modal.style.display='none');
 window.addEventListener('click', e=>{ if(e.target===modal) modal.style.display='none'; });
 
-  function showProductsInSameSection(section, loc) {
-  const matchingRows = stockData.filter(row => row[4] === section);
+function showProductsInSameSection(loc, section) {
+  // Aynı section ve lokasyondaki ürünleri filtrele
+  const matchingRows = stockData.filter(row => row[3] === loc && row[4] === section);
   if (matchingRows.length === 0) {
-    showAlert(`Section "${section}" içinde başka ürün bulunamadı.`, 'Bilgi');
+    showAlert('Bu bölümde ürün bulunamadı.', 'Bilgi');
     return;
   }
 
   let total = 0;
   let h = `<p style="font-weight:bold; font-size:1.1em; margin-bottom: 0.5em;">📦 Lokasyon: ${loc} / Section: ${section}</p>`;
-  h += '<table><thead><tr><th>Malzeme</th><th>Barkod</th><th>Ürün</th><th>Adet</th></tr></thead><tbody>';
+  h += '<table><thead><tr><th>Malzeme & Barkod</th><th>Ürün</th><th>Adet</th></tr></thead><tbody>';
 
   matchingRows.forEach(row => {
+    // Eğer arama geçmişindeki ilk ürünse, vurgula
     const isOriginal = searchHistory.length && row[0] === searchHistory[0];
     const highlightStyle = isOriginal ? 'font-weight:bold; background:#f0f8ff;' : '';
+
     h += `<tr style="${highlightStyle}">
-            <td>${row[0]}</td>
-            <td>${row[1]}</td>
+            <td>
+              <div>${row[0]}</div>
+              <div style="color:#666; font-size:0.9em;">${row[1]}</div>
+            </td>
             <td>${row[2]}</td>
             <td>${row[5]}</td>
           </tr>`;
+
     total += parseInt(row[5], 10) || 0;
   });
 
   h += `</tbody></table><p style="margin-top:1em; font-weight:bold;">🔢 Toplam Adet: ${total}</p>`;
 
   modalBody.innerHTML = h;
-  document.getElementById('modalTitle').textContent = `Section Detayı: ${section}`;
+  document.getElementById('modalTitle').textContent = 'Aynı Section Ürünleri';
   modal.style.display = 'flex';
 }
+
 
 </script>
 </body>
