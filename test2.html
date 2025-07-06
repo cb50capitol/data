@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Capitol</title>
-  <style>
-    body { font-family: Arial,sans-serif; margin:0; padding:1em; background:#f5f5f5; color:#222; transition:background .5s,color .5s;}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Capitol</title>
+<style>
+body { font-family: Arial,sans-serif; margin:0; padding:1em; background:#f5f5f5; color:#222; transition:background .5s,color .5s;}
 .container { max-width:600px; margin:auto; background:#fff; padding:2em; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
 h1 { text-align:center; font-size:1.5em; cursor:pointer; margin:0; }
 
@@ -125,31 +125,31 @@ body.dark-mode #modalBody td { border-color:#555; }
   90% { opacity: 1; }
   100% { opacity: 0; }
 }
-  </style>
+</style>
 </head>
 <body>
 <div class="container">
-  <h1># Capitol.</h1>
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
-    <button id="searchButton" type="button" title="Ara">
-      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
-    </button>
-  </div>
-  <div class="history">
-    <div class="history-header">
-      <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
-      <button id="clearButton" class="clear-button">Clear</button>
+    <h1># Capitol.</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
+        <button id="searchButton" type="button" title="Ara">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
+        </button>
     </div>
-    <ul id="historyList"></ul>
-  </div>
+    <div class="history">
+        <div class="history-header">
+            <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
+            <button id="clearButton" class="clear-button">Clear</button>
+        </div>
+        <ul id="historyList"></ul>
+    </div>
 </div>
 
+<!-- Cadde tarzı kayan yazı -->
 <div id="alertBalloon">
   <div id="alertText">📢 Boyner App kurulu ise 'Online' butonu ürüne yönlendirmeyebilir. 📢</div>
 </div>
 
-<!-- Ürün Detay Modalı -->
 <div id="modal" role="dialog" tabindex="-1">
   <div id="modalContent">
     <div id="modalHeader">
@@ -157,17 +157,6 @@ body.dark-mode #modalBody td { border-color:#555; }
       <button id="closeModalBtn" aria-label="Kapat">&times;</button>
     </div>
     <div id="modalBody"></div>
-  </div>
-</div>
-
-<!-- Section'da Sayılan Diğer Ürünler Modalı -->
-<div id="sectionModal" role="dialog" tabindex="-1" style="display:none; position:fixed; z-index:1001; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.4); backdrop-filter:blur(5px); align-items:center; justify-content:center;">
-  <div style="background:#fff; max-width:600px; width:90%; border-radius:14px; padding:1.5em 2em; box-shadow:0 8px 24px rgba(0,0,0,0.25); color:#222; max-height:90vh; overflow:auto;" id="sectionModalContent">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:0.5em; margin-bottom:1em;">
-      <h3>Aynı Section'daki Ürünler</h3>
-      <button onclick="closeSectionModal()" style="font-size:1.6em; background:none; border:none; font-weight:bold; cursor:pointer;">&times;</button>
-    </div>
-    <div id="sectionModalBody"></div>
   </div>
 </div>
 
@@ -234,23 +223,16 @@ function showInModal(sku){
   for (let i = 0; i < labels.length; i++) {
     h += `<tr><th>${labels[i]}</th><td>${matches[0][i] || ''}</td></tr>`;
   }
-  h += '</tbody></table><br/><strong>Lokasyonlar:</strong>';
-
-  // Yeni buton ekleniyor
-  const sectionBtn = document.createElement('button');
-  sectionBtn.textContent = "Section'da Sayılan Diğer Ürünler";
-  sectionBtn.style = "margin-left: 12px; padding: 4px 10px; font-size: 0.9em; background: #28a745; color: white; border: none; border-radius: 6px; cursor: pointer;";
-  sectionBtn.onclick = () => showOtherProducts(matches[0][4], sku);
-
-  setTimeout(() => {
-    modalBody.querySelector('strong')?.after(sectionBtn);
-  }, 0);
-
-  h += '<div style="margin-bottom: 6px;"></div>';
+  h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
   h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
-  matches.forEach(row => {
-    h += `<tr><td>${row[3]}</td><td>${row[4]}</td><td>${row[5]}</td></tr>`;
-  });
+ matches.forEach(row => {
+  const section = row[4];
+  const loc = row[3];
+  const stok = row[5];
+  const clickableSection = `<td style="color:#007bff; cursor:pointer;" onclick="showProductsInSameSection('${section.replace(/'/g, "\\'")}', '${loc.replace(/'/g, "\\'")}')">${section}</td>`;
+  h += `<tr><td>${loc}</td>${clickableSection}<td>${stok}</td></tr>`;
+});
+
   h += '</tbody></table>';
 
   modalBody.innerHTML = h;
@@ -304,24 +286,6 @@ function updateHistory(){
   });
 }
 
-function showOtherProducts(section, excludeSku){
-  const others = stockData.filter(row => row[4] === section && row[0] !== excludeSku);
-  if (others.length === 0) {
-    document.getElementById('sectionModalBody').innerHTML = '<p style="padding:1em;">Bu section’da başka ürün bulunamadı.</p>';
-  } else {
-    let h = '<table><thead><tr><th>Malzeme</th><th>Barkod</th><th>Ürün</th><th>Adet</th></tr></thead><tbody>';
-    others.forEach(row => {
-      h += `<tr><td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td><td>${row[5]}</td></tr>`;
-    });
-    h += '</tbody></table>';
-    document.getElementById('sectionModalBody').innerHTML = h;
-  }
-  document.getElementById('sectionModal').style.display = 'flex';
-}
-
-function closeSectionModal() {
-  document.getElementById('sectionModal').style.display = 'none';
-}
 
 function showRefSelector(){
   const files=['Genel.txt','Aybars.txt','OsmanB.txt','Berkay.txt','OsmanG.txt','Berkant.txt','Faruk.txt','Ferhat.txt'];
@@ -331,11 +295,44 @@ function showRefSelector(){
   Array.from(modalBody.querySelectorAll('button')).forEach((btn,i)=>{ btn.onclick = () => { fetchDataFiles(files[i]); modal.style.display = 'none'; }; });
 }
 
+window.selectRefFile=f=>{
+  modal.style.display='none';
+  fetchDataFiles(f);
+};
+
 closeModalBtn.addEventListener('click', ()=>modal.style.display='none');
-window.addEventListener('click', e=>{
-  if(e.target===modal) modal.style.display='none';
-  if(e.target===document.getElementById('sectionModal')) closeSectionModal();
-});
+window.addEventListener('click', e=>{ if(e.target===modal) modal.style.display='none'; });
+
+  function showProductsInSameSection(section, loc) {
+  const matchingRows = stockData.filter(row => row[4] === section);
+  if (matchingRows.length === 0) {
+    showAlert(`Section "${section}" içinde başka ürün bulunamadı.`, 'Bilgi');
+    return;
+  }
+
+  let total = 0;
+  let h = `<p style="font-weight:bold; font-size:1.1em; margin-bottom: 0.5em;">📦 Lokasyon: ${loc} / Section: ${section}</p>`;
+  h += '<table><thead><tr><th>Malzeme</th><th>Barkod</th><th>Ürün</th><th>Adet</th></tr></thead><tbody>';
+
+  matchingRows.forEach(row => {
+    const isOriginal = searchHistory.length && row[0] === searchHistory[0];
+    const highlightStyle = isOriginal ? 'font-weight:bold; background:#f0f8ff;' : '';
+    h += `<tr style="${highlightStyle}">
+            <td>${row[0]}</td>
+            <td>${row[1]}</td>
+            <td>${row[2]}</td>
+            <td>${row[5]}</td>
+          </tr>`;
+    total += parseInt(row[5], 10) || 0;
+  });
+
+  h += `</tbody></table><p style="margin-top:1em; font-weight:bold;">🔢 Toplam Adet: ${total}</p>`;
+
+  modalBody.innerHTML = h;
+  document.getElementById('modalTitle').textContent = `Section Detayı: ${section}`;
+  modal.style.display = 'flex';
+}
+
 </script>
 </body>
 </html>
