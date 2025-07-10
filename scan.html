@@ -1,247 +1,81 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Barkod Tarayıcı & Clear Buton</title>
-  
-  <!-- jsQR kütüphanesi -->
-  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
-  
+  <meta charset="UTF-8">
+  <title>Barkod Tarayıcı</title>
+  <script src="https://unpkg.com/html5-qrcode"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      margin: 0;
-      padding: 20px;
+    body { font-family: sans-serif; text-align: center; margin: 0; padding: 0; }
+    #reader {
+      width: 100vw;
+      height: 100vh;
     }
-    .history-header {
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-      margin-bottom: 12px;
+    #log {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      font-family: monospace;
     }
-    .clear-button {
+    #start-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #007bff;
-      border: none;
-      color: white;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-    .clear-button:hover {
-      background-color: #0056b3;
-    }
-
-    /* LOG listesi */
-    #logList {
-      list-style-type: none;
-      padding: 0;
-      max-height: 300px;
-      overflow-y: auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      margin-top: 12px;
-    }
-    #logList li {
-      padding: 10px 15px;
-      border-bottom: 1px solid #eee;
-      font-weight: 500;
-    }
-    #logList li:last-child {
-      border-bottom: none;
-    }
-
-    /* Modal için */
-    #modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    #modalContent {
-      background: white;
-      padding: 24px;
-      border-radius: 16px;
-      width: 360px;
-      max-width: 90vw;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      text-align: center;
-    }
-    #modalTitle {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    /* Alert mesajı */
-    #alertBox {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #28a745;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      font-weight: 600;
-      z-index: 1100;
-    }
-    #alertBox.show {
-      opacity: 1;
-      pointer-events: auto;
     }
   </style>
 </head>
 <body>
-
-  <div class="history-header">
-    <button id="scanButton" class="clear-button">Scan</button>
-    <button id="clearButton" class="clear-button">Clear</button>
-  </div>
-
-  <ul id="logList"></ul>
-
-  <!-- Modal -->
-  <div id="modal">
-    <div id="modalContent">
-      <div id="modalTitle">Barkod Tarayıcı</div>
-      <div id="modalBody"></div>
-    </div>
-  </div>
-
-  <!-- Alert -->
-  <div id="alertBox"></div>
+  <button id="start-btn">📷 Scan Et</button>
+  <div id="reader" style="display: none;"></div>
+  <div id="log">📋 Tarama sonuçları burada görünecek.</div>
 
   <script>
-    // LOG verisi ve güncelleme fonksiyonu
-    let searchHistory = [];
+    const log = document.getElementById('log');
+    const readerDiv = document.getElementById('reader');
+    const startBtn = document.getElementById('start-btn');
 
-    const logList = document.getElementById('logList');
-    const clearButton = document.getElementById('clearButton');
-    const scanButton = document.getElementById('scanButton');
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modalBody');
-    const modalTitle = document.getElementById('modalTitle');
-    const alertBox = document.getElementById('alertBox');
+    let html5QrCode;
 
-    function updateHistory() {
-      logList.innerHTML = '';
-      searchHistory.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        logList.appendChild(li);
-      });
-    }
+    startBtn.addEventListener('click', () => {
+      readerDiv.style.display = 'block';
+      startBtn.style.display = 'none';
 
-    function showAlert(message, type = 'info') {
-      alertBox.textContent = message;
-      alertBox.style.backgroundColor = type === 'error' ? '#dc3545' : '#28a745';
-      alertBox.classList.add('show');
-      setTimeout(() => {
-        alertBox.classList.remove('show');
-      }, 3000);
-    }
+      html5QrCode = new Html5Qrcode("reader");
 
-    clearButton.addEventListener('click', () => {
-      searchHistory = [];
-      updateHistory();
-      showAlert('LOG temizlendi', 'info');
-    });
+      Html5Qrcode.getCameras().then(devices => {
+        if (devices.length === 0) throw new Error("Kamera bulunamadı");
 
-    function addToLog(barcode) {
-      if (!barcode) return;
-      if (!searchHistory.includes(barcode)) {
-        searchHistory.unshift(barcode);
-        if (searchHistory.length > 15) {
-          searchHistory.pop();
-        }
-        updateHistory();
-        showAlert(`Tarandı: ${barcode}`, 'info');
-      }
-    }
+        // Arka kamerayı bulmaya çalış
+        let backCamera = devices.find(device => device.label.toLowerCase().includes("back")) || devices[1] || devices[0];
 
-    // Kamera ve barkod tarama işlemi
-    let scanning = false;
-    let videoStream = null;
-
-    const scanModalContent = `
-      <div style="display:flex; flex-direction: column; align-items:center;">
-        <video id="video" width="320" height="240" style="border-radius:12px; background:#000;"></video>
-        <button id="stopScanBtn" style="margin-top:12px; padding:8px 16px; border:none; border-radius:8px; background:#dc3545; color:#fff; cursor:pointer;">Tarayıcıyı Kapat</button>
-      </div>
-    `;
-
-    scanButton.addEventListener('click', async () => {
-      if (scanning) return;
-      scanning = true;
-
-      modalBody.innerHTML = scanModalContent;
-      modalTitle.textContent = 'Barkod Tarayıcı';
-      modal.style.display = 'flex';
-
-      const video = document.getElementById('video');
-      const stopScanBtn = document.getElementById('stopScanBtn');
-
-      try {
-        videoStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
-        video.srcObject = videoStream;
-        video.setAttribute('playsinline', true);
-        await video.play();
-
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-
-        const scanLoop = () => {
-          if (!scanning) return;
-          if (video.readyState === video.HAVE_ENOUGH_DATA) {
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-            const code = jsQR(imageData.data, canvas.width, canvas.height, { inversionAttempts: "dontInvert" });
-            if (code) {
-              addToLog(code.data);
-              stopScanning();
-              return;
-            }
+        html5QrCode.start(
+          backCamera.id,
+          {
+            fps: 10,
+            qrbox: { width: 300, height: 300 }, // Ortalanmış kutu
+            aspectRatio: 1.7778 // 16:9
+          },
+          qrCodeMessage => {
+            log.innerHTML = "📦 Barkod: " + qrCodeMessage;
+            html5QrCode.stop().then(() => {
+              readerDiv.style.display = 'none';
+              startBtn.style.display = 'inline-block';
+            });
+          },
+          errorMessage => {
+            // Sessizce hata geç
           }
-          requestAnimationFrame(scanLoop);
-        };
-
-        scanLoop();
-
-      } catch (err) {
-        alert('Kamera açılamadı veya izin verilmedi: ' + err.message);
-        scanning = false;
-        modal.style.display = 'none';
-      }
-
-      stopScanBtn.onclick = () => stopScanning();
+        );
+      }).catch(err => {
+        log.innerHTML = "❌ Kamera erişim hatası: " + err;
+      });
     });
-
-    function stopScanning() {
-      scanning = false;
-      if (videoStream) {
-        videoStream.getTracks().forEach(track => track.stop());
-        videoStream = null;
-      }
-      modal.style.display = 'none';
-    }
-
-    // Sayfa yüklendiğinde LOG güncelle
-    updateHistory();
   </script>
-
 </body>
 </html>
