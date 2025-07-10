@@ -79,6 +79,7 @@
 <div id="buttonContainer">
   <button id="scanButton">Scan</button>
   <button id="okutButton" disabled>Okut</button>
+  <button id="clearHistoryButton" title="Geçmişi Temizle">Geçmişi Temizle</button>
 </div>
 
 <div id="barcodeListContainer">
@@ -97,6 +98,7 @@
 <script>
   const scanButton = document.getElementById('scanButton');
   const okutButton = document.getElementById('okutButton');
+  const clearHistoryButton = document.getElementById('clearHistoryButton');
   const video = document.getElementById('video');
   const barcodeTableBody = document.querySelector('#barcodeTable tbody');
   const beepSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
@@ -141,6 +143,15 @@
   okutButton.addEventListener('mouseleave', stopScanning);
   okutButton.addEventListener('touchend', stopScanning);
   okutButton.addEventListener('touchcancel', stopScanning);
+
+  clearHistoryButton.addEventListener('click', () => {
+    // Seti temizle
+    scannedBarcodes.clear();
+    // LocalStorage temizle
+    localStorage.removeItem('scannedBarcodes');
+    // Tabloyu temizle
+    barcodeTableBody.innerHTML = '';
+  });
 
   async function startCamera() {
     try {
