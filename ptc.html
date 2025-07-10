@@ -22,6 +22,10 @@
     max-width: 400px;
     border-radius: 8px;
     background: black;
+    transition: filter 0.3s ease;
+  }
+  video.blurred {
+    filter: blur(6px);
   }
   #flashOverlay {
     position: absolute;
@@ -153,7 +157,8 @@
       scanButton.textContent = "Scan";
       okutButton.disabled = true;
       stopScanning();
-      okutButton.classList.remove('scanning'); // Buton rengi sıfırla
+      okutButton.classList.remove('scanning');
+      video.classList.remove('blurred');
     } else {
       await startCamera();
       scanButton.textContent = "Stop";
@@ -179,6 +184,7 @@
       cameraStream = await navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment'}});
       video.srcObject = cameraStream;
       video.style.display = 'block';
+      video.classList.remove('blurred'); // Kamera açıldığında net olsun
     } catch (err) {
       alert('Kameraya erişilemedi: ' + err.message);
     }
@@ -195,8 +201,9 @@
   function startScanning() {
     if (!cameraStream || scanning) return;
     scanning = true;
-    // Buton kırmızı değil, sadece barkod okutulunca kırmızı olacak
     scanInterval = setInterval(scanFrame, 500);
+    okutButton.classList.remove('scanning'); // Basılı ama kırmızı değil
+    video.classList.remove('blurred'); // Basınca netleştir
   }
 
   function stopScanningAndReset() {
@@ -204,8 +211,8 @@
     scanning = false;
     clearInterval(scanInterval);
     scanInterval = null;
-    // Butonun kırmızı hali bırakıldığında sıfırlanır (yani tekrar okunabilir)
     okutButton.classList.remove('scanning');
+    video.classList.remove('blurred'); // Buton bırakılınca netleştir
   }
 
   async function scanFrame() {
@@ -232,8 +239,9 @@
           beepSound.play();
           flashEffect();
 
-          // Taramayı durdur, butonu kırmızı yap
+          // Taramayı durdur, kamera bulanık yap, butonu kırmızı yap
           stopScanning();
+          video.classList.add('blurred');
           okutButton.classList.add('scanning');
 
           break; // Sadece ilk barkod için
