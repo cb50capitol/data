@@ -17,7 +17,7 @@
       height: 100vh;
       position: relative;
     }
-    button {
+    #start-btn {
       position: fixed;
       bottom: 20px;
       left: 50%;
@@ -32,7 +32,7 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       cursor: pointer;
     }
-    button:active {
+    #start-btn:active {
       background-color: #0056b3;
     }
     #log {
@@ -60,15 +60,11 @@
       border-bottom: 1px solid rgba(255,255,255,0.2);
       padding: 6px 0;
     }
-    #continue-btn {
-      display: none;
-    }
   </style>
 </head>
 <body>
 
   <button id="start-btn">📷 Scan Et</button>
-  <button id="continue-btn">📎 Devam Et</button>
   <div id="reader" style="display: none;"></div>
   <div id="log" style="display: none;">
     <strong>📋 Son 2 Barkod:</strong>
@@ -80,19 +76,18 @@
     const logList = document.getElementById('log-list');
     const readerDiv = document.getElementById('reader');
     const startBtn = document.getElementById('start-btn');
-    const continueBtn = document.getElementById('continue-btn');
 
     let html5QrCode;
     let scannedCodes = [];
     let cameraId = null;
+    let lastScanned = "";
+    let scanCooldown = false;
 
     function updateLogList(newCode) {
-      if (scannedCodes[0] === newCode) return; // aynıysa ekleme
+      if (scannedCodes[0] === newCode) return;
 
       scannedCodes.unshift(newCode);
-      if (scannedCodes.length > 2) {
-        scannedCodes.pop();
-      }
+      if (scannedCodes.length > 2) scannedCodes.pop();
 
       logList.innerHTML = '';
       scannedCodes.forEach(code => {
@@ -109,14 +104,13 @@
         html5QrCode = new Html5Qrcode("reader");
       }
 
-      // Eğer kamera daha önce seçildiyse onu tekrar kullan
       if (!cameraId) {
         const devices = await Html5Qrcode.getCameras();
         if (devices.length === 0) throw new Error("Kamera bulunamadı");
         cameraId = devices.find(device => device.label.toLowerCase().includes("back"))?.id || devices[0].id;
       }
 
-      await html5QrCode.start(
+      html5QrCode.start(
         cameraId,
         {
           fps: 10,
@@ -124,13 +118,18 @@
           aspectRatio: 1.7778
         },
         qrCodeMessage => {
+          if (scanCooldown || qrCodeMessage === lastScanned) return;
+
+          lastScanned = qrCodeMessage;
           updateLogList("📦 " + qrCodeMessage);
-          html5QrCode.stop().then(() => {
-            continueBtn.style.display = 'inline-block';
-          });
+
+          scanCooldown = true;
+          setTimeout(() => {
+            scanCooldown = false;
+          }, 1000); // 1 saniyelik bekleme ile tekrar taramayı engelle
         },
         errorMessage => {
-          // Sessiz geç
+          // Sessizce geç
         }
       );
     }
@@ -138,11 +137,6 @@
     startBtn.addEventListener('click', async () => {
       readerDiv.style.display = 'block';
       startBtn.style.display = 'none';
-      await startCamera();
-    });
-
-    continueBtn.addEventListener('click', async () => {
-      continueBtn.style.display = 'none';
       await startCamera();
     });
   </script>
