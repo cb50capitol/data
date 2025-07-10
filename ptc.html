@@ -201,29 +201,38 @@
   function startScanning() {
     if (!cameraStream || scanning) return;
     scanning = true;
+    // Sadece 1 interval çalışsın diye önce varsa temizle
+    if (scanInterval) {
+      clearInterval(scanInterval);
+    }
     scanInterval = setInterval(scanFrame, 500);
-    okutButton.classList.remove('scanning'); // Basılı ama kırmızı değil
+    okutButton.classList.remove('scanning'); // Buton kırmızı değil
     video.classList.remove('blurred'); // Basınca netleştir
   }
 
-  function stopScanningAndReset() {
+  function stopScanning() {
     if (!scanning) return;
     scanning = false;
-    clearInterval(scanInterval);
-    scanInterval = null;
+    if (scanInterval) {
+      clearInterval(scanInterval);
+      scanInterval = null;
+    }
+  }
+
+  function stopScanningAndReset() {
+    stopScanning();
     okutButton.classList.remove('scanning');
     video.classList.remove('blurred'); // Buton bırakılınca netleştir
   }
 
   async function scanFrame() {
-    if (!scanning) return;
+    if (!scanning) return; // Kesinlikle durdurulduysa işlemi iptal et
     try {
       const barcodes = await barcodeDetector.detect(video);
       if (barcodes.length > 0) {
         const now = Date.now();
         for (const barcode of barcodes) {
           const code = barcode.rawValue;
-          // Debounce kontrolü
           if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) {
             continue; // Çok erken tekrar, atla
           }
@@ -239,12 +248,13 @@
           beepSound.play();
           flashEffect();
 
-          // Taramayı durdur, kamera bulanık yap, butonu kırmızı yap
+          // Tarama durdurulsun ve kamera flu yapılsın
           stopScanning();
+
           video.classList.add('blurred');
           okutButton.classList.add('scanning');
 
-          break; // Sadece ilk barkod için
+          break; // Yalnızca ilk barkod okutulsun
         }
       }
     } catch (err) {
