@@ -48,7 +48,6 @@
     text-align: center;
     color: #333;
   }
-
   /* Tablo stili */
   #barcodeTable {
     width: 100%;
@@ -89,6 +88,7 @@
       <tr>
         <th>#</th>
         <th>Barkod Değeri</th>
+        <th>Adet</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -108,8 +108,8 @@
   let barcodeDetector;
   let scanInterval = null;
 
-  // LocalStorage’dan barkodları oku yoksa boş array
-  let scannedBarcodes = new Set(JSON.parse(localStorage.getItem('scannedBarcodes') || '[]'));
+  // scannedBarcodes nesnesi: barkod => adet
+  let scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
 
   if ('BarcodeDetector' in window) {
     barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
@@ -119,9 +119,7 @@
 
   // Sayfa yüklendiğinde kayıtlı barkodları tabloya ekle
   window.addEventListener('DOMContentLoaded', () => {
-    scannedBarcodes.forEach((code, index) => {
-      addBarcodeToTable(code, index + 1);
-    });
+    updateTable();
   });
 
   scanButton.addEventListener('click', async () => {
@@ -145,12 +143,9 @@
   okutButton.addEventListener('touchcancel', stopScanning);
 
   clearHistoryButton.addEventListener('click', () => {
-    // Seti temizle
-    scannedBarcodes.clear();
-    // LocalStorage temizle
+    scannedBarcodes = {};
     localStorage.removeItem('scannedBarcodes');
-    // Tabloyu temizle
-    barcodeTableBody.innerHTML = '';
+    updateTable();
   });
 
   async function startCamera() {
@@ -190,12 +185,15 @@
       const barcodes = await barcodeDetector.detect(video);
       if (barcodes.length > 0) {
         barcodes.forEach(barcode => {
-          if (!scannedBarcodes.has(barcode.rawValue)) {
-            scannedBarcodes.add(barcode.rawValue);
-            saveBarcodesToStorage();
-            addBarcodeToTable(barcode.rawValue, scannedBarcodes.size);
-            beepSound.play();
+          const code = barcode.rawValue;
+          if (scannedBarcodes[code]) {
+            scannedBarcodes[code]++;
+          } else {
+            scannedBarcodes[code] = 1;
           }
+          saveBarcodesToStorage();
+          updateTable();
+          beepSound.play();
         });
       }
     } catch (err) {
@@ -203,26 +201,31 @@
     }
   }
 
-  function addBarcodeToTable(barcode, index) {
-    const row = document.createElement('tr');
-    const cellIndex = document.createElement('td');
-    const cellValue = document.createElement('td');
+  // Tabloyu güncelle
+  function updateTable() {
+    barcodeTableBody.innerHTML = '';
+    const keys = Object.keys(scannedBarcodes);
+    keys.forEach((code, i) => {
+      const count = scannedBarcodes[code];
+      const row = document.createElement('tr');
 
-    cellIndex.textContent = index;
-    cellValue.textContent = barcode;
+      const cellIndex = document.createElement('td');
+      cellIndex.textContent = i + 1;
+      const cellCode = document.createElement('td');
+      cellCode.textContent = code;
+      const cellCount = document.createElement('td');
+      cellCount.textContent = count;
 
-    row.appendChild(cellIndex);
-    row.appendChild(cellValue);
+      row.appendChild(cellIndex);
+      row.appendChild(cellCode);
+      row.appendChild(cellCount);
 
-    if (barcodeTableBody.firstChild) {
-      barcodeTableBody.insertBefore(row, barcodeTableBody.firstChild);
-    } else {
       barcodeTableBody.appendChild(row);
-    }
+    });
   }
 
   function saveBarcodesToStorage() {
-    localStorage.setItem('scannedBarcodes', JSON.stringify(Array.from(scannedBarcodes)));
+    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
   }
 </script>
 
