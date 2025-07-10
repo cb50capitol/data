@@ -94,9 +94,8 @@
     let barcodeData = {}; // EAN -> Satır
     let headers = [];
 
-    // Scan.txt dosyasını önbelleksiz olarak yükle
     function loadScanTxt() {
-      const timestamp = new Date().getTime(); // cache buster
+      const timestamp = new Date().getTime();
       return fetch('Scan.txt?t=' + timestamp)
         .then(response => {
           if (!response.ok) throw new Error("Scan.txt dosyası yüklenemedi");
@@ -115,7 +114,6 @@
               barcodeData[cols[0].trim()] = cols;
             }
           }
-
           console.log("✅ Scan.txt verisi yüklendi:", Object.keys(barcodeData).length, "satır");
         })
         .catch(err => {
@@ -142,7 +140,7 @@
         qrCodeMessage => {
           showMatch(qrCodeMessage.trim());
         },
-        errorMessage => { /* hata gösterme */ }
+        errorMessage => { }
       );
     }
 
@@ -171,14 +169,13 @@
 
     function showMatch(barcode) {
       loadScanTxt().then(() => {
-        checkboxContainer.innerHTML = ''; // önceki checkboxları temizle
+        checkboxContainer.innerHTML = '';
 
         if (barcodeData[barcode]) {
           const values = barcodeData[barcode];
           const result = headers.map((h, i) => `${h}: ${values[i]}`).join('\n');
           log.innerText = `✅ Eşleşme:\n\n${result}`;
 
-          // SAS sayısını al (headers'dan bul)
           const sasIndex = headers.indexOf('SAS');
           const sasCount = parseInt(values[sasIndex]) || 0;
 
@@ -225,8 +222,7 @@
 
     cancelBtn.addEventListener('click', async () => {
       await stopCamera();
-      log.style.display = 'none';
-      checkboxContainer.innerHTML = '';
+      // Burada log'u gizlemiyoruz, böylece eşleşme görünür kalır
     });
   </script>
 
