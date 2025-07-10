@@ -663,17 +663,23 @@
 
     // 📷 Barkod Okuyucu Fonksiyonu
     scanButton.addEventListener('click', async () => {
-      const codeReader = new ZXing.BrowserBarcodeReader();
-      try {
-        const result = await codeReader.decodeOnceFromVideoDevice(undefined, 'videoPreview');
-        input.value = result.text;
-        doSearch();
-        stream.getTracks().forEach(track => track.stop());
-        document.body.removeChild(videoElement);
-      } catch (err) {
-        showAlert('Kamera erişimi reddedildi veya barkod okunamadı.', 'Hata');
-      }
-    });
+  document.body.appendChild(videoElement);
+  const codeReader = new ZXing.BrowserBarcodeReader();
+
+  try {
+    const result = await codeReader.decodeOnceFromVideoDevice(undefined, videoElement);
+    input.value = result.text;
+    doSearch();
+  } catch (err) {
+    showAlert('Kamera erişimi reddedildi veya barkod okunamadı.', 'Hata');
+  } finally {
+    codeReader.reset();
+    if (videoElement.parentNode) {
+      videoElement.parentNode.removeChild(videoElement);
+    }
+  }
+});
+
 
     // Kamera için video öğesi yarat
     const videoElement = document.createElement('video');
