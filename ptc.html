@@ -126,6 +126,12 @@
 
   let scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
 
+  // Barkodların son okunduğu zamanlar (ms)
+  const lastReadTimestamps = {};
+
+  // Aynı barkodun arka arkaya okunmasını engellemek için süre (ms)
+  const DEBOUNCE_TIME = 2000; // 2 saniye
+
   if ('BarcodeDetector' in window) {
     barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
   } else {
@@ -198,8 +204,15 @@
     try {
       const barcodes = await barcodeDetector.detect(video);
       if (barcodes.length > 0) {
+        const now = Date.now();
         barcodes.forEach(barcode => {
           const code = barcode.rawValue;
+          // Debounce kontrolü
+          if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) {
+            return; // Çok erken tekrar, sayma yok
+          }
+          lastReadTimestamps[code] = now;
+
           if (scannedBarcodes[code]) {
             scannedBarcodes[code]++;
           } else {
