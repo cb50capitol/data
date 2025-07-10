@@ -51,6 +51,11 @@
   button:active {
     background-color: #ccc;
   }
+  button.scanning {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+  }
   #barcodeListContainer {
     width: 90vw;
     max-width: 400px;
@@ -148,6 +153,7 @@
       scanButton.textContent = "Scan";
       okutButton.disabled = true;
       stopScanning();
+      okutButton.classList.remove('scanning'); // Buton rengi sıfırla
     } else {
       await startCamera();
       scanButton.textContent = "Stop";
@@ -157,10 +163,10 @@
 
   okutButton.addEventListener('mousedown', startScanning);
   okutButton.addEventListener('touchstart', startScanning);
-  okutButton.addEventListener('mouseup', stopScanning);
-  okutButton.addEventListener('mouseleave', stopScanning);
-  okutButton.addEventListener('touchend', stopScanning);
-  okutButton.addEventListener('touchcancel', stopScanning);
+  okutButton.addEventListener('mouseup', stopScanningAndReset);
+  okutButton.addEventListener('mouseleave', stopScanningAndReset);
+  okutButton.addEventListener('touchend', stopScanningAndReset);
+  okutButton.addEventListener('touchcancel', stopScanningAndReset);
 
   clearHistoryButton.addEventListener('click', () => {
     scannedBarcodes = {};
@@ -189,14 +195,17 @@
   function startScanning() {
     if (!cameraStream || scanning) return;
     scanning = true;
+    // Buton kırmızı değil, sadece barkod okutulunca kırmızı olacak
     scanInterval = setInterval(scanFrame, 500);
   }
 
-  function stopScanning() {
+  function stopScanningAndReset() {
     if (!scanning) return;
     scanning = false;
     clearInterval(scanInterval);
     scanInterval = null;
+    // Butonun kırmızı hali bırakıldığında sıfırlanır (yani tekrar okunabilir)
+    okutButton.classList.remove('scanning');
   }
 
   async function scanFrame() {
@@ -205,11 +214,11 @@
       const barcodes = await barcodeDetector.detect(video);
       if (barcodes.length > 0) {
         const now = Date.now();
-        barcodes.forEach(barcode => {
+        for (const barcode of barcodes) {
           const code = barcode.rawValue;
           // Debounce kontrolü
           if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) {
-            return; // Çok erken tekrar, sayma yok
+            continue; // Çok erken tekrar, atla
           }
           lastReadTimestamps[code] = now;
 
@@ -222,7 +231,13 @@
           updateTable();
           beepSound.play();
           flashEffect();
-        });
+
+          // Taramayı durdur, butonu kırmızı yap
+          stopScanning();
+          okutButton.classList.add('scanning');
+
+          break; // Sadece ilk barkod için
+        }
       }
     } catch (err) {
       console.error('Tarama hatası:', err);
