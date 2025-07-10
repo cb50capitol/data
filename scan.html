@@ -66,29 +66,35 @@
     let barcodeData = {}; // EAN -> Satır
     let headers = [];
 
-    // Sayfa açıldığında Scan.txt dosyasını yükle
-    fetch('Scan.txt')
-      .then(response => {
-        if (!response.ok) throw new Error("Scan.txt dosyası yüklenemedi");
-        return response.text();
-      })
-      .then(text => {
-        const lines = text.trim().split('\n').filter(line => line.trim() !== '');
-        headers = lines[0].split('\t');
+    // Scan.txt dosyasını önbelleksiz olarak yükle
+    function loadScanTxt() {
+      const timestamp = new Date().getTime(); // cache buster
+      return fetch('Scan.txt?t=' + timestamp)
+        .then(response => {
+          if (!response.ok) throw new Error("Scan.txt dosyası yüklenemedi");
+          return response.text();
+        })
+        .then(text => {
+          barcodeData = {};
+          headers = [];
 
-        for (let i = 1; i < lines.length; i++) {
-          const cols = lines[i].split('\t');
-          if (cols[0]) {
-            barcodeData[cols[0].trim()] = cols;
+          const lines = text.trim().split('\n').filter(line => line.trim() !== '');
+          headers = lines[0].split('\t');
+
+          for (let i = 1; i < lines.length; i++) {
+            const cols = lines[i].split('\t');
+            if (cols[0]) {
+              barcodeData[cols[0].trim()] = cols;
+            }
           }
-        }
 
-        console.log("✅ Scan.txt verisi yüklendi:", Object.keys(barcodeData).length, "satır");
-      })
-      .catch(err => {
-        log.innerText = "❌ Scan.txt yüklenemedi: " + err;
-        log.style.display = 'block';
-      });
+          console.log("✅ Scan.txt verisi yüklendi:", Object.keys(barcodeData).length, "satır");
+        })
+        .catch(err => {
+          log.innerText = "❌ Scan.txt yüklenemedi: " + err;
+          log.style.display = 'block';
+        });
+    }
 
     async function startCamera() {
       if (!html5QrCode) {
@@ -112,19 +118,25 @@
     }
 
     function showMatch(barcode) {
-      if (barcodeData[barcode]) {
-        const values = barcodeData[barcode];
-        const result = headers.map((h, i) => `${h}: ${values[i]}`).join('\n');
-        log.innerText = `✅ Eşleşme:\n\n${result}`;
-      } else {
-        log.innerText = `❌ Eşleşme bulunamadı:\n${barcode}`;
-      }
-      log.style.display = 'block';
+      // Her taramada tekrar dosya oku
+      loadScanTxt().then(() => {
+        if (barcodeData[barcode]) {
+          const values = barcodeData[barcode];
+          const result = headers.map((h, i) => `${h}: ${values[i]}`).join('\n');
+          log.innerText = `✅ Eşleşme:\n\n${result}`;
+        } else {
+          log.innerText = `❌ Eşleşme bulunamadı:\n${barcode}`;
+        }
+        log.style.display = 'block';
+      });
     }
 
     startBtn.addEventListener('click', async () => {
       readerDiv.style.display = 'block';
       startBtn.style.display = 'none';
+
+      // Başlatmadan önce veriyi yükle
+      await loadScanTxt();
       await startCamera();
     });
   </script>
