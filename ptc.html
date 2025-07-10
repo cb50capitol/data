@@ -105,7 +105,9 @@
   let scanning = false;
   let barcodeDetector;
   let scanInterval = null;
-  const scannedBarcodes = new Set();
+
+  // LocalStorage’dan barkodları oku yoksa boş array
+  let scannedBarcodes = new Set(JSON.parse(localStorage.getItem('scannedBarcodes') || '[]'));
 
   if ('BarcodeDetector' in window) {
     barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
@@ -113,17 +115,21 @@
     alert('Bu cihazda BarcodeDetector API desteklenmiyor.');
   }
 
+  // Sayfa yüklendiğinde kayıtlı barkodları tabloya ekle
+  window.addEventListener('DOMContentLoaded', () => {
+    scannedBarcodes.forEach((code, index) => {
+      addBarcodeToTable(code, index + 1);
+    });
+  });
+
   // Scan butonuna basınca kamera aç/kapa
   scanButton.addEventListener('click', async () => {
     if (cameraStream) {
-      // Kamera açık, kapat
       stopCamera();
       scanButton.textContent = "Scan";
       okutButton.disabled = true;
       stopScanning();
-      clearBarcodeTable();
     } else {
-      // Kamera kapalı, aç
       await startCamera();
       scanButton.textContent = "Stop";
       okutButton.disabled = false;
@@ -161,8 +167,6 @@
   function startScanning() {
     if (!cameraStream || scanning) return;
     scanning = true;
-    scannedBarcodes.clear();
-    clearBarcodeTable();
     scanInterval = setInterval(scanFrame, 500);
   }
 
@@ -173,12 +177,6 @@
     scanInterval = null;
   }
 
-  function clearBarcodeTable() {
-    while (barcodeTableBody.firstChild) {
-      barcodeTableBody.removeChild(barcodeTableBody.firstChild);
-    }
-  }
-
   async function scanFrame() {
     if (!scanning) return;
     try {
@@ -187,25 +185,8 @@
         barcodes.forEach(barcode => {
           if (!scannedBarcodes.has(barcode.rawValue)) {
             scannedBarcodes.add(barcode.rawValue);
-
-            // Tabloya yeni satır ekle
-            const row = document.createElement('tr');
-            const cellIndex = document.createElement('td');
-            const cellValue = document.createElement('td');
-
-            cellIndex.textContent = scannedBarcodes.size;
-            cellValue.textContent = barcode.rawValue;
-
-            row.appendChild(cellIndex);
-            row.appendChild(cellValue);
-
-            // En üstte göstermek için tbody başına ekle
-            if (barcodeTableBody.firstChild) {
-              barcodeTableBody.insertBefore(row, barcodeTableBody.firstChild);
-            } else {
-              barcodeTableBody.appendChild(row);
-            }
-
+            saveBarcodesToStorage();
+            addBarcodeToTable(barcode.rawValue, scannedBarcodes.size);
             beepSound.play();
           }
         });
@@ -213,6 +194,29 @@
     } catch (err) {
       console.error('Tarama hatası:', err);
     }
+  }
+
+  function addBarcodeToTable(barcode, index) {
+    const row = document.createElement('tr');
+    const cellIndex = document.createElement('td');
+    const cellValue = document.createElement('td');
+
+    cellIndex.textContent = index;
+    cellValue.textContent = barcode;
+
+    row.appendChild(cellIndex);
+    row.appendChild(cellValue);
+
+    // En üstte göstermek için tbody başına ekle
+    if (barcodeTableBody.firstChild) {
+      barcodeTableBody.insertBefore(row, barcodeTableBody.firstChild);
+    } else {
+      barcodeTableBody.appendChild(row);
+    }
+  }
+
+  function saveBarcodesToStorage() {
+    localStorage.setItem('scannedBarcodes', JSON.stringify(Array.from(scannedBarcodes)));
   }
 </script>
 
