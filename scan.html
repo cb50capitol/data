@@ -11,35 +11,18 @@
       margin: 0;
       padding: 0;
       background-color: #f0f0f0;
-      overflow: hidden;
     }
     #reader {
       width: 100vw;
       height: 100vh;
       position: relative;
     }
-    #scan-line {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: red;
-      z-index: 1001;
-      animation: blink 1.5s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0.1; }
-      50% { opacity: 1; }
-    }
-
     button {
       position: fixed;
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 1002;
+      z-index: 1001;
       padding: 16px 30px;
       font-size: 18px;
       background-color: #007bff;
@@ -49,7 +32,6 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       cursor: pointer;
     }
-
     #log {
       position: fixed;
       top: 20px;
@@ -70,26 +52,23 @@
 </head>
 <body>
 
-  <div id="reader">
-    <div id="scan-line"></div>
-  </div>
-
-  <button id="scan-btn">📷 Scan Et</button>
+  <button id="start-btn">📷 Scan Et</button>
+  <div id="reader" style="display: none;"></div>
   <div id="log" style="display: none;"></div>
 
   <script>
     const readerDiv = document.getElementById('reader');
-    const scanBtn = document.getElementById('scan-btn');
+    const startBtn = document.getElementById('start-btn');
     const log = document.getElementById('log');
 
     let html5QrCode;
     let cameraId = null;
-    let scanning = false;
-    let barcodeData = {};
+    let barcodeData = {}; // EAN -> Satır
     let headers = [];
 
+    // Scan.txt dosyasını önbelleksiz olarak yükle
     function loadScanTxt() {
-      const timestamp = new Date().getTime();
+      const timestamp = new Date().getTime(); // cache buster
       return fetch('Scan.txt?t=' + timestamp)
         .then(response => {
           if (!response.ok) throw new Error("Scan.txt dosyası yüklenemedi");
@@ -132,19 +111,14 @@
         cameraId,
         { fps: 10, qrbox: { width: 300, height: 300 }, aspectRatio: 1.7778 },
         qrCodeMessage => {
-          if (!scanning) return;
-          scanning = false;
-          processBarcode(qrCodeMessage.trim());
+          showMatch(qrCodeMessage.trim());
         },
-        errorMessage => {
-          // Hata bastırılıyor
-        }
+        errorMessage => { /* hata gösterme */ }
       );
     }
 
-    function processBarcode(barcode) {
-      navigator.vibrate?.(200); // Titreşim
-
+    function showMatch(barcode) {
+      // Her taramada tekrar dosya oku
       loadScanTxt().then(() => {
         if (barcodeData[barcode]) {
           const values = barcodeData[barcode];
@@ -154,19 +128,14 @@
           log.innerText = `❌ Eşleşme bulunamadı:\n${barcode}`;
         }
         log.style.display = 'block';
-        setTimeout(() => {
-          scanning = true; // 1-2 saniye sonra yeniden okutma izni
-        }, 1500);
       });
     }
 
-    scanBtn.addEventListener('click', () => {
-      log.style.display = 'none';
-      scanning = true;
-    });
+    startBtn.addEventListener('click', async () => {
+      readerDiv.style.display = 'block';
+      startBtn.style.display = 'none';
 
-    // Sayfa yüklenince kamera başlasın
-    window.addEventListener('load', async () => {
+      // Başlatmadan önce veriyi yükle
       await loadScanTxt();
       await startCamera();
     });
