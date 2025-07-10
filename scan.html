@@ -3,711 +3,245 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Capitol</title>
-
-  <!-- ZXing Barkod Kütüphanesi -->
-  <script src="https://unpkg.com/@zxing/browser@latest"></script>
-
+  <title>Barkod Tarayıcı & Clear Buton</title>
+  
+  <!-- jsQR kütüphanesi -->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #f7f7f7;
       margin: 0;
-      padding: 1em;
-      background: #f5f5f5;
-      color: #222;
-      transition: background .5s, color .5s;
+      padding: 20px;
     }
-
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 1.5em;
-      cursor: pointer;
-      margin: 0;
-    }
-
-    .search-container {
-      position: relative;
-      margin-top: 1em;
-    }
-
-    .search-container input {
-      width: 100%;
-      padding: 0.75em 2.5em 0.75em 1em;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 999px;
-      box-sizing: border-box;
-      height: 48px;
-      background: #fff;
-      color: #222;
-      transition: border .2s;
-    }
-
-    .search-container input:focus {
-      outline: none;
-      border-color: #007bff;
-    }
-
-    #searchButton {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      height: 32px;
-      width: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #555;
-    }
-
-    #searchButton svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
-
-    #searchButton:hover {
-      color: #000;
-    }
-
-    .history {
-      margin-top: 2em;
-    }
-
     .history-header {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.5em;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 12px;
     }
-
     .clear-button {
-      padding: 0.4em 0.8em;
-      background: #dc3545;
-      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
       border: none;
-      border-radius: 6px;
+      color: white;
+      border-radius: 12px;
       cursor: pointer;
-      font-size: 1em;
+      transition: background-color 0.3s ease;
+      user-select: none;
     }
-
     .clear-button:hover {
-      background: #b02a37;
+      background-color: #0056b3;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5em 0;
-      border-bottom: 1px solid #eee;
-      gap: 0.5em;
-    }
-
-    .search-text {
-      flex: 1;
-      word-break: break-word;
-    }
-
-    .go-button,
-    .inventory-button {
-      padding: 0.4em 0.8em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      color: #fff;
-    }
-
-    .go-button {
-      background: #28a745;
-    }
-
-    .go-button:hover {
-      background: #218838;
-    }
-
-    .inventory-button {
-      background: #007bff;
-    }
-
-    .inventory-button:hover {
-      background: #0056b3;
-    }
-
-    .ref-selector-button {
-      background: #000;
-      border: none;
-      padding: 0.4em 1em;
-      border-radius: 8px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-      display: inline-flex;
-      gap: 0.2em;
-    }
-
-    .ref-selector-button .log {
-      color: yellow;
-    }
-
-    .ref-selector-button .in {
-      color: white;
-    }
-
-    .ref-selector-button:hover {
-      opacity: 0.85;
-    }
-
-    .plus-button {
-      background: transparent;
-      color: #007bff;
-      border: 1px solid #007bff;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      font-size: 1em;
-      line-height: 1;
+    /* LOG listesi */
+    #logList {
+      list-style-type: none;
       padding: 0;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-    }
-
-    .plus-button:hover {
-      background: #007bff;
-      color: white;
-    }
-
-    body.dark-mode .plus-button {
-      background: transparent;
-      color: #FFD700;
-      border-color: #FFD700;
-    }
-
-    body.dark-mode .plus-button:hover {
-      background: #FFD700;
-      color: #121212;
-    }
-
-    body.dark-mode {
-      background: #121212;
-      color: #eee;
-    }
-
-    body.dark-mode .container {
-      background: #1e1e1e;
-      color: #eee;
-    }
-
-    body.dark-mode input {
-      background: #333;
-      color: #eee;
-      border-color: #555;
-    }
-
-    body.dark-mode input:focus {
-      border-color: #66b0ff;
-    }
-
-    body.dark-mode #searchButton {
-      color: #ccc;
-    }
-
-    body.dark-mode #searchButton:hover {
-      color: #fff;
-    }
-
-    body.dark-mode .clear-button {
-      background: #a33;
-    }
-
-    body.dark-mode .clear-button:hover {
-      background: #700;
-    }
-
-    body.dark-mode .go-button {
-      background: #218838;
-    }
-
-    body.dark-mode .go-button:hover {
-      background: #1c7430;
-    }
-
-    body.dark-mode .inventory-button {
-      background: #0056b3;
-    }
-
-    body.dark-mode .inventory-button:hover {
-      background: #004085;
-    }
-
-    body.dark-mode .ref-selector-button {
-      background: #222;
-    }
-
-    #modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(5px);
-      align-items: center;
-      justify-content: center;
-    }
-
-    #modalContent {
-      background: rgba(255, 255, 255, 0.95);
-      max-width: 360px;
-      width: 90%;
-      border-radius: 14px;
-      padding: 1.5em 2em 2em;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      max-height: 90vh;
-      overflow: hidden;
-    }
-
-    body.dark-mode #modalContent {
-      background: rgba(34, 34, 34, 0.95);
-      color: #eee;
-    }
-
-    #modalHeader {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.5em;
-      margin-bottom: 1em;
-    }
-
-    #closeModalBtn {
-      background: none;
-      border: none;
-      font-size: 1.6em;
-      font-weight: bold;
-      cursor: pointer;
-      color: #666;
-    }
-
-    #modalBody {
+      max-height: 300px;
       overflow-y: auto;
-      flex-grow: 1;
-      max-height: calc(90vh - 100px);
-      font-size: 0.95em;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-top: 12px;
     }
-
-    #modalBody table {
-      width: 100%;
-      border-collapse: collapse;
+    #logList li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
     }
-
-    #modalBody th,
-    #modalBody td {
-      border: 1px solid #aaa;
-      padding: 0.5em;
-      text-align: left;
-    }
-
-    #modalBody th {
-      background: #eee;
-      width: 30%;
-    }
-
-    body.dark-mode #modalBody th {
-      background: #444;
-      color: #ddd;
-    }
-
-    body.dark-mode #modalBody td {
-      border-color: #555;
-    }
-
-    /* Cadde tarzı kayan yazı */
-    #alertBalloon {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #e74c3c;
-      color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      font-weight: bold;
-      z-index: 1000;
-      width: 90vw;
-      max-width: 600px;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 12px 0;
-      animation: fadeInOut 10s linear forwards;
-    }
-
-    #alertText {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marquee 10s linear infinite;
-    }
-
-    @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    @keyframes fadeInOut {
-      0% {
-        opacity: 0;
-      }
-
-      10% {
-        opacity: 1;
-      }
-
-      90% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0;
-      }
-    }
-
-    /* Temel görünüm */
-    .product-box {
-      border: 4px solid #555;
-      /* Dış çerçeve kalın */
-      border-radius: 10px;
-      margin-bottom: 1.5em;
-      overflow: hidden;
-      background: #fff;
-      width: 100%;
-      border-spacing: 0;
-    }
-
-    /* Hücreler arası ince çizgiler */
-    .product-box th,
-    .product-box td {
-      padding: 0.6em;
-      border-bottom: 1px solid #ccc;
-      /* İnce çizgi */
-      text-align: left;
-      font-size: 0.95em;
-      background: #fff;
-      color: #222;
-    }
-
-    /* Son satırda çizgi olmasın */
-    .product-box tr:last-child th,
-    .product-box tr:last-child td {
+    #logList li:last-child {
       border-bottom: none;
     }
 
-    /* Aranan ürün için mavi kalın çerçeve */
-    .product-box.highlight {
-      border-color: #007bff;
+    /* Modal için */
+    #modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #modalContent {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      width: 360px;
+      max-width: 90vw;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    #modalTitle {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
     }
 
-    /* DARK MODE */
-    body.dark-mode .product-box {
-      background: #1e1e1e;
-      border-color: #888;
+    /* Alert mesajı */
+    #alertBox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      font-weight: 600;
+      z-index: 1100;
     }
-
-    body.dark-mode .product-box th,
-    body.dark-mode .product-box td {
-      background: #1e1e1e;
-      color: #eee;
-      border-bottom: 1px solid #444;
-    }
-
-    .inline-online-btn {
-      margin-left: 10px;
-      padding: 0.3em 0.7em;
-      font-size: 0.85em;
-      background: #28a745;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .inline-online-btn:hover {
-      background: #218838;
-    }
-
-    /* Karanlık modda uyumlu */
-    body.dark-mode .inline-online-btn {
-      background: #2ecc71;
-      color: #000;
-    }
-
-    body.dark-mode .inline-online-btn:hover {
-      background: #27ae60;
+    #alertBox.show {
+      opacity: 1;
+      pointer-events: auto;
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1># Capitol.</h1>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="# Search" inputmode="numeric" pattern="[0-9]*" />
-      <button id="searchButton" type="button" title="Ara">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z" />
-        </svg>
-      </button>
-    </div>
-    <div class="history">
-      <div class="history-header">
-        <button id="refSelectorButton" class="ref-selector-button">
-          <span class="log">LOG</span><span class="in">'in</span>
-        </button>
-        <div>
-          <button id="scanButton" class="inventory-button">Scan</button>
-          <button id="clearButton" class="clear-button">Clear</button>
-        </div>
-      </div>
-      <ul id="historyList"></ul>
-    </div>
+
+  <div class="history-header">
+    <button id="scanButton" class="clear-button">Scan</button>
+    <button id="clearButton" class="clear-button">Clear</button>
   </div>
 
-  <div id="alertBalloon">
-    <div id="alertText">📢 Boyner App kurulu ise 'Online' butonu ürüne yönlendirmeyebilir. 📢</div>
-  </div>
+  <ul id="logList"></ul>
 
-  <div id="modal" role="dialog" tabindex="-1">
+  <!-- Modal -->
+  <div id="modal">
     <div id="modalContent">
-      <div id="modalHeader">
-        <h3 id="modalTitle">Bölüm Detayları</h3>
-        <button id="closeModalBtn" aria-label="Kapat">&times;</button>
-      </div>
+      <div id="modalTitle">Barkod Tarayıcı</div>
       <div id="modalBody"></div>
     </div>
   </div>
 
+  <!-- Alert -->
+  <div id="alertBox"></div>
+
   <script>
-    // Tüm mevcut JavaScript kodlarınız BURADA olduğu gibi kalıyor...
+    // LOG verisi ve güncelleme fonksiyonu
+    let searchHistory = [];
 
-    const input = document.getElementById('searchInput');
-    const historyList = document.getElementById('historyList');
+    const logList = document.getElementById('logList');
     const clearButton = document.getElementById('clearButton');
-    const searchButton = document.getElementById('searchButton');
-    const title = document.querySelector('h1');
-    const modal = document.getElementById('modal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const modalBody = document.getElementById('modalBody');
-    const refSelectorButton = document.getElementById('refSelectorButton');
     const scanButton = document.getElementById('scanButton');
-
-    let searchHistory = [], dataMap = {}, stockData = [], selectedRefFile = 'Genel.txt';
-
-    title.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
-    refSelectorButton.addEventListener('click', showRefSelector);
-
-    function stripTxtExtension(n) { return n.replace(/\.txt$/i, ''); }
-    function updateRefIndicator() {
-      input.placeholder = selectedRefFile.toLowerCase() === 'genel.txt' ? '# Search' : `# Search (${stripTxtExtension(selectedRefFile)})`;
-      input.disabled = false;
-    }
-
-    async function fetchDataFiles(file = 'Genel.txt') {
-      selectedRefFile = file;
-      try {
-        const cacheBuster = `?v=${Date.now()}`;
-        const resp = await fetch(file + cacheBuster);
-        if (!resp.ok) throw new Error(`${file} bulunamadı`);
-        const text = await resp.text();
-        dataMap = {}; text.trim().split('\n').forEach(l => { const [k, v] = l.trim().split(/\s+/); if (k && v) dataMap[k] = v; });
-        const sr = await fetch('stok.txt' + cacheBuster);
-        if (!sr.ok) throw new Error('stok.txt bulunamadı');
-        stockData = (await sr.text()).trim().split('\n').map(r => r.trim().split('\t'));
-        updateRefIndicator();
-      } catch (err) { showAlert('Dosyalar yüklenirken hata: ' + err.message, 'Hata'); }
-    }
-
-    fetchDataFiles();
-
-    function doSearch() {
-      const v = input.value.trim();
-      if (!v) return;
-      searchHistory.unshift(v);
-      searchHistory = searchHistory.slice(0, 15);
-      updateHistory();
-      input.value = '';
-    }
-
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
-    searchButton.addEventListener('click', doSearch);
-    clearButton.addEventListener('click', () => { searchHistory = []; updateHistory(); });
-
-    function showInModal(sku) {
-      const matches = stockData.filter(row => row[0] === sku);
-      if (matches.length === 0) {
-        showAlert('Sap ile girişi kontrol edin.', 'Bilgi');
-        return;
-      }
-      const labels = ['Sku', 'Ean', 'Ürün'];
-      let h = '<table><tbody>';
-      for (let i = 0; i < labels.length; i++) {
-        h += `<tr><th>${labels[i]}</th><td>${matches[0][i] || ''}</td></tr>`;
-      }
-      h += '</tbody></table><br/><strong>Lokasyonlar:</strong><div style="margin-bottom: 6px;"></div>';
-      h += '<table><thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead><tbody>';
-      matches.forEach(row => {
-        const section = row[4];
-        const loc = row[3];
-        const stok = row[5];
-        const clickableSection = `<td style="color:#007bff; cursor:pointer;" onclick="showProductsInSameSection('${section.replace(/'/g, "\\'")}', '${loc.replace(/'/g, "\\'")}')">${section}</td>`;
-        h += `<tr><td>${loc}</td>${clickableSection}<td>${stok}</td></tr>`;
-      });
-
-      h += '</tbody></table>';
-
-      modalBody.innerHTML = h;
-      document.getElementById('modalTitle').textContent = 'Bölüm Detayları';
-      modal.style.display = 'flex';
-    }
-
-    function showAlert(msg, t = 'Uyarı') {
-      document.getElementById('modalTitle').textContent = t;
-      modalBody.innerHTML = `<p style="font-size:1.1em;padding:1em 0;margin:0;">${msg}</p>`;
-      modal.style.display = 'flex';
-    }
+    const modal = document.getElementById('modal');
+    const modalBody = document.getElementById('modalBody');
+    const modalTitle = document.getElementById('modalTitle');
+    const alertBox = document.getElementById('alertBox');
 
     function updateHistory() {
-      historyList.innerHTML = '';
+      logList.innerHTML = '';
       searchHistory.forEach(item => {
-        const m = dataMap[item], code = m || item;
         const li = document.createElement('li');
-
-        let plusBtn = null;
-        if (item.length !== 13) {
-          plusBtn = document.createElement('button');
-          plusBtn.textContent = '+';
-          plusBtn.className = 'plus-button';
-          plusBtn.title = 'Bir üstünü ara';
-          plusBtn.onclick = () => {
-            const next = (parseInt(item, 10) + 1).toString();
-            input.value = next;
-            doSearch();
-          };
-        }
-
-        const span = document.createElement('span');
-        span.textContent = m ? `${item}\t${m}` : item;
-        span.className = 'search-text';
-
-        const inv = document.createElement('button');
-        inv.textContent = 'Section'; inv.className = 'inventory-button';
-        inv.onclick = () => showInModal(code);
-
-        const go = document.createElement('button');
-        go.textContent = 'Online'; go.className = 'go-button';
-        go.onclick = () => {
-          if (code.length >= 10) window.open(`https://www.boyner.com.tr/search?q=${code.slice(0, -3)}`, '_blank');
-          else showAlert('Veri bulunamadı.', 'Bilgi');
-        };
-
-        if (plusBtn) li.append(plusBtn);
-        li.append(span, inv, go);
-        historyList.appendChild(li);
+        li.textContent = item;
+        logList.appendChild(li);
       });
     }
 
-    function showRefSelector() {
-      const files = ['Genel.txt', 'Aybars.txt', 'OsmanB.txt', 'Berkay.txt', 'OsmanG.txt', 'Berkant.txt', 'Faruk.txt', 'Ferhat.txt'];
-      document.getElementById('modalTitle').textContent = 'Referans Dosyası Seçimi';
-      modalBody.innerHTML = files.map(f => `<button style="margin:4px 0; padding:6px 14px; width:100%; font-weight:bold; border-radius:10px; cursor:pointer; background:#007bff; color:#fff; border:none;">${stripTxtExtension(f)}</button>`).join('');
-      modal.style.display = 'flex';
-      Array.from(modalBody.querySelectorAll('button')).forEach((btn, i) => { btn.onclick = () => { fetchDataFiles(files[i]); modal.style.display = 'none'; }; });
+    function showAlert(message, type = 'info') {
+      alertBox.textContent = message;
+      alertBox.style.backgroundColor = type === 'error' ? '#dc3545' : '#28a745';
+      alertBox.classList.add('show');
+      setTimeout(() => {
+        alertBox.classList.remove('show');
+      }, 3000);
     }
 
-    closeModalBtn.addEventListener('click', () => modal.style.display = 'none');
-    window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
-
-    // 📷 Barkod Okuyucu Fonksiyonu
-    scanButton.addEventListener('click', async () => {
-  document.body.appendChild(videoElement);
-  const codeReader = new ZXing.BrowserBarcodeReader();
-
-  try {
-    const result = await codeReader.decodeOnceFromVideoDevice(undefined, videoElement);
-    input.value = result.text;
-    doSearch();
-  } catch (err) {
-    showAlert('Kamera erişimi reddedildi veya barkod okunamadı.', 'Hata');
-  } finally {
-    codeReader.reset();
-    if (videoElement.parentNode) {
-      videoElement.parentNode.removeChild(videoElement);
-    }
-  }
-});
-
-
-    // Kamera için video öğesi yarat
-    const videoElement = document.createElement('video');
-    videoElement.id = 'videoPreview';
-    videoElement.style.position = 'fixed';
-    videoElement.style.top = 0;
-    videoElement.style.left = 0;
-    videoElement.style.width = '100vw';
-    videoElement.style.height = '100vh';
-    videoElement.style.zIndex = 9999;
-    videoElement.style.objectFit = 'cover';
-    videoElement.style.backgroundColor = 'black';
-    videoElement.autoplay = true;
-
-    scanButton.addEventListener('click', async () => {
-      document.body.appendChild(videoElement);
-      const codeReader = new ZXing.BrowserBarcodeReader();
-      try {
-        const result = await codeReader.decodeOnceFromVideoDevice(undefined, videoElement);
-        input.value = result.text;
-        doSearch();
-      } catch (err) {
-        showAlert('Okuma başarısız.', 'Hata');
-      } finally {
-        codeReader.reset();
-        if (videoElement.parentNode) videoElement.parentNode.removeChild(videoElement);
-      }
+    clearButton.addEventListener('click', () => {
+      searchHistory = [];
+      updateHistory();
+      showAlert('LOG temizlendi', 'info');
     });
+
+    function addToLog(barcode) {
+      if (!barcode) return;
+      if (!searchHistory.includes(barcode)) {
+        searchHistory.unshift(barcode);
+        if (searchHistory.length > 15) {
+          searchHistory.pop();
+        }
+        updateHistory();
+        showAlert(`Tarandı: ${barcode}`, 'info');
+      }
+    }
+
+    // Kamera ve barkod tarama işlemi
+    let scanning = false;
+    let videoStream = null;
+
+    const scanModalContent = `
+      <div style="display:flex; flex-direction: column; align-items:center;">
+        <video id="video" width="320" height="240" style="border-radius:12px; background:#000;"></video>
+        <button id="stopScanBtn" style="margin-top:12px; padding:8px 16px; border:none; border-radius:8px; background:#dc3545; color:#fff; cursor:pointer;">Tarayıcıyı Kapat</button>
+      </div>
+    `;
+
+    scanButton.addEventListener('click', async () => {
+      if (scanning) return;
+      scanning = true;
+
+      modalBody.innerHTML = scanModalContent;
+      modalTitle.textContent = 'Barkod Tarayıcı';
+      modal.style.display = 'flex';
+
+      const video = document.getElementById('video');
+      const stopScanBtn = document.getElementById('stopScanBtn');
+
+      try {
+        videoStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+        video.srcObject = videoStream;
+        video.setAttribute('playsinline', true);
+        await video.play();
+
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+
+        const scanLoop = () => {
+          if (!scanning) return;
+          if (video.readyState === video.HAVE_ENOUGH_DATA) {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            const code = jsQR(imageData.data, canvas.width, canvas.height, { inversionAttempts: "dontInvert" });
+            if (code) {
+              addToLog(code.data);
+              stopScanning();
+              return;
+            }
+          }
+          requestAnimationFrame(scanLoop);
+        };
+
+        scanLoop();
+
+      } catch (err) {
+        alert('Kamera açılamadı veya izin verilmedi: ' + err.message);
+        scanning = false;
+        modal.style.display = 'none';
+      }
+
+      stopScanBtn.onclick = () => stopScanning();
+    });
+
+    function stopScanning() {
+      scanning = false;
+      if (videoStream) {
+        videoStream.getTracks().forEach(track => track.stop());
+        videoStream = null;
+      }
+      modal.style.display = 'none';
+    }
+
+    // Sayfa yüklendiğinde LOG güncelle
+    updateHistory();
   </script>
+
 </body>
 </html>
