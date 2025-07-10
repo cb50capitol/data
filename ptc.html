@@ -1,125 +1,142 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Barkod Tarayıcı</title>
-  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
-  <style>
-    * {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #fafafa;
-    }
-    #videoContainer {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 20px; /* Kamera ile Okut butonu arası boşluk */
-    }
-    video {
-      width: 90vw;
-      max-width: 400px;
-      border-radius: 8px;
-      background: black;
-      transition: filter 0.3s ease;
-    }
-    video.blurred {
-      filter: blur(6px);
-    }
-    #flashOverlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(255,255,255,0.7);
-      opacity: 0;
-      pointer-events: none;
-      border-radius: 8px;
-      transition: opacity 0.2s ease;
-    }
-    #buttonContainer, #bottomButtons {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    #bottomButtons {
-      margin-top: 20px;
-    }
-    button {
-      padding: 10px 18px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 6px;
-      border: 1px solid #444;
-      background-color: #eee;
-      transition: background-color 0.2s;
-    }
-    button:active {
-      background-color: #ccc;
-    }
-    button.scanning {
-      background-color: #e74c3c;
-      color: white;
-      border-color: #c0392b;
-    }
-    #okutButton {
-      width: 150px;
-    }
-    #barcodeListContainer {
-      width: 90vw;
-      max-width: 400px;
-    }
-    h1 {
-      margin-bottom: 10px;
-      text-align: center;
-      color: #333;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      background: #fff;
-    }
-    thead {
-      background-color: #4CAF50;
-      color: white;
-    }
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-    tbody tr:hover {
-      background-color: #f1f1f1;
-    }
-    tfoot td {
-      font-weight: bold;
-      background: #eee;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Barkod Okuyucu</title>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+<style>
+  * {
+    user-select: none;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fafafa;
+  }
+  #videoContainer {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  video {
+    width: 90vw;
+    max-width: 400px;
+    border-radius: 8px;
+    background: black;
+    transition: filter 0.3s ease;
+    display: none;
+  }
+  video.blurred {
+    filter: blur(6px);
+  }
+  #flashOverlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.7);
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    transition: opacity 0.2s ease;
+  }
+  #buttonContainer, #bottomButtons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  button {
+    padding: 10px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #eee;
+    transition: background-color 0.2s;
+  }
+  button:active {
+    background-color: #ccc;
+  }
+  button.scanning {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+  }
+  #okutButton {
+    width: 150px;
+  }
+  #barcodeListContainer {
+    width: 90vw;
+    max-width: 400px;
+  }
+  h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  tfoot td {
+    font-weight: bold;
+    background: #eee;
+  }
+  .delete-button {
+    margin-left: 10px;
+    color: white;
+    background: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #manualBarcodeInput {
+    padding: 8px;
+    font-size: 16px;
+    width: 220px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+</style>
 </head>
 <body oncontextmenu="return false">
 
 <div id="videoContainer">
-  <video id="video" autoplay muted playsinline style="display:none;"></video>
+  <video id="video" autoplay muted playsinline></video>
   <div id="flashOverlay"></div>
 </div>
 
 <div id="buttonContainer">
   <button id="scanButton">Kamera</button>
   <button id="okutButton" disabled>Okut</button>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <input type="text" id="manualBarcodeInput" placeholder="Barkod gir..." />
+  <button onclick="addManualBarcode()">Ekle</button>
 </div>
 
 <div id="barcodeListContainer">
@@ -168,7 +185,7 @@
   let scanInterval = null;
 
   let scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
-  const lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
+  let lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
   const DEBOUNCE_TIME = 2000;
 
   if ('BarcodeDetector' in window) {
@@ -202,10 +219,13 @@
   okutButton.addEventListener('touchcancel', stopScanningAndReset);
 
   clearHistoryButton.addEventListener('click', () => {
-    scannedBarcodes = {};
-    localStorage.removeItem('scannedBarcodes');
-    localStorage.removeItem('lastReadTimestamps');
-    updateTable();
+    if (confirm("Tüm geçmişi silmek istediğinizden emin misiniz?")) {
+      scannedBarcodes = {};
+      lastReadTimestamps = {};
+      localStorage.removeItem('scannedBarcodes');
+      localStorage.removeItem('lastReadTimestamps');
+      updateTable();
+    }
   });
 
   downloadExcelButton.addEventListener('click', () => {
@@ -242,75 +262,80 @@
 
     text += `\n📌 Kalem Sayısı: ${keys.length}\n📊 Toplam Adet: ${total}`;
 
-    const whatsappURL = `https://wa.me/?text=${encodeURIComponent(text)}`;
-    window.open(whatsappURL, '_blank');
+    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
   });
 
-  async function startCamera() {
-    try {
-      cameraStream = await navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment'}});
-      video.srcObject = cameraStream;
-      video.style.display = 'block';
-      video.classList.remove('blurred');
-    } catch (err) {
-      alert('Kameraya erişilemedi: ' + err.message);
-    }
+  function startCamera() {
+    return navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+      .then(stream => {
+        cameraStream = stream;
+        video.srcObject = stream;
+        video.style.display = 'block';
+        return new Promise(resolve => {
+          video.onloadedmetadata = () => {
+            video.play();
+            resolve();
+          };
+        });
+      })
+      .catch(err => {
+        alert("Kameraya erişilemedi: " + err);
+      });
   }
 
   function stopCamera() {
     if (cameraStream) {
       cameraStream.getTracks().forEach(track => track.stop());
       cameraStream = null;
+      video.style.display = 'none';
     }
-    video.style.display = 'none';
   }
 
   function startScanning() {
     if (!cameraStream || scanning) return;
-    scanning = true;
-    if (scanInterval) clearInterval(scanInterval);
-    scanInterval = setInterval(scanFrame, 500);
-    okutButton.classList.remove('scanning');
-    video.classList.remove('blurred');
-  }
 
-  function stopScanning() {
-    if (!scanning) return;
-    scanning = false;
-    if (scanInterval) clearInterval(scanInterval);
+    scanning = true;
+    okutButton.classList.add('scanning');
+    video.classList.add('blurred');
+    flashOverlay.style.opacity = '1';
+
+    scanInterval = setInterval(() => {
+      barcodeDetector.detect(video)
+        .then(barcodes => {
+          if (barcodes.length === 0) return;
+
+          const now = Date.now();
+          barcodes.forEach(barcode => {
+            const code = barcode.rawValue;
+            if (!code) return;
+
+            if ((now - (lastReadTimestamps[code] || 0)) > DEBOUNCE_TIME) {
+              beepSound.play();
+              lastReadTimestamps[code] = now;
+              scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+              saveData();
+              updateTable();
+              flashOverlay.style.opacity = '0';
+              setTimeout(() => { flashOverlay.style.opacity = '1'; }, 50);
+            }
+          });
+        })
+        .catch(e => console.error('Barcode detection error:', e));
+    }, 300);
   }
 
   function stopScanningAndReset() {
-    stopScanning();
+    scanning = false;
+    clearInterval(scanInterval);
     okutButton.classList.remove('scanning');
     video.classList.remove('blurred');
+    flashOverlay.style.opacity = '0';
   }
 
-  async function scanFrame() {
-    if (!scanning) return;
-    try {
-      const barcodes = await barcodeDetector.detect(video);
-      if (barcodes.length > 0) {
-        const now = Date.now();
-        for (const barcode of barcodes) {
-          const code = barcode.rawValue;
-          if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) continue;
-          lastReadTimestamps[code] = now;
-
-          scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
-          saveData();
-          updateTable();
-          beepSound.play();
-          flashEffect();
-          stopScanning();
-          video.classList.add('blurred');
-          okutButton.classList.add('scanning');
-          break;
-        }
-      }
-    } catch (err) {
-      console.error('Tarama hatası:', err);
-    }
+  function saveData() {
+    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
+    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
   }
 
   function updateTable() {
@@ -321,8 +346,15 @@
     keys.forEach(code => {
       const count = scannedBarcodes[code];
       totalCount += count;
+
       const row = document.createElement('tr');
-      row.innerHTML = `<td>${code}</td><td>${count}</td>`;
+      row.innerHTML = `
+        <td>${code}</td>
+        <td>
+          ${count}
+          <button class="delete-button" onclick="confirmDeleteBarcode('${code}')">-</button>
+        </td>
+      `;
       barcodeTableBody.appendChild(row);
     });
 
@@ -330,14 +362,25 @@
     document.getElementById('totalCount').textContent = totalCount;
   }
 
-  function saveData() {
-    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
-    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
+  function confirmDeleteBarcode(code) {
+    if (confirm(`"${code}" barkodunu silmek istediğinizden emin misiniz?`)) {
+      delete scannedBarcodes[code];
+      delete lastReadTimestamps[code];
+      saveData();
+      updateTable();
+    }
   }
 
-  function flashEffect() {
-    flashOverlay.style.opacity = '1';
-    setTimeout(() => flashOverlay.style.opacity = '0', 150);
+  function addManualBarcode() {
+    const input = document.getElementById('manualBarcodeInput');
+    const code = input.value.trim();
+    if (code === '') return;
+
+    scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+    lastReadTimestamps[code] = Date.now();
+    saveData();
+    updateTable();
+    input.value = '';
   }
 </script>
 
