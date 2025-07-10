@@ -42,11 +42,11 @@
   const scanButton = document.getElementById('scanButton');
   const video = document.getElementById('video');
   const barcodeList = document.getElementById('barcodeList');
+  const beepSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
 
   let scanning = false;
   let barcodeDetector;
 
-  // BarcodeDetector desteği kontrolü
   if ('BarcodeDetector' in window) {
     barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
   } else {
@@ -91,12 +91,12 @@
       const barcodes = await barcodeDetector.detect(video);
       if (barcodes.length > 0) {
         barcodes.forEach(barcode => {
-          // Barkod daha önce eklenmiş mi kontrol et (aynı barkodu tekrar eklememek için)
           const existing = [...barcodeList.children].find(li => li.textContent.includes(barcode.rawValue));
           if (!existing) {
             const li = document.createElement('li');
             li.textContent = barcode.rawValue;
             barcodeList.appendChild(li);
+            beepSound.play();
           }
         });
       }
