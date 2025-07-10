@@ -292,39 +292,41 @@
     }
   }
 
-  function startScanning() {
-    if (!cameraStream || scanning) return;
+function startScanning() {
+  if (!cameraStream || scanning) return;
 
-    scanning = true;
-    okutButton.classList.add('scanning');
-    flashOverlay.style.opacity = '1';
-    video.classList.remove('blurred'); // Başlangıçta net
+  scanning = true;
+  okutButton.classList.add('scanning');
+  flashOverlay.style.opacity = '1';
+  video.classList.remove('blurred'); // Okut basılır basılmaz net başla
 
-    scanInterval = setInterval(() => {
-      barcodeDetector.detect(video)
-        .then(barcodes => {
-          if (barcodes.length === 0) return;
+  scanInterval = setInterval(() => {
+    barcodeDetector.detect(video)
+      .then(barcodes => {
+        if (barcodes.length === 0) return;
 
-          const now = Date.now();
-          barcodes.forEach(barcode => {
-            const code = barcode.rawValue;
-            if (!code) return;
+        const now = Date.now();
+        barcodes.forEach(barcode => {
+          const code = barcode.rawValue;
+          if (!code) return;
 
-            if ((now - (lastReadTimestamps[code] || 0)) > DEBOUNCE_TIME) {
-              beepSound.play();
-              lastReadTimestamps[code] = now;
-              scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
-              saveData();
-              updateTable();
-              // Barkod okunduğunda kamera flu olacak:
-              video.classList.add('blurred');
-              flashOverlay.style.opacity = '0';
-            }
-          });
-        })
-        .catch(e => console.error('Barcode detection error:', e));
-    }, 300);
-  }
+          if ((now - (lastReadTimestamps[code] || 0)) > DEBOUNCE_TIME) {
+            beepSound.play();
+            lastReadTimestamps[code] = now;
+            scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+            saveData();
+            updateTable();
+
+            // Sadece barkod okunduğunda puslat:
+            video.classList.add('blurred');
+            flashOverlay.style.opacity = '0';
+          }
+        });
+      })
+      .catch(e => console.error('Barcode detection error:', e));
+  }, 300);
+}
+
 
   function stopScanningAndReset() {
     scanning = false;
