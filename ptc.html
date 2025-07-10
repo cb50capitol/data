@@ -92,8 +92,7 @@
   }
   #barcodeTable tfoot td {
     font-weight: bold;
-    background-color: #f9f9f9;
-    border-top: 2px solid #4CAF50;
+    background: #eee;
   }
 </style>
 </head>
@@ -115,7 +114,6 @@
   <table id="barcodeTable">
     <thead>
       <tr>
-        <th>#</th>
         <th>Barkod Değeri</th>
         <th>Adet</th>
       </tr>
@@ -125,6 +123,9 @@
       <tr>
         <td>Kalem Miktarı</td>
         <td id="itemCount"></td>
+      </tr>
+      <tr>
+        <td>Toplam Adet</td>
         <td id="totalCount"></td>
       </tr>
     </tfoot>
@@ -146,11 +147,7 @@
   let scanInterval = null;
 
   let scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
-
-  // Barkodların son okunduğu zamanlar (ms)
   const lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
-
-  // Aynı barkodun arka arkaya okunmasını engellemek için süre (ms)
   const DEBOUNCE_TIME = 2000; // 2 saniye
 
   if ('BarcodeDetector' in window) {
@@ -197,7 +194,7 @@
       cameraStream = await navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment'}});
       video.srcObject = cameraStream;
       video.style.display = 'block';
-      video.classList.remove('blurred'); // Kamera açıldığında net olsun
+      video.classList.remove('blurred');
     } catch (err) {
       alert('Kameraya erişilemedi: ' + err.message);
     }
@@ -218,8 +215,8 @@
       clearInterval(scanInterval);
     }
     scanInterval = setInterval(scanFrame, 500);
-    okutButton.classList.remove('scanning'); // Buton kırmızı değil
-    video.classList.remove('blurred'); // Basınca netleştir
+    okutButton.classList.remove('scanning');
+    video.classList.remove('blurred');
   }
 
   function stopScanning() {
@@ -234,7 +231,7 @@
   function stopScanningAndReset() {
     stopScanning();
     okutButton.classList.remove('scanning');
-    video.classList.remove('blurred'); // Buton bırakılınca netleştir
+    video.classList.remove('blurred');
   }
 
   async function scanFrame() {
@@ -278,28 +275,22 @@
       return (lastReadTimestamps[b] || 0) - (lastReadTimestamps[a] || 0);
     });
 
-    keys.forEach((code, i) => {
+    keys.forEach((code) => {
       const count = scannedBarcodes[code];
       const row = document.createElement('tr');
 
-      const cellIndex = document.createElement('td');
-      cellIndex.textContent = i + 1;
       const cellCode = document.createElement('td');
       cellCode.textContent = code;
       const cellCount = document.createElement('td');
       cellCount.textContent = count;
 
-      row.appendChild(cellIndex);
       row.appendChild(cellCode);
       row.appendChild(cellCount);
 
       barcodeTableBody.appendChild(row);
     });
 
-    // Kalem miktarı = farklı barkod sayısı
     const itemCount = keys.length;
-
-    // Toplam adet = tüm adetlerin toplamı
     const totalCount = keys.reduce((sum, code) => sum + scannedBarcodes[code], 0);
 
     document.getElementById('itemCount').textContent = itemCount;
