@@ -122,7 +122,6 @@
     });
   });
 
-  // Scan butonuna basınca kamera aç/kapa
   scanButton.addEventListener('click', async () => {
     if (cameraStream) {
       stopCamera();
@@ -136,11 +135,8 @@
     }
   });
 
-  // Okut butonuna basılı tutulunca taramayı başlat
   okutButton.addEventListener('mousedown', startScanning);
   okutButton.addEventListener('touchstart', startScanning);
-
-  // Okut butonu bırakılınca taramayı durdur
   okutButton.addEventListener('mouseup', stopScanning);
   okutButton.addEventListener('mouseleave', stopScanning);
   okutButton.addEventListener('touchend', stopScanning);
@@ -207,7 +203,6 @@
     row.appendChild(cellIndex);
     row.appendChild(cellValue);
 
-    // En üstte göstermek için tbody başına ekle
     if (barcodeTableBody.firstChild) {
       barcodeTableBody.insertBefore(row, barcodeTableBody.firstChild);
     } else {
