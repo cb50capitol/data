@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Barkod Tarayıcı</title>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <style>
+    #reader { width: 300px; margin: auto; }
+    #log { margin-top: 20px; padding: 10px; border: 1px solid #ccc; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h2>Barkod Tarayıcı</h2>
+  <button id="start-btn">📷 Scan Et</button>
+  <div id="reader" style="display: none;"></div>
+  <div id="log">📋 Tarama sonuçları burada görünecek.</div>
+
+  <script>
+    const log = document.getElementById('log');
+    const readerDiv = document.getElementById('reader');
+    const startBtn = document.getElementById('start-btn');
+
+    let html5QrCode;
+
+    startBtn.addEventListener('click', () => {
+      readerDiv.style.display = 'block';
+      startBtn.disabled = true;
+
+      html5QrCode = new Html5Qrcode("reader");
+
+      Html5Qrcode.getCameras().then(devices => {
+        if (devices && devices.length) {
+          const cameraId = devices[0].id;
+
+          html5QrCode.start(
+            cameraId,
+            {
+              fps: 10,
+              qrbox: 250
+            },
+            qrCodeMessage => {
+              log.innerHTML = "📦 Barkod: " + qrCodeMessage;
+              html5QrCode.stop();
+              readerDiv.style.display = 'none';
+              startBtn.disabled = false;
+            },
+            errorMessage => {
+              console.warn("Hata:", errorMessage);
+            }
+          );
+        }
+      }).catch(err => {
+        console.error("Kamera bulunamadı", err);
+      });
+    });
+  </script>
+</body>
+</html>
