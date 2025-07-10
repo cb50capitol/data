@@ -134,9 +134,11 @@
   let scanInterval = null;
 
   let scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
-  let lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
-  let readOrder = JSON.parse(localStorage.getItem('readOrder') || '[]');
 
+  // Barkodların son okunduğu zamanlar (ms)
+  const lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
+
+  // Aynı barkodun arka arkaya okunmasını engellemek için süre (ms)
   const DEBOUNCE_TIME = 2000; // 2 saniye
 
   if ('BarcodeDetector' in window) {
@@ -173,11 +175,8 @@
 
   clearHistoryButton.addEventListener('click', () => {
     scannedBarcodes = {};
-    lastReadTimestamps = {};
-    readOrder = [];
     localStorage.removeItem('scannedBarcodes');
     localStorage.removeItem('lastReadTimestamps');
-    localStorage.removeItem('readOrder');
     updateTable();
   });
 
@@ -207,8 +206,8 @@
       clearInterval(scanInterval);
     }
     scanInterval = setInterval(scanFrame, 500);
-    okutButton.classList.remove('scanning');
-    video.classList.remove('blurred');
+    okutButton.classList.remove('scanning'); // Buton kırmızı değil
+    video.classList.remove('blurred'); // Basınca netleştir
   }
 
   function stopScanning() {
@@ -223,7 +222,7 @@
   function stopScanningAndReset() {
     stopScanning();
     okutButton.classList.remove('scanning');
-    video.classList.remove('blurred');
+    video.classList.remove('blurred'); // Buton bırakılınca netleştir
   }
 
   async function scanFrame() {
@@ -243,8 +242,6 @@
             scannedBarcodes[code]++;
           } else {
             scannedBarcodes[code] = 1;
-            // Yeni barkod ilk kez okunuyorsa readOrder'a ekle
-            readOrder.push(code);
           }
           saveData();
           updateTable();
@@ -265,20 +262,15 @@
 
   function updateTable() {
     barcodeTableBody.innerHTML = '';
-    // En son okutulan en üstte olacak şekilde sıralama:
-    // Ancak sıra numarası readOrder'a göre olmalı (okunma sırasına göre)
-    // Önce barkodları okutulma zamanına göre sırala:
-    const sortedByLastRead = Object.keys(scannedBarcodes).sort((a,b) => (lastReadTimestamps[b]||0)-(lastReadTimestamps[a]||0));
-
-    sortedByLastRead.forEach((code, displayIndex) => {
+    const keys = Object.keys(scannedBarcodes).sort((a, b) => {
+      return (lastReadTimestamps[b] || 0) - (lastReadTimestamps[a] || 0);
+    });
+    keys.forEach((code, i) => {
       const count = scannedBarcodes[code];
       const row = document.createElement('tr');
 
-      // Sıra numarasını readOrder dizisindeki index+1 olarak hesapla
-      const orderIndex = readOrder.indexOf(code);
       const cellIndex = document.createElement('td');
-      cellIndex.textContent = orderIndex + 1; // Okunma sırasına göre sıra numarası
-
+      cellIndex.textContent = i + 1;
       const cellCode = document.createElement('td');
       cellCode.textContent = code;
       const cellCount = document.createElement('td');
@@ -295,7 +287,6 @@
   function saveData() {
     localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
     localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
-    localStorage.setItem('readOrder', JSON.stringify(readOrder));
   }
 
   function flashEffect() {
