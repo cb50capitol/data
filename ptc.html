@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Barkod Tarayıcı</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  video {
+    width: 90vw;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  #scanButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  #barcodeList {
+    margin-top: 30px;
+    width: 90vw;
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Barcode</h1>
+<ol id="barcodeList"></ol>
+
+<button id="scanButton">Scan</button>
+<video id="video" autoplay muted playsinline style="display:none;"></video>
+
+<script>
+  const scanButton = document.getElementById('scanButton');
+  const video = document.getElementById('video');
+  const barcodeList = document.getElementById('barcodeList');
+
+  let scanning = false;
+  let barcodeDetector;
+
+  // BarcodeDetector desteği kontrolü
+  if ('BarcodeDetector' in window) {
+    barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
+  } else {
+    alert('Bu cihazda BarcodeDetector API desteklenmiyor.');
+  }
+
+  scanButton.addEventListener('click', async () => {
+    if (scanning) {
+      stopScan();
+      scanButton.textContent = "Scan";
+    } else {
+      startScan();
+      scanButton.textContent = "Stop";
+    }
+  });
+
+  async function startScan() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment'}});
+      video.srcObject = stream;
+      video.style.display = 'block';
+      scanning = true;
+      scanFrame();
+    } catch (err) {
+      alert('Kameraya erişilemedi: ' + err.message);
+    }
+  }
+
+  function stopScan() {
+    scanning = false;
+    video.style.display = 'none';
+    const stream = video.srcObject;
+    if (stream) {
+      stream.getTracks().forEach(track => track.stop());
+    }
+    video.srcObject = null;
+  }
+
+  async function scanFrame() {
+    if (!scanning) return;
+    try {
+      const barcodes = await barcodeDetector.detect(video);
+      if (barcodes.length > 0) {
+        barcodes.forEach(barcode => {
+          // Barkod daha önce eklenmiş mi kontrol et (aynı barkodu tekrar eklememek için)
+          const existing = [...barcodeList.children].find(li => li.textContent.includes(barcode.rawValue));
+          if (!existing) {
+            const li = document.createElement('li');
+            li.textContent = barcode.rawValue;
+            barcodeList.appendChild(li);
+          }
+        });
+      }
+    } catch (err) {
+      console.error('Tarama hatası:', err);
+    }
+    requestAnimationFrame(scanFrame);
+  }
+</script>
+
+</body>
+</html>
