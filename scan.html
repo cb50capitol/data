@@ -17,7 +17,7 @@
       height: 100vh;
       position: relative;
     }
-    button, input[type="file"] {
+    button {
       position: fixed;
       bottom: 20px;
       left: 50%;
@@ -32,14 +32,9 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       cursor: pointer;
     }
-    input[type="file"] {
-      top: 20px;
-      bottom: auto;
-      background-color: #28a745;
-    }
     #log {
       position: fixed;
-      top: 80px;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
       padding: 12px 20px;
@@ -51,12 +46,12 @@
       z-index: 1002;
       max-width: 95%;
       word-wrap: break-word;
+      white-space: pre-wrap;
     }
   </style>
 </head>
 <body>
 
-  <input type="file" id="file-input" accept=".txt">
   <button id="start-btn">📷 Scan Et</button>
   <div id="reader" style="display: none;"></div>
   <div id="log" style="display: none;"></div>
@@ -64,37 +59,36 @@
   <script>
     const readerDiv = document.getElementById('reader');
     const startBtn = document.getElementById('start-btn');
-    const fileInput = document.getElementById('file-input');
     const log = document.getElementById('log');
 
     let html5QrCode;
     let cameraId = null;
-    let dataMap = {}; // Barkod: Satır eşleşmeleri
+    let barcodeData = {}; // EAN -> Satır
     let headers = [];
 
-    // Dosya okuma
-    fileInput.addEventListener('change', e => {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        const text = event.target.result;
+    // Sayfa açıldığında Scan.txt dosyasını yükle
+    fetch('Scan.txt')
+      .then(response => {
+        if (!response.ok) throw new Error("Scan.txt dosyası yüklenemedi");
+        return response.text();
+      })
+      .then(text => {
         const lines = text.trim().split('\n').filter(line => line.trim() !== '');
         headers = lines[0].split('\t');
 
-        dataMap = {};
         for (let i = 1; i < lines.length; i++) {
           const cols = lines[i].split('\t');
           if (cols[0]) {
-            dataMap[cols[0]] = cols;
+            barcodeData[cols[0].trim()] = cols;
           }
         }
 
-        alert("✅ Veri yüklendi: " + Object.keys(dataMap).length + " barkod");
-      };
-      reader.readAsText(file, 'UTF-8');
-    });
+        console.log("✅ Scan.txt verisi yüklendi:", Object.keys(barcodeData).length, "satır");
+      })
+      .catch(err => {
+        log.innerText = "❌ Scan.txt yüklenemedi: " + err;
+        log.style.display = 'block';
+      });
 
     async function startCamera() {
       if (!html5QrCode) {
@@ -111,29 +105,24 @@
         cameraId,
         { fps: 10, qrbox: { width: 300, height: 300 }, aspectRatio: 1.7778 },
         qrCodeMessage => {
-          showMatch(qrCodeMessage);
+          showMatch(qrCodeMessage.trim());
         },
-        errorMessage => { }
+        errorMessage => { /* hata gösterme */ }
       );
     }
 
-    function showMatch(scannedCode) {
-      if (dataMap[scannedCode]) {
-        const values = dataMap[scannedCode];
-        const line = headers.map((h, i) => `${h}: ${values[i]}`).join('\n');
-        log.innerText = `✅ Eşleşme bulundu:\n\n${line}`;
+    function showMatch(barcode) {
+      if (barcodeData[barcode]) {
+        const values = barcodeData[barcode];
+        const result = headers.map((h, i) => `${h}: ${values[i]}`).join('\n');
+        log.innerText = `✅ Eşleşme:\n\n${result}`;
       } else {
-        log.innerText = `❌ Eşleşme bulunamadı:\n${scannedCode}`;
+        log.innerText = `❌ Eşleşme bulunamadı:\n${barcode}`;
       }
       log.style.display = 'block';
     }
 
     startBtn.addEventListener('click', async () => {
-      if (Object.keys(dataMap).length === 0) {
-        alert("📄 Önce Scan.txt dosyasını yükleyin!");
-        return;
-      }
-
       readerDiv.style.display = 'block';
       startBtn.style.display = 'none';
       await startCamera();
