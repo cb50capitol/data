@@ -32,6 +32,11 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       cursor: pointer;
     }
+    #cancel-btn {
+      background-color: #dc3545; /* kırmızı */
+      bottom: 70px; /* start-btn’ın üstünde */
+      display: none;
+    }
     #log {
       position: fixed;
       top: 20px;
@@ -71,6 +76,7 @@
 <body>
 
   <button id="start-btn">📷 Scan Et</button>
+  <button id="cancel-btn">❌ İptal</button>
   <div id="reader" style="display: none;"></div>
   <div id="log" style="display: none;">
     <div id="checkbox-container"></div>
@@ -79,6 +85,7 @@
   <script>
     const readerDiv = document.getElementById('reader');
     const startBtn = document.getElementById('start-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
     const log = document.getElementById('log');
     const checkboxContainer = document.getElementById('checkbox-container');
 
@@ -137,6 +144,17 @@
         },
         errorMessage => { /* hata gösterme */ }
       );
+    }
+
+    async function stopCamera() {
+      if (html5QrCode) {
+        await html5QrCode.stop();
+        await html5QrCode.clear();
+      }
+      cameraId = null;
+      readerDiv.style.display = 'none';
+      cancelBtn.style.display = 'none';
+      startBtn.style.display = 'block';
     }
 
     function saveCheckboxState(barcode, index, checked) {
@@ -199,10 +217,16 @@
     startBtn.addEventListener('click', async () => {
       readerDiv.style.display = 'block';
       startBtn.style.display = 'none';
+      cancelBtn.style.display = 'block';
 
-      // Başlatmadan önce veriyi yükle
       await loadScanTxt();
       await startCamera();
+    });
+
+    cancelBtn.addEventListener('click', async () => {
+      await stopCamera();
+      log.style.display = 'none';
+      checkboxContainer.innerHTML = '';
     });
   </script>
 
