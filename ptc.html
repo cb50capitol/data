@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #fafafa;
   }
   video {
     width: 90vw;
@@ -18,6 +19,7 @@
     border: 1px solid #ccc;
     margin-bottom: 15px;
     border-radius: 8px;
+    background: black;
   }
   #buttonContainer {
     display: flex;
@@ -43,14 +45,30 @@
   }
   h1 {
     margin-bottom: 10px;
+    text-align: center;
+    color: #333;
   }
-  ol {
-    background: #f5f5f5;
-    padding: 15px;
+
+  /* Tablo stili */
+  #barcodeTable {
+    width: 100%;
+    border-collapse: collapse;
     border-radius: 6px;
-    max-height: 200px;
-    overflow-y: auto;
-    list-style-position: inside;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  #barcodeTable thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #barcodeTable th, #barcodeTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  #barcodeTable tbody tr:hover {
+    background-color: #f1f1f1;
   }
 </style>
 </head>
@@ -64,15 +82,23 @@
 </div>
 
 <div id="barcodeListContainer">
-  <h1>Barcode</h1>
-  <ol id="barcodeList"></ol>
+  <h1>Okutulan Barkodlar</h1>
+  <table id="barcodeTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Barkod Değeri</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 </div>
 
 <script>
   const scanButton = document.getElementById('scanButton');
   const okutButton = document.getElementById('okutButton');
   const video = document.getElementById('video');
-  const barcodeList = document.getElementById('barcodeList');
+  const barcodeTableBody = document.querySelector('#barcodeTable tbody');
   const beepSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
 
   let cameraStream = null;
@@ -95,6 +121,7 @@
       scanButton.textContent = "Scan";
       okutButton.disabled = true;
       stopScanning();
+      clearBarcodeTable();
     } else {
       // Kamera kapalı, aç
       await startCamera();
@@ -135,6 +162,7 @@
     if (!cameraStream || scanning) return;
     scanning = true;
     scannedBarcodes.clear();
+    clearBarcodeTable();
     scanInterval = setInterval(scanFrame, 500);
   }
 
@@ -145,6 +173,12 @@
     scanInterval = null;
   }
 
+  function clearBarcodeTable() {
+    while (barcodeTableBody.firstChild) {
+      barcodeTableBody.removeChild(barcodeTableBody.firstChild);
+    }
+  }
+
   async function scanFrame() {
     if (!scanning) return;
     try {
@@ -153,13 +187,25 @@
         barcodes.forEach(barcode => {
           if (!scannedBarcodes.has(barcode.rawValue)) {
             scannedBarcodes.add(barcode.rawValue);
-            const li = document.createElement('li');
-            li.textContent = barcode.rawValue;
-            if (barcodeList.firstChild) {
-              barcodeList.insertBefore(li, barcodeList.firstChild);
+
+            // Tabloya yeni satır ekle
+            const row = document.createElement('tr');
+            const cellIndex = document.createElement('td');
+            const cellValue = document.createElement('td');
+
+            cellIndex.textContent = scannedBarcodes.size;
+            cellValue.textContent = barcode.rawValue;
+
+            row.appendChild(cellIndex);
+            row.appendChild(cellValue);
+
+            // En üstte göstermek için tbody başına ekle
+            if (barcodeTableBody.firstChild) {
+              barcodeTableBody.insertBefore(row, barcodeTableBody.firstChild);
             } else {
-              barcodeList.appendChild(li);
+              barcodeTableBody.appendChild(row);
             }
+
             beepSound.play();
           }
         });
