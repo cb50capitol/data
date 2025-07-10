@@ -7,7 +7,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,27 +16,41 @@
     width: 90vw;
     max-width: 400px;
     border: 1px solid #ccc;
-    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
   }
   #scanButton {
-    margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
   }
-  #barcodeList {
-    margin-top: 30px;
+  #barcodeListContainer {
     width: 90vw;
     max-width: 400px;
+  }
+  h1 {
+    margin-bottom: 10px;
+  }
+  ol {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
   }
 </style>
 </head>
 <body>
 
-<h1>Barcode</h1>
-<ol id="barcodeList"></ol>
+<video id="video" autoplay muted playsinline style="display:none;"></video>
 
 <button id="scanButton">Scan</button>
-<video id="video" autoplay muted playsinline style="display:none;"></video>
+
+<div id="barcodeListContainer">
+  <h1>Barcode</h1>
+  <ol id="barcodeList"></ol>
+</div>
 
 <script>
   const scanButton = document.getElementById('scanButton');
