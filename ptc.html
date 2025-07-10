@@ -90,6 +90,11 @@
   #barcodeTable tbody tr:hover {
     background-color: #f1f1f1;
   }
+  #barcodeTable tfoot td {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    border-top: 2px solid #4CAF50;
+  }
 </style>
 </head>
 <body>
@@ -116,6 +121,13 @@
       </tr>
     </thead>
     <tbody></tbody>
+    <tfoot>
+      <tr>
+        <td>Kalem Miktarı</td>
+        <td id="itemCount"></td>
+        <td id="totalCount"></td>
+      </tr>
+    </tfoot>
   </table>
 </div>
 
@@ -265,6 +277,7 @@
     const keys = Object.keys(scannedBarcodes).sort((a, b) => {
       return (lastReadTimestamps[b] || 0) - (lastReadTimestamps[a] || 0);
     });
+
     keys.forEach((code, i) => {
       const count = scannedBarcodes[code];
       const row = document.createElement('tr');
@@ -282,6 +295,15 @@
 
       barcodeTableBody.appendChild(row);
     });
+
+    // Kalem miktarı = farklı barkod sayısı
+    const itemCount = keys.length;
+
+    // Toplam adet = tüm adetlerin toplamı
+    const totalCount = keys.reduce((sum, code) => sum + scannedBarcodes[code], 0);
+
+    document.getElementById('itemCount').textContent = itemCount;
+    document.getElementById('totalCount').textContent = totalCount;
   }
 
   function saveData() {
