@@ -6,9 +6,7 @@
 <title>Barkod Okuyucu</title>
 <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 <style>
-  * {
-    user-select: none;
-  }
+  * { user-select: none; }
   body {
     font-family: Arial, sans-serif;
     margin: 10px;
@@ -208,11 +206,13 @@
       await startCamera();
       scanButton.textContent = "Kapat";
       okutButton.disabled = false;
+      video.classList.remove('blurred'); // Kamera açılınca net başla
     }
   });
 
   okutButton.addEventListener('mousedown', startScanning);
   okutButton.addEventListener('touchstart', startScanning);
+
   okutButton.addEventListener('mouseup', stopScanningAndReset);
   okutButton.addEventListener('mouseleave', stopScanningAndReset);
   okutButton.addEventListener('touchend', stopScanningAndReset);
@@ -297,8 +297,8 @@
 
     scanning = true;
     okutButton.classList.add('scanning');
-    video.classList.add('blurred');
     flashOverlay.style.opacity = '1';
+    video.classList.remove('blurred'); // Başlangıçta net
 
     scanInterval = setInterval(() => {
       barcodeDetector.detect(video)
@@ -316,8 +316,9 @@
               scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
               saveData();
               updateTable();
+              // Barkod okunduğunda kamera flu olacak:
+              video.classList.add('blurred');
               flashOverlay.style.opacity = '0';
-              setTimeout(() => { flashOverlay.style.opacity = '1'; }, 50);
             }
           });
         })
@@ -329,8 +330,16 @@
     scanning = false;
     clearInterval(scanInterval);
     okutButton.classList.remove('scanning');
-    video.classList.remove('blurred');
     flashOverlay.style.opacity = '0';
+    video.classList.remove('blurred'); // Okut butonu bırakılınca kamera net olsun
+  }
+
+  function stopScanning() {
+    scanning = false;
+    clearInterval(scanInterval);
+    okutButton.classList.remove('scanning');
+    flashOverlay.style.opacity = '0';
+    video.classList.remove('blurred');
   }
 
   function saveData() {
