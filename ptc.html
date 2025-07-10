@@ -38,6 +38,7 @@
     border-radius: 6px;
     max-height: 200px;
     overflow-y: auto;
+    list-style-position: inside;
   }
 </style>
 </head>
@@ -60,6 +61,8 @@
 
   let scanning = false;
   let barcodeDetector;
+  let scanInterval = null;
+  const scannedBarcodes = new Set();
 
   if ('BarcodeDetector' in window) {
     barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
@@ -72,7 +75,7 @@
       stopScan();
       scanButton.textContent = "Scan";
     } else {
-      startScan();
+      await startScan();
       scanButton.textContent = "Stop";
     }
   });
@@ -83,7 +86,9 @@
       video.srcObject = stream;
       video.style.display = 'block';
       scanning = true;
-      scanFrame();
+
+      // 500ms aralıklarla tara
+      scanInterval = setInterval(scanFrame, 500);
     } catch (err) {
       alert('Kameraya erişilemedi: ' + err.message);
     }
@@ -92,6 +97,10 @@
   function stopScan() {
     scanning = false;
     video.style.display = 'none';
+    clearInterval(scanInterval);
+    scanInterval = null;
+    scannedBarcodes.clear();
+
     const stream = video.srcObject;
     if (stream) {
       stream.getTracks().forEach(track => track.stop());
@@ -105,11 +114,19 @@
       const barcodes = await barcodeDetector.detect(video);
       if (barcodes.length > 0) {
         barcodes.forEach(barcode => {
-          const existing = [...barcodeList.children].find(li => li.textContent.includes(barcode.rawValue));
-          if (!existing) {
+          if (!scannedBarcodes.has(barcode.rawValue)) {
+            scannedBarcodes.add(barcode.rawValue);
+
             const li = document.createElement('li');
             li.textContent = barcode.rawValue;
-            barcodeList.appendChild(li);
+
+            // Listenin başına ekle (en üstte en son barkod)
+            if (barcodeList.firstChild) {
+              barcodeList.insertBefore(li, barcodeList.firstChild);
+            } else {
+              barcodeList.appendChild(li);
+            }
+
             beepSound.play();
           }
         });
@@ -117,7 +134,6 @@
     } catch (err) {
       console.error('Tarama hatası:', err);
     }
-    requestAnimationFrame(scanFrame);
   }
 </script>
 
