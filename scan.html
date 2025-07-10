@@ -41,7 +41,7 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 12px 20px;
-      background-color: rgba(0,0,0,0.8);
+      background-color: rgba(0,0,0,0.85);
       color: #fff;
       border-radius: 10px;
       font-size: 16px;
@@ -49,7 +49,16 @@
       z-index: 1002;
       max-width: 90%;
       word-wrap: break-word;
-      display: none;
+    }
+    #log-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+    }
+    #log-list li {
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 0;
     }
   </style>
 </head>
@@ -57,19 +66,44 @@
 
   <button id="start-btn">📷 Scan Et</button>
   <div id="reader" style="display: none;"></div>
-  <div id="log">📋 Tarama sonucu burada görünecek.</div>
+  <div id="log" style="display: none;">
+    <strong>📋 Son 5 Barkod:</strong>
+    <ul id="log-list"></ul>
+  </div>
 
   <script>
-    const log = document.getElementById('log');
+    const logBox = document.getElementById('log');
+    const logList = document.getElementById('log-list');
     const readerDiv = document.getElementById('reader');
     const startBtn = document.getElementById('start-btn');
 
     let html5QrCode;
-    let lastScanned = "";
+    let scannedCodes = [];
+
+    function updateLogList(newCode) {
+      if (scannedCodes[0] === newCode) return; // aynıysa ekleme
+
+      // Yeni kodu en başa ekle
+      scannedCodes.unshift(newCode);
+
+      // 5'ten fazlaysa en eskiyi çıkar
+      if (scannedCodes.length > 5) {
+        scannedCodes.pop();
+      }
+
+      // Listeyi güncelle
+      logList.innerHTML = '';
+      scannedCodes.forEach(code => {
+        const li = document.createElement('li');
+        li.textContent = code;
+        logList.appendChild(li);
+      });
+
+      logBox.style.display = 'block';
+    }
 
     startBtn.addEventListener('click', () => {
       readerDiv.style.display = 'block';
-      log.style.display = 'none';
       startBtn.style.display = 'none';
 
       html5QrCode = new Html5Qrcode("reader");
@@ -87,24 +121,19 @@
             aspectRatio: 1.7778
           },
           qrCodeMessage => {
-            if (qrCodeMessage !== lastScanned) {
-              lastScanned = qrCodeMessage;
-              log.innerHTML = "📦 Barkod: " + qrCodeMessage;
-              log.style.display = 'block';
+            updateLogList("📦 " + qrCodeMessage);
 
-              html5QrCode.stop().then(() => {
-                readerDiv.style.display = 'none';
-                startBtn.style.display = 'inline-block';
-              });
-            }
+            html5QrCode.stop().then(() => {
+              readerDiv.style.display = 'none';
+              startBtn.style.display = 'inline-block';
+            });
           },
           errorMessage => {
-            // Hatalar gösterilmiyor
+            // Sessizce geç
           }
         );
       }).catch(err => {
-        log.innerHTML = "❌ Kamera erişim hatası: " + err;
-        log.style.display = 'block';
+        updateLogList("❌ Kamera hatası: " + err);
       });
     });
   </script>
