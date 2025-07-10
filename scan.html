@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Barkod Tarayıcı</title>
   <script src="https://unpkg.com/html5-qrcode"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       font-family: sans-serif;
@@ -47,6 +47,21 @@
       max-width: 95%;
       word-wrap: break-word;
       white-space: pre-wrap;
+      max-height: 50vh;
+      overflow-y: auto;
+    }
+    #checkbox-container {
+      margin-top: 10px;
+      text-align: center;
+      color: white;
+      font-family: sans-serif;
+      user-select: none;
+    }
+    #checkbox-container label {
+      margin: 0 10px;
+      cursor: pointer;
+      user-select: none;
+      font-weight: normal;
     }
   </style>
 </head>
@@ -54,12 +69,15 @@
 
   <button id="start-btn">📷 Scan Et</button>
   <div id="reader" style="display: none;"></div>
-  <div id="log" style="display: none;"></div>
+  <div id="log" style="display: none;">
+    <div id="checkbox-container"></div>
+  </div>
 
   <script>
     const readerDiv = document.getElementById('reader');
     const startBtn = document.getElementById('start-btn');
     const log = document.getElementById('log');
+    const checkboxContainer = document.getElementById('checkbox-container');
 
     let html5QrCode;
     let cameraId = null;
@@ -93,6 +111,7 @@
         .catch(err => {
           log.innerText = "❌ Scan.txt yüklenemedi: " + err;
           log.style.display = 'block';
+          checkboxContainer.innerHTML = '';
         });
     }
 
@@ -117,15 +136,58 @@
       );
     }
 
+    function saveCheckboxState(barcode, index, checked) {
+      let savedData = JSON.parse(localStorage.getItem('checkboxState') || '{}');
+      if (!savedData[barcode]) savedData[barcode] = {};
+      savedData[barcode][index] = checked;
+      localStorage.setItem('checkboxState', JSON.stringify(savedData));
+    }
+
+    function loadCheckboxState(barcode, index) {
+      let savedData = JSON.parse(localStorage.getItem('checkboxState') || '{}');
+      return savedData[barcode]?.[index] || false;
+    }
+
     function showMatch(barcode) {
-      // Her taramada tekrar dosya oku
       loadScanTxt().then(() => {
+        checkboxContainer.innerHTML = ''; // önceki checkboxları temizle
+
         if (barcodeData[barcode]) {
           const values = barcodeData[barcode];
           const result = headers.map((h, i) => `${h}: ${values[i]}`).join('\n');
           log.innerText = `✅ Eşleşme:\n\n${result}`;
+
+          // SAS sayısını al (headers'dan bul)
+          const sasIndex = headers.indexOf('SAS');
+          const sasCount = parseInt(values[sasIndex]) || 0;
+
+          if (sasCount > 0) {
+            let info = document.createElement('div');
+            info.style.marginTop = '10px';
+            info.style.color = 'white';
+            info.style.fontWeight = 'bold';
+            info.innerText = `SAS adetine göre ${sasCount} adet kutu işaretleyin:`;
+            checkboxContainer.appendChild(info);
+
+            for (let i = 0; i < sasCount; i++) {
+              let label = document.createElement('label');
+
+              let cb = document.createElement('input');
+              cb.type = 'checkbox';
+              cb.checked = loadCheckboxState(barcode, i);
+              cb.addEventListener('change', (e) => {
+                saveCheckboxState(barcode, i, e.target.checked);
+              });
+
+              label.appendChild(cb);
+              label.appendChild(document.createTextNode(` ${i + 1}`));
+              checkboxContainer.appendChild(label);
+            }
+          }
+
         } else {
           log.innerText = `❌ Eşleşme bulunamadı:\n${barcode}`;
+          checkboxContainer.innerHTML = '';
         }
         log.style.display = 'block';
       });
