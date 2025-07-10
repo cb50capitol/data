@@ -5,12 +5,32 @@
   <title>Barkod Tarayıcı</title>
   <script src="https://unpkg.com/html5-qrcode"></script>
   <style>
-    #reader { width: 300px; margin: auto; }
-    #log { margin-top: 20px; padding: 10px; border: 1px solid #ccc; font-family: monospace; }
+    body { font-family: sans-serif; text-align: center; margin: 0; padding: 0; }
+    #reader {
+      width: 100vw;
+      height: 100vh;
+    }
+    #log {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      font-family: monospace;
+    }
+    #start-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
-  <h2>Barkod Tarayıcı</h2>
   <button id="start-btn">📷 Scan Et</button>
   <div id="reader" style="display: none;"></div>
   <div id="log">📋 Tarama sonuçları burada görünecek.</div>
@@ -24,33 +44,36 @@
 
     startBtn.addEventListener('click', () => {
       readerDiv.style.display = 'block';
-      startBtn.disabled = true;
+      startBtn.style.display = 'none';
 
       html5QrCode = new Html5Qrcode("reader");
 
       Html5Qrcode.getCameras().then(devices => {
-        if (devices && devices.length) {
-          const cameraId = devices[0].id;
+        if (devices.length === 0) throw new Error("Kamera bulunamadı");
 
-          html5QrCode.start(
-            cameraId,
-            {
-              fps: 10,
-              qrbox: 250
-            },
-            qrCodeMessage => {
-              log.innerHTML = "📦 Barkod: " + qrCodeMessage;
-              html5QrCode.stop();
+        // Arka kamerayı bulmaya çalış
+        let backCamera = devices.find(device => device.label.toLowerCase().includes("back")) || devices[1] || devices[0];
+
+        html5QrCode.start(
+          backCamera.id,
+          {
+            fps: 10,
+            qrbox: { width: 300, height: 300 }, // Ortalanmış kutu
+            aspectRatio: 1.7778 // 16:9
+          },
+          qrCodeMessage => {
+            log.innerHTML = "📦 Barkod: " + qrCodeMessage;
+            html5QrCode.stop().then(() => {
               readerDiv.style.display = 'none';
-              startBtn.disabled = false;
-            },
-            errorMessage => {
-              console.warn("Hata:", errorMessage);
-            }
-          );
-        }
+              startBtn.style.display = 'inline-block';
+            });
+          },
+          errorMessage => {
+            // Sessizce hata geç
+          }
+        );
       }).catch(err => {
-        console.error("Kamera bulunamadı", err);
+        log.innerHTML = "❌ Kamera erişim hatası: " + err;
       });
     });
   </script>
