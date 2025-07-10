@@ -45,6 +45,13 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+    #bottomButtons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     button {
       padding: 10px 18px;
       font-size: 16px;
@@ -53,6 +60,7 @@
       border: 1px solid #444;
       background-color: #eee;
       transition: background-color 0.2s;
+      user-select: none;
     }
     button:active {
       background-color: #ccc;
@@ -61,6 +69,9 @@
       background-color: #e74c3c;
       color: white;
       border-color: #c0392b;
+    }
+    #okutButton {
+      width: 150px;
     }
     #barcodeListContainer {
       width: 90vw;
@@ -105,10 +116,8 @@
 </div>
 
 <div id="buttonContainer">
-  <button id="scanButton">Scan</button>
-  <button id="okutButton" disabled>Okut</button>
-  <button id="clearHistoryButton" title="Geçmişi Temizle">Geçmişi Temizle</button>
-  <button id="downloadExcelButton" title="Excel olarak indir">Excel Olarak İndir</button>
+  <button id="scanButton">Kamera</button>
+  <button id="okutButton" disabled onselectstart="return false;">Okut</button>
 </div>
 
 <div id="barcodeListContainer">
@@ -132,6 +141,12 @@
       </tr>
     </tfoot>
   </table>
+</div>
+
+<!-- Alt Butonlar -->
+<div id="bottomButtons">
+  <button id="clearHistoryButton" title="Geçmişi Temizle">Geçmişi Temizle</button>
+  <button id="downloadExcelButton" title="Excel olarak indir">Excel Olarak İndir</button>
 </div>
 
 <script>
@@ -164,14 +179,14 @@
   scanButton.addEventListener('click', async () => {
     if (cameraStream) {
       stopCamera();
-      scanButton.textContent = "Scan";
+      scanButton.textContent = "Kamera";
       okutButton.disabled = true;
       stopScanning();
       okutButton.classList.remove('scanning');
       video.classList.remove('blurred');
     } else {
       await startCamera();
-      scanButton.textContent = "Stop";
+      scanButton.textContent = "Kapat";
       okutButton.disabled = false;
     }
   });
