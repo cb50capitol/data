@@ -6,6 +6,12 @@
   <title>Barkod Tarayıcı</title>
   <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <style>
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 10px;
@@ -17,6 +23,7 @@
     #videoContainer {
       position: relative;
       display: inline-block;
+      margin-bottom: 20px; /* Kamera ile Okut butonu arası boşluk */
     }
     video {
       width: 90vw;
@@ -38,7 +45,7 @@
       border-radius: 8px;
       transition: opacity 0.2s ease;
     }
-    #buttonContainer {
+    #buttonContainer, #bottomButtons {
       display: flex;
       gap: 15px;
       margin-bottom: 20px;
@@ -46,11 +53,7 @@
       justify-content: center;
     }
     #bottomButtons {
-      display: flex;
-      gap: 15px;
       margin-top: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
     button {
       padding: 10px 18px;
@@ -60,7 +63,6 @@
       border: 1px solid #444;
       background-color: #eee;
       transition: background-color 0.2s;
-      user-select: none;
     }
     button:active {
       background-color: #ccc;
@@ -82,7 +84,7 @@
       text-align: center;
       color: #333;
     }
-    #barcodeTable {
+    table {
       width: 100%;
       border-collapse: collapse;
       border-radius: 6px;
@@ -90,25 +92,25 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       background: #fff;
     }
-    #barcodeTable thead {
+    thead {
       background-color: #4CAF50;
       color: white;
     }
-    #barcodeTable th, #barcodeTable td {
+    th, td {
       padding: 12px 15px;
       text-align: left;
       border-bottom: 1px solid #ddd;
     }
-    #barcodeTable tbody tr:hover {
+    tbody tr:hover {
       background-color: #f1f1f1;
     }
-    #barcodeTable tfoot td {
+    tfoot td {
       font-weight: bold;
       background: #eee;
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
 
 <div id="videoContainer">
   <video id="video" autoplay muted playsinline style="display:none;"></video>
@@ -117,7 +119,7 @@
 
 <div id="buttonContainer">
   <button id="scanButton">Kamera</button>
-  <button id="okutButton" disabled onselectstart="return false;">Okut</button>
+  <button id="okutButton" disabled>Okut</button>
 </div>
 
 <div id="barcodeListContainer">
@@ -143,10 +145,10 @@
   </table>
 </div>
 
-<!-- Alt Butonlar -->
 <div id="bottomButtons">
-  <button id="clearHistoryButton" title="Geçmişi Temizle">Geçmişi Temizle</button>
-  <button id="downloadExcelButton" title="Excel olarak indir">Excel Olarak İndir</button>
+  <button id="clearHistoryButton">Geçmişi Temizle</button>
+  <button id="downloadExcelButton">Excel Olarak İndir</button>
+  <button id="whatsappShareButton">WhatsApp'ta Paylaş</button>
 </div>
 
 <script>
@@ -154,6 +156,7 @@
   const okutButton = document.getElementById('okutButton');
   const clearHistoryButton = document.getElementById('clearHistoryButton');
   const downloadExcelButton = document.getElementById('downloadExcelButton');
+  const whatsappShareButton = document.getElementById('whatsappShareButton');
   const video = document.getElementById('video');
   const flashOverlay = document.getElementById('flashOverlay');
   const barcodeTableBody = document.querySelector('#barcodeTable tbody');
@@ -224,6 +227,23 @@
     const ws = XLSX.utils.aoa_to_sheet(rows);
     XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
     XLSX.writeFile(wb, 'barkod_listesi.xlsx');
+  });
+
+  whatsappShareButton.addEventListener('click', () => {
+    let text = "📦 Barkod Listesi:\n\n";
+    const keys = Object.keys(scannedBarcodes);
+    let total = 0;
+
+    keys.forEach(code => {
+      const count = scannedBarcodes[code];
+      text += `🔹 ${code} — ${count} adet\n`;
+      total += count;
+    });
+
+    text += `\n📌 Kalem Sayısı: ${keys.length}\n📊 Toplam Adet: ${total}`;
+
+    const whatsappURL = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    window.open(whatsappURL, '_blank');
   });
 
   async function startCamera() {
