@@ -22,6 +22,43 @@
       padding: 20px 10px;
       min-height: 100vh;
     }
+
+    /* Manual input form */
+    #manualEntryForm {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+      user-select: none;
+    }
+    #manualBarcodeInput {
+      padding: 12px 16px;
+      border-radius: 9999px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 220px;
+      outline-offset: 2px;
+      user-select: text;
+    }
+    #manualEntryForm button {
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 9999px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(52, 152, 219, 0.5);
+      transition: background-color 0.3s ease;
+      user-select: none;
+      min-width: 70px;
+    }
+    #manualEntryForm button:hover {
+      background-color: #2980b9;
+    }
+
     h1 {
       font-weight: 700;
       margin-bottom: 12px;
@@ -263,7 +300,19 @@
 </head>
 <body oncontextmenu="return false">
 
-  <h1>Barkod Tarayıcı</h1>
+  <!-- Manual barcode entry form -->
+  <form id="manualEntryForm" autocomplete="off">
+    <input
+      type="tel"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      id="manualBarcodeInput"
+      placeholder="Barkod girin"
+      maxlength="100"
+      required
+    />
+    <button type="submit">Ekle</button>
+  </form>
 
   <div id="videoContainer">
     <video id="video" autoplay muted playsinline></video>
@@ -323,6 +372,9 @@
   const deleteModeToggle = document.getElementById('deleteModeToggle');
   const barcodeOverlay = document.getElementById('barcodeOverlay');
 
+  const manualEntryForm = document.getElementById('manualEntryForm');
+  const manualBarcodeInput = document.getElementById('manualBarcodeInput');
+
   let cameraStream = null;
   let barcodeDetector;
   const scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
@@ -340,80 +392,124 @@
   scanButton.addEventListener('click', async () => {
     if (cameraStream) {
       stopCamera();
-      scanButton.textContent = "Kamera Aç";
-      video.style.display = 'none';
+      scanButton.textContent = 'Kamera Aç';
+      scanButton.classList.remove('scanning');
     } else {
-      await startCamera();
-      scanButton.textContent = "Kapat";
-      video.style.display = 'block';
+      try {
+        cameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+        video.srcObject = cameraStream;
+        video.style.display = 'block';
+        scanButton.textContent = 'Kamerayı Kapat';
+        scanButton.classList.add('scanning');
+        barcodeOverlay.style.opacity = 0;
+
+        scanLoop();
+      } catch (err) {
+        alert('Kameraya erişim sağlanamadı: ' + err.message);
+      }
     }
   });
 
-  // Kameradaki videoya tıklayınca barkodu okutacak fonksiyon
-  video.addEventListener('click', async () => {
+  function stopCamera() {
+    if (cameraStream) {
+      cameraStream.getTracks().forEach(track => track.stop());
+      cameraStream = null;
+      video.style.display = 'none';
+      barcodeOverlay.style.opacity = 0;
+    }
+  }
+
+  async function scanLoop() {
     if (!cameraStream) return;
     try {
       const barcodes = await barcodeDetector.detect(video);
-      if (barcodes.length > 0) {
-        const now = Date.now();
+      if (barcodes.length) {
         for (const barcode of barcodes) {
-          const code = barcode.rawValue;
-          if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) {
-            continue; // Çok hızlı tekrar okuma engelle
-          }
-          lastReadTimestamps[code] = now;
-
-          if (deleteModeToggle.checked) {
-            // Silme modu aktif: adet 1 azalt veya tamamen sil
-            if (scannedBarcodes[code]) {
-              if (scannedBarcodes[code] > 1) {
-                scannedBarcodes[code] -= 1;
-              } else {
-                delete scannedBarcodes[code];
-                delete lastReadTimestamps[code];
-              }
-              saveData();
-              updateTable();
-              beepSound.play();
-              flashEffect();
-              showBarcodeOverlay(code);
-              break;
-            }
-          } else {
-            // Normal mod: adet 1 artır
-            scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
-            saveData();
-            updateTable();
-            beepSound.play();
-            flashEffect();
-            showBarcodeOverlay(code);
-            break;
-          }
+          handleBarcode(barcode.rawValue);
         }
       }
-    } catch (e) {
-      console.error(e);
+    } catch (err) {
+      // Kamera açık ama tarama hatası
+      console.warn('Barcode tarama hatası:', err);
     }
-  });
+    requestAnimationFrame(scanLoop);
+  }
+
+  function handleBarcode(code) {
+    const now = Date.now();
+    if (lastReadTimestamps[code] && (now - lastReadTimestamps[code] < DEBOUNCE_TIME)) {
+      return;
+    }
+    lastReadTimestamps[code] = now;
+    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
+
+    if (deleteModeToggle.checked) {
+      if (scannedBarcodes[code]) {
+        scannedBarcodes[code]--;
+        if (scannedBarcodes[code] <= 0) delete scannedBarcodes[code];
+        beepSound.play();
+        showFlash();
+      }
+    } else {
+      scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+      beepSound.play();
+      showFlash();
+    }
+    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
+    updateTable();
+
+    barcodeOverlay.textContent = code;
+    barcodeOverlay.style.opacity = 1;
+    setTimeout(() => {
+      barcodeOverlay.style.opacity = 0;
+    }, 1500);
+  }
+
+  function showFlash() {
+    flashOverlay.style.opacity = 1;
+    setTimeout(() => flashOverlay.style.opacity = 0, 100);
+  }
+
+  function updateTable() {
+    barcodeTableBody.innerHTML = '';
+    let totalItems = 0;
+    let totalCount = 0;
+    for (const [code, count] of Object.entries(scannedBarcodes)) {
+      const tr = document.createElement('tr');
+      const tdCode = document.createElement('td');
+      tdCode.textContent = code;
+      const tdCount = document.createElement('td');
+      tdCount.textContent = count;
+      tr.appendChild(tdCode);
+      tr.appendChild(tdCount);
+      barcodeTableBody.appendChild(tr);
+
+      totalItems++;
+      totalCount += count;
+    }
+    document.getElementById('itemCount').textContent = totalItems;
+    document.getElementById('totalCount').textContent = totalCount;
+  }
 
   clearHistoryButton.addEventListener('click', () => {
-    if (confirm('Geçmişi temizlemek istediğinize emin misiniz?')) {
+    if (confirm('Barkod listesini temizlemek istediğinize emin misiniz?')) {
       for (const key in scannedBarcodes) {
         delete scannedBarcodes[key];
       }
-      for (const key in lastReadTimestamps) {
-        delete lastReadTimestamps[key];
-      }
-      saveData();
+      localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
       updateTable();
     }
   });
 
   downloadExcelButton.addEventListener('click', () => {
+    if (Object.keys(scannedBarcodes).length === 0) {
+      alert('İndirilecek barkod yok.');
+      return;
+    }
     const wb = XLSX.utils.book_new();
-    const data = [['Barkod Değeri', 'Adet']];
-    for (const code in scannedBarcodes) {
-      data.push([code, scannedBarcodes[code]]);
+    const data = [['Barkod', 'Adet']];
+    for (const [code, count] of Object.entries(scannedBarcodes)) {
+      data.push([code, count]);
     }
     const ws = XLSX.utils.aoa_to_sheet(data);
     XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
@@ -425,79 +521,26 @@
       alert('Paylaşılacak barkod yok.');
       return;
     }
-    let message = 'Okutulan Barkodlar:\n\n';
-    for (const code in scannedBarcodes) {
-      message += ${code} : ${scannedBarcodes[code]} adet\n;
+    let message = 'Barkod Listesi:%0A';
+    for (const [code, count] of Object.entries(scannedBarcodes)) {
+      message += `${code}: ${count}%0A`;
     }
-    const url = https://wa.me/?text=${encodeURIComponent(message)};
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   });
 
-  function flashEffect() {
-    flashOverlay.style.opacity = '0.7';
-    setTimeout(() => {
-      flashOverlay.style.opacity = '0';
-    }, 150);
-  }
-
-  function saveData() {
-    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
-    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
-  }
-
- function updateTable() {
-  barcodeTableBody.innerHTML = '';
-  let totalCount = 0;
-  let itemCount = 0;
-
-  const sortedCodes = Object.keys(scannedBarcodes)
-    .sort((a, b) => (lastReadTimestamps[b] || 0) - (lastReadTimestamps[a] || 0)); // Yeni en üste
-
-  for (const code of sortedCodes) {
-    const count = scannedBarcodes[code];
-    totalCount += count;
-    itemCount++;
-    const row = document.createElement('tr');
-    const codeCell = document.createElement('td');
-    codeCell.textContent = code;
-    const countCell = document.createElement('td');
-    countCell.textContent = count;
-    row.appendChild(codeCell);
-    row.appendChild(countCell);
-    barcodeTableBody.appendChild(row);
-  }
-
-  document.getElementById('itemCount').textContent = itemCount;
-  document.getElementById('totalCount').textContent = totalCount;
-}
-
-
-  async function startCamera() {
-    try {
-      cameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
-      video.srcObject = cameraStream;
-      await video.play();
-      video.style.display = 'block';
-    } catch (err) {
-      alert('Kamera açılamadı: ' + err.message);
+  // Manuel barkod formu submit
+  manualEntryForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const code = manualBarcodeInput.value.trim();
+    if (!code.match(/^\d+$/)) {
+      alert('Lütfen sadece sayısal barkod giriniz.');
+      return;
     }
-  }
-
-  function stopCamera() {
-    if (cameraStream) {
-      cameraStream.getTracks().forEach(track => track.stop());
-      cameraStream = null;
-    }
-  }
-
-  // Barkod overlay gösterme fonksiyonu
-  function showBarcodeOverlay(code) {
-    barcodeOverlay.textContent = Ean/THM: ${code};
-    barcodeOverlay.style.opacity = '1';
-    setTimeout(() => {
-      barcodeOverlay.style.opacity = '0';
-    }, 1000);
-  }
+    handleBarcode(code);
+    manualBarcodeInput.value = '';
+    manualBarcodeInput.focus();
+  });
 </script>
 
 </body>
