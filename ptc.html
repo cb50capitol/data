@@ -1,177 +1,414 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Barkod Okuyucu</title>
-<style>
-  /* Seçim engelleme */
-  body, table, #videoContainer {
-    user-select: none;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-  }
-  /* Sil butonu stili */
-  .delete-btn {
-    margin-left: 10px;
-    background-color: #e74c3c;
-    border: none;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    user-select: none;
-  }
-  /* Kamera video kapsayıcısı */
-  #videoContainer {
-    position: relative;
-    width: 320px;
-    height: 240px;
-    margin-bottom: 20px;
-  }
-  video {
-    width: 100%;
-    height: 100%;
-    background: #000;
-  }
-  /* Barkod overlay görünümü */
-  #barcodeOverlay {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    color: #e74c3c;
-    font-size: 24px;
-    font-weight: 700;
-    background: rgba(255,255,255,0.85);
-    padding: 8px 16px;
-    border-radius: 8px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    user-select: none;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barkod Tarayıcı</title>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <style>
+    /* Reset & temel */
+    * {
+      box-sizing: border-box;
+      user-select: none;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #2c3e50;
+      text-align: center;
+      user-select: text;
+    }
+
+    /* Video Container */
+    #videoContainer {
+      position: relative;
+      width: 320px;
+      max-width: 90vw;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      margin-bottom: 25px;
+      background: #000;
+      user-select: none;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: none;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: filter 0.3s ease;
+      cursor: pointer; /* Tıklanabilir olduğunu göster */
+    }
+    #flashOverlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease;
+      border-radius: 12px;
+      z-index: 10;
+    }
+
+    /* Button Container */
+    #buttonContainer {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+      user-select: none;
+    }
+    button {
+      background-color: #3498db;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(52, 152, 219, 0.4);
+      transition: background-color 0.25s ease;
+      min-width: 120px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button:disabled {
+      background-color: #95a5a6;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    button:hover:not(:disabled) {
+      background-color: #2980b9;
+    }
+    button.scanning {
+      background-color: #e74c3c !important;
+      box-shadow: 0 3px 8px rgba(231, 76, 60, 0.6);
+    }
+
+    /* Toggle switch */
+    .switch-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #2c3e50;
+      user-select: none;
+    }
+    .switch {
+      position: relative;
+      width: 52px;
+      height: 28px;
+      display: inline-block;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #bdc3c7;
+      transition: 0.4s;
+      border-radius: 28px;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    input:checked + .slider {
+      background-color: #e74c3c;
+    }
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    /* Table */
+    #barcodeListContainer {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      padding: 20px 15px;
+      user-select: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      color: #34495e;
+    }
+    thead {
+      background-color: #3498db;
+      color: white;
+      font-weight: 700;
+    }
+    th, td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    tbody tr:hover {
+      background-color: #f0f8ff;
+    }
+    tfoot td {
+      font-weight: 700;
+      background-color: #f9f9f9;
+      color: #2c3e50;
+      padding: 12px;
+    }
+
+    /* Bottom buttons */
+    #bottomButtons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    #bottomButtons button {
+      min-width: 140px;
+      background-color: #2ecc71;
+      box-shadow: 0 3px 8px rgba(46, 204, 113, 0.5);
+    }
+    #bottomButtons button:hover {
+      background-color: #27ae60;
+    }
+    #bottomButtons button:nth-child(2) {
+      background-color: #f39c12;
+      box-shadow: 0 3px 8px rgba(243, 156, 18, 0.5);
+    }
+    #bottomButtons button:nth-child(2):hover {
+      background-color: #d68910;
+    }
+    #bottomButtons button:nth-child(3) {
+      background-color: #25d366;
+      box-shadow: 0 3px 8px rgba(37, 211, 102, 0.5);
+    }
+    #bottomButtons button:nth-child(3):hover {
+      background-color: #1ebe58;
+    }
+
+    /* Responsive */
+    @media (max-width: 440px) {
+      #buttonContainer {
+        flex-direction: column;
+        gap: 12px;
+      }
+      #bottomButtons {
+        flex-direction: column;
+      }
+      button, #bottomButtons button {
+        width: 100%;
+        min-width: unset;
+      }
+      #videoContainer {
+        width: 100%;
+      }
+      #barcodeListContainer {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body oncontextmenu="return false">
 
-<h2>Barkod Okuyucu</h2>
+  <h1>Barkod Tarayıcı</h1>
 
-<div id="videoContainer">
-  <video id="video" autoplay></video>
-  <div id="barcodeOverlay"></div>
-</div>
+  <div id="videoContainer">
+    <video id="video" autoplay muted playsinline></video>
+    <div id="flashOverlay"></div>
+  </div>
 
-<table>
-  <thead>
-    <tr><th>Barkod</th><th>Adet</th></tr>
-  </thead>
-  <tbody id="barcodeTableBody"></tbody>
-</table>
+  <div id="buttonContainer">
+    <button id="scanButton">Kamera Aç</button>
 
-<p>Toplam farklı barkod: <span id="itemCount">0</span></p>
-<p>Toplam adet: <span id="totalCount">0</span></p>
+    <div class="switch-container" title="Silmek için okut modu">
+      <label class="switch">
+        <input type="checkbox" id="deleteModeToggle" />
+        <span class="slider"></span>
+      </label>
+      <span>Silmek için okut</span>
+    </div>
+  </div>
 
-<audio id="beep" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+  <div id="barcodeListContainer">
+    <table id="barcodeTable" aria-label="Okutulan barkodlar">
+      <thead>
+        <tr>
+          <th>Barkod Değeri</th>
+          <th>Adet</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td>Kalem Miktarı</td>
+          <td id="itemCount">0</td>
+        </tr>
+        <tr>
+          <td>Toplam Adet</td>
+          <td id="totalCount">0</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div id="bottomButtons">
+    <button id="clearHistoryButton" title="Okutulan barkod listesini temizle">Geçmişi Temizle</button>
+    <button id="downloadExcelButton" title="Barkod listesini Excel olarak indir">Excel Olarak İndir</button>
+    <button id="whatsappShareButton" title="Barkod listesini WhatsApp'ta paylaş">WhatsApp'ta Paylaş</button>
+  </div>
 
 <script>
-  // Seçim engelleme (kopyalamayı engelle)
-  document.addEventListener('selectstart', e => e.preventDefault());
-
+  const scanButton = document.getElementById('scanButton');
+  const clearHistoryButton = document.getElementById('clearHistoryButton');
+  const downloadExcelButton = document.getElementById('downloadExcelButton');
+  const whatsappShareButton = document.getElementById('whatsappShareButton');
   const video = document.getElementById('video');
-  const beepSound = document.getElementById('beep');
-  const barcodeTableBody = document.getElementById('barcodeTableBody');
-  const barcodeOverlay = document.getElementById('barcodeOverlay');
+  const flashOverlay = document.getElementById('flashOverlay');
+  const barcodeTableBody = document.querySelector('#barcodeTable tbody');
+  const beepSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
+  const deleteModeToggle = document.getElementById('deleteModeToggle');
 
-  // Barkod ve zaman bilgisi
-  let scannedBarcodes = {}; // { barkod: adet }
-  let lastReadTimestamps = {}; // { barkod: timestamp }
+  let cameraStream = null;
+  let barcodeDetector;
+  const scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
+  const lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
+  const DEBOUNCE_TIME = 2000;
 
-  // Uzun basma için timer ve süre
-  let longPressTimer;
-  const LONG_PRESS_DURATION = 600; // ms
+  if ('BarcodeDetector' in window) {
+    barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
+  } else {
+    alert('Bu cihazda BarcodeDetector API desteklenmiyor.');
+  }
 
-  // Kamera erişimi ve barkod okutma simülasyonu (örnek, gerçek barkod okuma yok)
-  // Normalde burada barkod kütüphanesi ile okutulacak.
-  // Örnek için video tıklayınca rastgele barkod ekleniyor.
+  window.addEventListener('DOMContentLoaded', updateTable);
 
-  video.addEventListener('click', () => {
-    // Rastgele barkod örneği (6 haneli)
-    const code = 'BC' + Math.floor(100000 + Math.random()*900000);
-
-    // Barkodu göster
-    showBarcodeOverlay(code);
-
-    // Ses ve efekt
-    beepSound.play();
-    flashEffect();
-
-    // Barkodu say
-    if (scannedBarcodes[code]) {
-      scannedBarcodes[code]++;
+  scanButton.addEventListener('click', async () => {
+    if (cameraStream) {
+      stopCamera();
+      scanButton.textContent = "Kamera Aç";
+      video.style.display = 'none';
     } else {
-      scannedBarcodes[code] = 1;
+      await startCamera();
+      scanButton.textContent = "Kapat";
+      video.style.display = 'block';
     }
-    lastReadTimestamps[code] = Date.now();
-
-    saveData();
-    updateTable();
   });
 
-  // Barkod overlay gösterme fonksiyonu
-  function showBarcodeOverlay(code) {
-    barcodeOverlay.textContent = code;
-    barcodeOverlay.style.opacity = '1';
-    setTimeout(() => {
-      barcodeOverlay.style.opacity = '0';
-    }, 1000);
+  // Kameradaki videoya tıklayınca barkodu okutacak fonksiyon
+  video.addEventListener('click', async () => {
+    if (!cameraStream) return;
+    try {
+      const barcodes = await barcodeDetector.detect(video);
+      if (barcodes.length > 0) {
+        const now = Date.now();
+        for (const barcode of barcodes) {
+          const code = barcode.rawValue;
+          if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) {
+            continue; // Çok hızlı tekrar okuma engelle
+          }
+          lastReadTimestamps[code] = now;
+
+          if (deleteModeToggle.checked) {
+            // Silme modu aktif: adet 1 azalt veya tamamen sil
+            if (scannedBarcodes[code]) {
+              if (scannedBarcodes[code] > 1) {
+                scannedBarcodes[code] -= 1;
+              } else {
+                delete scannedBarcodes[code];
+                delete lastReadTimestamps[code];
+              }
+              saveData();
+              updateTable();
+              beepSound.play();
+              flashEffect();
+              break;
+            }
+          } else {
+            // Normal mod: adet 1 arttır
+            scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+            saveData();
+            updateTable();
+            beepSound.play();
+            flashEffect();
+            break;
+          }
+        }
+      } else {
+        alert('Barkod algılanamadı. Lütfen tekrar deneyin.');
+      }
+    } catch (err) {
+      console.error('Tarama hatası:', err);
+      alert('Barkod algılama sırasında hata oluştu.');
+    }
+  });
+
+  async function startCamera() {
+    try {
+      cameraStream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: 'environment' },
+        audio: false
+      });
+      video.srcObject = cameraStream;
+      video.style.display = 'block';
+      await video.play();
+      video.classList.remove('blurred'); // Blur kaldırılıyor, net görüntü için
+    } catch (err) {
+      alert('Kameraya erişilemedi: ' + err.message);
+      console.error(err);
+    }
   }
 
-  // Flash efekti (örnek)
-  function flashEffect() {
-    const originalBg = video.style.backgroundColor;
-    video.style.backgroundColor = '#fff';
-    setTimeout(() => {
-      video.style.backgroundColor = originalBg;
-    }, 100);
+  function stopCamera() {
+    if (cameraStream) {
+      cameraStream.getTracks().forEach(track => track.stop());
+      cameraStream = null;
+    }
+    video.style.display = 'none';
   }
 
-  // LocalStorage'a kaydetme
-  function saveData() {
-    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
-    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
-  }
-
-  // LocalStorage'dan yükleme
-  function loadData() {
-    const b = localStorage.getItem('scannedBarcodes');
-    const t = localStorage.getItem('lastReadTimestamps');
-    if (b) scannedBarcodes = JSON.parse(b);
-    if (t) lastReadTimestamps = JSON.parse(t);
-  }
-
-  // Tabloyu güncelle ve uzun basma eventini ekle
   function updateTable() {
     barcodeTableBody.innerHTML = '';
-    const keys = Object.keys(scannedBarcodes).sort((a,b) => (lastReadTimestamps[b]||0) - (lastReadTimestamps[a]||0));
+    const keys = Object.keys(scannedBarcodes).sort((a, b) => (lastReadTimestamps[b] || 0) - (lastReadTimestamps[a] || 0));
     let totalCount = 0;
 
     keys.forEach(code => {
       const count = scannedBarcodes[code];
       totalCount += count;
-
       const row = document.createElement('tr');
-      row.innerHTML = `<td>${code}</td><td>${count}</td>`;
-
-      addLongPressListener(row, code);
-
+      row.innerHTML = <td>${code}</td><td>${count}</td>;
       barcodeTableBody.appendChild(row);
     });
 
@@ -179,69 +416,51 @@
     document.getElementById('totalCount').textContent = totalCount;
   }
 
-  // Uzun basma dinleyicisi ekleme
-  function addLongPressListener(row, code) {
-    row.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      longPressTimer = setTimeout(() => {
-        showDeleteButton(row, code);
-      }, LONG_PRESS_DURATION);
-    });
-    row.addEventListener('touchend', () => clearTimeout(longPressTimer));
-    row.addEventListener('touchmove', () => clearTimeout(longPressTimer));
-
-    row.addEventListener('mousedown', () => {
-      longPressTimer = setTimeout(() => {
-        showDeleteButton(row, code);
-      }, LONG_PRESS_DURATION);
-    });
-    row.addEventListener('mouseup', () => clearTimeout(longPressTimer));
-    row.addEventListener('mouseleave', () => clearTimeout(longPressTimer));
+  function saveData() {
+    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
+    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
   }
 
-  // Sil butonunu göster
-  function showDeleteButton(row, code) {
-    // Zaten varsa tekrar ekleme
-    if (row.querySelector('.delete-btn')) return;
-
-    const btn = document.createElement('button');
-    btn.textContent = 'Sil';
-    btn.className = 'delete-btn';
-
-    btn.addEventListener('click', () => {
-      if (confirm(`"${code}" barkodunu ve tüm adetlerini silmek istediğinize emin misiniz?`)) {
-        delete scannedBarcodes[code];
-        delete lastReadTimestamps[code];
-        saveData();
-        updateTable();
-      }
-    });
-
-    row.lastElementChild.appendChild(btn);
-
-    // 5 sn sonra otomatik gizle
-    setTimeout(() => {
-      if (btn.parentNode) btn.remove();
-    }, 5000);
-  }
-
-  // Sayfa yüklendiğinde veri yükle
-  window.onload = () => {
-    loadData();
-    updateTable();
-
-    // Kamera açma (örnek olarak sadece video stream açılıyor)
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({video: {facingMode: "environment"}})
-        .then(stream => {
-          video.srcObject = stream;
-          video.play();
-        })
-        .catch(err => {
-          console.warn("Kamera açılırken hata:", err);
-        });
+  clearHistoryButton.addEventListener('click', () => {
+    if (confirm('Barkod geçmişi silinecek, emin misiniz?')) {
+      for (const key in scannedBarcodes) delete scannedBarcodes[key];
+      for (const key in lastReadTimestamps) delete lastReadTimestamps[key];
+      saveData();
+      updateTable();
     }
+  });
+
+  downloadExcelButton.addEventListener('click', () => {
+    const wb = XLSX.utils.book_new();
+    const data = [['Barkod Değeri', 'Adet']];
+    for (const code in scannedBarcodes) {
+      data.push([code, scannedBarcodes[code]]);
+    }
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
+    XLSX.writeFile(wb, 'barkodlar.xlsx');
+  });
+
+  whatsappShareButton.addEventListener('click', () => {
+    if (Object.keys(scannedBarcodes).length === 0) {
+      alert('Paylaşacak barkod yok.');
+      return;
+    }
+    let message = 'Barkod Listesi:%0A';
+    for (const code in scannedBarcodes) {
+      message += ${code} x${scannedBarcodes[code]}%0A;
+    }
+    const url = https://wa.me/?text=${message};
+    window.open(url, '_blank');
+  });
+
+  function flashEffect() {
+    flashOverlay.style.opacity = '0.8';
+    setTimeout(() => {
+      flashOverlay.style.opacity = '0';
+    }, 150);
   }
+
 </script>
 
 </body>
