@@ -445,26 +445,32 @@
     localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
   }
 
-  function updateTable() {
-    barcodeTableBody.innerHTML = '';
-    let totalCount = 0;
-    let itemCount = 0;
-    for (const code in scannedBarcodes) {
-      const count = scannedBarcodes[code];
-      totalCount += count;
-      itemCount++;
-      const row = document.createElement('tr');
-      const codeCell = document.createElement('td');
-      codeCell.textContent = code;
-      const countCell = document.createElement('td');
-      countCell.textContent = count;
-      row.appendChild(codeCell);
-      row.appendChild(countCell);
-      barcodeTableBody.appendChild(row);
-    }
-    document.getElementById('itemCount').textContent = itemCount;
-    document.getElementById('totalCount').textContent = totalCount;
+ function updateTable() {
+  barcodeTableBody.innerHTML = '';
+  let totalCount = 0;
+  let itemCount = 0;
+
+  const sortedCodes = Object.keys(scannedBarcodes)
+    .sort((a, b) => (lastReadTimestamps[b] || 0) - (lastReadTimestamps[a] || 0)); // Yeni en üste
+
+  for (const code of sortedCodes) {
+    const count = scannedBarcodes[code];
+    totalCount += count;
+    itemCount++;
+    const row = document.createElement('tr');
+    const codeCell = document.createElement('td');
+    codeCell.textContent = code;
+    const countCell = document.createElement('td');
+    countCell.textContent = count;
+    row.appendChild(codeCell);
+    row.appendChild(countCell);
+    barcodeTableBody.appendChild(row);
   }
+
+  document.getElementById('itemCount').textContent = itemCount;
+  document.getElementById('totalCount').textContent = totalCount;
+}
+
 
   async function startCamera() {
     try {
