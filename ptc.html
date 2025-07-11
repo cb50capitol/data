@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Barkod Tarayıcı</title>
-  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <style>
-    /* Reset & temel */
     * {
       box-sizing: border-box;
       user-select: none;
@@ -22,8 +20,6 @@
       padding: 20px 10px;
       min-height: 100vh;
     }
-
-    /* Manual input form */
     #manualEntryForm {
       margin-bottom: 20px;
       display: flex;
@@ -58,7 +54,6 @@
     #manualEntryForm button:hover {
       background-color: #2980b9;
     }
-
     h1 {
       font-weight: 700;
       margin-bottom: 12px;
@@ -66,8 +61,6 @@
       text-align: center;
       user-select: text;
     }
-
-    /* Video Container */
     #videoContainer {
       position: relative;
       width: 320px;
@@ -118,8 +111,6 @@
       max-width: 90%;
       text-align: center;
     }
-
-    /* Button Container */
     #buttonContainer {
       display: flex;
       align-items: center;
@@ -158,8 +149,6 @@
       background-color: #e74c3c !important;
       box-shadow: 0 3px 8px rgba(231, 76, 60, 0.6);
     }
-
-    /* Toggle switch */
     .switch-container {
       display: flex;
       align-items: center;
@@ -207,8 +196,6 @@
     input:checked + .slider:before {
       transform: translateX(24px);
     }
-
-    /* Table */
     #barcodeListContainer {
       width: 100%;
       max-width: 400px;
@@ -243,8 +230,6 @@
       color: #2c3e50;
       padding: 12px;
     }
-
-    /* Bottom buttons */
     #bottomButtons {
       margin-top: 30px;
       display: flex;
@@ -274,8 +259,6 @@
     #bottomButtons button:nth-child(3):hover {
       background-color: #1ebe58;
     }
-
-    /* Responsive */
     @media (max-width: 440px) {
       #buttonContainer {
         flex-direction: column;
@@ -356,28 +339,33 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.19.1/umd/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
   <script>
-    (() => {
+    (function() {
       const { BrowserMultiFormatReader } = ZXing;
       const video = document.getElementById('video');
       const scanButton = document.getElementById('scanButton');
       const deleteModeToggle = document.getElementById('deleteModeToggle');
-      const barcodeOverlay = document.getElementById('barcodeOverlay');
-      const flashOverlay = document.getElementById('flashOverlay');
-      const manualEntryForm = document.getElementById('manualEntryForm');
-      const manualBarcodeInput = document.getElementById('manualBarcodeInput');
       const barcodeTableBody = document.getElementById('barcodeTableBody');
       const totalCountElem = document.getElementById('totalCount');
+      const manualEntryForm = document.getElementById('manualEntryForm');
+      const manualBarcodeInput = document.getElementById('manualBarcodeInput');
+      const flashOverlay = document.getElementById('flashOverlay');
+      const barcodeOverlay = document.getElementById('barcodeOverlay');
       const clearAllBtn = document.getElementById('clearAllBtn');
       const exportExcelBtn = document.getElementById('exportExcelBtn');
       const copyListBtn = document.getElementById('copyListBtn');
 
       let codeReader = null;
+      let cameraStarted = false;
       let scanning = false;
-      let barcodeMap = new Map();
+      let animationFrameId = null;
+      let selectedDeviceId = null;
+      const barcodeMap = new Map();
 
-      // Kamerayı başlatır
-      async function startScanner() {
+      async function startCamera() {
+        if (cameraStarted) return;
         codeReader = new BrowserMultiFormatReader();
         try {
           const videoInputDevices = await codeReader.listVideoInputDevices();
@@ -385,51 +373,76 @@
             alert('Kamera bulunamadı.');
             return;
           }
-          // Tercihen arka kamera varsa onu seç
-          const selectedDeviceId = videoInputDevices.find(device => device.label.toLowerCase().includes('back'))?.deviceId || videoInputDevices[0].deviceId;
+          selectedDeviceId = videoInputDevices.find(d => d.label.toLowerCase().includes('back'))?.deviceId || videoInputDevices[0].deviceId;
 
+          // Video elementini görünür yap
           video.style.display = 'block';
+
+          // Kamerayı başlat (stream'i al)
+          await codeReader.decodeFromVideoDevice(selectedDeviceId, video, () => {});
+          // Ama hemen tarama yapma, onun yerine manuel kontrol ile tarama yapacağız
+          codeReader.reset(); // hemen durdur
+          cameraStarted = true;
           scanButton.textContent = 'Kamerayı Kapat';
           scanButton.classList.add('scanning');
-
-          scanning = true;
-
-          codeReader.decodeFromVideoDevice(selectedDeviceId, video, (result, err) => {
-            if (result) {
-              handleBarcode(result.text);
-              flashEffect();
-            }
-            if (err && !(err.name === 'NotFoundException')) {
-              console.warn(err);
-            }
-          });
-        } catch (e) {
+        } catch(e) {
           alert('Kameraya erişim sağlanamadı: ' + e.message);
-          console.error(e);
-          stopScanner();
+          stopCamera();
         }
       }
 
-      // Kamerayı durdurur
-      function stopScanner() {
+      function stopCamera() {
         if (codeReader) {
           codeReader.reset();
           codeReader = null;
         }
         scanning = false;
+        cameraStarted = false;
         video.style.display = 'none';
         scanButton.textContent = 'Kamera Aç';
         scanButton.classList.remove('scanning');
+        cancelAnimationFrame(animationFrameId);
       }
 
-      // Barkod geldiğinde yapılacak işlemler
+      // Kare kare tarama fonksiyonu (manuel loop)
+      function scanFrame() {
+        if (!scanning) return;
+        codeReader.decodeOnceFromVideoDevice(selectedDeviceId, video).then(result => {
+          if (result) {
+            handleBarcode(result.text);
+            flashEffect();
+            stopScanning();
+            showOverlay('Barkod okundu');
+          }
+          if (scanning) { // devam et
+            animationFrameId = requestAnimationFrame(scanFrame);
+          }
+        }).catch(err => {
+          if (err && err.name !== 'NotFoundException' && err.name !== 'NotSupportedException') {
+            console.warn(err);
+          }
+          if (scanning) {
+            animationFrameId = requestAnimationFrame(scanFrame);
+          }
+        });
+      }
+
+      function startScanning() {
+        if (!cameraStarted || scanning) return;
+        scanning = true;
+        scanFrame();
+      }
+
+      function stopScanning() {
+        scanning = false;
+        cancelAnimationFrame(animationFrameId);
+      }
+
       function handleBarcode(text) {
         if (!text) return;
-
         if (deleteModeToggle.checked) {
-          // Silme modu
           if (barcodeMap.has(text)) {
-            const count = barcodeMap.get(text);
+            let count = barcodeMap.get(text);
             if (count > 1) {
               barcodeMap.set(text, count - 1);
             } else {
@@ -441,7 +454,6 @@
             showOverlay(`Bulunamadı: ${text}`);
           }
         } else {
-          // Ekleme modu
           if (barcodeMap.has(text)) {
             barcodeMap.set(text, barcodeMap.get(text) + 1);
           } else {
@@ -452,7 +464,6 @@
         }
       }
 
-      // Tabloyu günceller
       function updateTable() {
         barcodeTableBody.innerHTML = '';
         let total = 0;
@@ -491,7 +502,6 @@
         totalCountElem.textContent = total;
       }
 
-      // Kısa flaş efekti gösterir
       function flashEffect() {
         flashOverlay.style.opacity = '1';
         setTimeout(() => {
@@ -499,7 +509,6 @@
         }, 150);
       }
 
-      // Barkod bilgisini üstte gösterir
       let overlayTimeout = null;
       function showOverlay(text) {
         barcodeOverlay.textContent = text;
@@ -510,7 +519,6 @@
         }, 1500);
       }
 
-      // Manuel form gönderimi
       manualEntryForm.addEventListener('submit', e => {
         e.preventDefault();
         const val = manualBarcodeInput.value.trim();
@@ -521,16 +529,25 @@
         }
       });
 
-      // Kamera aç/kapat butonu
       scanButton.addEventListener('click', () => {
-        if (scanning) {
-          stopScanner();
+        if (cameraStarted) {
+          stopCamera();
         } else {
-          startScanner();
+          startCamera();
         }
       });
 
-      // Temizle butonu
+      video.addEventListener('click', () => {
+        if (!cameraStarted) return;
+        if (scanning) {
+          stopScanning();
+          showOverlay('Tarama durduruldu');
+        } else {
+          startScanning();
+          showOverlay('Tarama başladı');
+        }
+      });
+
       clearAllBtn.addEventListener('click', () => {
         if (confirm('Tüm barkodları temizlemek istediğinize emin misiniz?')) {
           barcodeMap.clear();
@@ -538,7 +555,6 @@
         }
       });
 
-      // Excel indir butonu
       exportExcelBtn.addEventListener('click', () => {
         if (barcodeMap.size === 0) {
           alert('İndirilecek barkod yok.');
@@ -554,7 +570,6 @@
         XLSX.writeFile(wb, 'barkodlar.xlsx');
       });
 
-      // Listeyi kopyala butonu
       copyListBtn.addEventListener('click', () => {
         if (barcodeMap.size === 0) {
           alert('Kopyalanacak barkod yok.');
@@ -569,9 +584,9 @@
           .catch(() => alert('Kopyalama başarısız.'));
       });
 
-      // Sayfa yüklenirken input odak
       manualBarcodeInput.focus();
     })();
   </script>
+
 </body>
 </html>
