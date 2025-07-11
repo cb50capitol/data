@@ -3,334 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Barkod Tarayıcı</title>
+  <title>Barkod Okuyucu</title>
   <style>
-    /* Genel stiller */
-    * {
-      box-sizing: border-box;
-      user-select: none;
-    }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f9fc;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 10px;
-      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f0f0f0;
     }
-
-    /* Manuel giriş formu */
-    #manualEntryForm {
-      margin-bottom: 20px;
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      flex-wrap: nowrap;
-      align-items: center;
-    }
-    #manualBarcodeInput {
-      padding: 12px 16px;
-      border-radius: 9999px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-      width: 220px;
-      outline-offset: 2px;
-      user-select: text;
-    }
-    #manualEntryForm button {
-      padding: 10px 16px;
-      font-size: 14px;
-      border-radius: 9999px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(52, 152, 219, 0.5);
-    }
-    #manualEntryForm button:hover {
-      background-color: #2980b9;
-    }
-
-    h1 {
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #2c3e50;
-      text-align: center;
-      user-select: text;
-    }
-
-    /* Video kutusu */
-    #videoContainer {
-      position: relative;
-      width: 320px;
-      max-width: 90vw;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      margin-bottom: 25px;
-      background: #000;
-    }
-    video {
+    #video {
       width: 100%;
-      height: auto;
+      max-width: 400px;
+      border: 2px solid #333;
+      border-radius: 8px;
       display: none;
-      object-fit: cover;
-      border-radius: 12px;
       cursor: pointer;
+      position: relative;
     }
-
-    /* Lazer çizgisi */
     #laserLine {
       position: absolute;
       top: 50%;
-      left: 5%;
-      right: 5%;
-      height: 3px;
-      background: linear-gradient(to right, transparent, rgba(255, 0, 0, 0.8), transparent);
-      transform: translateY(-50%);
-      border-radius: 2px;
-      box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.7);
-      pointer-events: none;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: red;
       opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 20;
+      animation: laserMove 1s linear infinite;
+      pointer-events: none;
+      z-index: 10;
     }
-
+    @keyframes laserMove {
+      0% { transform: translateY(-10px); }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(-10px); }
+    }
     #flashOverlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(255,255,255,0.7);
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: white;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.15s ease;
-      border-radius: 12px;
-      z-index: 10;
+      z-index: 1000;
     }
-
     #barcodeOverlay {
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
+      position: fixed;
+      top: 20px; left: 50%;
       transform: translateX(-50%);
-      background: rgba(44, 62, 80, 0.8);
+      background: #333;
       color: white;
-      font-weight: 700;
-      padding: 10px 18px;
-      border-radius: 10px;
-      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 8px;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease;
-      z-index: 15;
-      max-width: 90%;
-      text-align: center;
+      font-weight: bold;
+      z-index: 1001;
     }
-
-    /* Diğer butonlar */
-    #buttonContainer, #bottomButtons {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    button {
-      background-color: #3498db;
-      border: none;
-      color: white;
-      font-weight: 600;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 3px 6px rgba(52, 152, 219, 0.4);
-      transition: background-color 0.25s ease;
-      min-width: 120px;
-    }
-    button:disabled {
-      background-color: #95a5a6;
-      cursor: not-allowed;
-    }
-    button:hover:not(:disabled) {
-      background-color: #2980b9;
-    }
-    button.scanning {
-      background-color: #e74c3c !important;
-      box-shadow: 0 3px 8px rgba(231, 76, 60, 0.6);
-    }
-
-    .switch-container {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 15px;
-      color: #2c3e50;
-    }
-
-    .switch {
-      position: relative;
-      width: 52px;
-      height: 28px;
-      display: inline-block;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: #bdc3c7;
-      transition: 0.4s;
-      border-radius: 28px;
-    }
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 22px;
-      width: 22px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-    input:checked + .slider {
-      background-color: #e74c3c;
-    }
-    input:checked + .slider:before {
-      transform: translateX(24px);
-    }
-
-    #barcodeListContainer {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  padding: 20px 15px;
-  margin-bottom: 20px; /* yeni eklenen */
-}
-
-
     table {
       width: 100%;
+      max-width: 600px;
       border-collapse: collapse;
-      font-size: 15px;
-      color: #34495e;
-    }
-    thead {
-      background-color: #3498db;
-      color: white;
-      font-weight: 700;
+      margin-top: 20px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 6px #ccc;
     }
     th, td {
-      padding: 14px 12px;
+      padding: 8px 12px;
+      border-bottom: 1px solid #ddd;
       text-align: left;
-      border-bottom: 1px solid #ecf0f1;
     }
-    tbody tr:hover {
-      background-color: #f0f8ff;
+    th {
+      background: #222;
+      color: white;
     }
-    tfoot td {
-      font-weight: 700;
-      background-color: #f9f9f9;
-      color: #2c3e50;
-      padding: 12px;
+    button {
+      cursor: pointer;
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      margin: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-
-#bottomButtons button:nth-child(1) {
-  background-color: #e74c3c;
-  box-shadow: 0 3px 8px rgba(231, 76, 60, 0.5);
-}
-#bottomButtons button:nth-child(1):hover {
-  background-color: #c0392b;
-}
-    
-#bottomButtons button:nth-child(2) {
-  background-color: #217346;
-  box-shadow: 0 3px 8px rgba(33, 115, 70, 0.5);
-}
-#bottomButtons button:nth-child(2):hover {
-  background-color: #1e633d;
-}
-
-    
-    #bottomButtons button:nth-child(3) {
-  background-color: #34495e;
-  box-shadow: 0 3px 8px rgba(52, 73, 94, 0.5);
-}
-#bottomButtons button:nth-child(3):hover {
-  background-color: #2c3e50;
-}
-
-
-    @media (max-width: 440px) {
-      #buttonContainer, #bottomButtons {
-        flex-direction: column;
-      }
-      button {
-        width: 100%;
-        min-width: unset;
-      }
+    button:hover {
+      background: #2980b9;
+    }
+    #scanButton.scanning {
+      background: #e67e22;
+    }
+    #deleteModeToggle {
+      margin-left: 10px;
+    }
+    #manualEntryForm {
+      margin-top: 15px;
+      max-width: 400px;
+    }
+    #manualBarcodeInput {
+      padding: 8px;
+      width: calc(100% - 100px);
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+    }
+    #totalCount {
+      font-weight: bold;
+      margin-top: 10px;
     }
   </style>
 </head>
-<body oncontextmenu="return false">
+<body>
 
-  <form id="manualEntryForm" autocomplete="off">
-    <input type="tel" inputmode="numeric" pattern="[0-9]*" id="manualBarcodeInput" placeholder="THM/EAN" maxlength="100" required />
+  <h1>Barkod Okuyucu</h1>
+  
+  <button id="scanButton">Kamera Aç</button>
+  <label>
+    <input type="checkbox" id="deleteModeToggle" />
+    Silme Modu
+  </label>
+
+  <div style="position:relative; max-width:400px; margin-top: 10px;">
+    <video id="video" playsinline></video>
+    <div id="laserLine"></div>
+  </div>
+
+  <form id="manualEntryForm">
+    <input type="text" id="manualBarcodeInput" placeholder="Barkodu elle girin" autocomplete="off" />
     <button type="submit">Ekle</button>
   </form>
 
-  <div id="videoContainer">
-    <video id="video" autoplay muted playsinline></video>
-    <div id="flashOverlay"></div>
-    <div id="laserLine"></div>
-    <div id="barcodeOverlay"></div>
+  <div id="flashOverlay"></div>
+  <div id="barcodeOverlay"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Barkod</th>
+        <th>Adet</th>
+        <th>İşlem</th>
+      </tr>
+    </thead>
+    <tbody id="barcodeTableBody"></tbody>
+  </table>
+
+  <div id="totalCount">Toplam: 0</div>
+
+  <div style="margin-top: 15px;">
+    <button id="clearAllBtn">Tümünü Sil</button>
+    <button id="exportExcelBtn">Excel İndir</button>
+    <button id="copyListBtn">Listeyi Kopyala</button>
   </div>
 
-  <div id="buttonContainer">
-    <button id="scanButton">Kamera Aç</button>
-    <div class="switch-container">
-      <label class="switch">
-        <input type="checkbox" id="deleteModeToggle" />
-        <span class="slider"></span>
-      </label>
-      Silmek İçin Okut
-    </div>
-  </div>
+  <audio id="beepSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
 
-  <div id="barcodeListContainer">
-    <table>
-      <thead>
-        <tr><th>Barkod</th><th>Adet</th><th>İşlem</th></tr>
-      </thead>
-      <tbody id="barcodeTableBody"></tbody>
-      <tfoot><tr><td>Toplam</td><td id="totalCount" colspan="2">0</td></tr></tfoot>
-    </table>
-  </div>
-
-  <div id="bottomButtons">
-    <button id="clearAllBtn">Sıfırla</button>
-    <button id="exportExcelBtn">Excel</button>
-    <button id="copyListBtn">Kopyala</button>
-  </div>
-
-  <!-- 🔊 Bip sesi (çevrimiçi) -->
-  <audio id="beepSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" preload="auto"></audio>
-
-  <!-- Gerekli kütüphaneler -->
-  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.19.1/umd/index.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- ZXing library -->
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+  <!-- XLSX library -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 
   <script>
     (function () {
@@ -356,6 +189,24 @@
       let animationFrameId = null;
       let selectedDeviceId = null;
       const barcodeMap = new Map();
+
+      // localStorage'a kaydetme fonksiyonu
+      function saveToLocalStorage() {
+        const obj = Object.fromEntries(barcodeMap);
+        localStorage.setItem('barcodeData', JSON.stringify(obj));
+      }
+
+      // localStorage'dan yükleme fonksiyonu
+      function loadFromLocalStorage() {
+        const data = localStorage.getItem('barcodeData');
+        if (data) {
+          const obj = JSON.parse(data);
+          for (const [code, count] of Object.entries(obj)) {
+            barcodeMap.set(code, count);
+          }
+          updateTable();
+        }
+      }
 
       async function startCamera() {
         if (cameraStarted) return;
@@ -422,54 +273,53 @@
         cancelAnimationFrame(animationFrameId);
       }
 
-     function handleBarcode(text) {
-  if (!text) return;
-  if (deleteModeToggle.checked) {
-    if (barcodeMap.has(text)) {
-      let count = barcodeMap.get(text);
-      count > 1 ? barcodeMap.set(text, count - 1) : barcodeMap.delete(text);
-      updateTable();
-      showOverlay(`Silindi: ${text}`);
-    } else {
-      showOverlay(`Bulunamadı: ${text}`);
-    }
-  } else {
-    barcodeMap.set(text, (barcodeMap.get(text) || 0) + 1);
-    updateTable();
-    showOverlay(text);  // Burayı değiştirdik
-    beepSound.currentTime = 0;
-    beepSound.play().catch(() => {});
-  }
-}
-
+      function handleBarcode(text) {
+        if (!text) return;
+        if (deleteModeToggle.checked) {
+          if (barcodeMap.has(text)) {
+            let count = barcodeMap.get(text);
+            count > 1 ? barcodeMap.set(text, count - 1) : barcodeMap.delete(text);
+            updateTable();
+            saveToLocalStorage();  // localStorage güncelle
+            showOverlay(`Silindi: ${text}`);
+          } else {
+            showOverlay(`Bulunamadı: ${text}`);
+          }
+        } else {
+          barcodeMap.set(text, (barcodeMap.get(text) || 0) + 1);
+          updateTable();
+          saveToLocalStorage();  // localStorage güncelle
+          showOverlay(text);
+          beepSound.currentTime = 0;
+          beepSound.play().catch(() => {});
+        }
+      }
 
       function updateTable() {
-  barcodeTableBody.innerHTML = '';
-  let total = 0;
-  
-  // Map'i diziye dönüştür, ters sırala (son eklenen en üstte)
-  const entries = Array.from(barcodeMap.entries()).reverse();
+        barcodeTableBody.innerHTML = '';
+        let total = 0;
 
-  entries.forEach(([code, count]) => {
-    total += count;
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td title="${code}">${code}</td>
-      <td>${count}</td>
-      <td><button style="background:#e74c3c;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer">Sil</button></td>`;
-    tr.querySelector('button').addEventListener('click', () => {
-      if (confirm(`"${code}" barkodunu silmek istediğinize emin misiniz?`)) {
-        barcodeMap.delete(code);
-        updateTable();
+        const entries = Array.from(barcodeMap.entries()).reverse();
+
+        entries.forEach(([code, count]) => {
+          total += count;
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td title="${code}">${code}</td>
+            <td>${count}</td>
+            <td><button style="background:#e74c3c;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer">Sil</button></td>`;
+          tr.querySelector('button').addEventListener('click', () => {
+            if (confirm(`"${code}" barkodunu silmek istediğinize emin misiniz?`)) {
+              barcodeMap.delete(code);
+              updateTable();
+              saveToLocalStorage(); // silme sonrası güncelle
+            }
+          });
+          barcodeTableBody.appendChild(tr);
+        });
+
+        totalCountElem.textContent = total;
       }
-    });
-    barcodeTableBody.appendChild(tr);
-  });
-
-  totalCountElem.textContent = total;
-}
-
-
 
       function flashEffect() {
         flashOverlay.style.opacity = '1';
@@ -505,6 +355,7 @@
         if (confirm('Tüm barkodları silmek istiyor musunuz?')) {
           barcodeMap.clear();
           updateTable();
+          localStorage.removeItem('barcodeData');  // localStorage temizle
         }
       });
 
@@ -524,10 +375,12 @@
         navigator.clipboard.writeText(text).then(() => alert('Liste kopyalandı!')).catch(() => alert('Kopyalama başarısız.'));
       });
 
+      // Sayfa yüklendiğinde localStorage'dan veri yükle
+      loadFromLocalStorage();
+
       manualBarcodeInput.focus();
     })();
   </script>
 
 </body>
-
 </html>
