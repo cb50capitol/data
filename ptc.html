@@ -23,7 +23,7 @@
     #videoContainer {
       position: relative;
       display: inline-block;
-      margin-bottom: 20px; /* Kamera ile Okut butonu arası boşluk */
+      margin-bottom: 20px;
     }
     video {
       width: 90vw;
@@ -51,6 +51,7 @@
       margin-bottom: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
     }
     #bottomButtons {
       margin-top: 20px;
@@ -108,6 +109,9 @@
       font-weight: bold;
       background: #eee;
     }
+    label {
+      font-size: 14px;
+    }
   </style>
 </head>
 <body oncontextmenu="return false">
@@ -120,6 +124,10 @@
 <div id="buttonContainer">
   <button id="scanButton">Kamera</button>
   <button id="okutButton" disabled>Okut</button>
+  <label>
+    <input type="checkbox" id="deleteMode" />
+    Silmek için okut
+  </label>
 </div>
 
 <div id="barcodeListContainer">
@@ -154,6 +162,7 @@
 <script>
   const scanButton = document.getElementById('scanButton');
   const okutButton = document.getElementById('okutButton');
+  const deleteModeCheckbox = document.getElementById('deleteMode');
   const clearHistoryButton = document.getElementById('clearHistoryButton');
   const downloadExcelButton = document.getElementById('downloadExcelButton');
   const whatsappShareButton = document.getElementById('whatsappShareButton');
@@ -172,7 +181,7 @@
   const DEBOUNCE_TIME = 2000;
 
   if ('BarcodeDetector' in window) {
-    barcodeDetector = new BarcodeDetector({formats: ['code_128', 'ean_13', 'qr_code', 'upc_a']});
+    barcodeDetector = new BarcodeDetector(); // tüm formatları destekler
   } else {
     alert('Bu cihazda BarcodeDetector API desteklenmiyor.');
   }
@@ -297,7 +306,20 @@
           if (lastReadTimestamps[code] && (now - lastReadTimestamps[code]) < DEBOUNCE_TIME) continue;
           lastReadTimestamps[code] = now;
 
-          scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+          const deleteMode = deleteModeCheckbox.checked;
+
+          if (deleteMode) {
+            if (scannedBarcodes[code]) {
+              scannedBarcodes[code]--;
+              if (scannedBarcodes[code] <= 0) {
+                delete scannedBarcodes[code];
+                delete lastReadTimestamps[code];
+              }
+            }
+          } else {
+            scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+          }
+
           saveData();
           updateTable();
           beepSound.play();
