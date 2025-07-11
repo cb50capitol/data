@@ -315,7 +315,13 @@
         <tr><th>Barkod</th><th>Adet</th><th>İşlem</th></tr>
       </thead>
       <tbody id="barcodeTableBody"></tbody>
-      <tfoot><tr><td>Toplam</td><td id="totalCount" colspan="2">0</td></tr></tfoot>
+   <tfoot>
+  <tr>
+    <td colspan="3" id="totalCount" style="font-weight:bold; white-space: pre-line;"></td>
+  </tr>
+</tfoot>
+
+
     </table>
   </div>
 
@@ -461,7 +467,7 @@
         });
         barcodeTableBody.appendChild(tr);
       });
-      totalCountElem.textContent = total;
+     totalCountElem.textContent = `Kalem Miktarı : ${barcodeMap.size}\nToplam Adet   : ${total}`;
 
       // ✅ Barkod listesini kaydet
       localStorage.setItem('barcodeData', JSON.stringify(Array.from(barcodeMap.entries())));
