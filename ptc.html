@@ -6,6 +6,7 @@
   <title>Barkod Tarayıcı</title>
   <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <style>
+    /* Önceki CSS aynı... */
     * {
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -23,7 +24,7 @@
     #videoContainer {
       position: relative;
       display: inline-block;
-      margin-bottom: 20px; /* Kamera ile Toggle arası boşluk */
+      margin-bottom: 20px;
     }
     video {
       width: 90vw;
@@ -73,8 +74,8 @@
       color: white;
       border-color: #c0392b;
     }
-    #scanButton {
-      width: 150px;
+    #scanButton, #startScanButton {
+      width: 100px;
     }
     #barcodeListContainer {
       width: 90vw;
@@ -146,7 +147,6 @@
       transform: translateX(26px);
     }
 
-    /* Toggle scanning state */
     #okutToggle.scanning + .slider {
       background-color: #e74c3c !important;
     }
@@ -160,7 +160,8 @@
 </div>
 
 <div id="buttonContainer">
-  <button id="scanButton">Kamera</button>
+  <button id="scanButton">Kamera Aç</button>
+  <button id="startScanButton" disabled>Okut</button>
 
   <label class="switch" for="okutToggle">
     <input type="checkbox" id="okutToggle" disabled />
@@ -199,8 +200,9 @@
 </div>
 
 <script>
-  const scanButton = document.getElementById('scanButton');
-  const okutToggle = document.getElementById('okutToggle');
+  const scanButton = document.getElementById('scanButton'); // Kamera aç/kapat
+  const startScanButton = document.getElementById('startScanButton'); // Okut başlat/durdur
+  const okutToggle = document.getElementById('okutToggle'); // Ekle/Sil toggle
   const toggleLabel = document.getElementById('toggleLabel');
   const clearHistoryButton = document.getElementById('clearHistoryButton');
   const downloadExcelButton = document.getElementById('downloadExcelButton');
@@ -230,29 +232,60 @@
   scanButton.addEventListener('click', async () => {
     if (cameraStream) {
       stopCamera();
-      scanButton.textContent = "Kamera";
+      scanButton.textContent = "Kamera Aç";
       okutToggle.disabled = true;
       okutToggle.checked = false;
+      startScanButton.disabled = true;
       stopScanning();
       video.classList.remove('blurred');
       toggleLabel.textContent = "Barkod Ekle";
       okutToggle.classList.remove('scanning');
+      startScanButton.textContent = "Okut";
+      scanning = false;
     } else {
       await startCamera();
-      scanButton.textContent = "Kapat";
+      scanButton.textContent = "Kamera Kapat";
       okutToggle.disabled = false;
+      startScanButton.disabled = false;
     }
   });
 
-  okutToggle.addEventListener('change', () => {
-    if (okutToggle.checked) {
+  startScanButton.addEventListener('click', () => {
+    if (!scanning) {
       startScanning();
-      toggleLabel.textContent = "Barkod Sil";
-      okutToggle.classList.add('scanning');
+      startScanButton.textContent = "Durdur";
+      if (okutToggle.checked) {
+        toggleLabel.textContent = "Barkod Sil";
+        okutToggle.classList.add('scanning');
+      } else {
+        toggleLabel.textContent = "Barkod Ekle";
+        okutToggle.classList.remove('scanning');
+      }
     } else {
       stopScanning();
+      startScanButton.textContent = "Okut";
       video.classList.remove('blurred');
-      toggleLabel.textContent = "Barkod Ekle";
+      if (okutToggle.checked) {
+        toggleLabel.textContent = "Barkod Sil";
+      } else {
+        toggleLabel.textContent = "Barkod Ekle";
+      }
+      okutToggle.classList.remove('scanning');
+    }
+    scanning = !scanning;
+  });
+
+  okutToggle.addEventListener('change', () => {
+    if (scanning) {
+      if (okutToggle.checked) {
+        toggleLabel.textContent = "Barkod Sil";
+        okutToggle.classList.add('scanning');
+      } else {
+        toggleLabel.textContent = "Barkod Ekle";
+        okutToggle.classList.remove('scanning');
+      }
+    } else {
+      toggleLabel.textContent = okutToggle.checked ? "Barkod Sil" : "Barkod Ekle";
       okutToggle.classList.remove('scanning');
     }
   });
@@ -326,7 +359,6 @@
     scanning = true;
     if (scanInterval) clearInterval(scanInterval);
     scanInterval = setInterval(scanFrame, 500);
-    // toggle ve video class'ları artık toggle eventinde kontrol ediliyor
   }
 
   function stopScanning() {
@@ -366,10 +398,7 @@
           beepSound.play();
           flashEffect();
 
-          stopScanning();
-          video.classList.add('blurred');
-          okutToggle.checked ? okutToggle.classList.add('scanning') : okutToggle.classList.remove('scanning');
-          break;
+          break; // Bir barkod bulduğunda dur
         }
       }
     } catch (err) {
@@ -404,7 +433,6 @@
       flashOverlay.style.opacity = 0;
     }, 100);
   }
-
 </script>
 
 </body>
