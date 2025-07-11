@@ -211,13 +211,15 @@
     }
 
     #barcodeListContainer {
-      width: 100%;
-      max-width: 400px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      padding: 20px 15px;
-    }
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 20px 15px;
+  margin-bottom: 20px; /* yeni eklenen */
+}
+
 
     table {
       width: 100%;
@@ -431,23 +433,32 @@
 
 
       function updateTable() {
-        barcodeTableBody.innerHTML = '';
-        let total = 0;
-        barcodeMap.forEach((count, code) => {
-          total += count;
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td title="${code}">${code}</td>
-            <td>${count}</td>
-            <td><button style="background:#e74c3c;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer">Sil</button></td>`;
-          tr.querySelector('button').addEventListener('click', () => {
-            barcodeMap.delete(code);
-            updateTable();
-          });
-          barcodeTableBody.appendChild(tr);
-        });
-        totalCountElem.textContent = total;
+  barcodeTableBody.innerHTML = '';
+  let total = 0;
+  
+  // Map'i diziye dönüştür, ters sırala (son eklenen en üstte)
+  const entries = Array.from(barcodeMap.entries()).reverse();
+
+  entries.forEach(([code, count]) => {
+    total += count;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td title="${code}">${code}</td>
+      <td>${count}</td>
+      <td><button style="background:#e74c3c;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer">Sil</button></td>`;
+    tr.querySelector('button').addEventListener('click', () => {
+      if (confirm(`"${code}" barkodunu silmek istediğinize emin misiniz?`)) {
+        barcodeMap.delete(code);
+        updateTable();
       }
+    });
+    barcodeTableBody.appendChild(tr);
+  });
+
+  totalCountElem.textContent = total;
+}
+
+
 
       function flashEffect() {
         flashOverlay.style.opacity = '1';
@@ -507,4 +518,5 @@
   </script>
 
 </body>
+
 </html>
