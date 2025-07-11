@@ -69,22 +69,29 @@
     }
 
     /* Video Container */
-    #videoContainer {
-      position: relative;
-      width: 320px;
-      max-width: 90vw;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      margin-bottom: 25px;
-      background: #000;
-      user-select: none;
-    }
-    #interactive.viewport {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
+   #videoContainer {
+  position: relative;
+  width: 320px;
+  max-width: 90vw;
+  max-height: calc(90vw * 0.6);
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+  background: #000;
+  user-select: none;
+  height: auto;
+}
+
+#interactive.viewport video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 12px;
+  user-select: none;
+}
+
     video, canvas {
       border-radius: 12px;
       user-select: none;
