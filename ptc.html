@@ -444,37 +444,48 @@
       }
 
       function startScan() {
-        if (scanning) {
-          stopScan();
-          return;
-        }
-        codeReader = new BrowserMultiFormatReader();
-        codeReader
-          .listVideoInputDevices()
-          .then(videoInputDevices => {
-            if (videoInputDevices.length === 0) {
-              alert('Kamera bulunamadı!');
-              return;
-            }
-            const selectedDeviceId = videoInputDevices[0].deviceId;
-            codeReader.decodeFromVideoDevice(selectedDeviceId, video, (result, err) => {
-              if (result) {
-                if (result.text !== lastResult) {
-                  lastResult = result.text;
-                  addBarcode(result.text);
-                }
-              }
-            });
-            scanning = true;
-            scanButton.textContent = 'Kamerayı Kapat';
-            scanButton.classList.add('scanning');
-            video.style.display = 'block';
-            laserLine.style.opacity = '1';
-          })
-          .catch(err => {
-            alert('Kamera açılırken hata: ' + err);
-          });
+  if (scanning) {
+    stopScan();
+    return;
+  }
+  codeReader = new BrowserMultiFormatReader();
+  codeReader
+    .listVideoInputDevices()
+    .then(videoInputDevices => {
+      if (videoInputDevices.length === 0) {
+        alert('Kamera bulunamadı!');
+        return;
       }
+
+      // Arka kamerayı bulmaya çalışalım
+      let environmentCamera = videoInputDevices.find(device => 
+        device.label.toLowerCase().includes('back') || 
+        device.label.toLowerCase().includes('environment')
+      );
+
+      // Eğer yoksa ilk kamerayı seç
+      const selectedDeviceId = environmentCamera ? environmentCamera.deviceId : videoInputDevices[0].deviceId;
+
+      codeReader.decodeFromVideoDevice(selectedDeviceId, video, (result, err) => {
+        if (result) {
+          if (result.text !== lastResult) {
+            lastResult = result.text;
+            addBarcode(result.text);
+          }
+        }
+      });
+
+      scanning = true;
+      scanButton.textContent = 'Kamerayı Kapat';
+      scanButton.classList.add('scanning');
+      video.style.display = 'block';
+      laserLine.style.opacity = '1';
+    })
+    .catch(err => {
+      alert('Kamera açılırken hata: ' + err);
+    });
+}
+
 
       function stopScan() {
         if (codeReader) {
