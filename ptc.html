@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Barkod Tarayıcı</title>
+  <!-- Tüm stil bloklarını aynı bırakıyoruz (değişiklik yok) -->
   <style>
-    * {
+     * {
       box-sizing: border-box;
       user-select: none;
     }
@@ -278,11 +279,13 @@
 </head>
 <body oncontextmenu="return false">
 
+  <!-- Giriş Formu -->
   <form id="manualEntryForm" autocomplete="off">
     <input type="tel" inputmode="numeric" pattern="[0-9]*" id="manualBarcodeInput" placeholder="THM/EAN" maxlength="100" required />
     <button type="submit">Ekle</button>
   </form>
 
+  <!-- Video ve Tarayıcı -->
   <div id="videoContainer">
     <video id="video" autoplay muted playsinline></video>
     <div id="flashOverlay"></div>
@@ -290,6 +293,7 @@
     <div id="barcodeOverlay"></div>
   </div>
 
+  <!-- Tarama ve Silme -->
   <div id="buttonContainer">
     <button id="scanButton">Kamera Aç</button>
     <div class="switch-container">
@@ -301,6 +305,7 @@
     </div>
   </div>
 
+  <!-- Barkod Listesi -->
   <div id="barcodeListContainer">
     <table>
       <thead>
@@ -315,15 +320,18 @@
     </table>
   </div>
 
+  <!-- ALT BUTONLAR -->
   <div id="bottomButtons">
     <button id="clearAllBtn">Sıfırla</button>
     <button id="exportExcelBtn">Excel</button>
     <button id="copyListBtn">Kopyala</button>
+    <button id="shareBtn">Mail ile Paylaş</button>
   </div>
 
+  <!-- Ses Efekti -->
   <audio id="beepSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" preload="auto"></audio>
 
-  <!-- MODAL PENCERESİ -->
+  <!-- Modal -->
   <div id="customModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
     <div style="background:#fff;padding:24px 20px;border-radius:12px;max-width:320px;width:90%;box-shadow:0 6px 20px rgba(0,0,0,0.3);font-family:sans-serif;">
       <div id="modalContent" style="font-size:16px;margin-bottom:20px;text-align:center;color:#2c3e50;"></div>
@@ -334,11 +342,11 @@
     </div>
   </div>
 
-  <!-- KÜTÜPHANELER -->
+  <!-- Kütüphaneler -->
   <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.19.1/umd/index.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
-  <!-- ANA JAVASCRIPT -->
+  <!-- JavaScript -->
   <script>
     (function () {
       const { BrowserMultiFormatReader } = ZXing;
@@ -355,6 +363,7 @@
       const clearAllBtn = document.getElementById('clearAllBtn');
       const exportExcelBtn = document.getElementById('exportExcelBtn');
       const copyListBtn = document.getElementById('copyListBtn');
+      const shareBtn = document.getElementById('shareBtn');
       const beepSound = document.getElementById('beepSound');
 
       const modal = document.getElementById('customModal');
@@ -553,6 +562,26 @@
         }).catch(() => showModal('Kopyalama başarısız.'));
       });
 
+      // ✅ Mail ile Paylaş butonu
+      shareBtn.addEventListener('click', () => {
+        if (!barcodeMap.size) return showModal('Gönderilecek veri yok.');
+
+        const subject = "Barkod Listesi";
+        const body = encodeURIComponent(generatePlainTextTable(barcodeMap));
+        const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        window.location.href = mailtoLink;
+      });
+
+      function generatePlainTextTable(map) {
+        let text = "Barkod\tAdet\n";
+        map.forEach((count, code) => {
+          text += `${code}\t${count}\n`;
+        });
+        return text;
+      }
+
+      // Yerel verileri yükle
       const savedData = localStorage.getItem('barcodeData');
       if (savedData) {
         try {
