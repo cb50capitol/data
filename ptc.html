@@ -410,25 +410,26 @@
         cancelAnimationFrame(animationFrameId);
       }
 
-      function handleBarcode(text) {
-        if (!text) return;
-        if (deleteModeToggle.checked) {
-          if (barcodeMap.has(text)) {
-            let count = barcodeMap.get(text);
-            count > 1 ? barcodeMap.set(text, count - 1) : barcodeMap.delete(text);
-            updateTable();
-            showOverlay(`Silindi: ${text}`);
-          } else {
-            showOverlay(`Bulunamadı: ${text}`);
-          }
-        } else {
-          barcodeMap.set(text, (barcodeMap.get(text) || 0) + 1);
-          updateTable();
-          showOverlay(`Okundu: ${text}`);
-          beepSound.currentTime = 0;
-          beepSound.play().catch(() => {});
-        }
-      }
+     function handleBarcode(text) {
+  if (!text) return;
+  if (deleteModeToggle.checked) {
+    if (barcodeMap.has(text)) {
+      let count = barcodeMap.get(text);
+      count > 1 ? barcodeMap.set(text, count - 1) : barcodeMap.delete(text);
+      updateTable();
+      showOverlay(`Silindi: ${text}`);
+    } else {
+      showOverlay(`Bulunamadı: ${text}`);
+    }
+  } else {
+    barcodeMap.set(text, (barcodeMap.get(text) || 0) + 1);
+    updateTable();
+    showOverlay(text);  // Burayı değiştirdik
+    beepSound.currentTime = 0;
+    beepSound.play().catch(() => {});
+  }
+}
+
 
       function updateTable() {
         barcodeTableBody.innerHTML = '';
