@@ -300,7 +300,7 @@
 </head>
 <body oncontextmenu="return false">
 
-  <!-- Manual barcode entry form -->
+  <!-- (HTML kod aynen korundu) -->
   <form id="manualEntryForm" autocomplete="off">
     <input
       type="tel"
@@ -322,6 +322,7 @@
 
   <div id="buttonContainer">
     <button id="scanButton">Kamera Aç</button>
+
     <div class="switch-container" title="Silmek için okut modu">
       <label class="switch">
         <input type="checkbox" id="deleteModeToggle" />
@@ -354,158 +355,185 @@
   </div>
 
   <div id="bottomButtons">
-    <button id="clearHistoryButton">Geçmişi Temizle</button>
-    <button id="downloadExcelButton">Excel Olarak İndir</button>
-    <button id="whatsappShareButton">WhatsApp'ta Paylaş</button>
+    <button id="clearHistoryButton" title="Okutulan barkod listesini temizle">Geçmişi Temizle</button>
+    <button id="downloadExcelButton" title="Barkod listesini Excel olarak indir">Excel Olarak İndir</button>
+    <button id="whatsappShareButton" title="Barkod listesini WhatsApp'ta paylaş">WhatsApp'ta Paylaş</button>
   </div>
 
-  <!-- ZXing + Uygulama Scripti -->
-  <script type="module">
-    import { BrowserMultiFormatReader } from 'https://cdn.jsdelivr.net/npm/@zxing/browser@0.5.4/+esm';
+<script type="module">
+  import { BrowserMultiFormatReader } from 'https://cdn.jsdelivr.net/npm/@zxing/browser@latest/+esm';
 
-    const codeReader = new BrowserMultiFormatReader();
-    const scanButton = document.getElementById('scanButton');
-    const clearHistoryButton = document.getElementById('clearHistoryButton');
-    const downloadExcelButton = document.getElementById('downloadExcelButton');
-    const whatsappShareButton = document.getElementById('whatsappShareButton');
-    const video = document.getElementById('video');
-    const flashOverlay = document.getElementById('flashOverlay');
-    const barcodeTableBody = document.querySelector('#barcodeTable tbody');
-    const beepSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
-    const deleteModeToggle = document.getElementById('deleteModeToggle');
-    const barcodeOverlay = document.getElementById('barcodeOverlay');
-    const manualEntryForm = document.getElementById('manualEntryForm');
-    const manualBarcodeInput = document.getElementById('manualBarcodeInput');
+  const scanButton = document.getElementById('scanButton');
+  const clearHistoryButton = document.getElementById('clearHistoryButton');
+  const downloadExcelButton = document.getElementById('downloadExcelButton');
+  const whatsappShareButton = document.getElementById('whatsappShareButton');
+  const video = document.getElementById('video');
+  const flashOverlay = document.getElementById('flashOverlay');
+  const barcodeTableBody = document.querySelector('#barcodeTable tbody');
+  const beepSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
+  const deleteModeToggle = document.getElementById('deleteModeToggle');
+  const barcodeOverlay = document.getElementById('barcodeOverlay');
 
-    let scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
-    let lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
-    const DEBOUNCE_TIME = 2000;
+  const manualEntryForm = document.getElementById('manualEntryForm');
+  const manualBarcodeInput = document.getElementById('manualBarcodeInput');
 
-    function handleBarcode(code) {
-      const now = Date.now();
-      if (lastReadTimestamps[code] && (now - lastReadTimestamps[code] < DEBOUNCE_TIME)) return;
-      lastReadTimestamps[code] = now;
-      localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
+  let codeReader = null;
+  let scanning = false;
 
-      if (deleteModeToggle.checked) {
-        if (scannedBarcodes[code]) {
-          scannedBarcodes[code]--;
-          if (scannedBarcodes[code] <= 0) delete scannedBarcodes[code];
-          beepSound.play();
-          showFlash();
-        }
-      } else {
-        scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+  const scannedBarcodes = JSON.parse(localStorage.getItem('scannedBarcodes') || '{}');
+  const lastReadTimestamps = JSON.parse(localStorage.getItem('lastReadTimestamps') || '{}');
+  const DEBOUNCE_TIME = 2000;
+
+  function handleBarcode(code) {
+    const now = Date.now();
+    if (lastReadTimestamps[code] && (now - lastReadTimestamps[code] < DEBOUNCE_TIME)) {
+      return;
+    }
+    lastReadTimestamps[code] = now;
+    localStorage.setItem('lastReadTimestamps', JSON.stringify(lastReadTimestamps));
+
+    if (deleteModeToggle.checked) {
+      if (scannedBarcodes[code]) {
+        scannedBarcodes[code]--;
+        if (scannedBarcodes[code] <= 0) delete scannedBarcodes[code];
         beepSound.play();
         showFlash();
       }
-
-      localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
-      updateTable();
-
-      barcodeOverlay.textContent = code;
-      barcodeOverlay.style.opacity = 1;
-      setTimeout(() => {
-        barcodeOverlay.style.opacity = 0;
-      }, 1500);
+    } else {
+      scannedBarcodes[code] = (scannedBarcodes[code] || 0) + 1;
+      beepSound.play();
+      showFlash();
     }
+    localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
+    updateTable();
 
-    function showFlash() {
-      flashOverlay.style.opacity = 1;
-      setTimeout(() => flashOverlay.style.opacity = 0, 100);
+    barcodeOverlay.textContent = code;
+    barcodeOverlay.style.opacity = 1;
+    setTimeout(() => {
+      barcodeOverlay.style.opacity = 0;
+    }, 1500);
+  }
+
+  function showFlash() {
+    flashOverlay.style.opacity = 1;
+    setTimeout(() => flashOverlay.style.opacity = 0, 100);
+  }
+
+  function updateTable() {
+    barcodeTableBody.innerHTML = '';
+    let totalItems = 0;
+    let totalCount = 0;
+    for (const [code, count] of Object.entries(scannedBarcodes)) {
+      const tr = document.createElement('tr');
+      const tdCode = document.createElement('td');
+      tdCode.textContent = code;
+      const tdCount = document.createElement('td');
+      tdCount.textContent = count;
+      tr.appendChild(tdCode);
+      tr.appendChild(tdCount);
+      barcodeTableBody.appendChild(tr);
+
+      totalItems++;
+      totalCount += count;
     }
+    document.getElementById('itemCount').textContent = totalItems;
+    document.getElementById('totalCount').textContent = totalCount;
+  }
 
-    function updateTable() {
-      barcodeTableBody.innerHTML = '';
-      let totalItems = 0;
-      let totalCount = 0;
-      for (const [code, count] of Object.entries(scannedBarcodes)) {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${code}</td><td>${count}</td>`;
-        barcodeTableBody.appendChild(tr);
-        totalItems++;
-        totalCount += count;
-      }
-      document.getElementById('itemCount').textContent = totalItems;
-      document.getElementById('totalCount').textContent = totalCount;
+  function stopScanner() {
+    if (codeReader) {
+      codeReader.reset();
+      codeReader = null;
     }
+    scanning = false;
+    video.style.display = 'none';
+    barcodeOverlay.style.opacity = 0;
+    scanButton.textContent = 'Kamera Aç';
+    scanButton.classList.remove('scanning');
+  }
 
-    window.addEventListener('DOMContentLoaded', updateTable);
-
-    scanButton.addEventListener('click', async () => {
-      if (scanButton.classList.contains('scanning')) {
-        codeReader.reset();
-        video.style.display = 'none';
-        scanButton.textContent = 'Kamera Aç';
-        scanButton.classList.remove('scanning');
-        return;
-      }
-
+  scanButton.addEventListener('click', async () => {
+    if (scanning) {
+      stopScanner();
+    } else {
+      codeReader = new BrowserMultiFormatReader();
       try {
-        const devices = await codeReader.listVideoInputDevices();
-        const selectedDeviceId = devices[0].deviceId;
-
-        await codeReader.decodeFromVideoDevice(selectedDeviceId, video, (result, err) => {
-          if (result) {
-            handleBarcode(result.getText());
-          }
-        });
+        const videoInputDevices = await codeReader.listVideoInputDevices();
+        const selectedDeviceId = videoInputDevices.find(device => device.label.toLowerCase().includes('back'))?.deviceId || videoInputDevices[0].deviceId;
 
         video.style.display = 'block';
         scanButton.textContent = 'Kamerayı Kapat';
         scanButton.classList.add('scanning');
-      } catch (err) {
-        alert('Kamera erişim hatası: ' + err.message);
-      }
-    });
+        scanning = true;
 
-    clearHistoryButton.addEventListener('click', () => {
-      if (confirm('Barkod listesini temizlemek istiyor musunuz?')) {
-        scannedBarcodes = {};
-        localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
-        updateTable();
+        codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
+          if (result) {
+            handleBarcode(result.text);
+          }
+          if (err && !(err.name === 'NotFoundException')) {
+            console.warn(err);
+          }
+        });
+      } catch (e) {
+        alert('Kameraya erişim sağlanamadı: ' + e.message);
+        stopScanner();
       }
-    });
+    }
+  });
 
-    downloadExcelButton.addEventListener('click', () => {
-      if (Object.keys(scannedBarcodes).length === 0) {
-        alert('İndirilecek barkod yok.');
-        return;
+  clearHistoryButton.addEventListener('click', () => {
+    if (confirm('Barkod listesini temizlemek istediğinize emin misiniz?')) {
+      for (const key in scannedBarcodes) {
+        delete scannedBarcodes[key];
       }
-      const wb = XLSX.utils.book_new();
-      const data = [['Barkod', 'Adet']];
-      for (const [code, count] of Object.entries(scannedBarcodes)) {
-        data.push([code, count]);
-      }
-      const ws = XLSX.utils.aoa_to_sheet(data);
-      XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
-      XLSX.writeFile(wb, 'barkodlar.xlsx');
-    });
+      localStorage.setItem('scannedBarcodes', JSON.stringify(scannedBarcodes));
+      updateTable();
+    }
+  });
 
-    whatsappShareButton.addEventListener('click', () => {
-      if (Object.keys(scannedBarcodes).length === 0) {
-        alert('Paylaşılacak barkod yok.');
-        return;
-      }
-      let message = 'Barkod Listesi:%0A';
-      for (const [code, count] of Object.entries(scannedBarcodes)) {
-        message += `${code}: ${count}%0A`;
-      }
-      const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    });
+  downloadExcelButton.addEventListener('click', () => {
+    if (Object.keys(scannedBarcodes).length === 0) {
+      alert('İndirilecek barkod yok.');
+      return;
+    }
+    const wb = XLSX.utils.book_new();
+    const data = [['Barkod', 'Adet']];
+    for (const [code, count] of Object.entries(scannedBarcodes)) {
+      data.push([code, count]);
+    }
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
+    XLSX.writeFile(wb, 'barkodlar.xlsx');
+  });
 
-    manualEntryForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const code = manualBarcodeInput.value.trim();
-      if (!code.match(/^\d+$/)) {
-        alert('Lütfen sadece sayısal barkod girin.');
-        return;
-      }
-      handleBarcode(code);
-      manualBarcodeInput.value = '';
-      manualBarcodeInput.focus();
-    });
-  </script>
+  whatsappShareButton.addEventListener('click', () => {
+    if (Object.keys(scannedBarcodes).length === 0) {
+      alert('Paylaşılacak barkod yok.');
+      return;
+    }
+    let message = 'Barkod Listesi:%0A';
+    for (const [code, count] of Object.entries(scannedBarcodes)) {
+      message += `${code}: ${count}%0A`;
+    }
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  });
+
+  // Manuel barkod formu submit
+  manualEntryForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const code = manualBarcodeInput.value.trim();
+    if (!code.match(/^\d+$/)) {
+      alert('Lütfen sadece sayısal barkod giriniz.');
+      return;
+    }
+    handleBarcode(code);
+    manualBarcodeInput.value = '';
+    manualBarcodeInput.focus();
+  });
+
+  window.addEventListener('DOMContentLoaded', updateTable);
+</script>
+
 </body>
 </html>
