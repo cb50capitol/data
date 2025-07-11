@@ -386,7 +386,6 @@
           if (result?.text) {
             handleBarcode(result.text);
             flashEffect();
-            showOverlay('Barkod okundu');
             beepSound.currentTime = 0;
             beepSound.play().catch(() => {});
             stopScanning();
