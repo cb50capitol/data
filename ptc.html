@@ -341,235 +341,233 @@
   <!-- ANA JAVASCRIPT -->
   <script>
     (function () {
-  const { BrowserMultiFormatReader } = ZXing;
-  const video = document.getElementById('video');
-  const scanButton = document.getElementById('scanButton');
-  const deleteModeToggle = document.getElementById('deleteModeToggle');
-  const barcodeTableBody = document.getElementById('barcodeTableBody');
-  const totalCountElem = document.getElementById('totalCount');
-  const manualEntryForm = document.getElementById('manualEntryForm');
-  const manualBarcodeInput = document.getElementById('manualBarcodeInput');
-  const flashOverlay = document.getElementById('flashOverlay');
-  const barcodeOverlay = document.getElementById('barcodeOverlay');
-  const laserLine = document.getElementById('laserLine');
-  const clearAllBtn = document.getElementById('clearAllBtn');
-  const exportExcelBtn = document.getElementById('exportExcelBtn');
-  const copyListBtn = document.getElementById('copyListBtn');
-  const beepSound = document.getElementById('beepSound');
+      const { BrowserMultiFormatReader } = ZXing;
+      const video = document.getElementById('video');
+      const scanButton = document.getElementById('scanButton');
+      const deleteModeToggle = document.getElementById('deleteModeToggle');
+      const barcodeTableBody = document.getElementById('barcodeTableBody');
+      const totalCountElem = document.getElementById('totalCount');
+      const manualEntryForm = document.getElementById('manualEntryForm');
+      const manualBarcodeInput = document.getElementById('manualBarcodeInput');
+      const flashOverlay = document.getElementById('flashOverlay');
+      const barcodeOverlay = document.getElementById('barcodeOverlay');
+      const laserLine = document.getElementById('laserLine');
+      const clearAllBtn = document.getElementById('clearAllBtn');
+      const exportExcelBtn = document.getElementById('exportExcelBtn');
+      const copyListBtn = document.getElementById('copyListBtn');
+      const beepSound = document.getElementById('beepSound');
 
-  const modal = document.getElementById('customModal');
-  const modalContent = document.getElementById('modalContent');
-  const modalOk = document.getElementById('modalOk');
-  const modalCancel = document.getElementById('modalCancel');
+      const modal = document.getElementById('customModal');
+      const modalContent = document.getElementById('modalContent');
+      const modalOk = document.getElementById('modalOk');
+      const modalCancel = document.getElementById('modalCancel');
 
-  let codeReader = null;
-  let cameraStarted = false;
-  let scanning = false;
-  let animationFrameId = null;
-  let selectedDeviceId = null;
-  const barcodeMap = new Map();
+      let codeReader = null;
+      let cameraStarted = false;
+      let scanning = false;
+      let animationFrameId = null;
+      let selectedDeviceId = null;
+      const barcodeMap = new Map();
 
-  function showModal(message, withCancel = false) {
-    return new Promise((resolve) => {
-      modalContent.textContent = message;
-      modal.style.display = 'flex';
-      modalCancel.style.display = withCancel ? 'inline-block' : 'none';
+      function showModal(message, withCancel = false) {
+        return new Promise((resolve) => {
+          modalContent.textContent = message;
+          modal.style.display = 'flex';
+          modalCancel.style.display = withCancel ? 'inline-block' : 'none';
 
-      modalOk.onclick = () => {
-        modal.style.display = 'none';
-        resolve(true);
-      };
-      modalCancel.onclick = () => {
-        modal.style.display = 'none';
-        resolve(false);
-      };
-    });
-  }
-
-  async function startCamera() {
-    if (cameraStarted) return;
-    codeReader = new BrowserMultiFormatReader();
-    try {
-      const devices = await codeReader.listVideoInputDevices();
-      if (devices.length === 0) return showModal('Kamera bulunamadı.');
-      selectedDeviceId = devices.find(d => d.label.toLowerCase().includes('back'))?.deviceId || devices[0].deviceId;
-      const stream = await navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: selectedDeviceId } } });
-      video.srcObject = stream;
-      video.style.display = 'block';
-      await video.play();
-      cameraStarted = true;
-      scanButton.textContent = 'Kamerayı Kapat';
-      scanButton.classList.add('scanning');
-    } catch (e) {
-      showModal('Kamera hatası: ' + e.message);
-      stopCamera();
-    }
-  }
-
-  function stopCamera() {
-    if (video.srcObject) {
-      video.srcObject.getTracks().forEach(track => track.stop());
-      video.srcObject = null;
-    }
-    codeReader?.reset();
-    codeReader = null;
-    scanning = false;
-    cameraStarted = false;
-    video.style.display = 'none';
-    laserLine.style.opacity = 0;
-    scanButton.textContent = 'Kamera Aç';
-    scanButton.classList.remove('scanning');
-    cancelAnimationFrame(animationFrameId);
-  }
-
-  function scanFrame() {
-    if (!scanning) return;
-    codeReader.decodeOnce(video).then(result => {
-      if (result?.text) {
-        handleBarcode(result.text);
-        flashEffect();
-        beepSound.currentTime = 0;
-        beepSound.play().catch(() => {});
-        stopScanning();
+          modalOk.onclick = () => {
+            modal.style.display = 'none';
+            resolve(true);
+          };
+          modalCancel.onclick = () => {
+            modal.style.display = 'none';
+            resolve(false);
+          };
+        });
       }
-      if (scanning) animationFrameId = requestAnimationFrame(scanFrame);
-    }).catch(() => {
-      if (scanning) animationFrameId = requestAnimationFrame(scanFrame);
-    });
-  }
 
-  function startScanning() {
-    if (!cameraStarted || scanning) return;
-    scanning = true;
-    laserLine.style.opacity = 1;
-    scanFrame();
-  }
-
-  function stopScanning() {
-    scanning = false;
-    laserLine.style.opacity = 0;
-    cancelAnimationFrame(animationFrameId);
-  }
-
-  function handleBarcode(text) {
-    if (!text) return;
-    if (deleteModeToggle.checked) {
-      if (barcodeMap.has(text)) {
-        let count = barcodeMap.get(text);
-        count > 1 ? barcodeMap.set(text, count - 1) : barcodeMap.delete(text);
-        updateTable();
-        showOverlay(`Silindi: ${text}`);
-      } else {
-        showOverlay(`Bulunamadı: ${text}`);
+      async function startCamera() {
+        if (cameraStarted) return;
+        codeReader = new BrowserMultiFormatReader();
+        try {
+          const devices = await codeReader.listVideoInputDevices();
+          if (devices.length === 0) return showModal('Kamera bulunamadı.');
+          selectedDeviceId = devices.find(d => d.label.toLowerCase().includes('back'))?.deviceId || devices[0].deviceId;
+          const stream = await navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: selectedDeviceId } } });
+          video.srcObject = stream;
+          video.style.display = 'block';
+          await video.play();
+          cameraStarted = true;
+          scanButton.textContent = 'Kamerayı Kapat';
+          scanButton.classList.add('scanning');
+        } catch (e) {
+          showModal('Kamera hatası: ' + e.message);
+          stopCamera();
+        }
       }
-    } else {
-      barcodeMap.set(text, (barcodeMap.get(text) || 0) + 1);
-      updateTable();
-      showOverlay(text);
-      beepSound.currentTime = 0;
-      beepSound.play().catch(() => {});
-    }
-  }
 
-  function updateTable() {
-    barcodeTableBody.innerHTML = '';
-    let total = 0;
-    const entries = Array.from(barcodeMap.entries()).reverse();
-    entries.forEach(([code, count]) => {
-      total += count;
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td title="${code}">${code}</td>
-        <td>${count}</td>
-        <td><button style="background:#e74c3c;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer">Sil</button></td>`;
-      tr.querySelector('button').addEventListener('click', async () => {
-        const confirm = await showModal(`"${code}" barkodunu silmek istiyor musunuz?`, true);
-        if (confirm) {
-          barcodeMap.delete(code);
+      function stopCamera() {
+        if (video.srcObject) {
+          video.srcObject.getTracks().forEach(track => track.stop());
+          video.srcObject = null;
+        }
+        codeReader?.reset();
+        codeReader = null;
+        scanning = false;
+        cameraStarted = false;
+        video.style.display = 'none';
+        laserLine.style.opacity = 0;
+        scanButton.textContent = 'Kamera Aç';
+        scanButton.classList.remove('scanning');
+        cancelAnimationFrame(animationFrameId);
+      }
+
+      function scanFrame() {
+        if (!scanning) return;
+        codeReader.decodeOnce(video).then(result => {
+          if (result?.text) {
+            handleBarcode(result.text);
+            flashEffect();
+            beepSound.currentTime = 0;
+            beepSound.play().catch(() => {});
+            stopScanning();
+          }
+          if (scanning) animationFrameId = requestAnimationFrame(scanFrame);
+        }).catch(() => {
+          if (scanning) animationFrameId = requestAnimationFrame(scanFrame);
+        });
+      }
+
+      function startScanning() {
+        if (!cameraStarted || scanning) return;
+        scanning = true;
+        laserLine.style.opacity = 1;
+        scanFrame();
+      }
+
+      function stopScanning() {
+        scanning = false;
+        laserLine.style.opacity = 0;
+        cancelAnimationFrame(animationFrameId);
+      }
+
+      function handleBarcode(text) {
+        if (!text) return;
+        if (deleteModeToggle.checked) {
+          if (barcodeMap.has(text)) {
+            let count = barcodeMap.get(text);
+            count > 1 ? barcodeMap.set(text, count - 1) : barcodeMap.delete(text);
+            updateTable();
+            showOverlay(`Silindi: ${text}`);
+          } else {
+            showOverlay(`Bulunamadı: ${text}`);
+          }
+        } else {
+          barcodeMap.set(text, (barcodeMap.get(text) || 0) + 1);
           updateTable();
+          showOverlay(text);
+          beepSound.currentTime = 0;
+          beepSound.play().catch(() => {});
+        }
+      }
+
+      function updateTable() {
+        barcodeTableBody.innerHTML = '';
+        let total = 0;
+        const entries = Array.from(barcodeMap.entries()).reverse();
+        entries.forEach(([code, count]) => {
+          total += count;
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td title="${code}">${code}</td>
+            <td>${count}</td>
+            <td><button style="background:#e74c3c;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer">Sil</button></td>`;
+          tr.querySelector('button').addEventListener('click', async () => {
+            const confirm = await showModal(`"${code}" barkodunu silmek istiyor musunuz?`, true);
+            if (confirm) {
+              barcodeMap.delete(code);
+              updateTable();
+            }
+          });
+          barcodeTableBody.appendChild(tr);
+        });
+
+        totalCountElem.textContent = `Kalem Miktarı : ${barcodeMap.size}\nToplam Adet   : ${total}`;
+        localStorage.setItem('barcodeData', JSON.stringify(Array.from(barcodeMap.entries())));
+      }
+
+      function flashEffect() {
+        flashOverlay.style.opacity = '1';
+        setTimeout(() => flashOverlay.style.opacity = '0', 150);
+      }
+
+      function showOverlay(text) {
+        barcodeOverlay.textContent = text;
+        barcodeOverlay.style.opacity = '1';
+        setTimeout(() => barcodeOverlay.style.opacity = '0', 1500);
+      }
+
+      manualEntryForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const val = manualBarcodeInput.value.trim();
+        if (val) {
+          handleBarcode(val);
+          manualBarcodeInput.value = '';
+          manualBarcodeInput.focus();
         }
       });
-      barcodeTableBody.appendChild(tr);
-    });
 
-    totalCountElem.textContent = `Kalem Miktarı : ${barcodeMap.size}\nToplam Adet   : ${total}`;
-    localStorage.setItem('barcodeData', JSON.stringify(Array.from(barcodeMap.entries())));
-  }
-
-  function flashEffect() {
-    flashOverlay.style.opacity = '1';
-    setTimeout(() => flashOverlay.style.opacity = '0', 150);
-  }
-
-  function showOverlay(text) {
-    barcodeOverlay.textContent = text;
-    barcodeOverlay.style.opacity = '1';
-    setTimeout(() => barcodeOverlay.style.opacity = '0', 1500);
-  }
-
-  manualEntryForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const val = manualBarcodeInput.value.trim();
-    if (val) {
-      handleBarcode(val);
-      manualBarcodeInput.value = '';
-      manualBarcodeInput.focus();
-    }
-  });
-
-  scanButton.addEventListener('click', () => {
-    cameraStarted ? stopCamera() : startCamera();
-  });
-
-  video.addEventListener('click', () => {
-    if (!cameraStarted) return;
-    scanning ? (stopScanning(), showOverlay('Tarama durduruldu')) : (startScanning(), showOverlay('Tarama başladı'));
-  });
-
-  clearAllBtn.addEventListener('click', async () => {
-    const confirm = await showModal('Tüm barkodları silmek istiyor musunuz?', true);
-    if (confirm) {
-      barcodeMap.clear();
-      updateTable();
-      localStorage.removeItem('barcodeData');
-    }
-  });
-
-  exportExcelBtn.addEventListener('click', () => {
-    if (!barcodeMap.size) return showModal('İndirilecek barkod yok.');
-    const wb = XLSX.utils.book_new();
-    const data = [['Barkod', 'Adet']];
-    barcodeMap.forEach((count, code) => data.push([code, count]));
-    const ws = XLSX.utils.aoa_to_sheet(data);
-    XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
-    XLSX.writeFile(wb, 'barkodlar.xlsx');
-  });
-
-  copyListBtn.addEventListener('click', () => {
-    if (!barcodeMap.size) return showModal('Kopyalanacak barkod yok.');
-    const text = Array.from(barcodeMap).map(([code, count]) => `${code}\t${count}`).join('\n');
-    navigator.clipboard.writeText(text).then(() => {
-      showModal('Liste kopyalandı!');
-    }).catch(() => showModal('Kopyalama başarısız.'));
-  });
-
-  // Sayfa yüklendiğinde kayıtlı veriyi yükle
-  const savedData = localStorage.getItem('barcodeData');
-  if (savedData) {
-    try {
-      const entries = JSON.parse(savedData);
-      entries.forEach(([code, count]) => {
-        barcodeMap.set(code, count);
+      scanButton.addEventListener('click', () => {
+        cameraStarted ? stopCamera() : startCamera();
       });
-      updateTable();
-    } catch (e) {
-      console.error('Kaydedilen veri okunamadı:', e);
-    }
-  }
 
-  manualBarcodeInput.focus();
-})();
+      video.addEventListener('click', () => {
+        if (!cameraStarted) return;
+        scanning ? (stopScanning(), showOverlay('Tarama durduruldu')) : (startScanning(), showOverlay('Tarama başladı'));
+      });
 
+      clearAllBtn.addEventListener('click', async () => {
+        const confirm = await showModal('Tüm barkodları silmek istiyor musunuz?', true);
+        if (confirm) {
+          barcodeMap.clear();
+          updateTable();
+          localStorage.removeItem('barcodeData');
+        }
+      });
+
+      exportExcelBtn.addEventListener('click', () => {
+        if (!barcodeMap.size) return showModal('İndirilecek barkod yok.');
+        const wb = XLSX.utils.book_new();
+        const data = [['Barkod', 'Adet']];
+        barcodeMap.forEach((count, code) => data.push([code, count]));
+        const ws = XLSX.utils.aoa_to_sheet(data);
+        XLSX.utils.book_append_sheet(wb, ws, 'Barkodlar');
+        XLSX.writeFile(wb, 'barkodlar.xlsx');
+      });
+
+      copyListBtn.addEventListener('click', () => {
+        if (!barcodeMap.size) return showModal('Kopyalanacak barkod yok.');
+        const text = Array.from(barcodeMap).map(([code, count]) => `${code}\t${count}`).join('\n');
+        navigator.clipboard.writeText(text).then(() => {
+          showModal('Liste kopyalandı!');
+        }).catch(() => showModal('Kopyalama başarısız.'));
+      });
+
+      const savedData = localStorage.getItem('barcodeData');
+      if (savedData) {
+        try {
+          const entries = JSON.parse(savedData);
+          entries.forEach(([code, count]) => {
+            barcodeMap.set(code, count);
+          });
+          updateTable();
+        } catch (e) {
+          console.error('Kaydedilen veri okunamadı:', e);
+        }
+      }
+
+      manualBarcodeInput.focus();
+    })();
   </script>
 </body>
 </html>
