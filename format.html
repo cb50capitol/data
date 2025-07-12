@@ -1,129 +1,17 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barkod Formatı1 Tespiti</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-
-    #video {
-      border: 1px solid #ccc;
-      max-width: 100%;
-      width: 320px;
-      height: 240px;
-      margin-bottom: 20px;
-    }
-
-    #result {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    #startBtn {
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    #startBtn:hover {
-      background-color: #2980b9;
-    }
-  </style>
-</head>
+<html>
 <body>
-  <h1>Barkod Formatı Tespiti</h1>
-  <video id="video" autoplay muted playsinline></video>
-  <div id="result">Barkod formatı burada görünecek</div>
-  <button id="startBtn">Kamera Başlat</button>
-
-  <!-- ZXing Kütüphanesi -->
-  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.19.1/umd/index.min.js"></script>
-
+  <h2>Kamera Testi</h2>
+  <video id="video" width="320" height="240" autoplay></video>
   <script>
-    const video = document.getElementById('video');
-    const resultElem = document.getElementById('result');
-    const startBtn = document.getElementById('startBtn');
-
-    let codeReader = new ZXing.BrowserMultiFormatReader();
-    let scanning = false;
-
-    // Kamera başlatma fonksiyonu
-    async function startCamera() {
-      try {
-        const devices = await codeReader.listVideoInputDevices();
-        if (devices.length === 0) {
-          alert('Kamera bulunamadı!');
-          return;
-        }
-
-        // Arka kamerayı seçme (gerekirse cihazın arka kamerası 0. index olabilir)
-        const backCamera = devices.find(device => device.label.toLowerCase().includes('back')) || devices[0];
-        const selectedDeviceId = backCamera.deviceId;
-        
-        // Kamera erişimi için getUserMedia kullanıyoruz
-        const stream = await navigator.mediaDevices.getUserMedia({ video: { deviceId: selectedDeviceId } });
-        video.srcObject = stream;
-        video.style.display = 'block';
-
-        scanning = true;
-        startScanning();
-        startBtn.textContent = 'Kamera Kapat';
-      } catch (error) {
-        alert('Kamera hatası: ' + error.message);
-        console.error('Kamera hatası:', error);
-      }
-    }
-
-    // Kamera durdurma fonksiyonu
-    function stopCamera() {
-      if (video.srcObject) {
-        video.srcObject.getTracks().forEach(track => track.stop());
-        video.srcObject = null;
-      }
-      scanning = false;
-      startBtn.textContent = 'Kamera Başlat';
-      resultElem.textContent = 'Barkod formatı burada görünecek';
-    }
-
-    // Barkod tarama fonksiyonu
-    function startScanning() {
-      if (!scanning) return;
-
-      codeReader.decodeOnce(video).then(result => {
-        if (result?.text) {
-          resultElem.textContent = `Barkod: ${result.text} | Format: ${result.format}`;
-          console.log(`Barkod Formatı: ${result.format}`);
-        }
-        startScanning(); // Sonraki kareyi taramak için fonksiyonu yeniden çağır
-      }).catch((err) => {
-        console.error('Tarama hatası:', err);
-        startScanning(); // Hata olsa bile taramaya devam et
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        document.getElementById('video').srcObject = stream;
+      })
+      .catch(error => {
+        alert("Kamera açılamadı: " + error.name + " - " + error.message);
+        console.error(error);
       });
-    }
-
-    // Kamera başlatma/durdurma butonuna tıklama işlemi
-    startBtn.addEventListener('click', () => {
-      if (scanning) {
-        stopCamera();
-      } else {
-        startCamera();
-      }
-    });
   </script>
 </body>
 </html>
