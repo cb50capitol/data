@@ -71,8 +71,9 @@
           return;
         }
 
-        // Kamera seçimi ve akış başlatma
-        const selectedDeviceId = devices[0].deviceId;
+        // Arka kamerayı seçme (gerekirse cihazın arka kamerası 0. index olabilir)
+        const backCamera = devices.find(device => device.label.toLowerCase().includes('back')) || devices[0];
+        const selectedDeviceId = backCamera.deviceId;
         const stream = await navigator.mediaDevices.getUserMedia({ video: { deviceId: selectedDeviceId } });
         video.srcObject = stream;
         video.style.display = 'block';
