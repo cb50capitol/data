@@ -388,7 +388,27 @@
 
       async function startCamera() {
         if (cameraStarted) return;
-        codeReader = new BrowserMultiFormatReader();
+        codeReader = new ZXing.BrowserMultiFormatReader({
+  formats: [
+    ZXing.BarcodeFormat.CODE_128,
+    ZXing.BarcodeFormat.CODE_39,
+    ZXing.BarcodeFormat.CODE_93,
+    ZXing.BarcodeFormat.EAN_13,
+    ZXing.BarcodeFormat.EAN_8,
+    ZXing.BarcodeFormat.QR_CODE,
+    ZXing.BarcodeFormat.UPC_A,
+    ZXing.BarcodeFormat.UPC_E,
+    ZXing.BarcodeFormat.ITF,
+    ZXing.BarcodeFormat.DATA_MATRIX,
+    ZXing.BarcodeFormat.AZTEC,
+    ZXing.BarcodeFormat.PDF_417,
+    ZXing.BarcodeFormat.CODABAR,
+    ZXing.BarcodeFormat.MAXICODE,
+    ZXing.BarcodeFormat.RSS_14,
+    ZXing.BarcodeFormat.RSS_EXPANDED
+  ]
+});
+
         try {
           const devices = await codeReader.listVideoInputDevices();
           if (devices.length === 0) return showModal('Kamera bulunamadı.');
