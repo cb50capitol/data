@@ -334,6 +334,38 @@
   }
 }
 
+  /* Barkod hücresi: geniş yer, kırılma */
+td:first-child {
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Adet hücresi: sadece içeriği kadar */
+td:nth-child(2) {
+  text-align: center;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 1%;
+}
+
+/* İşlem hücresi: butonlar dar, hücre taşmasın */
+td:nth-child(3) > div {
+  display: flex;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+td:nth-child(3) button {
+  padding: 4px 6px;
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  min-width: unset;
+  width: 50px;
+}
+
+
   </style>
 </head>
 <body oncontextmenu="return false">
@@ -562,21 +594,27 @@ function updateTable() {
 
     const tr = document.createElement('tr');
 
+    // Barkod hücresi
     const tdCode = document.createElement('td');
     tdCode.textContent = code;
     tdCode.style.userSelect = 'text';
+    tdCode.style.wordBreak = 'break-word';
     tr.appendChild(tdCode);
 
+    // Adet hücresi
     const tdCount = document.createElement('td');
     tdCount.textContent = count;
+    tdCount.style.textAlign = 'center';
+    tdCount.style.whiteSpace = 'nowrap';
+    tdCount.style.paddingLeft = '4px';
+    tdCount.style.paddingRight = '4px';
+    tdCount.style.width = '1%';
     tr.appendChild(tdCount);
 
+    // İşlem hücresi
     const tdAction = document.createElement('td');
-
-    // Buton grubu
     const buttonWrapper = document.createElement('div');
     buttonWrapper.style.display = 'flex';
-    buttonWrapper.style.justifyContent = 'space-between';
     buttonWrapper.style.gap = '4px';
     buttonWrapper.style.flexWrap = 'nowrap';
 
@@ -585,14 +623,13 @@ function updateTable() {
     delBtn.textContent = 'Sil';
     Object.assign(delBtn.style, {
       backgroundColor: '#e74c3c',
-      padding: '4px 8px',
-      fontSize: '12px',
+      fontSize: '11px',
+      padding: '4px 6px',
       borderRadius: '4px',
       cursor: 'pointer',
       color: 'white',
       border: 'none',
-      whiteSpace: 'nowrap',
-      width: '60px'
+      width: '50px'
     });
     delBtn.addEventListener('click', async () => {
       const confirm = await showModal(`"${code}" barkodunu silmek istiyor musunuz?`, {
@@ -606,20 +643,20 @@ function updateTable() {
         saveBarcodesToStorage();
       }
     });
+    buttonWrapper.appendChild(delBtn);
 
     // Düzelt Butonu
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Düzelt';
     Object.assign(editBtn.style, {
       backgroundColor: '#f39c12',
-      padding: '4px 8px',
-      fontSize: '12px',
+      fontSize: '11px',
+      padding: '4px 6px',
       borderRadius: '4px',
       cursor: 'pointer',
       color: 'white',
       border: 'none',
-      whiteSpace: 'nowrap',
-      width: '60px'
+      width: '50px'
     });
     editBtn.addEventListener('click', async () => {
       const newCount = await showInputModal(`"${code}" barkodunun yeni adedini girin:`, count);
@@ -632,9 +669,8 @@ function updateTable() {
         showModal("Geçerli bir sayı girilmedi.");
       }
     });
-
-    buttonWrapper.appendChild(delBtn);
     buttonWrapper.appendChild(editBtn);
+
     tdAction.appendChild(buttonWrapper);
     tr.appendChild(tdAction);
 
@@ -643,6 +679,7 @@ function updateTable() {
 
   totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
 }
+
 
 
 
