@@ -466,14 +466,15 @@
       totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
     }
 
-   function addBarcode(code) {
+  function addBarcode(code) {
   if (!code) return;
 
   if (deleteModeToggle.checked) {
     if (barcodes.has(code)) {
       const currentCount = barcodes.get(code);
       if (currentCount > 1) {
-        barcodes.set(code, currentCount - 1);
+        barcodes.delete(code);
+        barcodes.set(code, currentCount - 1); // Üstte gözüksün diye sırayı güncelliyoruz
         showBarcodeOverlay(`Azaltıldı: ${code} (${currentCount - 1})`);
       } else {
         barcodes.delete(code);
@@ -487,7 +488,13 @@
       showBarcodeOverlay(`Bulunamadı: ${code}`);
     }
   } else {
-    barcodes.set(code, (barcodes.get(code) || 0) + 1);
+    if (barcodes.has(code)) {
+      const currentCount = barcodes.get(code);
+      barcodes.delete(code);
+      barcodes.set(code, currentCount + 1); // Üstte görünmesi için sırayı güncelliyoruz
+    } else {
+      barcodes.set(code, 1);
+    }
     beep();
     showFlash();
     updateTable();
@@ -495,6 +502,7 @@
     showBarcodeOverlay(`Okundu: ${code}`);
   }
 }
+
 
 
     function showBarcodeOverlay(text) {
