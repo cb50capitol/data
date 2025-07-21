@@ -272,14 +272,27 @@
     }
 
     @media (max-width: 440px) {
-      #buttonContainer, #bottomButtons {
-        flex-direction: column;
-      }
-      button {
-        width: 100%;
-        min-width: unset;
-      }
-    }
+  #buttonContainer {
+    flex-direction: column;
+  }
+
+  #bottomButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #bottomButtons button {
+    flex: 1 1 30%;
+    min-width: 100px;
+  }
+
+  button {
+    width: auto;
+    min-width: 100px;
+  }
+}
+
     
     #alertBalloon {
   position: fixed;
