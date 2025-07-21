@@ -573,24 +573,26 @@ function updateTable() {
 
     const tdAction = document.createElement('td');
 
-    // Butonları gruplayan kapsayıcı (flex)
+    // Buton grubu
     const buttonWrapper = document.createElement('div');
     buttonWrapper.style.display = 'flex';
-    buttonWrapper.style.gap = '6px';
-    buttonWrapper.style.flexWrap = 'wrap';
+    buttonWrapper.style.justifyContent = 'space-between';
+    buttonWrapper.style.gap = '4px';
+    buttonWrapper.style.flexWrap = 'nowrap';
 
     // Sil Butonu
     const delBtn = document.createElement('button');
     delBtn.textContent = 'Sil';
     Object.assign(delBtn.style, {
       backgroundColor: '#e74c3c',
-      padding: '4px 10px',
+      padding: '4px 8px',
       fontSize: '12px',
-      borderRadius: '5px',
+      borderRadius: '4px',
       cursor: 'pointer',
       color: 'white',
       border: 'none',
-      flex: '1 1 auto'
+      whiteSpace: 'nowrap',
+      width: '60px'
     });
     delBtn.addEventListener('click', async () => {
       const confirm = await showModal(`"${code}" barkodunu silmek istiyor musunuz?`, {
@@ -604,20 +606,20 @@ function updateTable() {
         saveBarcodesToStorage();
       }
     });
-    buttonWrapper.appendChild(delBtn);
 
     // Düzelt Butonu
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Düzelt';
     Object.assign(editBtn.style, {
       backgroundColor: '#f39c12',
-      padding: '4px 10px',
+      padding: '4px 8px',
       fontSize: '12px',
-      borderRadius: '5px',
+      borderRadius: '4px',
       cursor: 'pointer',
       color: 'white',
       border: 'none',
-      flex: '1 1 auto'
+      whiteSpace: 'nowrap',
+      width: '60px'
     });
     editBtn.addEventListener('click', async () => {
       const newCount = await showInputModal(`"${code}" barkodunun yeni adedini girin:`, count);
@@ -630,9 +632,9 @@ function updateTable() {
         showModal("Geçerli bir sayı girilmedi.");
       }
     });
-    buttonWrapper.appendChild(editBtn);
 
-    // Buton grubunu hücreye ekle
+    buttonWrapper.appendChild(delBtn);
+    buttonWrapper.appendChild(editBtn);
     tdAction.appendChild(buttonWrapper);
     tr.appendChild(tdAction);
 
