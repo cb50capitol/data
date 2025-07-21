@@ -469,6 +469,44 @@
     }
   }
 
+function showInputModal(message, defaultValue = '') {
+  return new Promise((resolve) => {
+    modalContent.innerHTML = `
+      <label style="display:block;margin-bottom:10px;">${message}</label>
+      <input type="number" min="1" id="modalInputField" style="width:100%;padding:10px;font-size:16px;border:1px solid #ccc;border-radius:6px;" value="${defaultValue}">
+    `;
+    modalOk.textContent = 'Kaydet';
+    modalCancel.textContent = 'İptal';
+    modalCancel.style.display = 'inline-block';
+    modal.style.display = 'flex';
+
+    const inputField = document.getElementById('modalInputField');
+    inputField.focus();
+
+    const cleanup = () => {
+      modal.style.display = 'none';
+      modalOk.removeEventListener('click', onOk);
+      modalCancel.removeEventListener('click', onCancel);
+    };
+
+    const onOk = () => {
+      const value = parseInt(inputField.value);
+      cleanup();
+      resolve(isNaN(value) ? null : value);
+    };
+
+    const onCancel = () => {
+      cleanup();
+      resolve(null);
+    };
+
+    modalOk.addEventListener('click', onOk);
+    modalCancel.addEventListener('click', onCancel);
+  });
+}
+
+
+    
   function saveBarcodesToStorage() {
     localStorage.setItem("barcodeList", JSON.stringify(Array.from(barcodes.entries())));
   }
@@ -511,59 +549,100 @@
     if (laserAnimationId) cancelAnimationFrame(laserAnimationId);
   }
 
-  function updateTable() {
-    tableBody.innerHTML = '';
-    let totalItems = 0;
-    let totalQuantity = 0;
+function updateTable() {
+  tableBody.innerHTML = '';
+  let totalItems = 0;
+  let totalQuantity = 0;
 
-    const entries = Array.from(barcodes.entries()).reverse();
+  const entries = Array.from(barcodes.entries()).reverse();
 
-    for (const [code, count] of entries) {
-      totalItems++;
-      totalQuantity += count;
+  for (const [code, count] of entries) {
+    totalItems++;
+    totalQuantity += count;
 
-      const tr = document.createElement('tr');
+    const tr = document.createElement('tr');
 
-      const tdCode = document.createElement('td');
-      tdCode.textContent = code;
-      tdCode.style.userSelect = 'text';
-      tr.appendChild(tdCode);
+    const tdCode = document.createElement('td');
+    tdCode.textContent = code;
+    tdCode.style.userSelect = 'text';
+    tr.appendChild(tdCode);
 
-      const tdCount = document.createElement('td');
-      tdCount.textContent = count;
-      tr.appendChild(tdCount);
+    const tdCount = document.createElement('td');
+    tdCount.textContent = count;
+    tr.appendChild(tdCount);
 
-      const tdAction = document.createElement('td');
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'Sil';
-      delBtn.style.backgroundColor = '#e74c3c';
-      delBtn.style.padding = '6px 12px';
-      delBtn.style.fontSize = '13px';
-      delBtn.style.borderRadius = '6px';
-      delBtn.style.cursor = 'pointer';
-      delBtn.style.color = 'white';
+    const tdAction = document.createElement('td');
 
-      delBtn.addEventListener('click', async () => {
-        const confirm = await showModal(`"${code}" barkodunu silmek istiyor musunuz?`, {
-          showCancel: true,
-          okText: "Sil",
-          cancelText: "İptal"
-        });
-        if (confirm) {
-          barcodes.delete(code);
-          updateTable();
-          saveBarcodesToStorage();
-        }
+    // Butonları gruplayan kapsayıcı (flex)
+    const buttonWrapper = document.createElement('div');
+    buttonWrapper.style.display = 'flex';
+    buttonWrapper.style.gap = '6px';
+    buttonWrapper.style.flexWrap = 'wrap';
+
+    // Sil Butonu
+    const delBtn = document.createElement('button');
+    delBtn.textContent = 'Sil';
+    Object.assign(delBtn.style, {
+      backgroundColor: '#e74c3c',
+      padding: '4px 10px',
+      fontSize: '12px',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      color: 'white',
+      border: 'none',
+      flex: '1 1 auto'
+    });
+    delBtn.addEventListener('click', async () => {
+      const confirm = await showModal(`"${code}" barkodunu silmek istiyor musunuz?`, {
+        showCancel: true,
+        okText: "Sil",
+        cancelText: "İptal"
       });
+      if (confirm) {
+        barcodes.delete(code);
+        updateTable();
+        saveBarcodesToStorage();
+      }
+    });
+    buttonWrapper.appendChild(delBtn);
 
-      tdAction.appendChild(delBtn);
-      tr.appendChild(tdAction);
+    // Düzelt Butonu
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'Düzelt';
+    Object.assign(editBtn.style, {
+      backgroundColor: '#f39c12',
+      padding: '4px 10px',
+      fontSize: '12px',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      color: 'white',
+      border: 'none',
+      flex: '1 1 auto'
+    });
+    editBtn.addEventListener('click', async () => {
+      const newCount = await showInputModal(`"${code}" barkodunun yeni adedini girin:`, count);
+      if (newCount && newCount > 0) {
+        barcodes.set(code, newCount);
+        updateTable();
+        saveBarcodesToStorage();
+        showBarcodeOverlay(`Güncellendi: ${code} (${newCount})`);
+      } else if (newCount !== null) {
+        showModal("Geçerli bir sayı girilmedi.");
+      }
+    });
+    buttonWrapper.appendChild(editBtn);
 
-      tableBody.appendChild(tr);
-    }
+    // Buton grubunu hücreye ekle
+    tdAction.appendChild(buttonWrapper);
+    tr.appendChild(tdAction);
 
-    totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
+    tableBody.appendChild(tr);
   }
+
+  totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
+}
+
+
 
   function addBarcode(code) {
     if (!code) return;
