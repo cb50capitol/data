@@ -466,28 +466,36 @@
       totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
     }
 
-    function addBarcode(code) {
-      if (!code) return;
-      if (deleteModeToggle.checked) {
-        if (barcodes.has(code)) {
-          barcodes.delete(code);
-          beep();
-          showFlash();
-          updateTable();
-          saveBarcodesToStorage();
-          showBarcodeOverlay(`Silindi: ${code}`);
-        } else {
-          showBarcodeOverlay(`Bulunamadı: ${code}`);
-        }
+   function addBarcode(code) {
+  if (!code) return;
+
+  if (deleteModeToggle.checked) {
+    if (barcodes.has(code)) {
+      const currentCount = barcodes.get(code);
+      if (currentCount > 1) {
+        barcodes.set(code, currentCount - 1);
+        showBarcodeOverlay(`Azaltıldı: ${code} (${currentCount - 1})`);
       } else {
-        barcodes.set(code, (barcodes.get(code) || 0) + 1);
-        beep();
-        showFlash();
-        updateTable();
-        saveBarcodesToStorage(); // 🌟 Eklendikten sonra kaydet
-        showBarcodeOverlay(`Okundu: ${code}`);
+        barcodes.delete(code);
+        showBarcodeOverlay(`Silindi: ${code}`);
       }
+      beep();
+      showFlash();
+      updateTable();
+      saveBarcodesToStorage();
+    } else {
+      showBarcodeOverlay(`Bulunamadı: ${code}`);
     }
+  } else {
+    barcodes.set(code, (barcodes.get(code) || 0) + 1);
+    beep();
+    showFlash();
+    updateTable();
+    saveBarcodesToStorage();
+    showBarcodeOverlay(`Okundu: ${code}`);
+  }
+}
+
 
     function showBarcodeOverlay(text) {
       barcodeOverlay.textContent = text;
