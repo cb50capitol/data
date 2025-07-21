@@ -642,7 +642,7 @@
 
 
     function showRefSelector() {
-      const files = ['Genel.txt', 'Aybars.txt', 'OsmanB.txt', 'Berkay.txt', 'OsmanG.txt', 'Berkant.txt', 'Faruk.txt', 'Ferhat.txt'];
+      const files = ['Genel.txt', 'Aybars.txt', 'Ladies.txt', 'Mens.txt', 'Kids.txt', 'Active&Outdoor.txt', 'Shoes and Bags.txt', 'Home.txt'];
       document.getElementById('modalTitle').textContent = 'Referans Dosyası Seçimi';
       modalBody.innerHTML = files.map(f => `<button style="margin:4px 0; padding:6px 14px; width:100%; font-weight:bold; border-radius:10px; cursor:pointer; background:#007bff; color:#fff; border:none;">${stripTxtExtension(f)}</button>`).join('');
       modal.style.display = 'flex';
