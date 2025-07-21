@@ -425,46 +425,53 @@
     }
 
     function updateTable() {
-      tableBody.innerHTML = '';
-      let totalItems = 0;
-      let totalQuantity = 0;
-      for (const [code, count] of barcodes.entries()) {
-        totalItems++;
-        totalQuantity += count;
-        const tr = document.createElement('tr');
+  tableBody.innerHTML = '';
+  let totalItems = 0;
+  let totalQuantity = 0;
 
-        const tdCode = document.createElement('td');
-        tdCode.textContent = code;
-        tdCode.style.userSelect = 'text';
-        tr.appendChild(tdCode);
+  // Map’i ters sırada işlemek için önce diziye çevirip tersine çeviriyoruz
+  const entries = Array.from(barcodes.entries()).reverse();
 
-        const tdCount = document.createElement('td');
-        tdCount.textContent = count;
-        tr.appendChild(tdCount);
+  for (const [code, count] of entries) {
+    totalItems++;
+    totalQuantity += count;
 
-        const tdAction = document.createElement('td');
-        const delBtn = document.createElement('button');
-        delBtn.textContent = 'Sil';
-        delBtn.style.backgroundColor = '#e74c3c';
-        delBtn.style.padding = '6px 12px';
-        delBtn.style.fontSize = '13px';
-        delBtn.style.borderRadius = '6px';
-        delBtn.style.cursor = 'pointer';
-        delBtn.style.color = 'white';
-        delBtn.addEventListener('click', () => {
-          if(confirm(`"${code}" barkodunu silmek istiyor musunuz?`)) {
-            barcodes.delete(code);
-            updateTable();
-            saveBarcodesToStorage(); // 🌟 Silindikten sonra kaydet
-          }
-        });
-        tdAction.appendChild(delBtn);
-        tr.appendChild(tdAction);
+    const tr = document.createElement('tr');
 
-        tableBody.appendChild(tr);
+    const tdCode = document.createElement('td');
+    tdCode.textContent = code;
+    tdCode.style.userSelect = 'text';
+    tr.appendChild(tdCode);
+
+    const tdCount = document.createElement('td');
+    tdCount.textContent = count;
+    tr.appendChild(tdCount);
+
+    const tdAction = document.createElement('td');
+    const delBtn = document.createElement('button');
+    delBtn.textContent = 'Sil';
+    delBtn.style.backgroundColor = '#e74c3c';
+    delBtn.style.padding = '6px 12px';
+    delBtn.style.fontSize = '13px';
+    delBtn.style.borderRadius = '6px';
+    delBtn.style.cursor = 'pointer';
+    delBtn.style.color = 'white';
+    delBtn.addEventListener('click', () => {
+      if(confirm(`"${code}" barkodunu silmek istiyor musunuz?`)) {
+        barcodes.delete(code);
+        updateTable();
+        saveBarcodesToStorage();
       }
-      totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
-    }
+    });
+    tdAction.appendChild(delBtn);
+    tr.appendChild(tdAction);
+
+    tableBody.appendChild(tr);
+  }
+
+  totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
+}
+
 
   function addBarcode(code) {
   if (!code) return;
