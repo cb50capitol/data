@@ -366,8 +366,10 @@
   let barcodeDetector;
   let stream = null;
   let scanning = false;
+  let continuousScanning = false;  // barkod okunana kadar devam eden tarama durumu
   let barcodes = new Map();
   let laserAnimationId;
+  let scanIntervalId;
 
   if ('BarcodeDetector' in window) {
     const supportedFormats = ['ean_8', 'ean_13', 'code_128', 'upc_a', 'upc_e', 'code_39', 'code_93', 'codabar', 'qr_code', 'data_matrix'];
@@ -487,7 +489,7 @@
     }, 1200);
   }
 
-  async function scanOnce() {
+  async function scanFrame() {
     if (!barcodeDetector || !scanning) return;
     try {
       const barcodesDetected = await barcodeDetector.detect(video);
@@ -495,9 +497,8 @@
         const barcode = barcodesDetected[0];
         if (barcode.rawValue) {
           addBarcode(barcode.rawValue);
+          stopContinuousScanning();
         }
-      } else {
-        showBarcodeOverlay('Barkod bulunamadı');
       }
     } catch (e) {
       console.error('Tarama hatası:', e);
@@ -527,9 +528,24 @@
     scanButton.classList.remove('scanning');
     video.style.display = 'none';
     hideLaser();
+    stopContinuousScanning();
     if (stream) {
       stream.getTracks().forEach(track => track.stop());
       stream = null;
+    }
+  }
+
+  function startContinuousScanning() {
+    if (continuousScanning) return;
+    continuousScanning = true;
+    scanIntervalId = setInterval(scanFrame, 300);
+  }
+
+  function stopContinuousScanning() {
+    continuousScanning = false;
+    if (scanIntervalId) {
+      clearInterval(scanIntervalId);
+      scanIntervalId = null;
     }
   }
 
@@ -538,10 +554,11 @@
     else startCamera();
   });
 
-  // 👇👇 Kullanıcı videoya tıkladığında bir kez tarama yap
-  video.addEventListener('click', async () => {
-    if (scanning) {
-      await scanOnce();
+  video.addEventListener('click', () => {
+    if (!scanning) return;
+    if (!continuousScanning) {
+      startContinuousScanning();
+      showBarcodeOverlay('Tarama başladı...');
     }
   });
 
@@ -619,6 +636,7 @@
 
 })();
 </script>
+
 
 
 </body>
