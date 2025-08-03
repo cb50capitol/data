@@ -351,7 +351,7 @@
       } else {
         // Yeni kayıt oluştur ve en üste ekle
         const kayit = {
-          Malzeme,
+          urunKodu,
           iptalSebebi,
           siparisKanali,
           tarih: new Date().toLocaleString("tr-TR"),
@@ -467,27 +467,18 @@
       document.getElementById("modal").style.display = "none";
     }
 
+    // Excel export fonksiyonu
     function exportExcel() {
-  if (tumKayitlar.length === 0) {
-    showModal("İhracat için kayıt bulunamadı.");
-    return;
-  }
-  // Excel için sütun başlıkları
-  const dataForExcel = tumKayitlar.map(k => ({
-    "Ürün Kodu": k.urunKodu,
-    "Sipariş Kanalı": k.siparisKanali,
-    "İptal Sebebi": k.iptalSebebi,
-    "Tarih": k.tarih,
-    "Tekrar Sayısı": k.tekrarSayisi || 1
-  }));
+      if (tumKayitlar.length === 0) {
+        showModal("İhracat için kayıt bulunamadı.");
+        return;
+      }
+      const worksheet = XLSX.utils.json_to_sheet(tumKayitlar);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "İptaller");
 
-  const worksheet = XLSX.utils.json_to_sheet(dataForExcel);
-  const workbook = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(workbook, worksheet, "İptaller");
-
-  XLSX.writeFile(workbook, "iptal_kayitlari.xlsx");
-}
-
+      XLSX.writeFile(workbook, "iptal_kayitlari.xlsx");
+    }
   </script>
 </body>
 </html>
