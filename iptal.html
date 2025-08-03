@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>İptal Kaydı</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 40px;
+      max-width: 750px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 28px;
+      margin: 0 0 15px;
+      color: #222;
+      text-align: center;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #555;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1.8px solid #ddd;
+      font-size: 15px;
+      transition: border-color 0.25s ease;
+      outline-offset: 2px;
+    }
+    input[type="text"]:focus,
+    select:focus {
+      border-color: #ff4d4f;
+      box-shadow: 0 0 8px #ff4d4f44;
+    }
+    .buttons {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    button {
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      border: none;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    #kaydetBtn {
+      background-color: #1890ff;
+      color: white;
+      flex-shrink: 0;
+      box-shadow: 0 6px 14px rgb(24 144 255 / 0.5);
+      margin-right: auto;
+    }
+    #kaydetBtn:hover {
+      background-color: #106cd6;
+      box-shadow: 0 8px 18px rgb(16 108 214 / 0.7);
+    }
+    #temizleBtn {
+      background-color: #ff4d4f;
+      color: white;
+      flex-shrink: 0;
+      box-shadow: 0 6px 14px rgb(255 77 79 / 0.5);
+    }
+    #temizleBtn:hover {
+      background-color: #d93638;
+      box-shadow: 0 8px 18px rgb(217 54 56 / 0.7);
+    }
+    #excelBtn {
+      background-color: #217346;
+      color: white;
+      flex-shrink: 0;
+      box-shadow: 0 6px 14px rgb(33 115 70 / 0.6);
+    }
+    #excelBtn:hover {
+      background-color: #1a5a3e;
+      box-shadow: 0 8px 18px rgb(26 90 62 / 0.8);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 20px 0;
+    }
+    /* Arama ve tablo başlığı kapsayıcısı */
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .table-header h3 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 20px;
+      color: #222;
+    }
+    #searchInput {
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1.8px solid #ddd;
+      font-size: 15px;
+      width: 250px;
+      transition: border-color 0.25s ease;
+    }
+    #searchInput:focus {
+      border-color: #1890ff;
+      box-shadow: 0 0 8px #1890ff44;
+      outline-offset: 2px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    thead {
+      background: linear-gradient(90deg, #ff4d4f, #d93638);
+      color: white;
+      font-weight: 700;
+    }
+    thead th {
+      padding: 15px 20px;
+      text-align: left;
+      user-select: none;
+    }
+    tbody tr {
+      background: white;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    tbody tr:hover {
+      background-color: #ffe6e6;
+    }
+    tbody td {
+      padding: 14px 20px;
+      color: #444;
+    }
+    /* Yeni kayıt satırına yanıp sönme animasyonu */
+    @keyframes highlight {
+      0%, 100% { background-color: white; }
+      50% { background-color: #fff8cc; }
+    }
+    .highlight {
+      animation: highlight 1.2s ease 3;
+    }
+    /* Checkbox hücresi genişliği */
+    .checkbox-cell {
+      width: 40px;
+      text-align: center;
+    }
+    /* Responsive tablo */
+    @media (max-width: 600px) {
+      thead {
+        display: none;
+      }
+      tbody td {
+        display: block;
+        width: 100%;
+        padding-left: 50%;
+        position: relative;
+        text-align: right;
+        border-bottom: 1px solid #ddd;
+      }
+      tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 20px;
+        width: 45%;
+        padding-left: 0;
+        font-weight: 700;
+        text-align: left;
+        color: #ff4d4f;
+      }
+      tbody tr {
+        margin-bottom: 15px;
+        display: block;
+        border-bottom: 2px solid #ff4d4f44;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>İptal Kaydı</h2>
+
+    <div>
+      <label for="urunKodu">Ürün Kodu</label>
+      <input type="text" id="urunKodu" placeholder="Ürün kodunu giriniz" />
+    </div>
+
+    <div>
+      <label for="siparisKanali">Sipariş Kanalı</label>
+      <select id="siparisKanali">
+        <option value="">-- Kanal Seçin --</option>
+        <option value="Now">Now</option>
+        <option value="E-Ticaret">E-Ticaret</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="iptalSebebi">İptal Sebebi</label>
+      <select id="iptalSebebi">
+        <option value="">-- Sebep Seçin --</option>
+        <option value="Fiilen Bulunamadı">Fiilen Bulunamadı</option>
+        <option value="SDOM">SDOM</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button id="kaydetBtn" onclick="kaydet()">Kaydı Ekle</button>
+      <button id="temizleBtn" onclick="temizleSecilenler()">Temizle</button>
+      <button id="excelBtn" onclick="exportExcel()">Excel</button>
+    </div>
+
+    <hr />
+
+    <div class="table-header">
+      <h3>Kaydedilen İptaller</h3>
+      <input type="text" id="searchInput" placeholder="Tabloda ara..." oninput="araTabloda()" />
+    </div>
+
+    <div id="kayıtListesi"></div>
+  </div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+  <script>
+    let tumKayitlar = []; // tüm kayıtları burada tutacağız
+
+    window.onload = () => {
+      tumKayitlar = JSON.parse(localStorage.getItem("iptalKayitlari")) || [];
+      listeyiGuncelle();
+    };
+
+    function kaydet() {
+      const urunKodu = document.getElementById("urunKodu").value.trim();
+      const iptalSebebi = document.getElementById("iptalSebebi").value;
+      const siparisKanali = document.getElementById("siparisKanali").value;
+
+      if (!urunKodu || !iptalSebebi || !siparisKanali) {
+        alert("Lütfen tüm alanları doldurun.");
+        return;
+      }
+
+      const kayit = {
+        urunKodu,
+        iptalSebebi,
+        siparisKanali,
+        tarih: new Date().toLocaleString("tr-TR"),
+      };
+
+      tumKayitlar.push(kayit);
+      localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+
+      // Alanları temizle
+      document.getElementById("urunKodu").value = "";
+      document.getElementById("iptalSebebi").value = "";
+      document.getElementById("siparisKanali").value = "";
+
+      listeyiGuncelle(kayit.urunKodu);
+
+      // Arama kutusunu temizle
+      document.getElementById("searchInput").value = "";
+    }
+
+    function listeyiGuncelle(yeniUrunKodu) {
+      const listeDiv = document.getElementById("kayıtListesi");
+      if (tumKayitlar.length === 0) {
+        listeDiv.innerHTML = "<p>Henüz kayıt yok.</p>";
+        return;
+      }
+
+      // İlk önce arama kutusundaki değeri alıp filtre uygula
+      const filtre = document.getElementById("searchInput").value.trim().toLowerCase();
+
+      const grup = {};
+
+      for (let i = tumKayitlar.length - 1; i >= 0; i--) {
+        const k = tumKayitlar[i];
+
+        // Arama filtre koşulu (ürünKodu, iptalSebebi, siparisKanali içinde)
+        if (
+          k.urunKodu.toLowerCase().includes(filtre) ||
+          k.iptalSebebi.toLowerCase().includes(filtre) ||
+          k.siparisKanali.toLowerCase().includes(filtre)
+        ) {
+          if (!grup[k.urunKodu]) {
+            grup[k.urunKodu] = {
+              urunKodu: k.urunKodu,
+              siparisKanali: k.siparisKanali,
+              iptalSebebi: k.iptalSebebi,
+              tarih: k.tarih,
+              tekrarSayisi: 1,
+            };
+          } else {
+            grup[k.urunKodu].tekrarSayisi++;
+            if (new Date(k.tarih) > new Date(grup[k.urunKodu].tarih)) {
+              grup[k.urunKodu].tarih = k.tarih;
+              grup[k.urunKodu].siparisKanali = k.siparisKanali;
+              grup[k.urunKodu].iptalSebebi = k.iptalSebebi;
+            }
+          }
+        }
+      }
+
+      const grupArray = Object.values(grup);
+      grupArray.sort((a,b) => new Date(b.tarih) - new Date(a.tarih));
+
+      if(grupArray.length === 0) {
+        listeDiv.innerHTML = "<p>Arama kriterlerine uygun kayıt bulunamadı.</p>";
+        return;
+      }
+
+      let html = `<table>
+        <thead>
+          <tr>
+            <th class="checkbox-cell"><input type="checkbox" id="selectAll" onclick="toggleAll(this)" /></th>
+            <th>Ürün Kodu</th>
+            <th>Sipariş Kanalı</th>
+            <th>İptal Sebebi</th>
+            <th>Tarih</th>
+            <th>Tekrar Sayısı</th>
+          </tr>
+        </thead>
+        <tbody>`;
+
+      grupArray.forEach(k => {
+        html += `<tr ${k.urunKodu === yeniUrunKodu ? 'class="highlight"' : ''}>
+          <td class="checkbox-cell"><input type="checkbox" class="secimCheckbox" data-urun="${k.urunKodu}" /></td>
+          <td data-label="Ürün Kodu">${k.urunKodu}</td>
+          <td data-label="Sipariş Kanalı">${k.siparisKanali}</td>
+          <td data-label="İptal Sebebi">${k.iptalSebebi}</td>
+          <td data-label="Tarih">${k.tarih}</td>
+          <td data-label="Tekrar Sayısı">${k.tekrarSayisi}</td>
+        </tr>`;
+      });
+
+      html += "</tbody></table>";
+
+      listeDiv.innerHTML = html;
+    }
+
+    function toggleAll(source) {
+      const checkboxes = document.querySelectorAll(".secimCheckbox");
+      checkboxes.forEach(cb => cb.checked = source.checked);
+    }
+
+    function temizleSecilenler() {
+      const secilenCheckboxlar = [...document.querySelectorAll(".secimCheckbox:checked")];
+      if (secilenCheckboxlar.length === 0) {
+        alert("Lütfen silmek için en az bir kayıt seçin.");
+        return;
+      }
+
+      if (!confirm("Seçili kayıtları silmek istediğinize emin misiniz?")) return;
+
+      const seciliUrunKodlari = secilenCheckboxlar.map(cb => cb.getAttribute("data-urun"));
+
+      tumKayitlar = tumKayitlar.filter(k => !seciliUrunKodlari.includes(k.urunKodu));
+
+      localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+
+      // Arama kutusunu sıfırlama veya koruyabilirsin, ben korudum:
+      listeyiGuncelle();
+    }
+
+    function exportExcel() {
+      if (tumKayitlar.length === 0) {
+        alert("Kayıt bulunamadı.");
+        return;
+      }
+
+      const filtre = document.getElementById("searchInput").value.trim().toLowerCase();
+
+      const grup = {};
+
+      for (let i = tumKayitlar.length - 1; i >= 0; i--) {
+        const k = tumKayitlar[i];
+
+        if (
+          k.urunKodu.toLowerCase().includes(filtre) ||
+          k.iptalSebebi.toLowerCase().includes(filtre) ||
+          k.siparisKanali.toLowerCase().includes(filtre)
+        ) {
+          if (!grup[k.urunKodu]) {
+            grup[k.urunKodu] = {
+              "Ürün Kodu": k.urunKodu,
+              "Sipariş Kanalı": k.siparisKanali,
+              "İptal Sebebi": k.iptalSebebi,
+              "Tarih": k.tarih,
+              "Tekrar Sayısı": 1,
+            };
+          } else {
+            grup[k.urunKodu]["Tekrar Sayısı"]++;
+            if (new Date(k.tarih) > new Date(grup[k.urunKodu]["Tarih"])) {
+              grup[k.urunKodu]["Tarih"] = k.tarih;
+              grup[k.urunKodu]["Sipariş Kanalı"] = k.siparisKanali;
+              grup[k.urunKodu]["İptal Sebebi"] = k.iptalSebebi;
+            }
+          }
+        }
+      }
+
+      const grupArray = Object.values(grup);
+      grupArray.sort((a,b) => new Date(b["Tarih"]) - new Date(a["Tarih"]));
+
+      const worksheet = XLSX.utils.json_to_sheet(grupArray);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "İptal Kayıtları");
+      XLSX.writeFile(workbook, "iptal_kayitlari.xlsx");
+    }
+
+    // Arama inputuna bağlı filtreleme fonksiyonu
+    function araTabloda() {
+      listeyiGuncelle();
+      // Tümünü seç kutusunu temizle
+      const selectAllCheckbox = document.getElementById("selectAll");
+      if (selectAllCheckbox) selectAllCheckbox.checked = false;
+    }
+  </script>
+</body>
+</html>
