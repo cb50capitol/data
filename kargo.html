@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -220,6 +221,61 @@
 }
 
 
+body.dark-mode {
+  --primary: #3b82f6;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #e5e7eb;
+  --border: #2d2d2d;
+}
+
+body.dark-mode table.records th {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode input[type="text"] {
+  background-color: #1e1e1e;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body.dark-mode input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+
+body.dark-mode input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+body.dark-mode .summary-container label {
+  color: var(--text);
+}
+
+body.dark-mode button {
+  color: white;
+}
+
+body.dark-mode #customAlertModal div,
+body.dark-mode #customConfirmModal div {
+  background-color: #1e1e1e;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.dark-mode .blink {
+  color: #f87171;
+}
+
+body.dark-mode .table-container,
+body.dark-mode .summary-container,
+body.dark-mode .top-center {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+
   </style>
 </head>
 <body>
@@ -248,6 +304,8 @@
     <button id="printBtn">Yazdır</button>
     <button id="deleteRowsBtn">Satır Sil</button>
     <button id="exportExcelBtn">Excel</button>
+    <button id="toggleDarkMode" style="background:#6b7280;">🌙</button>
+
   </div>
 </div>
 
@@ -663,6 +721,11 @@ const tanimsizSayisiSpan = document.getElementById('tanimsizeCount');
   }
 }
 
+document.getElementById('toggleDarkMode').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+});
 
 
 
