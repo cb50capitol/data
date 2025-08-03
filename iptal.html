@@ -2,7 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>İptal Kaydı</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İptal Kaydı1</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
     * {
@@ -74,11 +75,12 @@
       border: none;
       transition: background-color 0.3s ease;
       user-select: none;
+      flex-shrink: 0;
+      min-width: 100px;
     }
     #kaydetBtn {
       background-color: #1890ff;
       color: white;
-      flex-shrink: 0;
       box-shadow: 0 6px 14px rgb(24 144 255 / 0.5);
       margin-right: auto;
     }
@@ -89,7 +91,6 @@
     #temizleBtn {
       background-color: #ff4d4f;
       color: white;
-      flex-shrink: 0;
       box-shadow: 0 6px 14px rgb(255 77 79 / 0.5);
     }
     #temizleBtn:hover {
@@ -99,7 +100,6 @@
     #excelBtn {
       background-color: #217346;
       color: white;
-      flex-shrink: 0;
       box-shadow: 0 6px 14px rgb(33 115 70 / 0.6);
     }
     #excelBtn:hover {
@@ -117,12 +117,15 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .table-header h3 {
       margin: 0;
       font-weight: 600;
       font-size: 20px;
       color: #222;
+      flex-grow: 1;
     }
     #searchInput {
       padding: 8px 14px;
@@ -130,6 +133,7 @@
       border: 1.8px solid #ddd;
       font-size: 15px;
       width: 250px;
+      max-width: 100%;
       transition: border-color 0.25s ease;
     }
     #searchInput:focus {
@@ -183,6 +187,32 @@
     }
     /* Responsive tablo */
     @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 20px 15px;
+        max-width: 100%;
+        gap: 20px;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+      button {
+        width: 100%;
+        min-width: auto;
+        font-size: 16px;
+        padding: 14px 0;
+      }
+      #kaydetBtn {
+        margin-right: 0;
+      }
+      #searchInput {
+        width: 100%;
+        font-size: 16px;
+      }
       thead {
         display: none;
       }
@@ -209,11 +239,19 @@
         display: block;
         border-bottom: 2px solid #ff4d4f44;
       }
+      .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .table-header h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+    <div class="container">
     <h2>İptal Kaydı</h2>
 
     <div>
