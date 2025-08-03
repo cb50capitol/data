@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>İptal Kaydı1</title>
+  <title>İptal Kaydı</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
     * {
@@ -106,11 +106,7 @@
       background-color: #1a5a3e;
       box-shadow: 0 8px 18px rgb(26 90 62 / 0.8);
     }
-    hr {
-      border: none;
-      border-top: 1px solid #eee;
-      margin: 20px 0;
-    }
+
     .table-header {
       display: flex;
       justify-content: space-between;
@@ -156,13 +152,11 @@
     thead th {
       padding: 15px 20px;
       text-align: left;
-      user-select: none;
     }
     tbody tr {
       background: white;
       border-bottom: 1px solid #eee;
       transition: background-color 0.3s ease;
-      cursor: default;
     }
     tbody tr:hover {
       background-color: #ffe6e6;
@@ -171,6 +165,11 @@
       padding: 14px 20px;
       color: #444;
     }
+    .checkbox-cell {
+      width: 40px;
+      text-align: center;
+    }
+
     @keyframes highlight {
       0%, 100% { background-color: white; }
       50% { background-color: #fff8cc; }
@@ -178,98 +177,32 @@
     .highlight {
       animation: highlight 1.2s ease 3;
     }
-    .checkbox-cell {
-      width: 40px;
-      text-align: center;
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 20px 10px;
-      }
-      .container {
-        padding: 20px 15px;
-        max-width: 100%;
-        gap: 20px;
-      }
-      .buttons {
-        flex-direction: column;
-        gap: 12px;
-        align-items: stretch;
-      }
-      button {
-        width: 100%;
-        min-width: auto;
-        font-size: 16px;
-        padding: 14px 0;
-      }
-      #kaydetBtn {
-        margin-right: 0;
-      }
-      #searchInput {
-        width: 100%;
-        font-size: 16px;
-      }
-      thead {
-        display: none;
-      }
-      tbody td {
-        display: block;
-        width: 100%;
-        padding-left: 50%;
-        position: relative;
-        text-align: right;
-        border-bottom: 1px solid #ddd;
-      }
-      tbody td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 20px;
-        width: 45%;
-        font-weight: 700;
-        text-align: left;
-        color: #ff4d4f;
-      }
-      tbody tr {
-        margin-bottom: 15px;
-        display: block;
-        border-bottom: 2px solid #ff4d4f44;
-      }
-      .table-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .table-header h3 {
-        font-size: 22px;
-        margin-bottom: 8px;
-      }
-    }
 
     /* MODAL STİLLERİ */
     .modal {
       display: none;
       position: fixed;
-      z-index: 999;
+      z-index: 9999;
       left: 0; top: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.5);
       justify-content: center;
       align-items: center;
     }
     .modal-content {
-      background: white;
+      background: #fff;
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 10px;
       max-width: 400px;
-      width: 90%;
+      width: 100%;
+      animation: fadeIn 0.3s ease-in-out;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      animation: fadeIn 0.3s ease;
     }
     .modal-buttons {
-      margin-top: 20px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 12px;
+      margin-top: 20px;
     }
     .modal-buttons button {
       padding: 10px 20px;
@@ -289,6 +222,38 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
+    }
+
+    /* MOBİL UYUMLULUK */
+    @media (max-width: 600px) {
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+      }
+      .modal-content {
+        width: 90%;
+        padding: 20px;
+      }
+      .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .modal-buttons button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+      }
+
+      /* Mobilde sadece checkbox, Ürün Kodu ve Tekrar Sayısı görünür diğer sütunları gizle */
+      th.siparisKanali-cell,
+      th.iptalSebebi-cell,
+      th.tarih-cell,
+      td.siparisKanali-cell,
+      td.iptalSebebi-cell,
+      td.tarih-cell {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -326,20 +291,22 @@
     </div>
 
     <hr />
+
     <div class="table-header">
       <h3>Kaydedilen İptaller</h3>
       <input type="text" id="searchInput" placeholder="Tabloda ara..." oninput="araTabloda()" />
     </div>
+
     <div id="kayıtListesi"></div>
   </div>
 
-  <!-- MODAL HTML -->
+  <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <p id="modalMessage">Uyarı mesajı</p>
+      <p id="modalMessage">Mesaj...</p>
       <div class="modal-buttons">
         <button id="modalYes">Evet</button>
-        <button id="modalNo">Tamam</button>
+        <button id="modalNo">Hayır</button>
       </div>
     </div>
   </div>
@@ -359,191 +326,168 @@
       const siparisKanali = document.getElementById("siparisKanali").value;
 
       if (!urunKodu || !iptalSebebi || !siparisKanali) {
-        showModal("Lütfen tüm alanları doldurun.", false);
+        showModal("Lütfen tüm alanları doldurun.");
         return;
       }
 
-      const kayit = {
-        urunKodu,
-        iptalSebebi,
-        siparisKanali,
-        tarih: new Date().toLocaleString("tr-TR"),
-      };
+      // Aynı kaydı bul (Ürün Kodu + Sipariş Kanalı + İptal Sebebi eşleşmeli)
+      const index = tumKayitlar.findIndex(k =>
+        k.urunKodu.toLowerCase() === urunKodu.toLowerCase() &&
+        k.siparisKanali === siparisKanali &&
+        k.iptalSebebi === iptalSebebi
+      );
 
-      tumKayitlar.push(kayit);
-      localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+      if (index !== -1) {
+        // Var olan kaydı güncelle, tekrar sayısını artır ve tarihe yeni ekleme zamanı yaz
+        tumKayitlar[index].tekrarSayisi = (tumKayitlar[index].tekrarSayisi || 1) + 1;
+        tumKayitlar[index].tarih = new Date().toLocaleString("tr-TR");
 
+        // Bu kaydı en üste çıkar
+        const mevcut = tumKayitlar.splice(index,1)[0];
+        tumKayitlar.unshift(mevcut);
+
+        localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+        listeyiGuncelle(true);
+      } else {
+        // Yeni kayıt oluştur ve en üste ekle
+        const kayit = {
+          Malzeme,
+          iptalSebebi,
+          siparisKanali,
+          tarih: new Date().toLocaleString("tr-TR"),
+          tekrarSayisi: 1
+        };
+        tumKayitlar.unshift(kayit);
+        localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+        listeyiGuncelle(true);
+      }
+
+      // Alanları temizle
       document.getElementById("urunKodu").value = "";
       document.getElementById("iptalSebebi").value = "";
       document.getElementById("siparisKanali").value = "";
-
-      listeyiGuncelle(kayit.urunKodu);
-      document.getElementById("searchInput").value = "";
     }
 
-    function listeyiGuncelle(yeniUrunKodu) {
-      const listeDiv = document.getElementById("kayıtListesi");
+    function listeyiGuncelle(yeniEklendi = false) {
+      const container = document.getElementById("kayıtListesi");
       if (tumKayitlar.length === 0) {
-        listeDiv.innerHTML = "<p>Henüz kayıt yok.</p>";
+        container.innerHTML = "<p>Henüz kayıt yok.</p>";
         return;
       }
 
-      const filtre = document.getElementById("searchInput").value.trim().toLowerCase();
-      const grup = {};
-
-      for (let i = tumKayitlar.length - 1; i >= 0; i--) {
-        const k = tumKayitlar[i];
-        if (
-          k.urunKodu.toLowerCase().includes(filtre) ||
-          k.iptalSebebi.toLowerCase().includes(filtre) ||
-          k.siparisKanali.toLowerCase().includes(filtre)
-        ) {
-          if (!grup[k.urunKodu]) {
-            grup[k.urunKodu] = {
-              urunKodu: k.urunKodu,
-              siparisKanali: k.siparisKanali,
-              iptalSebebi: k.iptalSebebi,
-              tarih: k.tarih,
-              tekrarSayisi: 1,
-            };
-          } else {
-            grup[k.urunKodu].tekrarSayisi++;
-            if (new Date(k.tarih) > new Date(grup[k.urunKodu].tarih)) {
-              grup[k.urunKodu].tarih = k.tarih;
-              grup[k.urunKodu].siparisKanali = k.siparisKanali;
-              grup[k.urunKodu].iptalSebebi = k.iptalSebebi;
-            }
-          }
-        }
-      }
-
-      const grupArray = Object.values(grup);
-      grupArray.sort((a,b) => new Date(b.tarih) - new Date(a.tarih));
-
-      if(grupArray.length === 0) {
-        listeDiv.innerHTML = "<p>Arama kriterlerine uygun kayıt bulunamadı.</p>";
-        return;
-      }
-
-      let html = `<table>
+      let html = `
+      <table>
         <thead>
           <tr>
             <th class="checkbox-cell"><input type="checkbox" id="selectAll" onclick="toggleAll(this)" /></th>
-            <th>Ürün Kodu</th>
-            <th>Sipariş Kanalı</th>
-            <th>İptal Sebebi</th>
-            <th>Tarih</th>
-            <th>Tekrar Sayısı</th>
+            <th class="urunKodu-cell">Ürün Kodu</th>
+            <th class="siparisKanali-cell">Sipariş Kanalı</th>
+            <th class="iptalSebebi-cell">İptal Sebebi</th>
+            <th class="tarih-cell">Tarih</th>
+            <th class="tekrarSayisi-cell">Tekrar Sayısı</th>
           </tr>
         </thead>
-        <tbody>`;
+        <tbody>
+      `;
 
-      grupArray.forEach(k => {
-        html += `<tr ${k.urunKodu === yeniUrunKodu ? 'class="highlight"' : ''}>
-          <td class="checkbox-cell"><input type="checkbox" class="secimCheckbox" data-urun="${k.urunKodu}" /></td>
-          <td data-label="Ürün Kodu">${k.urunKodu}</td>
-          <td data-label="Sipariş Kanalı">${k.siparisKanali}</td>
-          <td data-label="İptal Sebebi">${k.iptalSebebi}</td>
-          <td data-label="Tarih">${k.tarih}</td>
-          <td data-label="Tekrar Sayısı">${k.tekrarSayisi}</td>
-        </tr>`;
+      tumKayitlar.forEach((k, i) => {
+        html += `
+          <tr${yeniEklendi && i === 0 ? ' class="highlight"' : ''}>
+            <td class="checkbox-cell"><input type="checkbox" class="secimCheckbox" data-index="${i}" /></td>
+            <td class="urunKodu-cell">${k.urunKodu}</td>
+            <td class="siparisKanali-cell">${k.siparisKanali}</td>
+            <td class="iptalSebebi-cell">${k.iptalSebebi}</td>
+            <td class="tarih-cell">${k.tarih}</td>
+            <td class="tekrarSayisi-cell">${k.tekrarSayisi || 1}</td>
+          </tr>
+        `;
       });
 
-      html += "</tbody></table>";
-      listeDiv.innerHTML = html;
-    }
+      html += `
+        </tbody>
+      </table>
+      `;
 
-    function toggleAll(source) {
-      const checkboxes = document.querySelectorAll(".secimCheckbox");
-      checkboxes.forEach(cb => cb.checked = source.checked);
-    }
-
-    function temizleSecilenler() {
-      const secilenCheckboxlar = [...document.querySelectorAll(".secimCheckbox:checked")];
-      if (secilenCheckboxlar.length === 0) {
-        showModal("Lütfen silmek için en az bir kayıt seçin.", false);
-        return;
-      }
-
-      showModal("Seçili kayıtları silmek istediğinize emin misiniz?", true, () => {
-        const seciliUrunKodlari = secilenCheckboxlar.map(cb => cb.getAttribute("data-urun"));
-        tumKayitlar = tumKayitlar.filter(k => !seciliUrunKodlari.includes(k.urunKodu));
-        localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
-        listeyiGuncelle();
-      });
-    }
-
-    function exportExcel() {
-      if (tumKayitlar.length === 0) {
-        showModal("Kayıt bulunamadı.", false);
-        return;
-      }
-
-      const filtre = document.getElementById("searchInput").value.trim().toLowerCase();
-      const grup = {};
-
-      for (let i = tumKayitlar.length - 1; i >= 0; i--) {
-        const k = tumKayitlar[i];
-        if (
-          k.urunKodu.toLowerCase().includes(filtre) ||
-          k.iptalSebebi.toLowerCase().includes(filtre) ||
-          k.siparisKanali.toLowerCase().includes(filtre)
-        ) {
-          if (!grup[k.urunKodu]) {
-            grup[k.urunKodu] = {
-              "Ürün Kodu": k.urunKodu,
-              "Sipariş Kanalı": k.siparisKanali,
-              "İptal Sebebi": k.iptalSebebi,
-              "Tarih": k.tarih,
-              "Tekrar Sayısı": 1
-            };
-          } else {
-            grup[k.urunKodu]["Tekrar Sayısı"]++;
-            if (new Date(k.tarih) > new Date(grup[k.urunKodu]["Tarih"])) {
-              grup[k.urunKodu]["Tarih"] = k.tarih;
-              grup[k.urunKodu]["Sipariş Kanalı"] = k.siparisKanali;
-              grup[k.urunKodu]["İptal Sebebi"] = k.iptalSebebi;
-            }
-          }
-        }
-      }
-
-      const veri = Object.values(grup);
-      if (veri.length === 0) {
-        showModal("Arama kriterine uygun kayıt bulunamadı.", false);
-        return;
-      }
-
-      const ws = XLSX.utils.json_to_sheet(veri);
-      const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, "İptal Kayıtları");
-      XLSX.writeFile(wb, "iptal_kayitlari.xlsx");
-    }
-
-    function showModal(message, confirm = false, yesCallback = null) {
-      const modal = document.getElementById("modal");
-      const msg = document.getElementById("modalMessage");
-      const yesBtn = document.getElementById("modalYes");
-      const noBtn = document.getElementById("modalNo");
-
-      msg.textContent = message;
-      yesBtn.style.display = confirm ? "inline-block" : "none";
-      noBtn.textContent = confirm ? "Hayır" : "Tamam";
-
-      modal.style.display = "flex";
-
-      yesBtn.onclick = () => {
-        modal.style.display = "none";
-        if (typeof yesCallback === "function") yesCallback();
-      };
-      noBtn.onclick = () => {
-        modal.style.display = "none";
-      };
+      container.innerHTML = html;
     }
 
     function araTabloda() {
-      listeyiGuncelle();
+      const filter = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("#kayıtListesi tbody tr");
+
+      rows.forEach(row => {
+        const cells = Array.from(row.querySelectorAll("td"));
+        const text = cells.map(td => td.textContent.toLowerCase()).join(" ");
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
     }
+
+    function toggleAll(master) {
+      const checkboxes = document.querySelectorAll(".secimCheckbox");
+      checkboxes.forEach(cb => cb.checked = master.checked);
+    }
+
+    function temizleSecilenler() {
+      const secilenler = Array.from(document.querySelectorAll(".secimCheckbox:checked"));
+      if (secilenler.length === 0) {
+        showModal("Lütfen temizlemek için kayıt seçin.");
+        return;
+      }
+      showModal("Seçili kayıtlar silinsin mi?", () => {
+        const secilenIndexler = secilenler.map(cb => parseInt(cb.dataset.index));
+        // En yüksek indexten başlayarak sil (diziyi bozma)
+        secilenIndexler.sort((a,b) => b-a).forEach(i => {
+          tumKayitlar.splice(i,1);
+        });
+        localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+        listeyiGuncelle();
+        closeModal();
+      });
+    }
+
+    // Modal fonksiyonları
+    function showModal(mesaj, evetCallback = null) {
+      const modal = document.getElementById("modal");
+      const modalMessage = document.getElementById("modalMessage");
+      const yesBtn = document.getElementById("modalYes");
+      const noBtn = document.getElementById("modalNo");
+
+      modalMessage.textContent = mesaj;
+      modal.style.display = "flex";
+
+      yesBtn.style.display = evetCallback ? "inline-block" : "none";
+      noBtn.textContent = evetCallback ? "Hayır" : "Tamam";
+
+      yesBtn.onclick = () => {
+        evetCallback?.();
+      };
+      noBtn.onclick = closeModal;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function exportExcel() {
+  if (tumKayitlar.length === 0) {
+    showModal("İhracat için kayıt bulunamadı.");
+    return;
+  }
+  // Excel için sütun başlıkları
+  const dataForExcel = tumKayitlar.map(k => ({
+    "Ürün Kodu": k.urunKodu,
+    "Sipariş Kanalı": k.siparisKanali,
+    "İptal Sebebi": k.iptalSebebi,
+    "Tarih": k.tarih,
+    "Tekrar Sayısı": k.tekrarSayisi || 1
+  }));
+
+  const worksheet = XLSX.utils.json_to_sheet(dataForExcel);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "İptaller");
+
+  XLSX.writeFile(workbook, "iptal_kayitlari.xlsx");
+}
+
   </script>
 </body>
 </html>
