@@ -3,48 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>iOS Tab Bar + Site içinde Site</title>
+  <title>iOS Tab Bar + Site içinde Site (Mobil uyumlu)</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Reset ve temel */
     html, body {
       height: 100%;
+      margin: 0;
+      padding: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #fff;
-      overflow: hidden;
+      overflow: hidden; /* tüm sayfa taşmasın */
       -webkit-tap-highlight-color: transparent;
     }
 
-    /* Uygulama container */
     .app {
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      height: 100%;
+      /* position relative gerekirse eklenebilir */
     }
 
     /* İçerik alanı */
     .content {
       flex: 1;
-      overflow: hidden;
+      overflow-y: auto; /* içerik scroll olsun */
+      padding-bottom: 60px; /* tab bar yüksekliği kadar boşluk */
       position: relative;
     }
 
     /* Sayfalar */
     .page {
       display: none;
+      padding: 20px;
+      box-sizing: border-box;
       height: 100%;
       width: 100%;
       position: absolute;
       top: 0; left: 0;
       background: white;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; /* smooth scroll iOS */
       flex-direction: column;
     }
-
     .page.active {
       display: flex;
     }
@@ -57,13 +58,33 @@
       height: 100%;
     }
 
-    /* iOS Tab Bar */
-    .tab-bar {
+    /* Üstteki "tarayıcı çubuğu" - URL gösterme */
+    .browser-bar {
+      height: 40px;
+      background: #eee;
       display: flex;
+      align-items: center;
+      padding: 0 12px;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      user-select: none;
+      font-family: monospace;
+      flex-shrink: 0;
+    }
+
+    /* iOS Tab Bar - fixed altta */
+    .tab-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 60px;
       border-top: 1px solid #ccc;
       background-color: #fefefe;
+      display: flex;
       box-shadow: 0 -1px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
 
     .tab-item {
@@ -92,20 +113,6 @@
       height: 24px;
       margin-bottom: 2px;
       fill: currentColor;
-    }
-
-    /* Üstteki "tarayıcı çubuğu" - URL gösterme */
-    .browser-bar {
-      height: 40px;
-      background: #eee;
-      display: flex;
-      align-items: center;
-      padding: 0 12px;
-      font-size: 14px;
-      color: #333;
-      border-bottom: 1px solid #ccc;
-      user-select: none;
-      font-family: monospace;
     }
   </style>
 </head>
