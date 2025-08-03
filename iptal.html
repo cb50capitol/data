@@ -111,7 +111,6 @@
       border-top: 1px solid #eee;
       margin: 20px 0;
     }
-    /* Arama ve tablo başlığı kapsayıcısı */
     .table-header {
       display: flex;
       justify-content: space-between;
@@ -172,7 +171,6 @@
       padding: 14px 20px;
       color: #444;
     }
-    /* Yeni kayıt satırına yanıp sönme animasyonu */
     @keyframes highlight {
       0%, 100% { background-color: white; }
       50% { background-color: #fff8cc; }
@@ -180,12 +178,10 @@
     .highlight {
       animation: highlight 1.2s ease 3;
     }
-    /* Checkbox hücresi genişliği */
     .checkbox-cell {
       width: 40px;
       text-align: center;
     }
-    /* Responsive tablo */
     @media (max-width: 600px) {
       body {
         padding: 20px 10px;
@@ -229,7 +225,6 @@
         position: absolute;
         left: 20px;
         width: 45%;
-        padding-left: 0;
         font-weight: 700;
         text-align: left;
         color: #ff4d4f;
@@ -248,10 +243,57 @@
         margin-bottom: 8px;
       }
     }
+
+    /* MODAL STİLLERİ */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease;
+    }
+    .modal-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .modal-buttons button {
+      padding: 10px 20px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #modalYes {
+      background-color: #ff4d4f;
+      color: white;
+    }
+    #modalNo {
+      background-color: #ccc;
+      color: #333;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
   </style>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
     <h2>İptal Kaydı</h2>
 
     <div>
@@ -284,19 +326,27 @@
     </div>
 
     <hr />
-
     <div class="table-header">
       <h3>Kaydedilen İptaller</h3>
       <input type="text" id="searchInput" placeholder="Tabloda ara..." oninput="araTabloda()" />
     </div>
-
     <div id="kayıtListesi"></div>
   </div>
 
-  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <!-- MODAL HTML -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="modalMessage">Uyarı mesajı</p>
+      <div class="modal-buttons">
+        <button id="modalYes">Evet</button>
+        <button id="modalNo">Tamam</button>
+      </div>
+    </div>
+  </div>
 
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <script>
-    let tumKayitlar = []; // tüm kayıtları burada tutacağız
+    let tumKayitlar = [];
 
     window.onload = () => {
       tumKayitlar = JSON.parse(localStorage.getItem("iptalKayitlari")) || [];
@@ -309,7 +359,7 @@
       const siparisKanali = document.getElementById("siparisKanali").value;
 
       if (!urunKodu || !iptalSebebi || !siparisKanali) {
-        alert("Lütfen tüm alanları doldurun.");
+        showModal("Lütfen tüm alanları doldurun.", false);
         return;
       }
 
@@ -323,14 +373,11 @@
       tumKayitlar.push(kayit);
       localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
 
-      // Alanları temizle
       document.getElementById("urunKodu").value = "";
       document.getElementById("iptalSebebi").value = "";
       document.getElementById("siparisKanali").value = "";
 
       listeyiGuncelle(kayit.urunKodu);
-
-      // Arama kutusunu temizle
       document.getElementById("searchInput").value = "";
     }
 
@@ -341,15 +388,11 @@
         return;
       }
 
-      // İlk önce arama kutusundaki değeri alıp filtre uygula
       const filtre = document.getElementById("searchInput").value.trim().toLowerCase();
-
       const grup = {};
 
       for (let i = tumKayitlar.length - 1; i >= 0; i--) {
         const k = tumKayitlar[i];
-
-        // Arama filtre koşulu (ürünKodu, iptalSebebi, siparisKanali içinde)
         if (
           k.urunKodu.toLowerCase().includes(filtre) ||
           k.iptalSebebi.toLowerCase().includes(filtre) ||
@@ -407,7 +450,6 @@
       });
 
       html += "</tbody></table>";
-
       listeDiv.innerHTML = html;
     }
 
@@ -419,35 +461,29 @@
     function temizleSecilenler() {
       const secilenCheckboxlar = [...document.querySelectorAll(".secimCheckbox:checked")];
       if (secilenCheckboxlar.length === 0) {
-        alert("Lütfen silmek için en az bir kayıt seçin.");
+        showModal("Lütfen silmek için en az bir kayıt seçin.", false);
         return;
       }
 
-      if (!confirm("Seçili kayıtları silmek istediğinize emin misiniz?")) return;
-
-      const seciliUrunKodlari = secilenCheckboxlar.map(cb => cb.getAttribute("data-urun"));
-
-      tumKayitlar = tumKayitlar.filter(k => !seciliUrunKodlari.includes(k.urunKodu));
-
-      localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
-
-      // Arama kutusunu sıfırlama veya koruyabilirsin, ben korudum:
-      listeyiGuncelle();
+      showModal("Seçili kayıtları silmek istediğinize emin misiniz?", true, () => {
+        const seciliUrunKodlari = secilenCheckboxlar.map(cb => cb.getAttribute("data-urun"));
+        tumKayitlar = tumKayitlar.filter(k => !seciliUrunKodlari.includes(k.urunKodu));
+        localStorage.setItem("iptalKayitlari", JSON.stringify(tumKayitlar));
+        listeyiGuncelle();
+      });
     }
 
     function exportExcel() {
       if (tumKayitlar.length === 0) {
-        alert("Kayıt bulunamadı.");
+        showModal("Kayıt bulunamadı.", false);
         return;
       }
 
       const filtre = document.getElementById("searchInput").value.trim().toLowerCase();
-
       const grup = {};
 
       for (let i = tumKayitlar.length - 1; i >= 0; i--) {
         const k = tumKayitlar[i];
-
         if (
           k.urunKodu.toLowerCase().includes(filtre) ||
           k.iptalSebebi.toLowerCase().includes(filtre) ||
@@ -459,7 +495,7 @@
               "Sipariş Kanalı": k.siparisKanali,
               "İptal Sebebi": k.iptalSebebi,
               "Tarih": k.tarih,
-              "Tekrar Sayısı": 1,
+              "Tekrar Sayısı": 1
             };
           } else {
             grup[k.urunKodu]["Tekrar Sayısı"]++;
@@ -472,21 +508,41 @@
         }
       }
 
-      const grupArray = Object.values(grup);
-      grupArray.sort((a,b) => new Date(b["Tarih"]) - new Date(a["Tarih"]));
+      const veri = Object.values(grup);
+      if (veri.length === 0) {
+        showModal("Arama kriterine uygun kayıt bulunamadı.", false);
+        return;
+      }
 
-      const worksheet = XLSX.utils.json_to_sheet(grupArray);
-      const workbook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workbook, worksheet, "İptal Kayıtları");
-      XLSX.writeFile(workbook, "iptal_kayitlari.xlsx");
+      const ws = XLSX.utils.json_to_sheet(veri);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, "İptal Kayıtları");
+      XLSX.writeFile(wb, "iptal_kayitlari.xlsx");
     }
 
-    // Arama inputuna bağlı filtreleme fonksiyonu
+    function showModal(message, confirm = false, yesCallback = null) {
+      const modal = document.getElementById("modal");
+      const msg = document.getElementById("modalMessage");
+      const yesBtn = document.getElementById("modalYes");
+      const noBtn = document.getElementById("modalNo");
+
+      msg.textContent = message;
+      yesBtn.style.display = confirm ? "inline-block" : "none";
+      noBtn.textContent = confirm ? "Hayır" : "Tamam";
+
+      modal.style.display = "flex";
+
+      yesBtn.onclick = () => {
+        modal.style.display = "none";
+        if (typeof yesCallback === "function") yesCallback();
+      };
+      noBtn.onclick = () => {
+        modal.style.display = "none";
+      };
+    }
+
     function araTabloda() {
       listeyiGuncelle();
-      // Tümünü seç kutusunu temizle
-      const selectAllCheckbox = document.getElementById("selectAll");
-      if (selectAllCheckbox) selectAllCheckbox.checked = false;
     }
   </script>
 </body>
