@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apple Stili İnce Yazılı Beyaz Tasarım</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background: #fcfcfc;
+      color: #1c1c1e;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 100;
+      font-size: 3.8rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      line-height: 1.1;
+      color: #111;
+    }
+    p.subtitle {
+      font-weight: 100;
+      font-size: 1.3rem;
+      color: #666;
+      margin-bottom: 56px;
+    }
+    button {
+      width: 100%;
+      padding: 18px 0;
+      margin-bottom: 22px;
+      font-weight: 100;
+      font-size: 1.2rem;
+      color: #111;
+      background: transparent;
+      border: 1.3px solid #111;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    button:hover {
+      background-color: #111;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(17,17,17,0.3);
+    }
+    button:active {
+      background-color: #333;
+      border-color: #333;
+      box-shadow: none;
+    }
+    @media (max-width: 440px) {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+      p.subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+      button {
+        font-size: 1rem;
+        padding: 16px 0;
+        margin-bottom: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Capitol</h1>
+    <p class="subtitle">CB50</p>
+    <button onclick="window.location.href='https://cb50capitol.vercel.app/'">Envanter</button>
+    <button onclick="window.location.href=''">TKS / İKS</button>
+    <button onclick="window.location.href=''">PTC</button>
+    <button onclick="window.location.href=''">E-Ticaret Kargo</button>
+    <button onclick="window.location.href=''">İptal / Fark</button>
+  </div>
+</body>
+</html>
