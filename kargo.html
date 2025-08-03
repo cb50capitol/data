@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -538,10 +539,11 @@ document.getElementById('deleteRowsBtn').addEventListener('click', () => {
   const dosyaAdi = `${kargoAdlari} ${formatDateFull(minDate)} - ${formatDateFull(maxDate)}.xlsx`;
 
   // Excel dosyasını oluşturup indir (Sıra No artan şekilde: 1, 2, 3...)
-  const wsData = [
-    ['Sıra No', 'Sipariş ID', 'Fatura ID', 'Tarih / Saat', 'Kargo Türü'],
-    ...filtered.map((r, i) => [i + 1, r.siparis, r.fatura, r.tarih,])
-  ];
+const wsData = [
+  ['Sıra No', 'Sipariş ID', 'Fatura ID', 'Tarih / Saat', 'Kargo Türü'],
+  ...filtered.map((r, i) => [i + 1, r.siparis, r.fatura, r.tarih, r.kargoTur])
+];
+
   const wb = XLSX.utils.book_new();
   const ws = XLSX.utils.aoa_to_sheet(wsData);
   XLSX.utils.book_append_sheet(wb, ws, 'Kargo');
