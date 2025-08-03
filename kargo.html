@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -185,25 +183,22 @@
         width: 100%;
       }
     }
-    
-    @keyframes flash {
-  0%, 100% { background-color: inherit; }
-  50% { background-color: yellow; }
-}
-
-.flash-highlight {
-  animation: flash 1s ease;
-}
-
-
-@keyframes green-flash {
-  0%, 100% { background-color: inherit; }
-  50% { background-color: lightgreen; }
-}
-
 .green-flash {
-  animation: green-flash 0.5s ease 2; /* 0.5 sn, 2 kez tekrar */
+  animation: greenFlash 2s ease forwards;
+  display: inline-block;
 }
+
+@keyframes greenFlash {
+  0%, 100% { 
+    background-color: transparent; 
+    transform: scale(1);
+  }
+  50% { 
+    background-color: #7ccb22; 
+    transform: scale(1.5); /* Daha büyük */
+  }
+}
+
 
 @keyframes blink {
   0%, 50%, 100% {
@@ -219,8 +214,6 @@
   animation: blink 1s infinite;
   font-weight: bold;
 }
-
-
 body.dark-mode {
   --primary: #3b82f6;
   --danger: #ef4444;
@@ -273,15 +266,10 @@ body.dark-mode .summary-container,
 body.dark-mode .top-center {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
-
-
-
-
   </style>
 </head>
 <body>
-
-  <div class="top-center">
+<div class="top-center">
     <div class="input-group">
       <label for="siparisId">Sipariş ID</label>
 <input type="text" id="siparisId" placeholder="Sipariş ID girin" autocomplete="off" />
@@ -291,26 +279,20 @@ body.dark-mode .top-center {
 <input type="text" id="faturaId" placeholder="Fatura ID girin" autocomplete="off" />
     </div>
   </div>
-
 <div class="summary-container">
   <label><input type="checkbox" class="filter-checkbox" value="Aras" /> Aras: <span id="arasCount">0</span></label>
   <label><input type="checkbox" class="filter-checkbox" value="HepsiJet" /> HepsiJet: <span id="hepsiCount">0</span></label>
   <label><input type="checkbox" class="filter-checkbox" value="Trendyol" /> Trendyol: <span id="trendyolCount">0</span></label>
   <label><input type="checkbox" class="filter-checkbox" value="Tanımsız" /> Tanımsız: <span id="tanimsizeCount">0</span></label>
-  
   <!-- Toplam sayısı için yeni label -->
   <label style="font-weight: 700; margin-left: 20px;">Toplam: <span id="totalCount">0</span></label>
-  
-  <div style="display:flex; gap:10px; flex-wrap: wrap;">
+<div style="display:flex; gap:10px; flex-wrap: wrap;">
     <button id="printBtn">Yazdır</button>
     <button id="deleteRowsBtn">Satır Sil</button>
     <button id="exportExcelBtn">Excel</button>
     <button id="toggleDarkMode" style="background:#6b7280;">🌙</button>
-
-  </div>
+ </div>
 </div>
-
-
   <div class="table-container">
     <div class="table-header">
       <h2>Kargo Kayıtları</h2>
@@ -330,8 +312,7 @@ body.dark-mode .top-center {
       <tbody id="recordsBody"></tbody>
     </table>
   </div>
-
-  <script>
+<script>
     const siparisInput = document.getElementById('siparisId');
     const faturaInput = document.getElementById('faturaId');
     const recordsBody = document.getElementById('recordsBody');
@@ -341,63 +322,52 @@ body.dark-mode .top-center {
     const trendyolCountEl = document.getElementById('trendyolCount');
     const tanimsizCountEl = document.getElementById('tanimsizeCount');
     const selectAllCheckbox = document.getElementById('selectAllCheckbox');
-
-    let records = [];
-
-    const detectKargoTur = (f) => {
+let records = [];
+const detectKargoTur = (f) => {
       if (f.startsWith('68')) return 'Aras';
       if (f.toUpperCase().startsWith('BYR')) return 'HepsiJet';
       if (f.startsWith('733')) return 'Trendyol';
       return 'Tanımsız';
     };
-
-const renderTable = (data = records) => {
+const renderTable = (data = records, highlightLast = false) => {
   recordsBody.innerHTML = '';
   data.slice().reverse().forEach((item, index) => {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-    <td class="checkbox-col"><input type="checkbox" /></td>
-    <td class="rownum-col">${data.length - index}</td>
-    <td class="siparis-col">${item.siparis}</td>
-    <td class="fatura-col">${item.fatura}</td>
-    <td class="tarih-col">${item.tarih}</td>
-    <td class="kargo-col">${item.kargoTur}</td>
-  `;
-  
-  // Eğer kargoTürü Tanımsız ise satıra blink sınıfı ekle
-  if (item.kargoTur === 'Tanımsız') {
-    row.classList.add('blink');
-  }
-  
-  recordsBody.appendChild(row);
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td class="checkbox-col"><input type="checkbox" /></td>
+      <td class="rownum-col">${data.length - index}</td>
+      <td class="siparis-col">${item.siparis}</td>
+      <td class="fatura-col">${item.fatura}</td>
+      <td class="tarih-col">${item.tarih}</td>
+      <td class="kargo-col">${item.kargoTur}</td>
+    `;
+ // Tanımsız kargo blink efekti
+    if (item.kargoTur === 'Tanımsız') {
+      row.classList.add('blink');
+    }
+   // ✅ Sadece yeni kayıt eklendiğinde animasyon uygula
+    if (highlightLast && index === 0) {
+      row.classList.add('green-flash');
+      row.addEventListener('animationend', () => {
+        row.classList.remove('green-flash');
+      }, { once: true });
 
-  if(index === 0){
-    row.classList.add('flash-highlight');
-    row.addEventListener('animationend', () => {
-      row.classList.remove('flash-highlight');
-    }, {once: true});
+      const summaryLabels = document.querySelectorAll('.summary-container label');
+      summaryLabels.forEach(label => {
+        if (label.textContent.includes(item.kargoTur)) {
+          label.classList.add('green-flash');
+          label.addEventListener('animationend', () => {
+            label.classList.remove('green-flash');
+          }, { once: true });
+        }
+      });
+    }
 
-    // Özet kısmındaki label'ı bul
-    const summaryLabels = document.querySelectorAll('.summary-container label');
-    summaryLabels.forEach(label => {
-      if(label.textContent.includes(item.kargoTur)){
-        label.classList.add('green-flash');
-        label.addEventListener('animationend', () => {
-          label.classList.remove('green-flash');
-        }, {once: true});
-      }
-    });
-  }
-});
-
-
-  selectAllCheckbox.checked = false;
+    recordsBody.appendChild(row);
+  });
+selectAllCheckbox.checked = false;
 };
-
-
-
-
-   const totalCountEl = document.getElementById('totalCount');
+const totalCountEl = document.getElementById('totalCount');
 
 const updateSummary = (data = records) => {
   arasCountEl.textContent = data.filter(r => r.kargoTur === 'Aras').length;
@@ -414,17 +384,28 @@ const updateSummary = (data = records) => {
 
   totalCountEl.textContent = data.length;
 };
+window.onload = () => {
+  const stored = localStorage.getItem('kargoRecords');
+  records = stored ? JSON.parse(stored) : [];
+renderTable(records, false);
+  updateSummary();
 
+  // ✅ Sipariş ve Fatura inputlarına sadece ilk kez tıklandığında filtre ve arama temizlensin
+  [siparisInput, faturaInput].forEach(input => {
+  input.addEventListener('focus', () => {
+    // Arama kutusunu temizle
+    searchInput.value = '';
 
+    // Tüm checkbox filtrelerini kaldır
+    document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
 
-    window.onload = () => {
-      const stored = localStorage.getItem('kargoRecords');
-      records = stored ? JSON.parse(stored) : [];
-      renderTable();
-      updateSummary();
-    };
-
-    siparisInput.addEventListener('keydown', function (e) {
+    // Tablo ve özet bilgilerini sıfırla
+    renderTable(records);
+    updateSummary(records);
+  });
+});
+};
+  siparisInput.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         e.preventDefault();
         if (!siparisInput.value.trim()) return showModal("Önce Sipariş ID girin.");
@@ -447,9 +428,7 @@ const updateSummary = (data = records) => {
   });
   return;
 }
-
-
-        const newEntry = {
+   const newEntry = {
           siparis,
           fatura,
           tarih: new Date().toLocaleString('tr-TR'),
@@ -457,15 +436,14 @@ const updateSummary = (data = records) => {
         };
         records.push(newEntry);
         localStorage.setItem('kargoRecords', JSON.stringify(records));
-        renderTable();
+renderTable(records, true);
         updateSummary();
         siparisInput.value = '';
         faturaInput.value = '';
         siparisInput.focus();
       }
     });
-
-    searchInput.addEventListener('input', () => {
+searchInput.addEventListener('input', () => {
       const val = searchInput.value.trim().toLowerCase();
       const filtered = records.filter(r =>
         r.siparis.toLowerCase().includes(val) ||
@@ -490,8 +468,7 @@ const updateSummary = (data = records) => {
         updateSummary(filtered);
       });
     });
-
-    // Tümünü seç checkbox'ı
+// Tümünü seç checkbox'ı
     selectAllCheckbox.addEventListener('change', () => {
       const checkboxes = recordsBody.querySelectorAll('input[type="checkbox"]');
       checkboxes.forEach(chk => (chk.checked = selectAllCheckbox.checked));
@@ -538,14 +515,7 @@ document.getElementById('deleteRowsBtn').addEventListener('click', () => {
     allCheckboxes.forEach(chk => chk.checked = false);
   });
 });
-
-
-
-
-
-
-
-    // Excel aktarımı
+ // Excel aktarımı
    document.getElementById('exportExcelBtn').addEventListener('click', () => {
   const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
   if (checkedBoxes.length === 0) {
@@ -571,29 +541,24 @@ document.getElementById('deleteRowsBtn').addEventListener('click', () => {
   XLSX.utils.book_append_sheet(wb, ws, 'Kargo Kayitlari');
   XLSX.writeFile(wb, 'kargo_kayitlari.xlsx');
 });
-
-
-    // Yazdırma fonksiyonu
+ // Yazdırma fonksiyonu
    document.getElementById('printBtn').addEventListener('click', () => {
   const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
   if (checkedBoxes.length === 0) return showModal('Önce yazdırmak için en az bir kargo türü seçin.');
   const selectedTypes = Array.from(checkedBoxes).map(cb => cb.value);
   const filtered = records.filter(r => selectedTypes.includes(r.kargoTur));
   if (filtered.length === 0) return showModal('Seçili kargo türüne ait kayıt yok.');
-
-  const dates = filtered.map(r => new Date(r.tarih));
+const dates = filtered.map(r => new Date(r.tarih));
   const minDate = new Date(Math.min(...dates));
   const maxDate = new Date(Math.max(...dates));
-
-  // Tarihleri gg.aa.yyyy formatına çeviriyoruz
+// Tarihleri gg.aa.yyyy formatına çeviriyoruz
   const formatDateFull = d => {
     const day = String(d.getDate()).padStart(2, '0');
     const month = String(d.getMonth() + 1).padStart(2, '0');
     const year = d.getFullYear();
     return `${day}.${month}.${year}`;
   };
-
-  // Dosya adı
+// Dosya adı
   const kargoAdlari = selectedTypes.join(' ');
   const dosyaAdi = `${kargoAdlari} ${formatDateFull(minDate)} - ${formatDateFull(maxDate)}.xlsx`;
 
@@ -602,8 +567,7 @@ const wsData = [
   ['Sıra No', 'Sipariş ID', 'Fatura ID', 'Tarih / Saat', 'Kargo Türü'],
   ...filtered.map((r, i) => [i + 1, r.siparis, r.fatura, r.tarih, r.kargoTur])
 ];
-
-  const wb = XLSX.utils.book_new();
+const wb = XLSX.utils.book_new();
   const ws = XLSX.utils.aoa_to_sheet(wsData);
   XLSX.utils.book_append_sheet(wb, ws, 'Kargo');
   XLSX.writeFile(wb, dosyaAdi);
@@ -662,14 +626,11 @@ const wsData = [
 // Yazdırma işleminden sonra seçili kargoları sil ve checkboxları boşalt
   records = records.filter(r => !selectedTypes.includes(r.kargoTur));
   localStorage.setItem('kargoRecords', JSON.stringify(records));
-
-  renderTable(records);
+renderTable(records);
   updateSummary(records);
-
-  document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
+document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
   const selectAllCheckbox = document.getElementById('selectAllCheckbox');
   if (selectAllCheckbox) selectAllCheckbox.checked = false;
-
 });
 function showModal(message, onClose) {
   const modal = document.getElementById('customAlertModal');
@@ -689,8 +650,6 @@ function showModal(message, onClose) {
     }
   };
 }
-
-
 function showConfirm(message, onConfirm) {
   const modal = document.getElementById('customConfirmModal');
   const msg = document.getElementById('confirmMessage');
@@ -709,8 +668,6 @@ function showConfirm(message, onConfirm) {
     modal.style.display = 'none';
   };
 }
-
-
 function guncelleTanimsizSayisi(sayi) {
 const tanimsizSayisiSpan = document.getElementById('tanimsizeCount');
   tanimsizSayisiSpan.textContent = sayi;
@@ -721,17 +678,12 @@ const tanimsizSayisiSpan = document.getElementById('tanimsizeCount');
     tanimsizSayisiSpan.classList.remove('blink');
   }
 }
-
 document.getElementById('toggleDarkMode').addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   const isDark = document.body.classList.contains('dark-mode');
   localStorage.setItem('darkMode', isDark ? 'on' : 'off');
 });
-
-
-
-  </script>
-  
+ </script>
   <!-- Modal yapısı -->
 <div id="customAlertModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
   <div style="background:#fff; padding:20px; border-radius:8px; max-width:400px; width:90%; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
@@ -739,7 +691,6 @@ document.getElementById('toggleDarkMode').addEventListener('click', () => {
     <button id="modalOkBtn" style="padding:10px 20px; background:#2563eb; border:none; color:#fff; border-radius:5px; cursor:pointer;">Tamam</button>
   </div>
 </div>
-
 <!-- Özel onay modalı -->
 <div id="customConfirmModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
   <div style="background:#fff; padding:20px; border-radius:8px; max-width:400px; width:90%; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
@@ -750,9 +701,5 @@ document.getElementById('toggleDarkMode').addEventListener('click', () => {
     </div>
   </div>
 </div>
-
-
-
 </body>
 </html>
-
