@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -344,7 +343,7 @@ const renderTable = (data = records) => {
   data.slice().reverse().forEach((item, index) => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td class="checkbox-col"><input type="checkbox" /></td>
+  <td class="checkbox-col"><input type="checkbox" data-id="${item.fatura}" /></td>
       <td class="rownum-col">${data.length - index}</td>
       <td class="siparis-col">${item.siparis}</td>
       <td class="fatura-col">${item.fatura}</td>
@@ -461,39 +460,25 @@ searchInput.addEventListener('input', () => {
     });
 
 document.getElementById('deleteRowsBtn').addEventListener('click', () => {
-  const checkboxes = recordsBody.querySelectorAll('input[type="checkbox"]');
-  const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
-  const selectedTypes = Array.from(checkedBoxes).map(cb => cb.value);
-
-  let currentView = records;
-  if (selectedTypes.length > 0) {
-    currentView = records.filter(r => selectedTypes.includes(r.kargoTur));
-  }
-
-  const selectedIndexes = [];
-  checkboxes.forEach((chk, i) => {
-    if (chk.checked) selectedIndexes.push(i);
-  });
-
-  if (selectedIndexes.length === 0) {
+  const checkboxes = recordsBody.querySelectorAll('input[type="checkbox"]:checked');
+  if (checkboxes.length === 0) {
     showModal('Silmek için en az bir satır seçin.');
     return;
   }
-  showConfirm('Seçili satırları silmek istediğinize emin misiniz?', () => {
-    const reversedView = currentView.slice().reverse();
-    const toDelete = selectedIndexes.map(i => reversedView[i]);
 
-    records = records.filter(r => !toDelete.includes(r));
+  showConfirm('Seçili satırları silmek istediğinize emin misiniz?', () => {
+    const faturaIdsToDelete = Array.from(checkboxes).map(chk => chk.getAttribute('data-id'));
+    
+    records = records.filter(r => !faturaIdsToDelete.includes(r.fatura));
     localStorage.setItem('kargoRecords', JSON.stringify(records));
 
     document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
     renderTable(records);
     updateSummary(records);
     selectAllCheckbox.checked = false;
-    const allCheckboxes = recordsBody.querySelectorAll('input[type="checkbox"]');
-    allCheckboxes.forEach(chk => chk.checked = false);
   });
 });
+
    document.getElementById('exportExcelBtn').addEventListener('click', () => {
   const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
   if (checkedBoxes.length === 0) {
