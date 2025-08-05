@@ -2,167 +2,152 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Model Arama</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f8fa;
-      color: #2e3a59;
-      display: flex;
-      justify-content: center;
-      padding: 40px 15px;
-    }
-
-    .container {
-      max-width: 500px;
-      width: 100%;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-      padding: 30px 24px 48px;
-    }
-
-    h1 {
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 24px;
-      color: #344767;
-    }
-
-    .input-wrapper {
-      position: relative;
-      width: 100%;
-      margin-bottom: 24px;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 12px 44px 12px 16px;
-      font-size: 1rem;
-      border: 1.5px solid #cbd5e1;
-      border-radius: 24px;
-      color: #344767;
-      transition: border-color 0.3s ease;
+    * {
       box-sizing: border-box;
     }
 
-    input[type="text"]:focus {
-      outline: none;
-      border-color: #7f9cf5;
-      box-shadow: 0 0 8px rgba(127,156,245,0.5);
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #e3f2fd);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
     }
 
-    #inputSearchBtn {
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #1e3a8a;
+    }
+
+    .search-bar {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 14px 50px 14px 20px;
+      border: 2px solid #cbd5e1;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    .search-bar input:focus {
+      outline: none;
+      border-color: #60a5fa;
+      box-shadow: 0 0 8px rgba(96,165,250,0.3);
+    }
+
+    .search-bar svg {
       position: absolute;
-      right: 12px;
+      right: 18px;
       top: 50%;
       transform: translateY(-50%);
-      background: transparent;
-      border: none;
-      padding: 0;
-      margin: 0;
-      cursor: default;
+      width: 22px;
+      height: 22px;
+      fill: #60a5fa;
       pointer-events: none;
     }
 
-    #inputSearchBtn svg {
-      fill: #7f9cf5;
-      width: 20px;
-      height: 20px;
-    }
-
-    #results {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    .results {
+      display: flex;
+      flex-direction: column;
       gap: 16px;
     }
 
     .card {
-      background: #fefefe;
-      border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 18px 22px;
+      background: #f9fafb;
+      border-radius: 16px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+      transition: 0.2s ease;
     }
 
-    .score {
-      font-weight: bold;
-      color: #7f9cf5;
-      font-size: 14px;
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
     }
 
     .model {
-      font-size: 18px;
       font-weight: 600;
-      color: #344767;
+      font-size: 18px;
+      color: #1f2937;
     }
 
-    .description {
+    .description, .material, .barcode {
       font-size: 14px;
-      color: #556680;
+      color: #4b5563;
     }
 
-    .material, .barcode {
+    .score {
       font-size: 13px;
-      color: #94a3b8;
+      font-weight: bold;
+      color: #3b82f6;
     }
 
     .btn-group {
       display: flex;
-      flex-direction: row;
-      gap: 10px;
-      margin-top: auto;
+      gap: 12px;
+      margin-top: 10px;
     }
 
     .btn {
       flex: 1;
-      padding: 8px 0;
-      border-radius: 14px;
-      font-weight: 600;
-      font-size: 14px;
+      padding: 10px 0;
+      border-radius: 30px;
       text-align: center;
       text-decoration: none;
-      color: white;
+      font-weight: 600;
+      font-size: 14px;
       transition: 0.3s ease;
     }
 
     .btn-boyner {
-      background-color: #ffd6a5;
-      color: #5c3b00;
-    }
-
-    .btn-boyner:hover {
-      background-color: #ffbf75;
+      background: #fde68a;
+      color: #92400e;
     }
 
     .btn-google {
-      background-color: #b5ead7;
-      color: #155f4b;
-    }
-
-    .btn-google:hover {
-      background-color: #9adfc7;
+      background: #a7f3d0;
+      color: #065f46;
     }
 
     #noMatchMessage {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 16px;
       font-weight: 600;
-      color: #d04f48;
+      color: #ef4444;
     }
 
     #googleSearchBtn {
       margin-top: 10px;
       padding: 10px 20px;
-      background-color: #7f9cf5;
-      color: white;
       border: none;
-      border-radius: 16px;
+      border-radius: 25px;
+      background-color: #3b82f6;
+      color: white;
       cursor: pointer;
     }
   </style>
@@ -172,16 +157,14 @@
   <div class="container">
     <h1>Model Arama</h1>
 
-    <div class="input-wrapper">
-      <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
-      <button id="inputSearchBtn" aria-label="Ara">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
-        </svg>
-      </button>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Model numarası yazın..." />
+      <svg viewBox="0 0 24 24">
+        <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
+      </svg>
     </div>
 
-    <div id="results"></div>
+    <div id="results" class="results"></div>
 
     <div id="noMatchMessage" style="display:none;">
       Eşleşme bulunamadı<br>
@@ -195,7 +178,7 @@
     const noMatch = document.getElementById('noMatchMessage');
     const googleBtn = document.getElementById('googleSearchBtn');
 
-    input.addEventListener('input', performSearch); // Anlık arama
+    input.addEventListener('input', performSearch);
 
     function performSearch() {
       const value = input.value.trim().toUpperCase();
