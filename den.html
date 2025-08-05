@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Uygulama Menüsü - Modern Tasarım</title>
+  <title>Uygulama Menüsü - 2 Sütun Mobil Tasarım</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -24,8 +24,14 @@
       max-width: 1100px;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.75rem 2rem;
+      grid-template-columns: repeat(2, 1fr); /* Mobilde 2 sütun */
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr); /* Orta ekran ve üstü 3 sütun */
+      }
     }
 
     a.card {
