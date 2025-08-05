@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -349,6 +350,8 @@ body.dark-mode .top-center {
     </table>
   </div>
 <script>
+    const projeAdi = 'MusteriIlişkileri';
+
     const siparisInput = document.getElementById('siparisId');
     const faturaInput = document.getElementById('faturaId');
     const recordsBody = document.getElementById('recordsBody');
@@ -402,7 +405,8 @@ const updateSummary = (data = records) => {
   totalCountEl.textContent = data.length;
 };
 window.onload = () => {
-  const stored = localStorage.getItem('kargoRecords');
+  const stored = localStorage.setItem(projeAdi + '_kargoRecords', JSON.stringify(records))
+
   records = stored ? JSON.parse(stored) : [];
 renderTable(records, false);
   updateSummary();
