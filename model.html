@@ -44,6 +44,20 @@
       text-align: left;
     }
 
+    .online-btn {
+      padding: 6px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .online-btn:hover {
+      background-color: #0056b3;
+    }
+
     @media (max-width: 600px) {
       table, th, td {
         font-size: 12px;
@@ -64,6 +78,7 @@
         <th>Tanım</th>
         <th>Malzeme</th>
         <th>Barkod</th>
+        <th>Online</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -94,7 +109,6 @@
             };
           });
 
-          // Uyum hesapla (% olarak)
           const scoredResults = data.map(row => {
             const model = row.Model.toUpperCase();
             let matchScore = 0;
@@ -109,10 +123,13 @@
           }).filter(row => row.Uyum > 0);
 
           if (scoredResults.length > 0) {
-            // Yüksek uyumludan düşük uyumluya sırala
             scoredResults.sort((a, b) => b.Uyum - a.Uyum);
 
             scoredResults.forEach(row => {
+              const malzemeKodu = row.Malzeme;
+              const onlineKodu = malzemeKodu.slice(0, -3); // Son 3 hane silinir
+              const url = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
+
               const tr = document.createElement('tr');
               tr.innerHTML = `
                 <td>%${row.Uyum}</td>
@@ -120,6 +137,7 @@
                 <td>${row.Tanım}</td>
                 <td>${row.Malzeme}</td>
                 <td>${row.Barkod}</td>
+                <td><a class="online-btn" href="${url}" target="_blank">Online</a></td>
               `;
               tbody.appendChild(tr);
             });
