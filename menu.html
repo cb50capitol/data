@@ -21,7 +21,7 @@
     body {
       background: linear-gradient(to bottom, #f3f6fb, #e4ecf4);
       min-height: 100vh;
-      padding-bottom: 60px; /* Nav yüksekliği kadar boşluk */
+      /* padding-bottom kaldırıldı */
       margin: 0;
     }
 
@@ -102,33 +102,6 @@
     .full-width {
       grid-column: 1 / -1;
       width: 100%;
-    }
-
-    nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #ffffff;
-      height: 60px;
-      padding: 0 30px;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      border-top: 1px solid #eee;
-      z-index: 10;
-      box-sizing: border-box;
-    }
-
-    nav a {
-      color: #999;
-      font-size: 1.4rem;
-      transition: color 0.2s ease;
-    }
-
-    nav a.active {
-      color: #007aff;
     }
 
     .duyurular {
@@ -227,11 +200,7 @@
     <p>📢 E-ticaret,Mi Paket,Paket Ara ve İptal sayfaları PC üzerinden erişilebilir.</p>
   </div>
 
-  <nav>
-    <a href="#" class="active" onclick="showMenu(this)"><i class="fas fa-home"></i></a>
-    <a href="#" onclick="showDuyurular(this)"><i class="fas fa-bell"></i></a>
-    <a href="#"><i class="fas fa-cog"></i></a>
-  </nav>
+  <!-- Nav kaldırıldı -->
 
   <script>
     function showDuyurular(el) {
@@ -247,8 +216,7 @@
     }
 
     function setActive(el) {
-      document.querySelectorAll('nav a').forEach((a) => a.classList.remove('active'));
-      el.classList.add('active');
+      // Nav olmadığından setActive fonksiyonu pasif kalabilir veya kaldırılabilir
     }
   </script>
 
