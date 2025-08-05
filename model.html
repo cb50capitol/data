@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kart Grid Arayüzü</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -35,14 +33,18 @@
       border: 1.5px solid #cbd5e1;
       font-size: 16px;
     }
-    .input-wrapper svg {
+    .clear-icon {
       position: absolute;
       right: 12px;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      fill: #64748b;
+      cursor: pointer;
+      font-size: 20px;
+      color: #64748b;
+      transition: 0.2s ease;
+    }
+    .clear-icon:hover {
+      color: #ef4444;
     }
     #results {
       display: grid;
@@ -122,14 +124,11 @@
     <h1>Model Arama</h1>
     <div class="input-wrapper">
       <input type="text" id="searchInput" placeholder="Model numarası girin...">
-      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/></svg>
+      <span class="clear-icon" onclick="clearSearch()">✕</span>
     </div>
 
     <div id="results"></div>
-
-    <div id="noMatchMessage" style="display:none;">
-      Eşleşme bulunamadı.
-    </div>
+    <div id="noMatchMessage" style="display:none;">Eşleşme bulunamadı.</div>
   </div>
 
   <script>
@@ -190,6 +189,13 @@
             noMatch.style.display = 'block';
           }
         });
+    }
+
+    function clearSearch() {
+      input.value = '';
+      results.innerHTML = '';
+      noMatch.style.display = 'none';
+      input.focus();
     }
   </script>
 </body>
