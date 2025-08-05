@@ -225,14 +225,18 @@ tbody tr:nth-child(even) {
     <script>
          const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-  if (isMobile) {
-    document.body.innerHTML = `
-      <div style="display:flex; height:100vh; justify-content:center; align-items:center; text-align:center; padding:20px; font-family:sans-serif;">
-      <h2>📢</h2><br><br>
-        <h2>Bu sayfaya mobil cihazlardan erişim desteklenmemektedir.<br><br>Masaüstü bilgisayarınızdan tekrar deneyin.</h2>
-      </div>`;
-    throw new Error("Mobil cihaz erişimi engellendi.");
-  }
+if (isMobile) {
+  document.body.innerHTML = `
+    <div style="display:flex; flex-direction: column; height: 100vh; justify-content: flex-start; align-items: center; text-align: center; padding-top: 60px; font-family: sans-serif; color: #444;">
+      <div style="font-size: 60px; margin-bottom: 20px;">📢</div>
+      <h2 style="max-width: 320px; line-height: 1.4;">
+        Bu sayfaya mobil cihazlardan erişim desteklenmemektedir.<br><br>
+        Masaüstü bilgisayarınızdan tekrar deneyin.
+      </h2>
+    </div>`;
+  throw new Error("Mobil cihaz erişimi engellendi.");
+}
+
 
         let allData = [];
 
