@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Arama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+            table, th, td {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="searchInput" placeholder="Model numarası girin..." oninput="filterData()">
+
+    <table id="resultTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Tanım</th>
+                <th>Malzeme</th>
+                <th>Barkod</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        let allData = [];
+
+        // model.txt dosyasını al
+        fetch('model.txt')
+            .then(response => response.text())
+            .then(text => {
+                const lines = text.trim().split('\n');
+                const headers = lines[0].split('\t');
+                allData = lines.slice(1).map(line => {
+                    const parts = line.split('\t');
+                    return {
+                        Model: parts[0],
+                        Tanım: parts[1],
+                        Malzeme: parts[2],
+                        Barkod: parts[3]
+                    };
+                });
+            })
+            .catch(error => {
+                console.error('Veri yüklenemedi:', error);
+            });
+
+        function filterData() {
+            const input = document.getElementById('searchInput').value.trim().toUpperCase();
+            const table = document.getElementById('resultTable');
+            const tbody = table.querySelector('tbody');
+
+            tbody.innerHTML = ''; // önceki sonuçları temizle
+
+            if (input === '') {
+                table.style.display = 'none';
+                return;
+            }
+
+            const filtered = allData.filter(row => row.Model.toUpperCase() === input);
+
+            if (filtered.length > 0) {
+                filtered.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${row.Model}</td>
+                        <td>${row.Tanım}</td>
+                        <td>${row.Malzeme}</td>
+                        <td>${row.Barkod}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+                table.style.display = 'table';
+            } else {
+                table.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
