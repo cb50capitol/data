@@ -272,11 +272,11 @@
               : row.Model.toUpperCase().includes(value)
                 ? Math.round((value.length / row.Model.length) * 100)
                 : 0;
-            return { ...row, Uyum: score };
-          }).filter(r => r.Uyum > 0);
+            return { ...row, Eşleşme: score };
+          }).filter(r => r.Eşleşme > 0);
 
           if (matched.length) {
-            matched.sort((a, b) => b.Uyum - a.Uyum);
+            matched.sort((a, b) => b.Eşleşme - a.Eşleşme);
             matched.forEach(row => {
               const onlineCode = row.Malzeme.slice(0, -3);
               const boyner = `https://www.boyner.com.tr/search?q=${onlineCode}`;
@@ -285,7 +285,7 @@
               const card = document.createElement('div');
               card.className = 'card';
               card.innerHTML = `
-                <div class="score">Uyum: %${row.Uyum}</div>
+                <div class="score">Eşleşme: %${row.Eşleşme}</div>
                 <div class="model">${row.Model}</div>
                 <div class="description">${row.Tanım}</div>
                 <div class="material">Malzeme: ${row.Malzeme}</div>
