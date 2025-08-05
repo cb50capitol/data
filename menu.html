@@ -97,6 +97,12 @@
     .ean { background: linear-gradient(135deg, #43cea2, #185a9d); }
     .ptc { background: linear-gradient(135deg, #c471f5, #fa71cd); }
 
+    /* Terminal ve Paket Ara için tam genişlik */
+    .full-width {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
     nav {
       position: fixed;
       bottom: 0;
@@ -164,6 +170,24 @@
       <small>Mobil & Windows</small>
     </a>
     
+    <a href="https://cb50capitol.vercel.app/barcode.html" class="menu-card ean" target="_blank">
+      <i class="fas fa-barcode"></i>
+      <span>EAN & QR</span>
+      <small>Mobil & Windows</small>
+    </a>
+    
+    <!-- Yeni Model & Article Butonu -->
+    <a href="https://cb50capitol.vercel.app/model.html" class="menu-card ptc" target="_blank">
+      <i class="fas fa-file-lines"></i>
+      <span>Model & Article</span>
+      <small>Mobil & Windows</small>
+    </a>
+    
+    <a href="https://cb50capitol.vercel.app/ptc.html" class="menu-card ptc full-width" target="_blank">
+      <i class="fas fa-mobile-screen-button"></i>
+      <span>Terminal</span>
+      <small>Android & Windows</small>
+    </a>
     
     <a href="https://cb50capitol.vercel.app/mipaket.html" class="menu-card mipaket" target="_blank">
       <i class="fas fa-cube"></i>
@@ -171,24 +195,17 @@
       <small>Windows</small>
     </a>
     
-     <a href="https://cb50capitol.vercel.app/kargo.html" class="menu-card eticaret" target="_blank">
+    <a href="https://cb50capitol.vercel.app/kargo.html" class="menu-card eticaret" target="_blank">
       <i class="fas fa-store"></i>
       <span>E-Ticaret</span>
       <small>Windows</small>
     </a>
     
     <!-- Paket Ara butonu, aynı stile sahip, tam genişlik -->
-  <a href="https://cb50capitol.vercel.app/paketara.html" class="menu-card full-width paketara" target="_blank">
-    <i class="fas fa-search"></i>
-    <span>Paket Ara</span>
-     <small>Windows</small>
-  </a>
-    
-  
-    <a href="https://cb50capitol.vercel.app/barcode.html" class="menu-card ean" target="_blank">
-      <i class="fas fa-barcode"></i>
-      <span>EAN / QR</span>
-      <small>Mobil & Windows</small>
+    <a href="https://cb50capitol.vercel.app/paketara.html" class="menu-card paketara" target="_blank">
+      <i class="fas fa-search"></i>
+      <span>Paket Ara</span>
+      <small>Windows</small>
     </a>
     
     <a href="https://cb50capitol.vercel.app/iptal.html" class="menu-card iptal" target="_blank">
@@ -196,23 +213,13 @@
       <span>İptal / Fark</span>
       <small>Windows</small>
     </a>
-    
-       <a href="https://cb50capitol.vercel.app/ptc.html" class="menu-card ptc" target="_blank">
-      <i class="fas fa-mobile-screen-button"></i>
-      <span>Terminal</span>
-      <small>Android & Windows</small>
-    </a>
-    
   </div>
-
-
-
 
   <div class="duyurular" id="duyurular">
     <h2>🔔</h2>
     <h2>Duyurular</h2>
     <p>📢 Terminal yalnızca Android cihazlarda çalışır.</p>
-    <br>
+    <br />
     <p>📢 E-ticaret,Mi Paket,Paket Ara ve İptal sayfaları PC üzerinden erişilebilir.</p>
   </div>
 
@@ -236,29 +243,27 @@
     }
 
     function setActive(el) {
-      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('nav a').forEach((a) => a.classList.remove('active'));
       el.classList.add('active');
     }
   </script>
 
   <script>
-  // Sağ tıklamayı engelle
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // Belirli kısayolları engelle (F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J)
-  document.addEventListener('keydown', function(e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
-      (e.ctrlKey && e.key === "U")
-    ) {
+    // Sağ tıklamayı engelle
+    document.addEventListener('contextmenu', function (e) {
       e.preventDefault();
-    }
-  });
-</script>
+    });
 
-
+    // Belirli kısayolları engelle (F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J)
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
