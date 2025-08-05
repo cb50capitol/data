@@ -52,10 +52,20 @@
       border-radius: 4px;
       text-decoration: none;
       font-size: 13px;
+      display: inline-block;
     }
 
     .online-btn:hover {
       background-color: #0056b3;
+    }
+
+    .google-btn {
+      background-color: #db4437;
+      margin-left: 5px;
+    }
+
+    .google-btn:hover {
+      background-color: #a33328;
     }
 
     @media (max-width: 600px) {
@@ -128,7 +138,8 @@
             scoredResults.forEach(row => {
               const malzemeKodu = row.Malzeme;
               const onlineKodu = malzemeKodu.slice(0, -3); // Son 3 hane silinir
-              const url = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
+              const boynerUrl = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
+              const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
 
               const tr = document.createElement('tr');
               tr.innerHTML = `
@@ -137,7 +148,10 @@
                 <td>${row.Tanım}</td>
                 <td>${row.Malzeme}</td>
                 <td>${row.Barkod}</td>
-                <td><a class="online-btn" href="${url}" target="_blank">Online</a></td>
+                <td>
+                  <a class="online-btn" href="${boynerUrl}" target="_blank">Boyner</a>
+                  <a class="online-btn google-btn" href="${googleUrl}" target="_blank">Google</a>
+                </td>
               `;
               tbody.appendChild(tr);
             });
