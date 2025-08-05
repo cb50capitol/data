@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -306,6 +304,11 @@ body.dark-mode .top-center {
       <label for="faturaId">Fatura ID</label>
 <input type="text" id="faturaId" placeholder="Fatura ID girin" autocomplete="off" />
     </div>
+    <div class="clock-display" style="display: flex; align-items: center; font-weight: 700; font-size: 28px;">
+  <span id="liveClock">--:--:--</span>
+</div>
+
+
   </div>
 <div class="summary-container">
   <label><input type="checkbox" class="filter-checkbox" value="Aras" /> Aras: <span id="arasCount">0</span></label>
@@ -798,6 +801,18 @@ document.getElementById('saveAllBtn').addEventListener('click', () => {
   });
 });
 
+  function updateClock() {
+    const now = new Date();
+    const saat = String(now.getHours()).padStart(2, '0');
+    const dakika = String(now.getMinutes()).padStart(2, '0');
+    const saniye = String(now.getSeconds()).padStart(2, '0');
+    const saatStr = `${saat}:${dakika}:${saniye}`;
+    const saatSpan = document.getElementById('liveClock');
+    if (saatSpan) saatSpan.textContent = saatStr;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
 
   
 </script>
