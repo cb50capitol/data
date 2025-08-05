@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -28,75 +27,85 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-indigo-50 via-white to-blue-50 min-h-screen flex items-center justify-center px-6 py-4 overflow-hidden">
+<body class="bg-gradient-to-br from-indigo-50 via-white to-blue-50 min-h-screen flex flex-col items-start md:items-center justify-start md:justify-center px-6 overflow-hidden">
 
   <div class="w-full max-w-md space-y-10">
 
     <!-- Başlık -->
-    <div class="text-center">
+    <div class="text-center mt-0 mb-0">
       <h1 class="text-4xl font-bold text-gray-900">Capitol</h1>
       <p class="text-sm text-gray-500 mt-1">CB50</p>
     </div>
 
     <!-- Menü Grid -->
-<div class="grid grid-cols-2 gap-6">
+    <div class="grid grid-cols-2 gap-6">
 
-  <!-- Envanter -->
-  <a href="https://cb50capitol.vercel.app/" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
-    <div class="icon-wrapper bg-indigo-100 p-4 rounded-full mb-4">
-      <i data-lucide="package" class="text-indigo-600 w-6 h-6"></i>
-    </div>
-    <span class="text-base font-semibold text-gray-800">Envanter</span>
-    <span class="text-xs text-gray-500 mt-1">Mobil & Windows</span>
-  </a>
+      <!-- Envanter -->
+      <a href="https://cb50capitol.vercel.app/" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-indigo-100 p-4 rounded-full mb-4">
+          <i data-lucide="package" class="text-indigo-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">Envanter</span>
+        <span class="text-xs text-gray-500 mt-1">Mobil & Windows</span>
+      </a>
 
-  <!-- TKS / İKS -->
-  <a href="https://cb50capitol.vercel.app/test.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
-    <div class="icon-wrapper bg-green-100 p-4 rounded-full mb-4">
-      <i data-lucide="shuffle" class="text-green-600 w-6 h-6"></i>
-    </div>
-    <span class="text-base font-semibold text-gray-800">TKS / İKS</span>
-    <span class="text-xs text-gray-500 mt-1">Mobil & Windows</span>
-  </a>
+      <!-- TKS / İKS -->
+      <a href="https://cb50capitol.vercel.app/test.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-green-100 p-4 rounded-full mb-4">
+          <i data-lucide="shuffle" class="text-green-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">TKS / İKS</span>
+        <span class="text-xs text-gray-500 mt-1">Mobil & Windows</span>
+      </a>
 
-  
- <!-- E-Ticaret -->
-  <a href="https://cb50capitol.vercel.app/kargo.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
-    <div class="icon-wrapper bg-blue-100 p-4 rounded-full mb-4">
-      <i data-lucide="truck" class="text-blue-600 w-6 h-6"></i>
+      <!-- E-Ticaret -->
+      <a href="https://cb50capitol.vercel.app/kargo.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-blue-100 p-4 rounded-full mb-4">
+          <i data-lucide="truck" class="text-blue-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">E-Ticaret</span>
+        <span class="text-xs text-gray-500 mt-1">Windows</span>
+      </a>
+
+      <!-- Mi Paket -->
+      <a href="https://cb50capitol.vercel.app/mipaket.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-purple-100 p-4 rounded-full mb-4">
+          <i data-lucide="package" class="text-purple-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">Mi Paket</span>
+        <span class="text-xs text-gray-500 mt-1">Windows</span>
+      </a>
+
+      <!-- İptal / Fark -->
+      <a href="https://cb50capitol.vercel.app/iptal.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-red-100 p-4 rounded-full mb-4">
+          <i data-lucide="x-octagon" class="text-red-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">İptal / Fark</span>
+        <span class="text-xs text-gray-500 mt-1">Windows</span>
+      </a>
+
+      <!-- QR / Ean -->
+      <a href="https://cb50capitol.vercel.app/barcode.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-pink-100 p-4 rounded-full mb-4">
+          <i data-lucide="qrcode" class="text-pink-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">QR / Ean</span>
+        <span class="text-xs text-gray-500 mt-1">Mobil & Windows</span>
+      </a>
+
+      <!-- PTC (tam genişlikte) -->
+      <a href="https://cb50capitol.vercel.app/ptc.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="icon-wrapper bg-yellow-100 p-4 rounded-full mb-4">
+          <i data-lucide="cpu" class="text-yellow-600 w-6 h-6"></i>
+        </div>
+        <span class="text-base font-semibold text-gray-800">PTC</span>
+        <span class="text-xs text-gray-500 mt-1">Android & Windows</span>
+      </a>
+
     </div>
-    <span class="text-base font-semibold text-gray-800">E-Ticaret</span>
-    <span class="text-xs text-gray-500 mt-1">Windows</span>
-  </a>
-  <!-- Mi Paket -->
-<a href="https://cb50capitol.vercel.app/mipaket.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
-  <div class="icon-wrapper bg-purple-100 p-4 rounded-full mb-4">
-    <i data-lucide="package" class="text-purple-600 w-6 h-6"></i>
+
   </div>
-  <span class="text-base font-semibold text-gray-800">Mi Paket</span>
-  <span class="text-xs text-gray-500 mt-1">Windows</span>
-</a>
-
- <!-- İptal / Fark -->
-  <a href="https://cb50capitol.vercel.app/iptal.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
-    <div class="icon-wrapper bg-red-100 p-4 rounded-full mb-4">
-      <i data-lucide="x-octagon" class="text-red-600 w-6 h-6"></i>
-    </div>
-    <span class="text-base font-semibold text-gray-800">İptal / Fark</span>
-    <span class="text-xs text-gray-500 mt-1">Windows</span>
-  </a>
-  
-  <!-- PTC (tam genişlikte) -->
-  <a href="https://cb50capitol.vercel.app/ptc.html" class="group glass rounded-2xl p-5 flex flex-col items-center text-center transition-all hover:shadow-xl hover:-translate-y-1">
-    <div class="icon-wrapper bg-yellow-100 p-4 rounded-full mb-4">
-      <i data-lucide="cpu" class="text-yellow-600 w-6 h-6"></i>
-    </div>
-    <span class="text-base font-semibold text-gray-800">PTC</span>
-    <span class="text-xs text-gray-500 mt-1">Android & Windows</span>
-  </a>
-
-</div>
-
 
   <script>
     lucide.createIcons();
