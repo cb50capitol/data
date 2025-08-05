@@ -4,90 +4,176 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Model Arama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
+    /* Genel ayarlar */
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f9fc;
+      padding: 40px 20px;
       margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
+      color: #333;
     }
 
-    input[type="text"], button {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-size: 16px;
+    /* Arama kutusu ve buton */
+    #searchInput {
+      width: 100%;
+      max-width: 450px;
+      padding: 14px 20px;
+      font-size: 18px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
       box-sizing: border-box;
+      margin-bottom: 15px;
+      outline-offset: 2px;
+    }
+
+    #searchInput:focus {
+      border-color: #4285F4;
+      box-shadow: 0 0 8px rgba(66, 133, 244, 0.4);
     }
 
     button {
-      cursor: pointer;
-    }
-
-    table {
-      border-collapse: collapse;
+      max-width: 200px;
       width: 100%;
-      max-width: 800px;
+      background-color: #4285F4;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+      margin-bottom: 30px;
     }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      font-size: 14px;
+    button:hover {
+      background-color: #3367d6;
+      box-shadow: 0 6px 16px rgba(51, 103, 214, 0.5);
     }
 
-    th {
-      background-color: #f2f2f2;
+    /* Tablo tasarımı */
+    table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: separate;
+      border-spacing: 0 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    thead tr {
+      background-color: #f1f3f5;
+      font-weight: 700;
+      color: #555;
+      font-size: 15px;
       text-align: left;
     }
 
+    th, td {
+      padding: 14px 20px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+
+    tbody tr {
+      background-color: #fff;
+      transition: background-color 0.2s ease;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    tbody tr:hover {
+      background-color: #f9faff;
+      box-shadow: 0 4px 14px rgba(66, 133, 244, 0.15);
+    }
+
+    /* Butonlar hücrede */
     .btn {
-      padding: 6px 10px;
+      padding: 8px 14px;
       color: white;
       border: none;
-      border-radius: 4px;
-      text-decoration: none;
+      border-radius: 6px;
       font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
       display: inline-block;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
     }
 
     .btn-boyner {
       background-color: #db4437;
-      margin-right: 5px;
+      margin-right: 8px;
+      box-shadow: 0 3px 8px rgba(219, 68, 55, 0.4);
     }
 
     .btn-boyner:hover {
       background-color: #a33328;
+      box-shadow: 0 5px 12px rgba(163, 51, 40, 0.6);
     }
 
     .btn-google {
       background-color: #4285F4;
+      box-shadow: 0 3px 8px rgba(66, 133, 244, 0.4);
     }
 
     .btn-google:hover {
       background-color: #3367d6;
+      box-shadow: 0 5px 12px rgba(51, 103, 214, 0.6);
     }
 
+    /* Eşleşme bulunamadığında mesaj */
     #noMatchMessage {
       margin-top: 20px;
-      font-weight: bold;
-      color: #555;
+      font-weight: 700;
+      color: #666;
       text-align: center;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      max-width: 450px;
+      width: 90%;
     }
 
     #googleSearchBtn {
-      margin-top: 10px;
+      margin-top: 15px;
+      width: auto;
+      padding: 10px 24px;
     }
 
-    @media (max-width: 600px) {
-      table, th, td {
-        font-size: 12px;
+    /* Responsive */
+    @media (max-width: 700px) {
+      th, td {
+        padding: 12px 10px;
+        font-size: 13px;
+      }
+
+      #searchInput {
+        max-width: 100%;
+      }
+
+      button {
+        max-width: 100%;
+      }
+
+      #noMatchMessage {
+        max-width: 100%;
+        padding: 20px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -182,10 +268,8 @@
             });
             table.style.display = 'table';
           } else {
-            // Eşleşme yoksa mesaj ve google butonunu göster
             noMatchDiv.style.display = 'block';
 
-            // Google'da ara butonuna tıklayınca inputtaki kelimeyle arama aç
             googleBtn.onclick = () => {
               const query = encodeURIComponent(inputElem.value.trim());
               if (query) {
