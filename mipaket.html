@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Müşteri İlişkileri Gelen Sevkiyat</title>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --danger: #ef4444;
+      --success: #10b981;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #111827;
+      --border: #e5e7eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    .top-center {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    input[type="text"] {
+      padding: 12px 16px;
+      font-size: 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background-color: #fff;
+      transition: 0.2s;
+      width: 280px;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+      outline: none;
+    }
+
+    .summary-container {
+      width: 90%;
+      max-width: 1300px;
+      margin: 20px auto;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .summary-container label {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+    }
+    
+    
+
+    input[type="checkbox"] {
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+
+    .table-container {
+      width: 90%;
+      max-width: 1300px;
+      margin: 30px auto;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .table-container h2 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center; /* Başlık ortalansın */
+    }
+
+    table.records {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      table-layout: fixed;
+    }
+
+    table.records th,
+    table.records td {
+      border: 1px solid var(--border);
+      padding: 10px;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center; /* Tüm hücreler ortalanacak */
+    }
+
+    table.records th {
+      background-color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .checkbox-col { width: 40px; text-align: center; }
+    .rownum-col { width: 50px; }
+    .siparis-col, .fatura-col, .kargo-col { width: 20%; }
+    .tarih-col { width: 25%; }
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .table-header input[type="text"] {
+      width: 220px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    #printBtn { background-color: var(--primary); }
+    #deleteRowsBtn { background-color: var(--danger); }
+    #exportExcelBtn { background-color: var(--success); }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .summary-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .top-center {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-group input {
+        width: 100%;
+      }
+    }
+
+@keyframes blink {
+  0%, 50%, 100% {
+    color: red;
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+body.dark-mode {
+  --primary: #3b82f6;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #e2e8f0;
+  --border: #334155;
+}
+
+body.dark-mode table.records th {
+  background-color: #334155;
+}
+
+body.dark-mode input[type="text"] {
+  background-color: #1e293b;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body.dark-mode input[type="text"]::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-mode input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+body.dark-mode .summary-container label {
+  color: var(--text);
+}
+
+body.dark-mode button {
+  color: white;
+}
+
+body.dark-mode #customAlertModal div,
+body.dark-mode #customConfirmModal div {
+  background-color: #1e293b;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.dark-mode .blink {
+  color: #f87171;
+}
+
+body.dark-mode .table-container,
+body.dark-mode .summary-container,
+body.dark-mode .top-center {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes greenBlink {
+  0%, 100% {
+    background-color: transparent;
+  }
+  25%, 75% {
+    background-color: #a7f3d0; /* yeşil arka plan */
+  }
+}
+
+.green-blink {
+  animation: greenBlink 1.2s ease;
+}
+
+@keyframes greenBlink {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: #a6f3a6; }
+}
+
+.green-blink {
+  animation: greenBlink 1s ease-in-out 2;
+}
+
+/* Sayaç etiketlerini gizle (Toplam hariç) */
+.summary-container label {
+  display: none;
+}
+
+/* Sadece Toplam etiketini göster (en sondaki label) */
+.summary-container label:last-of-type {
+  display: inline-block;
+}
+
+/* Yazdır ve Excel butonlarını gizle */
+#printBtn,
+#exportExcelBtn {
+  display: none !important;
+}
+
+
+</style>
+</head>
+<body>
+<div class="top-center">
+    <div class="input-group">
+      <label for="siparisId">Sipariş ID</label>
+<input type="text" id="siparisId" placeholder="Sipariş ID girin" autocomplete="off" />
+    </div>
+    <div class="input-group">
+      <label for="faturaId">Fatura ID</label>
+<input type="text" id="faturaId" placeholder="Fatura ID girin" autocomplete="off" />
+    </div>
+  </div>
+<div class="summary-container">
+  <label><input type="checkbox" class="filter-checkbox" value="Aras" /> Aras: <span id="arasCount">0</span></label>
+  <label><input type="checkbox" class="filter-checkbox" value="HepsiJet" /> HepsiJet: <span id="hepsiCount">0</span></label>
+  <label><input type="checkbox" class="filter-checkbox" value="Trendyol" /> Trendyol: <span id="trendyolCount">0</span></label>
+  <label><input type="checkbox" class="filter-checkbox" value="Tanımsız" /> Tanımsız: <span id="tanimsizeCount">0</span></label>
+  <!-- Toplam sayısı için yeni label -->
+<span style="margin-right: 10px; font-weight: bold; color: #e63946;">Müşteri İlişkileri Gelen Sevkiyat</span>
+  <label style="font-weight: 700; margin-left: 20px;">Toplam: <span id="totalCount">0</span></label>
+<div style="display:flex; gap:10px; flex-wrap: wrap;">
+    <button id="printBtn">Yazdır</button>
+    <button id="saveAllBtn" style="background:#0ea5e9;">Kaydet</button>
+    <button id="deleteRowsBtn">Satır Sil</button>
+    <button id="exportExcelBtn">Excel</button>
+    <button id="toggleDarkMode" style="background:#6b7280;">🌙</button>
+<button id="autoBtn" style="background:#16a34a;">Test</button>
+
+
+ </div>
+</div>
+  <div class="table-container">
+    <div class="table-header">
+      <h2>Kargo Kayıtları</h2>
+      <input type="text" id="searchInput" placeholder="Arama yap..." />
+    </div>
+    <table class="records">
+      <thead>
+        <tr>
+          <th class="checkbox-col"><input type="checkbox" id="selectAllCheckbox" /></th>
+          <th class="rownum-col">Sıra No</th>
+          <th class="siparis-col">Sipariş ID</th>
+          <th class="fatura-col">Fatura ID</th>
+          <th class="tarih-col">Tarih / Saat</th>
+          <th class="kargo-col">Kargo Türü</th>
+        </tr>
+      </thead>
+      <tbody id="recordsBody"></tbody>
+    </table>
+  </div>
+<script>
+    const siparisInput = document.getElementById('siparisId');
+    const faturaInput = document.getElementById('faturaId');
+    const recordsBody = document.getElementById('recordsBody');
+    const searchInput = document.getElementById('searchInput');
+    const arasCountEl = document.getElementById('arasCount');
+    const hepsiCountEl = document.getElementById('hepsiCount');
+    const trendyolCountEl = document.getElementById('trendyolCount');
+    const tanimsizCountEl = document.getElementById('tanimsizeCount');
+    const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+let records = [];
+const detectKargoTur = (f) => {
+      if (f.startsWith('68')) return 'Aras';
+      if (f.toUpperCase().startsWith('BYR')) return 'HepsiJet';
+      if (f.startsWith('733')) return 'Trendyol';
+      if (f.startsWith('B')) return 'Ekol';
+      return 'Tanımsız';
+    };
+const renderTable = (data = records) => {
+  recordsBody.innerHTML = '';
+  data.slice().reverse().forEach((item, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+  <td class="checkbox-col"><input type="checkbox" data-id="${item.fatura}" /></td>
+      <td class="rownum-col">${data.length - index}</td>
+      <td class="siparis-col">${item.siparis}</td>
+      <td class="fatura-col">${item.fatura}</td>
+      <td class="tarih-col">${item.tarih}</td>
+      <td class="kargo-col">${item.kargoTur}</td>
+    `;
+    if (item.kargoTur === 'Tanımsız') {
+      row.classList.add('blink');
+    }
+    recordsBody.appendChild(row);
+  });
+  selectAllCheckbox.checked = false;
+};
+const totalCountEl = document.getElementById('totalCount');
+const updateSummary = (data = records) => {
+  arasCountEl.textContent = data.filter(r => r.kargoTur === 'Aras').length;
+  hepsiCountEl.textContent = data.filter(r => r.kargoTur === 'HepsiJet').length;
+  trendyolCountEl.textContent = data.filter(r => r.kargoTur === 'Trendyol').length;
+  const tanimsizSayi = data.filter(r => r.kargoTur === 'Tanımsız').length;
+  tanimsizCountEl.textContent = tanimsizSayi;
+
+  if (tanimsizSayi > 0) {
+    tanimsizCountEl.classList.add('blink');
+  } else {
+    tanimsizCountEl.classList.remove('blink');
+  }
+
+  totalCountEl.textContent = data.length;
+};
+window.onload = () => {
+  const stored = localStorage.getItem('kargoRecords');
+  records = stored ? JSON.parse(stored) : [];
+renderTable(records, false);
+  updateSummary();
+  [siparisInput, faturaInput].forEach(input => {
+  input.addEventListener('focus', () => {
+    searchInput.value = '';
+    document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
+    renderTable(records);
+    updateSummary(records);
+  });
+});
+};
+  siparisInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (!siparisInput.value.trim()) return showModal("Önce Sipariş ID girin.");
+
+        faturaInput.focus();
+      }
+    });
+
+    faturaInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const siparis = siparisInput.value.trim();
+        const fatura = faturaInput.value.trim().toUpperCase();
+        if (!siparis || !fatura) return showModal('Lütfen her iki alanı da doldurun.');
+        if (records.some(r => r.fatura.toUpperCase() === fatura)) {
+  showModal('Bu fatura zaten mevcut.', () => {
+    siparisInput.value = '';
+    faturaInput.value = '';
+    siparisInput.focus();
+  });
+  return;
+}
+   const newEntry = {
+          siparis,
+          fatura,
+          tarih: new Date().toLocaleString('tr-TR'),
+          kargoTur: detectKargoTur(fatura)
+        };
+records.push(newEntry);
+localStorage.setItem('kargoRecords', JSON.stringify(records));
+renderTable(records);
+updateSummary();
+
+setTimeout(() => {
+  blinkNewRow(newEntry.kargoTur);
+}, 0);
+
+        siparisInput.value = '';
+        faturaInput.value = '';
+        siparisInput.focus();
+      }
+    });
+searchInput.addEventListener('input', () => {
+      const val = searchInput.value.trim().toLowerCase();
+      const filtered = records.filter(r =>
+        r.siparis.toLowerCase().includes(val) ||
+        r.fatura.toLowerCase().includes(val) ||
+        r.kargoTur.toLowerCase().includes(val)
+      );
+      renderTable(filtered);
+      updateSummary(filtered);
+    });
+
+    document.querySelectorAll('.filter-checkbox').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const checkedBoxes = Array.from(document.querySelectorAll('.filter-checkbox:checked')).map(i => i.value);
+        let filtered;
+        if (checkedBoxes.length === 0) {
+          filtered = records;
+        } else {
+          filtered = records.filter(r => checkedBoxes.includes(r.kargoTur));
+        }
+        renderTable(filtered);
+        updateSummary(filtered);
+      });
+    });
+    selectAllCheckbox.addEventListener('change', () => {
+      const checkboxes = recordsBody.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(chk => (chk.checked = selectAllCheckbox.checked));
+    });
+
+document.getElementById('deleteRowsBtn').addEventListener('click', () => {
+  const checkboxes = recordsBody.querySelectorAll('input[type="checkbox"]:checked');
+  if (checkboxes.length === 0) {
+    showModal('Silmek için en az bir satır seçin.');
+    return;
+  }
+
+  showConfirm('Seçili satırları silmek istediğinize emin misiniz?', () => {
+    const faturaIdsToDelete = Array.from(checkboxes).map(chk => chk.getAttribute('data-id'));
+    
+    records = records.filter(r => !faturaIdsToDelete.includes(r.fatura));
+    localStorage.setItem('kargoRecords', JSON.stringify(records));
+
+    document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
+    renderTable(records);
+    updateSummary(records);
+    selectAllCheckbox.checked = false;
+  });
+});
+
+   document.getElementById('exportExcelBtn').addEventListener('click', () => {
+  const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
+  if (checkedBoxes.length === 0) {
+    showModal('Lütfen Excel indirmek için en az bir kargo türü seçin.');
+    return;
+  }
+  const selectedTypes = Array.from(checkedBoxes).map(cb => cb.value);
+  const filtered = records.filter(r => selectedTypes.includes(r.kargoTur));
+
+  if (filtered.length === 0) {
+    showModal('Seçili kargo türüne ait kayıt bulunamadı.');
+    return;
+  }
+
+  const ws_data = [
+    ['Sıra No', 'Sipariş ID', 'Fatura ID', 'Tarih / Saat', 'Kargo Türü']
+  ];
+  filtered.forEach((r, i) => {
+    ws_data.push([i + 1, r.siparis, r.fatura, r.tarih, r.kargoTur]);
+  });
+  const ws = XLSX.utils.aoa_to_sheet(ws_data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Kargo Kayitlari');
+  XLSX.writeFile(wb, 'kargo_kayitlari.xlsx');
+});
+ // Yazdırma fonksiyonu
+   document.getElementById('printBtn').addEventListener('click', () => {
+  const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
+  if (checkedBoxes.length === 0) return showModal('Önce yazdırmak için en az bir kargo türü seçin.');
+  const selectedTypes = Array.from(checkedBoxes).map(cb => cb.value);
+  const filtered = records.filter(r => selectedTypes.includes(r.kargoTur));
+  if (filtered.length === 0) return showModal('Seçili kargo türüne ait kayıt yok.');
+const dates = filtered.map(r => new Date(r.tarih));
+  const minDate = new Date(Math.min(...dates));
+  const maxDate = new Date(Math.max(...dates));
+// Tarihleri gg.aa.yyyy formatına çeviriyoruz
+  const formatDateFull = d => {
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}.${month}.${year}`;
+  };
+// Dosya adı
+  const kargoAdlari = selectedTypes.join(' ');
+  const dosyaAdi = `${kargoAdlari} ${formatDateFull(minDate)} - ${formatDateFull(maxDate)}.xlsx`;
+
+  // Excel dosyasını oluşturup indir (Sıra No artan şekilde: 1, 2, 3...)
+const wsData = [
+  ['Sıra No', 'Sipariş ID', 'Fatura ID', 'Tarih / Saat', 'Kargo Türü'],
+  ...filtered.map((r, i) => [i + 1, r.siparis, r.fatura, r.tarih, r.kargoTur])
+];
+const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.aoa_to_sheet(wsData);
+  XLSX.utils.book_append_sheet(wb, ws, 'Kargo');
+  XLSX.writeFile(wb, dosyaAdi);
+
+  // Yazdırma penceresini aç
+  const printWindow = window.open('', '_blank');
+  printWindow.document.write(`
+    <html>
+      <head><title>Yazdır</title>
+      <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { text-align: center; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background-color: #eee; }
+        .signature-container { margin-top: 40px; display: flex; justify-content: space-around; }
+        .signature-box { border: 1px solid #ccc; height: 100px; width: 250px; }
+        .signature-label { text-align: center; margin-top: 8px; font-weight: bold; }
+      </style>
+      </head>
+      <body>
+        <h1>Kargo Teslim Tutanağı</h1>
+        <p style="text-align:center;">Aşağıda belirtilen <strong>${filtered.length}</strong> adet kargo mağazadan teslim alınmıştır.</p>
+        <table>
+          <thead>
+            <tr><th>Sıra No</th><th>Sipariş ID</th><th>Fatura ID</th><th>Tarih / Saat</th></tr>
+          </thead>
+          <tbody>
+            ${filtered.map((r, i) => `
+              <tr>
+                <td>${i + 1}</td>
+                <td>${r.siparis}</td>
+                <td>${r.fatura}</td>
+                <td>${r.tarih}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+
+        <div class="signature-container">
+          <div>
+            <div class="signature-box"></div>
+            <div class="signature-label">Teslim Eden</div>
+          </div>
+          <div>
+            <div class="signature-box"></div>
+            <div class="signature-label">Teslim Alan</div>
+          </div>
+        </div>
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+// Yazdırma işleminden sonra seçili kargoları sil ve checkboxları boşalt
+  records = records.filter(r => !selectedTypes.includes(r.kargoTur));
+  localStorage.setItem('kargoRecords', JSON.stringify(records));
+renderTable(records);
+  updateSummary(records);
+document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
+  const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+  if (selectAllCheckbox) selectAllCheckbox.checked = false;
+});
+function showModal(message, onClose) {
+  const modal = document.getElementById('customAlertModal');
+  const modalMessage = document.getElementById('modalMessage');
+  const okBtn = document.getElementById('modalOkBtn');
+
+  modalMessage.textContent = message;
+  modal.style.display = 'flex';
+
+  // Önceki event listener'ları kaldır
+  okBtn.onclick = null;
+
+  okBtn.onclick = () => {
+    modal.style.display = 'none';
+    if (typeof onClose === 'function') {
+      onClose();
+    }
+  };
+}
+function showConfirm(message, onConfirm) {
+  const modal = document.getElementById('customConfirmModal');
+  const msg = document.getElementById('confirmMessage');
+  const yesBtn = document.getElementById('confirmYesBtn');
+  const noBtn = document.getElementById('confirmNoBtn');
+
+  msg.textContent = message;
+  modal.style.display = 'flex';
+
+  yesBtn.onclick = () => {
+    modal.style.display = 'none';
+    onConfirm(); // evet'e basınca çalışacak fonksiyon
+  };
+
+  noBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+}
+function guncelleTanimsizSayisi(sayi) {
+const tanimsizSayisiSpan = document.getElementById('tanimsizeCount');
+  tanimsizSayisiSpan.textContent = sayi;
+  
+  if (sayi > 0) {
+    tanimsizSayisiSpan.classList.add('blink');
+  } else {
+    tanimsizSayisiSpan.classList.remove('blink');
+  }
+}
+document.getElementById('toggleDarkMode').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+});
+
+  function blinkNewRow(kargoTur) {
+  // Satır yanıp sönme kodun (mevcutsa ona dokunma)
+  const rows = recordsBody.querySelectorAll('tr');
+  if (rows.length === 0) return;
+
+  const lastRow = rows[0]; // veya doğru satır seçimi nasıl ise
+  lastRow.classList.add('green-blink');
+  lastRow.addEventListener('animationend', () => {
+    lastRow.classList.remove('green-blink');
+  }, { once: true });
+
+  // Özet kısmındaki ilgili label'i seç:
+  const summaryLabel = document.querySelector(`.summary-container label input[value="${kargoTur}"]`)?.parentElement;
+
+  if (summaryLabel) {
+    summaryLabel.classList.add('green-blink');
+    summaryLabel.addEventListener('animationend', () => {
+      summaryLabel.classList.remove('green-blink');
+    }, { once: true });
+  }
+
+    // Özet kısmındaki ilgili kargo türü sayısına blink ekle
+  let summaryElement;
+  switch (kargoTur) {
+    case 'Aras':
+      summaryElement = arasCountEl;
+      break;
+    case 'HepsiJet':
+      summaryElement = hepsiCountEl;
+      break;
+    case 'Trendyol':
+      summaryElement = trendyolCountEl;
+      break;
+    case 'Tanımsız':
+      summaryElement = tanimsizCountEl;
+      break;
+    default:
+      return; // Bilinmeyen kargo türü ise çık
+  }
+
+  if (!summaryElement) return;
+
+  summaryElement.classList.add('green-blink');
+  summaryElement.addEventListener('animationend', () => {
+    summaryElement.classList.remove('green-blink');
+  }, { once: true });
+}
+
+//TEST BOT
+  document.getElementById('autoBtn').addEventListener('click', () => {
+  let start = 6800000001; // Başlangıç ID’si
+  let count = 2000; // Kaç adet giriş yapılacak (değiştirebilirsin)
+  let delay = 600; // Her giriş arası gecikme süresi (ms)
+
+  let index = 0;
+
+  const interval = setInterval(() => {
+    if (index >= count) {
+      clearInterval(interval);
+      return;
+    }
+
+    const siparisId = String(start + index * 2);
+    const faturaId = String(start + index * 2 + 1);
+
+    // Sipariş ve fatura alanlarına yaz
+    siparisInput.value = siparisId;
+    faturaInput.value = faturaId;
+
+    // Enter tetikle
+    const enterEvent = new KeyboardEvent('keydown', { key: 'Enter' });
+    faturaInput.dispatchEvent(enterEvent);
+
+    index++;
+  }, delay);
+});
+
+
+document.getElementById('saveAllBtn').addEventListener('click', () => {
+  if (records.length === 0) {
+    showModal('Kaydedilecek kayıt bulunamadı.');
+    return;
+  }
+
+  // 📅 Tarih + Saat
+  const now = new Date();
+  const formatDateTime = (date) => {
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const yy = String(date.getFullYear()).slice(-2);
+    const hh = String(date.getHours()).padStart(2, '0');
+    const min = String(date.getMinutes()).padStart(2, '0');
+    return `${dd}.${mm}.${yy} ${hh}.${min}`;
+  };
+  const formattedDateTime = formatDateTime(now);
+
+  // 🚚 Kargo türleri
+  const kargoTurleri = [...new Set(records.map(r => r.kargoTur))].sort();
+  const kargoLabel = kargoTurleri.join(',');
+
+  // 📁 Dosya adı
+  const dosyaAdi = `Mİ ${formattedDateTime} ${kargoLabel}.xlsx`;
+
+  // 📄 Excel içeriği
+  const ws_data = [
+    ['Sıra No', 'Sipariş ID', 'Fatura ID', 'Tarih / Saat', 'Kargo Türü']
+  ];
+  records.forEach((r, i) => {
+    ws_data.push([i + 1, r.siparis, r.fatura, r.tarih, r.kargoTur]);
+  });
+
+  const ws = XLSX.utils.aoa_to_sheet(ws_data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Tum_Kayitlar');
+  XLSX.writeFile(wb, dosyaAdi);
+
+  // ✅ Dosya indirildikten sonra kullanıcıya sor
+  showConfirm('Dosya indirildi mi? Tablo silinecek.', () => {
+    // Evet dediyse tabloyu temizle
+    records = [];
+    localStorage.removeItem('kargoRecords');
+    renderTable(records);
+    updateSummary();
+  });
+});
+
+
+  
+</script>
+  <!-- Modal yapısı -->
+<div id="customAlertModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
+  <div style="background:#fff; padding:20px; border-radius:8px; max-width:400px; width:90%; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
+    <p id="modalMessage" style="margin-bottom:20px; font-size:16px; color:#333;"></p>
+    <button id="modalOkBtn" style="padding:10px 20px; background:#2563eb; border:none; color:#fff; border-radius:5px; cursor:pointer;">Tamam</button>
+  </div>
+</div>
+<!-- Özel onay modalı -->
+<div id="customConfirmModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
+  <div style="background:#fff; padding:20px; border-radius:8px; max-width:400px; width:90%; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
+    <p id="confirmMessage" style="margin-bottom:20px; font-size:16px; color:#333;"></p>
+    <div style="display:flex; justify-content:center; gap:20px;">
+      <button id="confirmYesBtn" style="padding:10px 20px; background:#ef4444; border:none; color:#fff; border-radius:5px; cursor:pointer;">Evet</button>
+      <button id="confirmNoBtn" style="padding:10px 20px; background:#ccc; border:none; color:#000; border-radius:5px; cursor:pointer;">Hayır</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
