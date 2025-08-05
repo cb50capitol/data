@@ -47,10 +47,8 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px var(--shadow);
       max-width: 900px;
-      width: calc(100% - 30px);
-      margin: 0 auto;
+      width: 100%;
       text-align: center;
-      overflow-x: hidden; /* yatay taşmayı engeller */
     }
 
     h1 {
@@ -100,11 +98,9 @@
 
     #results {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* otomatik sütun sayısı ve min genişlik */
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-bottom: 20px;
-      max-width: 100%;
-      box-sizing: border-box;
     }
 
     .card {
@@ -117,7 +113,13 @@
       gap: 8px;
       transition: transform 0.2s ease;
       text-align: left;
-      width: 100%; /* kapsayıcıya tam uyum sağlar */
+
+      /* Taşmayı önlemek için eklendi */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      box-sizing: border-box;
+      width: 100%;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -133,9 +135,12 @@
       font-weight: 600;
       color: var(--text);
     }
-    .description {
+    .description, .material, .barcode {
       font-size: 14px;
       color: #475569;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
     .material, .barcode {
       font-size: 13px;
@@ -203,16 +208,16 @@
 
     @media (max-width: 900px) {
       #results {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* otomatik sütun sayısı */
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 600px) {
       #results {
-        grid-template-columns: 1fr; /* küçük ekranlarda 1 sütun */
+        grid-template-columns: 1fr;
       }
       .btn-group {
-        flex-direction: row !important; /* butonlar her zaman yan yana */
+        flex-direction: row !important;
         flex-wrap: nowrap;
       }
       #noMatchButtons {
@@ -223,13 +228,12 @@
         min-width: unset;
       }
     }
-
   </style>
 </head>
 <body>
 
   <div class="wrapper">
-    <h1>Model Arama</h1>
+    <h1>Model Arama1</h1>
     <div class="input-wrapper">
       <input type="text" id="searchInput" placeholder="Model & Article" autocomplete="off" />
       <span class="clear-icon" onclick="clearSearch()">✕</span>
