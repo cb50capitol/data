@@ -10,17 +10,18 @@
     crossorigin="anonymous"
   />
   <style>
-    * {
-      box-sizing: border-box;
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Yatay kaymayı engeller */
       font-family: 'Segoe UI', sans-serif;
     }
 
     body {
       background: linear-gradient(to bottom, #f3f6fb, #e4ecf4);
       min-height: 100vh;
-      padding-bottom: 100px;
+      padding-bottom: 60px; /* Alt nav yüksekliğine göre ayarlandı */
     }
 
     .grid {
@@ -92,7 +93,6 @@
     .eticaret { background: linear-gradient(135deg, #56ccf2, #2f80ed); }
     .mipaket { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
     .paketara { background: linear-gradient(135deg, #1de9b6, #1dc4e9); }
-    .envanter { background: linear-gradient(135deg, #5b86e5, #36d1dc); }
     .iptal { background: linear-gradient(135deg, #ff6a6a, #e53935); }
     .ean { background: linear-gradient(135deg, #43cea2, #185a9d); }
     .ptc { background: linear-gradient(135deg, #c471f5, #fa71cd); }
@@ -115,6 +115,8 @@
       justify-content: space-around;
       border-top: 1px solid #eee;
       z-index: 10;
+      /* Sabit yükseklik için isteğe bağlı */
+      /* height: 60px; */
     }
 
     nav a {
@@ -201,7 +203,7 @@
       <small>Windows</small>
     </a>
     
-    <!-- Paket Ara butonu, aynı stile sahip, tam genişlik -->
+    <!-- Paket Ara butonu -->
     <a href="https://cb50capitol.vercel.app/paketara.html" class="menu-card paketara" target="_blank">
       <i class="fas fa-search"></i>
       <span>Paket Ara</span>
