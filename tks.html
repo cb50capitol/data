@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transfer Listesi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body { background-color: #f0f2f5; padding: 1rem; font-family: "Segoe UI", sans-serif; }
+    .card-alt { background: #fff; border-radius: 12px; border: 1px solid #dee2e6; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 1.5rem; margin-bottom: 1rem; }
+    .card-title { font-weight: 600; font-size: 17px; margin-bottom: 1rem; color: #0d6efd; }
+    .info-item { margin-bottom: 8px; font-size: 15px; }
+    .online-btn { background-color: #28a745; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer; margin-right: 8px; }
+    .section-btn { background-color: #007bff; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer; }
+    .section-btn:hover, .online-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <h1>Transfer Listesi</h1>
+  <div id="cardContainer"></div>
+</div>
+
+<!-- Section Modal -->
+<div class="modal fade" id="sectionModal" tabindex="-1" aria-labelledby="sectionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sectionModalLabel">Bölüm Detayları</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body" id="sectionModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let data = [], stockData = [];
+
+async function loadData() {
+  const res = await fetch('test.txt');
+  const txt = await res.text();
+  const lines = txt.trim().split('\n');
+  lines.shift();
+  data = lines.map(l => l.split('\t'));
+  renderCards(data);
+}
+
+async function loadStockData() {
+  const res = await fetch('stok.txt');
+  const txt = await res.text();
+  stockData = txt.trim().split('\n').map(line => line.split('\t'));
+}
+
+function renderCards(rows) {
+  const container = document.getElementById('cardContainer');
+  container.innerHTML = '';
+  rows.forEach(row => {
+    const div = document.createElement('div');
+    div.className = 'card-alt';
+    const malzeme = row[6];
+    const malzemeKisa = malzeme.length > 3 ? malzeme.slice(0, -3) : malzeme;
+    const onlineURL = `https://www.boyner.com.tr/search?q=${malzemeKisa}`;
+    div.innerHTML = `
+      <div class="card-title">${row[4]}</div>
+      <div class="info-item"><strong>Model:</strong> ${row[5]}</div>
+      <div class="info-item"><strong>Malzeme:</strong> ${malzeme}</div>
+      <div class="info-item"><strong>EAN:</strong> ${row[7]}</div>
+      <div class="info-item"><strong>Müşteri:</strong> ${row[8]}</div>
+      <div class="info-item"><strong>Stok:</strong> ${row[10]}</div>
+      <div class="info-item"><strong>İş Emri:</strong> ${row[11]}</div>
+      <button class="section-btn" onclick="showSectionModal('${malzeme}')">Section</button>
+      <a href="${onlineURL}" target="_blank" class="online-btn">Online</a>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function showSectionModal(sku) {
+  const matches = stockData.filter(r => r[0] === sku);
+  if (matches.length === 0) {
+    document.getElementById('sectionModalBody').innerHTML = '<div class="alert alert-warning">Stok verisi bulunamadı.</div>';
+    new bootstrap.Modal(document.getElementById('sectionModal')).show();
+    return;
+  }
+
+  let html = `
+    <table class="table table-bordered"><tbody>
+      <tr><th>SKU</th><td>${matches[0][0]}</td></tr>
+      <tr><th>EAN</th><td>${matches[0][1]}</td></tr>
+      <tr><th>Ürün</th><td>${matches[0][2]}</td></tr>
+    </tbody></table>
+    <hr><strong>Lokasyonlar:</strong>
+    <table class="table table-hover table-sm mt-2">
+      <thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead>
+      <tbody>
+  `;
+
+  matches.forEach(row => {
+    const loc = row[3], section = row[4], adet = row[5];
+    html += `
+      <tr>
+        <td>${loc}</td>
+        <td style="color:#0d6efd; cursor:pointer;" onclick="showProductsInSameSection('${section.replace(/'/g, "\\'")}')">${section}</td>
+        <td>${adet}</td>
+      </tr>`;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('sectionModalBody').innerHTML = html;
+  new bootstrap.Modal(document.getElementById('sectionModal')).show();
+}
+
+function showProductsInSameSection(section) {
+  const rows = stockData.filter(r => r[4] === section);
+  if (rows.length === 0) {
+    document.getElementById('sectionModalBody').innerHTML = `<div class="alert alert-info">"${section}" içinde başka ürün yok.</div>`;
+    return;
+  }
+
+  let html = `<h5>${section} bölümündeki ürünler</h5>`;
+  rows.forEach(r => {
+    const sku = r[0];
+    html += `
+      <div class="border rounded p-2 mb-2">
+        <strong>SKU:</strong> ${r[0]}<br/>
+        <strong>EAN:</strong> ${r[1]}<br/>
+        <strong>Ürün:</strong> ${r[2]}<br/>
+        <strong>Lokasyon:</strong> ${r[3]}<br/>
+        <strong>Adet:</strong> ${r[5]}<br/>
+        <a href="https://www.boyner.com.tr/search?q=${sku.slice(0, -3)}" target="_blank" class="btn btn-sm btn-success mt-1">Online</a>
+      </div>
+    `;
+  });
+
+  document.getElementById('sectionModalBody').innerHTML = html;
+}
+
+loadStockData();
+loadData();
+</script>
+
+</body>
+</html>
