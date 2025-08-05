@@ -3,244 +3,257 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Model Arama</title>
+<title>Model Arama - Alışveriş Stili</title>
 <style>
-  /* Genel sıfırlama ve temel stiller */
-  * {
-    box-sizing: border-box;
-  }
   body {
-    margin: 0;
-    min-height: 100vh;
+    margin: 0; padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
-    color: #2e3a59;
+    background: #fafafa;
+    color: #333;
   }
-
-  /* Container */
   .container {
-    width: 100%;
-    max-width: 960px;
-    background: #fff;
-    padding: 30px 40px 50px;
-    border-radius: 14px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 0 20px 60px;
   }
-
-  /* Başlık */
   h1 {
-    font-weight: 700;
-    font-size: 28px;
-    margin: 0 0 10px 0;
-    color: #344767;
     text-align: center;
-    letter-spacing: 0.03em;
+    font-weight: 800;
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+    color: #222;
+    letter-spacing: 0.06em;
   }
-
-  /* Arama alanı ve butonlar */
+  /* Search area */
   .search-area {
     display: flex;
-    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    gap: 12px;
   }
-
   input[type="text"] {
     flex-grow: 1;
     padding: 14px 20px;
-    font-size: 17px;
-    border: 2px solid #d1d9e6;
-    border-radius: 12px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
   }
   input[type="text"]:focus {
     outline: none;
-    border-color: #4f83cc;
-    box-shadow: 0 0 10px rgba(79,131,204,0.4);
+    border-color: #0077ff;
+    box-shadow: 0 0 8px #0077ff;
   }
-
   button {
-    padding: 14px 28px;
-    font-size: 17px;
-    font-weight: 700;
     border: none;
-    border-radius: 12px;
+    border-radius: 30px;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 1.1rem;
     cursor: pointer;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.12);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 3px 12px rgb(0 0 0 / 0.1);
-    color: white;
     user-select: none;
+    color: white;
   }
   #searchBtn {
-    background-color: #4f83cc;
+    background: linear-gradient(135deg, #0057e7, #0088ff);
   }
   #searchBtn:hover {
-    background-color: #3a68a4;
-    box-shadow: 0 6px 18px rgba(58,104,164,0.5);
+    background: linear-gradient(135deg, #0041b3, #006fcc);
+    box-shadow: 0 10px 24px rgb(0 87 231 / 0.6);
   }
   #clearBtn {
-    background-color: #d93025; /* Kırmızı */
+    background: linear-gradient(135deg, #d93025, #ff3b30);
   }
   #clearBtn:hover {
-    background-color: #a4231b;
-    box-shadow: 0 6px 18px rgba(164,35,27,0.6);
+    background: linear-gradient(135deg, #a4231b, #cc2b29);
+    box-shadow: 0 10px 24px rgb(217 48 37 / 0.7);
   }
 
-  /* Kartlar için container */
+  /* Grid of cards */
   #cardsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
   }
 
-  /* Her bir ürün kartı */
+  /* Product card */
   .product-card {
-    background: #f9fbff;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    padding: 20px 24px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    cursor: default;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.08);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   .product-card:hover {
-    box-shadow: 0 8px 24px rgba(79,131,204,0.3);
-    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgb(0 0 0 / 0.15);
+    transform: translateY(-6px);
   }
-
-  .product-card .title {
-    font-weight: 700;
-    font-size: 18px;
-    color: #344767;
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #eaeaea url('https://via.placeholder.com/300x180?text=No+Image') center center no-repeat;
   }
-  .product-card .desc {
-    font-size: 15px;
-    color: #526288;
-    min-height: 42px;
-  }
-  .product-card .info {
-    font-size: 14px;
-    color: #394867;
-  }
-
-  .product-card .btn-group {
-    margin-top: auto;
+  .product-info {
+    padding: 18px 22px 26px;
     display: flex;
+    flex-direction: column;
     gap: 10px;
+    flex-grow: 1;
   }
-  .btn {
-    padding: 8px 18px;
-    font-weight: 600;
-    font-size: 14px;
-    border-radius: 10px;
-    text-decoration: none;
-    user-select: none;
-    box-shadow: 0 3px 12px rgb(0 0 0 / 0.12);
+  .product-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 0.04em;
+  }
+  .product-desc {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+  }
+  .product-meta {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  .product-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+  }
+  .btn-boyner, .btn-google {
+    flex: 1;
+    text-align: center;
+    background: #0077ff;
     color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 700;
+    padding: 12px 0;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgb(0 119 255 / 0.4);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
   }
   .btn-boyner {
-    background-color: #d93025;
+    background: linear-gradient(135deg, #d93025, #ff3b30);
+    box-shadow: 0 6px 16px rgb(217 48 37 / 0.5);
   }
   .btn-boyner:hover {
-    background-color: #a4231b;
-    box-shadow: 0 6px 20px rgba(164,35,27,0.6);
+    background: linear-gradient(135deg, #a4231b, #cc2b29);
+    box-shadow: 0 10px 28px rgb(217 48 37 / 0.7);
   }
   .btn-google {
-    background-color: #4285f4;
+    background: linear-gradient(135deg, #4285f4, #63a3ff);
   }
   .btn-google:hover {
-    background-color: #3367d6;
-    box-shadow: 0 6px 20px rgba(51,103,214,0.6);
+    background: linear-gradient(135deg, #3367d6, #4e81f7);
+    box-shadow: 0 10px 28px rgb(66 133 244 / 0.7);
   }
 
-  /* Eşleşme yok mesajı */
+  /* No match message */
   #noMatchMessage {
+    margin-top: 60px;
     text-align: center;
-    color: #d93025;
     font-weight: 700;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #d93025;
     user-select: none;
   }
-
   #googleSearchBtn {
-    margin-top: 16px;
-    background-color: #4285f4;
+    margin-top: 18px;
+    background: #4285f4;
     color: white;
     border: none;
-    padding: 12px 28px;
-    font-size: 17px;
+    padding: 14px 38px;
+    font-size: 1.1rem;
     font-weight: 700;
-    border-radius: 12px;
+    border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(66,133,244,0.6);
+    box-shadow: 0 10px 28px rgb(66 133 244 / 0.7);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
   }
   #googleSearchBtn:hover {
-    background-color: #3367d6;
-    box-shadow: 0 8px 24px rgba(51,103,214,0.8);
+    background: #3367d6;
+    box-shadow: 0 14px 36px rgb(51 103 214 / 0.9);
   }
 
-  /* Responsive */
-  @media (max-width: 720px) {
+  @media (max-width: 600px) {
     .search-area {
       flex-direction: column;
-      gap: 12px;
     }
     button, input[type="text"] {
       width: 100%;
     }
     #cardsContainer {
       grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .product-image {
+      height: 140px;
     }
   }
 </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Model Arama</h1>
-    <div class="search-area">
-      <input type="text" id="searchInput" placeholder="Model numarası girin...">
-      <button id="searchBtn" onclick="fetchAndSearch()">Ara</button>
-      <button id="clearBtn" onclick="clearPage()">Temizle</button>
-    </div>
-
-    <div id="cardsContainer"></div>
-
-    <div id="noMatchMessage" style="display:none;">
-      Eşleşme bulunamadı
-      <br>
-      <button id="googleSearchBtn">Google'da Ara</button>
-    </div>
+<div class="container">
+  <h1>Model Arama</h1>
+  <div class="search-area">
+    <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
+    <button id="searchBtn">Ara</button>
+    <button id="clearBtn">Temizle</button>
   </div>
 
-<script>
-  function fetchAndSearch() {
-    const inputElem = document.getElementById('searchInput');
-    const input = inputElem.value.trim().toUpperCase();
-    const cardsContainer = document.getElementById('cardsContainer');
-    const noMatchDiv = document.getElementById('noMatchMessage');
-    const googleBtn = document.getElementById('googleSearchBtn');
+  <div id="cardsContainer"></div>
 
+  <div id="noMatchMessage" style="display:none;">
+    Eşleşme bulunamadı
+    <br />
+    <button id="googleSearchBtn">Google'da Ara</button>
+  </div>
+</div>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const cardsContainer = document.getElementById('cardsContainer');
+  const noMatchMessage = document.getElementById('noMatchMessage');
+  const googleSearchBtn = document.getElementById('googleSearchBtn');
+
+  // Enter tuşu ile arama
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      fetchAndSearch();
+    }
+  });
+
+  searchBtn.onclick = fetchAndSearch;
+  clearBtn.onclick = clearPage;
+
+  googleSearchBtn.onclick = () => {
+    const query = encodeURIComponent(searchInput.value.trim());
+    if (query) {
+      window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
+    }
+  };
+
+  function fetchAndSearch() {
+    const input = searchInput.value.trim().toUpperCase();
     cardsContainer.innerHTML = '';
-    noMatchDiv.style.display = 'none';
+    noMatchMessage.style.display = 'none';
 
     if (!input) return;
 
     fetch('model.txt')
-      .then(response => response.text())
+      .then(res => res.text())
       .then(text => {
         const lines = text.trim().split('\n');
         const data = lines.slice(1).map(line => {
@@ -255,19 +268,14 @@
 
         const scoredResults = data.map(row => {
           const model = row.Model.toUpperCase();
-          let matchScore = 0;
+          let score = 0;
+          if (model === input) score = 100;
+          else if (model.includes(input)) score = Math.round((input.length / model.length) * 100);
+          return {...row, Uyum: score};
+        }).filter(r => r.Uyum > 0);
 
-          if (model === input) {
-            matchScore = 100;
-          } else if (model.includes(input)) {
-            matchScore = Math.round((input.length / model.length) * 100);
-          }
-
-          return { ...row, Uyum: matchScore };
-        }).filter(row => row.Uyum > 0);
-
-        if (scoredResults.length > 0) {
-          scoredResults.sort((a, b) => b.Uyum - a.Uyum);
+        if (scoredResults.length) {
+          scoredResults.sort((a,b) => b.Uyum - a.Uyum);
 
           scoredResults.forEach(row => {
             const malzemeKodu = row.Malzeme;
@@ -275,42 +283,38 @@
             const boynerUrl = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
             const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
 
+            // Placeholder image kullanıyoruz, isterseniz model bazlı özel resim ekleyebilirsiniz
             const card = document.createElement('div');
             card.classList.add('product-card');
             card.innerHTML = `
-              <div class="title">${row.Model} <span style="color:#4f83cc;">%${row.Uyum}</span></div>
-              <div class="desc">${row.Tanım}</div>
-              <div class="info"><strong>Malzeme:</strong> ${row.Malzeme}</div>
-              <div class="info"><strong>Barkod:</strong> ${row.Barkod}</div>
-              <div class="btn-group">
-                <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
-                <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+              <img class="product-image" src="https://via.placeholder.com/300x180?text=${encodeURIComponent(row.Model)}" alt="${row.Model}" />
+              <div class="product-info">
+                <div class="product-title">${row.Model} <span style="color:#0077ff;font-weight:700;">%${row.Uyum}</span></div>
+                <div class="product-desc">${row.Tanım}</div>
+                <div class="product-meta"><strong>Malzeme:</strong> ${row.Malzeme}</div>
+                <div class="product-meta"><strong>Barkod:</strong> ${row.Barkod}</div>
+                <div class="product-actions">
+                  <a class="btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
+                  <a class="btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+                </div>
               </div>
             `;
             cardsContainer.appendChild(card);
           });
         } else {
-          noMatchDiv.style.display = 'block';
-
-          googleBtn.onclick = () => {
-            const query = encodeURIComponent(inputElem.value.trim());
-            if (query) {
-              window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
-            }
-          };
+          noMatchMessage.style.display = 'block';
         }
       })
-      .catch(error => {
-        console.error('Veri alınamadı:', error);
+      .catch(err => {
+        console.error('Hata:', err);
       });
   }
 
   function clearPage() {
-    const inputElem = document.getElementById('searchInput');
-    inputElem.value = '';
-    document.getElementById('cardsContainer').innerHTML = '';
-    document.getElementById('noMatchMessage').style.display = 'none';
-    inputElem.focus();
+    searchInput.value = '';
+    cardsContainer.innerHTML = '';
+    noMatchMessage.style.display = 'none';
+    searchInput.focus();
   }
 </script>
 
