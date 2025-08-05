@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Model Arama</title>
 <style>
+  /* Genel sıfırlama ve temel stiller */
   * {
     box-sizing: border-box;
   }
@@ -19,6 +20,8 @@
     padding: 40px 20px;
     color: #2e3a59;
   }
+
+  /* Container */
   .container {
     width: 100%;
     max-width: 960px;
@@ -30,6 +33,8 @@
     flex-direction: column;
     gap: 36px;
   }
+
+  /* Başlık */
   h1 {
     font-weight: 700;
     font-size: 28px;
@@ -38,10 +43,13 @@
     text-align: center;
     letter-spacing: 0.03em;
   }
+
+  /* Arama alanı ve butonlar */
   .search-area {
     display: flex;
     gap: 16px;
   }
+
   input[type="text"] {
     flex-grow: 1;
     padding: 14px 20px;
@@ -55,6 +63,7 @@
     border-color: #4f83cc;
     box-shadow: 0 0 10px rgba(79,131,204,0.4);
   }
+
   button {
     padding: 14px 28px;
     font-size: 17px;
@@ -75,79 +84,56 @@
     box-shadow: 0 6px 18px rgba(58,104,164,0.5);
   }
   #clearBtn {
-    background-color: #a3aab7;
+    background-color: #d93025; /* Kırmızı */
   }
   #clearBtn:hover {
-    background-color: #7e8494;
-    box-shadow: 0 6px 18px rgba(126,132,148,0.5);
-  }
-  #noMatchMessage {
-    text-align: center;
-    color: #d93025;
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 20px;
-    user-select: none;
-  }
-  #googleSearchBtn {
-    margin-top: 16px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    font-size: 17px;
-    font-weight: 700;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(66,133,244,0.6);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  #googleSearchBtn:hover {
-    background-color: #3367d6;
-    box-shadow: 0 8px 24px rgba(51,103,214,0.8);
+    background-color: #a4231b;
+    box-shadow: 0 6px 18px rgba(164,35,27,0.6);
   }
 
-  /* Yeni: kartlar için container ve kart stilleri */
-  .cards-container {
+  /* Kartlar için container */
+  #cardsContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
     gap: 20px;
   }
-  .card {
+
+  /* Her bir ürün kartı */
+  .product-card {
     background: #f9fbff;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 20px 24px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: default;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
-  .card:hover {
+  .product-card:hover {
     box-shadow: 0 8px 24px rgba(79,131,204,0.3);
     transform: translateY(-3px);
   }
-  .card-header {
+
+  .product-card .title {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     color: #344767;
-    margin-bottom: 12px;
   }
-  .card-info {
+  .product-card .desc {
+    font-size: 15px;
+    color: #526288;
+    min-height: 42px;
+  }
+  .product-card .info {
     font-size: 14px;
     color: #394867;
-    margin-bottom: 6px;
   }
-  .match-score {
-    color: #4f83cc;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-  .btn-group {
+
+  .product-card .btn-group {
+    margin-top: auto;
     display: flex;
     gap: 10px;
-    margin-top: auto;
   }
   .btn {
     padding: 8px 18px;
@@ -178,6 +164,34 @@
     box-shadow: 0 6px 20px rgba(51,103,214,0.6);
   }
 
+  /* Eşleşme yok mesajı */
+  #noMatchMessage {
+    text-align: center;
+    color: #d93025;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    user-select: none;
+  }
+
+  #googleSearchBtn {
+    margin-top: 16px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(66,133,244,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #googleSearchBtn:hover {
+    background-color: #3367d6;
+    box-shadow: 0 8px 24px rgba(51,103,214,0.8);
+  }
+
   /* Responsive */
   @media (max-width: 720px) {
     .search-area {
@@ -187,9 +201,7 @@
     button, input[type="text"] {
       width: 100%;
     }
-  }
-  @media (max-width: 600px) {
-    .cards-container {
+    #cardsContainer {
       grid-template-columns: 1fr;
     }
   }
@@ -205,7 +217,7 @@
       <button id="clearBtn" onclick="clearPage()">Temizle</button>
     </div>
 
-    <div class="cards-container" id="cardsContainer" style="display:none;"></div>
+    <div id="cardsContainer"></div>
 
     <div id="noMatchMessage" style="display:none;">
       Eşleşme bulunamadı
@@ -223,7 +235,6 @@
     const googleBtn = document.getElementById('googleSearchBtn');
 
     cardsContainer.innerHTML = '';
-    cardsContainer.style.display = 'none';
     noMatchDiv.style.display = 'none';
 
     if (!input) return;
@@ -265,13 +276,12 @@
             const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
 
             const card = document.createElement('div');
-            card.className = 'card';
+            card.classList.add('product-card');
             card.innerHTML = `
-              <div class="match-score">%${row.Uyum} Uyum</div>
-              <div class="card-header">${row.Model}</div>
-              <div class="card-info"><strong>Tanım:</strong> ${row.Tanım}</div>
-              <div class="card-info"><strong>Malzeme:</strong> ${row.Malzeme}</div>
-              <div class="card-info"><strong>Barkod:</strong> ${row.Barkod}</div>
+              <div class="title">${row.Model} <span style="color:#4f83cc;">%${row.Uyum}</span></div>
+              <div class="desc">${row.Tanım}</div>
+              <div class="info"><strong>Malzeme:</strong> ${row.Malzeme}</div>
+              <div class="info"><strong>Barkod:</strong> ${row.Barkod}</div>
               <div class="btn-group">
                 <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
                 <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
@@ -279,8 +289,6 @@
             `;
             cardsContainer.appendChild(card);
           });
-
-          cardsContainer.style.display = 'grid';
         } else {
           noMatchDiv.style.display = 'block';
 
@@ -300,7 +308,6 @@
   function clearPage() {
     const inputElem = document.getElementById('searchInput');
     inputElem.value = '';
-    document.getElementById('cardsContainer').style.display = 'none';
     document.getElementById('cardsContainer').innerHTML = '';
     document.getElementById('noMatchMessage').style.display = 'none';
     inputElem.focus();
