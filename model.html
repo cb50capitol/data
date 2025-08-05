@@ -5,149 +5,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Model Arama</title>
 <style>
-  /* Reset ve temel stiller */
+  /* Temel reset */
   * {
     box-sizing: border-box;
   }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fafafa;
+    background: #f7f9fc;
     margin: 0;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #222;
+    color: #2c3e50;
   }
 
-  /* Arama alanı ve butonlar kapsayıcı */
+  /* Arama alanı */
   .search-wrapper {
-    max-width: 450px;
+    max-width: 480px;
     width: 100%;
     display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 36px;
   }
 
   #searchInput {
     flex: 1;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    transition: border-color 0.25s;
+    padding: 14px 18px;
+    font-size: 17px;
+    border: 2px solid #d1d9e6;
+    border-radius: 8px;
+    background: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
   #searchInput:focus {
-    border-color: #0b79d0;
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74,144,226,0.4);
     outline: none;
   }
 
+  /* Butonlar */
   button {
-    padding: 12px 18px;
+    padding: 14px 24px;
     font-size: 16px;
     font-weight: 600;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    user-select: none;
   }
   #searchBtn {
-    background-color: #0b79d0;
+    background-color: #4a90e2;
     color: white;
   }
   #searchBtn:hover {
-    background-color: #095a9d;
+    background-color: #357ABD;
+    box-shadow: 0 4px 12px rgba(53,122,189,0.4);
   }
   #clearBtn {
-    background-color: #e0e0e0;
-    color: #444;
+    background-color: #bdc3c7;
+    color: #2c3e50;
   }
   #clearBtn:hover {
-    background-color: #c7c7c7;
+    background-color: #95a5a6;
+    box-shadow: 0 4px 10px rgba(149,165,166,0.4);
   }
 
-  /* Tablo stili */
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 900px;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-  }
-
-  thead {
-    background: #0b79d0;
-    color: white;
-  }
-  th, td {
-    padding: 14px 20px;
-    font-size: 14px;
-    text-align: left;
-  }
-  tbody tr:nth-child(even) {
-    background: #f9f9f9;
-  }
-  tbody tr:hover {
-    background: #e6f0fb;
-  }
-
-  /* Butonlar tablo içinde */
-  .btn {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 13px;
-    border-radius: 4px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease;
-  }
-  .btn-boyner {
-    background-color: #db4437;
-  }
-  .btn-boyner:hover {
-    background-color: #a33328;
-  }
-  .btn-google {
-    background-color: #4285f4;
-  }
-  .btn-google:hover {
-    background-color: #3367d6;
-  }
-
-  /* Eşleşme yok mesajı */
-  #noMatchMessage {
-    max-width: 450px;
-    background: #fff3f3;
-    color: #cc3333;
-    padding: 25px 20px;
-    border-radius: 6px;
-    font-weight: 700;
-    text-align: center;
-    box-shadow: 0 2px 6px rgb(204 51 51 / 0.15);
-    display: none;
-  }
-
-  #googleSearchBtn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #4285f4;
-    color: white;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 15px;
-    transition: background-color 0.3s;
-  }
-  #googleSearchBtn:hover {
-    background-color: #3367d6;
-  }
-
+  /* Responsive butonlar */
   @media (max-width: 600px) {
     .search-wrapper {
       flex-direction: column;
@@ -155,6 +81,113 @@
     button {
       width: 100%;
     }
+  }
+
+  /* Tablo kapsayıcı yatay scroll */
+  .table-container {
+    width: 100%;
+    max-width: 900px;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  }
+
+  /* Tablo */
+  table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+    min-width: 700px;
+  }
+
+  thead tr {
+    background: transparent;
+  }
+  th {
+    font-weight: 700;
+    font-size: 15px;
+    color: #34495e;
+    padding: 14px 20px;
+    text-align: left;
+  }
+
+  tbody tr {
+    background: white;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+    border-radius: 12px;
+    transition: box-shadow 0.3s;
+  }
+  tbody tr:hover {
+    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.25);
+  }
+
+  td {
+    padding: 15px 20px;
+    font-size: 14px;
+    vertical-align: middle;
+    border: none;
+  }
+
+  /* Butonlar tablo içinde */
+  .btn {
+    display: inline-block;
+    padding: 7px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .btn-boyner {
+    background-color: #db4437;
+  }
+  .btn-boyner:hover {
+    background-color: #b73328;
+    box-shadow: 0 6px 16px rgba(183, 51, 40, 0.5);
+  }
+  .btn-google {
+    background-color: #4285f4;
+  }
+  .btn-google:hover {
+    background-color: #3367d6;
+    box-shadow: 0 6px 16px rgba(51, 103, 214, 0.5);
+  }
+
+  /* Eşleşme yok mesajı */
+  #noMatchMessage {
+    max-width: 480px;
+    background: #ffeded;
+    color: #cc3a3a;
+    padding: 28px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 6px 16px rgb(204 58 58 / 0.18);
+    display: none;
+    user-select: none;
+  }
+
+  #googleSearchBtn {
+    margin-top: 18px;
+    padding: 12px 26px;
+    background-color: #4285f4;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 6px 16px rgb(66 133 244 / 0.45);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  #googleSearchBtn:hover {
+    background-color: #3367d6;
+    box-shadow: 0 8px 20px rgba(51, 103, 214, 0.7);
   }
 </style>
 </head>
@@ -166,19 +199,21 @@
     <button id="clearBtn" onclick="clearPage()">Temizle</button>
   </div>
 
-  <table id="resultTable" style="display:none;">
-    <thead>
-      <tr>
-        <th>Uyum</th>
-        <th>Model</th>
-        <th>Tanım</th>
-        <th>Malzeme</th>
-        <th>Barkod</th>
-        <th>Online</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <div class="table-container">
+    <table id="resultTable" style="display:none;">
+      <thead>
+        <tr>
+          <th>Uyum</th>
+          <th>Model</th>
+          <th>Tanım</th>
+          <th>Malzeme</th>
+          <th>Barkod</th>
+          <th>Online</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
   <div id="noMatchMessage">
     Eşleşme bulunamadı
