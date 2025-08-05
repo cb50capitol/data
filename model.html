@@ -16,7 +16,7 @@
     }
 
     .container {
-      max-width: 620px;
+      max-width: 500px;
       width: 100%;
       background: #fff;
       border-radius: 16px;
@@ -31,27 +31,21 @@
       color: #344767;
     }
 
-    .search-area {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
     .input-wrapper {
       position: relative;
       width: 100%;
-      max-width: 560px;
-      margin-bottom: 14px;
+      margin: 0 auto 24px;
     }
 
     input[type="text"] {
       width: 100%;
-      padding: 12px 44px 12px 18px;
+      padding: 12px 44px 12px 16px;
       font-size: 1rem;
       border: 1.5px solid #cbd5e1;
-      border-radius: 22px;
+      border-radius: 24px;
       color: #344767;
       transition: border-color 0.3s ease;
+      display: block;
     }
 
     input[type="text"]:focus {
@@ -68,6 +62,7 @@
       border: none;
       background: transparent;
       cursor: pointer;
+      padding: 0;
     }
 
     #inputSearchBtn svg {
@@ -81,46 +76,20 @@
       fill: #5a78d6;
     }
 
-    .button-group {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 560px;
-    }
-
-    .button-group button {
-      flex: 1;
-      padding: 12px 0;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      background-color: #f4cccc;
-      color: #76332e;
-      transition: 0.3s ease;
-    }
-
-    .button-group button:hover {
-      background-color: #e79a95;
-      color: white;
-    }
-
     #results {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
       gap: 16px;
-      margin-top: 30px;
     }
 
     .card {
       background: #fefefe;
       border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       padding: 18px 22px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     .score {
@@ -183,14 +152,14 @@
 
     #noMatchMessage {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 16px;
       font-weight: 600;
       color: #d04f48;
     }
 
     #googleSearchBtn {
-      margin-top: 12px;
+      margin-top: 10px;
       padding: 10px 20px;
       background-color: #7f9cf5;
       color: white;
@@ -211,19 +180,13 @@
   <div class="container">
     <h1>Model Arama</h1>
 
-    <div class="search-area">
-      <div class="input-wrapper">
-        <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
-        <button id="inputSearchBtn" aria-label="Ara">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="button-group">
-        <button id="clearBtn">Temizle</button>
-      </div>
+    <div class="input-wrapper">
+      <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
+      <button id="inputSearchBtn" aria-label="Ara">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
+        </svg>
+      </button>
     </div>
 
     <div id="results"></div>
@@ -237,7 +200,6 @@
   <script>
     const input = document.getElementById('searchInput');
     const inputSearchBtn = document.getElementById('inputSearchBtn');
-    const clearBtn = document.getElementById('clearBtn');
     const results = document.getElementById('results');
     const noMatch = document.getElementById('noMatchMessage');
     const googleBtn = document.getElementById('googleSearchBtn');
@@ -246,13 +208,6 @@
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') performSearch();
     });
-
-    clearBtn.onclick = () => {
-      input.value = '';
-      results.innerHTML = '';
-      noMatch.style.display = 'none';
-      input.focus();
-    };
 
     function performSearch() {
       const value = input.value.trim().toUpperCase();
