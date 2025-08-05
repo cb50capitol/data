@@ -60,16 +60,18 @@
     color: white;
   }
   #searchBtn {
-    background-color: #4a90e2;
+    background-color: #a3c4f3; /* pastel mavi */
+    color: #2a4d8f;
   }
   #searchBtn:hover {
-    background-color: #357ABD;
+    background-color: #7ca1d9;
   }
   #clearBtn {
-    background-color: #e94e4e;
+    background-color: #f5a3a3; /* pastel kırmızı */
+    color: #8f2a2a;
   }
   #clearBtn:hover {
-    background-color: #b63737;
+    background-color: #d97c7c;
   }
 
   #cardsContainer {
@@ -133,16 +135,18 @@
     transition: background-color 0.25s ease;
   }
   .btn-boyner {
-    background-color: #e94e4e;
+    background-color: #f5a3a3;
+    color: #8f2a2a;
   }
   .btn-boyner:hover {
-    background-color: #b63737;
+    background-color: #d97c7c;
   }
   .btn-google {
-    background-color: #4a90e2;
+    background-color: #a3c4f3;
+    color: #2a4d8f;
   }
   .btn-google:hover {
-    background-color: #357abd;
+    background-color: #7ca1d9;
   }
 
   #noMatchMessage {
@@ -170,16 +174,33 @@
     background-color: #357abd;
   }
 
+  /* Mobil düzenlemeleri */
   @media (max-width: 600px) {
+    .container {
+      width: 90%;
+      margin: 36px auto 60px;
+    }
     .search-area {
-      flex-direction: column;
+      max-width: 100%;
+      justify-content: center;
+      gap: 8px;
     }
-    button, input[type="text"] {
-      width: 100%;
+    input[type="text"] {
+      flex-grow: 1;
+      max-width: 60%;
+      margin: 0 auto;
+      display: block;
+      border-radius: 24px;
+      font-size: 0.95rem;
     }
-    #cardsContainer {
-      grid-template-columns: 1fr;
-      gap: 18px;
+    button {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border-radius: 24px;
+      flex-grow: 0;
+    }
+    #searchBtn, #clearBtn {
+      min-width: 90px;
     }
   }
 </style>
