@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -224,6 +223,14 @@ tbody tr:nth-child(even) {
     </div>
 
     <script>
+        // Mobil cihazlarda erişimi engelleyen kod:
+        if (window.innerWidth <= 768) {
+            document.body.innerHTML = `
+                <div style="display:flex; height:100vh; justify-content:center; align-items:center; text-align:center; padding:20px; font-family:sans-serif;">
+                    <h2>Bu sayfaya mobil cihazlardan erişim desteklenmemektedir.<br/>Lütfen masaüstü bilgisayarınızdan tekrar deneyin.</h2>
+                </div>`;
+        }
+
         let allData = [];
 
         const dropZone = document.getElementById('dropZone');
@@ -287,16 +294,15 @@ tbody tr:nth-child(even) {
                 });
             });
 
-        Promise.all(fileReadPromises)
-    .then(loadedFiles => {
-        const successfulFiles = loadedFiles.filter(name => name);
-        if (successfulFiles.length > 0) {
-            showModal(`${successfulFiles.length} adet dosya başarıyla yüklendi.`);
-        } else {
-            showModal("Geçerli Excel dosyası yüklenmedi.");
-        }
-    })
-
+            Promise.all(fileReadPromises)
+                .then(loadedFiles => {
+                    const successfulFiles = loadedFiles.filter(name => name);
+                    if (successfulFiles.length > 0) {
+                        showModal(`${successfulFiles.length} adet dosya başarıyla yüklendi.`);
+                    } else {
+                        showModal("Geçerli Excel dosyası yüklenmedi.");
+                    }
+                });
         }
 
         function searchExcel() {
@@ -375,15 +381,6 @@ tbody tr:nth-child(even) {
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
-
-if (window.innerWidth <= 768) {  // 768px altı genelde tablet ve mobil
-    document.body.innerHTML = `
-        <div style="display:flex; height:100vh; justify-content:center; align-items:center; text-align:center; padding:20px; font-family:sans-serif;">
-            <h2>Bu sayfaya mobil cihazlardan erişim desteklenmemektedir.<br/>Lütfen masaüstü bilgisayarınızdan tekrar deneyin.</h2>
-        </div>`;
-}
-
-        
     </script>
 
 </body>
