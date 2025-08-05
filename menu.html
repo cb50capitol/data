@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Mobil Menü</title>
+
+  <!-- Önbelleği engelleyen meta etiketleri -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -96,19 +102,16 @@
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     }
 
+    .envanter { background: linear-gradient(135deg, #f6d365 , #fda085); }
+    .tks { background: linear-gradient(135deg, #c94b4b , #4b134f); }
+    .ean { background: linear-gradient(135deg, #8360c3 , #2ebf91); }
+    .model { background: linear-gradient(135deg, #dd5e89 , #f7bb97); }
 
-.envanter { background: linear-gradient(135deg, #f6d365 , #fda085); }     /* 🔒 Korundu */
-.tks { background: linear-gradient(135deg, #c94b4b , #4b134f); }         /* 🔒 Korundu */
-.ean { background: linear-gradient(135deg, #8360c3 , #2ebf91); }         /* 🔒 Korundu */
-.model { background: linear-gradient(135deg, #dd5e89 , #f7bb97); }       /* 🔒 Korundu */
-
-.eticaret { background: linear-gradient(135deg, #ff9966 , #ff5e62); }    /* Mandalina - mercan (enerjik retro) */
-.mipaket { background: linear-gradient(135deg, #00c9ff , #92fe9d); }     /* Su - nane (ferah ve canlı) */
-.paketara { background: linear-gradient(135deg, #f77062 , #fe5196); }    /* Somon - fuşya (çarpıcı ve retro) */
-.iptal { background: linear-gradient(135deg, #614385 , #516395); }       /* Mor - lacivert (soğuk, ciddi hava) */
-.ptc { background: linear-gradient(135deg, #eecda3 , #ef629f); }         /* Vanilya - pembe (nostaljik ve tatlı) */
-
-
+    .eticaret { background: linear-gradient(135deg, #ff9966 , #ff5e62); }
+    .mipaket { background: linear-gradient(135deg, #00c9ff , #92fe9d); }
+    .paketara { background: linear-gradient(135deg, #f77062 , #fe5196); }
+    .iptal { background: linear-gradient(135deg, #614385 , #516395); }
+    .ptc { background: linear-gradient(135deg, #eecda3 , #ef629f); }
 
     .full-width {
       grid-column: 1 / -1;
@@ -201,10 +204,7 @@
       <span>Paket Ara</span>
       <small>Windows</small>
     </a>
- 
-    
   </div>
-
 
   <script>
     document.addEventListener('contextmenu', function (e) {
