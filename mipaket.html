@@ -350,7 +350,8 @@ body.dark-mode .top-center {
   </div>
 <script>
 
-  if (isMobile) {
+ <script>
+    if (isMobile) {
   document.body.innerHTML = `
     <div style="display:flex; flex-direction: column; height: 100vh; justify-content: flex-start; align-items: center; text-align: center; padding-top: 60px; font-family: sans-serif; color: #444;">
       <div style="font-size: 60px; margin-bottom: 20px;">📢</div>
@@ -359,7 +360,7 @@ body.dark-mode .top-center {
       </h2>
     </div>`;
   throw new Error("Mobil cihaz erişimi engellendi.");
-}
+}</script>
     const siparisInput = document.getElementById('siparisId');
     const faturaInput = document.getElementById('faturaId');
     const recordsBody = document.getElementById('recordsBody');
