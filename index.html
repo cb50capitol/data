@@ -492,7 +492,7 @@
     <div class="history">
       <div class="history-header">
   <button id="refSelectorButton" class="ref-selector-button"><span class="log">LOG</span><span class="in">'in</span></button>
-  <button id="ptcButton" class="clear-button" style="background:#17a2b8;">PTC</button>
+
   <button id="clearButton" class="clear-button">Clear</button>
 </div>
       </div>
@@ -530,9 +530,6 @@
 
     title.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
     refSelectorButton.addEventListener('click', showRefSelector);
-    document.getElementById('ptcButton').addEventListener('click', () => {
-  window.location.href = 'https://cb50capitol.vercel.app/ptc.html';
-});
 
 
     function stripTxtExtension(n) {return n.replace(/\.txt$/i, '');}
