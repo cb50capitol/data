@@ -44,28 +44,32 @@
       text-align: left;
     }
 
-    .online-btn {
+    .btn {
       padding: 6px 10px;
-      background-color: #007bff;
       color: white;
       border: none;
       border-radius: 4px;
       text-decoration: none;
       font-size: 13px;
       display: inline-block;
+      cursor: pointer;
     }
 
-    .online-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .google-btn {
+    .btn-boyner {
       background-color: #db4437;
-      margin-left: 5px;
+      margin-right: 5px;
     }
 
-    .google-btn:hover {
+    .btn-boyner:hover {
       background-color: #a33328;
+    }
+
+    .btn-google {
+      background-color: #4285F4;
+    }
+
+    .btn-google:hover {
+      background-color: #3367d6;
     }
 
     @media (max-width: 600px) {
@@ -149,8 +153,8 @@
                 <td>${row.Malzeme}</td>
                 <td>${row.Barkod}</td>
                 <td>
-                  <a class="online-btn" href="${boynerUrl}" target="_blank">Boyner</a>
-                  <a class="online-btn google-btn" href="${googleUrl}" target="_blank">Google</a>
+                  <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
+                  <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
                 </td>
               `;
               tbody.appendChild(tr);
