@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -503,7 +504,7 @@ document.getElementById('deleteRowsBtn').addEventListener('click', () => {
     const faturaIdsToDelete = Array.from(checkboxes).map(chk => chk.getAttribute('data-id'));
     
     records = records.filter(r => !faturaIdsToDelete.includes(r.fatura));
-    localStorage.setItem('kargoRecords', JSON.stringify(records));
+localStorage.setItem(pageKey, JSON.stringify(records));
 
     document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
     renderTable(records);
