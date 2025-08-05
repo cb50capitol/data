@@ -3,270 +3,294 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Model Arama - Minimal Kartlı Tasarım</title>
+<title>Model Arama</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
+  /* Temel sıfırlama ve font */
+  * {
+    box-sizing: border-box;
+  }
   body {
-    margin: 0; padding: 0;
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fafafa;
-    color: #333;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 15px 80px;
+    color: #2e3a59;
   }
+
   .container {
-    max-width: 840px;
-    margin: 36px auto 60px;
-    padding: 0 16px;
+    width: 100%;
+    max-width: 620px;
+    background: #ffffff;
+    padding: 30px 24px 48px;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
   }
+
   h1 {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0 0 14px 0;
+    color: #344767;
     text-align: center;
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 24px;
-    color: #222;
+    letter-spacing: 0.02em;
   }
+
+  /* Arama alanı ve butonlar */
   .search-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-wrapper {
+    position: relative;
+    width: 100%;
     max-width: 560px;
-    margin: 0 auto 12px;
+    margin-bottom: 14px;
   }
   input[type="text"] {
     width: 100%;
-    padding: 10px 16px;
+    padding: 12px 44px 12px 18px;
     font-size: 1rem;
-    border: 1.8px solid #ccc;
-    border-radius: 20px;
-    transition: border-color 0.25s ease;
-    color: #222;
-    box-sizing: border-box;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 22px;
+    color: #344767;
+    transition: border-color 0.3s ease;
   }
   input[type="text"]:focus {
     outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 6px rgba(74,144,226,0.3);
+    border-color: #7f9cf5;
+    box-shadow: 0 0 8px rgba(127,156,245,0.5);
   }
+
+  .input-wrapper button#inputSearchBtn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-wrapper button#inputSearchBtn svg {
+    fill: #7f9cf5;
+    width: 20px;
+    height: 20px;
+    transition: fill 0.25s ease;
+  }
+  .input-wrapper button#inputSearchBtn:hover svg {
+    fill: #5a78d6;
+  }
+
   .button-group {
     display: flex;
+    gap: 16px;
     justify-content: center;
-    gap: 14px;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 560px;
   }
-  button {
+  .button-group button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
     border-radius: 20px;
-    padding: 10px 24px;
-    font-weight: 600;
-    font-size: 1rem;
     cursor: pointer;
     user-select: none;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.08);
-    transition: background-color 0.25s ease;
-    min-width: 120px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   #searchBtn {
-    background-color: #a3c4f3; /* pastel mavi */
-    color: #2a4d8f;
+    background-color: #a3bffa; /* pastel mavi */
+    color: #344767;
   }
   #searchBtn:hover {
-    background-color: #7ca1d9;
+    background-color: #7f9cf5;
+    box-shadow: 0 6px 12px rgba(127,156,245,0.45);
+    color: white;
   }
   #clearBtn {
-    background-color: #f5a3a3; /* pastel kırmızı */
-    color: #8f2a2a;
+    background-color: #f4cccc; /* pastel kırmızı/pembe */
+    color: #76332e;
   }
   #clearBtn:hover {
-    background-color: #d97c7c;
+    background-color: #e79a95;
+    box-shadow: 0 6px 12px rgba(231,154,149,0.45);
+    color: white;
   }
 
-  #cardsContainer {
+  /* Kartlar için container */
+  #results {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 16px;
   }
 
-  .product-card {
-    background: white;
+  .card {
+    background: #fefefe;
     border-radius: 14px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.07);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
     padding: 18px 22px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     transition: box-shadow 0.3s ease;
   }
-  .product-card:hover {
-    box-shadow: 0 6px 18px rgb(0 0 0 / 0.12);
-  }
-  .product-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .product-compatibility {
-    font-weight: 700;
-    color: #4a90e2;
-    font-size: 0.85rem;
-    margin-left: 8px;
-  }
-  .product-desc {
-    font-size: 0.9rem;
-    color: #555;
-    min-height: 44px;
-    line-height: 1.3;
-  }
-  .product-meta {
-    font-size: 0.85rem;
-    color: #777;
-  }
-  .product-actions {
-    margin-top: auto;
-    display: flex;
-    gap: 12px;
-  }
-  .btn-boyner, .btn-google {
-    flex: 1;
-    padding: 8px 0;
-    border-radius: 16px;
-    text-align: center;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    user-select: none;
-    font-size: 0.9rem;
-    transition: background-color 0.25s ease;
-  }
-  .btn-boyner {
-    background-color: #f5a3a3;
-    color: #8f2a2a;
-  }
-  .btn-boyner:hover {
-    background-color: #d97c7c;
-  }
-  .btn-google {
-    background-color: #a3c4f3;
-    color: #2a4d8f;
-  }
-  .btn-google:hover {
-    background-color: #7ca1d9;
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(127,156,245,0.3);
   }
 
+  .card .score {
+    font-weight: 700;
+    font-size: 14px;
+    color: #7f9cf5;
+  }
+  .card .model {
+    font-weight: 700;
+    font-size: 20px;
+    color: #344767;
+  }
+  .card .description {
+    font-size: 14px;
+    color: #556680;
+  }
+  .card .material,
+  .card .barcode {
+    font-size: 13px;
+    color: #94a3b8;
+  }
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+  .btn {
+    flex: 1;
+    padding: 8px 0;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+  }
+  .btn-boyner {
+    background-color: #d04f48;
+  }
+  .btn-boyner:hover {
+    background-color: #b03e3a;
+  }
+  .btn-google {
+    background-color: #6486d4;
+  }
+  .btn-google:hover {
+    background-color: #506fc1;
+  }
+
+  /* Eşleşme yok mesajı */
   #noMatchMessage {
     text-align: center;
-    margin-top: 44px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #e94e4e;
+    color: #d04f48;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
     user-select: none;
   }
   #googleSearchBtn {
-    margin-top: 14px;
-    background-color: #4a90e2;
+    margin-top: 16px;
+    background-color: #6486d4;
     color: white;
     border: none;
-    padding: 10px 28px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 24px;
+    padding: 12px 28px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 12px;
     cursor: pointer;
-    user-select: none;
-    transition: background-color 0.25s ease;
+    box-shadow: 0 6px 20px rgba(100,134,212,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   #googleSearchBtn:hover {
-    background-color: #357abd;
+    background-color: #506fc1;
+    box-shadow: 0 8px 24px rgba(80,111,193,0.8);
   }
 
-  /* Mobil düzenlemeleri */
-  @media (max-width: 600px) {
-    .container {
-      width: 90%;
-      margin: 36px auto 60px;
-    }
-    .search-area {
-      max-width: 100%;
-      margin-bottom: 0;
-    }
-    input[type="text"] {
-      font-size: 1.1rem;
-      padding: 12px 18px;
-      border-radius: 24px;
-      max-width: 100%;
-      margin: 0 auto;
-      display: block;
-    }
+  /* Responsive */
+  @media (max-width: 480px) {
     .button-group {
-      max-width: 100%;
-      justify-content: center;
       gap: 12px;
-      margin-top: 12px;
     }
-    button {
-      min-width: 130px;
-      font-size: 1rem;
-      padding: 12px 0;
-      border-radius: 24px;
+    .btn-group {
+      flex-direction: column;
+      gap: 10px;
     }
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Model Arama</h1>
-  <div class="search-area">
-    <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
-    <div class="button-group">
-      <button id="searchBtn">Ara</button>
-      <button id="clearBtn">Temizle</button>
+  <div class="container">
+    <h1>Model Arama</h1>
+
+    <div class="search-area">
+      <div class="input-wrapper">
+        <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
+        <button id="inputSearchBtn" aria-label="Ara" title="Ara">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16a6.471 6.471 0 004.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="button-group">
+        <button id="searchBtn">Ara</button>
+        <button id="clearBtn">Temizle</button>
+      </div>
+    </div>
+
+    <div id="results"></div>
+
+    <div id="noMatchMessage" style="display:none;">
+      Eşleşme bulunamadı
+      <br />
+      <button id="googleSearchBtn">Google'da Ara</button>
     </div>
   </div>
 
-  <div id="cardsContainer"></div>
-
-  <div id="noMatchMessage" style="display:none;">
-    Eşleşme bulunamadı
-    <br />
-    <button id="googleSearchBtn">Google'da Ara</button>
-  </div>
-</div>
-
 <script>
-  const searchInput = document.getElementById('searchInput');
+  const inputElem = document.getElementById('searchInput');
   const searchBtn = document.getElementById('searchBtn');
   const clearBtn = document.getElementById('clearBtn');
-  const cardsContainer = document.getElementById('cardsContainer');
-  const noMatchMessage = document.getElementById('noMatchMessage');
-  const googleSearchBtn = document.getElementById('googleSearchBtn');
-
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      performSearch();
-    }
-  });
-
-  searchBtn.onclick = performSearch;
-  clearBtn.onclick = clearSearch;
-
-  googleSearchBtn.onclick = () => {
-    const query = encodeURIComponent(searchInput.value.trim());
-    if (query) {
-      window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
-    }
-  };
+  const inputSearchBtn = document.getElementById('inputSearchBtn');
+  const resultsContainer = document.getElementById('results');
+  const noMatchDiv = document.getElementById('noMatchMessage');
+  const googleBtn = document.getElementById('googleSearchBtn');
 
   function performSearch() {
-    const input = searchInput.value.trim().toUpperCase();
-    cardsContainer.innerHTML = '';
-    noMatchMessage.style.display = 'none';
+    const input = inputElem.value.trim().toUpperCase();
+
+    resultsContainer.innerHTML = '';
+    noMatchDiv.style.display = 'none';
 
     if (!input) return;
 
     fetch('model.txt')
-      .then(res => res.text())
+      .then(response => response.text())
       .then(text => {
         const lines = text.trim().split('\n');
         const data = lines.slice(1).map(line => {
@@ -279,52 +303,74 @@
           };
         });
 
-        const results = data.map(row => {
+        const scoredResults = data.map(row => {
           const model = row.Model.toUpperCase();
-          let score = 0;
-          if (model === input) score = 100;
-          else if (model.includes(input)) score = Math.round((input.length / model.length) * 100);
-          return {...row, Uyum: score};
-        }).filter(r => r.Uyum > 0);
+          let matchScore = 0;
 
-        if (results.length) {
-          results.sort((a,b) => b.Uyum - a.Uyum);
+          if (model === input) {
+            matchScore = 100;
+          } else if (model.includes(input)) {
+            matchScore = Math.round((input.length / model.length) * 100);
+          }
 
-          results.forEach(row => {
+          return { ...row, Uyum: matchScore };
+        }).filter(row => row.Uyum > 0);
+
+        if (scoredResults.length > 0) {
+          scoredResults.sort((a, b) => b.Uyum - a.Uyum);
+
+          scoredResults.forEach(row => {
             const malzemeKodu = row.Malzeme;
             const onlineKodu = malzemeKodu.slice(0, -3);
             const boynerUrl = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
             const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
 
             const card = document.createElement('div');
-            card.classList.add('product-card');
+            card.className = 'card';
+
             card.innerHTML = `
-              <div class="product-title">${row.Model} <span class="product-compatibility">%${row.Uyum}</span></div>
-              <div class="product-desc">${row.Tanım}</div>
-              <div class="product-meta"><strong>Malzeme:</strong> ${row.Malzeme}</div>
-              <div class="product-meta"><strong>Barkod:</strong> ${row.Barkod}</div>
-              <div class="product-actions">
-                <a class="btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
-                <a class="btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+              <div class="score">Uyum: %${row.Uyum}</div>
+              <div class="model">${row.Model}</div>
+              <div class="description">${row.Tanım}</div>
+              <div class="material">Malzeme: ${row.Malzeme}</div>
+              <div class="barcode">Barkod: ${row.Barkod}</div>
+              <div class="btn-group">
+                <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
+                <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
               </div>
             `;
-            cardsContainer.appendChild(card);
+            resultsContainer.appendChild(card);
           });
         } else {
-          noMatchMessage.style.display = 'block';
+          noMatchDiv.style.display = 'block';
+
+          googleBtn.onclick = () => {
+            const query = encodeURIComponent(inputElem.value.trim());
+            if (query) {
+              window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
+            }
+          };
         }
       })
-      .catch(err => {
-        console.error('Hata:', err);
+      .catch(error => {
+        console.error('Veri alınamadı:', error);
       });
   }
 
-  function clearSearch() {
-    searchInput.value = '';
-    cardsContainer.innerHTML = '';
-    noMatchMessage.style.display = 'none';
-    searchInput.focus();
-  }
+  searchBtn.onclick = performSearch;
+  clearBtn.onclick = () => {
+    inputElem.value = '';
+    resultsContainer.innerHTML = '';
+    noMatchDiv.style.display = 'none';
+    inputElem.focus();
+  };
+  inputSearchBtn.onclick = performSearch;
+
+  inputElem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      performSearch();
+    }
+  });
 </script>
 
 </body>
