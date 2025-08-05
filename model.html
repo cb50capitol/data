@@ -5,220 +5,249 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Model Arama</title>
 <style>
-  /* Temel reset */
+  /* Genel sıfırlama ve temel stiller */
   * {
     box-sizing: border-box;
   }
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f7f9fc;
     margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     padding: 40px 20px;
+    color: #2e3a59;
+  }
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 960px;
+    background: #fff;
+    padding: 30px 40px 50px;
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: #2c3e50;
+    gap: 36px;
   }
 
-  /* Arama alanı */
-  .search-wrapper {
-    max-width: 480px;
-    width: 100%;
+  /* Başlık */
+  h1 {
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    color: #344767;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  /* Arama alanı ve butonlar */
+  .search-area {
     display: flex;
-    gap: 12px;
-    margin-bottom: 36px;
+    gap: 16px;
   }
 
-  #searchInput {
-    flex: 1;
-    padding: 14px 18px;
+  input[type="text"] {
+    flex-grow: 1;
+    padding: 14px 20px;
     font-size: 17px;
     border: 2px solid #d1d9e6;
-    border-radius: 8px;
-    background: white;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
-  #searchInput:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 8px rgba(74,144,226,0.4);
+  input[type="text"]:focus {
     outline: none;
+    border-color: #4f83cc;
+    box-shadow: 0 0 10px rgba(79,131,204,0.4);
   }
 
-  /* Butonlar */
   button {
-    padding: 14px 24px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 14px 28px;
+    font-size: 17px;
+    font-weight: 700;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.1);
+    color: white;
     user-select: none;
   }
   #searchBtn {
-    background-color: #4a90e2;
-    color: white;
+    background-color: #4f83cc;
   }
   #searchBtn:hover {
-    background-color: #357ABD;
-    box-shadow: 0 4px 12px rgba(53,122,189,0.4);
+    background-color: #3a68a4;
+    box-shadow: 0 6px 18px rgba(58,104,164,0.5);
   }
   #clearBtn {
-    background-color: #bdc3c7;
-    color: #2c3e50;
+    background-color: #a3aab7;
   }
   #clearBtn:hover {
-    background-color: #95a5a6;
-    box-shadow: 0 4px 10px rgba(149,165,166,0.4);
+    background-color: #7e8494;
+    box-shadow: 0 6px 18px rgba(126,132,148,0.5);
   }
 
-  /* Responsive butonlar */
-  @media (max-width: 600px) {
-    .search-wrapper {
-      flex-direction: column;
-    }
-    button {
-      width: 100%;
-    }
-  }
-
-  /* Tablo kapsayıcı yatay scroll */
-  .table-container {
-    width: 100%;
-    max-width: 900px;
+  /* Tablo kapsayıcı */
+  .table-wrapper {
     overflow-x: auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
   }
 
-  /* Tablo */
   table {
-    border-collapse: separate;
-    border-spacing: 0 10px;
     width: 100%;
-    min-width: 700px;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    min-width: 720px;
   }
 
   thead tr {
     background: transparent;
   }
+
   th {
+    text-align: left;
+    padding: 14px 18px;
     font-weight: 700;
     font-size: 15px;
-    color: #34495e;
-    padding: 14px 20px;
-    text-align: left;
+    color: #526288;
+    letter-spacing: 0.03em;
   }
 
   tbody tr {
-    background: white;
-    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
-    border-radius: 12px;
-    transition: box-shadow 0.3s;
+    background: #f9fbff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
   }
   tbody tr:hover {
-    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.25);
+    box-shadow: 0 8px 24px rgba(79,131,204,0.3);
+    transform: translateY(-3px);
   }
 
   td {
-    padding: 15px 20px;
-    font-size: 14px;
+    padding: 16px 18px;
+    font-size: 15px;
     vertical-align: middle;
-    border: none;
+    color: #394867;
   }
 
-  /* Butonlar tablo içinde */
+  /* Butonlar tablodaki */
+  .btn-group {
+    display: flex;
+    gap: 10px;
+  }
   .btn {
-    display: inline-block;
-    padding: 7px 14px;
-    font-size: 14px;
-    border-radius: 6px;
+    padding: 8px 18px;
     font-weight: 600;
-    color: white;
+    font-size: 14px;
+    border-radius: 10px;
     text-decoration: none;
     user-select: none;
-    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.12);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   .btn-boyner {
-    background-color: #db4437;
+    background-color: #d93025;
   }
   .btn-boyner:hover {
-    background-color: #b73328;
-    box-shadow: 0 6px 16px rgba(183, 51, 40, 0.5);
+    background-color: #a4231b;
+    box-shadow: 0 6px 20px rgba(164,35,27,0.6);
   }
   .btn-google {
     background-color: #4285f4;
   }
   .btn-google:hover {
     background-color: #3367d6;
-    box-shadow: 0 6px 16px rgba(51, 103, 214, 0.5);
+    box-shadow: 0 6px 20px rgba(51,103,214,0.6);
   }
 
   /* Eşleşme yok mesajı */
   #noMatchMessage {
-    max-width: 480px;
-    background: #ffeded;
-    color: #cc3a3a;
-    padding: 28px 24px;
-    border-radius: 10px;
-    font-weight: 700;
     text-align: center;
-    box-shadow: 0 6px 16px rgb(204 58 58 / 0.18);
-    display: none;
+    color: #d93025;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
     user-select: none;
   }
 
   #googleSearchBtn {
-    margin-top: 18px;
-    padding: 12px 26px;
+    margin-top: 16px;
     background-color: #4285f4;
     color: white;
-    border-radius: 8px;
     border: none;
-    cursor: pointer;
+    padding: 12px 28px;
+    font-size: 17px;
     font-weight: 700;
-    font-size: 16px;
-    box-shadow: 0 6px 16px rgb(66 133 244 / 0.45);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(66,133,244,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   #googleSearchBtn:hover {
     background-color: #3367d6;
-    box-shadow: 0 8px 20px rgba(51, 103, 214, 0.7);
+    box-shadow: 0 8px 24px rgba(51,103,214,0.8);
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .search-area {
+      flex-direction: column;
+      gap: 12px;
+    }
+    button, input[type="text"] {
+      width: 100%;
+    }
+    table {
+      min-width: 600px;
+    }
+  }
+  @media (max-width: 480px) {
+    table {
+      min-width: 480px;
+    }
   }
 </style>
 </head>
 <body>
 
-  <div class="search-wrapper">
-    <input type="text" id="searchInput" placeholder="Model numarası girin...">
-    <button id="searchBtn" onclick="fetchAndSearch()">Ara</button>
-    <button id="clearBtn" onclick="clearPage()">Temizle</button>
-  </div>
+  <div class="container">
+    <h1>Model Arama</h1>
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="Model numarası girin...">
+      <button id="searchBtn" onclick="fetchAndSearch()">Ara</button>
+      <button id="clearBtn" onclick="clearPage()">Temizle</button>
+    </div>
 
-  <div class="table-container">
-    <table id="resultTable" style="display:none;">
-      <thead>
-        <tr>
-          <th>Uyum</th>
-          <th>Model</th>
-          <th>Tanım</th>
-          <th>Malzeme</th>
-          <th>Barkod</th>
-          <th>Online</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+    <div class="table-wrapper">
+      <table id="resultTable" style="display:none;">
+        <thead>
+          <tr>
+            <th>Uyum</th>
+            <th>Model</th>
+            <th>Tanım</th>
+            <th>Malzeme</th>
+            <th>Barkod</th>
+            <th>Online</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
-  <div id="noMatchMessage">
-    Eşleşme bulunamadı
-    <br>
-    <button id="googleSearchBtn">Google'da Ara</button>
+    <div id="noMatchMessage" style="display:none;">
+      Eşleşme bulunamadı
+      <br>
+      <button id="googleSearchBtn">Google'da Ara</button>
+    </div>
   </div>
 
 <script>
@@ -280,8 +309,10 @@
               <td>${row.Malzeme}</td>
               <td>${row.Barkod}</td>
               <td>
-                <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
-                <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+                <div class="btn-group">
+                  <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
+                  <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+                </div>
               </td>
             `;
             tbody.appendChild(tr);
@@ -304,10 +335,12 @@
   }
 
   function clearPage() {
-    document.getElementById('searchInput').value = '';
+    const inputElem = document.getElementById('searchInput');
+    inputElem.value = '';
     document.getElementById('resultTable').style.display = 'none';
     document.querySelector('#resultTable tbody').innerHTML = '';
     document.getElementById('noMatchMessage').style.display = 'none';
+    inputElem.focus();
   }
 </script>
 
