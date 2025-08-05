@@ -26,11 +26,9 @@
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       margin: 0;
-      padding: 0;
+      padding: 20px 0; /* Üst ve alt boşluk azaltıldı */
       display: flex;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
       color: var(--text);
     }
 
@@ -133,6 +131,7 @@
     @media (max-width: 480px) {
       .wrapper {
         padding: 28px 16px;
+        margin: 0 12px; /* Mobilde kenarlardan biraz boşluk */
       }
 
       h1 {
