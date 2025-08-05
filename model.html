@@ -59,6 +59,7 @@
   <table id="resultTable" style="display:none;">
     <thead>
       <tr>
+        <th>Uyum</th>
         <th>Model</th>
         <th>Tanım</th>
         <th>Malzeme</th>
@@ -74,7 +75,7 @@
       const table = document.getElementById('resultTable');
       const tbody = table.querySelector('tbody');
 
-      tbody.innerHTML = ''; // Önceki sonuçları temizle
+      tbody.innerHTML = '';
       table.style.display = 'none';
 
       if (input === '') return;
@@ -93,12 +94,28 @@
             };
           });
 
-          const filtered = data.filter(row => row.Model.toUpperCase() === input);
+          // Uyum hesapla (% olarak)
+          const scoredResults = data.map(row => {
+            const model = row.Model.toUpperCase();
+            let matchScore = 0;
 
-          if (filtered.length > 0) {
-            filtered.forEach(row => {
+            if (model === input) {
+              matchScore = 100;
+            } else if (model.includes(input)) {
+              matchScore = Math.round((input.length / model.length) * 100);
+            }
+
+            return { ...row, Uyum: matchScore };
+          }).filter(row => row.Uyum > 0);
+
+          if (scoredResults.length > 0) {
+            // Yüksek uyumludan düşük uyumluya sırala
+            scoredResults.sort((a, b) => b.Uyum - a.Uyum);
+
+            scoredResults.forEach(row => {
               const tr = document.createElement('tr');
               tr.innerHTML = `
+                <td>%${row.Uyum}</td>
                 <td>${row.Model}</td>
                 <td>${row.Tanım}</td>
                 <td>${row.Malzeme}</td>
