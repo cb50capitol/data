@@ -1,185 +1,170 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Model Arama</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <style>
-    /* Genel ayarlar */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f7f9fc;
-      padding: 40px 20px;
-      margin: 0;
-      display: flex;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Model Arama</title>
+<style>
+  /* Reset ve temel stiller */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #222;
+  }
+
+  /* Arama alanı ve butonlar kapsayıcı */
+  .search-wrapper {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  #searchInput {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.25s;
+  }
+  #searchInput:focus {
+    border-color: #0b79d0;
+    outline: none;
+  }
+
+  button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #searchBtn {
+    background-color: #0b79d0;
+    color: white;
+  }
+  #searchBtn:hover {
+    background-color: #095a9d;
+  }
+  #clearBtn {
+    background-color: #e0e0e0;
+    color: #444;
+  }
+  #clearBtn:hover {
+    background-color: #c7c7c7;
+  }
+
+  /* Tablo stili */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+  }
+
+  thead {
+    background: #0b79d0;
+    color: white;
+  }
+  th, td {
+    padding: 14px 20px;
+    font-size: 14px;
+    text-align: left;
+  }
+  tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  tbody tr:hover {
+    background: #e6f0fb;
+  }
+
+  /* Butonlar tablo içinde */
+  .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .btn-boyner {
+    background-color: #db4437;
+  }
+  .btn-boyner:hover {
+    background-color: #a33328;
+  }
+  .btn-google {
+    background-color: #4285f4;
+  }
+  .btn-google:hover {
+    background-color: #3367d6;
+  }
+
+  /* Eşleşme yok mesajı */
+  #noMatchMessage {
+    max-width: 450px;
+    background: #fff3f3;
+    color: #cc3333;
+    padding: 25px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 2px 6px rgb(204 51 51 / 0.15);
+    display: none;
+  }
+
+  #googleSearchBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s;
+  }
+  #googleSearchBtn:hover {
+    background-color: #3367d6;
+  }
+
+  @media (max-width: 600px) {
+    .search-wrapper {
       flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      color: #333;
     }
-
-    /* Arama kutusu ve buton */
-    #searchInput {
-      width: 100%;
-      max-width: 450px;
-      padding: 14px 20px;
-      font-size: 18px;
-      border: 1.5px solid #ccc;
-      border-radius: 8px;
-      transition: border-color 0.3s ease;
-      box-sizing: border-box;
-      margin-bottom: 15px;
-      outline-offset: 2px;
-    }
-
-    #searchInput:focus {
-      border-color: #4285F4;
-      box-shadow: 0 0 8px rgba(66, 133, 244, 0.4);
-    }
-
     button {
-      max-width: 200px;
       width: 100%;
-      background-color: #4285F4;
-      border: none;
-      color: white;
-      font-weight: 600;
-      font-size: 16px;
-      padding: 12px 0;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
-      margin-bottom: 30px;
     }
-
-    button:hover {
-      background-color: #3367d6;
-      box-shadow: 0 6px 16px rgba(51, 103, 214, 0.5);
-    }
-
-    /* Tablo tasarımı */
-    table {
-      width: 100%;
-      max-width: 900px;
-      border-collapse: separate;
-      border-spacing: 0 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-radius: 10px;
-      overflow: hidden;
-      background-color: white;
-    }
-
-    thead tr {
-      background-color: #f1f3f5;
-      font-weight: 700;
-      color: #555;
-      font-size: 15px;
-      text-align: left;
-    }
-
-    th, td {
-      padding: 14px 20px;
-      font-size: 14px;
-      vertical-align: middle;
-    }
-
-    tbody tr {
-      background-color: #fff;
-      transition: background-color 0.2s ease;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    }
-
-    tbody tr:hover {
-      background-color: #f9faff;
-      box-shadow: 0 4px 14px rgba(66, 133, 244, 0.15);
-    }
-
-    /* Butonlar hücrede */
-    .btn {
-      padding: 8px 14px;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-
-    .btn-boyner {
-      background-color: #db4437;
-      margin-right: 8px;
-      box-shadow: 0 3px 8px rgba(219, 68, 55, 0.4);
-    }
-
-    .btn-boyner:hover {
-      background-color: #a33328;
-      box-shadow: 0 5px 12px rgba(163, 51, 40, 0.6);
-    }
-
-    .btn-google {
-      background-color: #4285F4;
-      box-shadow: 0 3px 8px rgba(66, 133, 244, 0.4);
-    }
-
-    .btn-google:hover {
-      background-color: #3367d6;
-      box-shadow: 0 5px 12px rgba(51, 103, 214, 0.6);
-    }
-
-    /* Eşleşme bulunamadığında mesaj */
-    #noMatchMessage {
-      margin-top: 20px;
-      font-weight: 700;
-      color: #666;
-      text-align: center;
-      background: white;
-      padding: 25px 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-      max-width: 450px;
-      width: 90%;
-    }
-
-    #googleSearchBtn {
-      margin-top: 15px;
-      width: auto;
-      padding: 10px 24px;
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      th, td {
-        padding: 12px 10px;
-        font-size: 13px;
-      }
-
-      #searchInput {
-        max-width: 100%;
-      }
-
-      button {
-        max-width: 100%;
-      }
-
-      #noMatchMessage {
-        max-width: 100%;
-        padding: 20px;
-      }
-    }
-
-  </style>
+  }
+</style>
 </head>
 <body>
 
-  <input type="text" id="searchInput" placeholder="Model numarası girin...">
-  <button onclick="fetchAndSearch()">Ara</button>
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Model numarası girin...">
+    <button id="searchBtn" onclick="fetchAndSearch()">Ara</button>
+    <button id="clearBtn" onclick="clearPage()">Temizle</button>
+  </div>
 
   <table id="resultTable" style="display:none;">
     <thead>
@@ -195,94 +180,101 @@
     <tbody></tbody>
   </table>
 
-  <div id="noMatchMessage" style="display:none;">
+  <div id="noMatchMessage">
     Eşleşme bulunamadı
     <br>
-    <button id="googleSearchBtn" class="btn btn-google">Google'da Ara</button>
+    <button id="googleSearchBtn">Google'da Ara</button>
   </div>
 
-  <script>
-    function fetchAndSearch() {
-      const inputElem = document.getElementById('searchInput');
-      const input = inputElem.value.trim().toUpperCase();
-      const table = document.getElementById('resultTable');
-      const tbody = table.querySelector('tbody');
-      const noMatchDiv = document.getElementById('noMatchMessage');
-      const googleBtn = document.getElementById('googleSearchBtn');
+<script>
+  function fetchAndSearch() {
+    const inputElem = document.getElementById('searchInput');
+    const input = inputElem.value.trim().toUpperCase();
+    const table = document.getElementById('resultTable');
+    const tbody = table.querySelector('tbody');
+    const noMatchDiv = document.getElementById('noMatchMessage');
+    const googleBtn = document.getElementById('googleSearchBtn');
 
-      tbody.innerHTML = '';
-      table.style.display = 'none';
-      noMatchDiv.style.display = 'none';
+    tbody.innerHTML = '';
+    table.style.display = 'none';
+    noMatchDiv.style.display = 'none';
 
-      if (input === '') return;
+    if (!input) return;
 
-      fetch('model.txt')
-        .then(response => response.text())
-        .then(text => {
-          const lines = text.trim().split('\n');
-          const data = lines.slice(1).map(line => {
-            const parts = line.split('\t');
-            return {
-              Model: parts[0],
-              Tanım: parts[1],
-              Malzeme: parts[2],
-              Barkod: parts[3]
-            };
-          });
-
-          const scoredResults = data.map(row => {
-            const model = row.Model.toUpperCase();
-            let matchScore = 0;
-
-            if (model === input) {
-              matchScore = 100;
-            } else if (model.includes(input)) {
-              matchScore = Math.round((input.length / model.length) * 100);
-            }
-
-            return { ...row, Uyum: matchScore };
-          }).filter(row => row.Uyum > 0);
-
-          if (scoredResults.length > 0) {
-            scoredResults.sort((a, b) => b.Uyum - a.Uyum);
-
-            scoredResults.forEach(row => {
-              const malzemeKodu = row.Malzeme;
-              const onlineKodu = malzemeKodu.slice(0, -3); // Son 3 hane silinir
-              const boynerUrl = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
-              const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
-
-              const tr = document.createElement('tr');
-              tr.innerHTML = `
-                <td>%${row.Uyum}</td>
-                <td>${row.Model}</td>
-                <td>${row.Tanım}</td>
-                <td>${row.Malzeme}</td>
-                <td>${row.Barkod}</td>
-                <td>
-                  <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
-                  <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
-                </td>
-              `;
-              tbody.appendChild(tr);
-            });
-            table.style.display = 'table';
-          } else {
-            noMatchDiv.style.display = 'block';
-
-            googleBtn.onclick = () => {
-              const query = encodeURIComponent(inputElem.value.trim());
-              if (query) {
-                window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
-              }
-            };
-          }
-        })
-        .catch(error => {
-          console.error('Veri alınamadı:', error);
+    fetch('model.txt')
+      .then(response => response.text())
+      .then(text => {
+        const lines = text.trim().split('\n');
+        const data = lines.slice(1).map(line => {
+          const parts = line.split('\t');
+          return {
+            Model: parts[0],
+            Tanım: parts[1],
+            Malzeme: parts[2],
+            Barkod: parts[3]
+          };
         });
-    }
-  </script>
+
+        const scoredResults = data.map(row => {
+          const model = row.Model.toUpperCase();
+          let matchScore = 0;
+
+          if (model === input) {
+            matchScore = 100;
+          } else if (model.includes(input)) {
+            matchScore = Math.round((input.length / model.length) * 100);
+          }
+
+          return { ...row, Uyum: matchScore };
+        }).filter(row => row.Uyum > 0);
+
+        if (scoredResults.length > 0) {
+          scoredResults.sort((a, b) => b.Uyum - a.Uyum);
+
+          scoredResults.forEach(row => {
+            const malzemeKodu = row.Malzeme;
+            const onlineKodu = malzemeKodu.slice(0, -3);
+            const boynerUrl = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
+            const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td>%${row.Uyum}</td>
+              <td>${row.Model}</td>
+              <td>${row.Tanım}</td>
+              <td>${row.Malzeme}</td>
+              <td>${row.Barkod}</td>
+              <td>
+                <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
+                <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+              </td>
+            `;
+            tbody.appendChild(tr);
+          });
+          table.style.display = 'table';
+        } else {
+          noMatchDiv.style.display = 'block';
+
+          googleBtn.onclick = () => {
+            const query = encodeURIComponent(inputElem.value.trim());
+            if (query) {
+              window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
+            }
+          };
+        }
+      })
+      .catch(error => {
+        console.error('Veri alınamadı:', error);
+      });
+  }
+
+  function clearPage() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('resultTable').style.display = 'none';
+    document.querySelector('#resultTable tbody').innerHTML = '';
+    document.getElementById('noMatchMessage').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
