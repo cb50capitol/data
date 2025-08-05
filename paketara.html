@@ -228,7 +228,8 @@ tbody tr:nth-child(even) {
   if (isMobile) {
     document.body.innerHTML = `
       <div style="display:flex; height:100vh; justify-content:center; align-items:center; text-align:center; padding:20px; font-family:sans-serif;">
-        <h2>Bu sayfaya mobil cihazlardan erişim desteklenmemektedir.<br>Lütfen masaüstü bilgisayarınızdan tekrar deneyin.</h2>
+      <h2>📢</h2>
+        <h2>Bu sayfaya mobil cihazlardan erişim desteklenmemektedir.<br><br>Masaüstü bilgisayarınızdan tekrar deneyin.</h2>
       </div>`;
     throw new Error("Mobil cihaz erişimi engellendi.");
   }
