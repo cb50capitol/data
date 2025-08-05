@@ -451,23 +451,7 @@ document.getElementById('scrollTopBtn').addEventListener('click', () => {
 loadData();
 </script>
 
-   <script>
-  // Sağ tıklamayı engelle
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
 
-  // Belirli kısayolları engelle (F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J)
-  document.addEventListener('keydown', function(e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-    }
-  });
-</script>
      
 </body>
 </html>
