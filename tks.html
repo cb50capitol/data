@@ -7,141 +7,558 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
-    body { background-color: #f0f2f5; padding: 1rem; font-family: "Segoe UI", sans-serif; }
-    .card-alt { background: #fff; border-radius: 12px; border: 1px solid #dee2e6; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 1.5rem; margin-bottom: 1rem; }
+    body {
+      background-color: #f0f2f5;
+      padding: 1rem;
+      font-family: "Segoe UI", sans-serif;
+    }
+    h1 { font-size: 1.8rem; }
+    #filterInfo {
+      display: inline-block;
+      background-color: #e9ecef;
+      color: #0d6efd;
+      border-radius: 20px;
+      padding: 6px 14px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      transition: background-color 0.2s ease;
+    }
+    #filterInfo:hover { background-color: #dbe2ea; }
+    .card-alt {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #dee2e6;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .card-alt:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+    .card-alt.completed {
+      border-color: #198754;
+      background-color: #d1e7dd;
+      position: relative;
+    }
+    .countdown-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #198754;
+      color: white;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 14px;
+      user-select: none;
+      pointer-events: none;
+      z-index: 10;
+      transition: opacity 0.3s ease;
+    }
     .card-title { font-weight: 600; font-size: 17px; margin-bottom: 1rem; color: #0d6efd; }
-    .info-item { margin-bottom: 8px; font-size: 15px; }
-    .online-btn { background-color: #28a745; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer; margin-right: 8px; }
-    .section-btn { background-color: #007bff; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer; }
-    .section-btn:hover, .online-btn:hover { opacity: 0.9; }
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #333;
+      flex-wrap: wrap;
+    }
+    .info-item i {
+      width: 20px;
+      text-align: center;
+      color: #0d6efd;
+      margin-right: 8px;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-left: 10px;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+    .col-custom { padding: 0.5rem; }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -0.5rem;
+    }
+    .online-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      margin-right: 8px;
+    }
+    .online-btn:hover {
+      background-color: #218838;
+      color: white;
+      text-decoration: none;
+    }
+    .section-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    .section-btn:hover {
+      background-color: #0056b3;
+      color: white;
+      text-decoration: none;
+    }
+    @media (min-width: 576px) {
+      .col-custom { width: 50%; }
+    }
+    @media (max-width: 575.98px) {
+      .col-custom { width: 100%; }
+    }
+    .scroll-arrow {
+      position: fixed;
+      right: 10px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, opacity 0.4s;
+      opacity: 0.3;
+      z-index: 9999;
+      user-select: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .scroll-arrow:hover {
+      background: rgba(0,0,0,0.3);
+      color: #0d6efd;
+      opacity: 1;
+    }
+    #scrollBottomBtn { bottom: 10px; }
+    #scrollTopBtn { bottom: 60px; }
+    .scroll-arrow i { font-size: 20px; }
   </style>
 </head>
 <body>
-
 <div class="container mt-4">
   <h1>Transfer Listesi</h1>
-  <div id="cardContainer"></div>
+  <div id="filterInfo"></div>
+  <div class="card-container" id="cardContainer"></div>
 </div>
 
-<!-- Section Modal -->
-<div class="modal fade" id="sectionModal" tabindex="-1" aria-labelledby="sectionModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+<!-- Filtre Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="sectionModalLabel">Bölüm Detayları</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-      </div>
-      <div class="modal-body" id="sectionModalBody"></div>
+      <form id="filterForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="filterModalLabel">Filtre Seçimi</h5>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="transfer" class="form-label">Transfer Listesi</label>
+            <select id="transfer" class="form-select" required></select>
+          </div>
+          <div class="mb-3">
+            <label for="kategori" class="form-label">Kategori</label>
+            <select id="kategori" class="form-select" required></select>
+          </div>
+          <div class="mb-3" id="altKategoriWrapper" style="display:none;">
+            <label for="altKategori" class="form-label">Alt Kategori</label>
+            <select id="altKategori" class="form-select"></select>
+          </div>
+          <div class="mb-3">
+            <label for="marka" class="form-label">Marka</label>
+            <select id="marka" class="form-select" required></select>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" id="clearStorageBtn" class="btn btn-danger">Geçmişi Temizle</button>
+          <button type="submit" class="btn btn-primary">Filtrele</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
 
+<!-- Section Modal -->
+<div class="modal fade" id="sectionModal" tabindex="-1" aria-labelledby="sectionModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sectionModalLabel">Section Detayları</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body" id="sectionModalBody">
+        <!-- İçerik JS ile doldurulacak -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="scrollTopBtn" class="scroll-arrow" title="Sayfanın üstüne git">
+  <i class="fas fa-chevron-up"></i>
+</div>
+<div id="scrollBottomBtn" class="scroll-arrow" title="Sayfanın sonuna git">
+  <i class="fas fa-chevron-down"></i>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-let data = [], stockData = [];
+let data = [];
+let stokData = [];
+
+const transferSelect = document.getElementById('transfer');
+const kategoriSelect = document.getElementById('kategori');
+const altKategoriWrapper = document.getElementById('altKategoriWrapper');
+const altKategoriSelect = document.getElementById('altKategori');
+const markaSelect = document.getElementById('marka');
+const cardContainer = document.getElementById('cardContainer');
+const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
+const sectionModal = new bootstrap.Modal(document.getElementById('sectionModal'));
+const filterInfoDiv = document.getElementById('filterInfo');
+const clearStorageBtn = document.getElementById('clearStorageBtn');
+const sectionModalBody = document.getElementById('sectionModalBody');
+
+filterInfoDiv.addEventListener('click', () => {
+  filterModal.show();
+});
+
+function parseTSVLine(line) {
+  return line.split('\t').map(cell => cell.trim());
+}
 
 async function loadData() {
-  const res = await fetch('test.txt');
-  const txt = await res.text();
-  const lines = txt.trim().split('\n');
-  lines.shift();
-  data = lines.map(l => l.split('\t'));
-  renderCards(data);
+  try {
+    // test.txt yükle
+    const response = await fetch('test.txt');
+    if (!response.ok) throw new Error('test.txt dosyası okunamadı');
+    const text = await response.text();
+    const lines = text.split('\n').filter(l => l.trim().length > 0);
+    lines.shift(); // başlık satırını atla
+    data = lines.map(parseTSVLine);
+
+    // stok.txt yükle
+    const stokResponse = await fetch('stok.txt');
+    if (!stokResponse.ok) throw new Error('stok.txt dosyası okunamadı');
+    const stokText = await stokResponse.text();
+    const stokLines = stokText.split('\n').filter(l => l.trim().length > 0);
+    stokData = stokLines.map(parseTSVLine);
+
+    buildFilterOptions();
+    loadFilterFromStorage();
+    renderCards();
+  } catch (e) {
+    alert(e.message);
+  }
 }
 
-async function loadStockData() {
-  const res = await fetch('stok.txt');
-  const txt = await res.text();
-  stockData = txt.trim().split('\n').map(line => line.split('\t'));
+function uniqueArray(arr) {
+  return [...new Set(arr)];
 }
 
-function renderCards(rows) {
-  const container = document.getElementById('cardContainer');
-  container.innerHTML = '';
-  rows.forEach(row => {
-    const div = document.createElement('div');
-    div.className = 'card-alt';
-    const malzeme = row[6];
-    const malzemeKisa = malzeme.length > 3 ? malzeme.slice(0, -3) : malzeme;
-    const onlineURL = `https://www.boyner.com.tr/search?q=${malzemeKisa}`;
-    div.innerHTML = `
-      <div class="card-title">${row[4]}</div>
-      <div class="info-item"><strong>Model:</strong> ${row[5]}</div>
-      <div class="info-item"><strong>Malzeme:</strong> ${malzeme}</div>
-      <div class="info-item"><strong>EAN:</strong> ${row[7]}</div>
-      <div class="info-item"><strong>Müşteri:</strong> ${row[8]}</div>
-      <div class="info-item"><strong>Stok:</strong> ${row[10]}</div>
-      <div class="info-item"><strong>İş Emri:</strong> ${row[11]}</div>
-      <button class="section-btn" onclick="showSectionModal('${malzeme}')">Section</button>
-      <a href="${onlineURL}" target="_blank" class="online-btn">Online</a>
-    `;
-    container.appendChild(div);
+function buildFilterOptions() {
+  // Transfer, Kategori, AltKategori, Marka tüm seçenekler
+  const transfers = uniqueArray(data.map(d => d[0]));
+  const kategoriler = uniqueArray(data.map(d => d[1]));
+  const markalar = uniqueArray(data.map(d => d[3]));
+
+  fillSelect(transferSelect, transfers);
+  fillSelect(kategoriSelect, kategoriler);
+  fillSelect(markaSelect, markalar);
+
+  kategoriSelect.addEventListener('change', () => {
+    const secilenKategori = kategoriSelect.value;
+    if (secilenKategori === 'Shoes & Bags') {
+      // AltKategori options filtrele
+      const altKategoriler = uniqueArray(data.filter(d => d[1] === secilenKategori).map(d => d[2]));
+      fillSelect(altKategoriSelect, altKategoriler);
+      altKategoriWrapper.style.display = 'block';
+      altKategoriSelect.required = true;
+    } else {
+      altKategoriWrapper.style.display = 'none';
+      altKategoriSelect.required = false;
+      altKategoriSelect.innerHTML = '';
+    }
   });
 }
 
-function showSectionModal(sku) {
-  const matches = stockData.filter(r => r[0] === sku);
-  if (matches.length === 0) {
-    document.getElementById('sectionModalBody').innerHTML = '<div class="alert alert-warning">Stok verisi bulunamadı.</div>';
-    new bootstrap.Modal(document.getElementById('sectionModal')).show();
-    return;
+function fillSelect(selectElement, options) {
+  selectElement.innerHTML = '<option value="">Seçiniz</option>';
+  options.forEach(opt => {
+    const option = document.createElement('option');
+    option.value = opt;
+    option.textContent = opt;
+    selectElement.appendChild(option);
+  });
+}
+
+function loadFilterFromStorage() {
+  const storedFilter = localStorage.getItem('transferFilter');
+  if (storedFilter) {
+    const filter = JSON.parse(storedFilter);
+    if (filter.transfer) transferSelect.value = filter.transfer;
+    if (filter.kategori) kategoriSelect.value = filter.kategori;
+    kategoriSelect.dispatchEvent(new Event('change'));
+    if (filter.altKategori) altKategoriSelect.value = filter.altKategori;
+    if (filter.marka) markaSelect.value = filter.marka;
+    updateFilterInfo(filter);
+  } else {
+    filterModal.show();
   }
+}
 
-  let html = `
-    <table class="table table-bordered"><tbody>
-      <tr><th>SKU</th><td>${matches[0][0]}</td></tr>
-      <tr><th>EAN</th><td>${matches[0][1]}</td></tr>
-      <tr><th>Ürün</th><td>${matches[0][2]}</td></tr>
-    </tbody></table>
-    <hr><strong>Lokasyonlar:</strong>
-    <table class="table table-hover table-sm mt-2">
-      <thead><tr><th>Lokasyon</th><th>Section</th><th>Adet</th></tr></thead>
-      <tbody>
-  `;
+function updateFilterInfo(filter) {
+  let text = `Filtre: Transfer = ${filter.transfer || '-'}, Kategori = ${filter.kategori || '-'}, `;
+  if (filter.kategori === 'Shoes & Bags') {
+    text += `AltKategori = ${filter.altKategori || '-'}, `;
+  }
+  text += `Marka = ${filter.marka || '-'}`;
+  filterInfoDiv.textContent = text;
+}
 
-  matches.forEach(row => {
-    const loc = row[3], section = row[4], adet = row[5];
-    html += `
-      <tr>
-        <td>${loc}</td>
-        <td style="color:#0d6efd; cursor:pointer;" onclick="showProductsInSameSection('${section.replace(/'/g, "\\'")}')">${section}</td>
-        <td>${adet}</td>
+function saveFilterToStorage(filter) {
+  localStorage.setItem('transferFilter', JSON.stringify(filter));
+}
+
+function filterData() {
+  const filter = {
+    transfer: transferSelect.value,
+    kategori: kategoriSelect.value,
+    altKategori: altKategoriSelect.value,
+    marka: markaSelect.value,
+  };
+  saveFilterToStorage(filter);
+
+  updateFilterInfo(filter);
+
+  let filtered = data.filter(d => 
+    d[0] === filter.transfer &&
+    d[1] === filter.kategori &&
+    (filter.kategori !== 'Shoes & Bags' || d[2] === filter.altKategori) &&
+    d[3] === filter.marka
+  );
+  return filtered;
+}
+
+function renderCards() {
+  cardContainer.innerHTML = '';
+
+  const filteredData = filterData();
+
+  filteredData.forEach(row => {
+    // satır değerleri (test.txt formatına göre)
+    const [
+      transfer,
+      kategori,
+      altKategori,
+      marka,
+      urunAdi,
+      urunKodu,
+      malzeme,
+      barkod,
+      teslimEden,
+      sasAdet,
+      kalanAdet,
+      isNo
+    ] = row;
+
+    // checkboxlar sasAdet kadar (örnek 2 ise 2 checkbox)
+    const sasCount = parseInt(sasAdet, 10) || 0;
+
+    // Daha önce işaretlenenler localStorage'da saklanıyor:
+    // Anahtar: isNo (örnek: IS1234)
+    // Değer: checkbox dizisi boolean, örn: [true,false]
+
+    let completedCount = 0;
+    let savedChecks = JSON.parse(localStorage.getItem(isNo)) || [];
+
+    // checkboxlar div'i
+    const checkboxGroup = document.createElement('div');
+    checkboxGroup.classList.add('checkbox-group');
+
+    for (let i = 0; i < sasCount; i++) {
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = savedChecks[i] || false;
+      if (cb.checked) completedCount++;
+      cb.addEventListener('change', () => {
+        savedChecks[i] = cb.checked;
+        localStorage.setItem(isNo, JSON.stringify(savedChecks));
+        // Güncelle tamamlandıysa kart arka planını
+        if (savedChecks.filter(Boolean).length === sasCount) {
+          cardDiv.classList.add('completed');
+          countdownBadge.style.opacity = 0;
+        } else {
+          cardDiv.classList.remove('completed');
+          countdownBadge.style.opacity = 1;
+        }
+      });
+      checkboxGroup.appendChild(cb);
+    }
+
+    // Card yapısı
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'card-alt col-custom mb-3';
+
+    if (completedCount === sasCount && sasCount > 0) {
+      cardDiv.classList.add('completed');
+    }
+
+    // Countdown (kalan adet)
+    const countdownBadge = document.createElement('div');
+    countdownBadge.className = 'countdown-badge';
+    countdownBadge.textContent = kalanAdet;
+    if (completedCount === sasCount && sasCount > 0) {
+      countdownBadge.style.opacity = 0;
+    }
+
+    cardDiv.appendChild(countdownBadge);
+
+    // Başlık (ürün adı + kodu)
+    const title = document.createElement('div');
+    title.className = 'card-title';
+    title.textContent = `${urunAdi} - ${urunKodu}`;
+    cardDiv.appendChild(title);
+
+    // Bilgi satırları
+    const infoList = [
+      { icon: 'fa-tags', text: kategori },
+      { icon: 'fa-box', text: altKategori },
+      { icon: 'fa-truck', text: teslimEden },
+      { icon: 'fa-barcode', text: barkod },
+      { icon: 'fa-hashtag', text: isNo },
+      { icon: 'fa-cubes', text: `Malzeme: ${malzeme}` },
+    ];
+
+    infoList.forEach(info => {
+      const div = document.createElement('div');
+      div.className = 'info-item';
+      div.innerHTML = `<i class="fa ${info.icon}"></i> ${info.text}`;
+      cardDiv.appendChild(div);
+    });
+
+    // Checkboxlar eklendi
+    const cbLabel = document.createElement('div');
+    cbLabel.textContent = 'SAS Adet: ';
+    cbLabel.style.marginTop = '8px';
+    cardDiv.appendChild(cbLabel);
+    cardDiv.appendChild(checkboxGroup);
+
+    // Online buton
+    const onlineBtn = document.createElement('a');
+    onlineBtn.href = `https://online.example.com/urun/${urunKodu}`;
+    onlineBtn.target = '_blank';
+    onlineBtn.className = 'online-btn';
+    onlineBtn.textContent = 'Online Ürün';
+    cardDiv.appendChild(onlineBtn);
+
+    // Section butonu
+    const sectionBtn = document.createElement('button');
+    sectionBtn.type = 'button';
+    sectionBtn.className = 'section-btn';
+    sectionBtn.textContent = 'Section Detayları';
+    sectionBtn.addEventListener('click', () => {
+      openSectionModal(malzeme, urunAdi);
+    });
+    cardDiv.appendChild(sectionBtn);
+
+    cardContainer.appendChild(cardDiv);
+  });
+
+  if (cardContainer.children.length === 0) {
+    cardContainer.innerHTML = '<p>Seçilen filtrelere uygun ürün bulunamadı.</p>';
+  }
+}
+
+function openSectionModal(malzeme, urunAdi) {
+  // stokData'dan malzeme'ye eşit satırlar seç
+  const filteredStok = stokData.filter(row => row[0] === malzeme);
+
+  if (filteredStok.length === 0) {
+    sectionModalBody.innerHTML = `<p><strong>${urunAdi}</strong> için stok bilgisi bulunamadı.</p>`;
+  } else {
+    // Tablo oluştur
+    let html = `<h5>${urunAdi} - Malzeme: ${malzeme}</h5>`;
+    html += `<table class="table table-bordered table-striped">`;
+    html += `<thead><tr><th>Malzeme</th><th>Barkod</th><th>Ürün Adı</th><th>Reyon</th><th>Bölüm</th><th>Adet</th></tr></thead><tbody>`;
+
+    filteredStok.forEach(row => {
+      // stok.txt formatı:
+      // 0: Malzeme, 1: Barkod, 2: Ürün Adı, 3: Reyon, 4: Bölüm, 5: Adet
+      html += `<tr>
+        <td>${row[0]}</td>
+        <td>${row[1]}</td>
+        <td>${row[2]}</td>
+        <td>${row[3]}</td>
+        <td>${row[4]}</td>
+        <td>${row[5]}</td>
       </tr>`;
-  });
+    });
 
-  html += '</tbody></table>';
-  document.getElementById('sectionModalBody').innerHTML = html;
-  new bootstrap.Modal(document.getElementById('sectionModal')).show();
-}
-
-function showProductsInSameSection(section) {
-  const rows = stockData.filter(r => r[4] === section);
-  if (rows.length === 0) {
-    document.getElementById('sectionModalBody').innerHTML = `<div class="alert alert-info">"${section}" içinde başka ürün yok.</div>`;
-    return;
+    html += `</tbody></table>`;
+    sectionModalBody.innerHTML = html;
   }
-
-  let html = `<h5>${section} bölümündeki ürünler</h5>`;
-  rows.forEach(r => {
-    const sku = r[0];
-    html += `
-      <div class="border rounded p-2 mb-2">
-        <strong>SKU:</strong> ${r[0]}<br/>
-        <strong>EAN:</strong> ${r[1]}<br/>
-        <strong>Ürün:</strong> ${r[2]}<br/>
-        <strong>Lokasyon:</strong> ${r[3]}<br/>
-        <strong>Adet:</strong> ${r[5]}<br/>
-        <a href="https://www.boyner.com.tr/search?q=${sku.slice(0, -3)}" target="_blank" class="btn btn-sm btn-success mt-1">Online</a>
-      </div>
-    `;
-  });
-
-  document.getElementById('sectionModalBody').innerHTML = html;
+  sectionModal.show();
 }
 
-loadStockData();
-loadData();
-</script>
+document.getElementById('filterForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  filterModal.hide();
+  renderCards();
+});
 
+clearStorageBtn.addEventListener('click', () => {
+  localStorage.clear();
+  location.reload();
+});
+
+// Scroll arrow fonksiyonları
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+scrollBottomBtn.addEventListener('click', () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
+
+// Sayfa yüklenince data çek ve işle
+window.addEventListener('load', () => {
+  loadData();
+});
+</script>
 </body>
 </html>
