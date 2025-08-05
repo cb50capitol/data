@@ -28,36 +28,41 @@
     color: #222;
   }
   .search-area {
-    display: flex;
     max-width: 560px;
-    margin: 0 auto 36px;
-    gap: 10px;
+    margin: 0 auto 12px;
   }
   input[type="text"] {
-    flex-grow: 1;
+    width: 100%;
     padding: 10px 16px;
     font-size: 1rem;
     border: 1.8px solid #ccc;
     border-radius: 20px;
     transition: border-color 0.25s ease;
     color: #222;
+    box-sizing: border-box;
   }
   input[type="text"]:focus {
     outline: none;
     border-color: #4a90e2;
     box-shadow: 0 0 6px rgba(74,144,226,0.3);
   }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 10px;
+  }
   button {
     border: none;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 10px 24px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     cursor: pointer;
     user-select: none;
     box-shadow: 0 2px 6px rgb(0 0 0 / 0.08);
     transition: background-color 0.25s ease;
-    color: white;
+    min-width: 120px;
   }
   #searchBtn {
     background-color: #a3c4f3; /* pastel mavi */
@@ -182,25 +187,27 @@
     }
     .search-area {
       max-width: 100%;
-      justify-content: center;
-      gap: 8px;
+      margin-bottom: 0;
     }
     input[type="text"] {
-      flex-grow: 1;
-      max-width: 60%;
+      font-size: 1.1rem;
+      padding: 12px 18px;
+      border-radius: 24px;
+      max-width: 100%;
       margin: 0 auto;
       display: block;
-      border-radius: 24px;
-      font-size: 0.95rem;
+    }
+    .button-group {
+      max-width: 100%;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
     }
     button {
-      padding: 8px 14px;
-      font-size: 0.9rem;
+      min-width: 130px;
+      font-size: 1rem;
+      padding: 12px 0;
       border-radius: 24px;
-      flex-grow: 0;
-    }
-    #searchBtn, #clearBtn {
-      min-width: 90px;
     }
   }
 </style>
@@ -211,8 +218,10 @@
   <h1>Model Arama</h1>
   <div class="search-area">
     <input type="text" id="searchInput" placeholder="Model numarası girin..." autocomplete="off" />
-    <button id="searchBtn">Ara</button>
-    <button id="clearBtn">Temizle</button>
+    <div class="button-group">
+      <button id="searchBtn">Ara</button>
+      <button id="clearBtn">Temizle</button>
+    </div>
   </div>
 
   <div id="cardsContainer"></div>
