@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Model Arama</title>
 <style>
-  /* Genel sıfırlama ve temel stiller */
   * {
     box-sizing: border-box;
   }
@@ -20,8 +19,6 @@
     padding: 40px 20px;
     color: #2e3a59;
   }
-
-  /* Container */
   .container {
     width: 100%;
     max-width: 960px;
@@ -33,8 +30,6 @@
     flex-direction: column;
     gap: 36px;
   }
-
-  /* Başlık */
   h1 {
     font-weight: 700;
     font-size: 28px;
@@ -43,13 +38,10 @@
     text-align: center;
     letter-spacing: 0.03em;
   }
-
-  /* Arama alanı ve butonlar */
   .search-area {
     display: flex;
     gap: 16px;
   }
-
   input[type="text"] {
     flex-grow: 1;
     padding: 14px 20px;
@@ -63,7 +55,6 @@
     border-color: #4f83cc;
     box-shadow: 0 0 10px rgba(79,131,204,0.4);
   }
-
   button {
     padding: 14px 28px;
     font-size: 17px;
@@ -90,55 +81,73 @@
     background-color: #7e8494;
     box-shadow: 0 6px 18px rgba(126,132,148,0.5);
   }
-
-  /* Tablo kapsayıcı */
-  .table-wrapper {
-    overflow-x: auto;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 12px;
-    min-width: 720px;
-  }
-
-  thead tr {
-    background: transparent;
-  }
-
-  th {
-    text-align: left;
-    padding: 14px 18px;
+  #noMatchMessage {
+    text-align: center;
+    color: #d93025;
     font-weight: 700;
-    font-size: 15px;
-    color: #526288;
-    letter-spacing: 0.03em;
+    font-size: 18px;
+    margin-top: 20px;
+    user-select: none;
+  }
+  #googleSearchBtn {
+    margin-top: 16px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(66,133,244,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #googleSearchBtn:hover {
+    background-color: #3367d6;
+    box-shadow: 0 8px 24px rgba(51,103,214,0.8);
   }
 
-  tbody tr {
+  /* Yeni: kartlar için container ve kart stilleri */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .card {
     background: #f9fbff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: default;
   }
-  tbody tr:hover {
+  .card:hover {
     box-shadow: 0 8px 24px rgba(79,131,204,0.3);
     transform: translateY(-3px);
   }
-
-  td {
-    padding: 16px 18px;
-    font-size: 15px;
-    vertical-align: middle;
-    color: #394867;
+  .card-header {
+    font-weight: 700;
+    font-size: 16px;
+    color: #344767;
+    margin-bottom: 12px;
   }
-
-  /* Butonlar tablodaki */
+  .card-info {
+    font-size: 14px;
+    color: #394867;
+    margin-bottom: 6px;
+  }
+  .match-score {
+    color: #4f83cc;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
   .btn-group {
     display: flex;
     gap: 10px;
+    margin-top: auto;
   }
   .btn {
     padding: 8px 18px;
@@ -169,34 +178,6 @@
     box-shadow: 0 6px 20px rgba(51,103,214,0.6);
   }
 
-  /* Eşleşme yok mesajı */
-  #noMatchMessage {
-    text-align: center;
-    color: #d93025;
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 20px;
-    user-select: none;
-  }
-
-  #googleSearchBtn {
-    margin-top: 16px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    font-size: 17px;
-    font-weight: 700;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(66,133,244,0.6);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  #googleSearchBtn:hover {
-    background-color: #3367d6;
-    box-shadow: 0 8px 24px rgba(51,103,214,0.8);
-  }
-
   /* Responsive */
   @media (max-width: 720px) {
     .search-area {
@@ -206,13 +187,10 @@
     button, input[type="text"] {
       width: 100%;
     }
-    table {
-      min-width: 600px;
-    }
   }
-  @media (max-width: 480px) {
-    table {
-      min-width: 480px;
+  @media (max-width: 600px) {
+    .cards-container {
+      grid-template-columns: 1fr;
     }
   }
 </style>
@@ -227,21 +205,7 @@
       <button id="clearBtn" onclick="clearPage()">Temizle</button>
     </div>
 
-    <div class="table-wrapper">
-      <table id="resultTable" style="display:none;">
-        <thead>
-          <tr>
-            <th>Uyum</th>
-            <th>Model</th>
-            <th>Tanım</th>
-            <th>Malzeme</th>
-            <th>Barkod</th>
-            <th>Online</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <div class="cards-container" id="cardsContainer" style="display:none;"></div>
 
     <div id="noMatchMessage" style="display:none;">
       Eşleşme bulunamadı
@@ -254,13 +218,12 @@
   function fetchAndSearch() {
     const inputElem = document.getElementById('searchInput');
     const input = inputElem.value.trim().toUpperCase();
-    const table = document.getElementById('resultTable');
-    const tbody = table.querySelector('tbody');
+    const cardsContainer = document.getElementById('cardsContainer');
     const noMatchDiv = document.getElementById('noMatchMessage');
     const googleBtn = document.getElementById('googleSearchBtn');
 
-    tbody.innerHTML = '';
-    table.style.display = 'none';
+    cardsContainer.innerHTML = '';
+    cardsContainer.style.display = 'none';
     noMatchDiv.style.display = 'none';
 
     if (!input) return;
@@ -301,23 +264,23 @@
             const boynerUrl = `https://www.boyner.com.tr/search?q=${onlineKodu}`;
             const googleUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(row.Model)}`;
 
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-              <td>%${row.Uyum}</td>
-              <td>${row.Model}</td>
-              <td>${row.Tanım}</td>
-              <td>${row.Malzeme}</td>
-              <td>${row.Barkod}</td>
-              <td>
-                <div class="btn-group">
-                  <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
-                  <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
-                </div>
-              </td>
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+              <div class="match-score">%${row.Uyum} Uyum</div>
+              <div class="card-header">${row.Model}</div>
+              <div class="card-info"><strong>Tanım:</strong> ${row.Tanım}</div>
+              <div class="card-info"><strong>Malzeme:</strong> ${row.Malzeme}</div>
+              <div class="card-info"><strong>Barkod:</strong> ${row.Barkod}</div>
+              <div class="btn-group">
+                <a class="btn btn-boyner" href="${boynerUrl}" target="_blank" rel="noopener noreferrer">Boyner</a>
+                <a class="btn btn-google" href="${googleUrl}" target="_blank" rel="noopener noreferrer">Google</a>
+              </div>
             `;
-            tbody.appendChild(tr);
+            cardsContainer.appendChild(card);
           });
-          table.style.display = 'table';
+
+          cardsContainer.style.display = 'grid';
         } else {
           noMatchDiv.style.display = 'block';
 
@@ -337,8 +300,8 @@
   function clearPage() {
     const inputElem = document.getElementById('searchInput');
     inputElem.value = '';
-    document.getElementById('resultTable').style.display = 'none';
-    document.querySelector('#resultTable tbody').innerHTML = '';
+    document.getElementById('cardsContainer').style.display = 'none';
+    document.getElementById('cardsContainer').innerHTML = '';
     document.getElementById('noMatchMessage').style.display = 'none';
     inputElem.focus();
   }
