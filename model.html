@@ -72,6 +72,17 @@
       background-color: #3367d6;
     }
 
+    #noMatchMessage {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #555;
+      text-align: center;
+    }
+
+    #googleSearchBtn {
+      margin-top: 10px;
+    }
+
     @media (max-width: 600px) {
       table, th, td {
         font-size: 12px;
@@ -98,14 +109,24 @@
     <tbody></tbody>
   </table>
 
+  <div id="noMatchMessage" style="display:none;">
+    Eşleşme bulunamadı
+    <br>
+    <button id="googleSearchBtn" class="btn btn-google">Google'da Ara</button>
+  </div>
+
   <script>
     function fetchAndSearch() {
-      const input = document.getElementById('searchInput').value.trim().toUpperCase();
+      const inputElem = document.getElementById('searchInput');
+      const input = inputElem.value.trim().toUpperCase();
       const table = document.getElementById('resultTable');
       const tbody = table.querySelector('tbody');
+      const noMatchDiv = document.getElementById('noMatchMessage');
+      const googleBtn = document.getElementById('googleSearchBtn');
 
       tbody.innerHTML = '';
       table.style.display = 'none';
+      noMatchDiv.style.display = 'none';
 
       if (input === '') return;
 
@@ -161,7 +182,16 @@
             });
             table.style.display = 'table';
           } else {
-            table.style.display = 'none';
+            // Eşleşme yoksa mesaj ve google butonunu göster
+            noMatchDiv.style.display = 'block';
+
+            // Google'da ara butonuna tıklayınca inputtaki kelimeyle arama aç
+            googleBtn.onclick = () => {
+              const query = encodeURIComponent(inputElem.value.trim());
+              if (query) {
+                window.open(`https://www.google.com/search?tbm=isch&q=${query}`, '_blank', 'noopener');
+              }
+            };
           }
         })
         .catch(error => {
