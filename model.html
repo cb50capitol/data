@@ -2,173 +2,133 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Model Arama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kart Grid Arayüzü</title>
   <style>
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f0f4ff, #e3f2fd);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 40px 16px;
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 30px 15px;
     }
-
     .container {
-      max-width: 600px;
-      width: 100%;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-
     h1 {
       text-align: center;
-      font-size: 26px;
-      margin-bottom: 30px;
-      color: #1e3a8a;
+      margin-bottom: 20px;
     }
-
-    .search-bar {
+    .input-wrapper {
       position: relative;
-      margin-bottom: 24px;
+      max-width: 500px;
+      margin: 0 auto 30px;
     }
-
-    .search-bar input {
+    input[type="text"] {
       width: 100%;
-      padding: 14px 50px 14px 20px;
-      border: 2px solid #cbd5e1;
-      border-radius: 30px;
+      padding: 12px 44px 12px 16px;
+      border-radius: 24px;
+      border: 1.5px solid #cbd5e1;
       font-size: 16px;
-      transition: 0.3s ease;
     }
-
-    .search-bar input:focus {
-      outline: none;
-      border-color: #60a5fa;
-      box-shadow: 0 0 8px rgba(96,165,250,0.3);
-    }
-
-    .search-bar svg {
+    .input-wrapper svg {
       position: absolute;
-      right: 18px;
+      right: 12px;
       top: 50%;
       transform: translateY(-50%);
-      width: 22px;
-      height: 22px;
-      fill: #60a5fa;
-      pointer-events: none;
+      width: 20px;
+      height: 20px;
+      fill: #64748b;
     }
-
-    .results {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    #results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
-
     .card {
-      background: #f9fafb;
-      border-radius: 16px;
+      background: #fff;
+      border-radius: 14px;
       padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.03);
-      transition: 0.2s ease;
+      gap: 8px;
+      transition: transform 0.2s ease;
     }
-
     .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
     }
-
-    .model {
-      font-weight: 600;
-      font-size: 18px;
-      color: #1f2937;
-    }
-
-    .description, .material, .barcode {
-      font-size: 14px;
-      color: #4b5563;
-    }
-
     .score {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: bold;
       color: #3b82f6;
     }
-
+    .model {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .description {
+      font-size: 14px;
+      color: #475569;
+    }
+    .material, .barcode {
+      font-size: 13px;
+      color: #64748b;
+    }
     .btn-group {
       display: flex;
-      gap: 12px;
-      margin-top: 10px;
+      gap: 8px;
+      margin-top: auto;
     }
-
     .btn {
       flex: 1;
-      padding: 10px 0;
-      border-radius: 30px;
+      padding: 8px 0;
+      font-size: 14px;
       text-align: center;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 14px;
       transition: 0.3s ease;
     }
-
     .btn-boyner {
-      background: #fde68a;
-      color: #92400e;
+      background: #ffe4b5;
+      color: #5a3e00;
     }
-
+    .btn-boyner:hover {
+      background: #ffd08a;
+    }
     .btn-google {
-      background: #a7f3d0;
-      color: #065f46;
+      background: #b5ead7;
+      color: #134e42;
     }
-
+    .btn-google:hover {
+      background: #9cdac3;
+    }
     #noMatchMessage {
       text-align: center;
-      margin-top: 20px;
       font-size: 16px;
       font-weight: 600;
-      color: #ef4444;
-    }
-
-    #googleSearchBtn {
-      margin-top: 10px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 25px;
-      background-color: #3b82f6;
-      color: white;
-      cursor: pointer;
+      color: #dc2626;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
     <h1>Model Arama</h1>
-
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Model numarası yazın..." />
-      <svg viewBox="0 0 24 24">
-        <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
-      </svg>
+    <div class="input-wrapper">
+      <input type="text" id="searchInput" placeholder="Model numarası girin...">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1010 16a6.5 6.5 0 005.43-2.84l.27.28v.79l5 5L20.49 19l-5-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/></svg>
     </div>
 
-    <div id="results" class="results"></div>
+    <div id="results"></div>
 
     <div id="noMatchMessage" style="display:none;">
-      Eşleşme bulunamadı<br>
-      <button id="googleSearchBtn">Google'da Ara</button>
+      Eşleşme bulunamadı.
     </div>
   </div>
 
@@ -176,7 +136,6 @@
     const input = document.getElementById('searchInput');
     const results = document.getElementById('results');
     const noMatch = document.getElementById('noMatchMessage');
-    const googleBtn = document.getElementById('googleSearchBtn');
 
     input.addEventListener('input', performSearch);
 
@@ -229,9 +188,6 @@
             });
           } else {
             noMatch.style.display = 'block';
-            googleBtn.onclick = () => {
-              window.open(`https://www.google.com/search?tbm=isch&q=${encodeURIComponent(value)}`, '_blank');
-            };
           }
         });
     }
