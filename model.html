@@ -46,7 +46,7 @@
       padding: 40px 28px;
       border-radius: 20px;
       box-shadow: 0 10px 30px var(--shadow);
-      max-width: 500px;
+      max-width: 900px; /* genişlik biraz arttı */
       width: 100%;
       text-align: center;
     }
@@ -60,6 +60,9 @@
     .input-wrapper {
       position: relative;
       margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     input[type="text"] {
@@ -95,7 +98,7 @@
 
     #results {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* PC’de 3 yan yana */
       gap: 20px;
       margin-bottom: 20px;
     }
@@ -138,6 +141,8 @@
       display: flex;
       gap: 12px;
       margin-top: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
     }
 
     .btn {
@@ -191,23 +196,19 @@
       min-width: 120px;
     }
 
-    @media (max-width: 480px) {
-      .wrapper {
-        padding: 28px 16px;
-        margin: 0 12px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .btn {
-        font-size: 14px;
-        padding: 10px 0;
-      }
+    @media (max-width: 900px) {
       #results {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* orta ekranlarda 2 sütun */
+      }
+    }
+
+    @media (max-width: 600px) {
+      #results {
+        grid-template-columns: 1fr; /* küçük ekranlarda 1 sütun */
       }
       .btn-group {
-        flex-direction: column;
+        flex-direction: row !important; /* butonlar her zaman yan yana */
+        flex-wrap: nowrap;
       }
       #noMatchButtons {
         flex-direction: column;
@@ -217,6 +218,7 @@
         min-width: unset;
       }
     }
+
   </style>
 </head>
 <body>
