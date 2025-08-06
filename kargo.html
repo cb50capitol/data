@@ -298,8 +298,6 @@ body.dark-mode .top-center {
     <button id="deleteRowsBtn">Satır Sil</button>
     <button id="exportExcelBtn">Excel</button>
     <button id="toggleDarkMode" style="background:#6b7280;">🌙</button>
-<button id="autoBtn" style="background:#16a34a;">Test</button>
-
  </div>
 </div>
   <div class="table-container">
@@ -708,36 +706,6 @@ document.getElementById('toggleDarkMode').addEventListener('click', () => {
     summaryElement.classList.remove('green-blink');
   }, { once: true });
 }
-
-//TEST BOT
-  document.getElementById('autoBtn').addEventListener('click', () => {
-  let start = 6800000001; // Başlangıç ID’si
-  let count = 2000; // Kaç adet giriş yapılacak (değiştirebilirsin)
-  let delay = 600; // Her giriş arası gecikme süresi (ms)
-
-  let index = 0;
-
-  const interval = setInterval(() => {
-    if (index >= count) {
-      clearInterval(interval);
-      return;
-    }
-
-    const siparisId = String(start + index * 2);
-    const faturaId = String(start + index * 2 + 1);
-
-    // Sipariş ve fatura alanlarına yaz
-    siparisInput.value = siparisId;
-    faturaInput.value = faturaId;
-
-    // Enter tetikle
-    const enterEvent = new KeyboardEvent('keydown', { key: 'Enter' });
-    faturaInput.dispatchEvent(enterEvent);
-
-    index++;
-  }, delay);
-});
-
   
 </script>
   <!-- Modal yapısı -->
