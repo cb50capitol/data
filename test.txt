@@ -1,686 +1,276 @@
-Transfer Listesi	Kategori	Alt Kategori	Marka	Tanim	Model	Malzeme	EAN/UPC	Müsteri	SAS	Stok	Is Emri	Run ID
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayak, 38.5, Beyaz - Gri	GW3036 HOOPS 3.0	5002813206006	4064053690287	SB17	1	1	4231165323	72146
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	adidas	adidas Training Ayakkabısı, 42, Beyaz	ID4990 EVERYSET TRAINER	5003242571001	4066756103491	CM38	1	1	4231128610	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	adidas	adidas Tenis Ayakkabısı, 40.5, Mavi	IE1112 GameCourt 2 M	5003165769002	4067889131795	SB28	1	1	4231165843	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayakkabı, 38, Beyaz	IH5426 BREAKNET SLEEK	5003165591003	4067888090536	SM34	1	1	4231165836	72146
-Temmuz Genel Transferi	Kids	002Active Apparel	adidas	adidas Eşofman Altı, 164 cm, Pembe	IV7111-J SZN GFX  PANT	5003167252004	4067896118048	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	adidas	adidas Eşofman Altı, XL, Siyah	JD1881 M 3S FT TC PT	5003241982004	4067906082468	CM40	1	2	4231130121	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	adidas	adidas Şort, S, Gri	JE6419 M 3S FT SHO	5003242757003	4067906066765	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkab, 24, Beyaz - Mavi	JH9527-Tensaur Sport 2.0 CF I	5003243562004	4067892838063	CM40	1	1	4231130121	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	002Active Apparel	adidas	adidas Forma, L, Sarı	KD7315 FEN A JSY	5003293336003	4068814412644	CM32	2	4	4231166984	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	002Active Apparel	adidas	adidas Forma, M, Sarı	KD7315 FEN A JSY	5003293336002	4068814410176	CM32	2	4	4231166984	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	002Active Apparel	adidas	adidas Forma, S, Sarı	KD7315 FEN A JSY	5003293336001	4068814412606	CM32	1	2	4231166984	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	002Active Apparel	adidas	adidas Forma, XL, Sarı	KD7315 FEN A JSY	5003293336004	4068814412668	CM32	1	2	4231166984	72146
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, S, Beyaz	4A2000000011	5002570397003	2850001265391	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Po, 3XL, Açık Kahve	4A4820200001	5002559816001	2850001476940	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Po, 3XL, Gül Kurusu	4A4820200001	5002559850001	2850001476872	CB48	1	3	4231128792	31461
-Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T, L, Lacivert	4A4820200001	5002559864002	2850001392820	CB46	2	2	4231180176	
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Açık Kahve	4A4820200001	5002559816002	2850001392998	CB59	1	4	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Açık Kahve	4A4820200001	5002559816002	2850001392998	CB48	1	4	4231128792	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Açık Kahve	4A4820200001	5002559816002	2850001392998	CB44	1	4	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Açık Kahve	4A4820200001	5002559816002	2850001392998	CM50	1	4	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Açık Kahve	4A4820200001	5002559816002	2850001392998	CB54	1	4	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Açık Kahve	4A4820200001	5002559816002	2850001392998	CM63	1	4	4231130268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, S, Açık Kahve	4A4820200001	5002559816004	2850001393018	CM79	2	3	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-, 3XL, Vizon	4A4820200004	5002559902001	2850001393865	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-S, 4XL, Mavi	4A4820200004	5002559879002	2850001392066	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, L, İndigo - Beyaz	4A4820200004	5002880314005	2850001744094	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-, 2XL, Siyah	4A4820200047	5002880317001	2850001744865	CM79	1	2	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-, 2XL, Siyah	4A4820200047	5002880317001	2850001744865	YM02	1	2	4231129404	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-, 2XL, Siyah	4A4820200047	5002880317001	2850001744865	CB15	1	2	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T, L, Lacivert	4A4820200047	5002880315003	2850001744469	YM02	2	4	4231129404	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T, S, Lacivert	4A4820200047	5002880315005	2850001744483	CB46	1	2	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, L, Siyah	4A4820200047	5002880317003	2850001744827	CM22	1	6	4231129403	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, L, Siyah	4A4820200047	5002880317003	2850001744827	CM68	1	6	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, 2XL, Lacivert	4A4820200047	5002880315001	2850001744506	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Gri	4A4820200047	5002933874002	8683689469003	CB45	1	5	4231126763	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Gri	4A4820200047	5002933874002	8683689469003	CB15	3	5	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Gri	4A4820200047	5002933874005	8683689469034	CB49	1	3	4231129509	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Gri	4A4820200047	5002933874005	8683689469034	CB15	1	3	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-, 3XL, Bordo	4A9000000001	5003005770002	8683689527185	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, L, Beyaz	4A9000000001	5003005746003	8683689527260	CB43	1	2	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, S, Bordo	4A9000000001	5003005770005	8683689527215	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Shi, M, Mavi	4A9000000001	5003005765004	8683689527901	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, L, Gri Melanj	4A9000000001	5003005763003	8683689527338	CM50	1	9	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, M, Gri Melanj	4A9000000001	5003005763004	8683689527345	CM68	1	4	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, M, Gri Melanj	4A9000000001	5003005763004	8683689527345	CM40	1	4	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, M, Nar Çiçeği	4A9000000001	5003005766004	8683689527697	CB44	1	3	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, M, Nar Çiçeği	4A9000000001	5003005766004	8683689527697	CM68	1	3	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, M, Nar Çiçeği	4A9000000001	5003005766004	8683689527697	CB15	1	3	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo, XL, Açık Mavi	4A9000000002	5003005747007	8683689528359	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-S, XL, Siyah	4A9000000003	5003005811006	8683689529479	CB48	1	3	4231128792	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, L, Siyah	4A9000000003	5003005811003	8683689529448	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pol, L, Gri - Beyaz	4A9000000004	5003005779005	8683689560434	CM79	1	2	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, 4XL, Gri	4A9000000004	5003005786003	8683689647081	CB43	2	2	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Sh, 4XL, Gri	4A9000000004	5003005786003	8683689647081	CM24	1	2	4231130435	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polo T-Shir, M, Gri	4A9000000004	5003005786006	8683689647111	CM63	1	4	4231130268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, 3XL, Beyaz - Vizon	4A9000000004	5003005812002	8683689560687	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, 4XL, Beyaz - Vizon	4A9000000004	5003005812003	8683689560694	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Sh, 2XL, Lacivert	4C4800000012	5003120375005	8684310087917	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shir, L, Antrasit	4C4800000012	5003120372001	8684310087726	CM36	1	3	4231128454	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Bej	4C4800000012	5003120384001	8684310087771	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, M, Bej	4C4800000012	5003120384002	8684310087788	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Bej	4C4800000012	5003120384004	8684310087801	CM40	2	2	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 48, Siyah	ACE001252246_SYH	5003252740002	8684310655673	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Siyah	ACE001252246_SYH	5003252740005	8684310655666	CB38	1	2	4231127070	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Bej	ACE001252276_BEJ	5003252734002	8684310695341	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Bej	ACE001252276_BEJ	5003252734002	8684310695341	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 48, Gri	ACE001252541_GRI	5003285670001	8684310938011	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, L, Lacivert - Beyaz	ACE020252006_LCB	5003252736003	8684310718675	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, S, Lacivert	ACE020252163_LAC	5003252831005	8684310737362	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, 2XL, Haki	ACE020252165_HAK	5003252822001	8684310719382	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, M, Bej	ACE020252171_BEJ	5003252809003	8684310623542	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Lacivert	ACE072252045_LAC	5003252845003	8684310668321	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Lacivert	ACE072252045_LAC	5003252845005	8684310692333	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, 2XL, Beyaz	ACE091252068_BYZ	5003251923001	8684310708546	CM36	2	3	4231128454	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, S, Siyah	ACE091252068_SYH	5003251951004	8684310708577	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Siyah	ACE091252078_SYH	5003251944004	8684310630366	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shi, XL, Açık Gri	ACE091252105_AGR	5003251963004	8684310631790	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, S, Siyah	ACE091252299_SYH	5003251995004	8684310632285	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Siyah	ACE091252299_SYH	5003251995005	8684310632308	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Siyah	ACE091252300_SYH	5003251976005	8684310631639	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Haki	ACE091252301_HAK	5003252032005	8684310627861	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Ekru	ACE091252303_EKR	5003252034001	8684310627298	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Ekru	ACE091252408_EKR	5003252062002	8684310756721	CB44	1	4	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Ekru	ACE091252408_EKR	5003252062002	8684310756721	CB43	1	4	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, M, Ekru	ACE091252408_EKR	5003252062003	8684310756738	CB46	2	3	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 31, Mavi	ET0100000001	5003179746001	8683689945408	CM68	2	3	4231129800	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Asics	Asics Koşu Ayakkabısı, 44.5, Siyah	1011B858-003 GT-1000 13	5003249032006	4550457897501	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Asics	Asics Koşu Ayakkabısı, 39, Gri	1012B755-020 GEL-PULSE 16	5003249163004	4570158223133	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Asics	Asics Tenis Ayakkabısı, 39.5, Beyaz	1042A237-101 GEL-DEDICATE 8	5003177005005	4550456670747	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Mens	006Apparel	Back and Bond	Back and Bond Pantolon, 50, Lacivert	B33T30008	5003227275005	8959770046768	CM24	1	2	4231130435	31461
-Temmuz Genel Transferi	Mens	006Apparel	Back and Bond	Back and Bond T-Shirt, L, Beyaz	B34S10018	5003269813002	8959770055333	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Back and Bond	Back and Bond T-Shirt, L, Mavi	B34S10043	5003279055002	8959770057627	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Back and Bond	Back and Bond Gömlek, XL, Vizon	B34S22040	5003274675003	8959770052271	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Back and Bond	Back and Bond Pantolon, 33, Siyah	B34W35003	5003215352004	8959770039241	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Kids	006Apparel	Barbie	Barbie Denim Şort, 7-8 Yaş, Pembe	BRB5SG-SRT6008	5003221785003	8684024475727	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Kids	006Apparel	Benetton	Benetton T-Shirt, 11-12 Yaş, Kırmızı	3FHXC10MW	5003255863002	2990023259159	CB59	1	2	4231126446	31461
-Temmuz Genel Transferi	Kids	006Apparel	Benetton	Benetton T-Shirt, 11-12 Yaş, Beyaz	3I1XC10P1	5003255889002	2990023485541	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Kids	006Apparel	Benetton	Benetton Eşofman Altı, 6-7 Yaş, Yeşil	3J68CF058	5003255689004	2990023288289	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Kids	006Apparel	Benetton	Benetton T-Shirt, 13-14 Yaş, Sarı	3SL3C10OW	5003255949003	2990023478932	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 52, İndigo	4B1600000101	5002803544004	2850002031063	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, L, Açık Mavi	4B2000000111	5002656757002	2850001691336	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Polo T-Shir, S, Lacivert	4B4800000001	5003136419005	8684310082967	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Polo T-Shirt, S, Beyaz	4B4800000001	5003136397005	8684310082783	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, M, Siyah	4B4800000002	5003008539004	8683689743677	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, S, İndigo	4B4800000003	5003136455004	8684310084312	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, XL, Siyah	4B4800000003	5003136484005	8684310084473	CM22	1	2	4231129403	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, XL, Siyah	4B4800000003	5003136484005	8684310084473	CM40	1	2	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, S, Lacivert	4B4825200047_LAC	5003252525004	8684310716176	YM07	1	2	4231130197	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 48, Gri	BBE001252047_GRI	5003252328001	8684310694849	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 56, Lacivert	BBE001252260_LAC	5003252464004	8684310688039	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 58, Siyah	BBE001252260_SYH	5003252476005	8684310688107	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 58, Siyah	BBE001252424_SYH	5003285732007	8684310817262	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, S, Lacivert	BBE020252187_LAC	5003252189005	8684310685748	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, L, Siyah	BBE020252189_SYH	5003252290002	8684310625027	CB53	1	1	4231129795	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business G, M, Beyaz - Kahverengi	BBE020252379	5003282861002	8684310802329	CB70	1	3	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, XL, Beyaz - Mavi	BBE020252379	5003282862004	8684310802404	CB49	1	1	4231129509	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, XL, Beyaz - Mavi	BBE020252379	5003282862004	8684310802404	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, XL, Vizon	BBE020252379	5003282833004	8684310802459	CB38	1	2	4231127070	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, XL, Vizon	BBE020252379	5003282833004	8684310802459	CM68	1	2	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Göm, L, Lacivert - Beyaz	BBE020252382	5003277682002	8684310815992	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Kazak, 2XL, Açık Bej	BBE072252036_ABJ	5003251828001	8684310632070	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, M, Beyaz	BBE091252367_BYZ	5003252013003	8684310664569	CB46	1	3	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, L, Beyaz	BBE091252368_BYZ	5003252021002	8684310754253	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, S, Gri Melanj	BBE091252426_GMJ	5003252053004	8684310713380	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, 2XL, Siyah	BBE091252429_SYH	5003252065001	8684310709239	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, XL, Siyah	BBE091252431_SYH	5003252066005	8684310709321	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, L, Bej	BBE091252460_BEJ	5003252343002	8684310736174	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Beymen Business	Beymen Business T-Shirt, XL, Lacivert	BBE091252463_LAC	5003252104005	8684310736679	CB15	1	1	4231130311	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	033Mens Shoes	Birkenstock	Birkenstock Plaj Terliği, 43, Ekru	ARIZONA EVA	5003147520003	4066648342304	CB78	1	3	4231163621	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	033Mens Shoes	Birkenstock	Birkenstock Plaj Terliği, 45, Ekru	ARIZONA EVA	5003147520005	4066648342380	CB78	1	2	4231163621	72146
-Temmuz Genel Transferi	Mens	023Underwear	Blackspade	Blackspade Eşofman Altı, 2XL, Lacivert	9314	5003047098001	8698773559348	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Mens	023Underwear	Blackspade	Blackspade Eşofman Altı, M, Gri Melanj	9314	5003047097003	8698773559362	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	023Underwear	Blackspade	Blackspade Şort Mayo, XL, Siyah	10780	5003268882004	8698773640732	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Mens	023Underwear	Blackspade	Blackspade T-Shirt, XS, Beyaz	40733	5003262754001	8698773629867	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers Pantolon, 54, Bej	BBFW24MPT020	5003183728002	8684497155836	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, XL, Kahve	BBSS24MTS008	5003127888005	2120000123320	CM24	1	1	4231130435	31461
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shir, 2XL, Kırık Beyaz	BBSS25MTS022	5003252382001	8684497213024	1100021	2	3	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, L, Kırık Beyaz	BBSS25MTS022	5003252382003	8684497212980	1100021	5	9	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, L, Lacivert	BBSS25MTS022	5003252224003	8684497213161	1100021	4	7	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, L, Siyah	BBSS25MTS022	5003252329003	8684497213048	1100021	5	8	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Bordo	BBSS25MTS022	5003252214004	8684497213116	1100021	2	3	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Kırık Beyaz	BBSS25MTS022	5003252382004	8684497212997	1100021	6	9	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Lacivert	BBSS25MTS022	5003252224004	8684497213178	1100021	3	6	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Siyah	BBSS25MTS022	5003252329004	8684497213055	1100021	4	7	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, S, Kırık Beyaz	BBSS25MTS022	5003252382005	8684497213000	1100021	2	4	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, S, Siyah	BBSS25MTS022	5003252329005	8684497213062	1100021	2	3	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, XL, Bordo	BBSS25MTS022	5003252214006	8684497213130	1100021	3	6	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, XL, Kırık Beyaz	BBSS25MTS022	5003252382006	8684497213017	1100021	3	7	4300987224	
-İzmir Depo Transfer	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, XL, Siyah	BBSS25MTS022	5003252329006	8684497213079	1100021	4	8	4300987224	
-Temmuz Genel Transferi	Mens	006Apparel	Calvin Klein	Calvin Klein T-Shirt, XL, Beyaz	K10K112487YAS	5003239824004	8721107446875	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Calvin Klein	Calvin Klein T-Shirt, L, Siyah	K10K112491BEH	5003124752001	8720109233827	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Mens	006Apparel	Calvin Klein	Calvin Klein Pantolon, 34-32, Siyah	K10K113648BEH	5003176054003	8720109855890	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Mens	006Apparel	Calvin Klein	Calvin Klein Kazak, XL, Beyaz	K10K114476YAS	5003239943004	8721107473956	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Plaj Terliği, 36, Beyaz	YW0YW01830	5003240283001	8721107336206	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans T-Shirt, M, Siyah	J20J225243BEH	5003238038002	8721107572895	CB70	2	2	4231126978	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans T-Shirt, L, Siyah	J20J225542BEH	5003238092001	8721107585031	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Kargo Şort, 31, Taş	J30J327376PFQ WASHED CARGO SHORT	5003241002002	8721107484440	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans T-Shirt, L, Mavi	J30J327471CKG MONOLOGO SHIFT TEE	5003241077001	8721107484556	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Polo T-Shir, L, Siyah	LV040HM281UB1 SS SMOOTH COTTON POLO	5003241027001	8719849066611	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Polo T-Shir, M, Siyah	LV040HM281UB1 SS SMOOTH COTTON POLO	5003241027002	8719849066604	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Polo T-Shir, S, Siyah	LV040HM281UB1 SS SMOOTH COTTON POLO	5003241027003	8719849066192	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Polo T-Shir, S, Beyaz	LV040HM281YAA SS SMOOTH COTTON POLO	5003241080003	8719849041748	CM63	1	1	4231130268	31461
-Manuel Transferler Run ID 72145	Shoes & Bags	033Mens Shoes	Clarks	Clarks Sneaker, 42, Lacivert - Beyaz	Courtlite2 Lo	5003270262003	5063421039900	CB53	1	1	4231140204	72145
-Manuel Transferler Run ID 72145	Shoes & Bags	033Mens Shoes	Clarks	Clarks Sneaker, 44, Gri	Courtlite2 Run	5003270207005	5063421083712	CB43	1	1	4231140198	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Gömlek, L, Siyah	2012931010_AM1683	5003143262002	194895716426	CB45	1	1	4231145605	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Pantolon, 32, Siyah	2012951010_AM9184	5003143251002	194895231868	CB35	1	1	4231145602	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Pantolon, 36, Siyah	2012951010_AM9184	5003143251004	194895232056	CB35	1	1	4231145602	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Pantolon, L, Gri	2097542023AE1681	5003267720002	195981347845	CB35	1	1	4231145602	72145
-Outdoor Blok Transferi	Active & Outdoor	041Outdoor Shoes	Columbia	Columbia Outdoor Ayakkabısı, 41, Siyah	2108791010BM5164	5003267692002	195982509624	CB35	1	1	4231145602	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, 2XL, Siyah	9110861010CS0414	5003267790001	8698098881292	CB49	1	1	4231145606	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, XL, Beyaz	9120180100_CS0121 CSC BAR SPLIT	5003146851005	8698098867418	CB15	1	1	4231145601	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, M, Siyah	9120340010_CS0241 CSC RETRO SS TEE	5003146882003	8698098867647	CB49	1	1	4231145606	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, XL, Beyaz	9120568010_CS0376 HERITAGE T-SHIRT	5003146891005	8698098872443	CB35	1	1	4231145602	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, L, Siyah	CS0121 CSC BAR SPLIT GRAPHIC SS TEE	5002698992003	8698098826163	CM27	1	1	4231145608	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Polo T-Shirt, L, Beyaz	CS0214 M CASCADE RANGE SOLID POLO I	5002698917004	8698098828532	CB35	1	1	4231145602	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, M, Koyu Lacivert	CS0282 CSC M BASIC SM LOGO BRUSHED	5002958619002	8698098854173	CB49	1	2	4231145606	72145
-Outdoor Blok Transferi	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, M, Koyu Lacivert	CS0282 CSC M BASIC SM LOGO BRUSHED	5002958619002	8698098854173	CB55	1	2	4231145607	72145
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Crocs	Crocs Plaj Terliği, 42-43, Siyah	Classic	5003155909002	841158002467	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Beyaz	D4SL-GML3026	5003095893001	8684024140267	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat Şo, 2XL, Mavi	D4SM-SHT3221	5003227125005	8684024563622	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat Şor, XL, Mavi	D4SM-SHT3221	5003227125004	8684024563615	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat Şort, M, Mavi	D4SM-SHT3221	5003227125002	8684024563394	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat, XL, Antrasit	D4SM-SHT3221	5003098998004	8684024166076	CM79	1	4	4231129065	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat, XL, Antrasit	D4SM-SHT3221	5003098998004	8684024166076	CM22	2	4	4231129403	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Siyah	D4SM-TST3260	5003099110004	8684024169176	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shi, XL, Antrasit	D4SM-TST3277	5003099007004	8684024165864	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shir, M, Antrasit	D4SM-TST3277	5003099007002	8684024165840	CM44	2	4	4231129684	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shir, M, Antrasit	D4SM-TST3277	5003099007002	8684024165840	YM07	1	4	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shir, S, Antrasit	D4SM-TST3277	5003099007001	8684024165833	CM50	1	2	4231129268	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Polo T-Sh, L, Siyah	D4SM-TST3283	5003102354003	8684024177447	CB35	1	2	4231131329	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3294	5003103266004	8684024178321	CB46	1	2	4231127995	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SM-TST3308	5003107822001	8684024205096	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Kids	006Apparel	Discovery Expedition	Discovery Expedi, 11-12 Yaş, Kırık Beyaz	D5SB-TST3291	5003221692004	8684024471057	CB49	1	1	4231129509	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XS, Beyaz	D5SL-TST3599	5003227132001	8684024563578	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şo, XL, Kırık Beyaz	D5SM-SHT3595	5003227074004	8684024562465	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, M, Antrasit	D5SM-SHT3595	5003227092002	8684024560867	YM07	1	2	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, 2XL, Taş	D5SM-SHT3715	5003227176005	8684024565343	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, XL, Taş	D5SM-SHT3715	5003227176004	8684024565336	CM44	1	2	4231129684	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, XL, Bej	D5SM-SHT3829	5003228425004	8684024573386	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Kargo Şor, L, Siyah	D5SM-SHT3889	5003228934003	8684024579098	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Siyah	D5SM-TST3775	5003231050004	8684024599195	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, 2XL, Siyah	D5SM-TST3783	5003231200005	8684024599942	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shi, XL, Lacivert	D5SM-TST3802	5003227130004	8684024563509	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Discovery Expedition	Discovery Expedition Sandalet, 43, Siyah	DEAN	5003270748004	8684024709839	CB43	1	1	4231129103	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Discovery Expedition	Discovery Expedition Sandalet, 37, Siyah	D-RAINA	5003230691002	8684024595210	CB62	1	2	4231176104	72146
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Discovery Expedition	Discovery Expedition Sneaker, 41, Beyaz	JOVICA	5003100293002	8684024174583	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Discovery Expedition	Discovery Expedition Sneaker, 44, Beyaz	JOVICA	5003100293005	8684024174811	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 31-32, Yeşil	COMFORT KNIT CHINO SKINNY	5003238081005	5401187124803	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Dockers	Dockers T-Shirt, L, Kahve	GRAPHIC TEE SLIM	5003238121002	5401157813959	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Dockers	Dockers Gömlek, 2XL, Bej	OXFORD SHIRT SLIM	5003238135001	5401157799581	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Dockers	Dockers Polo T-Shirt, 2XL, Koyu Mavi	PIQUE POLO SLIM	5003238125001	5401157809792	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 38-34, Mavi	ULTIMATE CHINO SLIM	5003238171019	5401157812488	CB44	1	1	4231129076	31461
-Ladies Swimwear Transferi	Ladies	023Underwear	Fabrika	Fabrika Bikini Alt, 36, Siyah - Ekru	24-PARELLA	5003114412001	8684024224851	YM07	1	1	4231117825	31458
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 39, Ten	ARMIDA	5003098649004	8684024161262	CB62	1	1	4231176104	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Bej	AYELEN	5003231361003	8684024600990	CB62	1	1	4231176104	72146
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Elbise, S, Siyah - Beyaz	F4SL-ELB0335	5003087309002	8684024093129	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Denim Elbise, 38, İndigo	F4SL-ELB0552	5003087576003	8684024102852	CM24	1	2	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Gömlek, 36, Beyaz - Lacivert	F4SL-GML0124	5003087557002	8684024103200	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Fabrika	Fabrika Kazak, L, Lacivert	F4SM-KZK 0721	5003080371003	8684024070793	YM02	2	3	4231129404	31461
-Temmuz Genel Transferi	Mens	006Apparel	Fabrika	Fabrika Kazak, S, Lacivert	F4SM-KZK 0721	5003080371001	8684024070779	CB38	1	2	4231127070	31461
-Temmuz Genel Transferi	Mens	023Underwear	Fabrika	Fabrika Şort Mayo, 2XL, Siyah	F4SM-MYO01	5003107948005	8684024207762	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Mens	023Underwear	Fabrika	Fabrika Şort Mayo, L, Siyah	F4SM-MYO01	5003107948003	8684024207748	CM47	1	3	4231130065	31461
-Temmuz Genel Transferi	Mens	023Underwear	Fabrika	Fabrika Şort Mayo, M, Siyah	F4SM-MYO01	5003107948002	8684024207731	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Mens	023Underwear	Fabrika	Fabrika Şort Mayo, S, Siyah	F4SM-MYO01	5003107948001	8684024207724	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Mens	023Underwear	Fabrika	Fabrika Şort Mayo, XL, Siyah	F4SM-MYO01	5003107948004	8684024207755	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Bluz, XL, Açık Bej	F4WL-BLZ0454	5003155524005	8684024332259	CB49	1	1	4231129509	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, M, Beyaz	F4WL-TST0758	5003164577003	8684024409685	CM27	1	2	4231130281	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Bluz, M, Bej	F5SL-BLZ0304	5003224167003	8684024540777	CM36	1	2	4231128454	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Bluz, M, Bej	F5SL-BLZ0304	5003224167003	8684024540777	CM24	1	2	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Eşofman Altı, L, Lacivert	F5SL-EA0093	5003224158004	8684024539764	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Elbise, 42, Beyaz	F5SL-ELB0015	5003224060005	8684024535599	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Gömlek, 40, Siyah	F5SL-GML0051	5003224185004	8684024542184	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika Gömlek, 34, Camel	F5SL-GML0324	5003224587001	8684024549053	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, L, Lacivert	F5SL-TST0111	5003224176004	8684024539993	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, M, Lacivert	F5SL-TST0111	5003224176003	8684024539986	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, L, Kırık Beyaz	F5SL-TST0187	5003223977004	8684024533984	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, M, Kırık Beyaz	F5SL-TST0378	5003224329003	8684024545376	CM23	1	2	4231126480	31461
-Temmuz Genel Transferi	Mens	006Apparel	Fabrika	Fabrika Bermuda Şort, L, Bej	F5SM-SHT 2752	5003225823003	8684024552398	YM07	1	1	4231130197	31461
-Ladies Swimwear Transferi	Ladies	023Underwear	Fabrika	Fabrika Bikini Üst, 42, Pembe	FREYA	5003237555004	8684024627959	CM76	1	1	4231117817	31458
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 38, Siyah	HARPER	5003231296003	8684024601416	CB62	1	1	4231176104	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 37, Siyah	HULONG	5003098638002	8684024161408	CB78	1	3	4231163621	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 39, Gül Kurusu	IVANA	5003231336004	8684024601805	CB62	1	1	4231176104	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 36, Siyah	KALKEN NEW	5003098605001	8684024157234	CB62	1	3	4231176104	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 40, Gümüş	KALKEN NEW	5003098597005	8684024157173	CB78	1	1	4231163621	72146
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	LILY	5003098636002	8684024160302	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Günlük Ayakkabı, 40, Siyah	MARLOW-SILAS	5003230725001	8684024597412	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Çapraz Çanta, Bedensiz, Siyah	MAT-TIGLA	5003098468001	8684024155049	CM38	1	4	4231128610	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 37, Siyah	NASEEM	5003098675002	8684024160685	CB62	1	3	4231176104	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 40, Altın	NASEEM	5003098657005	8684024160852	CB62	1	1	4231176104	72146
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Sneaker, 44, Taba	PERCIVAL-SHIELD	5003230712005	8684024596811	CB48	1	1	4231128792	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 38, Gül Kurusu	TESY	5003098625003	8684024158781	CB62	2	3	4231176104	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Plaj Terliği, 38, Siyah	TESY	5003098613003	8684024157890	CB62	2	2	4231176104	72146
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika	Fabrika T-Shirt, M, Kahve	TEYO	5002782877003	8683132092246	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Klasik Ayakkabı, 40, Siyah	TRISTAN-STERLING	5003230723001	8684024596910	CB49	1	1	4231129509	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Klasik Ayakkabı, 40, Taba	TRISTAN-STERLING	5003230714001	8684024596873	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Günlük Ayakkabı, 43, Gri	VALOR-ZENITH	5003230732004	8684024596798	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Günlük Ayakkabı, 44, Vizon	VALOR-ZENITH	5003230708005	8684024597764	CM22	1	1	4231129403	31461
-Ladies Swimwear Transferi	Ladies	023Underwear	Fabrika	Fabrika Plaj Elbisesi, S, Turuncu	ZENA	5003242297001	8684024631000	CM83	1	-1	4231117954	31458
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika Comfort	Fabrika Comfort Kaz, M, Beyaz - Lacivert	FC5SL-KZK0250	5003224085002	8684024538415	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Fabrika Comfort	Fabrika Comfort T-Shir, 2XL, Kırık Beyaz	FC5SL-TST0180	5003224015005	8684024534615	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Mens	006Apparel	Gmg Fırenze	Gmg Fırenze Pantolon, 46, Siyah	GU25MSS01210	5003283961001	8684485027411	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Omuz Çantası, Standart, Siyah	HWPG9349180-BLA	5003177431001	7625408608653	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Çapraz Çanta, Standart, Siyah	HWPG9349210-BLA	5003177367001	7625408608691	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Tote Çanta, Standart, Beyaz - Sarı	HWWG9647750	5003243203001	7620837318180	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Guess	Guess T-Shirt, L, Siyah	M4GI70KC9X0JBLK SS CN BASIC PIMA	5003246981001	7620837038200	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Hammer Jack	Hammer Jack Sneaker, 38, Beyaz	101 23144-Z	5002936006003	8682010464915	CB35	1	1	4231131329	31461
-Manuel Transferler Run ID 72145	Shoes & Bags	033Mens Shoes	Hammer Jack	Hammer Jack Sneaker, 43, Beyaz	WAMA M AYAKKABI	5003251554004	8682010226889	SM44	1	1	4231141952	72145
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Hammer Jack	Hammer Jack Sneaker, 37, Krem	ZELONI Z AYAKKABI	5003143123002	8682010605776	CM50	1	1	4231129268	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Krem	4000030	5003269082001	7909989354407	CM47	1	1	4231202550	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Krem	4000030	5003269082002	7909989354414	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Krem	4000030	5003269082003	7909989354421	CM22	1	2	4231202566	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Krem	4000030	5003269082003	7909989354421	CB44	1	2	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Krem	4000030	5003269082004	7909989354438	CB37	1	1	4231202574	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Kahve	4119875	5003269083001	7909989380840	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Kahve	4119875	5003269083004	7909989380871	CM76	1	1	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 35-36, Pembe Altın	4137428	5003025390001	7891224793440	CM38	2	2	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 37-38, Pembe Altın	4137428	5003025390002	7891224793457	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 39-40, Pembe Altın	4137428	5003025390003	7891224793464	CB63	1	1	4231202544	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 41-42, Pembe Altın	4137428	5003025390004	7891224793471	CM76	1	1	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliğ, 35-36, Açık Pembe	4137428	5003025338001	7893249588094	CM83	2	1	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliğ, 37-38, Açık Pembe	4137428	5003025338002	7893249588100	CB44	1	2	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliğ, 37-38, Açık Pembe	4137428	5003025338002	7893249588100	CB43	1	2	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliğ, 39-40, Açık Pembe	4137428	5003025338003	7893249588117	CM38	1	2	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliğ, 39-40, Açık Pembe	4137428	5003025338003	7893249588117	CB44	1	2	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliğ, 41-42, Açık Pembe	4137428	5003025338004	7893249588124	CM24	1	1	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Gümüş	4137428	5003025374001	7891224793495	CB43	1	2	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Gümüş	4137428	5003025374001	7891224793495	CB54	1	2	4231202586	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Gümüş	4137428	5003025374002	7891224793501	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Gümüş	4137428	5003025374004	7891224793525	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Altın	4144537	5003025403001	7909690712756	CM83	1	1	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Altın	4144537	5003025403003	7909690712770	CM47	1	1	4231202550	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Dore	4146975	5003269074001	7909843116660	CM76	1	1	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Bej	4147115	5003269075001	7909690759928	CM38	1	2	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Bej	4147115	5003269075001	7909690759928	CM23	1	2	4231202563	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	4147115	5003269076001	7909690759874	CB43	3	3	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	4147115	5003269076002	7909690759881	CB63	2	6	4231202544	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	4147115	5003269076002	7909690759881	CM38	1	6	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	4147115	5003269076002	7909690759881	CB44	1	6	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	4147115	5003269076002	7909690759881	CB48	1	6	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Siyah	4147115	5003269076003	7909690759898	CB48	2	2	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Bej	4147115	5003269075004	7909690759959	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Siyah	4147115	5003269076004	7909690759904	CM38	1	1	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Vişne	4148257	5003269026001	7909989160534	CM83	1	1	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Vişne	4148257	5003269026002	7909989160541	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Vişne	4148257	5003269026004	7909989160565	CB48	1	1	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Beyaz	4148301	5003025421001	7909843020547	CB37	1	1	4231202574	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	4148301	5003025376001	7909843020592	CB54	1	3	4231202586	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	4148301	5003025376001	7909843020592	CM76	1	3	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Beyaz	4148301	5003025421002	7909843020554	CM38	1	1	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Beyaz	4148301	5003025421003	7909843020561	CB63	1	1	4231202544	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Siyah	4148301	5003025376003	7909843020615	CB54	1	1	4231202586	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Beyaz	4148301	5003025421004	7909843020578	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Siyah	4148301	5003025376004	7909843020622	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Açık Dore	4149584	5003269029001	7909989587010	CM38	1	1	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Kahve	4149584	5003269092001	7909989578445	CB44	2	2	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Açık Dore	4149584	5003269029003	7909989587034	CM23	3	3	4231202563	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Kahve	4149584	5003269092003	7909989578469	CB48	1	1	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Açık Dore	4149584	5003269029004	7909989587041	CB63	1	1	4231202544	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Kahve	4149584	5003269092004	7909989578476	CM22	1	1	4231202566	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Pembe	40000295784	5003151813001	7893249648064	CM83	2	2	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Pembe	40000295784	5003151813002	7893249648071	CM24	1	5	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Pembe	40000295784	5003151813002	7893249648071	CB44	1	5	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Pembe	40000295784	5003151813002	7893249648071	CB48	2	5	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Pembe	40000295784	5003151813002	7893249648071	CB43	1	5	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Pembe	40000295784	5003151813003	7893249648088	CM47	1	3	4231202550	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Pembe	40000295784	5003151813003	7893249648088	CB44	1	3	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Pembe	40000295784	5003151813003	7893249648088	CB48	1	3	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Pembe	40000295784	5003151813004	7893249648095	CM76	1	1	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Yeşil	40000321740	5003151843002	7909690659600	CM38	2	3	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Yeşil	40000321740	5003151843002	7909690659600	CM83	1	3	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Yeşil	40000321740	5003151843003	7909690659617	CM83	1	1	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Mavi	40000322711	5003151842002	7890557699344	CM38	1	1	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Mavi	40000322711	5003151842003	7890557699498	CM24	1	1	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Yeşil	40000327344	5003153591002	7909690531647	CM76	1	2	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Yeşil	40000327344	5003153591002	7909690531647	CB78	1	2	4231163621	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Yeşil	40000327344	5003153591003	7909690531654	CM47	1	1	4231202550	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Pembe	41155491749	5003153582001	7909843842996	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Pembe	41155491749	5003153582002	7909843843009	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Pembe	41155491749	5003153582003	7909843843016	CB63	1	1	4231202544	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Lila	41197875020	5003151850001	7909989033029	CM24	1	1	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Lila	41197875020	5003151850002	7909989033036	CB48	1	1	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Lila	41197875020	5003151850003	7909989033043	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Şeftali	41197875567	5003151851001	7909989033227	CM83	1	1	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Şeftali	41197875567	5003151851002	7909989033234	CM24	1	2	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Şeftali	41197875567	5003151851002	7909989033234	CM83	1	2	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Şeftali	41197875567	5003151851003	7909989033241	CM23	1	2	4231202563	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Şeftali	41197875567	5003151851003	7909989033241	CM76	1	2	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	41469751069	5003151816001	7909843116523	CM23	1	1	4231202563	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	41469751069	5003151816002	7909843116530	CM76	1	1	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	41482572976	5003151903001	7909843153245	CM22	1	2	4231202566	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Siyah	41482572976	5003151903003	7909843153269	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Siyah	41482572976	5003151903004	7909843153276	CM47	1	1	4231202550	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 35-36, Pembe Altın	41482575282	5003151920001	7909843153344	CM24	1	2	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 35-36, Pembe Altın	41482575282	5003151920001	7909843153344	CB44	2	2	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 41-42, Pembe Altın	41482575282	5003151920004	7909843153375	CB37	1	1	4231202574	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Açık Dore	41489700121	5003151885002	7909989049143	CB43	1	1	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35, Siyah	Brasil	5000004359006	7895265700337	CM38	2	2	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37, Siyah	Brasil	5000004359005	7895265700344	CM24	1	2	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37, Siyah	Brasil	5000004359005	7895265700344	CM47	1	2	4231202550	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39, Siyah	Brasil	5000004359004	7895265700351	CB63	1	2	4231202544	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39, Siyah	Brasil	5000004359004	7895265700351	CM24	1	2	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Beyaz	HAV. LOGO	5003176984001	7891224721047	CM24	1	1	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Beyaz	HAV. LOGO	5003176984003	7891224721061	CM22	1	2	4231202566	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Beyaz	HAV. LOGO	5003176984003	7891224721061	CM83	1	2	4231202582	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Altın	HAV. SLIM	5002698700001	7890557502477	CM24	1	2	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Altın	HAV. SLIM	5002698700001	7890557502477	CM76	1	2	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	HAV. SLIM	5002698689001	7890732316479	CB37	3	3	4231202574	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Altın	HAV. SLIM	5002698700002	7890557502484	CM76	1	1	4231202587	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	HAV. SLIM	5002698689002	7890732316486	CB44	1	2	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 37-38, Siyah	HAV. SLIM	5002698689002	7890732316486	CB48	1	2	4231202579	72146
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 39-40, Siyah	HAV. SLIM	5002698689003	7890732316493	CM47	1	1	4231130065	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Siyah	HAV. SLIM	5002698689004	7890732316509	CM22	1	1	4231202566	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Terlik, 39-40, Pembe	HAV. SLIM FLATFORM	5002906059003	7909690712824	CM24	1	1	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	HAV. TOP	5002698685001	7891109486207	CB48	1	2	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 35-36, Siyah	HAV. TOP	5002698685001	7891109486207	CB43	1	2	4231202581	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 41-42, Kiremit	HAV. TOP	5003176968004	7909989174692	CM24	1	1	4231202545	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 35-36, Pembe Altın	SLIM	5003175101001	7891266542051	CB48	1	1	4231202579	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terli, 39-40, Pembe Altın	SLIM	5003175101003	7891266542075	CB44	1	1	4231202578	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Terlik, 41, Siyah	TOP	5000004368003	7891109486238	CM38	1	2	4231202555	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Havaianas	Terlik, 41, Siyah	TOP	5000004368003	7891109486238	CM23	1	2	4231202563	72146
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Denim Pantolon, 42, Koyu İndigo	I00000018023AC7	5003020183005	8683558201208	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Elbise, 38, Mavi	IS1250002428	5003282818003	8683559652115	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Elbise, 38, Mavi	IS1250002487	5003277743003	8683559671376	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Pantolon, S, Lacivert	IS1250003096	5003267434002	8683559572543	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 36, Kahve	IS1250003218	5003277763002	8683559663869	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Denim Pantolon, 38, Koyu İndigo	IS1250018002	5003267483003	8683559636467	CM24	1	2	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol Gömlek, 36, Tütün	IS1250025234	5003280539002	8683559673882	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, S, Ekru	IS1250070110	5003273565002	8683559560991	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 34-30, Renksiz	12173407	5002611376010	5714911879994	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Pantolo, 32-30, Siyah	12152346_JJIGLENN	5002366657008	5713757028870	YM10	1	2	4231127038	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 34-30, Renksiz	12157416_JJIGLENN	5002366656014	5713776366571	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 31-30, Renksiz	12184473_JJIGLENN JORIGINAL MF 031	5002829311004	5715212085886	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 36-32, Renksiz	12184473_JJIGLENN JORIGINAL MF 031	5002829311012	5715212085190	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Kargo Pantolon, S, Bej	12224518_JPSTGORDO	5003051901004	5715421189153	CB44	1	5	4231129076	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Pantolo, 33-32, Siyah	12243595_JJIGLENN JJORIGINAL SQ 270	5003052389010	5715425705335	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Pantolo, 34-32, Siyah	12243595_JJIGLENN JJORIGINAL SQ 270	5003052389012	5715425705342	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Beyaz	12256793_JJOLIVE TEE SS CREW NECK	5003178266001	5715604748078	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 30-30, Renksiz	12258826_JJIGLENN JJORIGINAL SQ 665	5003243791002	5715671409599	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 32-32, Renksiz	12258826_JJIGLENN JJORIGINAL SQ 665	5003243791007	5715516646332	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 31-30, Renksiz	12259055_JJIGLENN JJORIGINAL SQ 260	5003178361004	5715602461702	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Denim Panto, 33-30, Renksiz	12259055_JJIGLENN JJORIGINAL SQ 260	5003178361008	5715602461825	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Beyaz	12262494_JORFREDERIKSBERG TEE SS CR	5003243778003	5715608929350	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Lacivert	12269324_JJHAWAII SHAPE TEE SS CREW	5003243823003	5715675322948	CM50	1	3	4231129268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Kazak, L, Gri	12271401_JPRBLAMILANO SPRING KNIT P	5003243847002	5715674460122	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Bej	12273070_JCORECHARGE MOLD TEE SS CR	5003243881003	5715714810566	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Şort Mayo, L, Mercan	12275129_JPSTMAUI JJSWIM SPLICE LOG	5003243933002	5715674219423	CM38	1	2	4231128610	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Şort Mayo, XL, Siyah	12275129_JPSTMAUI JJSWIM SPLICE LOG	5003243898005	5715676489848	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Krem	12277888_JORBOSTON TEE SS CREW NECK	5003243960002	5715714755829	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Mavi	12277888_JORBOSTON TEE SS CREW NECK	5003243919002	5715714755942	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Mavi	12277888_JORBOSTON TEE SS CREW NECK	5003243919003	5715714755966	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Siyah	12288374_JPRBLULOGO TEE SS CREW NEC	5003253254004	5715825349320	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Koyu Yeşil	12288374_JPRBLULOGO TEE SS CREW NEC	5003253235005	5715825349382	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Füme	12288516_JORMINDFUL TEE SS CREW NEC	5003253257002	5715732912075	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12288519_JPRBLUZOEY TEE SS CREW NEC	5003253311002	5715732950978	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12288521_JPRBLULIFE TEE SS CREW NEC	5003253305002	5715732951715	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	12288521_JPRBLULIFE TEE SS CREW NEC	5003253305004	5715825349191	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Gömlek, M, Lacivert	JCOJEFF AOP RESORT SHIRT SS RELAX L	5003120308003	5715512531885	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, L, Siyah	JJSTEEL POLO SS	5003120506002	5715431890780	YM10	1	2	4231127038	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, M, Lacivert	JJSTEEL POLO SS	5003120514003	5715509486600	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, XL, Siyah	JJSTEEL POLO SS	5003120506005	5715509486471	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, XL, Siyah	JJSTEEL POLO SS	5003120506005	5715509486471	CB46	1	2	4231127995	31461
-Temmuz Genel Transferi	Kids	006Apparel	Jack & Jones	Jack & Jones Şort, 9 Yaş, Mor	JPSTRICK JJORIGINAL JNR	5003119539009	5715510726634	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, 2XL, Haki	C4SM-TST4649	5003089744005	8684024113810	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, 2XL, Haki	C4SM-TST4649	5003089744005	8684024113810	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Jeep	Jeep T-Shirt, M, Lacivert - Beyaz	C4WL-TST4010	5003162902003	8684024395322	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Eşofman Altı, M, Antrasit	J4SM-EA7209	5003097370002	8684024149314	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Sweat Şort, XL, Siyah	J4SM-SHT7214	5003222899004	8684024483432	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Polo T-Shirt, S, Siyah	J4SM-TST7234	5003097354001	8684024148799	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, M, Mint	J4SM-TST7237	5003097231002	8684024147327	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, 2XL, Kırık Beyaz	J4SM-TST7245	5003097185005	8684024145019	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, L, Mint	J4SM-TST7245	5003097157003	8684024145996	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, M, Kırık Beyaz	J4SM-TST7245	5003097185002	8684024144883	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, S, Kırık Beyaz	J4SM-TST7245	5003097185001	8684024144876	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, L, Siyah	J4SM-TST7257	5003097207003	8684024146832	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, M, Gri	J4SM-TST7257	5003097230002	8684024147273	CM44	1	2	4231129684	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, M, Gri	J4SM-TST7257	5003097230002	8684024147273	CM40	1	2	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, M, Siyah	J4SM-TST7257	5003097207002	8684024146825	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, S, Siyah	J4SM-TST7257	5003097207001	8684024146818	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Pantolon, 2XL, Bej	J4WM-PNT4999	5003161341005	8684024381387	CB38	1	2	4231127070	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, L, Lacivert	J4WM-TST7217	5003160039003	8684024369644	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Jeep	Jeep Pantolon, S, Siyah	J5SL-PNT7162	5003225959002	8684024556020	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Jeep	Jeep Şort Etek, XS, Siyah	J5SL-SHT7183	5003224544001	8684024546090	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Jeep	Jeep T-Shirt, S, Kırık Beyaz	J5SL-TST7009	5003224552002	8684024546199	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Jeep	Jeep T-Shirt, XL, Siyah	J5SL-TST7056	5003224591005	8684024547967	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Eşofman Altı, L, Haki	J5SM-EA7301	5003223047003	8684024487720	CM22	1	2	4231129403	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Kazak, XL, Lacivert - Beyaz	J5SM-KZK7243	5003222918004	8684024483579	CB49	1	1	4231129509	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Şort, 2XL, Taş	J5SM-SHT7242	5003225777005	8684024552183	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Şort, L, Gri	J5SM-SHT7248	5003225983003	8684024556358	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Sweat Şort, XL, Bej	J5SM-SHT7252	5003222945004	8684024484019	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Sweat Şort, S, Lacivert	J5SM-SHT7271	5003223020001	8684024485030	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, L, Beyaz	J5SM-TST7292	5003223021003	8684024485504	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Polo T-Shirt, 2XL, Lacivert	J5SM-TST7315	5003222985005	8684024484897	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Polo T-Shirt, M, Bej Melanj	J5SM-TST7324	5003223011002	8684024484729	CB35	1	2	4231131329	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep Polo T-Shirt, M, Bej Melanj	J5SM-TST7324	5003223011002	8684024484729	CM47	1	2	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, L, Siyah	J5SM-TST7343	5003222993003	8684024484415	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Jeep	Jeep T-Shirt, XL, Kırık Beyaz	J5SM-TST7388	5003223004004	8684024486631	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Koton	Koton Pantolon, 34, Açık Siyah	5SAK40028UW	5003250010001	8684290413881	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Koton	Koton Pantolon, 36, Bej	5SAK40032PW	5003260822002	8684290414284	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Koton	Koton Elbise, 34, Mavi	5SAK80174PW	5003261100001	8684631355054	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Koton	Koton T-Shirt, S, Ekru	5SAL10124IK	5003261238003	8684290436408	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Koton	Koton Elbise, XS, Lila	5SAL80020IK	5003261124004	8684290837045	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Kids	006Apparel	Koton	Koton Şort, 7-8 Yaş, Beyaz	5SKG40043AD	5003236877005	8684290859696	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Kids	006Apparel	Koton	Koton Şort, 12-18 Ay, Lacivert	5SMB40024TK-A	5003236932001	8684290542055	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Polo T-Shirt, S, Turkuaz	L211810303_Polo Yaka Tişört	5003007117005	8682344475809	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee T-Shirt, L, Lacivert	L60UFQ35_ T-shirt	5002886019002	8682344257795	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Gömlek, S, Lacivert	L66N20529513 Uzun Kollu Gömlek	5003142628005	8684555002942	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee T-Shirt, M, Kırık Beyaz	L68TYSMK	5002869803002	8682344309203	CB70	2	3	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 30-30, Renksiz	L719HFAE_Luke	5002701719002	8682344190924	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 32-32, Renksiz	L719HFAE_Luke	5002701719007	8682344157309	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 34-32, Renksiz	L719HFAE_Luke	5002701719010	8682344190962	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Chino Pantolon, 31-30, Lacivert	L72ABGA98 Extreme Motion Slim Pant	5003142730004	8684555004434	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 32-34, Renksiz	L733NKUQ_Austin	5002701732014	8682344345799	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 32-30, Renksiz	L736010396 Malone Skinny Jean	5002997577010	8682344395541	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee T-Shirt, L, Antrasit	Lweight SS XM Wobbly Logo CNeck Tee	5002909144002	8682344309234	CB70	1	3	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 36-32, Renksiz	ML701KNHD Rider Denim Pantolon	5003258635015	8684555137378	CM27	1	2	4231130281	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Lee Cooper	Lee Cooper Pantolon, XL, Bej	252 LCF 221002 ALBERTA BEJ	5003258449004	8682272650378	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Lee Cooper	Lee Cooper Chino Pantol, 30-32, Açık Gri	252 LCM 221007 NEW CHINO 2 A. GRİ	5003260402002	8682272663712	CB35	1	1	4231131329	31461
-Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 31-32, Koyu Mavi	18883-0227	5003052868015	5401105548162	SM42	2	-1	4231162181	778899
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 29-28, Siyah	501 CROP LOCAL TR GET OFF MY CLOUD	5003080133005	5401128481279	CM36	1	1	4231128454	31461
-Kurumsal Satış Transfer Data	Street wear	006Apparel	Levis	Levis Denim Pantolon, 38-32, Renksiz	A7735-0015_501 ORIGINAL LOCAL TR ON	5003168232011	5401157647837	SM42	1	1	4231162181	778899
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis T-Shirt, L, Siyah	GR ESSENTIAL SPORTY TEE EAGLE WM PI	5003239204001	5401187066738	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis T-Shirt, XS, Siyah	GR ESSENTIAL SPORTY TEE EAGLE WM PI	5003239204004	5401187066752	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis T-Shirt, L, Mavi	GRAPHIC BOXY TSHIRT LEVIS SINCE 187	5003239218001	5401187061450	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis T-Shirt, S, Yeşil	GRAPHIC BOXY TSHIRT SATIN SCRIPT DE	5003239168003	5401157860649	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantol, 29-27, Koyu Lacivert	HIGH WAIST MOM JEAN TK MOVING TARGE	5003167887010	5401157067963	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 27-28, Koyu Mavi	MILE HIGH SUPER SKINNY T TOP SHELF	5003239324006	5401187087184	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Levis	Levis T-Shirt, XS, Kırmızı	THE PERFECT TEE WAVY CHECKER BW PAT	5003239412004	5401157964699	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Lumberjack	Lumberjack Sneaker, 39, Beyaz	A10193215912010	5003262037004	8684365972930	CB38	2	2	4231127070	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 32-30, Renksiz	0042232200 JAKE Zift Siyah Black Pr	5002599045026	8682454219225	CB53	1	1	4231129795	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, L, Beyaz	065574-620 TİŞÖRT beyaz	5002371784003	8682067073948	CM23	1	4	4231126480	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 31-30, Gri	M0035189345_MARCUS	5003240673007	8684518125640	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 30-32, Bej	M0042288058_JAKE	5003240637006	8684434079515	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 31-32, Bej	M0042288058_JAKE	5003240637009	8684434079829	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 32-32, Bej	M0042288058_JAKE	5003240637012	8684434080085	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 33-32, Bej	M0042288058_JAKE	5003240637015	8684434080344	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 29-30, Renksiz	M0042487838_JAMES	5003164671006	8684434105955	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Sweat Şort, XS, Ekru	M0410255-70025_ŞORT	5003240472006	8684518570334	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Şort, 29, Renksiz	M0416028720_NICHOLAS	5002987001002	8682454807415	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, M, Lacivert	M0612468-70490_MAVİ TİŞÖRT	5003240544003	8684518044804	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, M, Gri	M0612518-70100_KISA KOL TİŞÖRT	5003240771003	8684518052069	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, L, Ekru	M0612724-70057_KISA KOL TİŞÖRT	5003240620002	8684518578866	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, M, Ekru	M0612736-70057_KISA KOL TİŞÖRT	5003240684003	8684518600697	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, L, Yeşil	M0612736-71587_KISA KOL TİŞÖRT	5003240609002	8684518600543	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, L, Yeşil	M0612736-71587_KISA KOL TİŞÖRT	5003240609002	8684518600543	CB48	1	2	4231128792	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Polo T-Shirt, M, Kahve	M0612945-90750_POLO TİŞÖRT	5003279508004	8684518822419	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi Polo T-Shirt, S, Kahve	M0612945-90750_POLO TİŞÖRT	5003279508005	8684518822396	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mavi	Mavi T-Shirt, L, Saks	M067153-70722_MİAV BASKILI TİŞÖRT	5003046144002	8683696769110	CB38	1	2	4231127070	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 23-27, Renksiz	M100980-80533	5002821247003	8683069861625	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 28-29, Renksiz	M100980-80533	5002821247019	8683069861786	CB53	1	1	4231129795	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 29-27, Koyu Mavi	M100980-82194 SERENAY Mid Brushed G	5002986549007	8683343871890	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 26-27, Renksiz	M101047-89197_BARCELONA	5003241497005	8684518183329	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 25-30, İndigo	M1010600-87776 LEILA	5003165807022	8684434138588	CM50	1	5	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 26-27, Renksiz	M1010762-88193_ROCKSTAR	5003241561005	8684434037430	CM50	1	2	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 29-28, Renksiz	M1011044-89726_ELLA	5003241337013	8684518741949	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Gömlek, L, Mavi	M1210445-84606-KISA KOLLU GÖMLEK	5003111204001	8683696613062	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Gömlek, M, Kahve	M1211090-90437_KISA KOLLU GÖMLEK	5003241384002	8684518591032	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Etek, L, Renksiz	M1310404-89219_SILVANA	5003241368001	8684518240565	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Etek, S, Renksiz	M1310404-89219_SILVANA	5003241368003	8684518240541	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Eşofman Altı, M, Mor	M1600453-70608_EŞOFMAN ALTI	5003241635002	8684518135724	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Kırmızı	M1600814-70467_YUVARLAK YAKA BASIC	5003241598002	8684518551074	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Beyaz	M1600955-620	5002821558004	8682454894941	CM50	1	4	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, L, Siyah	M1600955-900	5002821574005	8682454895023	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi Kazak, L, Beyaz	M1600963-620	5003227557004	8682454896372	CB53	1	1	4231129795	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, L, Ekru	M1600965-33389 BASIC KISA KOL TİŞÖR	5002891689003	8682454896655	CM22	1	2	4231129403	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Ekru	M1600965-33389 BASIC KISA KOL TİŞÖR	5002891689005	8682454896631	CB70	3	11	4231126978	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Ekru	M1600965-33389 BASIC KISA KOL TİŞÖR	5002891689005	8682454896631	CM38	2	11	4231128610	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Ekru	M1600965-33389 BASIC KISA KOL TİŞÖR	5002891689005	8682454896631	CB53	1	11	4231129795	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Ekru	M1600965-33389 BASIC KISA KOL TİŞÖR	5002891689005	8682454896631	CM47	1	11	4231130065	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Beyaz	M1610786-620_KOLSUZ PENYE	5003241433003	8684249569997	CM36	1	3	4231128454	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Pembe	M1611585-71083-YUVARLAK YAKA KISA K	5003111414003	8684249037809	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, XS, Gri	M1611899-83096_MAVİ LOGO ATLET	5003241424005	8683696968124	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, XL, Mavi	M1612242-70722-BISIKLET YAKA LOGO T	5003111431006	8684249001459	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Kırık Beyaz	M1613079-70057_ASKILI BASIC ATLET	5003241491002	8684518600611	CB48	1	4	4231128792	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Kahve	M1613079-88533_ASKILI BASIC ATLET	5003241651003	8684518600598	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, S, Siyah	M1613079-900_ASKILI BASIC ATLET	5003241468003	8684518600550	CB43	2	5	4231129103	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, M, Bej	M1613143-85576_ASKILI BASIC ATLET	5003241478002	8684518604428	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mavi	Mavi T-Shirt, XS, Siyah	M1613212-900_GRAFİK BASKILI MODELLİ	5003241488004	8684518608518	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Kids	006Apparel	Mavi	Mavi T-Shirt, 11-12 Yaş, Yeşil	M6610265-71843	5003236577001	8684518273204	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Kids	006Apparel	Mavi	Mavi T-Shirt, 4-5 Yaş, Yeşil	M6610265-71843	5003236577005	8684518272924	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mustang	Mustang Denim Pantolon, 28-32, Lacivert	GEORGIA SKINNY FLARED	5003173185015	8684024451950	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mustang	Mustang T-Shirt, S, Ekru	M4WL-TST-1094	5003166850002	8684024416010	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mustang	Mustang T-Shirt, XS, Ekru	M4WL-TST-1094	5003166850001	8684024416003	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mustang	Mustang Denim Elbise, XS, Siyah	M5SL-ELB1625	5003232474001	8684024607906	CM38	1	2	4231128610	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mustang	Mustang Kazak, S, Kırmızı	M5SL-KZK1909	5003233859002	8684024613860	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Mustang	Mustang T-Shirt, L, Beyaz	M5SL-TST1833	5003230233004	8684024588311	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mustang	Mustang T-Shirt, L, Beyaz	M5SM-TST1274	5003230540003	8684024593599	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mustang	Mustang T-Shirt, 2XL, Siyah	M5SM-TST1287	5003230477005	8684024592660	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mustang	Mustang T-Shirt, M, Siyah	M5SM-TST1300	5003230501002	8684024592134	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Mustang	Mustang Denim Pantolon, 32-30, Antrasit	Michigan Slim - 1302	5003168867005	8684024430108	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Shoes & Bags	030Ladies Bags & SLG	Nautica	Nautica Çapraz Çanta, Standart, Bej	CN7198T	5003248955001	8683214206356	CM38	1	2	4231128610	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network T-Shirt, 2XL, Siyah	1083747	5003258109001	8683798900770	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network Gömlek, 39, Lacivert	1091836	5003226129001	8683798634668	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network Gömlek, M, Beyaz	1093858	5003258882003	8683798774418	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network Pantolon, 56, Lacivert	1093929	5003254682006	8683798916788	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network Pantolon, 46, Vizon	1094007	5003258965001	8683798795482	CB54	1	1	4231129318	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network Pantolon, 56, Vizon	1094007	5003258965006	8683798795536	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network T-Shirt, XL, Haki	1094077	5003254639004	8683798803194	CM38	1	4	4231128610	31461
-Temmuz Genel Transferi	Mens	006Apparel	Network	Network Gömlek, L, Lacivert	1094177	5003250541002	8683798814695	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Nike	Nike T-Shirt, 8-10 Yaş, Kırmızı	95A088-R78 JDB PRACTICE FLIGHT	5002835784004	742728659923	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Nike	Nike Şort, 8-10 Yaş, Siyah - Beyaz	95D608-023-JDB MJ MVP MESH SHORT	5003255436004	197717103848	CM68	1	1	4231129800	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Nike	Nike T-Shirt, 10-12 Yaş, Krem	95D820-782JDB MJ POOLSIDE JUMPMAN S	5003279523001	197717541053	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Krem	95D820-782JDB MJ POOLSIDE JUMPMAN S	5003279523002	197717541060	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Nike	Nike T-Shirt, M, Gri	AR5004-063 M Nsw Tee icon Futura	5002593124002	191888621675	YM10	1	1	4231127038	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 38, Siyah	CD5436-001 Wmns Nike Court Vision	5002593670002	193151673367	SM34	1	1	4231164583	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 44, Siyah	CJ1679-001-NIKE COURT VINTAGE	5003103325006	193658088183	SM42	1	1	4231165561	72146
-Temmuz Genel Transferi	Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakkab, 36.5, Beyaz - Mavi	DA5380-129-NIKE COURT LEGACY (GS)	5003248477002	197859907977	YM07	1	1	4231130197	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakka, 41, Beyaz - Bordo	DH3158-106 W NIKE COURT VISION LO N	5003186025004	196153960534	SB28	1	1	4231164916	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 40, Beyaz	DH3160-101 NIKE COURT ROYALE 2 NN	5003060047001	195243500704	SB28	1	1	4231164916	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Training Ayakkabısı, 42.5, Siyah	DM0829-001 M NIKE AIR MAX ALPHA TRA	5002956505007	196149183954	SM34	1	1	4231164583	72146
-Temmuz Genel Transferi	Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakka, 28, Siyah - Kırmızı	DV5457-600 COURT BOROUGH LOW PS	5003077787001	196968174270	CM47	1	1	4231130065	31461
-Manuel Transferler Run ID 72146	Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakkabısı, 26, Çok Renkli	DX7616-300-NIKE STAR RUNNER 4 NN TD	5003161542005	197594211407	SM44	1	1	4231165748	72146
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakk, 39, Siyah - Gri - Gümüş	FB2208-003-W NIKE REVOLUTION 7	5003103294005	196969196066	CB53	1	2	4231129795	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Beyaz	FB2208-010 W NIKE REVOLUTION 7	5003185980004	197597072494	SB23	1	1	4231165218	72146
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 36.5, Gri	FD2723-109 W AIR ZOOM PEGASUS 41	5003247921001	197859153039	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 46, Siyah - Beyaz	FD4329-001 NIKE AIR MAX NUAXIS	5003185948007	197598610008	YM07	1	1	4231130197	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 40.5, Krem	FD6476-800 W NIKE DOWNSHIFTER 13	5003185983008	197597088358	SM39	1	1	4231165019	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Krem	FD6476-800 W NIKE DOWNSHIFTER 13	5003185983004	197597085197	SM38	1	1	4231164940	72146
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Nike	Nike Polo T-Shirt, L, Beyaz	FN3894-100-M NK CLUB SS POLO PIQUE	5003118436001	196974969211	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Nike	Nike Eşofman Altı, S, Lacivert	FQ4780-437 M NK DF CHALLENGR WVN PA	5003247519003	197859327348	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Nike	Nike T-Shirt, S, Beyaz	FV5508-100 W NSW NK CHLL KNT MD CRP	5003247734003	197594262331	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 37.5, Siyah	HF1233-001 W NIKE AIR MAX NUAXIS	5003185998006	197596121629	CM27	1	3	4231130281	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Nike	Nike T-Shirt, S, Gri	IB2447-051 W NSW CLUB SS TEE CC	5003247800003	197861574907	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Kazak, L, Siyah	DALIA	5003264513004	8683858492153	CM38	1	2	4231128610	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Kazak, L, Siyah	DALIA	5003264513004	8683858492153	CM47	1	2	4231130065	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 48-6, Siyah	E19400/PB	5003176089002	8683858023418	CB46	1	2	4231127995	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 50-6, Siyah	E19400/PB	5003176089003	8683858023425	CB70	1	4	4231126978	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 52-6, Siyah	E19400/PB	5003176089004	8683858023432	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Chino Pan, 31-30, Lacivert	GAVIN	5003264572005	8683858506317	YM10	1	2	4231127038	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Kazak, L, Lacivert	HODNA	5003265025004	8683858492818	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Denim Pantolo, 33-30, Haki	LAMEL	5003264665008	8683858497882	CM50	1	2	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Gömlek, 36, Beyaz	LEX	5003184548002	8683858310792	CM44	1	2	4231129684	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 36-30, Lacivert	SANTO SPOR PANTOLON	5003206823012	8683857884799	CB48	1	2	4231128792	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, XS, Beyaz	SIMO	5003140748006	8683857061145	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Gömlek, 38, Mavi	STAN	5003255133003	8683858962823	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Polo T-Shirt, XL, Kahve	SUNNY	5003264937008	8683858468905	CB45	1	1	4231126763	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Elbise, 40, Koyu Yeşil	TINA	5003184737004	8683858306511	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Chino Pantolo, 30-32, Haki	TUVI	5003264947002	8683858505815	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Mens	006Apparel	Pierre Cardin	Pierre Cardin Gömlek, M, Beyaz	ZEYA	5003264994005	8683858486015	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Krem	36986335 Caracal W	5002732069008	4063699619799	CM44	1	1	4231129684	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 43, Siyah	37799501 Redeem Profoam	5002995048005	4065453463068	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	52590801 M TAD ESSENTIALS SOLID CAT	5003249753002	4067984113610	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Siyah	68262603 ESS No. 1 Logo Sleeveless	5003249835002	4067983319785	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Quiksilver	Quiksilver Şort, 16 Yaş, Mavi - Turuncu	AQBJV03055-9GF-EVRYDY FADE VOLEY YT	5003150766004	3613379718376	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37, Gri	101989416 MOON FLEX II	5003258950002	8684475015923	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Gri	101989416 MOON FLEX II	5003258950004	8684475015947	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Reebok	Reebok Şort, S, Somon	LC 6787 RONE SHORT	5003262434003	2012002115055	CB49	1	1	4231129509	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 42, Ekru	24KSL8993	5003212909003	8682019304892	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 40, Siyah	25YSL5380	5003270327002	8682019324166	CM40	1	1	4231130121	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Yürüyüş Ayakkabısı, 36.5, Siyah	124960TK BBK GO WALK FLEX	5003063702006	8683030246499	SB11	1	1	4231165534	72146
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Skechers	Skechers Yürüyüş Ayakkabısı, 39, Gri	125319 GYLV GO WALK ARCH FİT 2.0 -	5003183293004	197976369283	CM47	1	1	4231130065	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Koşu Ayakkabısı, 36.5, Gri	129000 GYLM GO RUN ELEVATE 2.0	5003183179006	197976363113	SM37	1	1	4231165898	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 38.5, Siyah	149822 BBK HİLLCREST	5002944171006	196642070355	SB26	1	1	4231165400	72146
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Siyah	158582 BBK	5002937526003	196311423383	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Siyah	158582 BBK	5002937526008	196311423444	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Günlük Ayakkabı, 38.5, Siyah	158698 BBK	5002979756006	196642653671	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Günlük Ayakkabı, 40, Siyah	158698 BBK	5002979756008	196642653701	CM36	1	2	4231128454	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Yürüyüş Ayak, 43.5, Siyah - Gri	216504 BKGY GO WALK FLEX - ANZA	5003183287008	197976517158	SM45	1	1	4231165950	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Koşu Ayakkabısı, 42, Siyah	220866 BBK GO RUN CONSİSTENT 2.0	5003179899003	197627546025	SM37	1	1	4231165898	72146
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 42.5, Bej	232926 TPE EQUALIZER 5.0 - DRAYZE	5003250094008	198739006698	CB53	1	1	4231129795	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Outdoor Ayakka, 42, Siyah - Gri	237603 BKCC ARCH FİT SWİFT TRAİL	5003183193003	198376041601	CB62	1	1	4231185861	72146
-Manuel Transferler Run ID 72146	Kids	003Active Shoes	Skechers	Skechers Yürüyüş Ayakkab, 29, Çok Renkli	303575L AQPR-MİCROSPEC ADVANCE	5003179709002	197976294448	SM21	1	1	4231165864	72146
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 42.5, Siyah	894114TK BBK DYNAMÄ°GHT	5002944267005	8683030015392	CB62	1	1	4231185861	72146
-Manuel Transferler Run ID 72146	Kids	003Active Shoes	Skechers	Skechers Sandalet, 25, Mavi - Yeşil	92330N BLLM SIDE WAVE	5002545858004	194428576107	CB38	2	3	4231173562	72146
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers T-Shirt, L, Siyah	S231094-001 M Graphic Tee Reflect L	5002991292001	8683030154930	CB38	1	2	4231127070	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers T-Shirt, XL, Gri	S241166-035 Organic Coll. M Short S	5003123696005	8683030648712	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers Eşofman Altı, XL, Gri	S242114-036 M Essential Jogger Swea	5003278906004	8683030736365	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers T-Shirt, S, Siyah	S242154-001 M Soft Touch Crew neck	5003205524003	8683030707679	CM23	1	1	4231126480	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers T-Shirt, L, Beyaz	S2510017-013 M Essential T-Shirt	5003261464001	8683030735351	CB38	1	1	4231127070	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers Şort, L, Siyah	S2510064-001 M Essential Sweatshort	5003261377001	8683030736488	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers Şort, M, Yeşil	S2510064-299 M Essential Sweatshort	5003261386002	8683030736693	CB53	2	1	4231129795	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers Pantolon, M, Siyah	S2510204-001 M Regular Pant	5003261327002	8683030740140	CM40	1	2	4231130121	31461
-Temmuz Genel Transferi	Active & Outdoor	040Outdoor Apparel	The North Face	The North Face Polo T-Shirt, M, Turuncu	NF0A2WAZ0XI1-M TANKEN POLO - EU	5003270893003	197642876077	CB53	1	1	4231129795	31461
-Manuel Transferler Run ID 72146	Shoes & Bags	032Ladies Shoes	Tkees	Tkees Sandalet, 39, Siyah	TK-8014	5003269303004	8682476122350	CB78	2	2	4231163621	72146
-Manuel Transferler Run ID 72146	Shoes & Bags	030Ladies Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Omuz Çant, Standart, Krem	AW0AW16905	5003239146001	8720638191728	CB78	1	1	4231163621	72146
-Temmuz Genel Transferi	Shoes & Bags	030Ladies Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Omuz Çant, Standart, Mavi	AW0AW17301	5003239184001	8720638745891	CB46	1	1	4231127995	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 40, Siyah	CORE CORPORATE VULC LEATHER	5003239735001	8720638830597	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 42, Siyah	CORE CORPORATE VULC LEATHER	5003239735003	8720638831396	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneake, 40, Siyah - Beyaz	EN0EN02505	5003240274005	8720638359098	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Babet, 37, Siyah	FW0FW08654	5003240242002	8720638814436	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Plaj Terliğ, 40, Lacivert	MOLDED HILFIGER BEACH SANDAL	5003239730001	8720638849292	CB48	1	1	4231128792	31461
-Temmuz Genel Transferi	Mens	006Apparel	Tommy Hilfiger	Tommy Hilfiger Gömlek, M, Yeşil	MW0MW34602PLI	5003239999002	8721106127188	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Polo T-Shirt, M, Siyah	DM0DM15370BDS TJM SLIM PLACKET POLO	5003237750003	8720641121873	CM23	1	2	4231126480	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Polo T-Shirt, M, Siyah	DM0DM15370BDS TJM SLIM PLACKET POLO	5003237750003	8720641121873	CM36	1	2	4231128454	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans T-Shirt, S, Ekru	DM0DM20818YBL TJM REG VRSITY NVL	5003237665002	8720638924234	CB44	1	1	4231129076	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Twist	Twist Elbise, 34, Antrasit	TS1250002479	5003283225001	8683559669410	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Twist	Twist Elbise, 34, Siyah	TS1250002482	5003283217001	8683559676074	CM22	1	1	4231129403	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Twist	Twist Pantolon, 38, Siyah	TS1250003121	5003264817003	8683559519975	CM50	1	1	4231129268	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Twist	Twist Pantolon, XS, Siyah	TS1250003232	5003277860004	8683559711812	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Twist	Twist Denim Pantolon, 34, İndigo	TS1250018028	5003280558001	8683559810218	CM24	1	1	4231130435	31461
-Temmuz Genel Transferi	Ladies	006Apparel	Twist	Twist Gömlek, 38, Lacivert	TS1250025227	5003277815003	8683559677835	CM40	1	1	4231130121	31461
-Manuel Transferler Run ID 72145	Ladies	006Apparel	Twist	Twist Pantolon, 40, Kahve	TW6230003139074	5003063264004	8683558573022	CB55	1	1	4231115821	72145
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Eşofman A, M, Siyah - Beyaz	1290261-001-SPORTS	5000174216002	190085093469	CM50	1	2	4231129268	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Eşofman A, M, Siyah - Beyaz	1290261-001-SPORTS	5000174216002	190085093469	CB54	1	2	4231129318	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Under Armour	Under Armour T-Shirt, 13-14 Yaş, Kırmızı	1363283-847-Ua Tech Big Logo Ss	5003274949002	197779675086	CB53	1	1	4231129795	31461
-Temmuz Genel Transferi	Active & Outdoor	001Accessories & Equipments	Under Armour	Under Armour Spor Ça, Standart, Lacivert	1369223-410 UA Undeniable 5.0 Du	5002990050001	195252744274	CB54	1	2	4231129318	31461
-Temmuz Genel Transferi	Active & Outdoor	001Accessories & Equipments	Under Armour	Under Armour Spor Ça, Standart, Lacivert	1369223-410 UA Undeniable 5.0 Du	5002990050001	195252744274	CB53	1	2	4231129795	31461
-Temmuz Genel Transferi	Active & Outdoor	002Active Apparel	Under Armour	Under Armour T-Shirt, S, Siyah	1382582-001 UA Launch Shortsleeve	5003122377003	196885472916	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Kids	002Active Apparel	Under Armour	Under Armour Eşofman A, 10-12 Yaş, Siyah	1384207-001-UA Rival Woven Jogger	5003180162001	196885310843	CM47	1	1	4231130065	31461
-Manuel Transferler Run ID 72146	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 44.5, Siyah	3026727-001 UA Charged Edge	5003122055006	196883919079	SM40	1	1	4231164870	72146
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayakkabı, 42, Gri	3027595-100 UA HOVR Apparition RTRF	5003251248002	196885803116	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 40.5, Yeşil	3027596-377 UA HOVR Apparition RTRF	5003251286006	197779007320	YM10	1	1	4231127038	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayakka, 44, Yeşil	3027596-377 UA HOVR Apparition RTRF	5003251286004	197779006286	CB43	1	1	4231129103	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 42, Siyah	3028252-002 UA Phade RN 3	5003251283002	197779078733	CM38	1	1	4231128610	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 40.5, Beyaz	3028375-100 UA Edge LTHR	5003251266007	196886410696	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Kids	003Active Shoes	Under Armour	Under Armour Basketbol Ayakka, 33, Siyah	UA PS Lockdown 7-3028514-004	5003260058006	197778057067	YM07	1	1	4231130197	31461
-Temmuz Genel Transferi	Active & Outdoor	003Active Shoes	Vans	Vans Lifestyle Ayakkabı, 42, Koyu Yeşil	VN000D61OLV1-MTE Ultrarange 2.0 SE	5003248852002	197643286226	CM63	1	1	4231130268	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Polo T-Shirt, XL, Yeşil	MW211837	5003284056006	8684555167726	CM40	1	1	4231130121	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler T-Shirt, 3XL, Siyah	MW7NM203877001 Relaxed Fit Small	5003258687007	8684555143584	CB70	2	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 40-32, Siyah	W121026001_Texas Jean  Pantolon	5003007547018	8682344493070	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 32-30, Mavi	W121064XT Texas Jean Pantolon	5003142697002	8684555019711	CB59	1	1	4231126446	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 36-34, Mavi	W121064XT Texas Jean Pantolon	5003142697013	8684555019704	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 36-30, Renksiz	W121HRZ93_Texas Jean  Pantolon	5003007565012	8682344494121	CM27	1	1	4231130281	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 33-30, Renksiz	W121LR278 Texas Jean  Pantolon	5003073581004	8682344890206	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 33-32, Renksiz	W121LR278 Texas Jean  Pantolon	5003073581005	8682344890213	CM47	1	1	4231130065	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 38-34, Renksiz	W121LR278 Texas Jean  Pantolon	5003073581017	8682344890336	YM02	1	1	4231129404	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 31-30, Renksiz	W12S00032317 Texas Slim Denim	5003258861004	8684555163476	CB70	1	2	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 30-30, Renksiz	W12S04958 Texas Slim Jean  Pantolon	5003073631002	8682344898592	CM36	1	1	4231128454	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 31-30, Renksiz	W12S04958 Texas Slim Jean  Pantolon	5003073631004	8682344898615	CB35	1	1	4231131329	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 34-34, Renksiz	W12S04958 Texas Slim Jean  Pantolon	5003073631015	8682344898721	CM32	1	1	4231126501	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 34-30, Renksiz	W18S02958 Larston Jean  Pantolon	5003073654013	8682344902060	CM79	1	2	4231129065	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Polo T-Shirt, L, Camel	W211837	5003287447003	8684555167634	CB70	1	1	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Chino Pantolon, 2XL, Taş	W221266013 Chino Pantolon	5003142739001	8684555021530	CB70	1	4	4231126978	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler T-Shirt, XL, Siyah	W2510527001 Regular Fit Small Logo	5003258709004	8684555157741	CB15	1	1	4231130311	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler T-Shirt, 3XL, Açık Siyah	W7H4D3XV6	5002869796001	8682344325401	CM79	1	1	4231129065	31461
-Temmuz Genel Transferi	Street wear	006Apparel	Wrangler	Wrangler Polo T-Shirt, XL, Siyah	W7NQ20528633W Fermuarlı Polo T-shir	5003142846005	8684555011968	YM10	1	1	4231127038	31461
+Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
+Ladies	006Apparel	Mavi	Mavi Denim Şort, 28, Gri	1441524752	5002527040006	8682454054512	CB28	1	1	4231222934
+Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 38, Mor	13143 LAV D'LÄ°TES-COOL CHANGE	5002940347005	195204888551	SB17	1	1	4231239902
+Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 37.5, Mor	13143 LAV D'LÄ°TES-COOL CHANGE	5002940347004	195204888544	SB27	1	1	4231239967
+Active & Outdoor	003Active Shoes	Skechers	Skechers Koşu Ayakkabısı, 39, Beyaz	172084 WSL GO RUN PERSİSTENCE 2	5003205426004	197976058583	SB11	1	1	4231240127
+Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, BEDENSIZ, Renksiz	1G5Y040000	5000000286001	27131187066	CB63	1	1	4231243794
+Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, Bedensiz, Renksiz	1G5Y650000	5003208565001	27131508878	CM63	1	1	4231243801
+Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, Bedensiz, Renksiz	1G5Y820000	5003208513001	27131935049	CM24	1	1	4231243796
+Cosmetics	018Selective	Calvin Klein	Calvin Klein Parfüm, BEDENSIZ, Renksiz	200491210-41627	5000065535001	88300107407	CM32	3	5	4231243798
+Cosmetics	018Selective	Calvin Klein	Calvin Klein Parfüm, Bedensiz, Renksiz	200491210-50517	5003258915001	3616305616159	CB54	2	4	4231243793
+Cosmetics	018Selective	Chloe	Chloe Parfüm, BEDENSIZ, Renksiz	200521210-15650	5000217001001	3614223111565	CB44	2	4	4231243790
+Cosmetics	018Selective	Chloe	Chloe Parfüm, Bedensiz, Renksiz	200521210-49491	5003222562001	3616303445584	CM24	1	2	4231243796
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Kırmızı	2'Lİ PAKET	5002935765001	8682734227278	CB15	1	1	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	2'Lİ PAKET	5002935851001	8682734227902	CB15	1	1	4231254313
+Cosmetics	018Selective	Versace	Versace Parfüm, BEDENSIZ, Renksiz	300501210-24496	5000074282001	8011003823536	CB39	7	11	4231243789
+Cosmetics	018Selective	Versace	Versace Parfüm, Bedensiz, Renksiz	300501210-41006	5002959708001	8011003877904	CB54	6	9	4231243793
+Cosmetics	018Selective	Versace	Versace Parfüm, Bedensiz, Renksiz	300501210-740111	5002660315001	8011003861910	CB46	4	10	4231243791
+Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 44.5, Siyah	3026727-001 UA Charged Edge	5003122055006	196883919079	SB17	1	1	4231239902
+Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayakka, 39, Gümüş	3027595-102 UA HOVR Apparition RTRF	5003176727003	196885686962	SB27	1	1	4231239967
+Kids	003Active Shoes	Skechers	Skechers Yürüyüş Ayakkab, 29, Çok Renkli	303575L AQPR-MİCROSPEC ADVANCE	5003179709002	197976294448	SB23	1	1	4231240188
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Ço, Standart, Gri Melanj	3'LÜ PAKET	5002682963001	8682732056955	CB15	1	1	4231254313
+Cosmetics	018Selective	Clinique	Clinique Maskara, BEDENSIZ, Renksiz	68A0020000	5000001188001	20714192341	CB49	2	1	4231243792
+Cosmetics	018Selective	Clinique	Clinique Fondöten, BEDENSIZ, Renksiz	6MNY03A000	5000006399001	20714324629	CM27	1	2	4231243797
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Pembe	ACTIVES-IY25	5003258083001	8683859196333	CB54	5	11	4231254314
+Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Terlik, 37, Açık Pembe	ARIZONA BF	5003268369002	4066648433101	GB10	1	2	4231223733
+Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Terlik, 38, Taş	ARIZONA BF NU	5002377475003	4013871744993	GB10	1	1	4231223733
+Cosmetics	018Selective	Armani	Armani Parfüm, BEDENSIZ, Renksiz	ARML8004000 SI PAS	5000221856001	3614271994844	CB46	3	5	4231243791
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Pembe	Belvet	5003160122001	8683857792971	CB15	1	1	4231254313
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mavi	BLOOM	5003264476001	8683858865551	CM79	1	1	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	BLOOM	5003264476003	8683858865537	CM79	2	4	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mint	BLOOM	5003265002006	8683858864783	CM34	1	5	4231295706
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	BLOOM	5003264476003	8683858865537	CB39	1	4	4231295708
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Mint	BLOOM	5003265002004	8683858864790	CB54	1	5	4231295709
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mint	BLOOM	5003265002006	8683858864783	GS13	1	5	4231295715
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mint	BLOOM	5003265002001	8683858865599	GS13	1	4	4231295715
+Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350093274	5003076992001	3616302020669	CB54	1	1	4231243793
+Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350158193	5003097425001	3616304248825	CB37	3	5	4231243788
+Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350178738	5003137359001	3616304679438	CM76	1	1	4231243802
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çora, Standart, Lacivert	CORA	5003076797001	8683856555164	CB43	2	2	4231254315
+Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Beyaz	CORA	5003077819001	8683856738154	CB43	4	4	4231254315
+Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Lacivert	CORA	5003077860001	8683856738185	CB56	2	7	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB15	3	11	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB54	4	11	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	CORA-2'LI PAKET	5002994677001	8682734552486	CB54	7	7	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Gri Melanj	CORA-2'LI PAKET	5002994678001	8682734552714	CB43	4	4	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB43	4	11	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB15	1	15	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-40, Gri Melanj	CORA-2SK24	5003202684001	8683858359944	CB15	1	9	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB54	3	18	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB54	3	15	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB43	3	15	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB43	2	18	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-40, Gri Melanj	CORA-2SK24	5003202684001	8683858359944	CB43	4	9	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB56	3	15	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB56	3	18	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB15	3	18	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB54	3	18	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB43	3	18	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	CORA-5-IY25	5003258110001	8683859184606	CB15	1	8	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-39, Gri Melanj	CORA-5-IY25	5003258111001	8683859184576	CB54	5	5	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Beyaz	CORAIY24 2'Lİ	5003134086001	8683857488638	CB15	3	3	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Siyah	CORAIY24- 2'Lİ	5003134068001	8683857488591	CB43	3	3	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	CORA-IY25	5003258069001	8683859184675	CB54	8	18	4231254314
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, M, Açık Mavi	D3WL-EA3	5003162280003	8684024386610	CM40	1	2	4231298862
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, XL, Açık Mavi	D3WL-EA3	5003162280005	8684024386634	CM40	1	1	4231298862
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, M, Açık Mavi	D3WL-EA3	5003162280003	8684024386610	CM84	1	2	4231299008
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, L, Açık Mavi	D3WL-EA3	5003162280004	8684024386627	CB44	1	1	4231299382
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WL-EA5	5003039697003	8683133947019	CM50	2	2	4231297727
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XS, Siyah	D3WL-EA5	5003039697001	8683133946098	CM87	2	2	4231299223
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, S, Siyah	D3WL-EA5	5003039697002	8683133947002	CB36	3	3	4231299381
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WM-EA4	5003039881002	8683133953171	CM50	1	1	4231297727
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	GS06	2	3	4231298863
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	CB06	1	3	4231299000
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	CB22	1	3	4231299002
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	CB38	1	3	4231299003
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Beyaz	D4SL-GML3026	5003095893001	8684024140267	CB59	1	1	4231299004
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	CB62	1	3	4231299005
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	CM84	1	3	4231299008
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	YM02	1	3	4231299011
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	YM02	1	3	4231299011
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Lila	D4SL-GML3027	5003095848002	8684024139988	CB45	1	3	4231297718
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Lila	D4SL-GML3027	5003095848004	8684024140304	CB57	1	1	4231298861
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Lila	D4SL-GML3027	5003095848002	8684024139988	CB57	2	3	4231298861
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Lila	D4SL-GML3027	5003095848001	8684024139971	CM64	2	2	4231299007
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Lila	D4SL-GML3027	5003095848003	8684024139995	GS12	3	3	4231299010
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, L, Gri	D4SL-PNT3011	5003089396004	8684024112738	CM50	1	1	4231297727
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pa, XS, Gri	D4SL-PNT3011	5003089396001	8684024112707	CB57	1	1	4231298861
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, M, Gri	D4SL-PNT3011	5003089396003	8684024112721	CM40	1	1	4231298862
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, S, Gri	D4SL-PNT3011	5003089396002	8684024112714	GS06	1	1	4231298863
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, XS, Siyah	D4SL-SHT3013	5003099096001	8684024170080	GS06	1	1	4231298863
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat Şo, XS, Yeşil	D4SL-SHT3024	5003099012001	8684024164935	CM87	1	1	4231299223
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatmon, XL, Yeşil	D4SL-SWT3029	5003098988005	8684024165260	CB45	1	1	4231297718
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatmont, M, Bej	D4SL-SWT3029	5003099043003	8684024166359	CB57	1	1	4231298861
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, XS, Ekru	D4SL-SWT3032	5003099051001	8684024166595	GS13	1	2	4231297730
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshirt, S, Ekru	D4SL-SWT3032	5003099051002	8684024166700	CM40	1	1	4231298862
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshirt, L, Ekru	D4SL-SWT3032	5003099051004	8684024166724	CM40	1	1	4231298862
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, XS, Ekru	D4SL-SWT3032	5003099051001	8684024166595	CB62	1	2	4231299005
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Trençkot, XS-S, Bej	D4SL-TRC3006	5003089395008	8683132162031	CM87	1	1	4231299223
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Trençkot, M-L, Bej	D4SL-TRC3006	5003089395007	8683132162581	CB46	2	2	4231299670
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Lila	D4SL-TST3033	5003099093003	8684024169671	CM64	1	1	4231299007
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, XS, Lila	D4SL-TST3033	5003099093001	8684024169657	CM84	1	1	4231299008
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, S, Siyah	D4SL-TST3034	5003099049002	8684024169947	CM27	1	1	4231297726
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3034	5003099049003	8684024169954	CB62	1	1	4231299005
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atle, M, Nar Çiçeği	D4SL-TST3034	5003099094003	8684024170011	CM84	1	1	4231299008
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3035	5003119625003	8684024229436	CB45	1	1	4231297718
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CB45	1	4	4231297718
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SL-TST3045	5003098979002	8684024165918	CM27	2	4	4231297726
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CM50	3	4	4231297727
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XS, Siyah	D4SL-TST3045	5003098979001	8684024165901	GS06	1	1	4231298863
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Siyah	D4SL-TST3045	5003098979004	8684024165932	CB38	2	2	4231299003
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SL-TST3045	5003098979002	8684024165918	CB38	2	4	4231299003
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SM-GML3230	5003095828003	8684024139537	CB15	2	2	4231297714
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SM-GML3230	5003095828002	8684024139520	CB35	2	2	4231297717
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, 2XL, Beyaz	D4SM-GML3230	5003095828005	8684024139551	CB55	1	1	4231297721
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Göml, 2XL, Antrasit	D4SM-GML3231	5003095871005	8684024140007	CB13	2	2	4231297713
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, 2XL, Beyaz	D4SM-GML3231	5003095862005	8684024139766	CB15	1	1	4231297714
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SM-GML3231	5003095862002	8684024139735	CB65	1	1	4231297723
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XL, Beyaz	D4SM-GML3231	5003095862004	8684024139759	CB65	2	2	4231297723
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SM-GML3231	5003095862003	8684024139742	GS13	1	1	4231297730
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, L, Turuncu	D4SM-TRC3222	5003089415003	8684024112615	CB47	1	1	4231297719
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, L, Yeşil	D4SM-TRC3222	5003089414003	8684024112462	CB54	2	2	4231297720
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, M, Turuncu	D4SM-TRC3222	5003089415002	8684024112608	CM27	1	1	4231297726
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, 2XL, Yeşil	D4SM-TRC3222	5003089414005	8684024112486	CM82	1	1	4231297729
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, S, Yeşil	D4SM-TRC3222	5003089414001	8684024112448	CM82	2	2	4231297729
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Polo, L, Nar Çiçeği	D4SM-TST3241	5003099101003	8684024169244	CM82	1	1	4231297729
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Bej	D4SM-TST3251	5003099029003	8684024168292	CB23	1	3	4231297715
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3251	5003099029004	8684024168506	CB78	1	1	4231297725
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Bej	D4SM-TST3251	5003099029003	8684024168292	GS13	2	3	4231297730
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Turuncu	D4SM-TST3256	5003099078002	8684024168780	GS13	2	2	4231297730
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3257	5003099081004	8684024169008	CB45	1	1	4231297718
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Bej	D4SM-TST3257	5003099081001	8684024168575	CB60	1	1	4231297722
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Siyah	D4SM-TST3260	5003099110004	8684024169176	CM68	1	1	4231297728
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, İndigo	D4SM-TST3269	5003099088001	8684024171025	CB45	1	1	4231297718
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, İndigo	D4SM-TST3269	5003099088002	8684024171032	CM68	2	2	4231297728
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweats, S, Açık Bej	D4WL-SWT3033	5003162333002	8684024388935	CM64	1	1	4231299007
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Swe, M, Kırık Beyaz	D4WM-SWT3206	5003162327002	8684024388430	GS13	1	1	4231297730
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshi, XL, Siyah	D4WM-SWT3225	5003162259004	8684024387761	CB55	1	1	4231297721
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, S, Siyah	D4WM-SWT3225	5003162259001	8684024387730	CB73	1	1	4231297724
+Active & Outdoor	003Active Shoes	Nike	Nike Training Ayakkabısı, 46, Mavi	DM1120-404 M NIKE LEGEND ESSENTIAL	5003148162009	197593740038	SM21	1	1	4231240316
+Kids	003Active Shoes	Nike	Nike Voleybol Ayakkabısı, 39, Gri	DM9027-010-NIKE OMNI MULTI-COURT (G	5003248491006	197859618569	SB17	1	1	4231239902
+Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshi, XL, Beyaz	DS4M-SWT3238	5003099098004	8684024170813	CB33	1	1	4231297716
+Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakkabısı, 26, Çok Renkli	DX7616-300-NIKE STAR RUNNER 4 NN TD	5003161542005	197594211407	SB11	1	1	4231240127
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Mint	FALICIA 4'LU PAKET	5002994697001	8682734552813	CB54	2	2	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çora, 36-40, Beyaz	FALICIA-4-IY24 - 4'LÜ	5003134542001	8683857488324	CB15	2	2	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çorab, 36-40, Mint	FALICIA-4-IY24 4'LÜ	5003134516001	8683857488317	CB54	4	4	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Mor	FALICIAIY23	5002843189001	8682733487642	CB15	2	2	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	FALICIA-IY25	5003258103001	8683859189809	CB54	4	14	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	FALICIA-IY25	5003258103001	8683859189809	CB56	3	14	4231254316
+Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 45, Siyah	FB1362-003 NIKE FULL FORCE LO	5003225484006	197600814493	SB23	1	1	4231240188
+Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Beyaz	FB2208-010 W NIKE REVOLUTION 7	5003185980004	197597072494	SB17	1	1	4231239902
+Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakka, 29.5, Siyah - Pembe	FB7690-002 NIKE REVOLUTION 7 (PSV)	5003109415008	196969497651	SM47	1	1	4231240336
+Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Krem	FD6476-800 W NIKE DOWNSHIFTER 13	5003185983004	197597085197	SB17	1	1	4231239902
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mint	FISH	5003264555001	8683858865407	CB32	1	2	4231295584
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mint	FISH	5003264555004	8683858865438	CB54	1	1	4231295709
+Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Siyah	FJ7765-002 W NIKE JOURNEY RUN	5003185984004	197593710499	SB17	1	1	4231239902
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Somon	FODE	5003202911001	8683858447979	CB15	3	3	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çorap, 36-40, Mor	FODE	5003202930001	8683858447962	CB56	2	2	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Pembe	HARPER-2'LI PAKET	5002994693001	8682734552912	CB56	4	4	4231254316
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 001	5002453447001	3614229823790	CB08	1	2	4231243787
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350140056	5002964386001	3616303173081	CM24	1	2	4231243796
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350140061	5002964393001	3616303173104	CB54	4	4	4231243793
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350185461	5003140908001	3616304697371	CB49	1	1	4231243792
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350187998	5003159776001	3616305160584	CM76	1	1	4231243802
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350208303	5003250280001	3616305040596	CB63	2	3	4231243794
+Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350208305	5003250270001	3616305040619	CM27	3	5	4231243797
+Cosmetics	018Selective	Hermes	Hermes Parfüm, BEDENSIZ, Renksiz	HRM107188V0	5000002283001	3346130009603	CM38	3	5	4231243800
+Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 25, Beyaz	ID5286-ADVANTAGE CF I	5003115896005	4066765017956	SM21	1	4	4231240316
+Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 25, Beyaz	ID5286-ADVANTAGE CF I	5003115896005	4066765017956	SM47	1	4	4231240336
+Active & Outdoor	003Active Shoes	adidas	adidas Koşu Ayakkabısı, 36.5, Siyah	IE8149 GALAXY	5003117123001	4066765295170	SB17	1	1	4231239902
+Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 35, Beyaz	IF0926-GRAND COURT MINNIE EL K	5003115825007	4066759510135	SB17	1	1	4231239902
+Active & Outdoor	003Active Shoes	adidas	adidas Outdoor Ayakkabısı, 38.5, Mor	IG5715 TERREX	5003117172004	4066765292032	SB17	1	1	4231239902
+Cosmetics	018Selective	Jimmy Choo	Jimmy Choo Parfüm, Bedensiz, Renksiz	JC 20A02	5002969038001	3386460129886	CM34	1	1	4231243799
+Cosmetics	018Selective	Jimmy Choo	Jimmy Choo Parfüm, Bedensiz, Renksiz	JC 22A01	5003211383001	3386460141703	CB08	3	5	4231243787
+Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayakkabı, 36.5, Beyaz	JH6085 ADVANTAGE 2.0	5003242234003	4067892926647	SB27	1	2	4231239967
+Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 40, Siyah	K/KITE RUN Knit Sock Lo	5003262092001	5059529447310	CM88	1	1	4231293077
+Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 42, Siyah	KAPRI MENS NFT Emboss Lo Lace	5003262067003	5059529510861	CM88	2	2	4231293077
+Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 41, Siyah	KAPRI MENS Signia Patch Embro	5003262082002	5059529510083	CM88	1	1	4231293077
+Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 43, Siyah	KAPRI MENS Signia Patch Embro	5003262082004	5059529510106	CM88	1	1	4231293077
+Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 42, Siyah	KAPRI MENS Signia Patch Embro	5003262082003	5059529510090	CM88	2	2	4231293077
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Yeşil	KARO	5003264650006	8683858868316	CM79	2	2	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Turkuaz	KARO	5003264641006	8683858868255	CM79	2	3	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Yeşil	KARO	5003264650003	8683858868262	CM68	2	2	4231295678
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Yeşil	KARO	5003264650004	8683858868293	CB46	2	2	4231295681
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Yeşil	KARO	5003264650001	8683858868279	GS13	1	1	4231295715
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CM68	1	2	4231295678
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB46	1	2	4231295681
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	KETA	5003264655004	8683858865827	CB46	2	2	4231295681
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CM36	1	3	4231295705
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Lacivert	KETA	5003264683004	8683858864882	CM34	1	1	4231295706
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB39	1	2	4231295708
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CB39	1	3	4231295708
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CB39	1	2	4231295708
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Çağla	KETA	5003264645004	8683858865841	CB54	1	1	4231295709
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Çağla	KETA	5003264645003	8683858865834	CB54	1	1	4231295709
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Lacivert	KETA	5003264683005	8683858865872	GS13	1	1	4231295715
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Siyah	KETA	5003264655007	8683858865803	GS13	1	1	4231295715
+Cosmetics	018Selective	Lancome	Lancome Parfüm, Bedensiz, Renksiz	LB698900	5002607767001	3614273069175	CM86	3	4	4231243803
+Cosmetics	018Selective	Yves Saint Laurent	Yves Saint Laurent Pa, Bedensiz, Renksiz	LB703100	5002617122001	3614273069557	CB77	2	5	4231243795
+Cosmetics	018Selective	Prada	Prada Parfüm, Bedensiz, Renksiz	LD792600	5002947776001	3614273760164	CM27	3	6	4231243797
+Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	LEKA	5003077856001	8683856563244	CB15	2	2	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Kırmızı	LEKA	5003076811001	8683856563213	CB54	1	1	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Siyah	LEKA	5003076787001	8683856563237	CB56	2	2	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Beyaz	LEKA	5003076821001	8683856563251	CB56	3	3	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Gri Melanj	LEKA-2'LI PAKET	5002994700001	8682734552271	CB54	2	2	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	LEKA-2'LI PAKET	5002994668001	8682734553001	CB56	3	3	4231254316
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Beyaz	LEKAIY24 -2'Lİ	5003134202001	8683857473184	CB15	2	2	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	LEKASK24	5003203156001	8683858320715	CB56	4	4	4231254316
+Ladies	006Apparel	Mavi	Mavi Şort, S, Beyaz	M1410155-70000_ÖRME ŞORT	5003241395003	8684518597645	CB28	1	2	4231222934
+Ladies	006Apparel	Mavi	Mavi Şort, M, Beyaz	M1410155-70000_ÖRME ŞORT	5003241395002	8684518597683	CB28	2	2	4231222934
+Ladies	006Apparel	Mavi	Mavi Şort, M, Koyu Antrasit	M1410155-82185_ÖRME ŞORT	5003241396002	8684518597720	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Şort, XS, Kahve	M1410188-89858_DOKUMA ŞORT ETEK	5003241413004	8684518538846	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Denim Şort, M, Renksiz	M1411215-89684_NOVELLA	5003241402002	8684518627595	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Denim Şort, 30, Renksiz	M1447487077_ROSIE	5003241397007	8684249558762	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Denim Şort, 28, Renksiz	M1458987073_MILLIE	5003241607005	8684249549753	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Denim Şort, 29, Renksiz	M1458987073_MILLIE	5003241607006	8684249549760	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Denim Şort, 27, Renksiz	M1458987073_MILLIE	5003241607004	8684249549746	CB28	1	1	4231222934
+Ladies	006Apparel	Mavi	Mavi Denim Şort, 26, Renksiz	M1458987073_MILLIE	5003241607003	8684249549739	CB28	1	1	4231222934
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	NAVY	5003265032007	8683858866145	CB32	1	4	4231295584
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB32	2	4	4231295584
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	NAVY	5003264772004	8683858866015	CM79	1	5	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB46	1	4	4231295681
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	NAVY	5003264772004	8683858866015	CM36	1	5	4231295705
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	NAVY	5003264771007	8683858866022	CB54	1	2	4231295709
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Çağla	NAVY	5003265032004	8683858866169	CB54	2	5	4231295709
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Kırmızı	OLIVIA 5'LI PAKET	5002994694001	8682734552943	CB43	1	1	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çorap, 36-39, Lila	OLIVIA-IY25	5003258123001	8683859189854	CB54	9	18	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çorab, 36-40, Lila	PINO- 3'LÜ	5003134342001	8683857488508	CB43	3	3	4231254315
+Cosmetics	018Selective	Estee Lauder	Estee Lauder Allık, Bedensiz, Renksiz	PKTJ170000	5002931968001	887167521438	CM34	1	1	4231243799
+Cosmetics	018Selective	Estee Lauder	Estee Lauder Onarıcı, Bedensiz, Renksiz	PMY2010000	5002886465001	887167539570	CB44	1	2	4231243790
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Siyah	PRES- 2'LI PAKET	5002994702001	8682734636605	CB56	1	1	4231254316
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mavi	ROSE	5003264891007	8683858879800	CM68	1	2	4231295678
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Mavi	ROSE	5003264891006	8683858879664	CB46	1	1	4231295681
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mavi	ROSE	5003264891001	8683858879657	CM36	1	1	4231295705
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	ROSE	5003264891004	8683858879633	CM34	1	2	4231295706
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Kırmızı	ROSE	5003264857001	8683858879626	CB39	1	3	4231295708
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Kırmızı	ROSE	5003264857004	8683858879695	CB54	1	4	4231295709
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-39, Açık Mavi	SEMOS	5003258112001	8683859189366	CB15	1	1	4231254313
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Saks	SHARK	5003264876004	8683858866183	CM68	1	2	4231295678
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Saks	SHARK	5003264876006	8683858866367	CB46	1	1	4231295681
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Saks	SHARK	5003264876004	8683858866183	CM36	1	2	4231295705
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Açık Mavi	SLEY	5003264923001	8683858879084	CB46	1	1	4231295681
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Siyah	SNEAKER - 2'Lİ	5003134410001	8683857533499	CB54	2	2	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	SNEAKER-2-IY25	5003258105001	8683859156993	CB54	2	2	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Siyah	SNEAKER-5-IY25	5003258122001	8683859184460	CB54	6	12	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Beyaz	SPORTY	5003076812001	8683856776965	CB15	3	3	4231254313
+Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	SPORTY	5003077861001	8683856776996	CB54	3	3	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	SPORTY-SK24	5003203376001	8683858414568	CB54	4	10	4231254314
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	SPORTY-SK24	5003203374001	8683858414506	CB43	5	10	4231254315
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	SPORTYWOMEN-2'LI PAKET	5002994701001	8682734552851	CB15	5	5	4231254313
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	SPORTYWOMEN-2'LI PAKET	5002994695001	8682734552868	CB54	3	3	4231254314
+Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, BEDENSIZ, Renksiz	T004010000	5000003098001	888066000055	CM34	14	16	4231243799
+Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, BEDENSIZ, Renksiz	T2TL010000	5000076524001	888066035361	CM32	2	2	4231243798
+Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, Bedensiz, Renksiz	TEF7010000	5003215068001	888066152051	CB77	1	3	4231243795
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Lacivert	TEKLİ PAKET	5002935714001	8682734228251	CB15	1	1	4231254313
+Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 40, Bordo	TK-P207	5003287986005	8682476124231	CB45	2	1	4231223097
+Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 41, Bordo	TK-P207	5003287986006	8682476124248	CB43	1	1	4231223100
+Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 37, Bordo	TK-P207	5003287986002	8682476124200	CB43	1	1	4231223100
+Cosmetics	018Selective	Clinique	Clinique Göz Kalemi, Bedensiz, Renksiz	V16H030000	5002828681001	192333100912	CB46	1	1	4231243791
+Cosmetics	018Selective	Clinique	Clinique Allık, Bedensiz, Renksiz	V175140000	5003078944001	192333101223	CM63	1	1	4231243801
+Cosmetics	018Selective	Clinique	Clinique Eyeliner, Bedensiz, Renksiz	V4R301A000	5002843655001	192333129272	CM63	2	5	4231243801
+Cosmetics	018Selective	Clinique	Clinique Göz Kremi, Bedensiz, Renksiz	V82H010000	5003061193001	192333164525	CM76	1	1	4231243802
+Cosmetics	018Selective	Clinique	Clinique Fondöten, Bedensiz, Ten	V8WQ03A000	5003259007001	192333255001	CB77	2	2	4231243795
+Cosmetics	018Selective	Clinique	Clinique Fondöten, Bedensiz, Ten	V8WQ05A000	5003259036001	192333255025	CB77	1	1	4231243795
+Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Somon	VEX - 2'Lİ	5003134398001	8683857508855	CB54	4	4	4231254314
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Yeşil	WAVE	5003264953006	8683858865933	CB32	4	4	4231295584
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Yeşil	WAVE	5003264953001	8683858866237	CM79	1	3	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CM79	1	6	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Yeşil	WAVE	5003264953003	8683858865940	CM79	2	4	4231295662
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM36	1	3	4231295705
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Saks	WAVE	5003264986006	8683858866206	CM36	2	2	4231295705
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM34	2	3	4231295706
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CB39	2	6	4231295708
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Yeşil	WAVE	5003264953004	8683858866251	CB54	1	4	4231295709
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Turuncu	WAVE	5003265010006	8683858866275	CB54	1	3	4231295709
+Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CB54	2	6	4231295709
+Cosmetics	018Selective	Clinique	Clinique Kontür, Bedensiz, Renksiz	ZMAT010000	5003088443001	20714795689	CB54	1	2	4231243793
