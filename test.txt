@@ -1,276 +1,276 @@
-Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
-Ladies	006Apparel	Mavi	Mavi Denim Şort, 28, Gri	1441524752	5002527040006	8682454054512	CB28	1	1	4231222934
-Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 38, Mor	13143 LAV D'LÄ°TES-COOL CHANGE	5002940347005	195204888551	SB17	1	1	4231239902
-Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 37.5, Mor	13143 LAV D'LÄ°TES-COOL CHANGE	5002940347004	195204888544	SB27	1	1	4231239967
-Active & Outdoor	003Active Shoes	Skechers	Skechers Koşu Ayakkabısı, 39, Beyaz	172084 WSL GO RUN PERSİSTENCE 2	5003205426004	197976058583	SB11	1	1	4231240127
-Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, BEDENSIZ, Renksiz	1G5Y040000	5000000286001	27131187066	CB63	1	1	4231243794
-Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, Bedensiz, Renksiz	1G5Y650000	5003208565001	27131508878	CM63	1	1	4231243801
-Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, Bedensiz, Renksiz	1G5Y820000	5003208513001	27131935049	CM24	1	1	4231243796
-Cosmetics	018Selective	Calvin Klein	Calvin Klein Parfüm, BEDENSIZ, Renksiz	200491210-41627	5000065535001	88300107407	CM32	3	5	4231243798
-Cosmetics	018Selective	Calvin Klein	Calvin Klein Parfüm, Bedensiz, Renksiz	200491210-50517	5003258915001	3616305616159	CB54	2	4	4231243793
-Cosmetics	018Selective	Chloe	Chloe Parfüm, BEDENSIZ, Renksiz	200521210-15650	5000217001001	3614223111565	CB44	2	4	4231243790
-Cosmetics	018Selective	Chloe	Chloe Parfüm, Bedensiz, Renksiz	200521210-49491	5003222562001	3616303445584	CM24	1	2	4231243796
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Kırmızı	2'Lİ PAKET	5002935765001	8682734227278	CB15	1	1	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	2'Lİ PAKET	5002935851001	8682734227902	CB15	1	1	4231254313
-Cosmetics	018Selective	Versace	Versace Parfüm, BEDENSIZ, Renksiz	300501210-24496	5000074282001	8011003823536	CB39	7	11	4231243789
-Cosmetics	018Selective	Versace	Versace Parfüm, Bedensiz, Renksiz	300501210-41006	5002959708001	8011003877904	CB54	6	9	4231243793
-Cosmetics	018Selective	Versace	Versace Parfüm, Bedensiz, Renksiz	300501210-740111	5002660315001	8011003861910	CB46	4	10	4231243791
-Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 44.5, Siyah	3026727-001 UA Charged Edge	5003122055006	196883919079	SB17	1	1	4231239902
-Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayakka, 39, Gümüş	3027595-102 UA HOVR Apparition RTRF	5003176727003	196885686962	SB27	1	1	4231239967
-Kids	003Active Shoes	Skechers	Skechers Yürüyüş Ayakkab, 29, Çok Renkli	303575L AQPR-MİCROSPEC ADVANCE	5003179709002	197976294448	SB23	1	1	4231240188
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Ço, Standart, Gri Melanj	3'LÜ PAKET	5002682963001	8682732056955	CB15	1	1	4231254313
-Cosmetics	018Selective	Clinique	Clinique Maskara, BEDENSIZ, Renksiz	68A0020000	5000001188001	20714192341	CB49	2	1	4231243792
-Cosmetics	018Selective	Clinique	Clinique Fondöten, BEDENSIZ, Renksiz	6MNY03A000	5000006399001	20714324629	CM27	1	2	4231243797
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Pembe	ACTIVES-IY25	5003258083001	8683859196333	CB54	5	11	4231254314
-Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Terlik, 37, Açık Pembe	ARIZONA BF	5003268369002	4066648433101	GB10	1	2	4231223733
-Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Terlik, 38, Taş	ARIZONA BF NU	5002377475003	4013871744993	GB10	1	1	4231223733
-Cosmetics	018Selective	Armani	Armani Parfüm, BEDENSIZ, Renksiz	ARML8004000 SI PAS	5000221856001	3614271994844	CB46	3	5	4231243791
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Pembe	Belvet	5003160122001	8683857792971	CB15	1	1	4231254313
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mavi	BLOOM	5003264476001	8683858865551	CM79	1	1	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	BLOOM	5003264476003	8683858865537	CM79	2	4	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mint	BLOOM	5003265002006	8683858864783	CM34	1	5	4231295706
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	BLOOM	5003264476003	8683858865537	CB39	1	4	4231295708
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Mint	BLOOM	5003265002004	8683858864790	CB54	1	5	4231295709
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mint	BLOOM	5003265002006	8683858864783	GS13	1	5	4231295715
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mint	BLOOM	5003265002001	8683858865599	GS13	1	4	4231295715
-Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350093274	5003076992001	3616302020669	CB54	1	1	4231243793
-Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350158193	5003097425001	3616304248825	CB37	3	5	4231243788
-Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350178738	5003137359001	3616304679438	CM76	1	1	4231243802
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çora, Standart, Lacivert	CORA	5003076797001	8683856555164	CB43	2	2	4231254315
-Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Beyaz	CORA	5003077819001	8683856738154	CB43	4	4	4231254315
-Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Lacivert	CORA	5003077860001	8683856738185	CB56	2	7	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB15	3	11	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB54	4	11	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	CORA-2'LI PAKET	5002994677001	8682734552486	CB54	7	7	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Gri Melanj	CORA-2'LI PAKET	5002994678001	8682734552714	CB43	4	4	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB43	4	11	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB15	1	15	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-40, Gri Melanj	CORA-2SK24	5003202684001	8683858359944	CB15	1	9	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB54	3	18	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB54	3	15	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB43	3	15	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB43	2	18	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-40, Gri Melanj	CORA-2SK24	5003202684001	8683858359944	CB43	4	9	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB56	3	15	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB56	3	18	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB15	3	18	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB54	3	18	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB43	3	18	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	CORA-5-IY25	5003258110001	8683859184606	CB15	1	8	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-39, Gri Melanj	CORA-5-IY25	5003258111001	8683859184576	CB54	5	5	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Beyaz	CORAIY24 2'Lİ	5003134086001	8683857488638	CB15	3	3	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Siyah	CORAIY24- 2'Lİ	5003134068001	8683857488591	CB43	3	3	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	CORA-IY25	5003258069001	8683859184675	CB54	8	18	4231254314
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, M, Açık Mavi	D3WL-EA3	5003162280003	8684024386610	CM40	1	2	4231298862
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, XL, Açık Mavi	D3WL-EA3	5003162280005	8684024386634	CM40	1	1	4231298862
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, M, Açık Mavi	D3WL-EA3	5003162280003	8684024386610	CM84	1	2	4231299008
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, L, Açık Mavi	D3WL-EA3	5003162280004	8684024386627	CB44	1	1	4231299382
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WL-EA5	5003039697003	8683133947019	CM50	2	2	4231297727
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XS, Siyah	D3WL-EA5	5003039697001	8683133946098	CM87	2	2	4231299223
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, S, Siyah	D3WL-EA5	5003039697002	8683133947002	CB36	3	3	4231299381
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WM-EA4	5003039881002	8683133953171	CM50	1	1	4231297727
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	GS06	2	3	4231298863
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	CB06	1	3	4231299000
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	CB22	1	3	4231299002
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	CB38	1	3	4231299003
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Beyaz	D4SL-GML3026	5003095893001	8684024140267	CB59	1	1	4231299004
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	CB62	1	3	4231299005
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	CM84	1	3	4231299008
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	YM02	1	3	4231299011
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	YM02	1	3	4231299011
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Lila	D4SL-GML3027	5003095848002	8684024139988	CB45	1	3	4231297718
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Lila	D4SL-GML3027	5003095848004	8684024140304	CB57	1	1	4231298861
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Lila	D4SL-GML3027	5003095848002	8684024139988	CB57	2	3	4231298861
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Lila	D4SL-GML3027	5003095848001	8684024139971	CM64	2	2	4231299007
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Lila	D4SL-GML3027	5003095848003	8684024139995	GS12	3	3	4231299010
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, L, Gri	D4SL-PNT3011	5003089396004	8684024112738	CM50	1	1	4231297727
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pa, XS, Gri	D4SL-PNT3011	5003089396001	8684024112707	CB57	1	1	4231298861
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, M, Gri	D4SL-PNT3011	5003089396003	8684024112721	CM40	1	1	4231298862
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, S, Gri	D4SL-PNT3011	5003089396002	8684024112714	GS06	1	1	4231298863
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, XS, Siyah	D4SL-SHT3013	5003099096001	8684024170080	GS06	1	1	4231298863
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat Şo, XS, Yeşil	D4SL-SHT3024	5003099012001	8684024164935	CM87	1	1	4231299223
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatmon, XL, Yeşil	D4SL-SWT3029	5003098988005	8684024165260	CB45	1	1	4231297718
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatmont, M, Bej	D4SL-SWT3029	5003099043003	8684024166359	CB57	1	1	4231298861
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, XS, Ekru	D4SL-SWT3032	5003099051001	8684024166595	GS13	1	2	4231297730
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshirt, S, Ekru	D4SL-SWT3032	5003099051002	8684024166700	CM40	1	1	4231298862
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshirt, L, Ekru	D4SL-SWT3032	5003099051004	8684024166724	CM40	1	1	4231298862
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, XS, Ekru	D4SL-SWT3032	5003099051001	8684024166595	CB62	1	2	4231299005
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Trençkot, XS-S, Bej	D4SL-TRC3006	5003089395008	8683132162031	CM87	1	1	4231299223
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Trençkot, M-L, Bej	D4SL-TRC3006	5003089395007	8683132162581	CB46	2	2	4231299670
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Lila	D4SL-TST3033	5003099093003	8684024169671	CM64	1	1	4231299007
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, XS, Lila	D4SL-TST3033	5003099093001	8684024169657	CM84	1	1	4231299008
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, S, Siyah	D4SL-TST3034	5003099049002	8684024169947	CM27	1	1	4231297726
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3034	5003099049003	8684024169954	CB62	1	1	4231299005
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atle, M, Nar Çiçeği	D4SL-TST3034	5003099094003	8684024170011	CM84	1	1	4231299008
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3035	5003119625003	8684024229436	CB45	1	1	4231297718
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CB45	1	4	4231297718
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SL-TST3045	5003098979002	8684024165918	CM27	2	4	4231297726
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CM50	3	4	4231297727
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XS, Siyah	D4SL-TST3045	5003098979001	8684024165901	GS06	1	1	4231298863
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Siyah	D4SL-TST3045	5003098979004	8684024165932	CB38	2	2	4231299003
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SL-TST3045	5003098979002	8684024165918	CB38	2	4	4231299003
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SM-GML3230	5003095828003	8684024139537	CB15	2	2	4231297714
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SM-GML3230	5003095828002	8684024139520	CB35	2	2	4231297717
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, 2XL, Beyaz	D4SM-GML3230	5003095828005	8684024139551	CB55	1	1	4231297721
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Göml, 2XL, Antrasit	D4SM-GML3231	5003095871005	8684024140007	CB13	2	2	4231297713
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, 2XL, Beyaz	D4SM-GML3231	5003095862005	8684024139766	CB15	1	1	4231297714
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SM-GML3231	5003095862002	8684024139735	CB65	1	1	4231297723
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XL, Beyaz	D4SM-GML3231	5003095862004	8684024139759	CB65	2	2	4231297723
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SM-GML3231	5003095862003	8684024139742	GS13	1	1	4231297730
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, L, Turuncu	D4SM-TRC3222	5003089415003	8684024112615	CB47	1	1	4231297719
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, L, Yeşil	D4SM-TRC3222	5003089414003	8684024112462	CB54	2	2	4231297720
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, M, Turuncu	D4SM-TRC3222	5003089415002	8684024112608	CM27	1	1	4231297726
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, 2XL, Yeşil	D4SM-TRC3222	5003089414005	8684024112486	CM82	1	1	4231297729
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, S, Yeşil	D4SM-TRC3222	5003089414001	8684024112448	CM82	2	2	4231297729
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Polo, L, Nar Çiçeği	D4SM-TST3241	5003099101003	8684024169244	CM82	1	1	4231297729
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Bej	D4SM-TST3251	5003099029003	8684024168292	CB23	1	3	4231297715
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3251	5003099029004	8684024168506	CB78	1	1	4231297725
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Bej	D4SM-TST3251	5003099029003	8684024168292	GS13	2	3	4231297730
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Turuncu	D4SM-TST3256	5003099078002	8684024168780	GS13	2	2	4231297730
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3257	5003099081004	8684024169008	CB45	1	1	4231297718
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Bej	D4SM-TST3257	5003099081001	8684024168575	CB60	1	1	4231297722
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Siyah	D4SM-TST3260	5003099110004	8684024169176	CM68	1	1	4231297728
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, İndigo	D4SM-TST3269	5003099088001	8684024171025	CB45	1	1	4231297718
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, İndigo	D4SM-TST3269	5003099088002	8684024171032	CM68	2	2	4231297728
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweats, S, Açık Bej	D4WL-SWT3033	5003162333002	8684024388935	CM64	1	1	4231299007
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Swe, M, Kırık Beyaz	D4WM-SWT3206	5003162327002	8684024388430	GS13	1	1	4231297730
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshi, XL, Siyah	D4WM-SWT3225	5003162259004	8684024387761	CB55	1	1	4231297721
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, S, Siyah	D4WM-SWT3225	5003162259001	8684024387730	CB73	1	1	4231297724
-Active & Outdoor	003Active Shoes	Nike	Nike Training Ayakkabısı, 46, Mavi	DM1120-404 M NIKE LEGEND ESSENTIAL	5003148162009	197593740038	SM21	1	1	4231240316
-Kids	003Active Shoes	Nike	Nike Voleybol Ayakkabısı, 39, Gri	DM9027-010-NIKE OMNI MULTI-COURT (G	5003248491006	197859618569	SB17	1	1	4231239902
-Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshi, XL, Beyaz	DS4M-SWT3238	5003099098004	8684024170813	CB33	1	1	4231297716
-Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakkabısı, 26, Çok Renkli	DX7616-300-NIKE STAR RUNNER 4 NN TD	5003161542005	197594211407	SB11	1	1	4231240127
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Mint	FALICIA 4'LU PAKET	5002994697001	8682734552813	CB54	2	2	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çora, 36-40, Beyaz	FALICIA-4-IY24 - 4'LÜ	5003134542001	8683857488324	CB15	2	2	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çorab, 36-40, Mint	FALICIA-4-IY24 4'LÜ	5003134516001	8683857488317	CB54	4	4	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Mor	FALICIAIY23	5002843189001	8682733487642	CB15	2	2	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	FALICIA-IY25	5003258103001	8683859189809	CB54	4	14	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	FALICIA-IY25	5003258103001	8683859189809	CB56	3	14	4231254316
-Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 45, Siyah	FB1362-003 NIKE FULL FORCE LO	5003225484006	197600814493	SB23	1	1	4231240188
-Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Beyaz	FB2208-010 W NIKE REVOLUTION 7	5003185980004	197597072494	SB17	1	1	4231239902
-Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakka, 29.5, Siyah - Pembe	FB7690-002 NIKE REVOLUTION 7 (PSV)	5003109415008	196969497651	SM47	1	1	4231240336
-Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Krem	FD6476-800 W NIKE DOWNSHIFTER 13	5003185983004	197597085197	SB17	1	1	4231239902
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mint	FISH	5003264555001	8683858865407	CB32	1	2	4231295584
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mint	FISH	5003264555004	8683858865438	CB54	1	1	4231295709
-Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Siyah	FJ7765-002 W NIKE JOURNEY RUN	5003185984004	197593710499	SB17	1	1	4231239902
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Somon	FODE	5003202911001	8683858447979	CB15	3	3	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çorap, 36-40, Mor	FODE	5003202930001	8683858447962	CB56	2	2	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Pembe	HARPER-2'LI PAKET	5002994693001	8682734552912	CB56	4	4	4231254316
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 001	5002453447001	3614229823790	CB08	1	2	4231243787
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350140056	5002964386001	3616303173081	CM24	1	2	4231243796
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350140061	5002964393001	3616303173104	CB54	4	4	4231243793
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350185461	5003140908001	3616304697371	CB49	1	1	4231243792
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350187998	5003159776001	3616305160584	CM76	1	1	4231243802
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350208303	5003250280001	3616305040596	CB63	2	3	4231243794
-Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350208305	5003250270001	3616305040619	CM27	3	5	4231243797
-Cosmetics	018Selective	Hermes	Hermes Parfüm, BEDENSIZ, Renksiz	HRM107188V0	5000002283001	3346130009603	CM38	3	5	4231243800
-Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 25, Beyaz	ID5286-ADVANTAGE CF I	5003115896005	4066765017956	SM21	1	4	4231240316
-Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 25, Beyaz	ID5286-ADVANTAGE CF I	5003115896005	4066765017956	SM47	1	4	4231240336
-Active & Outdoor	003Active Shoes	adidas	adidas Koşu Ayakkabısı, 36.5, Siyah	IE8149 GALAXY	5003117123001	4066765295170	SB17	1	1	4231239902
-Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 35, Beyaz	IF0926-GRAND COURT MINNIE EL K	5003115825007	4066759510135	SB17	1	1	4231239902
-Active & Outdoor	003Active Shoes	adidas	adidas Outdoor Ayakkabısı, 38.5, Mor	IG5715 TERREX	5003117172004	4066765292032	SB17	1	1	4231239902
-Cosmetics	018Selective	Jimmy Choo	Jimmy Choo Parfüm, Bedensiz, Renksiz	JC 20A02	5002969038001	3386460129886	CM34	1	1	4231243799
-Cosmetics	018Selective	Jimmy Choo	Jimmy Choo Parfüm, Bedensiz, Renksiz	JC 22A01	5003211383001	3386460141703	CB08	3	5	4231243787
-Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayakkabı, 36.5, Beyaz	JH6085 ADVANTAGE 2.0	5003242234003	4067892926647	SB27	1	2	4231239967
-Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 40, Siyah	K/KITE RUN Knit Sock Lo	5003262092001	5059529447310	CM88	1	1	4231293077
-Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 42, Siyah	KAPRI MENS NFT Emboss Lo Lace	5003262067003	5059529510861	CM88	2	2	4231293077
-Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 41, Siyah	KAPRI MENS Signia Patch Embro	5003262082002	5059529510083	CM88	1	1	4231293077
-Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 43, Siyah	KAPRI MENS Signia Patch Embro	5003262082004	5059529510106	CM88	1	1	4231293077
-Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 42, Siyah	KAPRI MENS Signia Patch Embro	5003262082003	5059529510090	CM88	2	2	4231293077
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Yeşil	KARO	5003264650006	8683858868316	CM79	2	2	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Turkuaz	KARO	5003264641006	8683858868255	CM79	2	3	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Yeşil	KARO	5003264650003	8683858868262	CM68	2	2	4231295678
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Yeşil	KARO	5003264650004	8683858868293	CB46	2	2	4231295681
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Yeşil	KARO	5003264650001	8683858868279	GS13	1	1	4231295715
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CM68	1	2	4231295678
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB46	1	2	4231295681
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	KETA	5003264655004	8683858865827	CB46	2	2	4231295681
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CM36	1	3	4231295705
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Lacivert	KETA	5003264683004	8683858864882	CM34	1	1	4231295706
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB39	1	2	4231295708
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CB39	1	3	4231295708
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CB39	1	2	4231295708
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Çağla	KETA	5003264645004	8683858865841	CB54	1	1	4231295709
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Çağla	KETA	5003264645003	8683858865834	CB54	1	1	4231295709
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Lacivert	KETA	5003264683005	8683858865872	GS13	1	1	4231295715
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Siyah	KETA	5003264655007	8683858865803	GS13	1	1	4231295715
-Cosmetics	018Selective	Lancome	Lancome Parfüm, Bedensiz, Renksiz	LB698900	5002607767001	3614273069175	CM86	3	4	4231243803
-Cosmetics	018Selective	Yves Saint Laurent	Yves Saint Laurent Pa, Bedensiz, Renksiz	LB703100	5002617122001	3614273069557	CB77	2	5	4231243795
-Cosmetics	018Selective	Prada	Prada Parfüm, Bedensiz, Renksiz	LD792600	5002947776001	3614273760164	CM27	3	6	4231243797
-Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	LEKA	5003077856001	8683856563244	CB15	2	2	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Kırmızı	LEKA	5003076811001	8683856563213	CB54	1	1	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Siyah	LEKA	5003076787001	8683856563237	CB56	2	2	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Beyaz	LEKA	5003076821001	8683856563251	CB56	3	3	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Gri Melanj	LEKA-2'LI PAKET	5002994700001	8682734552271	CB54	2	2	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	LEKA-2'LI PAKET	5002994668001	8682734553001	CB56	3	3	4231254316
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Beyaz	LEKAIY24 -2'Lİ	5003134202001	8683857473184	CB15	2	2	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	LEKASK24	5003203156001	8683858320715	CB56	4	4	4231254316
-Ladies	006Apparel	Mavi	Mavi Şort, S, Beyaz	M1410155-70000_ÖRME ŞORT	5003241395003	8684518597645	CB28	1	2	4231222934
-Ladies	006Apparel	Mavi	Mavi Şort, M, Beyaz	M1410155-70000_ÖRME ŞORT	5003241395002	8684518597683	CB28	2	2	4231222934
-Ladies	006Apparel	Mavi	Mavi Şort, M, Koyu Antrasit	M1410155-82185_ÖRME ŞORT	5003241396002	8684518597720	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Şort, XS, Kahve	M1410188-89858_DOKUMA ŞORT ETEK	5003241413004	8684518538846	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Denim Şort, M, Renksiz	M1411215-89684_NOVELLA	5003241402002	8684518627595	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Denim Şort, 30, Renksiz	M1447487077_ROSIE	5003241397007	8684249558762	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Denim Şort, 28, Renksiz	M1458987073_MILLIE	5003241607005	8684249549753	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Denim Şort, 29, Renksiz	M1458987073_MILLIE	5003241607006	8684249549760	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Denim Şort, 27, Renksiz	M1458987073_MILLIE	5003241607004	8684249549746	CB28	1	1	4231222934
-Ladies	006Apparel	Mavi	Mavi Denim Şort, 26, Renksiz	M1458987073_MILLIE	5003241607003	8684249549739	CB28	1	1	4231222934
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	NAVY	5003265032007	8683858866145	CB32	1	4	4231295584
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB32	2	4	4231295584
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	NAVY	5003264772004	8683858866015	CM79	1	5	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB46	1	4	4231295681
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	NAVY	5003264772004	8683858866015	CM36	1	5	4231295705
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	NAVY	5003264771007	8683858866022	CB54	1	2	4231295709
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Çağla	NAVY	5003265032004	8683858866169	CB54	2	5	4231295709
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Kırmızı	OLIVIA 5'LI PAKET	5002994694001	8682734552943	CB43	1	1	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çorap, 36-39, Lila	OLIVIA-IY25	5003258123001	8683859189854	CB54	9	18	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çorab, 36-40, Lila	PINO- 3'LÜ	5003134342001	8683857488508	CB43	3	3	4231254315
-Cosmetics	018Selective	Estee Lauder	Estee Lauder Allık, Bedensiz, Renksiz	PKTJ170000	5002931968001	887167521438	CM34	1	1	4231243799
-Cosmetics	018Selective	Estee Lauder	Estee Lauder Onarıcı, Bedensiz, Renksiz	PMY2010000	5002886465001	887167539570	CB44	1	2	4231243790
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Siyah	PRES- 2'LI PAKET	5002994702001	8682734636605	CB56	1	1	4231254316
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mavi	ROSE	5003264891007	8683858879800	CM68	1	2	4231295678
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Mavi	ROSE	5003264891006	8683858879664	CB46	1	1	4231295681
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mavi	ROSE	5003264891001	8683858879657	CM36	1	1	4231295705
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	ROSE	5003264891004	8683858879633	CM34	1	2	4231295706
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Kırmızı	ROSE	5003264857001	8683858879626	CB39	1	3	4231295708
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Kırmızı	ROSE	5003264857004	8683858879695	CB54	1	4	4231295709
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-39, Açık Mavi	SEMOS	5003258112001	8683859189366	CB15	1	1	4231254313
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Saks	SHARK	5003264876004	8683858866183	CM68	1	2	4231295678
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Saks	SHARK	5003264876006	8683858866367	CB46	1	1	4231295681
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Saks	SHARK	5003264876004	8683858866183	CM36	1	2	4231295705
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Açık Mavi	SLEY	5003264923001	8683858879084	CB46	1	1	4231295681
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Siyah	SNEAKER - 2'Lİ	5003134410001	8683857533499	CB54	2	2	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	SNEAKER-2-IY25	5003258105001	8683859156993	CB54	2	2	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Siyah	SNEAKER-5-IY25	5003258122001	8683859184460	CB54	6	12	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Beyaz	SPORTY	5003076812001	8683856776965	CB15	3	3	4231254313
-Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	SPORTY	5003077861001	8683856776996	CB54	3	3	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	SPORTY-SK24	5003203376001	8683858414568	CB54	4	10	4231254314
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	SPORTY-SK24	5003203374001	8683858414506	CB43	5	10	4231254315
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	SPORTYWOMEN-2'LI PAKET	5002994701001	8682734552851	CB15	5	5	4231254313
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	SPORTYWOMEN-2'LI PAKET	5002994695001	8682734552868	CB54	3	3	4231254314
-Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, BEDENSIZ, Renksiz	T004010000	5000003098001	888066000055	CM34	14	16	4231243799
-Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, BEDENSIZ, Renksiz	T2TL010000	5000076524001	888066035361	CM32	2	2	4231243798
-Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, Bedensiz, Renksiz	TEF7010000	5003215068001	888066152051	CB77	1	3	4231243795
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Lacivert	TEKLİ PAKET	5002935714001	8682734228251	CB15	1	1	4231254313
-Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 40, Bordo	TK-P207	5003287986005	8682476124231	CB45	2	1	4231223097
-Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 41, Bordo	TK-P207	5003287986006	8682476124248	CB43	1	1	4231223100
-Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 37, Bordo	TK-P207	5003287986002	8682476124200	CB43	1	1	4231223100
-Cosmetics	018Selective	Clinique	Clinique Göz Kalemi, Bedensiz, Renksiz	V16H030000	5002828681001	192333100912	CB46	1	1	4231243791
-Cosmetics	018Selective	Clinique	Clinique Allık, Bedensiz, Renksiz	V175140000	5003078944001	192333101223	CM63	1	1	4231243801
-Cosmetics	018Selective	Clinique	Clinique Eyeliner, Bedensiz, Renksiz	V4R301A000	5002843655001	192333129272	CM63	2	5	4231243801
-Cosmetics	018Selective	Clinique	Clinique Göz Kremi, Bedensiz, Renksiz	V82H010000	5003061193001	192333164525	CM76	1	1	4231243802
-Cosmetics	018Selective	Clinique	Clinique Fondöten, Bedensiz, Ten	V8WQ03A000	5003259007001	192333255001	CB77	2	2	4231243795
-Cosmetics	018Selective	Clinique	Clinique Fondöten, Bedensiz, Ten	V8WQ05A000	5003259036001	192333255025	CB77	1	1	4231243795
-Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Somon	VEX - 2'Lİ	5003134398001	8683857508855	CB54	4	4	4231254314
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Yeşil	WAVE	5003264953006	8683858865933	CB32	4	4	4231295584
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Yeşil	WAVE	5003264953001	8683858866237	CM79	1	3	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CM79	1	6	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Yeşil	WAVE	5003264953003	8683858865940	CM79	2	4	4231295662
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM36	1	3	4231295705
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Saks	WAVE	5003264986006	8683858866206	CM36	2	2	4231295705
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM34	2	3	4231295706
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CB39	2	6	4231295708
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Yeşil	WAVE	5003264953004	8683858866251	CB54	1	4	4231295709
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Turuncu	WAVE	5003265010006	8683858866275	CB54	1	3	4231295709
-Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CB54	2	6	4231295709
-Cosmetics	018Selective	Clinique	Clinique Kontür, Bedensiz, Renksiz	ZMAT010000	5003088443001	20714795689	CB54	1	2	4231243793
+Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, 28, Gri	1441524752	5002527040006	8682454054512	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 38, Mor	13143 LAV D'LÄ°TES-COOL CHANGE	5002940347005	195204888551	SB17	1	1	4231239902
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 37.5, Mor	13143 LAV D'LÄ°TES-COOL CHANGE	5002940347004	195204888544	SB27	1	1	4231239967
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Skechers	Skechers Koşu Ayakkabısı, 39, Beyaz	172084 WSL GO RUN PERSİSTENCE 2	5003205426004	197976058583	SB11	1	1	4231240127
+Kozmetik Transferi	Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, BEDENSIZ, Renksiz	1G5Y040000	5000000286001	27131187066	CB63	1	1	4231243794
+Kozmetik Transferi	Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, Bedensiz, Renksiz	1G5Y650000	5003208565001	27131508878	CM63	1	1	4231243801
+Kozmetik Transferi	Cosmetics	018Selective	Estee Lauder	Estee Lauder Fondöten, Bedensiz, Renksiz	1G5Y820000	5003208513001	27131935049	CM24	1	1	4231243796
+Kozmetik Transferi	Cosmetics	018Selective	Calvin Klein	Calvin Klein Parfüm, BEDENSIZ, Renksiz	200491210-41627	5000065535001	88300107407	CM32	3	5	4231243798
+Kozmetik Transferi	Cosmetics	018Selective	Calvin Klein	Calvin Klein Parfüm, Bedensiz, Renksiz	200491210-50517	5003258915001	3616305616159	CB54	2	4	4231243793
+Kozmetik Transferi	Cosmetics	018Selective	Chloe	Chloe Parfüm, BEDENSIZ, Renksiz	200521210-15650	5000217001001	3614223111565	CB44	2	4	4231243790
+Kozmetik Transferi	Cosmetics	018Selective	Chloe	Chloe Parfüm, Bedensiz, Renksiz	200521210-49491	5003222562001	3616303445584	CM24	1	2	4231243796
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Kırmızı	2'Lİ PAKET	5002935765001	8682734227278	CB15	1	1	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	2'Lİ PAKET	5002935851001	8682734227902	CB15	1	1	4231254313
+Kozmetik Transferi	Cosmetics	018Selective	Versace	Versace Parfüm, BEDENSIZ, Renksiz	300501210-24496	5000074282001	8011003823536	CB39	7	11	4231243789
+Kozmetik Transferi	Cosmetics	018Selective	Versace	Versace Parfüm, Bedensiz, Renksiz	300501210-41006	5002959708001	8011003877904	CB54	6	9	4231243793
+Kozmetik Transferi	Cosmetics	018Selective	Versace	Versace Parfüm, Bedensiz, Renksiz	300501210-740111	5002660315001	8011003861910	CB46	4	10	4231243791
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 44.5, Siyah	3026727-001 UA Charged Edge	5003122055006	196883919079	SB17	1	1	4231239902
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayakka, 39, Gümüş	3027595-102 UA HOVR Apparition RTRF	5003176727003	196885686962	SB27	1	1	4231239967
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	Skechers	Skechers Yürüyüş Ayakkab, 29, Çok Renkli	303575L AQPR-MİCROSPEC ADVANCE	5003179709002	197976294448	SB23	1	1	4231240188
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Ço, Standart, Gri Melanj	3'LÜ PAKET	5002682963001	8682732056955	CB15	1	1	4231254313
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Maskara, BEDENSIZ, Renksiz	68A0020000	5000001188001	20714192341	CB49	2	1	4231243792
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Fondöten, BEDENSIZ, Renksiz	6MNY03A000	5000006399001	20714324629	CM27	1	2	4231243797
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Pembe	ACTIVES-IY25	5003258083001	8683859196333	CB54	5	11	4231254314
+Manuel Transferler Run ID 72147	Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Terlik, 37, Açık Pembe	ARIZONA BF	5003268369002	4066648433101	GB10	1	2	4231223733
+Manuel Transferler Run ID 72147	Shoes & Bags	032Ladies Shoes	Birkenstock	Birkenstock Terlik, 38, Taş	ARIZONA BF NU	5002377475003	4013871744993	GB10	1	1	4231223733
+Kozmetik Transferi	Cosmetics	018Selective	Armani	Armani Parfüm, BEDENSIZ, Renksiz	ARML8004000 SI PAS	5000221856001	3614271994844	CB46	3	5	4231243791
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Pembe	Belvet	5003160122001	8683857792971	CB15	1	1	4231254313
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mavi	BLOOM	5003264476001	8683858865551	CM79	1	1	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	BLOOM	5003264476003	8683858865537	CM79	2	4	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mint	BLOOM	5003265002006	8683858864783	CM34	1	5	4231295706
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	BLOOM	5003264476003	8683858865537	CB39	1	4	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Mint	BLOOM	5003265002004	8683858864790	CB54	1	5	4231295709
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mint	BLOOM	5003265002006	8683858864783	GS13	1	5	4231295715
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mint	BLOOM	5003265002001	8683858865599	GS13	1	4	4231295715
+Kozmetik Transferi	Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350093274	5003076992001	3616302020669	CB54	1	1	4231243793
+Kozmetik Transferi	Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350158193	5003097425001	3616304248825	CB37	3	5	4231243788
+Kozmetik Transferi	Cosmetics	018Selective	Burberry	Burberry Parfüm, Bedensiz, Renksiz	BU 99350178738	5003137359001	3616304679438	CM76	1	1	4231243802
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çora, Standart, Lacivert	CORA	5003076797001	8683856555164	CB43	2	2	4231254315
+Manuel Transferler Run ID 72147	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Beyaz	CORA	5003077819001	8683856738154	CB43	4	4	4231254315
+Manuel Transferler Run ID 72147	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Lacivert	CORA	5003077860001	8683856738185	CB56	2	7	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB15	3	11	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB54	4	11	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	CORA-2'LI PAKET	5002994677001	8682734552486	CB54	7	7	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Gri Melanj	CORA-2'LI PAKET	5002994678001	8682734552714	CB43	4	4	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	CORA-2'LI PAKET	5002994667001	8682734552493	CB43	4	11	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB15	1	15	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-40, Gri Melanj	CORA-2SK24	5003202684001	8683858359944	CB15	1	9	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB54	3	18	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB54	3	15	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB43	3	15	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB43	2	18	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-40, Gri Melanj	CORA-2SK24	5003202684001	8683858359944	CB43	4	9	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	CORA-2SK24	5003202659001	8683858360209	CB56	3	15	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-2SK24	5003202645001	8683858360070	CB56	3	18	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB15	3	18	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB54	3	18	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	CORA-5/SK24	5003202646001	8683858320029	CB43	3	18	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	CORA-5-IY25	5003258110001	8683859184606	CB15	1	8	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-39, Gri Melanj	CORA-5-IY25	5003258111001	8683859184576	CB54	5	5	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Beyaz	CORAIY24 2'Lİ	5003134086001	8683857488638	CB15	3	3	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Siyah	CORAIY24- 2'Lİ	5003134068001	8683857488591	CB43	3	3	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	CORA-IY25	5003258069001	8683859184675	CB54	8	18	4231254314
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, M, Açık Mavi	D3WL-EA3	5003162280003	8684024386610	CM40	1	2	4231298862
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, XL, Açık Mavi	D3WL-EA3	5003162280005	8684024386634	CM40	1	1	4231298862
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, M, Açık Mavi	D3WL-EA3	5003162280003	8684024386610	CM84	1	2	4231299008
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofm, L, Açık Mavi	D3WL-EA3	5003162280004	8684024386627	CB44	1	1	4231299382
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WL-EA5	5003039697003	8683133947019	CM50	2	2	4231297727
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XS, Siyah	D3WL-EA5	5003039697001	8683133946098	CM87	2	2	4231299223
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, S, Siyah	D3WL-EA5	5003039697002	8683133947002	CB36	3	3	4231299381
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WM-EA4	5003039881002	8683133953171	CM50	1	1	4231297727
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	GS06	2	3	4231298863
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	CB06	1	3	4231299000
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	CB22	1	3	4231299002
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	CB38	1	3	4231299003
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Beyaz	D4SL-GML3026	5003095893001	8684024140267	CB59	1	1	4231299004
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	CB62	1	3	4231299005
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	CM84	1	3	4231299008
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Beyaz	D4SL-GML3026	5003095893002	8684024140274	YM02	1	3	4231299011
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SL-GML3026	5003095893004	8684024140298	YM02	1	3	4231299011
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Lila	D4SL-GML3027	5003095848002	8684024139988	CB45	1	3	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Lila	D4SL-GML3027	5003095848004	8684024140304	CB57	1	1	4231298861
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, S, Lila	D4SL-GML3027	5003095848002	8684024139988	CB57	2	3	4231298861
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Lila	D4SL-GML3027	5003095848001	8684024139971	CM64	2	2	4231299007
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Lila	D4SL-GML3027	5003095848003	8684024139995	GS12	3	3	4231299010
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, L, Gri	D4SL-PNT3011	5003089396004	8684024112738	CM50	1	1	4231297727
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pa, XS, Gri	D4SL-PNT3011	5003089396001	8684024112707	CB57	1	1	4231298861
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, M, Gri	D4SL-PNT3011	5003089396003	8684024112721	CM40	1	1	4231298862
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, S, Gri	D4SL-PNT3011	5003089396002	8684024112714	GS06	1	1	4231298863
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Şort, XS, Siyah	D4SL-SHT3013	5003099096001	8684024170080	GS06	1	1	4231298863
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweat Şo, XS, Yeşil	D4SL-SHT3024	5003099012001	8684024164935	CM87	1	1	4231299223
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatmon, XL, Yeşil	D4SL-SWT3029	5003098988005	8684024165260	CB45	1	1	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatmont, M, Bej	D4SL-SWT3029	5003099043003	8684024166359	CB57	1	1	4231298861
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, XS, Ekru	D4SL-SWT3032	5003099051001	8684024166595	GS13	1	2	4231297730
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshirt, S, Ekru	D4SL-SWT3032	5003099051002	8684024166700	CM40	1	1	4231298862
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshirt, L, Ekru	D4SL-SWT3032	5003099051004	8684024166724	CM40	1	1	4231298862
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, XS, Ekru	D4SL-SWT3032	5003099051001	8684024166595	CB62	1	2	4231299005
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Trençkot, XS-S, Bej	D4SL-TRC3006	5003089395008	8683132162031	CM87	1	1	4231299223
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Trençkot, M-L, Bej	D4SL-TRC3006	5003089395007	8683132162581	CB46	2	2	4231299670
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Lila	D4SL-TST3033	5003099093003	8684024169671	CM64	1	1	4231299007
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, XS, Lila	D4SL-TST3033	5003099093001	8684024169657	CM84	1	1	4231299008
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, S, Siyah	D4SL-TST3034	5003099049002	8684024169947	CM27	1	1	4231297726
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3034	5003099049003	8684024169954	CB62	1	1	4231299005
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atle, M, Nar Çiçeği	D4SL-TST3034	5003099094003	8684024170011	CM84	1	1	4231299008
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3035	5003119625003	8684024229436	CB45	1	1	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CB45	1	4	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SL-TST3045	5003098979002	8684024165918	CM27	2	4	4231297726
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CM50	3	4	4231297727
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XS, Siyah	D4SL-TST3045	5003098979001	8684024165901	GS06	1	1	4231298863
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Siyah	D4SL-TST3045	5003098979004	8684024165932	CB38	2	2	4231299003
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Siyah	D4SL-TST3045	5003098979002	8684024165918	CB38	2	4	4231299003
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SM-GML3230	5003095828003	8684024139537	CB15	2	2	4231297714
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SM-GML3230	5003095828002	8684024139520	CB35	2	2	4231297717
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, 2XL, Beyaz	D4SM-GML3230	5003095828005	8684024139551	CB55	1	1	4231297721
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Göml, 2XL, Antrasit	D4SM-GML3231	5003095871005	8684024140007	CB13	2	2	4231297713
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, 2XL, Beyaz	D4SM-GML3231	5003095862005	8684024139766	CB15	1	1	4231297714
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SM-GML3231	5003095862002	8684024139735	CB65	1	1	4231297723
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XL, Beyaz	D4SM-GML3231	5003095862004	8684024139759	CB65	2	2	4231297723
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, L, Beyaz	D4SM-GML3231	5003095862003	8684024139742	GS13	1	1	4231297730
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, L, Turuncu	D4SM-TRC3222	5003089415003	8684024112615	CB47	1	1	4231297719
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, L, Yeşil	D4SM-TRC3222	5003089414003	8684024112462	CB54	2	2	4231297720
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, M, Turuncu	D4SM-TRC3222	5003089415002	8684024112608	CM27	1	1	4231297726
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarl, 2XL, Yeşil	D4SM-TRC3222	5003089414005	8684024112486	CM82	1	1	4231297729
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, S, Yeşil	D4SM-TRC3222	5003089414001	8684024112448	CM82	2	2	4231297729
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Polo, L, Nar Çiçeği	D4SM-TST3241	5003099101003	8684024169244	CM82	1	1	4231297729
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Bej	D4SM-TST3251	5003099029003	8684024168292	CB23	1	3	4231297715
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3251	5003099029004	8684024168506	CB78	1	1	4231297725
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, L, Bej	D4SM-TST3251	5003099029003	8684024168292	GS13	2	3	4231297730
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Turuncu	D4SM-TST3256	5003099078002	8684024168780	GS13	2	2	4231297730
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Bej	D4SM-TST3257	5003099081004	8684024169008	CB45	1	1	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, Bej	D4SM-TST3257	5003099081001	8684024168575	CB60	1	1	4231297722
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Siyah	D4SM-TST3260	5003099110004	8684024169176	CM68	1	1	4231297728
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, S, İndigo	D4SM-TST3269	5003099088001	8684024171025	CB45	1	1	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, İndigo	D4SM-TST3269	5003099088002	8684024171032	CM68	2	2	4231297728
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweats, S, Açık Bej	D4WL-SWT3033	5003162333002	8684024388935	CM64	1	1	4231299007
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Swe, M, Kırık Beyaz	D4WM-SWT3206	5003162327002	8684024388430	GS13	1	1	4231297730
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshi, XL, Siyah	D4WM-SWT3225	5003162259004	8684024387761	CB55	1	1	4231297721
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, S, Siyah	D4WM-SWT3225	5003162259001	8684024387730	CB73	1	1	4231297724
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Nike	Nike Training Ayakkabısı, 46, Mavi	DM1120-404 M NIKE LEGEND ESSENTIAL	5003148162009	197593740038	SM21	1	1	4231240316
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	Nike	Nike Voleybol Ayakkabısı, 39, Gri	DM9027-010-NIKE OMNI MULTI-COURT (G	5003248491006	197859618569	SB17	1	1	4231239902
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshi, XL, Beyaz	DS4M-SWT3238	5003099098004	8684024170813	CB33	1	1	4231297716
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakkabısı, 26, Çok Renkli	DX7616-300-NIKE STAR RUNNER 4 NN TD	5003161542005	197594211407	SB11	1	1	4231240127
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Mint	FALICIA 4'LU PAKET	5002994697001	8682734552813	CB54	2	2	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çora, 36-40, Beyaz	FALICIA-4-IY24 - 4'LÜ	5003134542001	8683857488324	CB15	2	2	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çorab, 36-40, Mint	FALICIA-4-IY24 4'LÜ	5003134516001	8683857488317	CB54	4	4	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Mor	FALICIAIY23	5002843189001	8682733487642	CB15	2	2	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	FALICIA-IY25	5003258103001	8683859189809	CB54	4	14	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	FALICIA-IY25	5003258103001	8683859189809	CB56	3	14	4231254316
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Nike	Nike Lifestyle Ayakkabı, 45, Siyah	FB1362-003 NIKE FULL FORCE LO	5003225484006	197600814493	SB23	1	1	4231240188
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Beyaz	FB2208-010 W NIKE REVOLUTION 7	5003185980004	197597072494	SB17	1	1	4231239902
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakka, 29.5, Siyah - Pembe	FB7690-002 NIKE REVOLUTION 7 (PSV)	5003109415008	196969497651	SM47	1	1	4231240336
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Krem	FD6476-800 W NIKE DOWNSHIFTER 13	5003185983004	197597085197	SB17	1	1	4231239902
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mint	FISH	5003264555001	8683858865407	CB32	1	2	4231295584
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mint	FISH	5003264555004	8683858865438	CB54	1	1	4231295709
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 41, Siyah	FJ7765-002 W NIKE JOURNEY RUN	5003185984004	197593710499	SB17	1	1	4231239902
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Somon	FODE	5003202911001	8683858447979	CB15	3	3	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çorap, 36-40, Mor	FODE	5003202930001	8683858447962	CB56	2	2	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Pembe	HARPER-2'LI PAKET	5002994693001	8682734552912	CB56	4	4	4231254316
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 001	5002453447001	3614229823790	CB08	1	2	4231243787
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350140056	5002964386001	3616303173081	CM24	1	2	4231243796
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350140061	5002964393001	3616303173104	CB54	4	4	4231243793
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350185461	5003140908001	3616304697371	CB49	1	1	4231243792
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350187998	5003159776001	3616305160584	CM76	1	1	4231243802
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350208303	5003250280001	3616305040596	CB63	2	3	4231243794
+Kozmetik Transferi	Cosmetics	018Selective	Hugo Boss	Hugo Boss Parfüm, Bedensiz, Renksiz	HGB 99350208305	5003250270001	3616305040619	CM27	3	5	4231243797
+Kozmetik Transferi	Cosmetics	018Selective	Hermes	Hermes Parfüm, BEDENSIZ, Renksiz	HRM107188V0	5000002283001	3346130009603	CM38	3	5	4231243800
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 25, Beyaz	ID5286-ADVANTAGE CF I	5003115896005	4066765017956	SM21	1	4	4231240316
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 25, Beyaz	ID5286-ADVANTAGE CF I	5003115896005	4066765017956	SM47	1	4	4231240336
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	adidas	adidas Koşu Ayakkabısı, 36.5, Siyah	IE8149 GALAXY	5003117123001	4066765295170	SB17	1	1	4231239902
+Manuel Transferler Run ID 72147	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 35, Beyaz	IF0926-GRAND COURT MINNIE EL K	5003115825007	4066759510135	SB17	1	1	4231239902
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	adidas	adidas Outdoor Ayakkabısı, 38.5, Mor	IG5715 TERREX	5003117172004	4066765292032	SB17	1	1	4231239902
+Kozmetik Transferi	Cosmetics	018Selective	Jimmy Choo	Jimmy Choo Parfüm, Bedensiz, Renksiz	JC 20A02	5002969038001	3386460129886	CM34	1	1	4231243799
+Kozmetik Transferi	Cosmetics	018Selective	Jimmy Choo	Jimmy Choo Parfüm, Bedensiz, Renksiz	JC 22A01	5003211383001	3386460141703	CB08	3	5	4231243787
+Manuel Transferler Run ID 72147	Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayakkabı, 36.5, Beyaz	JH6085 ADVANTAGE 2.0	5003242234003	4067892926647	SB27	1	2	4231239967
+Tersane Transfer Data	Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 40, Siyah	K/KITE RUN Knit Sock Lo	5003262092001	5059529447310	CM88	1	1	4231293077
+Tersane Transfer Data	Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 42, Siyah	KAPRI MENS NFT Emboss Lo Lace	5003262067003	5059529510861	CM88	2	2	4231293077
+Tersane Transfer Data	Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 41, Siyah	KAPRI MENS Signia Patch Embro	5003262082002	5059529510083	CM88	1	1	4231293077
+Tersane Transfer Data	Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 43, Siyah	KAPRI MENS Signia Patch Embro	5003262082004	5059529510106	CM88	1	1	4231293077
+Tersane Transfer Data	Shoes & Bags	033Mens Shoes	KARL LAGERFELD	KARL LAGERFELD Sneaker, 42, Siyah	KAPRI MENS Signia Patch Embro	5003262082003	5059529510090	CM88	2	2	4231293077
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Yeşil	KARO	5003264650006	8683858868316	CM79	2	2	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Turkuaz	KARO	5003264641006	8683858868255	CM79	2	3	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Yeşil	KARO	5003264650003	8683858868262	CM68	2	2	4231295678
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Yeşil	KARO	5003264650004	8683858868293	CB46	2	2	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Yeşil	KARO	5003264650001	8683858868279	GS13	1	1	4231295715
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CM68	1	2	4231295678
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB46	1	2	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	KETA	5003264655004	8683858865827	CB46	2	2	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CM36	1	3	4231295705
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Lacivert	KETA	5003264683004	8683858864882	CM34	1	1	4231295706
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB39	1	2	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CB39	1	3	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CB39	1	2	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Çağla	KETA	5003264645004	8683858865841	CB54	1	1	4231295709
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Çağla	KETA	5003264645003	8683858865834	CB54	1	1	4231295709
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Lacivert	KETA	5003264683005	8683858865872	GS13	1	1	4231295715
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Siyah	KETA	5003264655007	8683858865803	GS13	1	1	4231295715
+Kozmetik Transferi	Cosmetics	018Selective	Lancome	Lancome Parfüm, Bedensiz, Renksiz	LB698900	5002607767001	3614273069175	CM86	3	4	4231243803
+Kozmetik Transferi	Cosmetics	018Selective	Yves Saint Laurent	Yves Saint Laurent Pa, Bedensiz, Renksiz	LB703100	5002617122001	3614273069557	CB77	2	5	4231243795
+Kozmetik Transferi	Cosmetics	018Selective	Prada	Prada Parfüm, Bedensiz, Renksiz	LD792600	5002947776001	3614273760164	CM27	3	6	4231243797
+Manuel Transferler Run ID 72147	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	LEKA	5003077856001	8683856563244	CB15	2	2	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Kırmızı	LEKA	5003076811001	8683856563213	CB54	1	1	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Siyah	LEKA	5003076787001	8683856563237	CB56	2	2	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Beyaz	LEKA	5003076821001	8683856563251	CB56	3	3	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Gri Melanj	LEKA-2'LI PAKET	5002994700001	8682734552271	CB54	2	2	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	LEKA-2'LI PAKET	5002994668001	8682734553001	CB56	3	3	4231254316
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Beyaz	LEKAIY24 -2'Lİ	5003134202001	8683857473184	CB15	2	2	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	LEKASK24	5003203156001	8683858320715	CB56	4	4	4231254316
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Şort, S, Beyaz	M1410155-70000_ÖRME ŞORT	5003241395003	8684518597645	CB28	1	2	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Şort, M, Beyaz	M1410155-70000_ÖRME ŞORT	5003241395002	8684518597683	CB28	2	2	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Şort, M, Koyu Antrasit	M1410155-82185_ÖRME ŞORT	5003241396002	8684518597720	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Şort, XS, Kahve	M1410188-89858_DOKUMA ŞORT ETEK	5003241413004	8684518538846	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, M, Renksiz	M1411215-89684_NOVELLA	5003241402002	8684518627595	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, 30, Renksiz	M1447487077_ROSIE	5003241397007	8684249558762	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, 28, Renksiz	M1458987073_MILLIE	5003241607005	8684249549753	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, 29, Renksiz	M1458987073_MILLIE	5003241607006	8684249549760	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, 27, Renksiz	M1458987073_MILLIE	5003241607004	8684249549746	CB28	1	1	4231222934
+Manuel Transferler Run ID 72147	Ladies	006Apparel	Mavi	Mavi Denim Şort, 26, Renksiz	M1458987073_MILLIE	5003241607003	8684249549739	CB28	1	1	4231222934
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	NAVY	5003265032007	8683858866145	CB32	1	4	4231295584
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB32	2	4	4231295584
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	NAVY	5003264772004	8683858866015	CM79	1	5	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB46	1	4	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Siyah	NAVY	5003264772004	8683858866015	CM36	1	5	4231295705
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	NAVY	5003264771007	8683858866022	CB54	1	2	4231295709
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Çağla	NAVY	5003265032004	8683858866169	CB54	2	5	4231295709
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Kırmızı	OLIVIA 5'LI PAKET	5002994694001	8682734552943	CB43	1	1	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çorap, 36-39, Lila	OLIVIA-IY25	5003258123001	8683859189854	CB54	9	18	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Babet Çorab, 36-40, Lila	PINO- 3'LÜ	5003134342001	8683857488508	CB43	3	3	4231254315
+Kozmetik Transferi	Cosmetics	018Selective	Estee Lauder	Estee Lauder Allık, Bedensiz, Renksiz	PKTJ170000	5002931968001	887167521438	CM34	1	1	4231243799
+Kozmetik Transferi	Cosmetics	018Selective	Estee Lauder	Estee Lauder Onarıcı, Bedensiz, Renksiz	PMY2010000	5002886465001	887167539570	CB44	1	2	4231243790
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Siyah	PRES- 2'LI PAKET	5002994702001	8682734636605	CB56	1	1	4231254316
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Mavi	ROSE	5003264891007	8683858879800	CM68	1	2	4231295678
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Mavi	ROSE	5003264891006	8683858879664	CB46	1	1	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Mavi	ROSE	5003264891001	8683858879657	CM36	1	1	4231295705
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Mavi	ROSE	5003264891004	8683858879633	CM34	1	2	4231295706
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Kırmızı	ROSE	5003264857001	8683858879626	CB39	1	3	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Kırmızı	ROSE	5003264857004	8683858879695	CB54	1	4	4231295709
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket, 36-39, Açık Mavi	SEMOS	5003258112001	8683859189366	CB15	1	1	4231254313
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Saks	SHARK	5003264876004	8683858866183	CM68	1	2	4231295678
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, S, Saks	SHARK	5003264876006	8683858866367	CB46	1	1	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Saks	SHARK	5003264876004	8683858866183	CM36	1	2	4231295705
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Açık Mavi	SLEY	5003264923001	8683858879084	CB46	1	1	4231295681
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Siyah	SNEAKER - 2'Lİ	5003134410001	8683857533499	CB54	2	2	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Beyaz	SNEAKER-2-IY25	5003258105001	8683859156993	CB54	2	2	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-39, Siyah	SNEAKER-5-IY25	5003258122001	8683859184460	CB54	6	12	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, Standart, Beyaz	SPORTY	5003076812001	8683856776965	CB15	3	3	4231254313
+Manuel Transferler Run ID 72147	Ladies	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Gri	SPORTY	5003077861001	8683856776996	CB54	3	3	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Siyah	SPORTY-SK24	5003203376001	8683858414568	CB54	4	10	4231254314
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Soket Çora, 36-40, Beyaz	SPORTY-SK24	5003203374001	8683858414506	CB43	5	10	4231254315
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Lacivert	SPORTYWOMEN-2'LI PAKET	5002994701001	8682734552851	CB15	5	5	4231254313
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 35-38, Beyaz	SPORTYWOMEN-2'LI PAKET	5002994695001	8682734552868	CB54	3	3	4231254314
+Kozmetik Transferi	Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, BEDENSIZ, Renksiz	T004010000	5000003098001	888066000055	CM34	14	16	4231243799
+Kozmetik Transferi	Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, BEDENSIZ, Renksiz	T2TL010000	5000076524001	888066035361	CM32	2	2	4231243798
+Kozmetik Transferi	Cosmetics	018Selective	Tom Ford	Tom Ford Parfüm, Bedensiz, Renksiz	TEF7010000	5003215068001	888066152051	CB77	1	3	4231243795
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Çorap, 0, Lacivert	TEKLİ PAKET	5002935714001	8682734228251	CB15	1	1	4231254313
+Manuel Transferler Run ID 72147	Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 40, Bordo	TK-P207	5003287986005	8682476124231	CB45	2	1	4231223097
+Manuel Transferler Run ID 72147	Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 41, Bordo	TK-P207	5003287986006	8682476124248	CB43	1	1	4231223100
+Manuel Transferler Run ID 72147	Shoes & Bags	032Ladies Shoes	Tkees	Tkees Plaj Terliği, 37, Bordo	TK-P207	5003287986002	8682476124200	CB43	1	1	4231223100
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Göz Kalemi, Bedensiz, Renksiz	V16H030000	5002828681001	192333100912	CB46	1	1	4231243791
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Allık, Bedensiz, Renksiz	V175140000	5003078944001	192333101223	CM63	1	1	4231243801
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Eyeliner, Bedensiz, Renksiz	V4R301A000	5002843655001	192333129272	CM63	2	5	4231243801
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Göz Kremi, Bedensiz, Renksiz	V82H010000	5003061193001	192333164525	CM76	1	1	4231243802
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Fondöten, Bedensiz, Ten	V8WQ03A000	5003259007001	192333255001	CB77	2	2	4231243795
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Fondöten, Bedensiz, Ten	V8WQ05A000	5003259036001	192333255025	CB77	1	1	4231243795
+Manuel Transferler Run ID 72147	Ladies	023Underwear	U.S. Polo Assn.	U.S. Polo Assn. Patik Çora, 36-40, Somon	VEX - 2'Lİ	5003134398001	8683857508855	CB54	4	4	4231254314
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Yeşil	WAVE	5003264953006	8683858865933	CB32	4	4	4231295584
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Yeşil	WAVE	5003264953001	8683858866237	CM79	1	3	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CM79	1	6	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Yeşil	WAVE	5003264953003	8683858865940	CM79	2	4	4231295662
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM36	1	3	4231295705
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Saks	WAVE	5003264986006	8683858866206	CM36	2	2	4231295705
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM34	2	3	4231295706
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CB39	2	6	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, M, Yeşil	WAVE	5003264953004	8683858866251	CB54	1	4	4231295709
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Turuncu	WAVE	5003265010006	8683858866275	CB54	1	3	4231295709
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Turuncu	WAVE	5003265010003	8683858865971	CB54	2	6	4231295709
+Kozmetik Transferi	Cosmetics	018Selective	Clinique	Clinique Kontür, Bedensiz, Renksiz	ZMAT010000	5003088443001	20714795689	CB54	1	2	4231243793
