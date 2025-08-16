@@ -55,6 +55,15 @@
       background: #007bff;
       color: white;
     }
+    pre {
+      text-align: left;
+      background: #eee;
+      padding: 10px;
+      max-height: 200px;
+      overflow: auto;
+      margin-top: 15px;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -77,6 +86,9 @@
     <tbody id="results"></tbody>
   </table>
 
+  <h3>🔍 OCR Debug Çıktısı</h3>
+  <pre id="ocrDebug">Henüz tarama yapılmadı...</pre>
+
 <script>
   const startBtn = document.getElementById("startCamera");
   const video = document.getElementById("video");
@@ -84,6 +96,7 @@
   const ctx = canvas.getContext("2d");
   const results = document.getElementById("results");
   const cameraContainer = document.getElementById("camera-container");
+  const ocrDebug = document.getElementById("ocrDebug");
 
   let stream;
   let scanning = false;
@@ -102,34 +115,41 @@
   async function startScanning() {
     if (!scanning) return;
 
+    // Video görüntüsünü canvas'a kopyala
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     ctx.drawImage(video, 0, 0);
 
+    // OCR yap
     const { data: { text, words } } = await Tesseract.recognize(canvas, 'eng');
     console.log("OCR:", text);
+    ocrDebug.innerText = text;  // debug paneline yaz
 
-    // Eski kutuları temizle
+    // Önceki kutuları sil
     document.querySelectorAll(".box").forEach(b => b.remove());
 
-    // Kutular oluştur
+    const rect = video.getBoundingClientRect();
+
+    // Kutuları oluştur
     words.forEach(word => {
-      if (/^\d{10,}$/.test(word.text)) {  // sadece uzun sayılar
+      if (/^\d{6,}$/.test(word.text)) {  // 6 haneli ve üzeri sayılar
         const box = document.createElement("div");
         box.className = "box";
-        box.style.left = (word.bbox.x0 / canvas.width * video.clientWidth) + "px";
-        box.style.top = (word.bbox.y0 / canvas.height * video.clientHeight) + "px";
-        box.style.width = ((word.bbox.x1 - word.bbox.x0) / canvas.width * video.clientWidth) + "px";
-        box.style.height = ((word.bbox.y1 - word.bbox.y0) / canvas.height * video.clientHeight) + "px";
+
+        // koordinatları video boyutuna göre ölçekle
+        box.style.left = (rect.left + (word.bbox.x0 / canvas.width * rect.width)) + "px";
+        box.style.top = (rect.top + (word.bbox.y0 / canvas.height * rect.height)) + "px";
+        box.style.width = ((word.bbox.x1 - word.bbox.x0) / canvas.width * rect.width) + "px";
+        box.style.height = ((word.bbox.y1 - word.bbox.y0) / canvas.height * rect.height) + "px";
 
         box.dataset.number = word.text;
 
         box.addEventListener("click", () => {
           box.classList.add("selected");
 
-          // Son eklenen satır barkod eksikse oraya yaz
+          // tabloya ekle
           const lastRow = results.lastElementChild;
-          if (!lastRow || lastRow.cells.length < 2 || lastRow.cells[1].innerText !== "") {
+          if (!lastRow || lastRow.cells[1].innerText !== "") {
             // yeni satır
             const row = `<tr><td>${word.text}</td><td></td></tr>`;
             results.insertAdjacentHTML("beforeend", row);
@@ -143,7 +163,7 @@
       }
     });
 
-    // 2 saniyede bir tekrar tara
+    // 2 saniye sonra tekrar tara
     setTimeout(startScanning, 2000);
   }
 </script>
