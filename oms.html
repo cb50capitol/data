@@ -2,21 +2,70 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Kamera ile Kod Okuma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kod Tanıma</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f4f4f4;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 16px;
+    }
+
     video, canvas {
       width: 100%;
-      max-width: 400px;
-      margin-bottom: 1rem;
+      max-width: 100%;
+      display: block;
+      border-radius: 8px;
+      margin-bottom: 16px;
     }
+
+    #detected-codes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .code-box {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .code-box.confirmed {
+      background-color: #28a745;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
+      background-color: white;
     }
+
     th, td {
-      padding: 8px;
       border: 1px solid #ccc;
+      padding: 10px;
       text-align: center;
+    }
+
+    th {
+      background-color: #f0f0f0;
     }
   </style>
 </head>
@@ -27,6 +76,9 @@
   <canvas id="canvas" style="display:none;"></canvas>
 
   <h3>Algılanan Kodlar</h3>
+  <div id="detected-codes"></div>
+
+  <h3>Onaylanan Kodlar</h3>
   <table id="code-table">
     <thead>
       <tr>
@@ -42,34 +94,49 @@
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
+    const detectedContainer = document.getElementById('detected-codes');
     const tableBody = document.querySelector('#code-table tbody');
+
     const seenCodes = new Set();
+    const confirmedCodes = new Set();
 
     document.getElementById('start-camera').onclick = async () => {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
         video.srcObject = stream;
 
-        // Periyodik olarak görüntü al ve OCR uygula
         setInterval(async () => {
           canvas.width = video.videoWidth;
           canvas.height = video.videoHeight;
           ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
           const { data: { text } } = await Tesseract.recognize(canvas, 'eng');
-          const matches = text.match(/\b500\d{2,}\b/g); // 500 ile başlayan 5+ haneli kodları yakala
+          const matches = text.match(/\b500\d{2,}\b/g);
 
           if (matches) {
             matches.forEach(code => {
               if (!seenCodes.has(code)) {
                 seenCodes.add(code);
-                const row = tableBody.insertRow();
-                row.insertCell().textContent = tableBody.rows.length;
-                row.insertCell().textContent = code;
+                const codeBox = document.createElement('div');
+                codeBox.className = 'code-box';
+                codeBox.textContent = code;
+
+                codeBox.onclick = () => {
+                  if (!confirmedCodes.has(code)) {
+                    confirmedCodes.add(code);
+                    codeBox.classList.add('confirmed');
+
+                    const row = tableBody.insertRow();
+                    row.insertCell().textContent = tableBody.rows.length;
+                    row.insertCell().textContent = code;
+                  }
+                };
+
+                detectedContainer.appendChild(codeBox);
               }
             });
           }
-        }, 3000); // Her 3 saniyede bir tarama
+        }, 3000);
       } catch (err) {
         alert('Kameraya erişilemedi: ' + err.message);
       }
