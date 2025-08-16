@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barkod & Malzeme Okuma</title>
+  <title>Barkod & Malzeme Tarama</title>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <style>
     body {
@@ -13,15 +13,33 @@
       background: #f9f9f9;
       text-align: center;
     }
-    h2 {
-      margin-bottom: 10px;
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #camera-container {
+      position: relative;
+      display: inline-block;
     }
     video {
       width: 100%;
       max-width: 400px;
       border-radius: 12px;
-      margin: 10px 0;
       border: 2px solid #007bff;
+    }
+    .box {
+      position: absolute;
+      border: 2px solid red;
+      pointer-events: auto;
+    }
+    .box.selected {
+      border: 2px solid green;
     }
     table {
       width: 100%;
@@ -42,10 +60,12 @@
 <body>
 
   <h2>📦 Barkod & Malzeme Tarayıcı</h2>
-  <p>Ürün kutusundaki barkod/malzeme kısmına <b>dokun</b></p>
-  
-  <video id="video" autoplay playsinline></video>
-  <canvas id="canvas" style="display:none;"></canvas>
+  <button id="startCamera">📷 Kamera Aç</button>
+
+  <div id="camera-container">
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+  </div>
 
   <table>
     <thead>
@@ -58,56 +78,74 @@
   </table>
 
 <script>
+  const startBtn = document.getElementById("startCamera");
   const video = document.getElementById("video");
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   const results = document.getElementById("results");
+  const cameraContainer = document.getElementById("camera-container");
 
-  // Kamera aç
-  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
-    .then(stream => video.srcObject = stream)
-    .catch(err => alert("Kamera açılamadı: " + err.name + " - " + err.message));
+  let stream;
+  let scanning = false;
 
-  // Dokunulan yerde OCR
-  video.addEventListener("click", async (e) => {
-    const rect = video.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  startBtn.addEventListener("click", async () => {
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+      video.srcObject = stream;
+      scanning = true;
+      startScanning();
+    } catch (err) {
+      alert("Kamera açılamadı: " + err.name + " - " + err.message);
+    }
+  });
 
-    // Video'yu canvas'a çiz
+  async function startScanning() {
+    if (!scanning) return;
+
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     ctx.drawImage(video, 0, 0);
 
-    // Dokunulan bölgeden kırpma boyutları
-    const cropWidth = 250, cropHeight = 100;
-    const cropX = Math.max(0, (x / rect.width) * canvas.width - cropWidth / 2);
-    const cropY = Math.max(0, (y / rect.height) * canvas.height - cropHeight / 2);
+    const { data: { text, words } } = await Tesseract.recognize(canvas, 'eng');
+    console.log("OCR:", text);
 
-    const imageData = ctx.getImageData(cropX, cropY, cropWidth, cropHeight);
+    // Eski kutuları temizle
+    document.querySelectorAll(".box").forEach(b => b.remove());
 
-    // Geçici canvas
-    const tmpCanvas = document.createElement("canvas");
-    tmpCanvas.width = cropWidth;
-    tmpCanvas.height = cropHeight;
-    tmpCanvas.getContext("2d").putImageData(imageData, 0, 0);
+    // Kutular oluştur
+    words.forEach(word => {
+      if (/^\d{10,}$/.test(word.text)) {  // sadece uzun sayılar
+        const box = document.createElement("div");
+        box.className = "box";
+        box.style.left = (word.bbox.x0 / canvas.width * video.clientWidth) + "px";
+        box.style.top = (word.bbox.y0 / canvas.height * video.clientHeight) + "px";
+        box.style.width = ((word.bbox.x1 - word.bbox.x0) / canvas.width * video.clientWidth) + "px";
+        box.style.height = ((word.bbox.y1 - word.bbox.y0) / canvas.height * video.clientHeight) + "px";
 
-    // OCR
-    const { data: { text } } = await Tesseract.recognize(tmpCanvas, 'eng');
-    console.log("OCR sonucu:", text);
+        box.dataset.number = word.text;
 
-    // 10 haneli+ sayıları seç
-    const numbers = text.match(/\d{10,}/g) || [];
+        box.addEventListener("click", () => {
+          box.classList.add("selected");
 
-    if (numbers.length >= 2) {
-      const barkod = numbers[0];
-      const malzeme = numbers[1];
-      const row = `<tr><td>${barkod}</td><td>${malzeme}</td></tr>`;
-      results.insertAdjacentHTML("beforeend", row);
-    } else {
-      alert("📵 Sayı bulunamadı, tekrar deneyin.");
-    }
-  });
+          // Son eklenen satır barkod eksikse oraya yaz
+          const lastRow = results.lastElementChild;
+          if (!lastRow || lastRow.cells.length < 2 || lastRow.cells[1].innerText !== "") {
+            // yeni satır
+            const row = `<tr><td>${word.text}</td><td></td></tr>`;
+            results.insertAdjacentHTML("beforeend", row);
+          } else {
+            // malzeme no olarak ekle
+            lastRow.cells[1].innerText = word.text;
+          }
+        });
+
+        cameraContainer.appendChild(box);
+      }
+    });
+
+    // 2 saniyede bir tekrar tara
+    setTimeout(startScanning, 2000);
+  }
 </script>
 
 </body>
