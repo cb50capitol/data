@@ -1,207 +1,148 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OCR Sabit Çerçeve</title>
+  <meta charset="UTF-8" />
+  <title>OMS</title>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 16px;
-      background-color: #f4f4f4;
-    }
-
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      margin-bottom: 12px;
-    }
-
-    #container {
-      position: relative;
-      width: 100%;
-      max-width: 480px;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-
-    video {
-      width: 100%;
-      border-radius: 8px;
-      display: block;
-    }
-
-    #fixed-frame {
-      position: absolute;
-      border: 2px solid red;
-      width: 260px;
-      height: 60px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      box-sizing: border-box;
-      z-index: 10;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    #overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 5;
-    }
-
-    #code-table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
+    #drop-zone {
+      border: 3px dashed #aaa;
+      padding: 50px;
       text-align: center;
+      margin: 20px auto;
+      max-width: 600px;
+      background-color: #f9f9f9;
+      cursor: pointer;
+      user-select: none;
     }
-
-    th {
+    #drop-zone.hover {
+      border-color: #555;
       background-color: #eee;
     }
-
-
-
-    /* Kod baloncuğu */
-    #bubble {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #fffc;
-      color: #000;
-      padding: 12px 20px;
-      border-radius: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      z-index: 200;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 20px auto;
     }
-
-    #bubble.show {
-      opacity: 1;
-      transform: translate(-50%, -60%);
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      font-family: monospace;
     }
   </style>
 </head>
 <body>
 
-<button id="toggle-camera">Kamerayı Aç</button>
+  <h2 style="text-align:center;">SikimsonikOMS</h2>
 
-<div id="container">
-  <video id="video" autoplay playsinline></video>
-  <div id="fixed-frame" class="hidden"></div>
-  <div id="overlay"></div>
-  <div id="bubble"></div>
-</div>
+  <div id="drop-zone">
+    SİKİMSONİKRESİMLER
+    <input type="file" id="fileInput" accept="image/*" style="display:none;" multiple />
+  </div>
 
-<h3>Okunan Kodlar</h3>
-<table id="code-table">
-  <thead>
-    <tr><th>#</th><th>Kod</th></tr>
-  </thead>
-  <tbody></tbody>
-</table>
+  <table id="resultsTable">
+    <thead>
+      <tr><th>Bulunan Kod</th><th>Kaynak Dosya</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
 <script>
-  const toggleBtn = document.getElementById('toggle-camera');
-  const video = document.getElementById('video');
-  const overlay = document.getElementById('overlay');
-  const tableBody = document.querySelector('#code-table tbody');
-  const fixedFrame = document.getElementById('fixed-frame');
-  const flash = document.getElementById('flash');
-  const bubble = document.getElementById('bubble');
-  const addedCodes = new Set();
+  const dropZone = document.getElementById('drop-zone');
+  const fileInput = document.getElementById('fileInput');
+  const resultsTableBody = document.querySelector('#resultsTable tbody');
 
-  let stream = null;
-  let isCameraOn = false;
+  dropZone.addEventListener('click', () => fileInput.click());
 
-  toggleBtn.onclick = async () => {
-    if (isCameraOn) {
-      stream.getTracks().forEach(track => track.stop());
-      video.srcObject = null;
-      isCameraOn = false;
-      toggleBtn.textContent = 'Kamerayı Aç';
-      fixedFrame.classList.add('hidden');
-    } else {
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
-        video.srcObject = stream;
-        isCameraOn = true;
-        toggleBtn.textContent = 'Kamerayı Kapat';
-        fixedFrame.classList.remove('hidden');
-      } catch (e) {
-        alert('Kamera açılamadı: ' + e.message);
-      }
-    }
-  };
-
-  overlay.addEventListener('click', async () => {
-    if (!isCameraOn) return;
-
-    
-
-    const videoRect = video.getBoundingClientRect();
-    const frameRect = fixedFrame.getBoundingClientRect();
-
-    const scaleX = video.videoWidth / videoRect.width;
-    const scaleY = video.videoHeight / videoRect.height;
-
-    const x = (frameRect.left - videoRect.left) * scaleX;
-    const y = (frameRect.top - videoRect.top) * scaleY;
-    const w = frameRect.width * scaleX;
-    const h = frameRect.height * scaleY;
-
-    const tempCanvas = document.createElement('canvas');
-    const tempCtx = tempCanvas.getContext('2d');
-    tempCanvas.width = w;
-    tempCanvas.height = h;
-
-    tempCtx.drawImage(video, x, y, w, h, 0, 0, w, h);
-
-    const result = await Tesseract.recognize(tempCanvas, 'eng');
-    const matches = result.data.text.match(/\b500\d{10}\b/g);
-
-    if (matches) {
-      matches.forEach(code => {
-        if (!addedCodes.has(code)) {
-          addedCodes.add(code);
-
-          // Kod tabloya eklensin
-          const row = tableBody.insertRow();
-          row.insertCell().textContent = tableBody.rows.length;
-          row.insertCell().textContent = code;
-
-          // Baloncuk göster
-          showBubble(code);
-        }
-      });
-    } else {
-      alert("Geçerli kod bulunamadı.");
-    }
+  dropZone.addEventListener('dragover', e => {
+    e.preventDefault();
+    dropZone.classList.add('hover');
   });
 
-  function showBubble(text) {
-    bubble.textContent = text;
-    bubble.classList.add('show');
-    setTimeout(() => bubble.classList.remove('show'), 1500);
+  dropZone.addEventListener('dragleave', e => {
+    dropZone.classList.remove('hover');
+  });
+
+  dropZone.addEventListener('drop', e => {
+    e.preventDefault();
+    dropZone.classList.remove('hover');
+    const files = Array.from(e.dataTransfer.files);
+    handleFiles(files);
+  });
+
+  fileInput.addEventListener('change', e => {
+    const files = Array.from(e.target.files);
+    handleFiles(files);
+  });
+
+  function handleFiles(files) {
+    files.forEach(file => {
+      if (!file.type.startsWith('image/')) return;
+
+      const img = new Image();
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = img.width;
+          canvas.height = img.height;
+
+          ctx.drawImage(img, 0, 0);
+
+          // Görseli gri tonlamaya çevir ve threshold uygula
+          let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          let data = imageData.data;
+
+          for (let i = 0; i < data.length; i += 4) {
+            // Ortalama gri ton hesapla
+            let avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+            // Threshold uygulama: 150 üstü beyaz (255), altı siyah (0)
+            let val = avg > 150 ? 255 : 0;
+            data[i] = data[i + 1] = data[i + 2] = val;
+            // Alpha kanal aynen kalsın
+          }
+          ctx.putImageData(imageData, 0, 0);
+
+          // OCR işlemi
+          Tesseract.recognize(
+            canvas.toDataURL(),
+            'eng',
+            {
+              logger: m => console.log(m),
+              tessedit_char_whitelist: '0123456789'
+            }
+          ).then(({ data: { text } }) => {
+            console.log('Algılanan metin:', text);
+            const codes = extractCodes(text);
+            if (codes.length === 0) {
+              alert(file.name + ' dosyasından kod bulunamadı.');
+            }
+            codes.forEach(code => addRow(code, file.name));
+          }).catch(err => {
+            console.error('OCR hatası:', err);
+          });
+        };
+        img.src = reader.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function extractCodes(text) {
+    const regex = /\b500\d{10}\b/g;
+    return text.match(regex) || [];
+  }
+
+  function addRow(code, fileName) {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${code}</td><td>${fileName}</td>`;
+    resultsTableBody.appendChild(row);
   }
 </script>
 
