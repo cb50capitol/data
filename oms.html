@@ -3,66 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kod Tespiti</title>
+  <title>Kod Okuma (Hızlı)</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: #f0f0f0;
-    }
-
-    #container {
-      position: relative;
-      width: 100%;
-      max-width: 480px;
-      margin: 20px auto;
-    }
-
-    video, canvas {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-    }
-
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: #fff;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-
-    th {
-      background: #eee;
-    }
+    body { margin: 0; padding: 10px; font-family: sans-serif; }
+    video, canvas { width: 100%; max-width: 480px; display: block; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
   </style>
 </head>
 <body>
 
-<div id="container">
-  <video id="video" autoplay playsinline></video>
-  <canvas id="overlay"></canvas>
-</div>
+<video id="video" autoplay playsinline></video>
+<canvas id="canvas" style="display: none;"></canvas>
 
-<h3 style="text-align:center;">Onaylanan Kodlar</h3>
+<h3>Tanımlanan Kodlar</h3>
 <table id="code-table">
   <thead>
-    <tr>
-      <th>#</th>
-      <th>Kod</th>
-    </tr>
+    <tr><th>#</th><th>Kod</th></tr>
   </thead>
   <tbody></tbody>
 </table>
@@ -70,15 +27,11 @@
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
 <script>
   const video = document.getElementById('video');
-  const canvas = document.getElementById('overlay');
+  const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
   const tableBody = document.querySelector('#code-table tbody');
+  const addedCodes = new Set();
 
-  const confirmedCodes = new Set();
-
-  let wordBoxes = [];
-
-  // Kamerayı aç
   async function startCamera() {
     const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
     video.srcObject = stream;
@@ -86,83 +39,44 @@
     video.onloadedmetadata = () => {
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
-      startDetectionLoop();
+      scanLoop();
     };
   }
 
-  // Algılama döngüsü
-  function startDetectionLoop() {
+  async function scanLoop() {
     setInterval(async () => {
-      const tempCanvas = document.createElement('canvas');
-      const tCtx = tempCanvas.getContext('2d');
-      tempCanvas.width = video.videoWidth;
-      tempCanvas.height = video.videoHeight;
-      tCtx.drawImage(video, 0, 0, tempCanvas.width, tempCanvas.height);
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-      const result = await Tesseract.recognize(tempCanvas, 'eng');
+      const regions = [
+        { x: 60, y: 260, w: 650, h: 50 },
+        { x: 60, y: 590, w: 650, h: 50 },
+        { x: 60, y: 910, w: 650, h: 50 }
+      ];
 
-      wordBoxes = [];
+      for (let region of regions) {
+        const regionCanvas = document.createElement('canvas');
+        regionCanvas.width = region.w;
+        regionCanvas.height = region.h;
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const rCtx = regionCanvas.getContext('2d');
+        rCtx.drawImage(canvas, region.x, region.y, region.w, region.h, 0, 0, region.w, region.h);
 
-      for (const word of result.data.words) {
-        const code = word.text.trim();
-        if (/^500\d{2,}/.test(code)) {
-          const { x0, y0, x1, y1 } = word.bbox;
-          wordBoxes.push({ code, x: x0, y: y0, w: x1 - x0, h: y1 - y0, confirmed: false });
+        const result = await Tesseract.recognize(regionCanvas, 'eng');
+        const matches = result.data.text.match(/\b500\d{10}\b/g);
+
+        if (matches) {
+          matches.forEach(code => {
+            if (!addedCodes.has(code)) {
+              addedCodes.add(code);
+              const row = tableBody.insertRow();
+              row.insertCell().textContent = tableBody.rows.length;
+              row.insertCell().textContent = code;
+            }
+          });
         }
       }
-
-      drawBoxes();
-    }, 3000);
+    }, 3000); // Her 3 saniyede bir tarama
   }
-
-  function drawBoxes() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    wordBoxes.forEach(box => {
-      ctx.beginPath();
-      ctx.lineWidth = 2;
-      ctx.strokeStyle = box.confirmed ? 'green' : 'red';
-      ctx.rect(box.x, box.y, box.w, box.h);
-      ctx.stroke();
-
-      // Arka plan
-      ctx.fillStyle = box.confirmed ? 'rgba(0,255,0,0.2)' : 'rgba(255,0,0,0.2)';
-      ctx.fillRect(box.x, box.y, box.w, box.h);
-
-      // Kod yazısı
-      ctx.fillStyle = '#000';
-      ctx.font = 'bold 16px sans-serif';
-      ctx.fillText(box.code, box.x + 4, box.y + 18);
-    });
-  }
-
-  // Tıklama ile onaylama
-  canvas.addEventListener('click', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const clickY = e.clientY - rect.top;
-
-    for (const box of wordBoxes) {
-      if (!box.confirmed &&
-          clickX >= box.x && clickX <= box.x + box.w &&
-          clickY >= box.y && clickY <= box.y + box.h) {
-
-        box.confirmed = true;
-        drawBoxes();
-
-        if (!confirmedCodes.has(box.code)) {
-          confirmedCodes.add(box.code);
-          const row = tableBody.insertRow();
-          row.insertCell().textContent = tableBody.rows.length;
-          row.insertCell().textContent = box.code;
-        }
-
-        break;
-      }
-    }
-  });
 
   startCamera();
 </script>
