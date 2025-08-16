@@ -292,9 +292,7 @@
     min-width: 100px;
   }
 }
-
-    
-    #alertBalloon {
+ #alertBalloon {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -390,9 +388,6 @@ td:nth-child(3) button {
   z-index: 30; 
   pointer-events: none;
 }
-
-
-
   </style>
 </head>
 <body oncontextmenu="return false">
@@ -416,8 +411,6 @@ td:nth-child(3) button {
   <input type="checkbox" id="omsToggle">
   <span class="slider"></span>
 </label>
-
-
     <div class="switch-container">
       <label class="switch">
         <input type="checkbox" id="deleteModeToggle" />
@@ -440,16 +433,13 @@ td:nth-child(3) button {
       </tfoot>
     </table>
   </div>
-
   <div id="bottomButtons">
     <button id="clearAllBtn">Sıfırla</button>
     <button id="exportExcelBtn">Excel</button>
     <button id="copyListBtn">Kopyala</button>
   </div>
-
-  <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
-
-  <!-- MODAL PENCERESİ -->
+ <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+ <!-- MODAL PENCERESİ -->
   <div id="customModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
     <div style="background:#fff;padding:24px 20px;border-radius:12px;max-width:320px;width:90%;box-shadow:0 6px 20px rgba(0,0,0,0.3);font-family:sans-serif;">
       <div id="modalContent" style="font-size:16px;margin-bottom:20px;text-align:center;color:#2c3e50;"></div>
@@ -475,8 +465,6 @@ omsToggle.addEventListener('change', () => {
   omsMode = omsToggle.checked;
   omsOverlay.style.display = omsMode ? 'block' : 'none';
 });
-
-
   const laserLine = document.getElementById('laserLine');
   const deleteModeToggle = document.getElementById('deleteModeToggle');
   const manualForm = document.getElementById('manualEntryForm');
@@ -545,7 +533,6 @@ omsToggle.addEventListener('change', () => {
       console.error("Kayıtlı barkodlar yüklenemedi:", e);
     }
   }
-
 function showInputModal(message, defaultValue = '') {
   return new Promise((resolve) => {
     modalContent.innerHTML = `
@@ -581,9 +568,6 @@ function showInputModal(message, defaultValue = '') {
     modalCancel.addEventListener('click', onCancel);
   });
 }
-
-
-    
   function saveBarcodesToStorage() {
     localStorage.setItem("barcodeList", JSON.stringify(Array.from(barcodes.entries())));
   }
@@ -724,10 +708,6 @@ function updateTable() {
 
   totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
 }
-
-
-
-
   function addBarcode(code) {
     if (!code) return;
 
@@ -888,9 +868,6 @@ function updateTable() {
     }
   }
 });
-
-
-
   manualForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const val = manualInput.value.trim();
@@ -926,8 +903,6 @@ omsToggle.addEventListener('change', () => {
     showBarcodeOverlay("OMS Modu: Kapalı");
   }
 });
-
-
   exportExcelBtn.addEventListener('click', async () => {
     if (barcodes.size === 0) {
       showModal("Dışa aktarılacak veri yok.");
@@ -970,15 +945,11 @@ omsToggle.addEventListener('change', () => {
 })();
   </script>
   
-  <!-- Cadde tarzı kayan yazı -->
 <div id="alertBalloon">
   <div id="alertText">
     📢 Uygulama yalnızca Android cihazlarda çalışır 📢 Taramayı aktifleştirmek için kamera çerçevesine dokun 📢
   </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
-
-
 </body>
 </html>
