@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seçim Alanı ile OCR</title>
+  <title>OCR Sabit Çerçeve</title>
   <style>
     body {
       font-family: sans-serif;
@@ -25,18 +25,36 @@
       margin-bottom: 20px;
     }
 
-    video, canvas {
+    video {
       width: 100%;
       border-radius: 8px;
       display: block;
     }
 
-    canvas.overlay {
+    #fixed-frame {
+      position: absolute;
+      border: 2px solid red;
+      width: 260px;
+      height: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      box-sizing: border-box;
+      z-index: 10;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #overlay {
       position: absolute;
       top: 0;
       left: 0;
-      pointer-events: auto;
-      touch-action: none;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
     }
 
     #code-table {
@@ -62,7 +80,8 @@
 
 <div id="container">
   <video id="video" autoplay playsinline></video>
-  <canvas id="overlay" class="overlay"></canvas>
+  <div id="fixed-frame" class="hidden"></div>
+  <div id="overlay"></div>
 </div>
 
 <h3>Okunan Kodlar</h3>
@@ -78,79 +97,46 @@
   const toggleBtn = document.getElementById('toggle-camera');
   const video = document.getElementById('video');
   const overlay = document.getElementById('overlay');
-  const ctx = overlay.getContext('2d');
   const tableBody = document.querySelector('#code-table tbody');
+  const fixedFrame = document.getElementById('fixed-frame');
+  const addedCodes = new Set();
 
   let stream = null;
   let isCameraOn = false;
-  let startX, startY, endX, endY;
-  let isDrawing = false;
-  const addedCodes = new Set();
 
-  // Kamera Aç / Kapat
   toggleBtn.onclick = async () => {
     if (isCameraOn) {
       stream.getTracks().forEach(track => track.stop());
       video.srcObject = null;
       isCameraOn = false;
       toggleBtn.textContent = 'Kamerayı Aç';
-      ctx.clearRect(0, 0, overlay.width, overlay.height);
+      fixedFrame.classList.add('hidden');
     } else {
       try {
         stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
         video.srcObject = stream;
         isCameraOn = true;
         toggleBtn.textContent = 'Kamerayı Kapat';
-
-        video.onloadedmetadata = () => {
-          overlay.width = video.videoWidth;
-          overlay.height = video.videoHeight;
-        };
+        fixedFrame.classList.remove('hidden');
       } catch (e) {
         alert('Kamera açılamadı: ' + e.message);
       }
     }
   };
 
-  function getRelativeCoords(e) {
-    const rect = overlay.getBoundingClientRect();
-    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-    const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
-    return { x, y };
-  }
-
-  overlay.addEventListener('pointerdown', (e) => {
+  overlay.addEventListener('click', async () => {
     if (!isCameraOn) return;
-    isDrawing = true;
-    const pos = getRelativeCoords(e);
-    startX = pos.x;
-    startY = pos.y;
-  });
 
-  overlay.addEventListener('pointermove', (e) => {
-    if (!isDrawing) return;
-    const pos = getRelativeCoords(e);
-    endX = pos.x;
-    endY = pos.y;
+    const videoRect = video.getBoundingClientRect();
+    const frameRect = fixedFrame.getBoundingClientRect();
 
-    ctx.clearRect(0, 0, overlay.width, overlay.height);
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(startX, startY, endX - startX, endY - startY);
-  });
+    const scaleX = video.videoWidth / videoRect.width;
+    const scaleY = video.videoHeight / videoRect.height;
 
-  overlay.addEventListener('pointerup', async (e) => {
-    if (!isDrawing) return;
-    isDrawing = false;
-
-    const x = Math.min(startX, endX);
-    const y = Math.min(startY, endY);
-    const w = Math.abs(endX - startX);
-    const h = Math.abs(endY - startY);
-
-    ctx.clearRect(0, 0, overlay.width, overlay.height);
-
-    if (w < 10 || h < 10) return;
+    const x = (frameRect.left - videoRect.left) * scaleX;
+    const y = (frameRect.top - videoRect.top) * scaleY;
+    const w = frameRect.width * scaleX;
+    const h = frameRect.height * scaleY;
 
     const tempCanvas = document.createElement('canvas');
     const tempCtx = tempCanvas.getContext('2d');
