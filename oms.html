@@ -105,6 +105,10 @@
     try {
       stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
       video.srcObject = stream;
+
+      // Video hazır olana kadar bekle
+      await new Promise(resolve => { video.onloadedmetadata = () => resolve(); });
+
       scanning = true;
       startScanning();
     } catch (err) {
@@ -115,56 +119,63 @@
   async function startScanning() {
     if (!scanning) return;
 
-    // Video görüntüsünü canvas'a kopyala
+    if (video.videoWidth === 0 || video.videoHeight === 0) {
+      setTimeout(startScanning, 500);
+      return;
+    }
+
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     ctx.drawImage(video, 0, 0);
 
-    // OCR yap
-    const { data: { text, words } } = await Tesseract.recognize(canvas, 'eng');
-    console.log("OCR:", text);
-    ocrDebug.innerText = text;  // debug paneline yaz
+    ocrDebug.innerText = "⏳ Taranıyor... (ilk OCR biraz uzun sürebilir)";
 
-    // Önceki kutuları sil
-    document.querySelectorAll(".box").forEach(b => b.remove());
+    try {
+      const { data: { text, words } } = await Tesseract.recognize(canvas, 'eng');
+      console.log("OCR:", text);
+      ocrDebug.innerText = text || "(Hiç metin bulunamadı)";
 
-    const rect = video.getBoundingClientRect();
+      // Eski kutuları sil
+      document.querySelectorAll(".box").forEach(b => b.remove());
 
-    // Kutuları oluştur
-    words.forEach(word => {
-      if (/^\d{6,}$/.test(word.text)) {  // 6 haneli ve üzeri sayılar
-        const box = document.createElement("div");
-        box.className = "box";
+      const rect = video.getBoundingClientRect();
 
-        // koordinatları video boyutuna göre ölçekle
-        box.style.left = (rect.left + (word.bbox.x0 / canvas.width * rect.width)) + "px";
-        box.style.top = (rect.top + (word.bbox.y0 / canvas.height * rect.height)) + "px";
-        box.style.width = ((word.bbox.x1 - word.bbox.x0) / canvas.width * rect.width) + "px";
-        box.style.height = ((word.bbox.y1 - word.bbox.y0) / canvas.height * rect.height) + "px";
+      words.forEach(word => {
+        if (/^\d{6,}$/.test(word.text)) {  // 6 haneli ve üzeri sayılar
+          const box = document.createElement("div");
+          box.className = "box";
 
-        box.dataset.number = word.text;
+          // koordinatları video boyutuna göre ölçekle
+          box.style.left = (rect.left + (word.bbox.x0 / canvas.width * rect.width)) + "px";
+          box.style.top = (rect.top + (word.bbox.y0 / canvas.height * rect.height)) + "px";
+          box.style.width = ((word.bbox.x1 - word.bbox.x0) / canvas.width * rect.width) + "px";
+          box.style.height = ((word.bbox.y1 - word.bbox.y0) / canvas.height * rect.height) + "px";
 
-        box.addEventListener("click", () => {
-          box.classList.add("selected");
+          box.dataset.number = word.text;
 
-          // tabloya ekle
-          const lastRow = results.lastElementChild;
-          if (!lastRow || lastRow.cells[1].innerText !== "") {
-            // yeni satır
-            const row = `<tr><td>${word.text}</td><td></td></tr>`;
-            results.insertAdjacentHTML("beforeend", row);
-          } else {
-            // malzeme no olarak ekle
-            lastRow.cells[1].innerText = word.text;
-          }
-        });
+          box.addEventListener("click", () => {
+            box.classList.add("selected");
 
-        cameraContainer.appendChild(box);
-      }
-    });
+            // tabloya ekle
+            const lastRow = results.lastElementChild;
+            if (!lastRow || lastRow.cells[1].innerText !== "") {
+              const row = `<tr><td>${word.text}</td><td></td></tr>`;
+              results.insertAdjacentHTML("beforeend", row);
+            } else {
+              lastRow.cells[1].innerText = word.text;
+            }
+          });
 
-    // 2 saniye sonra tekrar tara
-    setTimeout(startScanning, 2000);
+          cameraContainer.appendChild(box);
+        }
+      });
+
+    } catch (err) {
+      ocrDebug.innerText = "❌ OCR hatası: " + err.message;
+    }
+
+    // 3 saniyede bir tekrar tara
+    setTimeout(startScanning, 3000);
   }
 </script>
 
