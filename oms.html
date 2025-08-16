@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PTC</title>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -376,45 +378,51 @@ td:nth-child(3) button {
   min-width: unset;
   width: 50px;
 }
+
+#ocrBox {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+  height: 20%;
+  border: 3px solid red;
+  box-sizing: border-box;
+  z-index: 25;
+  pointer-events: none;
+}
+
+
+
   </style>
+  
+  
 </head>
 <body oncontextmenu="return false">
-
-  <!-- MANUEL GİRİŞ -->
-  <form id="manualEntryForm" autocomplete="off">
+ <form id="manualEntryForm" autocomplete="off">
     <input type="tel" inputmode="numeric" pattern="[0-9]*" id="manualBarcodeInput" placeholder="THM/EAN" maxlength="100" required />
     <button type="submit">Ekle</button>
   </form>
 
-  <!-- KAMERA GÖRÜNTÜSÜ -->
   <div id="videoContainer">
     <video id="video" autoplay muted playsinline></video>
     <div id="flashOverlay"></div>
     <div id="laserLine"></div>
     <div id="barcodeOverlay"></div>
-    <div id="omsOverlay"></div>
+    <div id="ocrBox"></div>
+
   </div>
 
-  <!-- BUTONLAR -->
   <div id="buttonContainer">
     <button id="scanButton">Kamera Aç</button>
     <div class="switch-container">
-      <label>OMS</label>
-      <label class="switch">
-        <input type="checkbox" id="omsToggle" />
-        <span class="slider"></span>
-      </label>
-    </div>
-    <div class="switch-container">
-      <label>Silmek İçin Okut</label>
       <label class="switch">
         <input type="checkbox" id="deleteModeToggle" />
         <span class="slider"></span>
       </label>
+      Silmek İçin Okut
     </div>
   </div>
 
-  <!-- TABLO -->
   <div id="barcodeListContainer">
     <table>
       <thead>
@@ -423,23 +431,21 @@ td:nth-child(3) button {
       <tbody id="barcodeTableBody"></tbody>
       <tfoot>
         <tr>
-          <td colspan="3" id="totalCount">Kalem Miktarı : 0<br>Toplam Adet : 0</td>
+          <td colspan="3" id="totalCount">Kalem Miktarı : 0\nToplam Adet : 0</td>
         </tr>
       </tfoot>
     </table>
   </div>
 
-  <!-- ALT BUTONLAR -->
   <div id="bottomButtons">
     <button id="clearAllBtn">Sıfırla</button>
     <button id="exportExcelBtn">Excel</button>
     <button id="copyListBtn">Kopyala</button>
   </div>
 
-  <!-- BİP SESİ -->
   <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
 
-  <!-- MODAL -->
+  <!-- MODAL PENCERESİ -->
   <div id="customModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
     <div style="background:#fff;padding:24px 20px;border-radius:12px;max-width:320px;width:90%;box-shadow:0 6px 20px rgba(0,0,0,0.3);font-family:sans-serif;">
       <div id="modalContent" style="font-size:16px;margin-bottom:20px;text-align:center;color:#2c3e50;"></div>
@@ -449,22 +455,10 @@ td:nth-child(3) button {
       </div>
     </div>
   </div>
-
-  <!-- ALERT BİLGİ -->
-  <div id="alertBalloon">
-    <div id="alertText">
-      📢 Uygulama yalnızca Android cihazlarda çalışır 📢 Taramayı aktifleştirmek için kamera çerçevesine dokun 📢
-    </div>
-  </div>
-
-  <!-- KÜTÜPHANELER -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
 
-  <!-- JAVASCRIPT (tam hali) -->
   <script>
-    
-    (() => {
+  (() => {
   const video = document.getElementById('video');
   const scanButton = document.getElementById('scanButton');
   const barcodeOverlay = document.getElementById('barcodeOverlay');
@@ -825,12 +819,12 @@ function updateTable() {
     scanning ? stopCamera() : startCamera();
   });
 
-  video.addEventListener('click', () => {
-    if (scanning && !continuousScanning) {
-      startContinuousScanning();
-      showBarcodeOverlay('Tarama başladı...');
-    }
-  });
+video.addEventListener('click', () => {
+  if (scanning) {
+    captureAndRecognizeText();
+  }
+});
+
 
   manualForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -896,8 +890,64 @@ function updateTable() {
   });
 
 })();
-    
+
+async function captureAndRecognizeText() {
+  if (!video || video.readyState !== 4) return;
+
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+
+  const videoWidth = video.videoWidth;
+  const videoHeight = video.videoHeight;
+
+  canvas.width = videoWidth;
+  canvas.height = videoHeight;
+  context.drawImage(video, 0, 0, videoWidth, videoHeight);
+
+  // OCR kutusunun yüzde değerine göre kırpılacak alanı belirle
+  const cropX = videoWidth * 0.10;
+  const cropY = videoHeight * 0.40;
+  const cropWidth = videoWidth * 0.80;
+  const cropHeight = videoHeight * 0.20;
+
+  const imageData = context.getImageData(cropX, cropY, cropWidth, cropHeight);
+
+  // Kırpılan alanı ayrı canvas’a al
+  const croppedCanvas = document.createElement('canvas');
+  croppedCanvas.width = cropWidth;
+  croppedCanvas.height = cropHeight;
+  const croppedCtx = croppedCanvas.getContext('2d');
+  croppedCtx.putImageData(imageData, 0, 0);
+
+  // OCR işlemi
+  showBarcodeOverlay("Okunuyor...");
+  try {
+    const result = await Tesseract.recognize(croppedCanvas, 'eng', {
+      logger: m => console.log(m)
+    });
+    const rawText = result.data.text.trim();
+    const cleaned = rawText.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '');
+
+    if (cleaned.length > 0) {
+      addBarcode(cleaned);
+    } else {
+      showModal("Metin algılanamadı. Lütfen tekrar deneyin.");
+    }
+  } catch (err) {
+    console.error("OCR hatası:", err);
+    showModal("Bir hata oluştu, tekrar deneyin.");
+  }
+}
+
+
   </script>
+  
+  <!-- Cadde tarzı kayan yazı -->
+<div id="alertBalloon">
+  <div id="alertText">
+    📢 Uygulama yalnızca Android cihazlarda çalışır 📢 Taramayı aktifleştirmek için kamera çerçevesine dokun 📢
+  </div>
+</div>
 
 </body>
 </html>
