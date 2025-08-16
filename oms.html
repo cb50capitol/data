@@ -3,56 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seçim Alanı ile OCR</title>
+  <title>Orta Alan OCR</title>
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 16px;
-      background-color: #f4f4f4;
-    }
-
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      margin-bottom: 12px;
+      padding: 0;
+      background: #f4f4f4;
+      text-align: center;
     }
 
     #container {
       position: relative;
-      width: 100%;
-      max-width: 480px;
-      margin-bottom: 20px;
+      max-width: 100%;
     }
 
-    video, canvas {
-      width: 100%;
-      border-radius: 8px;
-      display: block;
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
     }
 
-    canvas.overlay {
+    #scan-area {
       position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: auto;
-      touch-action: none;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      border: 3px solid red;
+      border-radius: 8px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    #toggle-camera {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      padding: 10px 16px;
+      font-size: 16px;
     }
 
     #code-table {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
+      background: white;
       border-collapse: collapse;
-      background-color: white;
+      z-index: 5;
     }
 
     th, td {
       border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
+      padding: 6px;
+      font-size: 14px;
     }
 
     th {
-      background-color: #eee;
+      background: #eee;
     }
   </style>
 </head>
@@ -62,10 +73,10 @@
 
 <div id="container">
   <video id="video" autoplay playsinline></video>
-  <canvas id="overlay" class="overlay"></canvas>
+  <div id="scan-area"></div>
+  <canvas id="canvas" style="display:none;"></canvas>
 </div>
 
-<h3>Okunan Kodlar</h3>
 <table id="code-table">
   <thead>
     <tr><th>#</th><th>Kod</th></tr>
@@ -75,26 +86,23 @@
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
 <script>
-  const toggleBtn = document.getElementById('toggle-camera');
   const video = document.getElementById('video');
-  const overlay = document.getElementById('overlay');
-  const ctx = overlay.getContext('2d');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const scanArea = document.getElementById('scan-area');
   const tableBody = document.querySelector('#code-table tbody');
+  const toggleBtn = document.getElementById('toggle-camera');
 
   let stream = null;
   let isCameraOn = false;
-  let startX, startY, endX, endY;
-  let isDrawing = false;
   const addedCodes = new Set();
 
-  // Kamera Aç / Kapat
   toggleBtn.onclick = async () => {
     if (isCameraOn) {
       stream.getTracks().forEach(track => track.stop());
       video.srcObject = null;
       isCameraOn = false;
       toggleBtn.textContent = 'Kamerayı Aç';
-      ctx.clearRect(0, 0, overlay.width, overlay.height);
     } else {
       try {
         stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
@@ -103,61 +111,38 @@
         toggleBtn.textContent = 'Kamerayı Kapat';
 
         video.onloadedmetadata = () => {
-          overlay.width = video.videoWidth;
-          overlay.height = video.videoHeight;
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
         };
-      } catch (e) {
-        alert('Kamera açılamadı: ' + e.message);
+      } catch (err) {
+        alert('Kamera açılamadı: ' + err.message);
       }
     }
   };
 
-  function getRelativeCoords(e) {
-    const rect = overlay.getBoundingClientRect();
-    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-    const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
-    return { x, y };
-  }
-
-  overlay.addEventListener('pointerdown', (e) => {
+  // Dokununca tarama başlat
+  video.addEventListener('click', async () => {
     if (!isCameraOn) return;
-    isDrawing = true;
-    const pos = getRelativeCoords(e);
-    startX = pos.x;
-    startY = pos.y;
-  });
 
-  overlay.addEventListener('pointermove', (e) => {
-    if (!isDrawing) return;
-    const pos = getRelativeCoords(e);
-    endX = pos.x;
-    endY = pos.y;
+    const videoRect = video.getBoundingClientRect();
+    const scanRect = scanArea.getBoundingClientRect();
 
-    ctx.clearRect(0, 0, overlay.width, overlay.height);
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(startX, startY, endX - startX, endY - startY);
-  });
+    const scaleX = video.videoWidth / videoRect.width;
+    const scaleY = video.videoHeight / videoRect.height;
 
-  overlay.addEventListener('pointerup', async (e) => {
-    if (!isDrawing) return;
-    isDrawing = false;
+    const x = (scanRect.left - videoRect.left) * scaleX;
+    const y = (scanRect.top - videoRect.top) * scaleY;
+    const width = scanRect.width * scaleX;
+    const height = scanRect.height * scaleY;
 
-    const x = Math.min(startX, endX);
-    const y = Math.min(startY, endY);
-    const w = Math.abs(endX - startX);
-    const h = Math.abs(endY - startY);
-
-    ctx.clearRect(0, 0, overlay.width, overlay.height);
-
-    if (w < 10 || h < 10) return;
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const imageData = ctx.getImageData(x, y, width, height);
 
     const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = width;
+    tempCanvas.height = height;
     const tempCtx = tempCanvas.getContext('2d');
-    tempCanvas.width = w;
-    tempCanvas.height = h;
-
-    tempCtx.drawImage(video, x, y, w, h, 0, 0, w, h);
+    tempCtx.putImageData(imageData, 0, 0);
 
     const result = await Tesseract.recognize(tempCanvas, 'eng');
     const matches = result.data.text.match(/\b500\d{10}\b/g);
@@ -172,7 +157,7 @@
         }
       });
     } else {
-      alert("Geçerli kod bulunamadı.");
+      alert("Kod bulunamadı. Kodu net şekilde kutuya denk getirdiğinizden emin olun.");
     }
   });
 </script>
