@@ -3,20 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kod Okuma (Hızlı)</title>
+  <title>Seçim Alanı ile OCR</title>
   <style>
-    body { margin: 0; padding: 10px; font-family: sans-serif; }
-    video, canvas { width: 100%; max-width: 480px; display: block; margin-bottom: 10px; }
-    table { width: 100%; border-collapse: collapse; background: #fff; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f4f4f4;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    #container {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    video, canvas {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    canvas.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #code-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #eee;
+    }
   </style>
 </head>
 <body>
 
-<video id="video" autoplay playsinline></video>
-<canvas id="canvas" style="display: none;"></canvas>
+<button id="toggle-camera">Kamerayı Aç</button>
 
-<h3>Tanımlanan Kodlar</h3>
+<div id="container">
+  <video id="video" autoplay playsinline></video>
+  <canvas id="overlay" class="overlay"></canvas>
+</div>
+
+<h3>Okunan Kodlar</h3>
 <table id="code-table">
   <thead>
     <tr><th>#</th><th>Kod</th></tr>
@@ -26,59 +74,102 @@
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
 <script>
+  const toggleBtn = document.getElementById('toggle-camera');
   const video = document.getElementById('video');
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
+  const overlay = document.getElementById('overlay');
+  const ctx = overlay.getContext('2d');
   const tableBody = document.querySelector('#code-table tbody');
+
+  let stream = null;
+  let isCameraOn = false;
+  let startX, startY, endX, endY;
+  let isDrawing = false;
   const addedCodes = new Set();
 
-  async function startCamera() {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
-    video.srcObject = stream;
+  // Kamera Aç / Kapat
+  toggleBtn.onclick = async () => {
+    if (isCameraOn) {
+      stream.getTracks().forEach(track => track.stop());
+      video.srcObject = null;
+      isCameraOn = false;
+      toggleBtn.textContent = 'Kamerayı Aç';
+      ctx.clearRect(0, 0, overlay.width, overlay.height);
+    } else {
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+        video.srcObject = stream;
+        isCameraOn = true;
+        toggleBtn.textContent = 'Kamerayı Kapat';
 
-    video.onloadedmetadata = () => {
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
-      scanLoop();
-    };
-  }
-
-  async function scanLoop() {
-    setInterval(async () => {
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-      const regions = [
-        { x: 60, y: 260, w: 650, h: 50 },
-        { x: 60, y: 590, w: 650, h: 50 },
-        { x: 60, y: 910, w: 650, h: 50 }
-      ];
-
-      for (let region of regions) {
-        const regionCanvas = document.createElement('canvas');
-        regionCanvas.width = region.w;
-        regionCanvas.height = region.h;
-
-        const rCtx = regionCanvas.getContext('2d');
-        rCtx.drawImage(canvas, region.x, region.y, region.w, region.h, 0, 0, region.w, region.h);
-
-        const result = await Tesseract.recognize(regionCanvas, 'eng');
-        const matches = result.data.text.match(/\b500\d{10}\b/g);
-
-        if (matches) {
-          matches.forEach(code => {
-            if (!addedCodes.has(code)) {
-              addedCodes.add(code);
-              const row = tableBody.insertRow();
-              row.insertCell().textContent = tableBody.rows.length;
-              row.insertCell().textContent = code;
-            }
-          });
-        }
+        video.onloadedmetadata = () => {
+          overlay.width = video.videoWidth;
+          overlay.height = video.videoHeight;
+        };
+      } catch (e) {
+        alert('Kamera açılamadı: ' + e.message);
       }
-    }, 3000); // Her 3 saniyede bir tarama
-  }
+    }
+  };
 
-  startCamera();
+  // Seçim Başlat
+  overlay.addEventListener('pointerdown', (e) => {
+    if (!isCameraOn) return;
+    isDrawing = true;
+    const rect = overlay.getBoundingClientRect();
+    startX = e.clientX - rect.left;
+    startY = e.clientY - rect.top;
+  });
+
+  // Seçim Alanı Çizimi
+  overlay.addEventListener('pointermove', (e) => {
+    if (!isDrawing) return;
+    const rect = overlay.getBoundingClientRect();
+    endX = e.clientX - rect.left;
+    endY = e.clientY - rect.top;
+
+    ctx.clearRect(0, 0, overlay.width, overlay.height);
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(startX, startY, endX - startX, endY - startY);
+  });
+
+  // Seçim Bittiğinde OCR
+  overlay.addEventListener('pointerup', async () => {
+    if (!isDrawing) return;
+    isDrawing = false;
+
+    const x = Math.min(startX, endX);
+    const y = Math.min(startY, endY);
+    const w = Math.abs(endX - startX);
+    const h = Math.abs(endY - startY);
+
+    if (w < 10 || h < 10) return; // çok küçük alanları ihmal et
+
+    const tempCanvas = document.createElement('canvas');
+    const tempCtx = tempCanvas.getContext('2d');
+    tempCanvas.width = w;
+    tempCanvas.height = h;
+
+    tempCtx.drawImage(video, x, y, w, h, 0, 0, w, h);
+
+    ctx.clearRect(0, 0, overlay.width, overlay.height); // kutuyu temizle
+
+    const result = await Tesseract.recognize(tempCanvas, 'eng');
+    const matches = result.data.text.match(/\b500\d{10}\b/g);
+
+    if (matches) {
+      matches.forEach(code => {
+        if (!addedCodes.has(code)) {
+          addedCodes.add(code);
+          const row = tableBody.insertRow();
+          row.insertCell().textContent = tableBody.rows.length;
+          row.insertCell().textContent = code;
+        }
+      });
+    } else {
+      alert("Geçerli kod bulunamadı.");
+    }
+  });
 </script>
 
 </body>
