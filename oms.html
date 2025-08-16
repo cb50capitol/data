@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barkod & Malzeme Numarası</title>
+  <title>Barkod & Malzeme Okuma</title>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <style>
     body {
@@ -13,24 +13,15 @@
       background: #f9f9f9;
       text-align: center;
     }
-    button {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      margin: 10px 0;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:disabled {
-      background: #999;
+    h2 {
+      margin-bottom: 10px;
     }
     video {
       width: 100%;
       max-width: 400px;
       border-radius: 12px;
       margin: 10px 0;
+      border: 2px solid #007bff;
     }
     table {
       width: 100%;
@@ -50,10 +41,9 @@
 </head>
 <body>
 
-  <h2>📦 Barkod & Malzeme Okuma</h2>
-  <button id="startCamera">📷 Kamera Aç</button>
-  <button id="capture" disabled>📸 Fotoğraf Çek</button>
-  <br>
+  <h2>📦 Barkod & Malzeme Tarayıcı</h2>
+  <p>Ürün kutusundaki barkod/malzeme kısmına <b>dokun</b></p>
+  
   <video id="video" autoplay playsinline></video>
   <canvas id="canvas" style="display:none;"></canvas>
 
@@ -68,44 +58,54 @@
   </table>
 
 <script>
-  const startBtn = document.getElementById("startCamera");
-  const captureBtn = document.getElementById("capture");
   const video = document.getElementById("video");
   const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   const results = document.getElementById("results");
 
-  let stream;
+  // Kamera aç
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+    .then(stream => video.srcObject = stream)
+    .catch(err => alert("Kamera açılamadı: " + err.name + " - " + err.message));
 
-  // Kamera başlat
-  startBtn.addEventListener("click", async () => {
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-      video.srcObject = stream;
-      captureBtn.disabled = false;
-    } catch (err) {
-      alert("Kamera açılamadı: " + err);
-    }
-  });
+  // Dokunulan yerde OCR
+  video.addEventListener("click", async (e) => {
+    const rect = video.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-  // Fotoğraf çek ve OCR ile tara
-  captureBtn.addEventListener("click", async () => {
-    const context = canvas.getContext("2d");
+    // Video'yu canvas'a çiz
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
-    context.drawImage(video, 0, 0);
+    ctx.drawImage(video, 0, 0);
 
-    const { data: { text } } = await Tesseract.recognize(canvas, 'eng');
+    // Dokunulan bölgeden kırpma boyutları
+    const cropWidth = 250, cropHeight = 100;
+    const cropX = Math.max(0, (x / rect.width) * canvas.width - cropWidth / 2);
+    const cropY = Math.max(0, (y / rect.height) * canvas.height - cropHeight / 2);
+
+    const imageData = ctx.getImageData(cropX, cropY, cropWidth, cropHeight);
+
+    // Geçici canvas
+    const tmpCanvas = document.createElement("canvas");
+    tmpCanvas.width = cropWidth;
+    tmpCanvas.height = cropHeight;
+    tmpCanvas.getContext("2d").putImageData(imageData, 0, 0);
+
+    // OCR
+    const { data: { text } } = await Tesseract.recognize(tmpCanvas, 'eng');
     console.log("OCR sonucu:", text);
 
-    // Sadece 10+ haneli sayıları çekelim
+    // 10 haneli+ sayıları seç
     const numbers = text.match(/\d{10,}/g) || [];
 
-    // Çift çift al (barkod, malzeme no)
-    for (let i = 0; i < numbers.length; i += 2) {
-      const barkod = numbers[i] || "";
-      const malzeme = numbers[i+1] || "";
+    if (numbers.length >= 2) {
+      const barkod = numbers[0];
+      const malzeme = numbers[1];
       const row = `<tr><td>${barkod}</td><td>${malzeme}</td></tr>`;
       results.insertAdjacentHTML("beforeend", row);
+    } else {
+      alert("📵 Sayı bulunamadı, tekrar deneyin.");
     }
   });
 </script>
