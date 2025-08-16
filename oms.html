@@ -74,24 +74,7 @@
       background-color: #eee;
     }
 
-    /* Deklanşör efekti */
-    #flash {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      opacity: 0;
-      z-index: 100;
-      pointer-events: none;
-      transition: opacity 0.3s ease-out;
-    }
 
-    #flash.active {
-      opacity: 1;
-      transition: none;
-    }
 
     /* Kod baloncuğu */
     #bubble {
@@ -125,7 +108,6 @@
   <video id="video" autoplay playsinline></video>
   <div id="fixed-frame" class="hidden"></div>
   <div id="overlay"></div>
-  <div id="flash"></div>
   <div id="bubble"></div>
 </div>
 
@@ -174,9 +156,7 @@
   overlay.addEventListener('click', async () => {
     if (!isCameraOn) return;
 
-    // Deklanşör efekti
-    flash.classList.add('active');
-    setTimeout(() => flash.classList.remove('active'), 150);
+    
 
     const videoRect = video.getBoundingClientRect();
     const frameRect = fixedFrame.getBoundingClientRect();
