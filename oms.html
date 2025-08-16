@@ -1,166 +1,258 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orta Alan OCR</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PTC + OMS</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
     }
 
-    #container {
+    #videoContainer {
       position: relative;
-      max-width: 100%;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
     }
 
     video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      background: black;
     }
 
-    #scan-area {
+    #laserLine {
       position: absolute;
       top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: red;
+      z-index: 10;
+      animation: laserMove 1.5s infinite;
+      display: none;
+    }
+
+    @keyframes laserMove {
+      0% { top: 20%; }
+      50% { top: 50%; }
+      100% { top: 80%; }
+    }
+
+    #ocrBox {
+      position: absolute;
+      width: 70%;
+      height: 60px;
+      top: 50%;
       left: 50%;
-      width: 300px;
-      height: 100px;
       transform: translate(-50%, -50%);
-      border: 3px solid red;
-      border-radius: 8px;
-      box-sizing: border-box;
+      border: 2px solid red;
+      z-index: 30;
+      display: none;
       pointer-events: none;
     }
 
-    #toggle-camera {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 10;
-      padding: 10px 16px;
-      font-size: 16px;
+    #bottomButtons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px auto;
+      flex-wrap: wrap;
     }
 
-    #code-table {
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    #barcodeOverlay {
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
       width: 100%;
-      background: white;
-      border-collapse: collapse;
-      z-index: 5;
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      font-weight: bold;
+      z-index: 20;
+      display: none;
     }
 
-    th, td {
-      border: 1px solid #ccc;
-      padding: 6px;
-      font-size: 14px;
-    }
-
-    th {
-      background: #eee;
+    #modal {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      padding: 15px 25px;
+      border-radius: 5px;
+      z-index: 999;
+      display: none;
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
+  <div id="videoContainer">
+    <video id="video" autoplay muted playsinline></video>
+    <div id="laserLine"></div>
+    <div id="ocrBox"></div>
+    <div id="barcodeOverlay"></div>
+  </div>
 
-<button id="toggle-camera">Kamerayı Aç</button>
+  <div id="bottomButtons">
+    <button id="scanButton">Barkod Tara</button>
+    <button id="omsButton">OMS</button>
+  </div>
 
-<div id="container">
-  <video id="video" autoplay playsinline></video>
-  <div id="scan-area"></div>
-  <canvas id="canvas" style="display:none;"></canvas>
-</div>
+  <div id="modal">Bildirim</div>
 
-<table id="code-table">
-  <thead>
-    <tr><th>#</th><th>Kod</th></tr>
-  </thead>
-  <tbody></tbody>
-</table>
+  <!-- Tesseract.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/tesseract.min.js"></script>
+  <script>
+    const video = document.getElementById('video');
+    const scanButton = document.getElementById('scanButton');
+    const omsButton = document.getElementById('omsButton');
+    const laserLine = document.getElementById('laserLine');
+    const ocrBox = document.getElementById('ocrBox');
+    const overlay = document.getElementById('barcodeOverlay');
+    const modal = document.getElementById('modal');
 
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
-<script>
-  const video = document.getElementById('video');
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
-  const scanArea = document.getElementById('scan-area');
-  const tableBody = document.querySelector('#code-table tbody');
-  const toggleBtn = document.getElementById('toggle-camera');
+    let stream;
+    let scanning = false;
+    let omsMode = false;
 
-  let stream = null;
-  let isCameraOn = false;
-  const addedCodes = new Set();
+    function showLaser() {
+      laserLine.style.display = 'block';
+    }
 
-  toggleBtn.onclick = async () => {
-    if (isCameraOn) {
-      stream.getTracks().forEach(track => track.stop());
-      video.srcObject = null;
-      isCameraOn = false;
-      toggleBtn.textContent = 'Kamerayı Aç';
-    } else {
+    function hideLaser() {
+      laserLine.style.display = 'none';
+    }
+
+    function showOverlay(text) {
+      overlay.innerText = text;
+      overlay.style.display = 'block';
+      setTimeout(() => overlay.style.display = 'none', 2000);
+    }
+
+    function showModal(message) {
+      modal.innerText = message;
+      modal.style.display = 'block';
+      setTimeout(() => modal.style.display = 'none', 2500);
+    }
+
+    async function startCamera() {
       try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
         video.srcObject = stream;
-        isCameraOn = true;
-        toggleBtn.textContent = 'Kamerayı Kapat';
-
-        video.onloadedmetadata = () => {
-          canvas.width = video.videoWidth;
-          canvas.height = video.videoHeight;
-        };
       } catch (err) {
-        alert('Kamera açılamadı: ' + err.message);
+        showModal("Kamera başlatılamadı.");
+        console.error(err);
       }
     }
-  };
 
-  // Dokununca tarama başlat
-  video.addEventListener('click', async () => {
-    if (!isCameraOn) return;
-
-    const videoRect = video.getBoundingClientRect();
-    const scanRect = scanArea.getBoundingClientRect();
-
-    const scaleX = video.videoWidth / videoRect.width;
-    const scaleY = video.videoHeight / videoRect.height;
-
-    const x = (scanRect.left - videoRect.left) * scaleX;
-    const y = (scanRect.top - videoRect.top) * scaleY;
-    const width = scanRect.width * scaleX;
-    const height = scanRect.height * scaleY;
-
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const imageData = ctx.getImageData(x, y, width, height);
-
-    const tempCanvas = document.createElement('canvas');
-    tempCanvas.width = width;
-    tempCanvas.height = height;
-    const tempCtx = tempCanvas.getContext('2d');
-    tempCtx.putImageData(imageData, 0, 0);
-
-    const result = await Tesseract.recognize(tempCanvas, 'eng');
-    const matches = result.data.text.match(/\b500\d{10}\b/g);
-
-    if (matches) {
-      matches.forEach(code => {
-        if (!addedCodes.has(code)) {
-          addedCodes.add(code);
-          const row = tableBody.insertRow();
-          row.insertCell().textContent = tableBody.rows.length;
-          row.insertCell().textContent = code;
-        }
-      });
-    } else {
-      alert("Kod bulunamadı. Kodu net şekilde kutuya denk getirdiğinizden emin olun.");
+    function stopCamera() {
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+        stream = null;
+      }
     }
-  });
-</script>
 
+    scanButton.addEventListener('click', async () => {
+      if (scanning) {
+        stopCamera();
+        scanning = false;
+        scanButton.textContent = 'Barkod Tara';
+        hideLaser();
+        return;
+      }
+
+      await startCamera();
+      scanning = true;
+      scanButton.textContent = 'Durdur';
+      if (!omsMode) showLaser();
+    });
+
+    omsButton.addEventListener('click', async () => {
+      omsMode = !omsMode;
+
+      if (omsMode) {
+        stopCamera();
+        await startCamera();
+        ocrBox.style.display = 'block';
+        hideLaser();
+        scanButton.disabled = true;
+        omsButton.textContent = 'OMS (Aktif)';
+        showOverlay("OCR Modu Aktif");
+      } else {
+        stopCamera();
+        await startCamera();
+        ocrBox.style.display = 'none';
+        showLaser();
+        scanButton.disabled = false;
+        omsButton.textContent = 'OMS';
+        showOverlay("OCR Modu Kapalı");
+      }
+    });
+
+    video.addEventListener('click', async () => {
+      if (!omsMode) return;
+
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      const rect = video.getBoundingClientRect();
+      const ocrRect = ocrBox.getBoundingClientRect();
+
+      const scaleX = video.videoWidth / rect.width;
+      const scaleY = video.videoHeight / rect.height;
+
+      const cropX = (ocrRect.left - rect.left) * scaleX;
+      const cropY = (ocrRect.top - rect.top) * scaleY;
+      const cropWidth = ocrRect.width * scaleX;
+      const cropHeight = ocrRect.height * scaleY;
+
+      canvas.width = cropWidth;
+      canvas.height = cropHeight;
+      context.drawImage(video, cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
+
+      showOverlay("Metin taranıyor...");
+
+      const worker = Tesseract.createWorker();
+      await worker.load();
+      await worker.loadLanguage('eng');
+      await worker.initialize('eng');
+      const { data: { text } } = await worker.recognize(canvas);
+      await worker.terminate();
+
+      const cleaned = text.replace(/\s/g, '');
+      const match = cleaned.match(/500\d{10}/);
+      if (match) {
+        showModal("Kod bulundu: " + match[0]);
+      } else {
+        showModal("Geçerli kod bulunamadı.");
+      }
+    });
+
+    // Sayfa yüklendiğinde kamera başlat
+    window.onload = () => {
+      startCamera();
+      scanning = true;
+      showLaser();
+    };
+  </script>
 </body>
 </html>
