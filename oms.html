@@ -3,256 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PTC + OMS</title>
+  <title>PTC</title>
   <style>
+    * { box-sizing: border-box; user-select: none; }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
+      margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc; color: #333;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 20px 10px; min-height: 100vh;
     }
-
+    #manualEntryForm { margin-bottom: 20px; display: flex; gap: 8px; justify-content: center; align-items: center; }
+    #manualBarcodeInput {
+      padding: 12px 16px; border-radius: 9999px; border: 1px solid #ccc;
+      font-size: 16px; width: 220px; outline-offset: 2px; user-select: text;
+    }
+    #manualEntryForm button {
+      padding: 10px 16px; font-size: 14px; border-radius: 9999px;
+      background-color: #3498db; color: white; border: none; cursor: pointer;
+    }
+    h1 { font-weight: 700; margin-bottom: 12px; color: #2c3e50; text-align: center; user-select: text; }
     #videoContainer {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      margin: auto;
-      overflow: hidden;
+      position: relative; width: 320px; max-width: 90vw;
+      border-radius: 12px; overflow: hidden; margin-bottom: 25px;
+      background: #000; box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
-
-    video {
-      width: 100%;
-      height: auto;
-      background: black;
-    }
-
+    video { width: 100%; height: auto; display: none; object-fit: cover; border-radius: 12px; cursor: pointer; }
     #laserLine {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: red;
-      z-index: 10;
-      animation: laserMove 1.5s infinite;
-      display: none;
+      position: absolute; top: 50%; left: 5%; right: 5%;
+      height: 3px; background: linear-gradient(to right, transparent, rgba(255,0,0,0.8), transparent);
+      transform: translateY(-50%); border-radius: 2px; pointer-events: none; opacity: 0; z-index: 20;
     }
-
-    @keyframes laserMove {
-      0% { top: 20%; }
-      50% { top: 50%; }
-      100% { top: 80%; }
+    #flashOverlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(255,255,255,0.7); opacity: 0; pointer-events: none;
+      transition: opacity 0.15s ease; border-radius: 12px; z-index: 10;
     }
-
-    #ocrBox {
-      position: absolute;
-      width: 70%;
-      height: 60px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 2px solid red;
-      z-index: 30;
-      display: none;
-      pointer-events: none;
-    }
-
-    #bottomButtons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px auto;
-      flex-wrap: wrap;
-    }
-
-    button {
-      padding: 10px 15px;
-      font-size: 16px;
-      border: none;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background: #555;
-    }
-
     #barcodeOverlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 8px;
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      font-weight: bold;
-      z-index: 20;
-      display: none;
+      position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%);
+      background: rgba(44,62,80,0.8); color: white; font-weight: 700;
+      padding: 10px 18px; border-radius: 10px; font-size: 18px; opacity: 0;
+      transition: opacity 0.3s ease; z-index: 15; max-width: 90%; text-align: center;
     }
-
-    #modal {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #333;
-      padding: 15px 25px;
-      border-radius: 5px;
-      z-index: 999;
-      display: none;
+    #omsOverlay {
+      position: absolute; top: 30%; left: 10%; width: 80%; height: 20%;
+      border: 3px solid red; border-radius: 6px; display: none; z-index: 30; pointer-events: none;
     }
+    #buttonContainer, #bottomButtons {
+      display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;
+    }
+    button {
+      background-color: #3498db; border: none; color: white; font-weight: 600;
+      padding: 14px 28px; border-radius: 8px; font-size: 16px; cursor: pointer;
+      transition: background-color 0.25s ease; min-width: 120px;
+    }
+    button:disabled { background-color: #95a5a6; cursor: not-allowed; }
+    button:hover:not(:disabled) { background-color: #2980b9; }
+    button.scanning { background-color: #e74c3c !important; }
+    .switch-container { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #2c3e50; }
+    .switch { position: relative; width: 52px; height: 28px; display: inline-block; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #bdc3c7; transition: 0.4s; border-radius: 28px; }
+    .slider:before { content: ""; position: absolute; height: 22px; width: 22px; left: 3px; bottom: 3px; background-color: white; transition: 0.4s; border-radius: 50%; }
+    input:checked + .slider { background-color: #e74c3c; }
+    input:checked + .slider:before { transform: translateX(24px); }
+    #barcodeListContainer {
+      width: 100%; max-width: 400px; background: white; border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1); padding: 20px 15px; margin-bottom: 20px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; color: #34495e; }
+    thead { background-color: #3498db; color: white; font-weight: 700; }
+    th, td { padding: 14px 12px; text-align: left; border-bottom: 1px solid #ecf0f1; }
+    tbody tr:hover { background-color: #f0f8ff; }
+    tfoot td { font-weight: 700; background-color: #f9f9f9; color: #2c3e50; padding: 12px; }
   </style>
 </head>
 <body oncontextmenu="return false">
+  <form id="manualEntryForm" autocomplete="off">
+    <input type="tel" inputmode="numeric" id="manualBarcodeInput" placeholder="THM/EAN" maxlength="100" required />
+    <button type="submit">Ekle</button>
+  </form>
+
   <div id="videoContainer">
     <video id="video" autoplay muted playsinline></video>
+    <div id="flashOverlay"></div>
     <div id="laserLine"></div>
-    <div id="ocrBox"></div>
     <div id="barcodeOverlay"></div>
+    <div id="omsOverlay"></div>
+  </div>
+
+  <div id="buttonContainer">
+    <button id="scanButton">Kamera Aç</button>
+    <button id="omsButton">OMS</button>
+    <div class="switch-container">
+      <label class="switch"><input type="checkbox" id="deleteModeToggle" /><span class="slider"></span></label>
+      Silmek İçin Okut
+    </div>
+  </div>
+
+  <div id="barcodeListContainer">
+    <table>
+      <thead><tr><th>Barkod</th><th>Adet</th><th>İşlem</th></tr></thead>
+      <tbody id="barcodeTableBody"></tbody>
+      <tfoot><tr><td colspan="3" id="totalCount">Kalem Miktarı : 0<br>Toplam Adet : 0</td></tr></tfoot>
+    </table>
   </div>
 
   <div id="bottomButtons">
-    <button id="scanButton">Barkod Tara</button>
-    <button id="omsButton">OMS</button>
+    <button id="clearAllBtn">Sıfırla</button>
+    <button id="exportExcelBtn">Excel</button>
+    <button id="copyListBtn">Kopyala</button>
   </div>
 
-  <div id="modal">Bildirim</div>
+  <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
 
-  <!-- Tesseract.js -->
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/tesseract.min.js"></script>
+  <!-- OCR kütüphanesi -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
   <script>
+  (() => {
     const video = document.getElementById('video');
     const scanButton = document.getElementById('scanButton');
     const omsButton = document.getElementById('omsButton');
+    const omsOverlay = document.getElementById('omsOverlay');
+    const barcodeOverlay = document.getElementById('barcodeOverlay');
+    const flashOverlay = document.getElementById('flashOverlay');
     const laserLine = document.getElementById('laserLine');
-    const ocrBox = document.getElementById('ocrBox');
-    const overlay = document.getElementById('barcodeOverlay');
-    const modal = document.getElementById('modal');
+    const deleteModeToggle = document.getElementById('deleteModeToggle');
+    const manualForm = document.getElementById('manualEntryForm');
+    const manualInput = document.getElementById('manualBarcodeInput');
+    const tableBody = document.getElementById('barcodeTableBody');
+    const totalCountElem = document.getElementById('totalCount');
+    const clearAllBtn = document.getElementById('clearAllBtn');
+    const exportExcelBtn = document.getElementById('exportExcelBtn');
+    const copyListBtn = document.getElementById('copyListBtn');
+    const beepSound = document.getElementById('beepSound');
 
-    let stream;
-    let scanning = false;
-    let omsMode = false;
+    let barcodes = new Map();
+    let stream = null, scanning = false, omsMode = false;
 
-    function showLaser() {
-      laserLine.style.display = 'block';
-    }
+    function beep(){ try{ beepSound.currentTime=0; beepSound.play(); }catch{} }
+    function showFlash(){ flashOverlay.style.opacity='0.7'; setTimeout(()=>flashOverlay.style.opacity='0',150); }
+    function showBarcodeOverlay(text){ barcodeOverlay.textContent=text; barcodeOverlay.style.opacity='1'; setTimeout(()=>barcodeOverlay.style.opacity='0',1200); }
 
-    function hideLaser() {
-      laserLine.style.display = 'none';
-    }
-
-    function showOverlay(text) {
-      overlay.innerText = text;
-      overlay.style.display = 'block';
-      setTimeout(() => overlay.style.display = 'none', 2000);
-    }
-
-    function showModal(message) {
-      modal.innerText = message;
-      modal.style.display = 'block';
-      setTimeout(() => modal.style.display = 'none', 2500);
-    }
-
-    async function startCamera() {
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
-        video.srcObject = stream;
-      } catch (err) {
-        showModal("Kamera başlatılamadı.");
-        console.error(err);
+    function updateTable(){
+      tableBody.innerHTML=''; let totalItems=0,totalQuantity=0;
+      for(const [code,count] of barcodes.entries()){
+        totalItems++; totalQuantity+=count;
+        const tr=document.createElement('tr');
+        tr.innerHTML=`<td>${code}</td><td style="text-align:center">${count}</td><td></td>`;
+        tableBody.appendChild(tr);
       }
+      totalCountElem.innerHTML=`Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
     }
 
-    function stopCamera() {
-      if (stream) {
-        stream.getTracks().forEach(track => track.stop());
-        stream = null;
-      }
+    function addBarcode(code){
+      if(!code) return;
+      if(barcodes.has(code)) barcodes.set(code, barcodes.get(code)+1);
+      else barcodes.set(code,1);
+      updateTable(); showBarcodeOverlay(`Okundu: ${code}`);
     }
 
-    scanButton.addEventListener('click', async () => {
-      if (scanning) {
-        stopCamera();
-        scanning = false;
-        scanButton.textContent = 'Barkod Tara';
-        hideLaser();
-        return;
-      }
+    async function startCamera(){
+      if(scanning) return;
+      stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'},audio:false});
+      video.srcObject=stream; video.style.display='block'; scanning=true;
+    }
+    function stopCamera(){
+      if(!scanning) return;
+      scanning=false; video.style.display='none';
+      omsOverlay.style.display='none'; omsMode=false;
+      if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; }
+    }
 
-      await startCamera();
-      scanning = true;
-      scanButton.textContent = 'Durdur';
-      if (!omsMode) showLaser();
+    scanButton.addEventListener('click',()=>{ scanning?stopCamera():startCamera(); });
+    omsButton.addEventListener('click',async()=>{ omsMode=true; omsOverlay.style.display='block'; await startCamera(); });
+
+    // OMS OCR
+    video.addEventListener('click',async()=>{
+      if(!omsMode) return;
+      const canvas=document.createElement('canvas');
+      canvas.width=video.videoWidth; canvas.height=video.videoHeight;
+      const ctx=canvas.getContext('2d'); ctx.drawImage(video,0,0,canvas.width,canvas.height);
+      const rect=omsOverlay.getBoundingClientRect(); const vrect=video.getBoundingClientRect();
+      const sx=(rect.left-vrect.left)*video.videoWidth/vrect.width;
+      const sy=(rect.top-vrect.top)*video.videoHeight/vrect.height;
+      const sw=rect.width*video.videoWidth/vrect.width;
+      const sh=rect.height*video.videoHeight/vrect.height;
+      const frame=ctx.getImageData(sx,sy,sw,sh);
+      const {data:{text}}=await Tesseract.recognize(frame,'eng',{tessedit_char_whitelist:'0123456789'});
+      const cleaned=text.replace(/\D/g,'');
+      if(cleaned.length===13 && cleaned.startsWith("500")){
+        addBarcode(cleaned); beep(); showFlash();
+      } else showBarcodeOverlay("Geçersiz / okunamadı");
     });
 
-    omsButton.addEventListener('click', async () => {
-      omsMode = !omsMode;
+    manualForm.addEventListener('submit',(e)=>{e.preventDefault(); const v=manualInput.value.trim(); if(v){addBarcode(v); manualInput.value='';}});
+    clearAllBtn.addEventListener('click',()=>{ barcodes.clear(); updateTable(); showBarcodeOverlay('Sıfırlandı'); });
+    exportExcelBtn.addEventListener('click',()=>{ if(barcodes.size===0) return; const wb=XLSX.utils.book_new(); const wsData=[['Barkod','Adet']]; for(const [c,n] of barcodes.entries()) wsData.push([c,n]); const ws=XLSX.utils.aoa_to_sheet(wsData); XLSX.utils.book_append_sheet(wb,ws,'Barkodlar'); XLSX.writeFile(wb,'barkodlar.xlsx'); });
+    copyListBtn.addEventListener('click',async()=>{ let t=''; for(const [c,n] of barcodes.entries()) t+=`${c}\t${n}\n`; await navigator.clipboard.writeText(t); showBarcodeOverlay('Kopyalandı'); });
 
-      if (omsMode) {
-        stopCamera();
-        await startCamera();
-        ocrBox.style.display = 'block';
-        hideLaser();
-        scanButton.disabled = true;
-        omsButton.textContent = 'OMS (Aktif)';
-        showOverlay("OCR Modu Aktif");
-      } else {
-        stopCamera();
-        await startCamera();
-        ocrBox.style.display = 'none';
-        showLaser();
-        scanButton.disabled = false;
-        omsButton.textContent = 'OMS';
-        showOverlay("OCR Modu Kapalı");
-      }
-    });
-
-    video.addEventListener('click', async () => {
-      if (!omsMode) return;
-
-      const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
-      const rect = video.getBoundingClientRect();
-      const ocrRect = ocrBox.getBoundingClientRect();
-
-      const scaleX = video.videoWidth / rect.width;
-      const scaleY = video.videoHeight / rect.height;
-
-      const cropX = (ocrRect.left - rect.left) * scaleX;
-      const cropY = (ocrRect.top - rect.top) * scaleY;
-      const cropWidth = ocrRect.width * scaleX;
-      const cropHeight = ocrRect.height * scaleY;
-
-      canvas.width = cropWidth;
-      canvas.height = cropHeight;
-      context.drawImage(video, cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
-
-      showOverlay("Metin taranıyor...");
-
-      const worker = Tesseract.createWorker();
-      await worker.load();
-      await worker.loadLanguage('eng');
-      await worker.initialize('eng');
-      const { data: { text } } = await worker.recognize(canvas);
-      await worker.terminate();
-
-      const cleaned = text.replace(/\s/g, '');
-      const match = cleaned.match(/500\d{10}/);
-      if (match) {
-        showModal("Kod bulundu: " + match[0]);
-      } else {
-        showModal("Geçerli kod bulunamadı.");
-      }
-    });
-
-    // Sayfa yüklendiğinde kamera başlat
-    window.onload = () => {
-      startCamera();
-      scanning = true;
-      showLaser();
-    };
+  })();
   </script>
 </body>
 </html>
