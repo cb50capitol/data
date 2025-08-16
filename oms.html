@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PTC</title>
-  <!-- CSS burada değişmedi, eski stilin aynısını kullanabilirsin -->
   <style>
     * {
       box-sizing: border-box;
@@ -292,7 +291,9 @@
     min-width: 100px;
   }
 }
- #alertBalloon {
+
+    
+    #alertBalloon {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -375,51 +376,45 @@ td:nth-child(3) button {
   min-width: unset;
   width: 50px;
 }
-
-#omsOverlay {
-  position: absolute;
-  top: 30%; 
-  left: 10%; 
-  width: 80%; 
-  height: 20%;
-  border: 3px solid red; 
-  border-radius: 6px;
-  display: none; 
-  z-index: 30; 
-  pointer-events: none;
-}
   </style>
 </head>
 <body oncontextmenu="return false">
- <form id="manualEntryForm" autocomplete="off">
+
+  <!-- MANUEL GİRİŞ -->
+  <form id="manualEntryForm" autocomplete="off">
     <input type="tel" inputmode="numeric" pattern="[0-9]*" id="manualBarcodeInput" placeholder="THM/EAN" maxlength="100" required />
     <button type="submit">Ekle</button>
   </form>
 
+  <!-- KAMERA GÖRÜNTÜSÜ -->
   <div id="videoContainer">
     <video id="video" autoplay muted playsinline></video>
     <div id="flashOverlay"></div>
     <div id="laserLine"></div>
     <div id="barcodeOverlay"></div>
     <div id="omsOverlay"></div>
-
   </div>
 
+  <!-- BUTONLAR -->
   <div id="buttonContainer">
     <button id="scanButton">Kamera Aç</button>
-  <label class="switch">
-  <input type="checkbox" id="omsToggle">
-  <span class="slider"></span>
-</label>
     <div class="switch-container">
+      <label>OMS</label>
+      <label class="switch">
+        <input type="checkbox" id="omsToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="switch-container">
+      <label>Silmek İçin Okut</label>
       <label class="switch">
         <input type="checkbox" id="deleteModeToggle" />
         <span class="slider"></span>
       </label>
-      Silmek İçin Okut
     </div>
   </div>
 
+  <!-- TABLO -->
   <div id="barcodeListContainer">
     <table>
       <thead>
@@ -428,18 +423,23 @@ td:nth-child(3) button {
       <tbody id="barcodeTableBody"></tbody>
       <tfoot>
         <tr>
-          <td colspan="3" id="totalCount">Kalem Miktarı : 0\nToplam Adet : 0</td>
+          <td colspan="3" id="totalCount">Kalem Miktarı : 0<br>Toplam Adet : 0</td>
         </tr>
       </tfoot>
     </table>
   </div>
+
+  <!-- ALT BUTONLAR -->
   <div id="bottomButtons">
     <button id="clearAllBtn">Sıfırla</button>
     <button id="exportExcelBtn">Excel</button>
     <button id="copyListBtn">Kopyala</button>
   </div>
- <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
- <!-- MODAL PENCERESİ -->
+
+  <!-- BİP SESİ -->
+  <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+  <!-- MODAL -->
   <div id="customModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
     <div style="background:#fff;padding:24px 20px;border-radius:12px;max-width:320px;width:90%;box-shadow:0 6px 20px rgba(0,0,0,0.3);font-family:sans-serif;">
       <div id="modalContent" style="font-size:16px;margin-bottom:20px;text-align:center;color:#2c3e50;"></div>
@@ -449,22 +449,26 @@ td:nth-child(3) button {
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
+  <!-- ALERT BİLGİ -->
+  <div id="alertBalloon">
+    <div id="alertText">
+      📢 Uygulama yalnızca Android cihazlarda çalışır 📢 Taramayı aktifleştirmek için kamera çerçevesine dokun 📢
+    </div>
+  </div>
+
+  <!-- KÜTÜPHANELER -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
+
+  <!-- JAVASCRIPT (tam hali) -->
   <script>
-  (() => {
+    
+    (() => {
   const video = document.getElementById('video');
   const scanButton = document.getElementById('scanButton');
   const barcodeOverlay = document.getElementById('barcodeOverlay');
   const flashOverlay = document.getElementById('flashOverlay');
-  const omsButton = document.getElementById('omsButton');
-const omsOverlay = document.getElementById('omsOverlay');
-let omsMode = false;
-
-omsToggle.addEventListener('change', () => {
-  omsMode = omsToggle.checked;
-  omsOverlay.style.display = omsMode ? 'block' : 'none';
-});
   const laserLine = document.getElementById('laserLine');
   const deleteModeToggle = document.getElementById('deleteModeToggle');
   const manualForm = document.getElementById('manualEntryForm');
@@ -533,6 +537,7 @@ omsToggle.addEventListener('change', () => {
       console.error("Kayıtlı barkodlar yüklenemedi:", e);
     }
   }
+
 function showInputModal(message, defaultValue = '') {
   return new Promise((resolve) => {
     modalContent.innerHTML = `
@@ -568,6 +573,9 @@ function showInputModal(message, defaultValue = '') {
     modalCancel.addEventListener('click', onCancel);
   });
 }
+
+
+    
   function saveBarcodesToStorage() {
     localStorage.setItem("barcodeList", JSON.stringify(Array.from(barcodes.entries())));
   }
@@ -708,6 +716,10 @@ function updateTable() {
 
   totalCountElem.innerHTML = `Kalem Miktarı : ${totalItems}<br>Toplam Adet : ${totalQuantity}`;
 }
+
+
+
+
   function addBarcode(code) {
     if (!code) return;
 
@@ -812,13 +824,6 @@ function updateTable() {
   scanButton.addEventListener('click', () => {
     scanning ? stopCamera() : startCamera();
   });
-  
-  omsButton.addEventListener('click', async () => {
-  omsMode = true;
-  omsOverlay.style.display = 'block';   // kırmızı kutu görünür
-  await startCamera();                  // kamerayı aç
-});
-
 
   video.addEventListener('click', () => {
     if (scanning && !continuousScanning) {
@@ -827,47 +832,6 @@ function updateTable() {
     }
   });
 
- video.addEventListener('click', async () => {
-  if (omsMode) {
-    // OMS Modu: OCR ile 500xxx kontrolü
-    const canvas = document.createElement('canvas');
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-    const rect = omsOverlay.getBoundingClientRect();
-    const vrect = video.getBoundingClientRect();
-
-    const sx = (rect.left - vrect.left) * video.videoWidth / vrect.width;
-    const sy = (rect.top - vrect.top) * video.videoHeight / vrect.height;
-    const sw = rect.width * video.videoWidth / vrect.width;
-    const sh = rect.height * video.videoHeight / vrect.height;
-
-    const frame = ctx.getImageData(sx, sy, sw, sh);
-
-    const { data: { text } } = await Tesseract.recognize(frame, 'eng', {
-      tessedit_char_whitelist: '0123456789'
-    });
-
-    const cleaned = text.replace(/\D/g, '');
-
-    if (cleaned.length === 13 && cleaned.startsWith("500")) {
-      addBarcode(cleaned);
-      beep();
-      showFlash();
-      showBarcodeOverlay(`OMS: ${cleaned}`);
-    } else {
-      showBarcodeOverlay("Geçersiz / okunamadı");
-    }
-  } else {
-    // Normal Barkod Modu
-    if (scanning && !continuousScanning) {
-      startContinuousScanning();
-      showBarcodeOverlay('Tarama başladı...');
-    }
-  }
-});
   manualForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const val = manualInput.value.trim();
@@ -891,18 +855,7 @@ function updateTable() {
       showBarcodeOverlay('Tüm veriler sıfırlandı');
     }
   });
-  
-  const omsToggle = document.getElementById('omsToggle');
-let omsMode = false;
 
-omsToggle.addEventListener('change', () => {
-  omsMode = omsToggle.checked;
-  if (omsMode) {
-    showBarcodeOverlay("OMS Modu: Açık");
-  } else {
-    showBarcodeOverlay("OMS Modu: Kapalı");
-  }
-});
   exportExcelBtn.addEventListener('click', async () => {
     if (barcodes.size === 0) {
       showModal("Dışa aktarılacak veri yok.");
@@ -943,13 +896,8 @@ omsToggle.addEventListener('change', () => {
   });
 
 })();
+    
   </script>
-  
-<div id="alertBalloon">
-  <div id="alertText">
-    📢 Uygulama yalnızca Android cihazlarda çalışır 📢 Taramayı aktifleştirmek için kamera çerçevesine dokun 📢
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
+
 </body>
 </html>
