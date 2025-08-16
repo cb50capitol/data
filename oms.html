@@ -3,145 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kod Tanıma</title>
+  <title>Kod Tespiti</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 16px;
-      background-color: #f4f4f4;
+      padding: 0;
+      font-family: sans-serif;
+      background: #f0f0f0;
     }
 
-    button {
+    #container {
+      position: relative;
       width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-bottom: 16px;
+      max-width: 480px;
+      margin: 20px auto;
     }
 
     video, canvas {
       width: 100%;
-      max-width: 100%;
-      display: block;
-      border-radius: 8px;
-      margin-bottom: 16px;
+      border-radius: 10px;
     }
 
-    #detected-codes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .code-box {
-      background-color: #ff4d4d;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .code-box.confirmed {
-      background-color: #28a745;
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
     }
 
     table {
-      width: 100%;
+      width: 90%;
+      margin: 20px auto;
       border-collapse: collapse;
-      background-color: white;
+      background: #fff;
     }
 
     th, td {
-      border: 1px solid #ccc;
       padding: 10px;
+      border: 1px solid #ccc;
       text-align: center;
     }
 
     th {
-      background-color: #f0f0f0;
+      background: #eee;
     }
   </style>
 </head>
 <body>
 
-  <button id="start-camera">Kamera Aç</button>
+<div id="container">
   <video id="video" autoplay playsinline></video>
-  <canvas id="canvas" style="display:none;"></canvas>
+  <canvas id="overlay"></canvas>
+</div>
 
-  <h3>Algılanan Kodlar</h3>
-  <div id="detected-codes"></div>
+<h3 style="text-align:center;">Onaylanan Kodlar</h3>
+<table id="code-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Kod</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
-  <h3>Onaylanan Kodlar</h3>
-  <table id="code-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Kod</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+<script>
+  const video = document.getElementById('video');
+  const canvas = document.getElementById('overlay');
+  const ctx = canvas.getContext('2d');
+  const tableBody = document.querySelector('#code-table tbody');
 
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
-  <script>
-    const video = document.getElementById('video');
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    const detectedContainer = document.getElementById('detected-codes');
-    const tableBody = document.querySelector('#code-table tbody');
+  const confirmedCodes = new Set();
 
-    const seenCodes = new Set();
-    const confirmedCodes = new Set();
+  let wordBoxes = [];
 
-    document.getElementById('start-camera').onclick = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
-        video.srcObject = stream;
+  // Kamerayı aç
+  async function startCamera() {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+    video.srcObject = stream;
 
-        setInterval(async () => {
-          canvas.width = video.videoWidth;
-          canvas.height = video.videoHeight;
-          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-          const { data: { text } } = await Tesseract.recognize(canvas, 'eng');
-          const matches = text.match(/\b500\d{2,}\b/g);
-
-          if (matches) {
-            matches.forEach(code => {
-              if (!seenCodes.has(code)) {
-                seenCodes.add(code);
-                const codeBox = document.createElement('div');
-                codeBox.className = 'code-box';
-                codeBox.textContent = code;
-
-                codeBox.onclick = () => {
-                  if (!confirmedCodes.has(code)) {
-                    confirmedCodes.add(code);
-                    codeBox.classList.add('confirmed');
-
-                    const row = tableBody.insertRow();
-                    row.insertCell().textContent = tableBody.rows.length;
-                    row.insertCell().textContent = code;
-                  }
-                };
-
-                detectedContainer.appendChild(codeBox);
-              }
-            });
-          }
-        }, 3000);
-      } catch (err) {
-        alert('Kameraya erişilemedi: ' + err.message);
-      }
+    video.onloadedmetadata = () => {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      startDetectionLoop();
     };
-  </script>
+  }
+
+  // Algılama döngüsü
+  function startDetectionLoop() {
+    setInterval(async () => {
+      const tempCanvas = document.createElement('canvas');
+      const tCtx = tempCanvas.getContext('2d');
+      tempCanvas.width = video.videoWidth;
+      tempCanvas.height = video.videoHeight;
+      tCtx.drawImage(video, 0, 0, tempCanvas.width, tempCanvas.height);
+
+      const result = await Tesseract.recognize(tempCanvas, 'eng');
+
+      wordBoxes = [];
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (const word of result.data.words) {
+        const code = word.text.trim();
+        if (/^500\d{2,}/.test(code)) {
+          const { x0, y0, x1, y1 } = word.bbox;
+          wordBoxes.push({ code, x: x0, y: y0, w: x1 - x0, h: y1 - y0, confirmed: false });
+        }
+      }
+
+      drawBoxes();
+    }, 3000);
+  }
+
+  function drawBoxes() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    wordBoxes.forEach(box => {
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = box.confirmed ? 'green' : 'red';
+      ctx.rect(box.x, box.y, box.w, box.h);
+      ctx.stroke();
+
+      // Arka plan
+      ctx.fillStyle = box.confirmed ? 'rgba(0,255,0,0.2)' : 'rgba(255,0,0,0.2)';
+      ctx.fillRect(box.x, box.y, box.w, box.h);
+
+      // Kod yazısı
+      ctx.fillStyle = '#000';
+      ctx.font = 'bold 16px sans-serif';
+      ctx.fillText(box.code, box.x + 4, box.y + 18);
+    });
+  }
+
+  // Tıklama ile onaylama
+  canvas.addEventListener('click', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+
+    for (const box of wordBoxes) {
+      if (!box.confirmed &&
+          clickX >= box.x && clickX <= box.x + box.w &&
+          clickY >= box.y && clickY <= box.y + box.h) {
+
+        box.confirmed = true;
+        drawBoxes();
+
+        if (!confirmedCodes.has(box.code)) {
+          confirmedCodes.add(box.code);
+          const row = tableBody.insertRow();
+          row.insertCell().textContent = tableBody.rows.length;
+          row.insertCell().textContent = box.code;
+        }
+
+        break;
+      }
+    }
+  });
+
+  startCamera();
+</script>
 
 </body>
 </html>
