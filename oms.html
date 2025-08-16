@@ -35,7 +35,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      pointer-events: none;
+      pointer-events: auto;
+      touch-action: none;
     }
 
     #code-table {
@@ -111,21 +112,26 @@
     }
   };
 
-  // Seçim Başlat
+  function getRelativeCoords(e) {
+    const rect = overlay.getBoundingClientRect();
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+    return { x, y };
+  }
+
   overlay.addEventListener('pointerdown', (e) => {
     if (!isCameraOn) return;
     isDrawing = true;
-    const rect = overlay.getBoundingClientRect();
-    startX = e.clientX - rect.left;
-    startY = e.clientY - rect.top;
+    const pos = getRelativeCoords(e);
+    startX = pos.x;
+    startY = pos.y;
   });
 
-  // Seçim Alanı Çizimi
   overlay.addEventListener('pointermove', (e) => {
     if (!isDrawing) return;
-    const rect = overlay.getBoundingClientRect();
-    endX = e.clientX - rect.left;
-    endY = e.clientY - rect.top;
+    const pos = getRelativeCoords(e);
+    endX = pos.x;
+    endY = pos.y;
 
     ctx.clearRect(0, 0, overlay.width, overlay.height);
     ctx.strokeStyle = 'red';
@@ -133,8 +139,7 @@
     ctx.strokeRect(startX, startY, endX - startX, endY - startY);
   });
 
-  // Seçim Bittiğinde OCR
-  overlay.addEventListener('pointerup', async () => {
+  overlay.addEventListener('pointerup', async (e) => {
     if (!isDrawing) return;
     isDrawing = false;
 
@@ -143,7 +148,9 @@
     const w = Math.abs(endX - startX);
     const h = Math.abs(endY - startY);
 
-    if (w < 10 || h < 10) return; // çok küçük alanları ihmal et
+    ctx.clearRect(0, 0, overlay.width, overlay.height);
+
+    if (w < 10 || h < 10) return;
 
     const tempCanvas = document.createElement('canvas');
     const tempCtx = tempCanvas.getContext('2d');
@@ -151,8 +158,6 @@
     tempCanvas.height = h;
 
     tempCtx.drawImage(video, x, y, w, h, 0, 0, w, h);
-
-    ctx.clearRect(0, 0, overlay.width, overlay.height); // kutuyu temizle
 
     const result = await Tesseract.recognize(tempCanvas, 'eng');
     const matches = result.data.text.match(/\b500\d{10}\b/g);
