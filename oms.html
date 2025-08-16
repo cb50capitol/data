@@ -412,7 +412,11 @@ td:nth-child(3) button {
 
   <div id="buttonContainer">
     <button id="scanButton">Kamera Aç</button>
-    <button id="omsButton">OMS</button>
+  <label class="switch">
+  <input type="checkbox" id="omsToggle">
+  <span class="slider"></span>
+</label>
+
 
     <div class="switch-container">
       <label class="switch">
@@ -466,6 +470,12 @@ td:nth-child(3) button {
   const omsButton = document.getElementById('omsButton');
 const omsOverlay = document.getElementById('omsOverlay');
 let omsMode = false;
+
+omsToggle.addEventListener('change', () => {
+  omsMode = omsToggle.checked;
+  omsOverlay.style.display = omsMode ? 'block' : 'none';
+});
+
 
   const laserLine = document.getElementById('laserLine');
   const deleteModeToggle = document.getElementById('deleteModeToggle');
@@ -837,43 +847,48 @@ function updateTable() {
     }
   });
 
-  video.addEventListener('click', async () => {
-  if (!omsMode) return;  // OMS değilse boşuna çalışmasın
+ video.addEventListener('click', async () => {
+  if (omsMode) {
+    // OMS Modu: OCR ile 500xxx kontrolü
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-  // videodan frame al
-  const canvas = document.createElement('canvas');
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const rect = omsOverlay.getBoundingClientRect();
+    const vrect = video.getBoundingClientRect();
 
-  // kırmızı kutunun koordinatlarını al
-  const rect = omsOverlay.getBoundingClientRect();
-  const vrect = video.getBoundingClientRect();
+    const sx = (rect.left - vrect.left) * video.videoWidth / vrect.width;
+    const sy = (rect.top - vrect.top) * video.videoHeight / vrect.height;
+    const sw = rect.width * video.videoWidth / vrect.width;
+    const sh = rect.height * video.videoHeight / vrect.height;
 
-  const sx = (rect.left - vrect.left) * video.videoWidth / vrect.width;
-  const sy = (rect.top - vrect.top) * video.videoHeight / vrect.height;
-  const sw = rect.width * video.videoWidth / vrect.width;
-  const sh = rect.height * video.videoHeight / vrect.height;
+    const frame = ctx.getImageData(sx, sy, sw, sh);
 
-  const frame = ctx.getImageData(sx, sy, sw, sh);
+    const { data: { text } } = await Tesseract.recognize(frame, 'eng', {
+      tessedit_char_whitelist: '0123456789'
+    });
 
-  // OCR çalıştır
-  const { data: { text } } = await Tesseract.recognize(frame, 'eng', {
-    tessedit_char_whitelist: '0123456789'
-  });
+    const cleaned = text.replace(/\D/g, '');
 
-  const cleaned = text.replace(/\D/g, '');
-
-  if (cleaned.length === 13 && cleaned.startsWith("500")) {
-    addBarcode(cleaned);
-    beep();
-    showFlash();
-    showBarcodeOverlay(`OMS: ${cleaned}`);
+    if (cleaned.length === 13 && cleaned.startsWith("500")) {
+      addBarcode(cleaned);
+      beep();
+      showFlash();
+      showBarcodeOverlay(`OMS: ${cleaned}`);
+    } else {
+      showBarcodeOverlay("Geçersiz / okunamadı");
+    }
   } else {
-    showBarcodeOverlay("Geçersiz / okunamadı");
+    // Normal Barkod Modu
+    if (scanning && !continuousScanning) {
+      startContinuousScanning();
+      showBarcodeOverlay('Tarama başladı...');
+    }
   }
 });
+
 
 
   manualForm.addEventListener('submit', (e) => {
@@ -899,6 +914,19 @@ function updateTable() {
       showBarcodeOverlay('Tüm veriler sıfırlandı');
     }
   });
+  
+  const omsToggle = document.getElementById('omsToggle');
+let omsMode = false;
+
+omsToggle.addEventListener('change', () => {
+  omsMode = omsToggle.checked;
+  if (omsMode) {
+    showBarcodeOverlay("OMS Modu: Açık");
+  } else {
+    showBarcodeOverlay("OMS Modu: Kapalı");
+  }
+});
+
 
   exportExcelBtn.addEventListener('click', async () => {
     if (barcodes.size === 0) {
