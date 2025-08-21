@@ -1,5 +1,5 @@
 Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, M, Lacivert	BONCI	5003254849003	8683858964186	CB62	1	1	4231323842
+Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin1	Pierre Cardin T-Shirt, M, Lacivert	BONCI	5003254849003	8683858964186	CB62	1	1	4231323842
 Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, S, Lacivert	BONCI	5003254849004	8683858964513	CB62	1	1	4231323842
 Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, L, Sarı	BONCI	5003254874002	8683858964506	CB62	1	1	4231323842
 Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, XS, Lacivert	BONCI	5003254849006	8683858964537	CB62	1	1	4231323842
