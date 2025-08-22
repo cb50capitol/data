@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barkod Tarayıcı</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
       padding: 0;
-      background: #f0f0f0;
+      background: #f5f5f5;
     }
 
-    video {
+    h1 {
+      margin-top: 20px;
+    }
+
+    #video {
       width: 100%;
       max-height: 60vh;
       background: black;
+      display: none;
     }
 
     #result {
       margin-top: 20px;
       font-size: 1.2em;
       font-weight: bold;
+      white-space: pre-wrap; /* \n için */
     }
 
     button {
-      margin-top: 20px;
       padding: 15px 30px;
       font-size: 1.2em;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -36,43 +42,42 @@
 
   <h1>Barkod Tarayıcı</h1>
   <button id="startBtn">Kamera Aç</button>
-  <video id="video" autoplay playsinline style="display: none;"></video>
+  <video id="video" autoplay playsinline></video>
   <div id="result">Sonuç: -</div>
 
   <script>
     const startBtn = document.getElementById("startBtn");
     const video = document.getElementById("video");
     const resultDiv = document.getElementById("result");
-
     let stream;
 
-   async function loadTxtData() {
-  try {
-    const response = await fetch("scan.txt");
-    const text = await response.text();
+    // scan.txt dosyasını oku ve verileri ayrıştır
+    async function loadTxtData() {
+      try {
+        const response = await fetch("scan.txt");
+        const text = await response.text();
 
-    const lines = text.trim().split('\n');
-    const data = [];
+        const lines = text.trim().split('\n');
+        const data = [];
 
-    for (let i = 1; i < lines.length; i++) { // 0. satır başlık
-      const row = lines[i].trim().split('\t'); // tab ile ayır
-      if (row.length >= 4) {
-        data.push(row); // [barkod, adet, lokasyon, iks]
+        for (let line of lines) {
+          const row = line.trim().split(/\s+/); // Boşluk, tab fark etmez
+          if (row.length >= 2) {
+            data.push(row); // [barkod, ...]
+          }
+        }
+
+        return data;
+      } catch (e) {
+        console.error("scan.txt okunamadı:", e);
+        resultDiv.textContent = "Hata: scan.txt dosyası yüklenemedi.";
+        return [];
       }
     }
 
-    return data;
-
-  } catch (e) {
-    console.error("scan.txt yüklenemedi:", e);
-    resultDiv.textContent = "Hata: scan.txt dosyası okunamadı.";
-    return [];
-  }
-}
-
-
+    // Kamera başlat ve tıklanınca barkod tara
     async function startCameraAndScan() {
-      if (!('BarcodeDetector' in window)) {
+      if (!("BarcodeDetector" in window)) {
         alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor.");
         return;
       }
@@ -88,35 +93,36 @@
         return;
       }
 
-      const barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'code_128', 'qr_code'] });
+      const barcodeDetector = new BarcodeDetector({
+        formats: ['ean_13', 'code_128', 'qr_code']
+      });
 
-      // Tıklanınca tarama başlar
+      // Video alanına tıklanınca barkod tara
       video.addEventListener("click", async () => {
         try {
           const bitmap = await createImageBitmap(video);
           const barcodes = await barcodeDetector.detect(bitmap);
 
           if (barcodes.length > 0) {
-            const code = barcodes[0].rawValue;
-            console.log("Barkod bulundu:", code);
+            const code = barcodes[0].rawValue.trim();
+            console.log("Barkod:", code);
             resultDiv.textContent = "Barkod: " + code;
 
-            // Verileri txt'den yükle ve ara
             const data = await loadTxtData();
             const match = data.find(row => row[0] === code);
 
             if (match) {
-              resultDiv.textContent = "Sonuç: " + match.join(" ");
+              resultDiv.textContent = "Sonuç:\n" + match.join(" ");
             } else {
               resultDiv.textContent = "Sonuç: Barkod bulunamadı.";
             }
 
-            // Kamerayı durdur
+            // Kamerayı kapat
             stream.getTracks().forEach(track => track.stop());
             video.style.display = "none";
             startBtn.style.display = "block";
           } else {
-            resultDiv.textContent = "Barkod bulunamadı. Tekrar deneyin.";
+            resultDiv.textContent = "Barkod bulunamadı. Lütfen tekrar deneyin.";
           }
         } catch (err) {
           console.error("Tarama hatası:", err);
@@ -126,6 +132,5 @@
 
     startBtn.addEventListener("click", startCameraAndScan);
   </script>
-
 </body>
 </html>
