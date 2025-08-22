@@ -186,7 +186,7 @@
       if (row) {
         const values = row.slice(1); // barkod dışındaki sütunlar
         const first = values[0] ?? "";
-        const rest = values.slice(1).map(v => "            " + v); // 12 boşluk ile hizala
+        const rest = values.slice(1).map(v => " " + v); // 12 boşluk ile hizala
         const lines = ["Aranan: " + code, "Sonuç: " + first, ...rest];
         resultDiv.textContent = lines.join("\n");
       } else {
