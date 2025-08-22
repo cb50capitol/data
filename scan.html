@@ -38,7 +38,6 @@ button.control { flex: 1; padding: 12px 18px; border-radius: 10px; font-size: 15
   
 <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
 
-
 <div class="wrapper">
   <div class="search-box">
     <input type="text" id="manualInput" placeholder="Barkod.." inputmode="numeric" pattern="[0-9]*" autocomplete="off"/>
@@ -64,6 +63,7 @@ const resultDiv = document.getElementById("result");
 const otherDiv = document.getElementById("otherResult");
 const manualInput = document.getElementById("manualInput");
 const searchBtn = document.getElementById("searchBtn");
+const beep = document.getElementById("beepSound");
 let stream;
 let barcodeDetector;
 
@@ -87,11 +87,9 @@ async function showResult(code){
   const matches = data.filter(r=>r[0]===code);
 
   if(matches.length>0){
-    // İlk eşleşme
     const first = matches[0].slice(1).join("\n");
     resultDiv.textContent = `🔍 ${code}\n${first}`;
 
-    // Diğer eşleşmeler
     otherDiv.innerHTML = "";
     if(matches.length>1){
       for(let i=1;i<matches.length;i++){
@@ -128,20 +126,30 @@ async function startCameraAndScan(){
   }catch(err){console.error(err); resultDiv.textContent="Kamera açılamadı.";}
 }
 
-video.addEventListener("click", async ()=>{
+// Başlat düğmesi kullanıcı etkileşimiyle audio'u başlatır
+startBtn.addEventListener("click", async () => {
+  try {
+    await beep.play();
+    beep.pause();
+    beep.currentTime = 0;
+  } catch(err){ console.log("Ses başlatılamadı:", err); }
+  startCameraAndScan();
+});
+
+video.addEventListener("click", async ()=> {
   if(!stream) return;
   try{
     const bitmap = await createImageBitmap(video);
     const barcodes = await barcodeDetector.detect(bitmap);
     if(barcodes.length>0){
-      document.getElementById("beepSound").play();
+      try { await beep.play(); } catch(e){ console.log("Bip çalınamadı:", e); }
       await showResult(barcodes[0].rawValue.trim());
       stopCamera();
-    }else{
+    } else {
       resultDiv.textContent="🔍 -\nBarkod bulunamadı.";
       otherDiv.innerHTML="";
     }
-  }catch(err){console.error(err);}
+  } catch(err){console.error(err);}
 });
 
 function stopCamera(){
@@ -149,7 +157,6 @@ function stopCamera(){
   video.srcObject=null; video.style.display="none"; startBtn.style.display="inline-block"; stopBtn.style.display="none";
 }
 
-startBtn.addEventListener("click", startCameraAndScan);
 stopBtn.addEventListener("click", stopCamera);
 </script>
 </body>
