@@ -10,10 +10,10 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      background: #f0f0f0;
     }
 
-    #video {
+    video {
       width: 100%;
       max-height: 60vh;
       background: black;
@@ -22,12 +22,13 @@
     #result {
       margin-top: 20px;
       font-size: 1.2em;
+      font-weight: bold;
     }
 
     button {
+      margin-top: 20px;
       padding: 15px 30px;
       font-size: 1.2em;
-      margin-top: 20px;
     }
   </style>
 </head>
@@ -35,67 +36,84 @@
 
   <h1>Barkod Tarayıcı</h1>
   <button id="startBtn">Kamera Aç</button>
-  <div id="scanner" style="display:none;">
-    <video id="video" autoplay></video>
-  </div>
+  <video id="video" autoplay playsinline style="display: none;"></video>
   <div id="result">Sonuç: -</div>
 
-  <!-- QuaggaJS CDN -->
-  <script src="https://unpkg.com/@ericblade/quagga2@1.2.6/dist/quagga.min.js"></script>
   <script>
-    const dataFromTxt = `
-868 firma1 423
-123 firma2 987
-456 firma3 654
-`.trim().split('\n').map(line => line.split(' '));
+    const startBtn = document.getElementById("startBtn");
+    const video = document.getElementById("video");
+    const resultDiv = document.getElementById("result");
 
-    const startBtn = document.getElementById('startBtn');
-    const resultDiv = document.getElementById('result');
-    const scanner = document.getElementById('scanner');
+    let stream;
 
-    startBtn.addEventListener('click', () => {
-      scanner.style.display = 'block';
-      startBtn.style.display = 'none';
+    async function loadTxtData() {
+      try {
+        const response = await fetch("scan.txt");
+        const text = await response.text();
+        const lines = text.trim().split('\n').map(line => line.trim().split(' '));
+        return lines;
+      } catch (e) {
+        console.error("scan.txt yüklenemedi:", e);
+        resultDiv.textContent = "Hata: scan.txt dosyası okunamadı.";
+        return [];
+      }
+    }
 
-      Quagga.init({
-        inputStream: {
-          type: "LiveStream",
-          target: document.querySelector('#video'),
-          constraints: {
-            facingMode: "environment" // arka kamera
-          }
-        },
-        decoder: {
-          readers: ["ean_reader"] // EAN-13 barkodları (örneğin 868)
-        }
-      }, (err) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        Quagga.start();
-      });
-
-      Quagga.onDetected((data) => {
-        const code = data.codeResult.code;
-        console.log("Barkod:", code);
-        Quagga.stop();
-        handleScan(code);
-      });
-    });
-
-    function handleScan(scannedCode) {
-      const matched = dataFromTxt.find(row => row[0] === scannedCode);
-      if (matched) {
-        resultDiv.textContent = 'Sonuç: ' + matched.join(' ');
-      } else {
-        resultDiv.textContent = 'Sonuç: Bulunamadı';
+    async function startCameraAndScan() {
+      if (!('BarcodeDetector' in window)) {
+        alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor.");
+        return;
       }
 
-      // Tarama yeniden başlatmak için kullanıcıya yeniden buton göster
-      startBtn.style.display = 'block';
-      scanner.style.display = 'none';
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+        video.srcObject = stream;
+        video.style.display = "block";
+        startBtn.style.display = "none";
+      } catch (err) {
+        console.error("Kamera açılamadı:", err);
+        resultDiv.textContent = "Kamera açılamadı.";
+        return;
+      }
+
+      const barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'code_128', 'qr_code'] });
+
+      // Tıklanınca tarama başlar
+      video.addEventListener("click", async () => {
+        try {
+          const bitmap = await createImageBitmap(video);
+          const barcodes = await barcodeDetector.detect(bitmap);
+
+          if (barcodes.length > 0) {
+            const code = barcodes[0].rawValue;
+            console.log("Barkod bulundu:", code);
+            resultDiv.textContent = "Barkod: " + code;
+
+            // Verileri txt'den yükle ve ara
+            const data = await loadTxtData();
+            const match = data.find(row => row[0] === code);
+
+            if (match) {
+              resultDiv.textContent = "Sonuç: " + match.join(" ");
+            } else {
+              resultDiv.textContent = "Sonuç: Barkod bulunamadı.";
+            }
+
+            // Kamerayı durdur
+            stream.getTracks().forEach(track => track.stop());
+            video.style.display = "none";
+            startBtn.style.display = "block";
+          } else {
+            resultDiv.textContent = "Barkod bulunamadı. Tekrar deneyin.";
+          }
+        } catch (err) {
+          console.error("Tarama hatası:", err);
+        }
+      });
     }
+
+    startBtn.addEventListener("click", startCameraAndScan);
   </script>
+
 </body>
 </html>
