@@ -21,14 +21,12 @@
       box-shadow: 0 10px 30px var(--shadow); max-width: 480px; width: 100%;
       text-align: center;
     }
-    .search-box {
-      position: relative; margin-bottom: 16px;
-    }
+    /* Arama kutusu + ikon */
+    .search-box { position: relative; margin-bottom: 16px; }
     .search-box input {
       width: 100%; padding: 14px 44px 14px 14px; font-size: 15px;
       border-radius: 10px; border: 1px solid var(--input-border);
-      font-family: 'Inter', sans-serif;
-      background: var(--input-bg);
+      font-family: 'Inter', sans-serif; background: var(--input-bg);
     }
     .search-box input:focus { border-color: var(--primary); outline: none; }
     .search-box button {
@@ -38,9 +36,9 @@
       padding: 0; margin: 0;
     }
     .search-box button:hover { color: var(--primary); }
-    .button-group {
-      display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap;
-    }
+
+    /* Kamera ve butonlar */
+    .button-group { display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap; }
     button.control {
       flex: 1; padding: 12px 18px; border-radius: 10px;
       font-size: 15px; font-weight: 500; cursor: pointer; border: none;
@@ -50,16 +48,20 @@
     .primary:hover { background: var(--primary-hover); }
     .secondary { background: #e5e7eb; color: var(--muted); }
     .secondary:hover { background: #d1d5db; }
+
     #video {
       width: 100%; max-height: 50vh; background: black; display: none;
       border-radius: 14px; margin-bottom: 16px;
     }
+
+    /* Sonuç kutusu */
     .output {
       padding: 20px; background: #f3f4f6; border: 1px dashed #cbd5e1;
       border-radius: 14px; min-height: 100px;
       display: flex; align-items: center; justify-content: center;
       flex-direction: column; overflow-wrap: break-word;
-      font-weight: 600; white-space: pre-line; /* satır kır */
+      font-weight: 600; white-space: pre-wrap; /* \n ve boşlukları koru */
+      text-align: left; /* metni sola hizala, okunaklı olsun */
     }
   </style>
 </head>
@@ -67,68 +69,158 @@
 
   <div class="wrapper">
 
-    <!-- 📌 Manuel arama (numeric + ikonlu) -->
+    <!-- 🔎 Manuel arama (ikonlu, numerik) -->
     <div class="search-box">
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="Barkod Ara..." 
-    pattern="[0-9]*" 
-    inputmode="numeric" 
-  />
-  <span class="search-icon" onclick="manualSearch()">🔍</span>
-</div>
+      <input
+        type="text"
+        id="manualInput"
+        placeholder="Barkod giriniz"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        autocomplete="off"
+      />
+      <button id="searchBtn" aria-label="Ara">🔍</button>
+    </div>
 
-<div id="output" class="output">Sonuçlar burada görünecek...</div>
+    <!-- 📷 Kamera alanı -->
+    <video id="video" autoplay playsinline></video>
 
-<script>
-  async function manualSearch() {
-    const input = document.getElementById("searchInput");
-    const query = input.value.trim();
+    <!-- 🎛️ Kamera kontrol butonları -->
+    <div class="button-group">
+      <button id="startBtn" class="control primary">Kamera Aç</button>
+      <button id="stopBtn" class="control secondary" style="display:none;">Kamera Kapat</button>
+    </div>
 
-    if (!query) return;
+    <!-- 🧾 Sonuç alanı -->
+    <div id="result" class="output">Sonuç: -</div>
 
-    try {
-      const response = await fetch("scan.txt");
-      const text = await response.text();
-      const lines = text.split("\n");
+  </div>
 
-      let found = null;
-      for (let line of lines) {
-        const cols = line.trim().split(/\s+/); // boşluk/tab ile ayır
-        if (cols[0] === query) {
-          found = cols;
-          break;
+  <script>
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const video = document.getElementById("video");
+    const resultDiv = document.getElementById("result");
+    const manualInput = document.getElementById("manualInput");
+    const searchBtn = document.getElementById("searchBtn");
+    let stream;
+    let barcodeDetector;
+
+    // scan.txt'yi başta yükleyip cache'le
+    const dataPromise = loadTxtData();
+
+    async function loadTxtData() {
+      try {
+        const response = await fetch("scan.txt");
+        const text = await response.text();
+        // satırları boşluk/tab ile ayır, en az 2 sütun olanları al
+        return text.trim()
+          .split('\n')
+          .map(line => line.trim().split(/\s+/))
+          .filter(row => row.length >= 2);
+      } catch (e) {
+        console.error("scan.txt okunamadı:", e);
+        resultDiv.textContent = "Hata: scan.txt dosyası yüklenemedi.";
+        return [];
+      }
+    }
+
+    // Kamera aç
+    async function startCameraAndScan() {
+      if (!("BarcodeDetector" in window)) {
+        alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor.");
+        return;
+      }
+      if (!barcodeDetector) {
+        barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'code_128', 'qr_code'] });
+      }
+
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+        video.srcObject = stream;
+        video.style.display = "block";
+        startBtn.style.display = "none";
+        stopBtn.style.display = "inline-block";
+      } catch (err) {
+        console.error("Kamera açılamadı:", err);
+        resultDiv.textContent = "Kamera açılamadı.";
+      }
+    }
+
+    // Video'ya tıklayınca tek kare tarama
+    video.addEventListener("click", onVideoClick);
+    async function onVideoClick() {
+      if (!stream) return;
+      try {
+        const bitmap = await createImageBitmap(video);
+        const barcodes = await barcodeDetector.detect(bitmap);
+
+        if (barcodes.length > 0) {
+          const code = (barcodes[0].rawValue || "").trim();
+          await showResult(code);
+          stopCamera();
+        } else {
+          resultDiv.textContent = "Aranan: -\nSonuç: Barkod bulunamadı.";
         }
+      } catch (err) {
+        console.error("Tarama hatası:", err);
       }
+    }
 
-      let resultHtml = `<strong>Aranan:</strong> ${query}<br><strong>Sonuç:</strong><br>`;
-      if (found) {
-        resultHtml += found.slice(1).map(v => v).join("<br>");
+    function stopCamera() {
+      if (stream) {
+        stream.getTracks().forEach(t => t.stop());
+        stream = null;
+      }
+      video.srcObject = null;
+      video.style.display = "none";
+      startBtn.style.display = "inline-block";
+      stopBtn.style.display = "none";
+    }
+
+    // Ortak sonuç yazdırıcı
+    async function showResult(code) {
+      const data = await dataPromise;
+      const row = data.find(r => r[0] === code);
+
+      if (row) {
+        const values = row.slice(1); // barkod dışındaki sütunlar
+        const first = values[0] ?? "";
+        const rest = values.slice(1).map(v => "            " + v); // 12 boşluk ile hizala
+        const lines = ["Aranan: " + code, "Sonuç: " + first, ...rest];
+        resultDiv.textContent = lines.join("\n");
       } else {
-        resultHtml += "Barkod bulunamadı.";
+        resultDiv.textContent = `Aranan: ${code}\nSonuç: Barkod bulunamadı.`;
       }
-
-      document.getElementById("output").innerHTML = resultHtml;
-    } catch (err) {
-      document.getElementById("output").innerHTML = "scan.txt yüklenemedi.";
     }
 
-    input.value = ""; // kutuyu temizle
-  }
+    // Manuel arama: ikon tıklaması
+    searchBtn.addEventListener("click", () => {
+      const code = manualInput.value.trim();
+      if (code) {
+        showResult(code);
+        manualInput.value = ""; // temizle
+      } else {
+        resultDiv.textContent = "Aranan: -\nSonuç: Lütfen barkod giriniz.";
+      }
+    });
 
-  // Enter ile arama
-  document.getElementById("searchInput").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      manualSearch();
-    }
-  });
+    // Enter ile arama
+    manualInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        searchBtn.click();
+      }
+    });
 
-  // Numeric-only giriş
-  document.getElementById("searchInput").addEventListener("input", function (e) {
-    this.value = this.value.replace(/[^0-9]/g, ""); 
-  });
-</script>
+    // Sadece numerik giriş (her karakterde filtrele)
+    manualInput.addEventListener("input", function () {
+      const onlyDigits = this.value.replace(/\D+/g, "");
+      if (this.value !== onlyDigits) this.value = onlyDigits;
+    });
 
+    startBtn.addEventListener("click", startCameraAndScan);
+    stopBtn.addEventListener("click", stopCamera);
+  </script>
 </body>
 </html>
