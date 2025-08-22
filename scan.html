@@ -5,61 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barkod Tarayıcı</title>
   <style>
+    :root {
+      --bg: #f6f8fa; --card: #ffffff; --primary: #6366f1; --primary-hover: #4f46e5;
+      --input-bg: #f9fafb; --input-border: #d1d5db; --text: #1f2937; --muted: #6b7280;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg); margin: 0; padding: 20px 0;
+      display: flex; justify-content: center; color: var(--text);
+    }
+    .wrapper {
+      background: var(--card); padding: 30px 24px; border-radius: 20px;
+      box-shadow: 0 10px 30px var(--shadow); max-width: 480px; width: 100%;
       text-align: center;
-      margin: 0;
-      padding: 20px;
-      background: #f5f5f5;
     }
-
+    input {
+      width: 100%; padding: 14px; font-size: 15px;
+      border-radius: 10px; border: 1px solid var(--input-border);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 16px; background: var(--input-bg);
+    }
+    input:focus { border-color: var(--primary); outline: none; }
+    .button-group {
+      display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap;
+    }
+    button {
+      flex: 1; padding: 12px 18px; border-radius: 10px;
+      font-size: 15px; font-weight: 500; cursor: pointer; border: none;
+      transition: all 0.2s ease;
+    }
+    .primary { background: var(--primary); color: white; }
+    .primary:hover { background: var(--primary-hover); }
+    .secondary { background: #e5e7eb; color: var(--muted); }
+    .secondary:hover { background: #d1d5db; }
     #video {
-      width: 100%;
-      max-width: 500px;
-      max-height: 60vh;
-      background: black;
-      display: none;
-      margin-top: 15px;
-      border: 3px solid #333;
-      border-radius: 10px;
+      width: 100%; max-height: 50vh; background: black; display: none;
+      border-radius: 14px; margin-bottom: 16px;
     }
-
-    #result {
-      margin-top: 20px;
-      font-size: 1.2em;
-      font-weight: bold;
-      white-space: pre-wrap;
-    }
-
-    button, input {
-      padding: 10px 15px;
-      font-size: 1em;
-      margin: 5px;
-    }
-
-    #controlButtons {
-      margin-top: 15px;
+    .output {
+      padding: 20px; background: #f3f4f6; border: 1px dashed #cbd5e1;
+      border-radius: 14px; min-height: 100px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; overflow-wrap: break-word;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
-  <!-- 📌 Manuel arama alanı (başlık yerine) -->
-  <div>
-    <input type="text" id="manualInput" placeholder="Barkod giriniz" style="width:200px;">
-    <button id="searchBtn">Ara</button>
+  <div class="wrapper">
+
+    <!-- 📌 Manuel arama -->
+    <input type="text" id="manualInput" placeholder="Barkod giriniz">
+    <button id="searchBtn" class="primary" style="width:100%; margin-bottom:16px;">Ara</button>
+
+    <!-- 📌 Kamera alanı -->
+    <video id="video" autoplay playsinline></video>
+
+    <!-- 📌 Kamera kontrol butonları -->
+    <div class="button-group">
+      <button id="startBtn" class="primary">Kamera Aç</button>
+      <button id="stopBtn" class="secondary" style="display:none;">Kamera Kapat</button>
+    </div>
+
+    <!-- 📌 Sonuç alanı -->
+    <div id="result" class="output">Sonuç: -</div>
+
   </div>
-
-  <!-- 📌 Kamera video alanı -->
-  <video id="video" autoplay playsinline></video>
-
-  <!-- 📌 Kamera kontrol butonları -->
-  <div id="controlButtons">
-    <button id="startBtn">Kamera Aç</button>
-    <button id="stopBtn" style="display:none;">Kamera Kapat</button>
-  </div>
-
-  <div id="result">Sonuç: -</div>
 
   <script>
     const startBtn = document.getElementById("startBtn");
