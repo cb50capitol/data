@@ -21,17 +21,27 @@
       box-shadow: 0 10px 30px var(--shadow); max-width: 480px; width: 100%;
       text-align: center;
     }
-    input {
-      width: 100%; padding: 14px; font-size: 15px;
+    .search-box {
+      position: relative; margin-bottom: 16px;
+    }
+    .search-box input {
+      width: 100%; padding: 14px 44px 14px 14px; font-size: 15px;
       border-radius: 10px; border: 1px solid var(--input-border);
       font-family: 'Inter', sans-serif;
-      margin-bottom: 16px; background: var(--input-bg);
+      background: var(--input-bg);
     }
-    input:focus { border-color: var(--primary); outline: none; }
+    .search-box input:focus { border-color: var(--primary); outline: none; }
+    .search-box button {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      font-size: 18px; color: var(--muted);
+      padding: 0; margin: 0;
+    }
+    .search-box button:hover { color: var(--primary); }
     .button-group {
       display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap;
     }
-    button {
+    button.control {
       flex: 1; padding: 12px 18px; border-radius: 10px;
       font-size: 15px; font-weight: 500; cursor: pointer; border: none;
       transition: all 0.2s ease;
@@ -49,7 +59,7 @@
       border-radius: 14px; min-height: 100px;
       display: flex; align-items: center; justify-content: center;
       flex-direction: column; overflow-wrap: break-word;
-      font-weight: 600;
+      font-weight: 600; white-space: pre-line; /* satır kır */
     }
   </style>
 </head>
@@ -57,17 +67,19 @@
 
   <div class="wrapper">
 
-    <!-- 📌 Manuel arama -->
-    <input type="text" id="manualInput" placeholder="Barkod giriniz">
-    <button id="searchBtn" class="primary" style="width:100%; margin-bottom:16px;">Ara</button>
+    <!-- 📌 Manuel arama (numeric + ikonlu) -->
+    <div class="search-box">
+      <input type="number" id="manualInput" placeholder="Barkod giriniz" inputmode="numeric" pattern="[0-9]*">
+      <button id="searchBtn">🔍</button>
+    </div>
 
     <!-- 📌 Kamera alanı -->
     <video id="video" autoplay playsinline></video>
 
     <!-- 📌 Kamera kontrol butonları -->
     <div class="button-group">
-      <button id="startBtn" class="primary">Kamera Aç</button>
-      <button id="stopBtn" class="secondary" style="display:none;">Kamera Kapat</button>
+      <button id="startBtn" class="control primary">Kamera Aç</button>
+      <button id="stopBtn" class="control secondary" style="display:none;">Kamera Kapat</button>
     </div>
 
     <!-- 📌 Sonuç alanı -->
@@ -134,7 +146,7 @@
           showResult(code);
           stopCamera();
         } else {
-          resultDiv.textContent = "Barkod bulunamadı. Lütfen tekrar deneyin.";
+          resultDiv.textContent = "Aranan: -\nSonuç: Barkod bulunamadı.";
         }
       } catch (err) {
         console.error("Tarama hatası:", err);
@@ -158,9 +170,9 @@
       const match = data.find(row => row[0] === code);
 
       if (match) {
-        resultDiv.textContent = "Sonuç:\n" + match.join(" ");
+        resultDiv.textContent = `Aranan: ${code}\nSonuç: ${match[1]}`;
       } else {
-        resultDiv.textContent = "Sonuç: Barkod bulunamadı.";
+        resultDiv.textContent = `Aranan: ${code}\nSonuç: Barkod bulunamadı.`;
       }
     }
 
@@ -169,8 +181,9 @@
       const code = manualInput.value.trim();
       if (code) {
         showResult(code);
+        manualInput.value = ""; // inputu boşalt
       } else {
-        resultDiv.textContent = "Lütfen barkod giriniz.";
+        resultDiv.textContent = "Aranan: -\nSonuç: Lütfen barkod giriniz.";
       }
     });
 
