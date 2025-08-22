@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barkod Tarayıcı</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+
+    #video {
+      width: 100%;
+      max-height: 60vh;
+      background: black;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Barkod Tarayıcı</h1>
+  <button id="startBtn">Kamera Aç</button>
+  <div id="scanner" style="display:none;">
+    <video id="video" autoplay></video>
+  </div>
+  <div id="result">Sonuç: -</div>
+
+  <!-- QuaggaJS CDN -->
+  <script src="https://unpkg.com/@ericblade/quagga2@1.2.6/dist/quagga.min.js"></script>
+  <script>
+    const dataFromTxt = `
+868 firma1 423
+123 firma2 987
+456 firma3 654
+`.trim().split('\n').map(line => line.split(' '));
+
+    const startBtn = document.getElementById('startBtn');
+    const resultDiv = document.getElementById('result');
+    const scanner = document.getElementById('scanner');
+
+    startBtn.addEventListener('click', () => {
+      scanner.style.display = 'block';
+      startBtn.style.display = 'none';
+
+      Quagga.init({
+        inputStream: {
+          type: "LiveStream",
+          target: document.querySelector('#video'),
+          constraints: {
+            facingMode: "environment" // arka kamera
+          }
+        },
+        decoder: {
+          readers: ["ean_reader"] // EAN-13 barkodları (örneğin 868)
+        }
+      }, (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        Quagga.start();
+      });
+
+      Quagga.onDetected((data) => {
+        const code = data.codeResult.code;
+        console.log("Barkod:", code);
+        Quagga.stop();
+        handleScan(code);
+      });
+    });
+
+    function handleScan(scannedCode) {
+      const matched = dataFromTxt.find(row => row[0] === scannedCode);
+      if (matched) {
+        resultDiv.textContent = 'Sonuç: ' + matched.join(' ');
+      } else {
+        resultDiv.textContent = 'Sonuç: Bulunamadı';
+      }
+
+      // Tarama yeniden başlatmak için kullanıcıya yeniden buton göster
+      startBtn.style.display = 'block';
+      scanner.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
