@@ -1,215 +1,152 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Barkod Tarayıcı</title>
-  <style>
-    :root {
-      --bg: #f6f8fa; --card: #ffffff; --primary: #6366f1; --primary-hover: #4f46e5;
-      --input-bg: #f9fafb; --input-border: #d1d5db; --text: #1f2937; --muted: #6b7280;
-      --shadow: rgba(0, 0, 0, 0.05);
-    }
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg); margin: 0; padding: 20px 0;
-      display: flex; justify-content: center; color: var(--text);
-    }
-    .wrapper {
-      background: var(--card); padding: 30px 24px; border-radius: 20px;
-      box-shadow: 0 10px 30px var(--shadow); max-width: 480px; width: 100%;
-      text-align: center;
-    }
-    /* Arama kutusu + ikon */
-    .search-box { position: relative; margin-bottom: 16px; }
-    .search-box input {
-      width: 100%; padding: 14px 44px 14px 14px; font-size: 15px;
-      border-radius: 10px; border: 1px solid var(--input-border);
-      font-family: 'Inter', sans-serif; background: var(--input-bg);
-    }
-    .search-box input:focus { border-color: var(--primary); outline: none; }
-    .search-box button {
-      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-      background: none; border: none; cursor: pointer;
-      font-size: 18px; color: var(--muted);
-      padding: 0; margin: 0;
-    }
-    .search-box button:hover { color: var(--primary); }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Barkod Tarayıcı</title>
+<style>
+:root {
+  --bg: #f6f8fa; --card: #ffffff; --primary: #6366f1; --primary-hover: #4f46e5;
+  --input-bg: #f9fafb; --input-border: #d1d5db; --text: #1f2937; --muted: #6b7280;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+* { box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; padding: 20px 0; display: flex; justify-content: center; color: var(--text);}
+.wrapper { background: var(--card); padding: 30px 24px; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow); max-width: 480px; width: 100%; text-align: center;}
+.search-box { position: relative; margin-bottom: 16px; }
+.search-box input { width: 100%; padding: 14px 44px 14px 14px; font-size: 15px; border-radius: 10px; border: 1px solid var(--input-border); font-family: 'Inter', sans-serif; background: var(--input-bg);}
+.search-box input:focus { border-color: var(--primary); outline: none;}
+.search-box button { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 18px; color: var(--muted); padding: 0; margin: 0;}
+.search-box button:hover { color: var(--primary); }
 
-    /* Kamera ve butonlar */
-    .button-group { display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap; }
-    button.control {
-      flex: 1; padding: 12px 18px; border-radius: 10px;
-      font-size: 15px; font-weight: 500; cursor: pointer; border: none;
-      transition: all 0.2s ease;
-    }
-    .primary { background: var(--primary); color: white; }
-    .primary:hover { background: var(--primary-hover); }
-    .secondary { background: #e5e7eb; color: var(--muted); }
-    .secondary:hover { background: #d1d5db; }
+.button-group { display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap; }
+button.control { flex: 1; padding: 12px 18px; border-radius: 10px; font-size: 15px; font-weight: 500; cursor: pointer; border: none; transition: all 0.2s ease;}
+.primary { background: var(--primary); color: white; }
+.primary:hover { background: var(--primary-hover);}
+.secondary { background: #e5e7eb; color: var(--muted); }
+.secondary:hover { background: #d1d5db;}
 
-    #video {
-      width: 100%; max-height: 50vh; background: black; display: none;
-      border-radius: 14px; margin-bottom: 16px;
-    }
+#video { width: 100%; max-height: 50vh; background: black; display: none; border-radius: 14px; margin-bottom: 16px;}
 
-    /* Sonuç kutusu */
-    .output {
-      padding: 20px; background: #f3f4f6; border: 1px dashed #cbd5e1;
-      border-radius: 14px; min-height: 100px;
-      display: flex; align-items: flex-start; justify-content: flex-start;
-      flex-direction: column; overflow-wrap: break-word;
-      font-weight: 600; white-space: pre-wrap;
-      text-align: left;
-    }
+.output { padding: 20px; background: #f3f4f6; border: 1px dashed #cbd5e1; border-radius: 14px; min-height: 100px; display: flex; flex-direction: column; align-items: flex-start; font-weight: 600; white-space: pre-wrap; text-align: left; overflow-wrap: break-word;}
 
-    .other-output {
-      margin-top: 12px; padding: 20px; background: #eef2ff;
-      border: 1px dashed #818cf8; border-radius: 14px;
-      display: none; flex-direction: column; white-space: pre-wrap;
-      text-align: left;
-    }
-  </style>
+.other-output { margin-top: 12px; display: flex; flex-direction: column; gap: 12px; }
+.other-item { padding: 16px; background: #eef2ff; border: 1px dashed #818cf8; border-radius: 14px; white-space: pre-wrap; text-align: left; }
+</style>
 </head>
 <body>
 
-  <div class="wrapper">
-
-    <!-- 🔎 Manuel arama (ikonlu, numerik) -->
-    <div class="search-box">
-      <input
-        type="text"
-        id="manualInput"
-        placeholder="Barkod giriniz"
-        inputmode="numeric"
-        pattern="[0-9]*"
-        autocomplete="off"
-      />
-      <button id="searchBtn" aria-label="Ara">🔍</button>
-    </div>
-
-    <!-- 📷 Kamera alanı -->
-    <video id="video" autoplay playsinline></video>
-
-    <!-- 🎛️ Kamera kontrol butonları -->
-    <div class="button-group">
-      <button id="startBtn" class="control primary">Kamera Aç</button>
-      <button id="stopBtn" class="control secondary" style="display:none;">Kamera Kapat</button>
-    </div>
-
-    <!-- 🧾 Sonuç alanı -->
-    <div id="result" class="output">🔎</div>
-    <div id="otherResult" class="other-output"></div>
-
+<div class="wrapper">
+  <div class="search-box">
+    <input type="text" id="manualInput" placeholder="Barkod giriniz" inputmode="numeric" pattern="[0-9]*" autocomplete="off"/>
+    <button id="searchBtn" aria-label="Ara">🔍</button>
   </div>
 
-  <script>
-    const startBtn = document.getElementById("startBtn");
-    const stopBtn = document.getElementById("stopBtn");
-    const video = document.getElementById("video");
-    const resultDiv = document.getElementById("result");
-    const otherDiv = document.getElementById("otherResult");
-    const manualInput = document.getElementById("manualInput");
-    const searchBtn = document.getElementById("searchBtn");
-    let stream;
-    let barcodeDetector;
+  <video id="video" autoplay playsinline></video>
 
-    // scan.txt'yi önceden yükle
-    const dataPromise = loadTxtData();
+  <div class="button-group">
+    <button id="startBtn" class="control primary">Kamera Aç</button>
+    <button id="stopBtn" class="control secondary" style="display:none;">Kamera Kapat</button>
+  </div>
 
-    async function loadTxtData() {
-      try {
-        const response = await fetch("scan.txt");
-        const text = await response.text();
-        return text.trim()
-          .split('\n')
-          .map(line => line.trim().split(/\s+/))
-          .filter(row => row.length >= 2);
-      } catch (e) {
-        console.error("scan.txt okunamadı:", e);
-        resultDiv.textContent = "Hata: scan.txt dosyası yüklenemedi.";
-        return [];
+  <div id="result" class="output">Sonuç: -</div>
+  <div id="otherResult" class="other-output"></div>
+</div>
+
+<script>
+const startBtn = document.getElementById("startBtn");
+const stopBtn = document.getElementById("stopBtn");
+const video = document.getElementById("video");
+const resultDiv = document.getElementById("result");
+const otherDiv = document.getElementById("otherResult");
+const manualInput = document.getElementById("manualInput");
+const searchBtn = document.getElementById("searchBtn");
+let stream;
+let barcodeDetector;
+
+// scan.txt'yi önceden yükle
+const dataPromise = loadTxtData();
+
+async function loadTxtData() {
+  try {
+    const response = await fetch("scan.txt");
+    const text = await response.text();
+    return text.trim().split('\n').map(line=>line.trim().split(/\s+/)).filter(r=>r.length>=2);
+  } catch(e) {
+    console.error("scan.txt okunamadı:", e);
+    resultDiv.textContent = "Hata: scan.txt dosyası yüklenemedi.";
+    return [];
+  }
+}
+
+async function showResult(code){
+  const data = await dataPromise;
+  const matches = data.filter(r=>r[0]===code);
+
+  if(matches.length>0){
+    // İlk eşleşme
+    const first = matches[0].slice(1).join("\n");
+    resultDiv.textContent = `Aranan: ${code}\n${first}`;
+
+    // Diğer eşleşmeler
+    otherDiv.innerHTML = "";
+    if(matches.length>1){
+      for(let i=1;i<matches.length;i++){
+        const div = document.createElement("div");
+        div.className="other-item";
+        div.textContent = matches[i].slice(1).join("\n");
+        otherDiv.appendChild(div);
       }
     }
+  } else {
+    resultDiv.textContent = `Aranan: ${code}\nBarkod bulunamadı.`;
+    otherDiv.innerHTML="";
+  }
+}
 
-    async function showResult(code) {
-      const data = await dataPromise;
-      const matches = data.filter(r => r[0] === code);
+async function manualSearch(){
+  const code = manualInput.value.trim();
+  if(!code) return;
+  await showResult(code);
+  manualInput.value="";
+}
 
-      if (matches.length > 0) {
-        // İlk eşleşme
-        const first = matches[0].slice(1).join("\n");
-        resultDiv.textContent = `Aranan: ${code}\n${first}`;
+searchBtn.addEventListener("click", manualSearch);
+manualInput.addEventListener("keydown", e=>{ if(e.key==="Enter"){manualSearch();} });
+manualInput.addEventListener("input", function(){ this.value=this.value.replace(/\D/g,""); });
 
-        // Diğer eşleşmeler
-        if (matches.length > 1) {
-          const other = matches.slice(1).map(r => r.slice(1).join("\n")).join("\n\n");
-          otherDiv.textContent = other;
-          otherDiv.style.display = "flex";
-        } else {
-          otherDiv.style.display = "none";
-        }
-      } else {
-        resultDiv.textContent = `Aranan: ${code}\nBarkod bulunamadı.`;
-        otherDiv.style.display = "none";
-      }
+// Kamera işlemleri
+async function startCameraAndScan(){
+  if(!("BarcodeDetector" in window)){alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor."); return;}
+  if(!barcodeDetector) barcodeDetector = new BarcodeDetector({formats:['ean_13','code_128','qr_code']});
+  try{
+    stream = await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"}});
+    video.srcObject=stream; video.style.display="block"; startBtn.style.display="none"; stopBtn.style.display="inline-block";
+  }catch(err){console.error(err); resultDiv.textContent="Kamera açılamadı.";}
+}
+
+video.addEventListener("click", async ()=>{
+  if(!stream) return;
+  try{
+    const bitmap = await createImageBitmap(video);
+    const barcodes = await barcodeDetector.detect(bitmap);
+    if(barcodes.length>0){
+      await showResult(barcodes[0].rawValue.trim());
+      stopCamera();
+    }else{
+      resultDiv.textContent="Aranan: -\nBarkod bulunamadı.";
+      otherDiv.innerHTML="";
     }
+  }catch(err){console.error(err);}
+});
 
-    async function manualSearch() {
-      const code = manualInput.value.trim();
-      if (!code) return;
-      await showResult(code);
-      manualInput.value = "";
-    }
+function stopCamera(){
+  if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; }
+  video.srcObject=null; video.style.display="none"; startBtn.style.display="inline-block"; stopBtn.style.display="none";
+}
 
-    searchBtn.addEventListener("click", manualSearch);
-    manualInput.addEventListener("keydown", e => { if(e.key==="Enter"){manualSearch();} });
-    manualInput.addEventListener("input", function (){ this.value = this.value.replace(/\D/g,""); });
-
-    // Kamera işlemleri
-    async function startCameraAndScan() {
-      if (!("BarcodeDetector" in window)) { alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor."); return; }
-      if (!barcodeDetector) barcodeDetector = new BarcodeDetector({ formats:['ean_13','code_128','qr_code'] });
-
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-        video.srcObject = stream;
-        video.style.display = "block";
-        startBtn.style.display = "none";
-        stopBtn.style.display = "inline-block";
-      } catch(err) {
-        console.error("Kamera açılamadı:", err);
-        resultDiv.textContent = "Kamera açılamadı.";
-      }
-    }
-
-    video.addEventListener("click", async ()=>{
-      if(!stream) return;
-      try{
-        const bitmap = await createImageBitmap(video);
-        const barcodes = await barcodeDetector.detect(bitmap);
-        if(barcodes.length>0){
-          await showResult(barcodes[0].rawValue.trim());
-          stopCamera();
-        } else {
-          resultDiv.textContent = "Aranan: -\nBarkod bulunamadı.";
-          otherDiv.style.display = "none";
-        }
-      }catch(err){console.error(err);}
-    });
-
-    function stopCamera(){
-      if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; }
-      video.srcObject=null;
-      video.style.display="none";
-      startBtn.style.display="inline-block";
-      stopBtn.style.display="none";
-    }
-
-    startBtn.addEventListener("click", startCameraAndScan);
-    stopBtn.addEventListener("click", stopCamera);
-
-  </script>
+startBtn.addEventListener("click", startCameraAndScan);
+stopBtn.addEventListener("click", stopCamera);
+</script>
 </body>
 </html>
