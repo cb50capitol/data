@@ -45,88 +45,109 @@
   <video id="video" autoplay playsinline></video>
   <div id="result">Sonuç: -</div>
 
- <script>
-  const startBtn = document.getElementById("startBtn");
-  const video = document.getElementById("video");
-  const resultDiv = document.getElementById("result");
-  let stream;
-  let barcodeDetector;
+  <!-- 📌 Manuel arama alanı -->
+  <div style="margin-top:20px;">
+    <input type="text" id="manualInput" placeholder="Barkod giriniz" style="padding:10px; font-size:1em; width:200px;">
+    <button id="searchBtn">Ara</button>
+  </div>
 
-  // 1) scan.txt'yi başta yükleyip cache'le
-  const dataPromise = loadTxtData();
+  <script>
+    const startBtn = document.getElementById("startBtn");
+    const video = document.getElementById("video");
+    const resultDiv = document.getElementById("result");
+    const manualInput = document.getElementById("manualInput");
+    const searchBtn = document.getElementById("searchBtn");
+    let stream;
+    let barcodeDetector;
 
-  async function loadTxtData() {
-    try {
-      const response = await fetch("scan.txt");
-      const text = await response.text();
-      return text.trim().split('\n').map(line => line.trim().split(/\s+/)).filter(row => row.length >= 2);
-    } catch (e) {
-      console.error("scan.txt okunamadı:", e);
-      resultDiv.textContent = "Hata: scan.txt dosyası yüklenemedi.";
-      return [];
-    }
-  }
+    // 1) scan.txt'yi başta yükleyip cache'le
+    const dataPromise = loadTxtData();
 
-  async function startCameraAndScan() {
-    if (!("BarcodeDetector" in window)) {
-      alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor.");
-      return;
-    }
-    // Detector'ı bir kez oluştur
-    if (!barcodeDetector) {
-      barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'code_128', 'qr_code'] });
-    }
-
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-      video.srcObject = stream;
-      video.style.display = "block";
-      startBtn.style.display = "none";
-    } catch (err) {
-      console.error("Kamera açılamadı:", err);
-      resultDiv.textContent = "Kamera açılamadı.";
-      return;
-    }
-  }
-
-  // 2) Dinleyiciyi DIŞARIDA bir kez ekle (birikme yok)
-  video.addEventListener("click", onVideoClick);
-
-  async function onVideoClick() {
-    if (!stream) return; // Kamera kapalıyken tıklandıysa yok say
-    try {
-      const bitmap = await createImageBitmap(video);
-      const barcodes = await barcodeDetector.detect(bitmap);
-
-      if (barcodes.length > 0) {
-        const code = barcodes[0].rawValue.trim();
-        resultDiv.textContent = "Barkod: " + code;
-
-        const data = await dataPromise; // cache'den
-        const match = data.find(row => row[0] === code);
-
-        if (match) {
-          resultDiv.textContent = "Sonuç:\n" + match.join(" ");
-        } else {
-          resultDiv.textContent = "Sonuç: Barkod bulunamadı.";
-        }
-
-        // Kamera kapat + tam temizle
-        stream.getTracks().forEach(t => t.stop());
-        stream = null;
-        video.srcObject = null;
-        video.style.display = "none";
-        startBtn.style.display = "block";
-      } else {
-        resultDiv.textContent = "Barkod bulunamadı. Lütfen tekrar deneyin.";
+    async function loadTxtData() {
+      try {
+        const response = await fetch("scan.txt");
+        const text = await response.text();
+        return text.trim().split('\n').map(line => line.trim().split(/\s+/)).filter(row => row.length >= 2);
+      } catch (e) {
+        console.error("scan.txt okunamadı:", e);
+        resultDiv.textContent = "Hata: scan.txt dosyası yüklenemedi.";
+        return [];
       }
-    } catch (err) {
-      console.error("Tarama hatası:", err);
     }
-  }
 
-  startBtn.addEventListener("click", startCameraAndScan);
-</script>
+    async function startCameraAndScan() {
+      if (!("BarcodeDetector" in window)) {
+        alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor.");
+        return;
+      }
+      if (!barcodeDetector) {
+        barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'code_128', 'qr_code'] });
+      }
 
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+        video.srcObject = stream;
+        video.style.display = "block";
+        startBtn.style.display = "none";
+      } catch (err) {
+        console.error("Kamera açılamadı:", err);
+        resultDiv.textContent = "Kamera açılamadı.";
+        return;
+      }
+    }
+
+    video.addEventListener("click", onVideoClick);
+
+    async function onVideoClick() {
+      if (!stream) return;
+      try {
+        const bitmap = await createImageBitmap(video);
+        const barcodes = await barcodeDetector.detect(bitmap);
+
+        if (barcodes.length > 0) {
+          const code = barcodes[0].rawValue.trim();
+          showResult(code);
+          stopCamera();
+        } else {
+          resultDiv.textContent = "Barkod bulunamadı. Lütfen tekrar deneyin.";
+        }
+      } catch (err) {
+        console.error("Tarama hatası:", err);
+      }
+    }
+
+    function stopCamera() {
+      stream.getTracks().forEach(t => t.stop());
+      stream = null;
+      video.srcObject = null;
+      video.style.display = "none";
+      startBtn.style.display = "block";
+    }
+
+    // 📌 Ortak sonuç gösterici (kamera + manuel arama için)
+    async function showResult(code) {
+      const data = await dataPromise;
+      const match = data.find(row => row[0] === code);
+
+      if (match) {
+        resultDiv.textContent = "Sonuç:\n" + match.join(" ");
+      } else {
+        resultDiv.textContent = "Sonuç: Barkod bulunamadı.";
+      }
+    }
+
+    // 📌 Manuel arama tıklaması
+    searchBtn.addEventListener("click", () => {
+      const code = manualInput.value.trim();
+      if (code) {
+        showResult(code);
+      } else {
+        resultDiv.textContent = "Lütfen barkod giriniz.";
+      }
+    });
+
+    startBtn.addEventListener("click", startCameraAndScan);
+  </script>
 </body>
+
 </html>
