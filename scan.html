@@ -86,7 +86,7 @@ async function showResult(code){
   if(matches.length>0){
     // İlk eşleşme
     const first = matches[0].slice(1).join("\n");
-    resultDiv.textContent = `Aranan: ${code}\n${first}`;
+    resultDiv.textContent = `🔍 ${code}\n${first}`;
 
     // Diğer eşleşmeler
     otherDiv.innerHTML = "";
@@ -99,7 +99,7 @@ async function showResult(code){
       }
     }
   } else {
-    resultDiv.textContent = `Aranan: ${code}\nBarkod bulunamadı.`;
+    resultDiv.textContent = `🔍 ${code}\nBarkod bulunamadı.`;
     otherDiv.innerHTML="";
   }
 }
@@ -134,7 +134,7 @@ video.addEventListener("click", async ()=>{
       await showResult(barcodes[0].rawValue.trim());
       stopCamera();
     }else{
-      resultDiv.textContent="Aranan: -\nBarkod bulunamadı.";
+      resultDiv.textContent="🔍 -\nBarkod bulunamadı.";
       otherDiv.innerHTML="";
     }
   }catch(err){console.error(err);}
