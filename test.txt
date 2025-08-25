@@ -1,6 +1,607 @@
 Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin1	Pierre Cardin T-Shirt, M, Lacivert	BONCI	5003254849003	8683858964186	CB62	1	1	4231323842
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1090746	5003129966003	8683798521678	CM44	1	3	4231379942
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, L, Lacivert	1090746	5003129966002	8683798521685	CM76	2	2	4231379975
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Bej	1090746	5003250408003	8683798777259	CB49	1	1	4231379993
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1090746	5003129966003	8683798521678	CB49	1	3	4231379993
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Bej	1090746	5003250408002	8683798777266	CB49	2	2	4231379993
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, L, Ekru	1090746	5003237136003	8683798521746	CM27	1	1	4231379998
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, XL, Ekru	1090746	5003237136004	8683798521753	CM27	1	1	4231379998
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1090746	5003129966003	8683798521678	CB56	1	3	4231380040
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Lacivert	1090746	5003129966004	8683798521661	CB53	1	1	4231380044
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, XL, Bej	1090746	5003250408004	8683798777280	CB53	1	1	4231380044
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Ekru	1090746	5003237136002	8683798521739	CB53	1	1	4231380044
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Ekru	1090746	5003237136001	8683798521722	CB45	1	1	4231380058
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, L, Bej	1095060	5003259327002	8683798910410	CM44	1	2	4231379942
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Bej	1095060	5003259327003	8683798910403	CM44	3	3	4231379942
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, L, Bej	1095060	5003259327002	8683798910410	CM76	1	2	4231379975
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Bej	1095060	5003259327004	8683798910397	CB56	1	1	4231380040
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1095061	5003259450003	8683798891085	CM76	1	1	4231379975
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Antrasit	1095061	5003259295004	8683798891122	CM76	2	3	4231379975
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, XL, Lacivert	1095061	5003259450005	8683798891108	CB49	1	1	4231379993
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, XL, Antrasit	1095061	5003259295005	8683798891153	CM27	1	1	4231379998
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Antrasit	1095061	5003259295003	8683798891139	CM27	2	2	4231379998
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Antrasit	1095061	5003259295004	8683798891122	CB56	1	3	4231380040
+Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, L, Antrasit	1095061	5003259295002	8683798891146	CB45	1	1	4231380058
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakka, 45, Beyaz - Gri	100000154 CLUB C 85	5002606778006	4057282035677	CB14	1	1	4231385921
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Beyaz	100000155 CLUB C 85	5001633153008	4056561016673	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100000155 CLUB C 85	5001633153005	4056561016512	CB35	2	3	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 44, Beyaz	100000155 CLUB C 85	5001633153007	4056561016604	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100000155 CLUB C 85	5001633153005	4056561016512	YM07	1	3	4231385945
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Beyaz	100008253 REEBOK SMASH EDGE S	5003211454005	4065427081038	CB65	1	1	4231385930
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100008491 CLASSIC LEATHER	5002918704010	4065419131864	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Beyaz	100008491 CLASSIC LEATHER	5002918704013	4065419131970	CB49	1	1	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100008491 CLASSIC LEATHER	5002918704010	4065419131864	CM27	1	2	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100032883 CLUB C REVENGE	5003058435004	4066756409456	CB15	1	4	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100032883 CLUB C REVENGE	5003058435004	4066756409456	CB21	1	4	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Beyaz	100032883 CLUB C REVENGE	5003058436006	4066756409289	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100032883 CLUB C REVENGE	5003058435004	4066756409456	CB68	1	4	4231385931
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Beyaz	100032883 CLUB C REVENGE	5003058435007	4066756409340	CM64	1	1	4231385938
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100032883 CLUB C REVENGE	5003058435004	4066756409456	GS08	1	4	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100032883 CLUB C REVENGE	5003058435003	4066756409388	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Siyah	100032921 REEBOK ULTRA FLASH	5003058443006	4066756409524	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 36, Siyah	100033916 ENERGEN LUX	5003058353001	4066756629557	CB15	1	1	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37, Siyah	100033916 ENERGEN LUX	5003058353002	4066756629564	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37.5, Siyah	100033916 ENERGEN LUX	5003058353003	4066756629496	CM63	2	2	4231385937
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, L, Siyah	100056008 RI Left Leg Logo OH Pant	5003258894002	4065431362314	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Siyah	100056008 RI Left Leg Logo OH Pant	5003258894003	4065431362369	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Siyah	100075848 CL UNIFORM BL TEE	5003143417001	1200143306277	GS04	1	1	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Siyah	100201555 REEBOK LITE PLUS 4	5003185093004	1200143713921	CB15	1	2	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Siyah	100201555 REEBOK LITE PLUS 4	5003185093006	1200143713945	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Siyah	100201555 REEBOK LITE PLUS 4	5003185093004	1200143713921	CB45	1	2	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37, Siyah	100201555 REEBOK LITE PLUS 4	5003185093002	1200143713907	CB46	2	2	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40, Siyah	100201555 REEBOK LITE PLUS 4	5003185093007	1200143713952	GB04	1	1	4231385940
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 36, Siyah	100201555 REEBOK LITE PLUS 4	5003185093001	1200143713891	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Siyah	100201555 REEBOK LITE PLUS 4	5003185093006	1200143713945	GS06	1	2	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Siyah	100204956 REEBOK LITE PLUS 4	5003223439005	1200143720912	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 37.5, Siyah	100208246 REEBOK SMASH EDGE S	5003258973002	1200143812075	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Beyaz	100208747 CAMPIO XT	5003259174001	1200161243141	CM29	1	1	4231385933
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Beyaz	100208747 CAMPIO XT	5003259174002	1200161243165	GB04	1	1	4231385940
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Basketbol Ayakkabısı, 42, Ekru	100208957 ATR CHILL 96	5003258884003	1200161329845	YM02	1	1	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100209145 REEBOK BB 1000	5003185162005	1200161025440	CB15	1	1	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 38.5, Beyaz	100209145 REEBOK BB 1000	5003185162015	1200161025372	CB21	2	3	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 38.5, Beyaz	100209145 REEBOK BB 1000	5003185162015	1200161025372	CB29	1	3	4231385924
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 36, Beyaz	100209145 REEBOK BB 1000	5003185162008	1200161025341	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100209145 REEBOK BB 1000	5003185162004	1200161025433	CB45	1	2	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100209145 REEBOK BB 1000	5003185162004	1200161025433	CM29	1	2	4231385933
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Beyaz	100209145 REEBOK BB 1000	5003185162007	1200161025471	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Beyaz	100209913 ENERGEN LUX	5003258857004	1200161308383	CB35	3	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Beyaz	100209913 ENERGEN LUX	5003258857003	1200161308369	CB49	1	1	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Siyah	100210002 FLOATRIDE ENERGY 6	5003258902003	1200161225796	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Siyah	100210002 FLOATRIDE ENERGY 6	5003258902005	1200161225819	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Siyah	100210002 FLOATRIDE ENERGY 6	5003258902007	1200161225840	CM27	1	1	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Siyah	100210002 FLOATRIDE ENERGY 6	5003258902002	1200161225789	CM29	1	1	4231385933
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Siyah	100210002 FLOATRIDE ENERGY 6	5003258902003	1200161225796	CM32	1	2	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Siyah	100210002 FLOATRIDE ENERGY 6	5003258902004	1200161225802	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 39, Siyah	100210027 REEBOK GL1100	5003258983004	1200161267932	CB49	1	1	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100211081 REEBOK BB 1000	5003185124004	1200161022005	CB46	1	2	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 39, Beyaz	100211081 REEBOK BB 1000	5003185124011	1200161021954	CB68	1	1	4231385931
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40.5, Beyaz	100211081 REEBOK BB 1000	5003185124010	1200161021978	CM27	1	1	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 37.5, Beyaz	100211081 REEBOK BB 1000	5003185124013	1200161021930	CM27	1	1	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100211081 REEBOK BB 1000	5003185124004	1200161022005	CM64	1	2	4231385938
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 38.5, Beyaz	100211081 REEBOK BB 1000	5003185124012	1200161021947	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Siyah	100222244 ZIG DYNAMICA STR	5003258924004	1200161505997	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37, Siyah	100222244 ZIG DYNAMICA STR	5003258924002	1200161505959	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 36, Siyah	100222244 ZIG DYNAMICA STR	5003258924001	1200161505942	CB49	1	1	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Siyah	100222244 ZIG DYNAMICA STR	5003258924003	1200161505973	CM27	1	1	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Siyah	100222244 ZIG DYNAMICA STR	5003258924004	1200161505997	YM10	1	2	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Ekru	100227993 REEBOK PRIME SET	5003259001003	1200161759833	CB21	1	2	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Ekru	100227993 REEBOK PRIME SET	5003259001007	1200161759888	CB29	1	1	4231385924
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Ekru	100227993 REEBOK PRIME SET	5003259001001	1200161759802	CM63	1	1	4231385937
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Ekru	100227993 REEBOK PRIME SET	5003259001003	1200161759833	GS06	1	2	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Beyaz	100227994 REEBOK PRIME SET	5003258958001	1200161759994	CM36	1	1	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Beyaz	100227994 REEBOK PRIME SET	5003258958002	1200161760013	YM10	1	1	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	100227994 REEBOK PRIME SET	5003258958004	1200161760037	YM10	1	1	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Beyaz	100228711 REEBOK SMASH EDGE S	5003258959009	1200161700347	CB29	1	2	4231385924
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Beyaz	100228711 REEBOK SMASH EDGE S	5003258959008	1200161700330	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	100228711 REEBOK SMASH EDGE S	5003258959011	1200161700361	CM32	1	1	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 39, Beyaz	100228711 REEBOK SMASH EDGE S	5003258959005	1200161700309	CM36	1	1	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Beyaz	100228711 REEBOK SMASH EDGE S	5003258959009	1200161700347	GS04	1	2	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40.5, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456001	1200143529843	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456009	1200175085034	CB35	2	3	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456007	1200175085065	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 44.5, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456002	1200143529904	CM79	1	1	4231385939
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456010	1200175085027	YM02	1	3	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456009	1200175085034	YM10	1	3	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Siyah	100241017 REEBOK LITE PLUS 2.5	5003211456010	1200175085027	YM10	2	3	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Gri	100241018 REEBOK LITE PLUS 2.5	5003211418010	1200175085218	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Gri	100241018 REEBOK LITE PLUS 2.5	5003211418009	1200175085225	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Gri	100241018 REEBOK LITE PLUS 2.5	5003211418011	1200175085201	CB38	1	1	4231385926
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Gri	100241018 REEBOK LITE PLUS 2.5	5003211418007	1200175085256	GB04	1	1	4231385940
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 37, Ekru	101917399 CLEAN WAY	5003262418002	8684475002565	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 39, Ekru	101917399 CLEAN WAY	5003262418004	8684475002589	CB35	1	3	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 38, Ekru	101917399 CLEAN WAY	5003262418003	8684475002572	CB46	1	3	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 39, Ekru	101917399 CLEAN WAY	5003262418004	8684475002589	CB49	2	3	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 37, Ekru	101917399 CLEAN WAY	5003262418002	8684475002565	CM27	1	2	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 38, Ekru	101917399 CLEAN WAY	5003262418003	8684475002572	GS04	3	3	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Siyah	101917417 CLEAN WAY	5003257273001	8684475008819	CB49	1	4	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Siyah	101917417 CLEAN WAY	5003257273006	8684475008864	CB49	1	1	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Siyah	101917417 CLEAN WAY	5003257273001	8684475008819	CM27	1	4	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Siyah	101917417 CLEAN WAY	5003257273004	8684475008840	CM27	3	3	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Siyah	101917417 CLEAN WAY	5003257273001	8684475008819	GS04	2	4	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 46, Siyah	101917417 CLEAN WAY	5003257273007	8684475008871	GS04	3	3	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Siyah	101917417 CLEAN WAY	5003257273002	8684475008826	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 46, Ekru	101917419 CLEAN WAY	5003262485007	8684475002992	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Ekru	101917419 CLEAN WAY	5003262485004	8684475002961	YM02	1	1	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 44, Beyaz	101917421 CLEAN WAY	5003257267005	8684475008994	CB15	2	2	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Beyaz	101917421 CLEAN WAY	5003257267003	8684475008970	CB15	5	8	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Beyaz	101917421 CLEAN WAY	5003257267002	8684475008963	CB21	3	6	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	101917421 CLEAN WAY	5003257267004	8684475008987	CB46	4	10	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	101917421 CLEAN WAY	5003257267004	8684475008987	CB49	6	10	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Beyaz	101917421 CLEAN WAY	5003257267001	8684475008956	CM27	1	1	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Beyaz	101917421 CLEAN WAY	5003257267002	8684475008963	CM27	1	6	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Beyaz	101917421 CLEAN WAY	5003257267003	8684475008970	GB04	3	8	4231385940
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Beyaz	101917421 CLEAN WAY	5003257267006	8684475009007	YM02	1	1	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Siyah	101988900 PAU NAY	5003258943003	8684475009724	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Siyah	101988900 PAU NAY	5003258943002	8684475009717	YM02	1	1	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Siyah	101988901 RUN SPIRIT	5003258913002	8684475009786	CM32	1	1	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Beyaz	101988918 DEX2000	5003259010003	8684475010218	CM36	1	1	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Siyah	101988922 DEX2000	5003259012002	8684475010348	CB15	1	1	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Siyah	101988922 DEX2000	5003259012003	8684475010355	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Siyah	101988922 DEX2000	5003259012004	8684475010362	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Siyah	101988922 DEX2000	5003259012001	8684475010331	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	101988926 DEX2000	5003267639004	8684475010430	CB46	1	2	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	101988926 DEX2000	5003267639004	8684475010430	CM32	1	2	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Gri	101988942 DEX2000	5003267608004	8684475010850	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Beyaz	101988951 ADLEY VII	5003267614003	8684475010980	CB35	4	5	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Beyaz	101988951 ADLEY VII	5003267614002	8684475010973	CM27	2	2	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Beyaz	101988951 ADLEY VII	5003267614006	8684475011017	CM63	1	1	4231385937
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Beyaz	101988951 ADLEY VII	5003267614003	8684475010980	YM10	1	5	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Siyah	101988953 ADLEY VII	5003267642004	8684475011062	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40, Siyah	101988953 ADLEY VII	5003267642001	8684475011031	CB35	2	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Siyah	101988953 ADLEY VII	5003267642002	8684475011048	CM44	1	1	4231385936
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 44, Siyah	101988953 ADLEY VII	5003267642005	8684475011079	CM44	1	1	4231385936
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 40, Siyah	101988959 ANDY POSE	5003258986001	8684475011178	CB21	1	1	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Siyah	101988959 ANDY POSE	5003258986003	8684475011192	CM32	1	1	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Siyah	101988959 ANDY POSE	5003258986006	8684475011222	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Siyah	101988990 EDGEWOOD	5003258907003	8684475011963	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40, Siyah	101988990 EDGEWOOD	5003258907001	8684475011949	CB49	1	2	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Siyah	101988990 EDGEWOOD	5003258907002	8684475011956	CM32	1	1	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Siyah	101988990 EDGEWOOD	5003258907006	8684475011994	CM63	1	1	4231385937
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40, Siyah	101988990 EDGEWOOD	5003258907001	8684475011949	YM07	1	2	4231385945
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Gri	101988992 ANDY POSE	5003259022002	8684475012021	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Gri	101988992 ANDY POSE	5003259022004	8684475012045	CM27	1	1	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Gri	101988992 ANDY POSE	5003259022003	8684475012038	CM32	1	3	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Gri	101988992 ANDY POSE	5003259022002	8684475012021	YM07	1	2	4231385945
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Gri	101988992 ANDY POSE	5003259022003	8684475012038	YM10	2	3	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Siyah	101989054 VALKRIAN MIST	5003259013002	8684475012588	CM36	2	2	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 45, Siyah	101989054 VALKRIAN MIST	5003259013006	8684475012625	GS04	1	1	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Beyaz	101989102 BUZZER-BEATER	5003259192006	8684475012694	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Beyaz	101989102 BUZZER-BEATER	5003259192003	8684475012663	CB35	2	3	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Beyaz	101989102 BUZZER-BEATER	5003259192003	8684475012663	CM27	1	3	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40, Siyah	101989106 BUZZER-BEATER	5003258932001	8684475012717	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Siyah	101989106 BUZZER-BEATER	5003258932006	8684475012762	GS08	1	2	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Siyah	101989106 BUZZER-BEATER	5003258932006	8684475012762	YM02	1	2	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Siyah	101989106 BUZZER-BEATER	5003258932002	8684475012724	YM10	1	1	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Siyah	101989350 EDGEWOOD	5003258948004	8684475015398	CB15	1	1	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37, Siyah	101989350 EDGEWOOD	5003258948002	8684475015374	CB15	1	1	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Siyah	101989350 EDGEWOOD	5003258948003	8684475015381	GB04	1	1	4231385940
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 36, Siyah	101989414 MOON FLEX II	5003258927001	8684475015817	CM79	1	1	4231385939
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Beyaz	101989415 MOON FLEX II	5003258949003	8684475015886	CB35	2	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Beyaz	101989415 MOON FLEX II	5003258949004	8684475015893	CM44	1	1	4231385936
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 39, Gri	101989416 MOON FLEX II	5003258950004	8684475015947	CB15	1	1	4231385922
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 40, Gri	101989416 MOON FLEX II	5003258950005	8684475015954	CB38	1	1	4231385926
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 37, Gri	101989416 MOON FLEX II	5003258950002	8684475015923	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 38, Gri	101989416 MOON FLEX II	5003258950003	8684475015930	CM36	1	1	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Siyah	101989480 MOON FLEX II	5003262767004	8684475016821	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Siyah	101989480 MOON FLEX II	5003262767006	8684475016807	CM36	1	1	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42, Siyah	101989480 MOON FLEX II	5003262767005	8684475016814	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Beyaz	101989483 MOON FLEX II	5003258980002	8684475016944	CB21	1	2	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 41, Beyaz	101989483 MOON FLEX II	5003258980002	8684475016944	CB35	1	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Beyaz	101989483 MOON FLEX II	5003258980003	8684475016951	CB35	1	3	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Beyaz	101989483 MOON FLEX II	5003258980006	8684475016982	CB38	1	1	4231385926
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Beyaz	101989483 MOON FLEX II	5003258980003	8684475016951	YM02	2	3	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 41, Beyaz	101989500 VALKRIAN MIST	5003259025002	8684475017019	CM44	1	1	4231385936
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	101989500 VALKRIAN MIST	5003259025004	8684475017033	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 45, Beyaz	101989530 EDGEWOOD	5003267607006	8684475017545	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, 2XL, Beyaz	12136668 JJEPAULOS	5002366958006	5713738372640	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12137126_JJECORP LOGO TEE SS CREW N	5002666097005	5713738380225	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Bej	12151955_JJECORP LOGO TEE SS O-NECK	5003243725001	5715605829233	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Bej	12151955_JJECORP LOGO TEE SS O-NECK	5003243725004	5715605829110	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Bej	12151955_JJECORP LOGO TEE SS O-NECK	5003243725002	5715605825754	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Bej	12217167_JPRBLUARCHIE SS TEE CREW N	5003243727002	5715605969564	CB45	3	3	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Turuncu	12240121_JORVESTERBRO TEE SS CREW N	5003243782002	5715672690064	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12256774_JJTILEY TEE SS CREW NECK L	5003178265002	5715515705320	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12256774_JJTILEY TEE SS CREW NECK L	5003178294005	5715604758015	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	12256793_JJOLIVE TEE SS CREW NECK	5003178256003	5715604747835	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Lacivert	12268127_JJEBRYAN CORP LOGO TEE SS	5003243811004	5715671962254	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12268415_JJECORP GRAPHIC TEE  SS O-	5003243830005	5715671965538	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12268415_JJECORP GRAPHIC TEE  SS O-	5003243830002	5715611293110	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Beyaz	12268415_JJECORP GRAPHIC TEE  SS O-	5003243830001	5715671965590	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12268477_JJHUDSON TEE SS CREW NECK	5003243831005	5715675022336	GS08	1	3	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Lacivert	12268477_JJHUDSON TEE SS CREW NECK	5003243793004	5715675022305	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12268477_JJHUDSON TEE SS CREW NECK	5003243831002	5715612218952	GS08	1	2	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Lacivert	12268477_JJHUDSON TEE SS CREW NECK	5003243793002	5715612218891	CB45	1	4	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Lacivert	12269324_JJHAWAII SHAPE TEE SS CREW	5003243823003	5715675322948	CB23	1	3	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Lacivert	12269324_JJHAWAII SHAPE TEE SS CREW	5003243823003	5715675322948	CB45	2	3	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12272996_JORSPLIT BACK TEE SS CREW	5003243890002	5715671262316	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Bej	12273070_JCORECHARGE MOLD TEE SS CR	5003243881004	5715714811372	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12273157_JORISLINGTON MINIMAL BRAND	5003243874002	5715671429917	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12273182_JORSPLIT FAKESTITCH BRANDI	5003243875002	5715671549400	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	12275012_JJBEAU TEE SS FRONTPRINT C	5003243932004	5715675031451	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12275012_JJBEAU TEE SS FRONTPRINT C	5003243903002	5715675031390	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Siyah	12275012_JJBEAU TEE SS FRONTPRINT C	5003243903005	5715675031321	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	12275402_JORSNAKE TEE SS CREW NECK	5003243869003	5715678512285	GS08	1	2	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Beyaz	12275402_JORSNAKE TEE SS CREW NECK	5003243912003	5715678512261	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Siyah	12276646_JPRBLAHARRIS SS TEE CREW N	5003243923005	5715677470760	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12276646_JPRBLAHARRIS SS TEE CREW N	5003243942005	5715677470807	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12276646_JPRBLAHARRIS SS TEE CREW N	5003243942002	5715677470791	CB45	1	2	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Beyaz	12277888_JORBOSTON TEE SS CREW NECK	5003243939001	5715714755737	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Mavi	12277888_JORBOSTON TEE SS CREW NECK	5003243919004	5715714755935	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Siyah	12288374_JPRBLULOGO TEE SS CREW NEC	5003253254004	5715825349320	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Koyu Yeşil	12288374_JPRBLULOGO TEE SS CREW NEC	5003253235001	5715825349399	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Koyu Yeşil	12288374_JPRBLULOGO TEE SS CREW NEC	5003253235002	5715732483728	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Koyu Yeşil	12288374_JPRBLULOGO TEE SS CREW NEC	5003253235003	5715825349375	CB45	1	3	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12288374_JPRBLULOGO TEE SS CREW NEC	5003253254002	5715732483698	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Kırmızı	12288375_JORREMINDER TEE SS CREW NE	5003253255003	5715825349580	GS08	1	2	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12288375_JORREMINDER TEE SS CREW NE	5003253245005	5715825349696	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Koyu Yeşil	12288375_JORREMINDER TEE SS CREW NE	5003253209004	5715825347630	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Siyah	12288375_JORREMINDER TEE SS CREW NE	5003253256005	5715825349634	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Siyah	12288506_JCOOLE TEE SS CREW NECK BS	5003253246001	5715825347272	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12288506_JCOOLE TEE SS CREW NECK BS	5003253229002	5715732881081	CB45	1	3	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Bej	12288515_JORSPLASH TEE SS CREW NECK	5003253280001	5715825348262	GS08	1	2	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Koyu Yeşil	12288515_JORSPLASH TEE SS CREW NECK	5003253236005	5715825348217	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12288515_JORSPLASH TEE SS CREW NECK	5003253281005	5715825348170	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Bej	12288515_JORSPLASH TEE SS CREW NECK	5003253280003	5715825348248	CB23	1	3	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Bej	12288515_JORSPLASH TEE SS CREW NECK	5003253280001	5715825348262	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Füme	12288515_JORSPLASH TEE SS CREW NECK	5003253261005	5715825348293	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Bej	12288515_JORSPLASH TEE SS CREW NECK	5003253280005	5715825348255	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	12288515_JORSPLASH TEE SS CREW NECK	5003253281004	5715825348156	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Koyu Yeşil	12288515_JORSPLASH TEE SS CREW NECK	5003253236003	5715825348200	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	12288519_JPRBLUZOEY TEE SS CREW NEC	5003253298003	5715825346695	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Bej	12288521_JPRBLULIFE TEE SS CREW NEC	5003253304002	5715732951722	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Bej	12288521_JPRBLULIFE TEE SS CREW NEC	5003253304003	5715825349245	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Siyah	12288521_JPRBLULIFE TEE SS CREW NEC	5003253267004	5715825349153	CB45	2	2	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Taş	12288523_JPRBLUPACER TEE SS CREW NE	5003253269001	5715825349528	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Siyah	12288523_JPRBLUPACER TEE SS CREW NE	5003253276001	5715825349566	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Taş	12288523_JPRBLUPACER TEE SS CREW NE	5003253269005	5715825349511	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12288523_JPRBLUPACER TEE SS CREW NE	5003253276002	5715732952019	CB45	2	2	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Füme	12288525_JCOTONAL TEE SS CREW NECK	5003253316001	5715825347791	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Taş	12288525_JCOTONAL TEE SS CREW NECK	5003253338001	5715825347746	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	12288525_JCOTONAL TEE SS CREW NECK	5003253329003	5715825347661	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Füme	12288525_JCOTONAL TEE SS CREW NECK	5003253316002	5715825347777	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12288525_JCOTONAL TEE SS CREW NECK	5003253329002	5715825347678	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Gri	12288526_JCOBEYOND TEE SS CREW NECK	5003253409003	5715825348668	CB45	1	2	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Taş	12288527_JCOAIR TEE SS CREW NECK BS	5003253373002	5715825348385	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Koyu Yeşil	12288567_JORBRAND TEE SS CREW NECK	5003253358005	5715825348750	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Lacivert	12288570_JCOBARCODE TEE SS CREW NEC	5003253349003	5715825348460	CB45	2	3	4231358595
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, XL, Siyah	1931161010AO0805 MEN'S SUN TREK SHO	5003268456005	194003690204	CM79	1	1	4231327068
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, XL, Siyah	1931161010AO0805 MEN'S SUN TREK SHO	5003268456005	194003690204	CB35	1	1	4231326922
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Gömlek, L, Siyah	2012931010_AM1683	5003143262002	194895716426	CB39	1	1	4231327066
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Pantolon, 36, Siyah	2012951010_AM9184	5003143251004	194895232056	CB39	1	1	4231327066
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Pantolon, L, Gri	2097542023AE1681	5003267720002	195981347845	CB73	1	1	4231327067
+Manuel Transferler Run ID 72148	Active & Outdoor	041Outdoor Shoes	Columbia	Columbia Outdoor Ayakkabısı, 41, Siyah	2108791010BM5164	5003267692002	195982509624	CB45	1	1	4231327069
+Manuel Transferler Run ID 72148	Active & Outdoor	041Outdoor Shoes	Columbia	Columbia Outdoor Ayakkabısı, 44, Siyah	2109401010BM7922	5003267668005	195982539935	CB45	1	1	4231327069
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 29-28, Siyah	501 CROP LOCAL TR GET OFF MY CLOUD	5003080133005	5401128481279	SM37	1	1	4231348328
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 28-28, Siyah	501 CROP LOCAL TR GET OFF MY CLOUD	5003080133004	5401128481262	SM34	1	1	4231348475
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantol, 24-26, Açık Lacivert	501 CROP LOCAL TR NO RUSH	5003167850001	5401157650592	SM23	1	1	4231348315
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantol, 25-26, Açık Lacivert	501 CROP LOCAL TR NO RUSH	5003167850003	5401157654415	SM45	1	1	4231348327
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 28-30, Açık Mavi	724 HIGH RISE STRAIGHT MOST LIKELY	5003239067006	5401157955949	SM34	1	1	4231348475
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 24-27, Siyah	72693-0134 RIBCAGE STRAIGHT ANKLE J	5002992434004	5401043638048	SM30	1	1	4231347972
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 24-27, Siyah	72693-0134 RIBCAGE STRAIGHT ANKLE J	5002992434004	5401043638048	SM23	1	1	4231348315
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, M, Siyah	9120340010_CS0241 CSC RETRO SS TEE	5003146882003	8698098867647	CB45	1	1	4231327069
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, XL, Beyaz	9120568010_CS0376 HERITAGE T-SHIRT	5003146891005	8698098872443	CB39	1	1	4231327066
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Ten	AGIL	5003098646004	8684024160715	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Ten	AGIL	5003098646003	8684024160708	CM68	1	1	4231355201
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 38, Siyah	ALASTAR	5003230192003	8684024586270	CB46	1	1	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 39, Siyah	ALASTAR	5003230192004	8684024586287	CB46	1	1	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 40, Siyah	ALASTAR	5003230192005	8684024586294	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Taba	ALLEGRA	5003230061002	8684024584900	CM32	1	1	4231355889
+Manuel Transferler Run ID 72149	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Postacı Çantası, Bedensiz, Bej	ANGELA-CHOLE	5003156106001	8684024346324	CM36	2	2	4231365580
+Manuel Transferler Run ID 72149	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Postacı Çantası, Bedensiz, Siyah	ANGELA-CHOLE	5003156131001	8684024345952	CM90	5	5	4231365606
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Gömlek, M, Mavi	AO0651 SILVER RIDGE2.0 LONG SLEEVE	5002567106003	192660256191	CB39	2	1	4231327066
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Siyah	ARIEL	5003234304005	8684024618582	CM34	1	1	4231354203
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	ARIEL	5003234304004	8684024618575	CB08	1	2	4231354559
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Siyah	ARIEL	5003234304003	8684024618568	YM10	2	2	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Altın	ARIEL	5003234313004	8684024617691	CM79	1	1	4231355174
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	ARIEL	5003234304004	8684024618575	CM50	1	2	4231355196
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Altın	ARIEL	5003234313005	8684024618704	CM24	1	1	4231355754
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 36, Siyah	ARIEL	5003234304001	8684024618544	CM24	1	1	4231355754
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Beyaz	ARLINE	5003234278005	8684024618148	CB45	1	1	4231354188
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	ARLINE	5003234299004	8684024617790	CB13	1	1	4231354252
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Beyaz	ARLINE	5003234278004	8684024618131	CB13	1	1	4231354252
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	ARLINE	5003234299002	8684024617776	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Mavi	ARLINE DENIM	5003234279003	8684024618179	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Mavi	ARLINE DENIM	5003234279005	8684024618193	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Mavi	ARLINE DENIM	5003234279004	8684024618186	CM44	1	2	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Mavi	ARLINE DENIM	5003234279004	8684024618186	CB35	1	2	4231355266
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 36, Ten	ARMIDA	5003098649001	8684024161231	CB52	1	1	4231354176
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 39, Siyah	ARMIDA	5003098701004	8684024162009	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 38, Ten	ARMIDA	5003098649003	8684024161255	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 38, Siyah	ARMIDA	5003098701003	8684024161996	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 38, Siyah	ARMIDA	5003098701003	8684024161996	CM78	1	1	4231355464
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 39, Beyaz	AUBER	5003231279004	8684024600280	YM10	2	2	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 39, Siyah	AUBER	5002982739004	8683133774943	CB15	1	1	4231355251
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Mont, L, Kırmızı	AVA FULL SLEEVE REVERSIB AVA FULL S	5003167945001	5401157912010	SM45	1	1	4231348327
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Bej	AYELEN	5003231361004	8684024601508	CB35	1	1	4231355266
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 38, Siyah	B11006	5003271084001	8682339843149	CB45	1	1	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 40, Yeşil	B11039	5003285304002	8682339846690	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 42, Kırmızı	B11080	5003271099003	8682339852318	CB45	1	2	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 38, Petrol	B11081	5003285296001	8682339852370	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 44, Kırmızı	B11081	5003271131004	8682339852455	CB45	1	1	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 42, Siyah	B11090	5003292762003	8682339854015	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 38, Siyah	B11090	5003292762001	8682339853995	CB45	1	1	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 44, Kiremit	B11091	5003283729004	8682339864175	CB45	1	2	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 44, Siyah	B11105	5003285320004	8682339860368	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 40, Yeşil	B11107	5003285275002	8682339856484	CB45	1	1	4231347454
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers Gömlek, M, Antrasit	BBSS25MSH012	5003252077004	8684497210177	CB23	1	2	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers Gömle, XL, Koyu Lacivert	BBSS25MSH012	5003286960004	8684497219804	CB23	1	3	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers Gömlek, L, Gri	BBSS25MSH012	5003252110003	8684497204619	CB23	1	1	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers Gömlek, M, İndigo	BBSS25MSH012	5003252578004	8684497206231	CB23	1	2	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers Gömlek, S, Beyaz	BBSS25MSH012	5003252069005	8684497204077	CB23	1	3	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers Gömlek, M, Beyaz	BBSS25MSH012	5003252069004	8684497204060	CB23	3	7	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Kırık Beyaz	BBSS25MTS007	5003252115004	8684497173922	CB23	2	5	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Siyah	BBSS25MTS015	5003289285003	8684497176930	CB23	1	3	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, M, Lacivert	BBSS25MTS025	5003252219004	8684497214465	CB23	1	3	4231323205
+Manuel Transferler Run ID 72148	Mens	006Apparel	Brooks Brothers	Brooks Brothers T-Shirt, XL, Lacivert	BBSS25MTS025	5003252219006	8684497214489	CB23	1	2	4231323205
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	BERTA	5003234321004	8684024618216	CB15	1	1	4231355251
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Siyah	BERTA	5003234321005	8684024618223	CB54	1	1	4231355378
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Kahve	BERTA LEOPAR	5003234286005	8684024618315	CM34	1	1	4231354203
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Kahve	BERTA LEOPAR	5003234286004	8684024618308	CM79	3	3	4231355174
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Kahve	BERTA LEOPAR	5003234286002	8684024617486	CB35	2	2	4231355266
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	BILLIE	5003234330004	8684024618049	YM02	1	2	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	BILLIE	5003234330004	8684024618049	YM10	1	2	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	BILLIE	5003234330002	8684024618025	CB38	1	1	4231354696
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Siyah	BILLIE	5003234330003	8684024618032	CB15	1	1	4231355251
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Siyah	BILLIE	5003234330005	8684024618056	CM32	1	1	4231355889
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Kırmızı	BILTHE	5003234332002	8684024618421	CB45	2	2	4231354188
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Bej	BILTHE	5003234322003	8684024618254	CM34	1	1	4231354203
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Kırmızı	BILTHE	5003234332004	8684024618445	CB08	1	2	4231354559
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Kırmızı	BILTHE	5003234332005	8684024618452	YM10	1	1	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	BILTHE	5003234331004	8684024618094	CM79	1	1	4231355174
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 38, Kırmızı	BILTHE	5003234332003	8684024618438	CM24	2	2	4231355754
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Kırmızı	BILTHE	5003234332004	8684024618445	CM63	1	2	4231355802
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Altın	BOBBIE	5003234303004	8684024618520	CM79	1	2	4231355174
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Altın	BOBBIE	5003234303004	8684024618520	CM68	1	2	4231355201
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Siyah	BOBBIE	5003234287005	8684024618360	CM68	1	1	4231355201
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	BOBBIE	5003234287004	8684024618353	CB39	1	1	4231355911
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	BOBBIE	5003234287002	8684024618339	CB47	1	1	4231355925
 Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, S, Lacivert	BONCI	5003254849004	8683858964513	CB62	1	1	4231323842
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, L, Sarı	BONCI	5003254874002	8683858964506	CB62	1	1	4231323842
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, XS, Lacivert	BONCI	5003254849006	8683858964537	CB62	1	1	4231323842
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, S, Sarı	BONCI	5003254874004	8683858964520	CB62	1	1	4231323842
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 37, Siyah	BRENDA	5003098676002	8684024160937	CM29	1	1	4231355471
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 40, Taba	BURY	5002980816005	8683133767358	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Taba	BURY	5002980816002	8683133767327	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 36, Taba	BURY	5002980816001	8683133767310	CB48	1	1	4231354291
+Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Trençkot, 36, Bej	CANNAL	5003254867002	8683858472391	CB62	1	1	4231323842
+Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Trençkot, 40, Bej	CANNAL	5003254867004	8683858472384	CB62	1	1	4231323842
+Manuel Transferler Run ID 72148	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Polo T-S, 2XL, Camel	CM NOBRO K CEPLI	5002948199005	8683133607173	YM10	1	1	4231314404
+Manuel Transferler Run ID 72148	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Polo T-Sh, XL, Camel	CM NOBRO K CEPLI	5002948199004	8683133607166	CM48	2	2	4231314403
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Siyah	CN 1357 DIXIE YOGA LEGGING	5003258849002	2012002112290	CB14	1	3	4231385921
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, S, Siyah	CN 1357 DIXIE YOGA LEGGING	5003258849003	2012002112306	CB45	2	2	4231385927
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 36, Bej	COLUM	5003230044001	8684024584832	CM68	1	1	4231355201
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Bej	COLUM	5003230044005	8684024584870	CB44	1	1	4231355350
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Polo T-Shirt, M, Yeşil	CS0214 M CASCADE RANGE SOLID POLO I	5002698926005	8698098830580	CM79	1	1	4231327068
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Polo T-Shirt, L, Beyaz	CS0214 M CASCADE RANGE SOLID POLO I	5002698917004	8698098828532	CM79	1	1	4231327068
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, M, Koyu Lacivert	CS0282 CSC M BASIC SM LOGO BRUSHED	5002958619002	8698098854173	CB73	2	2	4231327067
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia T-Shirt, M, Koyu Lacivert	CS0287 CSC M BASIC BIG LOGO BRUSHED	5002958614002	8698098854111	CM79	1	1	4231327068
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XS, Siyah	D3WL-EA5	5003039697001	8683133946098	CM87	1	1	4231299223
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D3WM-EA4	5003039881002	8683133953171	CM50	1	1	4231297727
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, M, Beyaz	D4SL-GML3026	5003095893003	8684024140281	GS06	1	1	4231298863
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Gömlek, XS, Lila	D4SL-GML3027	5003095848001	8684024139971	CM64	2	2	4231299007
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pa, XS, Gri	D4SL-PNT3011	5003089396001	8684024112707	CB57	1	1	4231298861
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Outdoor Pan, S, Gri	D4SL-PNT3011	5003089396002	8684024112714	GS06	1	1	4231298863
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Lila	D4SL-TST3033	5003099093003	8684024169671	CM64	1	1	4231299007
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, S, Siyah	D4SL-TST3034	5003099049002	8684024169947	CM27	1	1	4231297726
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3034	5003099049003	8684024169954	CB62	1	1	4231299005
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atle, M, Nar Çiçeği	D4SL-TST3034	5003099094003	8684024170011	CM84	1	1	4231299008
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Atlet, M, Siyah	D4SL-TST3035	5003119625003	8684024229436	CB45	1	1	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, M, Siyah	D4SL-TST3045	5003098979003	8684024165925	CB45	1	1	4231297718
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, S, Yeşil	D4SM-TRC3222	5003089414001	8684024112448	CM82	1	1	4231297729
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Rüzgarlık, L, Yeşil	D4SM-TRC3222	5003089414003	8684024112462	CB54	1	1	4231297720
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition T-Shirt, XL, Siyah	D4SM-TST3260	5003099110004	8684024169176	CM68	1	1	4231297728
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 38, Bej	D-ARIANA	5003230482003	8684024591267	YM02	1	2	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 38, Kahve	D-ARIANA	5003230466003	8684024591663	CB46	2	2	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Bej	D-ARIANA	5003230482001	8684024591243	CB22	1	1	4231354503
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 38, Bej	D-ARIANA	5003230482003	8684024591267	CB38	1	2	4231354696
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 39, Bej	D-ARIANA	5003230482004	8684024591274	CM27	1	1	4231354899
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 37, Bej	D-ARIANA	5003230482002	8684024591250	CB56	1	1	4231355096
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 40, Kahve	D-ARIANA	5003230466005	8684024591687	CM79	1	1	4231355174
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Kahve	D-ARIANA	5003230466001	8684024591649	CM50	1	1	4231355196
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 37, Kahve	D-ARIANA	5003230466002	8684024591656	CM68	1	1	4231355201
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Taba	D-CARINA	5003230159002	8684024585723	CB44	1	1	4231355350
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Siyah	D-DENISE	5003237397004	8684024626433	CB42	2	2	4231354202
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 40, Taba	D-DENISE	5003237398005	8684024626495	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 37, Taba	D-DENISE	5003237398002	8684024626464	CB51	1	1	4231354589
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 38, Taba	D-DENISE	5003237398003	8684024626471	CB38	2	2	4231354696
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Taba	D-DENISE	5003237398004	8684024626488	CB37	2	2	4231354825
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 38, Siyah	D-DENISE	5003237397003	8684024626426	CB37	3	3	4231354825
+Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, XS, Lacivert	DEEP	5002660403001	8681940516442	CB46	1	2	4231357749
+Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, XL, Lacivert	DEEP	5002660403005	8681940516480	CB46	1	1	4231357749
+Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, S, Lacivert	DEEP	5002660403002	8681940516459	CB46	3	3	4231357749
+Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, L, Beyaz	DEEP	5002660402004	8681940516428	CB46	3	7	4231357749
+Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, M, Siyah	DEEP	5002660359003	8681940515582	CB46	4	12	4231357749
+Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, S, Siyah	DEEP	5002660359002	8681940515575	CB46	16	21	4231357749
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 40, Vizon	D-FRANCES	5003230110005	8684024585242	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 36, Lacivert	DIANA	5003230019001	8684024584139	CB59	1	1	4231354123
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 36, Bej	DIANA	5003230050001	8684024583781	CB59	2	2	4231354123
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 41, Lacivert	DIANA	5003230019006	8684024584184	YM07	1	1	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 41, Kırmızı	DIANA	5003230051006	8684024584795	YM07	1	1	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 37, Lacivert	DIANA	5003230019002	8684024584146	YM07	2	2	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 38, Lacivert	DIANA	5003230019003	8684024584153	CB52	2	2	4231354176
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 39, Lacivert	DIANA	5003230019004	8684024584160	CB45	1	1	4231354188
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 38, Bej	DIANA	5003230050003	8684024584702	CB42	1	2	4231354202
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 38, Bej	DIANA	5003230050003	8684024584702	CM34	1	2	4231354203
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 39, Bej	DIANA	5003230050004	8684024584719	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 38, Kırmızı	DIANA	5003230051003	8684024584764	YM02	2	2	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 37, Bej	DIANA	5003230050002	8684024583798	CB13	1	1	4231354252
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 36, Kırmızı	DIANA	5003230051001	8684024584740	CM64	1	1	4231354263
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 37, Kırmızı	DIANA	5003230051002	8684024584757	CB46	2	2	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 40, Kırmızı	DIANA	5003230051005	8684024584788	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 37, Siyah	DOROTHEA	5003230155002	8684024585471	YM07	1	1	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 36, Siyah	DOROTHEA	5003230155001	8684024585464	CB42	1	1	4231354202
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Kahve	DOROTHEA	5003230164004	8684024585815	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Siyah	DOROTHEA	5003230155004	8684024585495	CB08	1	1	4231354559
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Bej	D-RARON	5003235872002	8684024623784	CB45	1	1	4231354188
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 39, Bej	D-RARON	5003235872004	8684024624200	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 40, Taba	D-RARON	5003235891005	8684024624187	YM02	2	3	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Mavi	D-RARON	5003235829002	8684024622893	YM02	2	2	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 36, Mavi	D-RARON	5003235829001	8684024622886	YM02	2	2	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 39, Taba	D-RARON	5003235891004	8684024624170	CM64	1	1	4231354263
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 40, Taba	D-RARON	5003235891005	8684024624187	CB46	1	3	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Taba	D-RARON	5003235891002	8684024624156	CB46	1	1	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 36, Kahve	D-RARON	5003235890001	8684024623999	CB22	2	2	4231354503
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 36, Taba	D-RARON	5003235891001	8684024624149	CB54	1	1	4231355378
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 40, Kahve	D-RARON	5003235890005	8684024624132	CB54	1	1	4231355378
+Manuel Transferler Run ID 72148	Mens	006Apparel	Fabrika	Fabrika T-Shirt, M, Antrasit	F4SM-TST 0740	5003126898002	8684024243951	CB62	1	1	4231314402
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 36.5, Gri	FD2723-109 W AIR ZOOM PEGASUS 41	5003247921001	197859153039	CM34	1	1	4231360948
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 38, Lila	FD6034-006 WMNS NIKE QUEST 6	5003247895003	197859136957	GS04	1	1	4231360950
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 40, Siyah	FIONALA	5003230064005	8684024584986	CM50	1	1	4231355196
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 39, Siyah	FIONALA	5003230064004	8684024584979	CM50	2	2	4231355196
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 37, Siyah	FIONALA	5003230064002	8684024584955	CB49	1	1	4231355261
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 43, Siyah	FJ9509-002 NIKE AIR WINFLO 11	5003277662009	197593760449	CM27	1	1	4231360946
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 36, Lacivert	GABRIELLA	5003230107001	8684024584887	YM07	1	1	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 41, Kırmızı	GABRIELLA	5003230133006	8684024585631	YM07	1	1	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 36, Kırmızı	GABRIELLA	5003230133001	8684024585082	YM07	2	2	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 37, Kırmızı	GABRIELLA	5003230133002	8684024585099	YM07	2	2	4231354140
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 40, Kırmızı	GABRIELLA	5003230133005	8684024585624	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 37, Lacivert	GABRIELLA	5003230107002	8684024584894	CB13	1	1	4231354252
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 38, Lacivert	GABRIELLA	5003230107003	8684024585501	CB13	1	1	4231354252
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 39, Lacivert	GABRIELLA	5003230107004	8684024585518	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Espadril, 40, Lacivert	GABRIELLA	5003230107005	8684024585525	CM44	1	1	4231354340
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, M, Beyaz	GR EVERYDAY CREW CREW WAVY CHECKER	5003239221002	5401157978566	SM45	1	1	4231348327
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, S, Beyaz	GR EVERYDAY CREW CREW WAVY CHECKER	5003239221003	5401157860502	SM34	1	1	4231348475
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, S, Beyaz	GR LEO CREW 2.0 CREW LEVIS SINCE 18	5003239235003	5401157861226	SM30	1	1	4231347972
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, M, Beyaz	GR LEO CREW 2.0 CREW LEVIS SINCE 18	5003239235002	5401187066592	SM23	1	2	4231348315
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, S, Beyaz	GR LEO CREW 2.0 CREW LEVIS SINCE 18	5003239235003	5401157861226	SM37	1	1	4231348328
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, S, Beyaz	GRAPHIC HERITAGE CREW LEVIS FOUNDED	5003239238003	5401157860489	SM34	1	1	4231348475
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, M, Beyaz	GRAPHIC HERITAGE HOODIET HOODIE LS	5003239228002	5401187175645	SM23	1	1	4231348315
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 42.5, Beyaz	GZ6127 REEBOK SMASH EDGE S	5003018054007	4065427073217	CB35	2	2	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 43, Beyaz	GZ6127 REEBOK SMASH EDGE S	5003018054002	4065427073194	CM27	4	4	4231385932
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 38.5, Beyaz	GZ6127 REEBOK SMASH EDGE S	5003028928005	4065427069524	GS08	1	1	4231385943
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 38, Krem	HAV. YOU PARATY	5003177010004	7909690628057	CM75	1	1	4231378631
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantol, 26-29, Koyu Lacivert	HIGH WAIST MOM JEAN TK MOVING TARGE	5003167887005	5401157067901	SM37	1	1	4231348328
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 39, Kırmızı	HOLM	5003230038004	8684024585013	CB15	2	2	4231355251
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 40, Siyah	HOLM	5003230037005	8684024584573	CB35	1	1	4231355266
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 38, Siyah	HOLM	5003230037003	8684024584559	CB35	1	1	4231355266
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 40, Kırmızı	HOLM	5003230038005	8684024585020	CB35	2	2	4231355266
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Tayt, XL, Siyah	HT6031 WOR BASIC H	5003010966005	4066746335352	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Tayt, S, Siyah	HT6031 WOR BASIC H	5003010966002	4066746339022	CM32	1	1	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Tayt, M, Siyah	HT6031 WOR BASIC H	5003010966001	4066746335369	CM32	2	2	4231385934
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Gömlek, XS, Açık Mavi	ICONIC WESTERN PLUNGE POOLE	5003239300004	5401187107462	SM45	1	1	4231348327
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42, Siyah	IE9521 ENERGEN LUX	5003058352005	4066756555047	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 42.5, Siyah	IE9521 ENERGEN LUX	5003058352006	4066756555009	GB04	2	2	4231385940
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Siyah	IE9521 ENERGEN LUX	5003058352007	4066756551353	YM02	1	2	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Siyah	IE9521 ENERGEN LUX	5003058352007	4066756551353	YM07	1	2	4231385945
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Basketbol Ayakkabısı, 44, Beyaz	IF0674 BB 4000 II	5003058152005	4066758927781	CB38	1	1	4231385926
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Basketbol Ayakkabısı, 45, Beyaz	IF0674 BB 4000 II	5003058152007	4066758931511	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Basketbol Ayakkabısı, 43, Beyaz	IF0674 BB 4000 II	5003058152004	4066758931528	CB46	1	3	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Basketbol Ayakkabısı, 43, Beyaz	IF0674 BB 4000 II	5003058152004	4066758931528	GS06	1	3	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Reebok	Reebok Basketbol Ayakkabısı, 43, Beyaz	IF0674 BB 4000 II	5003058152004	4066758931528	YM10	1	3	4231385946
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, XL, Siyah	J5SM-SHT7247	5003226309004	8684024557119	CM34	1	1	4231315957
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, M, Siyah	J5SM-SHT7247	5003226309002	8684024556396	CM36	1	1	4231315963
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, S, Siyah	J5SM-SHT7247	5003226309001	8684024556389	CM36	1	1	4231315963
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, L, Gri	J5SM-SHT7247	5003226378003	8684024557065	CM36	1	2	4231315963
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, L, Lacivert	J5SM-SHT7247	5003226349003	8684024557249	CM36	1	2	4231315963
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, L, Siyah	J5SM-SHT7247	5003226309003	8684024557102	CM64	1	2	4231315973
+Manuel Transferler Run ID 72148	Mens	006Apparel	Jeep	Jeep Şort, M, Lacivert	J5SM-SHT7247	5003226349002	8684024557232	CM82	1	2	4231316040
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Beyaz	JJECORP LOGO TEE PLAY SS O-NECK NOO	5003120428001	5715427843646	CB23	1	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Lacivert	JJEPAULOS TEE SS CREW NECK NOOS	5003120473003	5715427285002	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Siyah	JJESTAR JJ TEE SS NOOS	5003120448004	5715424100865	GS08	1	2	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	JJESTAR JJ TEE SS NOOS	5003120482004	5715424100919	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	JJESTAR JJ TEE SS NOOS	5003120448002	5715369477046	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, L, Siyah	JJSTEEL POLO SS	5003120506002	5715431890780	CB23	2	2	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, XL, Beyaz	JJSTEEL POLO SS	5003120497005	5715509486808	CB45	1	4	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, S, Beyaz	JJSTEEL POLO SS	5003120497004	5715509486723	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	JORMARBELLA FRONT TEE SS CREW NECK	5003120577003	5715519998384	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	JORMARBELLA FRONT TEE SS CREW NECK	5003120577003	5715519998384	CB23	1	1	4231358578
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Siyah	JORMARBELLA FRONT TEE SS CREW NECK	5003120577005	5715519998377	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	JPRBLUARCHIE SS TEE CREW NECK NOOS	5002985299003	5715310026125	GS08	1	1	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	JPRBLUARCHIE SS TEE CREW NECK NOOS	5002985299005	5715311991200	GS08	1	3	4231358576
+Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Beyaz	JPRBLUARCHIE SS TEE CREW NECK NOOS	5002985299004	5715311991194	CB45	1	1	4231358595
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Ekru	KALLIN	5003098650002	8684024158576	CB22	1	1	4231354503
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Lacivert	KETA	5003264683006	8683858865810	CB46	1	1	4231295681
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, XL, Çağla	KETA	5003264645006	8683858865896	CB39	1	1	4231295708
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, L, Lacivert	KETA	5003264683003	8683858865902	CB39	1	2	4231295708
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 40, Siyah	KINLEY	5003230673005	8684024595913	CB52	1	1	4231354176
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Siyah	KINLEY	5003230673004	8684024595906	CB45	1	1	4231354188
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, S, Beyaz	LC 6375 MELTON TEE	5003262428004	2012002124989	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Beyaz	LC 6375 MELTON TEE	5003262428002	2012002124965	CM79	1	1	4231385939
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, S, Ekru	LC 6575 NEW ID REG JOGGER	5003262338003	2012002112658	CB45	1	2	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, S, Ekru	LC 6575 NEW ID REG JOGGER	5003262338003	2012002112658	CB46	1	2	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Ekru	LC 6575 NEW ID REG JOGGER	5003262338002	2012002112641	CB68	2	2	4231385931
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, L, Ekru	LC 6575 NEW ID REG JOGGER	5003262338001	2012002112634	YM10	1	1	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, S, Ekru	LC 6628 NEW ID UNIQ TEE	5003262480003	2012002116953	CM36	1	1	4231385935
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Siyah	LC 6629 NEW ID UNIQ TEE	5003262462001	2012002116984	CB21	1	1	4231385923
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, M, Siyah	LC 6629 NEW ID UNIQ TEE	5003262462002	2012002116991	CM32	1	3	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, XS, Siyah	LC 6629 NEW ID UNIQ TEE	5003262462005	2012002117028	CM32	1	1	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, M, Siyah	LC 6629 NEW ID UNIQ TEE	5003262462002	2012002116991	YM10	2	3	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Petrol	LC 6672 CUMMING TEE	5003262481002	2012002123319	CM32	2	2	4231385934
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, M, Petrol	LC 6672 CUMMING TEE	5003262481003	2012002123326	YM07	1	1	4231385945
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Nane	LC 6673 CUMMING TEE	5003262463002	2012002123265	CB45	1	3	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Nane	LC 6673 CUMMING TEE	5003262463002	2012002123265	GS06	1	3	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Nane	LC 6673 CUMMING TEE	5003262463002	2012002123265	GS08	1	3	4231385943
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Şort, S, Somon	LC 6787 RONE SHORT	5003262434003	2012002115055	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Gri Melanj	LC 8005 NEW ID REG JOGGER	5003262373003	2012002118773	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, L, Gri Melanj	LC 8005 NEW ID REG JOGGER	5003262373002	2012002118766	CB46	1	1	4231385928
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Siyah	LC 8007 NEW ID REG JOGGER	5003262383003	2012002118872	YM10	1	1	4231385946
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Beyaz	LC 8013 NEW ID REG TEE	5003259143002	2012002122367	YM02	1	1	4231385944
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, S, Siyah	LC 8031 NEW ID REG SL TEE	5003262452004	2012002122084	CB35	1	1	4231385925
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Siyah	LC 8031 NEW ID REG SL TEE	5003262452002	2012002122060	CB49	4	4	4231385929
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, 2XL, Siyah	LC 8031 NEW ID REG SL TEE	5003262452001	2012002122053	GS04	1	1	4231385941
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, XL, Siyah	LC 8031 NEW ID REG SL TEE	5003262452005	2012002122091	GS06	1	1	4231385942
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok Şort, L, Siyah	LC 8035 NEW ID REG SHORT	5003262407002	2012002121667	YM07	2	2	4231385945
+Manuel Transferler Run ID 72149	Active & Outdoor	002Active Apparel	Reebok	Reebok T-Shirt, L, Siyah	LC 9022 MONAC TEE	5003259154002	2012002125061	CB45	1	1	4231385927
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Ekru	LILY	5003098637002	8684024160357	YM10	1	1	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 36, Ekru	LILY	5003098637001	8684024160340	CB49	1	1	4231355261
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	LILY	5003098636002	8684024160302	CM24	1	1	4231355754
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Ekru	LILY	5003098637005	8684024160388	CM63	1	1	4231355802
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Pareo, 2, Fuşya	LRN23YKP5833	5003152688002	8682339836745	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Pareo, 1, Fuşya	LRN23YKP5833	5003152688001	8682339836738	CB43	1	1	4231347440
+Kurumsal Satış Transfer Data	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 34-32, Renksiz	M0042286546_JAKE	5003110761019	8684080942867	CM63	1	1	4231372451
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 42, Bordo	M12000	5003285311004	8682339842487	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 38, İndigo	M12040	5003292748001	8682339851281	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 44, İndigo	M12040	5003292748004	8682339851311	CB45	1	1	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 46, İndigo	M12040	5003292748005	8682339861600	CB45	1	1	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 40, Siyah	M12056	5003283764001	8682339855708	CB45	1	2	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 42, Siyah	M12056	5003283764002	8682339855715	CB45	1	1	4231347454
+Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 44, Haki	M12063	5003292758003	8682339857337	CB43	1	1	4231347440
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	MARJORY	5003230042002	8684024584290	CM34	1	3	4231354203
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 36, Siyah	MARJORY	5003230042001	8684024584283	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	MARJORY	5003230042002	8684024584290	CB48	1	3	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	MARJORY	5003230042002	8684024584290	CB44	1	3	4231355350
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 38, Siyah	MARTIN	5003099183003	8684024171735	CB46	1	1	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 37, Gri	MARTIN	5003099232002	8684024172008	CB46	2	2	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 40, Siyah	MARTIN	5003099183005	8684024171759	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Gri	MARTIN	5003099232001	8684024171995	CB22	1	1	4231354503
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 40, Bej	MARTIN	5003230034005	8684024584474	CB38	1	1	4231354696
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Siyah	MARTIN	5003099183001	8684024171711	CB56	1	1	4231355096
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 40, Gri	MARTIN	5003099232005	8684024172039	CB56	1	1	4231355096
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 39, Gri	MARTIN	5003099232004	8684024172022	CB56	1	1	4231355096
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Bej	MARTIN	5003230034001	8684024584436	CM79	1	1	4231355174
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 28-30, Siyah	MILE HIGH SUPER SKINNY T BLACK CELE	5003239340009	5401187087412	SM23	1	1	4231348315
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 37, Altın	NASEEM	5003098657002	8684024160821	YM10	1	1	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Altın	NASEEM	5003098657004	8684024160845	YM10	2	2	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 36, Altın	NASEEM	5003098657001	8684024160814	CB38	1	1	4231354696
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Çağla	NAVY	5003265032001	8683858866053	CB32	1	2	4231295584
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 37, Siyah	NIKOS	5003098617002	8684024158989	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 40, Siyah	NIKOS	5003098617005	8684024159610	CB49	1	1	4231355261
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 39, Siyah	NIOBE	5003230165004	8684024585860	CB45	1	1	4231354188
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 36, Siyah	NIOBE	5003230165001	8684024585839	CB23	1	1	4231355503
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	NOSAH	5003231340004	8684024600549	CB46	1	1	4231354270
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 40, Siyah	NOSAH	5003231340005	8684024600556	CM50	1	1	4231355196
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Ceket, M, Mavi	ORIGINAL TRUCKER ALL MINE	5002671668003	5400898190961	SM45	1	1	4231348327
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Ceket, XL, Mavi	ORIGINAL TRUCKER ALL MINE	5002671668005	5400898285179	SM37	1	1	4231348328
+Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 38, Siyah	PARENSO-P	5003255019003	8683858937500	CB62	1	1	4231323842
+Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 36, Siyah	PARENSO-P	5003255019002	8683858937463	CB62	1	2	4231323842
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Siyah	PATINGA	5002925775001	8683133532062	YM02	1	1	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 39, Beyaz	PATINGA	5003106032004	8684024194222	YM02	3	3	4231354230
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 37, Bej	PATINGA	5002925767002	8683133532154	CM64	1	1	4231354263
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 40, Siyah	PATINGA	5002925775005	8683133532208	CM44	1	1	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 40, Bej	PATINGA	5002925767005	8683133532185	CM44	3	3	4231354340
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 38, Siyah	PATINGA	5002925775003	8683133532086	YM10	1	1	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 36, Bej	PATINGA	5002925767001	8683133532147	CB38	1	1	4231354696
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 39, Bej	PATINGA	5002925767004	8683133532178	CM27	2	2	4231354899
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 39, Siyah	PATINGA	5002925775004	8683133532093	CM27	2	2	4231354899
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 37, Siyah	PRISCILLA	5003230040002	8684024584245	CB48	1	1	4231354291
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 36, Siyah	PRISCILLA	5003230040001	8684024584238	CM79	1	1	4231355174
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 27-30, Açık Mavi	RIBCAGE FULL LENGTH TR SAMBA TANGO	5003239336009	5401187158976	SM30	1	1	4231347972
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 27-30, Açık Mavi	RIBCAGE FULL LENGTH TR SAMBA TANGO	5003239336009	5401187158976	SM37	1	1	4231348328
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-27, Koyu Mavi	RIBCAGE STRAIGHT ANKLE SALSA DARK S	5003114595002	5401157064450	SM30	1	1	4231347972
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-29, Koyu Mavi	RIBCAGE STRAIGHT ANKLE SALSA DARK S	5003114595003	5401157064467	SM42	1	1	4231348322
+Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-27, Koyu Mavi	RIBCAGE STRAIGHT ANKLE SALSA DARK S	5003114595002	5401157064450	SM45	1	1	4231348327
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 38, Siyah	SHIRE	5002977238003	8683133724924	CM34	1	1	4231354203
+Manuel Transferler Run ID 72148	Active & Outdoor	040Outdoor Apparel	Columbia	Columbia Gömlek, M, Gri	SILVER RIDGE2.0 LONG SLEEVE SHIRT	5002411956003	192290009389	CB39	1	1	4231327066
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 37, Bej	STAHES	5002980888002	8683133769932	YM10	1	1	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Terlik, 36, Bej	STAHES	5002980888001	8683133769925	YM10	2	2	4231354620
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 36, Siyah	STORMES	5002980895001	8683133769802	CB22	1	1	4231354503
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 39, Siyah	STORMES	5002980895004	8683133769833	CB08	3	3	4231354559
+Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sandalet, 37, Siyah	STORMES	5002980895002	8683133769819	CB51	2	2	4231354589
+Manuel Transferler Run ID 72148	Mens	023Underwear	Pierre Cardin	Pierre Cardin Şort Mayo, 2XL, Turuncu	WAVE	5003265010001	8683858866220	CM34	1	1	4231295706
