@@ -1,119 +1,144 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Barkod Tarayıcı</title>
-<style>
-:root {
-  --bg: #f6f8fa; --card: #ffffff; --primary: #6366f1; --primary-hover: #4f46e5;
-  --input-bg: #f9fafb; --input-border: #d1d5db; --text: #1f2937; --muted: #6b7280;
-  --shadow: rgba(0, 0, 0, 0.05);
-}
-* { box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; padding: 20px 0; display: flex; justify-content: center; color: var(--text);}
-.wrapper { background: var(--card); padding: 30px 24px; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow); max-width: 480px; width: 100%; text-align: center;}
-.search-box { position: relative; margin-bottom: 16px; }
-.search-box input { width: 100%; padding: 14px 44px 14px 14px; font-size: 15px; border-radius: 10px; border: 1px solid var(--input-border); font-family: 'Inter', sans-serif; background: var(--input-bg);}
-.search-box input:focus { border-color: var(--primary); outline: none;}
-.search-box button { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 18px; color: var(--muted); padding: 0; margin: 0;}
-.search-box button:hover { color: var(--primary); }
-
-.button-group { display: flex; gap: 12px; margin: 16px 0; flex-wrap: wrap; align-items:center; justify-content:center;}
-
-/* Buton stilleri */
-button.control { flex: 0 0 120px; padding: 12px 18px; border-radius: 10px; font-size: 15px; font-weight: 500; cursor: pointer; border: none; transition: all 0.2s ease;}
-.primary { background: var(--primary); color: white; }
-.primary:hover { background: var(--primary-hover);}
-.secondary { background: #e5e7eb; color: var(--muted); }
-.secondary:hover { background: #d1d5db;}
-
-/* Video çerçevesi */
-#video { width: 100%; max-height: 50vh; background: black; display: none; border-radius: 14px; margin-bottom: 16px;}
-
-/* Çıktı alanları */
-.output { padding: 20px; background: #f3f4f6; border: 1px dashed #cbd5e1; border-radius: 14px; min-height: 100px; display: flex; flex-direction: column; align-items: flex-start; font-weight: 600; white-space: pre-wrap; text-align: left; overflow-wrap: break-word;}
-.other-output { margin-top: 12px; display: flex; flex-direction: column; gap: 12px; }
-.other-item { padding: 16px; background: #eef2ff; border: 1px dashed #818cf8; border-radius: 14px; white-space: pre-wrap; text-align: left; }
-
-/* Toggle switch */
-label.switch-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-label.switch-label input[type="checkbox"] {
-  width: 36px;
-  height: 20px;
-  position: relative;
-  appearance: none;
-  background: #e5e7eb;
-  outline: none;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-label.switch-label input[type="checkbox"]:checked {
-  background: var(--primary);
-}
-
-label.switch-label input[type="checkbox"]::before {
-  content:"";
-  position:absolute;
-  width:18px;
-  height:18px;
-  border-radius:50%;
-  top:1px;
-  left:1px;
-  background:white;
-  transition:0.3s;
-}
-
-label.switch-label input[type="checkbox"]:checked::before {
-  transform: translateX(16px);
-}
-
-label.switch-label span {
-  user-select: none;
-  font-weight: 500;
-}
-
-.search-box button {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: var(--muted);
-  padding: 0;
-  margin: 0 0 0 6px; /* ← mikrofon butonuna mesafe */
-}
-
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barkod Tarayıcı</title>
+  <style>
+    :root {
+      --bg: #f6f8fa; --card: #ffffff; --primary: #6366f1; --primary-hover: #4f46e5;
+      --input-bg: #f9fafb; --input-border: #d1d5db; --text: #1f2937; --muted: #6b7280;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      color: var(--text);
+    }
+    .wrapper {
+      background: var(--card);
+      padding: 30px 24px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 14px;
+      font-size: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--input-border);
+      background: var(--input-bg);
+      font-family: 'Inter', sans-serif;
+    }
+    .icon-buttons {
+      display: flex;
+      gap: 6px;
+      margin-left: 8px;
+    }
+    .icon-buttons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--muted);
+      padding: 0;
+    }
+    .icon-buttons button:hover {
+      color: var(--primary);
+    }
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    button.control {
+      flex: 0 0 120px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+    .primary {
+      background: var(--primary);
+      color: white;
+    }
+    .primary:hover { background: var(--primary-hover); }
+    .secondary {
+      background: #e5e7eb;
+      color: var(--muted);
+    }
+    .secondary:hover { background: #d1d5db; }
+    #video {
+      width: 100%;
+      max-height: 50vh;
+      background: black;
+      display: none;
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+    .output {
+      padding: 20px;
+      background: #f3f4f6;
+      border: 1px dashed #cbd5e1;
+      border-radius: 14px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-weight: 600;
+      white-space: pre-wrap;
+      text-align: left;
+      overflow-wrap: break-word;
+    }
+    .other-output {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .other-item {
+      padding: 16px;
+      background: #eef2ff;
+      border: 1px dashed #818cf8;
+      border-radius: 14px;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Sesler -->
 <audio id="beepSuccess" src="ok.mp3" preload="auto"></audio>
 <audio id="beepError" src="no.mp3" preload="auto"></audio>
 
 <div class="wrapper">
-    <h2>Sipariş Arama</h2>
+  <h2>Sipariş Arama</h2>
   <div class="search-box">
     <input type="text" id="manualInput" placeholder="Barkod.." inputmode="numeric" pattern="[0-9]*" autocomplete="off"/>
-    <button id="searchBtn" aria-label="Ara">🔍</button>
+    <div class="icon-buttons">
+      <button id="voiceBtn" aria-label="Sesle Ara">🎤</button>
+      <button id="searchBtn" aria-label="Ara">🔍</button>
+    </div>
   </div>
-  
-        <button id="voiceBtn" aria-label="Sesle Ara">🎤</button>
-
 
   <video id="video" autoplay playsinline></video>
 
@@ -132,7 +157,6 @@ label.switch-label span {
 </div>
 
 <script>
-
 const startBtn = document.getElementById("startBtn");
 const stopBtn = document.getElementById("stopBtn");
 const video = document.getElementById("video");
@@ -140,11 +164,13 @@ const resultDiv = document.getElementById("result");
 const otherDiv = document.getElementById("otherResult");
 const manualInput = document.getElementById("manualInput");
 const searchBtn = document.getElementById("searchBtn");
+const voiceBtn = document.getElementById("voiceBtn");
 const beepSuccess = document.getElementById("beepSuccess");
 const beepError = document.getElementById("beepError");
 const keepOpenToggle = document.getElementById("keepOpenToggle");
 let stream;
 let barcodeDetector;
+let isVoiceActive = false;
 
 // scan.txt'yi yükle
 const dataPromise = loadTxtData();
@@ -183,7 +209,6 @@ async function showResult(code){
   }
 }
 
-// Manuel arama
 async function manualSearch(){
   const code = manualInput.value.trim();
   if(!code) return;
@@ -198,7 +223,7 @@ async function manualSearch(){
   }
 
   await showResult(code);
-  manualInput.value="";
+  manualInput.value = "";
 }
 
 searchBtn.addEventListener("click", manualSearch);
@@ -215,7 +240,6 @@ async function startCameraAndScan(){
   }catch(err){console.error(err); resultDiv.textContent="Kamera açılamadı.";}
 }
 
-// Başlat düğmesi kullanıcı etkileşimiyle audio'u başlatır
 startBtn.addEventListener("click", async () => {
   try {
     await beepSuccess.play(); beepSuccess.pause(); beepSuccess.currentTime = 0;
@@ -224,7 +248,6 @@ startBtn.addEventListener("click", async () => {
   startCameraAndScan();
 });
 
-// Kamera taramada barkod
 video.addEventListener("click", async ()=> {
   if(!stream) return;
   try{
@@ -243,7 +266,6 @@ video.addEventListener("click", async ()=> {
 
       await showResult(code);
 
-      // Toggle OFF ise kamera kapanır
       if(!keepOpenToggle.checked){
         stopCamera();
       }
@@ -262,37 +284,21 @@ function stopCamera(){
 
 stopBtn.addEventListener("click", stopCamera);
 
- // Sağ tıklamayı engelle
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // Belirli kısayolları engelle (F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J)
-  document.addEventListener('keydown', function(e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-    }
-  });
-  
-  // Web Speech API - Sesli sayı girişi
-const voiceBtn = document.getElementById("voiceBtn");
-
+// Ses tanıma
 let recognition;
 if ('webkitSpeechRecognition' in window) {
-  recognition = new webkitSpeechRecognition(); // Chrome için
+  recognition = new webkitSpeechRecognition();
   recognition.lang = "tr-TR";
-  recognition.continuous = false;
+  recognition.continuous = true;
   recognition.interimResults = false;
 
   recognition.onresult = function(event) {
-    const transcript = event.results[0][0].transcript;
-    const numbers = transcript.replace(/\D/g, ''); // Sayı olmayan karakterleri sil
-    manualInput.value += numbers; // Var olan değerin sonuna ekle
-    manualSearch(); // otomatik ara
+    const transcript = event.results[event.results.length - 1][0].transcript;
+    const numbers = transcript.replace(/\D/g, '');
+    if (numbers.length > 0) {
+      manualInput.value += numbers;
+      manualSearch();
+    }
   };
 
   recognition.onerror = function(event) {
@@ -300,8 +306,11 @@ if ('webkitSpeechRecognition' in window) {
   };
 
   recognition.onend = function() {
-    voiceBtn.disabled = false;
-    voiceBtn.textContent = "🎤";
+    if (isVoiceActive) {
+      recognition.start();
+    } else {
+      voiceBtn.textContent = "🎤";
+    }
   };
 }
 
@@ -310,12 +319,17 @@ voiceBtn.addEventListener("click", () => {
     alert("Tarayıcınız ses tanımayı desteklemiyor.");
     return;
   }
-  voiceBtn.disabled = true;
-  voiceBtn.textContent = "🎙️ Dinleniyor...";
-  recognition.start();
+
+  if (!isVoiceActive) {
+    isVoiceActive = true;
+    voiceBtn.textContent = "⏹️";
+    recognition.start();
+  } else {
+    isVoiceActive = false;
+    voiceBtn.textContent = "🎤";
+    recognition.stop();
+  }
 });
-
-
 </script>
 </body>
 </html>
