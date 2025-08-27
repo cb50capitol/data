@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Metni Sesli Oku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            text-align: center;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Metni Sesli Oku</h1>
+    <input type="text" id="textInput" placeholder="Metni buraya yaz...">
+    <button onclick="speakText()">Oku</button>
+
+    <script>
+        let turkishVoice = null;
+
+        function loadVoices() {
+            const voices = speechSynthesis.getVoices();
+            // Türkçe dilinde bir ses bul
+            turkishVoice = voices.find(voice => voice.lang === 'tr-TR');
+
+            if (!turkishVoice) {
+                console.warn("Türkçe ses bulunamadı. Sistem varsayılan sesi kullanılacak.");
+            }
+        }
+
+        // Bazı tarayıcılarda sesler async yüklendiği için bu olayı dinlemeliyiz
+        speechSynthesis.onvoiceschanged = loadVoices;
+
+        function speakText() {
+            const text = document.getElementById("textInput").value;
+            if (text.trim() === "") {
+                alert("Lütfen bir metin girin.");
+                return;
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'tr-TR';
+
+            if (turkishVoice) {
+                utterance.voice = turkishVoice;
+            }
+
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
