@@ -81,8 +81,9 @@ button.control svg {
       <span> </span>
     </label>
 
-    <!-- START butonu -->
+    <!-- START butonu: seçtiğiniz 1 numaralı SVG ile -->
     <button id="startBtn" class="control primary" aria-label="Barkod Okut">
+      <!-- 1) Köşelerde tarayıcı + dikey barkod (klasik) -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M3 7V4h3" />
         <path d="M21 7V4h-3" />
@@ -119,14 +120,12 @@ const beepError = document.getElementById("beepError");
 const specialBeep = document.getElementById("specialBeep");
 const keepOpenToggle = document.getElementById("keepOpenToggle");
 const searchBox = document.getElementById("searchBox");
-const clearMemoryBtn = document.getElementById("clearMemoryBtn"); // ✅ eklendi
 
 let stream;
 let barcodeDetector;
 let isScanning = false;
 const dataPromise = loadTxtData();
 
-/* --- TXT YÜKLE --- */
 async function loadTxtData() {
   try {
     const response = await fetch("https://cb50capitol.vercel.app/scan.txt");
@@ -139,48 +138,6 @@ async function loadTxtData() {
   }
 }
 
-/* --- TÜRKÇE SESLENDİRME DÖNÜŞTÜRÜCÜLERİ --- */
-// Harf ve rakam karşılıkları (kodlar için)
-const turkishMap = {
-  "A":"a","B":"be","C":"ce","Ç":"çe","D":"de","E":"e","F":"fe",
-  "G":"ge","Ğ":"ğe","H":"he","I":"ı","İ":"i","J":"je","K":"ke",
-  "L":"le","M":"me","N":"ne","O":"o","Ö":"ö","P":"pe","R":"re",
-  "S":"se","Ş":"şe","T":"te","U":"u","Ü":"ü","V":"ve","Y":"ye","Z":"ze",
-  "0":"sıfır","1":"bir","2":"iki","3":"üç","4":"dört","5":"beş",
-  "6":"altı","7":"yedi","8":"sekiz","9":"dokuz"
-};
-
-function toTurkishSpeech(text) {
-  return text.split("").map(ch => {
-    const upper = ch.toUpperCase();
-    return turkishMap[upper] || ch;
-  }).join(" ");
-}
-
-/** Genel kural:
- *  - Sadece harf-rakamdan oluşan ve kısa (<=6) ise: heceleyerek/harf sayarak oku (örn CB50 → ce be elli)
- *  - Aksi halde: normal oku; alt çizgileri boşluğa çevir (örn CD01_EKOL_DEPO'YA_IADE → CD01 EKOL DEPO'YA IADE)
- */
-function processForSpeech(text) {
-  if (/^[A-Za-z0-9]+$/.test(text) && text.length <= 6) {
-    return toTurkishSpeech(text);
-  }
-  return text.replace(/_/g, " ");
-}
-
-/* --- KONUŞMA --- */
-function speak(text) {
-  if (!text) return;
-  // Yeni konuşmadan önce kuyruktakileri temizle
-  try { window.speechSynthesis.cancel(); } catch (e) {}
-  const processed = processForSpeech(text);
-  const utterance = new SpeechSynthesisUtterance(processed);
-  utterance.lang = "tr-TR";
-  utterance.rate = 1;
-  window.speechSynthesis.speak(utterance);
-}
-
-/* --- SONUÇ GÖSTER --- */
 async function showResult(code) {
   const data = await dataPromise;
   const matches = data.filter(r => r[0] === code);
@@ -189,11 +146,6 @@ async function showResult(code) {
   otherDiv.innerHTML = "";
 
   if (matches.length > 0) {
-    // ✅ 3. sütunu BİR KEZ seslendir (ilk eşleşme)
-    if (matches[0].length >= 3) {
-      speak(matches[0][2]);
-    }
-
     for (let i = 0; i < matches.length; i++) {
       const div = document.createElement("div");
       div.className = "other-item";
@@ -231,7 +183,6 @@ async function showResult(code) {
   }
 }
 
-/* --- MANUEL ARAMA --- */
 async function manualSearch() {
   const code = manualInput.value.trim();
   console.log("Manuel barkod:", code);
@@ -245,6 +196,11 @@ async function manualSearch() {
   } else if (matches.length > 0) {
     beepSuccess.currentTime = 0;
     beepSuccess.play().catch(e => console.log("Başarı sesi çalınamadı:", e));
+    
+     // ✔️ 3. sütunu seslendir
+  const thirdColumn = matches[0][2] || '';
+  if (thirdColumn) speakText(thirdColumn);
+  
   } else {
     beepError.currentTime = 0;
     beepError.play().catch(e => console.log("Hata sesi çalınamadı:", e));
@@ -258,7 +214,6 @@ searchBtn.addEventListener("click", manualSearch);
 manualInput.addEventListener("keydown", e => { if (e.key === "Enter") { manualSearch(); } });
 manualInput.addEventListener("input", function () { this.value = this.value.replace(/\D/g, ""); });
 
-/* --- KAMERA --- */
 async function startCameraAndScan() {
   if (!("BarcodeDetector" in window)) { alert("Tarayıcınız BarcodeDetector API'yi desteklemiyor."); return; }
   if (!barcodeDetector) barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'code_128', 'qr_code'] });
@@ -319,6 +274,11 @@ async function scanLoop() {
       } else if (matches.length > 0) {
         beepSuccess.currentTime = 0;
         beepSuccess.play().catch(e => console.log("Başarı sesi çalınamadı:", e));
+        
+        // ✔️ 3. sütunu seslendir
+  const thirdColumn = matches[0][2] || '';
+  if (thirdColumn) speakText(thirdColumn);
+  
       } else {
         beepError.currentTime = 0;
         beepError.play().catch(e => console.log("Hata sesi çalınamadı:", e));
@@ -337,7 +297,6 @@ async function scanLoop() {
   requestAnimationFrame(scanLoop);
 }
 
-/* --- CHECKED DURUMU --- */
 function saveChecked(id) {
   const saved = JSON.parse(localStorage.getItem("checkedItems") || "[]");
   if (!saved.includes(id)) {
@@ -357,7 +316,6 @@ function isChecked(id) {
   return saved.includes(id);
 }
 
-/* --- GEÇMİŞ TEMİZLE --- */
 clearMemoryBtn.addEventListener("click", () => {
   const confirmClear = confirm("Geçmişi temizlemek istediğinize emin misiniz?");
   if (!confirmClear) return;
@@ -367,6 +325,14 @@ clearMemoryBtn.addEventListener("click", () => {
     cb.checked = false;
   });
 });
+
+function speakText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'tr-TR'; // Türkçe
+  speechSynthesis.speak(utterance);
+}
+
+
 </script>
 
 </body>
