@@ -97,6 +97,7 @@ button.control svg {
         <path d="M15.5 9v6" />
       </svg>
     </button>
+<button id="toggleVoiceBtn" class="control secondary" title="Sesli okuma açık/kapalı">🔊</button>
 
     <button id="stopBtn" class="control secondary" style="display:none;">Kapat</button>
   </div>
@@ -125,6 +126,8 @@ let stream;
 let barcodeDetector;
 let isScanning = false;
 const dataPromise = loadTxtData();
+let voiceEnabled = true;
+const toggleVoiceBtn = document.getElementById("toggleVoiceBtn");
 
 async function loadTxtData() {
   try {
@@ -334,8 +337,12 @@ function speakText(text) {
   speechSynthesis.speak(utterance);
 }
 
-function speakMultiple(textList, delay = 300) {
+function speakMultiple(textList, delay = 500) {
+  if (!voiceEnabled) return;
   if (!Array.isArray(textList) || textList.length === 0) return;
+
+  // 🔇 Önceki tüm konuşmaları durdur
+  speechSynthesis.cancel();
 
   let index = 0;
 
@@ -349,12 +356,19 @@ function speakMultiple(textList, delay = 300) {
     index++;
 
     utterance.onend = () => {
-      setTimeout(speakNext, delay); // her okuma arasında 1 saniye bekle
+      setTimeout(speakNext, delay);
     };
   }
 
   speakNext();
 }
+
+
+
+toggleVoiceBtn.addEventListener("click", () => {
+  voiceEnabled = !voiceEnabled;
+  toggleVoiceBtn.textContent = voiceEnabled ? "🔊" : "🔇";
+});
 
 
 </script>
