@@ -198,8 +198,9 @@ async function manualSearch() {
     beepSuccess.play().catch(e => console.log("Başarı sesi çalınamadı:", e));
     
      // ✔️ 3. sütunu seslendir
-  const thirdColumn = matches[0][2] || '';
-  if (thirdColumn) speakText(thirdColumn);
+const thirdColumns = matches.map(r => r[2]).filter(Boolean);
+if (thirdColumns.length > 0) speakMultiple(thirdColumns);
+
   
   } else {
     beepError.currentTime = 0;
@@ -276,8 +277,9 @@ async function scanLoop() {
         beepSuccess.play().catch(e => console.log("Başarı sesi çalınamadı:", e));
         
         // ✔️ 3. sütunu seslendir
-  const thirdColumn = matches[0][2] || '';
-  if (thirdColumn) speakText(thirdColumn);
+const thirdColumns = matches.map(r => r[2]).filter(Boolean);
+if (thirdColumns.length > 0) speakMultiple(thirdColumns);
+
   
       } else {
         beepError.currentTime = 0;
@@ -330,6 +332,28 @@ function speakText(text) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = 'tr-TR'; // Türkçe
   speechSynthesis.speak(utterance);
+}
+
+function speakMultiple(textList, delay = 300) {
+  if (!Array.isArray(textList) || textList.length === 0) return;
+
+  let index = 0;
+
+  function speakNext() {
+    if (index >= textList.length) return;
+
+    const utterance = new SpeechSynthesisUtterance(textList[index]);
+    utterance.lang = 'tr-TR';
+    speechSynthesis.speak(utterance);
+
+    index++;
+
+    utterance.onend = () => {
+      setTimeout(speakNext, delay); // her okuma arasında 1 saniye bekle
+    };
+  }
+
+  speakNext();
 }
 
 
