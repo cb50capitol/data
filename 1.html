@@ -13,7 +13,9 @@
       --glass: rgba(255,255,255,0.08);
       font-family: 'Segoe UI', Roboto, sans-serif;
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
+
     body{
       height:100vh;
       display:flex;
@@ -24,21 +26,24 @@
       color:white;
       overflow:hidden;
     }
+
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
       padding:16px 32px;
     }
+
     header .profile{
       display:flex;align-items:center;gap:12px;
     }
+
     header .avatar{
       width:42px;height:42px;border-radius:50%;
       background:linear-gradient(135deg,#1f2937,#111827);
       display:flex;align-items:center;justify-content:center;font-weight:bold;
     }
-    
+
     main{
       flex:1;
       display:flex;
@@ -46,6 +51,7 @@
       overflow:hidden;
       position:relative;
     }
+
     .menu-row{
       display:flex;
       gap:40px;
@@ -53,9 +59,10 @@
       overflow-x:auto;
       scroll-behavior:smooth;
     }
+
     .tile{
       flex:0 0 320px;
-      height:180px;
+      height:200px;
       border-radius:20px;
       position:relative;
       background:var(--glass);
@@ -64,19 +71,51 @@
       padding:20px;
       display:flex;
       flex-direction:column;
-      justify-content:flex-end;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
       box-shadow:0 8px 24px rgba(0,0,0,0.5);
       transition: transform .3s, box-shadow .3s, border .3s;
       cursor:pointer;
+      color:white;
     }
+
+    .tile .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .tile .label{
+      font-size:20px;
+      font-weight:600;
+    }
+
+    .tile .sub{
+      font-size:14px;
+      color:var(--muted);
+    }
+
     .tile:hover,
     .tile.active{
       transform:translateY(-20px) scale(1.05);
       box-shadow:0 20px 50px rgba(14,165,255,0.25);
-      border:1px solid rgba(14,165,255,0.3);
+      border:2px solid var(--accent);
     }
-    .tile .label{font-size:20px;font-weight:600;}
-    .tile .sub{font-size:14px;color:var(--muted)}
+
+    .tile:hover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.08), transparent);
+      border-radius: inherit;
+      pointer-events: none;
+      animation: shine 1s ease forwards;
+    }
+
+    @keyframes shine {
+      from { transform: translateX(-100%); opacity: 0; }
+      to   { transform: translateX(100%); opacity: 1; }
+    }
 
     footer{
       display:flex;
@@ -86,6 +125,7 @@
       background:rgba(255,255,255,0.03);
       border-top:1px solid rgba(255,255,255,0.06);
     }
+
     footer button{
       background:none;
       border:none;
@@ -94,11 +134,33 @@
       cursor:pointer;
       transition:color .2s;
     }
+
     footer button:hover{color:var(--accent)}
-    
+
     /* scrollbar gizle */
     .menu-row::-webkit-scrollbar{display:none}
     .menu-row{scrollbar-width:none}
+
+    /* Mobil uyum */
+    @media(max-width: 768px){
+      .tile {
+        flex: 0 0 240px;
+        height: 160px;
+        padding: 16px;
+      }
+
+      .tile .icon {
+        font-size: 32px;
+      }
+
+      .tile .label {
+        font-size: 18px;
+      }
+
+      .tile .sub {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -116,62 +178,70 @@
   <main>
     <div class="menu-row" id="menuRow">
       <div class="tile" data-href="envanter.html">
+        <div class="icon">📦</div>
         <div class="label">Envanter</div>
         <div class="sub">Mobil & Windows</div>
       </div>
       <div class="tile" data-href="test.html">
+        <div class="icon">🔄</div>
         <div class="label">Transfer</div>
         <div class="sub">Mobil & Windows</div>
       </div>
       <div class="tile" data-href="barcode.html">
+        <div class="icon">🔍</div>
         <div class="label">Ean & QR</div>
         <div class="sub">Mobil & Windows</div>
       </div>
       <div class="tile" data-href="model.html">
+        <div class="icon">📑</div>
         <div class="label">Model & Article</div>
         <div class="sub">Mobil & Windows</div>
       </div>
       <div class="tile" data-href="scan.html">
+        <div class="icon">📲</div>
         <div class="label">İş Emri</div>
         <div class="sub">Android & Windows</div>
       </div>
       <div class="tile" data-href="ptc.html">
+        <div class="icon">🖥️</div>
         <div class="label">Terminal</div>
         <div class="sub">Android & Windows</div>
       </div>
       <div class="tile" data-href="kargo.html">
-        <div class="label">E-ticaret</div>
-        <div class="sub">Windows</div>
-      </div>
-       <div class="tile" data-href="kargo.html">
+        <div class="icon">📦</div>
         <div class="label">E-ticaret</div>
         <div class="sub">Windows</div>
       </div>
       <div class="tile" data-href="nowtakip.html">
+        <div class="icon">⏱️</div>
         <div class="label">Now Takip</div>
         <div class="sub">Windows</div>
       </div>
       <div class="tile" data-href="mipaket.html">
+        <div class="icon">📦</div>
         <div class="label">Mi Paket</div>
         <div class="sub">Windows</div>
       </div>
       <div class="tile" data-href="paketara.html">
+        <div class="icon">🔎</div>
         <div class="label">Paket Ara</div>
         <div class="sub">Windows</div>
       </div>
       <div class="tile" data-href="sku.html">
+        <div class="icon">🔢</div>
         <div class="label">SKU</div>
         <div class="sub">Windows</div>
       </div>
-       <div class="tile" data-href="eksistok.html">
+      <div class="tile" data-href="eksistok.html">
+        <div class="icon">📉</div>
         <div class="label">Eksi Stok</div>
         <div class="sub">Windows</div>
       </div>
-       <div class="tile" data-href="iptal.html">
+      <div class="tile" data-href="iptal.html">
+        <div class="icon">❌</div>
         <div class="label">İptal</div>
         <div class="sub">Windows</div>
       </div>
-      
     </div>
   </main>
 
@@ -191,9 +261,7 @@
     setActive(0);
 
     tiles.forEach((t,i)=>{
-      t.addEventListener('click',()=>{
-        window.location.href = t.dataset.href;
-      });
+      t.addEventListener('click',()=> window.location.href = t.dataset.href );
       t.addEventListener('focus',()=>{idx=i;setActive(i)});
     });
 
