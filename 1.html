@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PS5 Style Menü</title>
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --accent:#0ea5ff;
+      --accent-2:#7c3aed;
+      --muted:#a0a8c3;
+      --glass: rgba(255,255,255,0.08);
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      background: radial-gradient(circle at 10% 30%, rgba(14,165,255,0.12), transparent 60%),
+                  radial-gradient(circle at 80% 70%, rgba(124,58,237,0.12), transparent 60%),
+                  linear-gradient(180deg,#0b0f1a 0%,#0f172a 100%);
+      color:white;
+      overflow:hidden;
+    }
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 32px;
+    }
+    header .profile{
+      display:flex;align-items:center;gap:12px;
+    }
+    header .avatar{
+      width:42px;height:42px;border-radius:50%;
+      background:linear-gradient(135deg,#1f2937,#111827);
+      display:flex;align-items:center;justify-content:center;font-weight:bold;
+    }
+    
+    main{
+      flex:1;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      position:relative;
+    }
+    .menu-row{
+      display:flex;
+      gap:40px;
+      padding:40px;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+    }
+    .tile{
+      flex:0 0 320px;
+      height:180px;
+      border-radius:20px;
+      position:relative;
+      background:var(--glass);
+      backdrop-filter: blur(18px);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      box-shadow:0 8px 24px rgba(0,0,0,0.5);
+      transition: transform .3s, box-shadow .3s, border .3s;
+      cursor:pointer;
+    }
+    .tile:hover,
+    .tile.active{
+      transform:translateY(-20px) scale(1.05);
+      box-shadow:0 20px 50px rgba(14,165,255,0.25);
+      border:1px solid rgba(14,165,255,0.3);
+    }
+    .tile .label{font-size:20px;font-weight:600;}
+    .tile .sub{font-size:14px;color:var(--muted)}
+
+    footer{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      padding:14px;
+      background:rgba(255,255,255,0.03);
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+    footer button{
+      background:none;
+      border:none;
+      color:var(--muted);
+      font-size:18px;
+      cursor:pointer;
+      transition:color .2s;
+    }
+    footer button:hover{color:var(--accent)}
+    
+    /* scrollbar gizle */
+    .menu-row::-webkit-scrollbar{display:none}
+    .menu-row{scrollbar-width:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">🎮 PS Menü</div>
+    <div class="profile">
+      <div class="avatar">R</div>
+      <div>
+        <div style="font-weight:600">renyobb</div>
+        <div style="font-size:12px;color:var(--muted)">Çevrimiçi</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="menu-row" id="menuRow">
+      <div class="tile" data-href="https://capitool.netlify.app/envanter">
+        <div class="label">Oyunlar</div>
+        <div class="sub">Kütüphane</div>
+      </div>
+      <div class="tile" data-href="https://capitool.netlify.app/test">
+        <div class="label">Medya</div>
+        <div class="sub">Filmler & Müzik</div>
+      </div>
+      <div class="tile" data-href="https://capitool.netlify.app/scan">
+        <div class="label">Mağaza</div>
+        <div class="sub">Yeni içerikler</div>
+      </div>
+      <div class="tile" data-href="friends.html">
+        <div class="label">Arkadaşlar</div>
+        <div class="sub">Çevrimiçi olanlar</div>
+      </div>
+      <div class="tile" data-href="settings.html">
+        <div class="label">Ayarlar</div>
+        <div class="sub">Sistem tercihleri</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <button id="homeBtn">🏠 Ana</button>
+    <button id="searchBtn">🔍 Ara</button>
+    <button id="notifBtn">🔔 Bildirim</button>
+    <button id="settingsBtn">⚙️ Ayar</button>
+  </footer>
+
+  <script>
+    const tiles = document.querySelectorAll('.tile');
+    let idx = 0;
+
+    function setActive(i){
+      tiles.forEach(t=>t.classList.remove('active'));
+      tiles[i].classList.add('active');
+      tiles[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+    }
+    setActive(0);
+
+    tiles.forEach((t,i)=>{
+      t.addEventListener('click',()=>{
+        window.location.href = t.dataset.href;
+      });
+      t.addEventListener('focus',()=>{idx=i;setActive(i)});
+    });
+
+    document.addEventListener('keydown',(e)=>{
+      if(e.key==='ArrowRight'){ idx = Math.min(tiles.length-1, idx+1); setActive(idx); }
+      if(e.key==='ArrowLeft'){ idx = Math.max(0, idx-1); setActive(idx); }
+      if(e.key==='Enter'){ window.location.href = tiles[idx].dataset.href; }
+    });
+  </script>
+</body>
+</html>
