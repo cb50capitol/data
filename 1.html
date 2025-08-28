@@ -68,8 +68,12 @@
       box-shadow:0 8px 24px rgba(0,0,0,0.5);
       transition: transform .3s, box-shadow .3s, border .3s;
       cursor:pointer;
-      transform-style: preserve-3d;
-      perspective: 1000px;
+    }
+    .tile:hover,
+    .tile.active{
+      transform:translateY(-20px) scale(1.05);
+      box-shadow:0 20px 50px rgba(14,165,255,0.25);
+      border:1px solid rgba(14,165,255,0.3);
     }
     .tile .label{font-size:20px;font-weight:600;}
     .tile .sub{font-size:14px;color:var(--muted)}
@@ -187,24 +191,10 @@
     setActive(0);
 
     tiles.forEach((t,i)=>{
-      t.addEventListener('click',()=>{ window.location.href = t.dataset.href; });
-      t.addEventListener('focus',()=>{ idx=i; setActive(i); });
-
-      // Fare ile yönlü hareket efekti
-      t.addEventListener('mousemove', (e)=>{
-        const rect = t.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * 10;
-        const rotateY = ((x - centerX) / centerX) * 10;
-        t.style.transform = `translateY(-10px) scale(1.05) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+      t.addEventListener('click',()=>{
+        window.location.href = t.dataset.href;
       });
-
-      t.addEventListener('mouseleave', ()=>{
-        t.style.transform = 'translateY(0px) scale(1) rotateX(0deg) rotateY(0deg)';
-      });
+      t.addEventListener('focus',()=>{idx=i;setActive(i)});
     });
 
     document.addEventListener('keydown',(e)=>{
