@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
@@ -68,12 +68,8 @@
       box-shadow:0 8px 24px rgba(0,0,0,0.5);
       transition: transform .3s, box-shadow .3s, border .3s;
       cursor:pointer;
-    }
-    .tile:hover,
-    .tile.active{
-      transform:translateY(-20px) scale(1.05);
-      box-shadow:0 20px 50px rgba(14,165,255,0.25);
-      border:1px solid rgba(14,165,255,0.3);
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
     .tile .label{font-size:20px;font-weight:600;}
     .tile .sub{font-size:14px;color:var(--muted)}
@@ -103,11 +99,11 @@
 </head>
 <body>
   <header>
-    <div class="brand">🎮 PS Menü</div>
+    <div class="brand">🎮 Capitol Menü</div>
     <div class="profile">
-      <div class="avatar">R</div>
+      <div class="avatar">CB50</div>
       <div>
-        <div style="font-weight:600">renyobb</div>
+        <div style="font-weight:600">Capitol</div>
         <div style="font-size:12px;color:var(--muted)">Çevrimiçi</div>
       </div>
     </div>
@@ -115,34 +111,68 @@
 
   <main>
     <div class="menu-row" id="menuRow">
-      <div class="tile" data-href="https://capitool.netlify.app/envanter">
-        <div class="label">Oyunlar</div>
-        <div class="sub">Kütüphane</div>
+      <div class="tile" data-href="envanter.html">
+        <div class="label">Envanter</div>
+        <div class="sub">Mobil & Windows</div>
       </div>
-      <div class="tile" data-href="https://capitool.netlify.app/test">
-        <div class="label">Medya</div>
-        <div class="sub">Filmler & Müzik</div>
+      <div class="tile" data-href="test.html">
+        <div class="label">Transfer</div>
+        <div class="sub">Mobil & Windows</div>
       </div>
-      <div class="tile" data-href="https://capitool.netlify.app/scan">
-        <div class="label">Mağaza</div>
-        <div class="sub">Yeni içerikler</div>
+      <div class="tile" data-href="barcode.html">
+        <div class="label">Ean & QR</div>
+        <div class="sub">Mobil & Windows</div>
       </div>
-      <div class="tile" data-href="friends.html">
-        <div class="label">Arkadaşlar</div>
-        <div class="sub">Çevrimiçi olanlar</div>
+      <div class="tile" data-href="model.html">
+        <div class="label">Model & Article</div>
+        <div class="sub">Mobil & Windows</div>
       </div>
-      <div class="tile" data-href="settings.html">
-        <div class="label">Ayarlar</div>
-        <div class="sub">Sistem tercihleri</div>
+      <div class="tile" data-href="scan.html">
+        <div class="label">İş Emri</div>
+        <div class="sub">Android & Windows</div>
       </div>
+      <div class="tile" data-href="ptc.html">
+        <div class="label">Terminal</div>
+        <div class="sub">Android & Windows</div>
+      </div>
+      <div class="tile" data-href="kargo.html">
+        <div class="label">E-ticaret</div>
+        <div class="sub">Windows</div>
+      </div>
+       <div class="tile" data-href="kargo.html">
+        <div class="label">E-ticaret</div>
+        <div class="sub">Windows</div>
+      </div>
+      <div class="tile" data-href="nowtakip.html">
+        <div class="label">Now Takip</div>
+        <div class="sub">Windows</div>
+      </div>
+      <div class="tile" data-href="mipaket.html">
+        <div class="label">Mi Paket</div>
+        <div class="sub">Windows</div>
+      </div>
+      <div class="tile" data-href="paketara.html">
+        <div class="label">Paket Ara</div>
+        <div class="sub">Windows</div>
+      </div>
+      <div class="tile" data-href="sku.html">
+        <div class="label">SKU</div>
+        <div class="sub">Windows</div>
+      </div>
+       <div class="tile" data-href="eksistok.html">
+        <div class="label">Eksi Stok</div>
+        <div class="sub">Windows</div>
+      </div>
+       <div class="tile" data-href="iptal.html">
+        <div class="label">İptal</div>
+        <div class="sub">Windows</div>
+      </div>
+      
     </div>
   </main>
 
   <footer>
-    <button id="homeBtn">🏠 Ana</button>
-    <button id="searchBtn">🔍 Ara</button>
-    <button id="notifBtn">🔔 Bildirim</button>
-    <button id="settingsBtn">⚙️ Ayar</button>
+    🤖
   </footer>
 
   <script>
@@ -157,10 +187,24 @@
     setActive(0);
 
     tiles.forEach((t,i)=>{
-      t.addEventListener('click',()=>{
-        window.location.href = t.dataset.href;
+      t.addEventListener('click',()=>{ window.location.href = t.dataset.href; });
+      t.addEventListener('focus',()=>{ idx=i; setActive(i); });
+
+      // Fare ile yönlü hareket efekti
+      t.addEventListener('mousemove', (e)=>{
+        const rect = t.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        t.style.transform = `translateY(-10px) scale(1.05) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
       });
-      t.addEventListener('focus',()=>{idx=i;setActive(i)});
+
+      t.addEventListener('mouseleave', ()=>{
+        t.style.transform = 'translateY(0px) scale(1) rotateX(0deg) rotateY(0deg)';
+      });
     });
 
     document.addEventListener('keydown',(e)=>{
