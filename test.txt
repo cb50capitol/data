@@ -1,471 +1,258 @@
 Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1090746	5003129966003	8683798521678	CM44	1	3	4231379942
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, L, Lacivert	1090746	5003129966002	8683798521685	CM76	2	2	4231379975
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Bej	1090746	5003250408003	8683798777259	CB49	1	1	4231379993
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1090746	5003129966003	8683798521678	CB49	1	3	4231379993
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Bej	1090746	5003250408002	8683798777266	CB49	2	2	4231379993
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1090746	5003129966003	8683798521678	CB56	1	3	4231380040
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, XL, Bej	1090746	5003250408004	8683798777280	CB53	1	1	4231380044
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Lacivert	1090746	5003129966004	8683798521661	CB53	1	1	4231380044
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Lacivert	1095061	5003259450003	8683798891085	CM76	1	1	4231379975
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Antrasit	1095061	5003259295004	8683798891122	CM76	1	2	4231379975
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, S, Antrasit	1095061	5003259295004	8683798891122	CB56	1	2	4231380040
-Manuel Transferler Run ID 72149	Mens	006Apparel	Network	Network Eşofman Altı, M, Antrasit	1095061	5003259295003	8683798891139	CM27	1	1	4231379998
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 5-6 Yaş, Beyaz	2084894	5003254925007	8683858666646	CM32	1	1	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 8-9 Yaş, Beyaz	2084894	5003254925010	8683858666639	CM32	1	1	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shir, 12-13 Yaş, Beyaz	2084894	5003254925003	8683858666530	CM32	1	2	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 7-8 Yaş, Beyaz	2084894	5003254925009	8683858666752	CM32	1	2	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 4-5 Yaş, Beyaz	2084894	5003254925006	8683858666776	CM32	1	1	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shir, 10-11 Yaş, Beyaz	2084894	5003254925001	8683858666769	CM32	1	1	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 9-10 Yaş, Beyaz	2084894	5003254925011	8683858666509	CM32	1	3	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shir, 13-14 Yaş, Beyaz	2084894	5003254925004	8683858666554	CM32	2	4	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shir, 11-12 Yaş, Beyaz	2084894	5003254925002	8683858666516	CM32	2	3	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 3-4 Yaş, Beyaz	2084894	5003254925005	8683858666585	CM32	2	4	4231406794
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shirt, 6-7 Yaş, Beyaz	2084894	5003254925008	8683858666622	CM32	2	6	4231406794
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Beyaz	35913007	5000162332006	4057827546675	CB79	1	1	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	001Accessories & Equipments	Puma	Puma Şapka, Standart, Beyaz	02599601 ESS SCRIPT LOGO Dad Cap Pu	5003249829001	4067983507830	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Futbol Ayakkabısı, 42, Beyaz	10772601 FUTURE 7 PLAY TT PUMA Whit	5003249633003	4099686019402	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Futbol Ayakkabısı, 43, Beyaz	10772601 FUTURE 7 PLAY TT PUMA Whit	5003249633005	4099686019426	CM84	1	1	4231404768
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Bej	12217167_JPRBLUARCHIE SS TEE CREW N	5003243727002	5715605969564	CB45	2	2	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Lacivert	12268127_JJEBRYAN CORP LOGO TEE SS	5003243811004	5715671962254	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Lacivert	12268477_JJHUDSON TEE SS CREW NECK	5003243793004	5715675022305	GS08	1	1	4231358576
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Lacivert	12268477_JJHUDSON TEE SS CREW NECK	5003243793002	5715612218891	CB45	1	4	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Lacivert	12269324_JJHAWAII SHAPE TEE SS CREW	5003243823003	5715675322948	CB45	2	2	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12275012_JJBEAU TEE SS FRONTPRINT C	5003243903002	5715675031390	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Siyah	12275012_JJBEAU TEE SS FRONTPRINT C	5003243903005	5715675031321	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	12275012_JJBEAU TEE SS FRONTPRINT C	5003243932004	5715675031451	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Siyah	12275402_JORSNAKE TEE SS CREW NECK	5003243869003	5715678512285	GS08	1	2	4231358576
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, M, Beyaz	12275402_JORSNAKE TEE SS CREW NECK	5003243912003	5715678512261	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Siyah	12276646_JPRBLAHARRIS SS TEE CREW N	5003243923005	5715677470760	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Mavi	12277888_JORBOSTON TEE SS CREW NECK	5003243919004	5715714755935	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Siyah	12288374_JPRBLULOGO TEE SS CREW NEC	5003253254004	5715825349320	GS08	1	1	4231358576
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Siyah	12288374_JPRBLULOGO TEE SS CREW NEC	5003253254002	5715732483698	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Koyu Yeşil	12288375_JORREMINDER TEE SS CREW NE	5003253209004	5715825347630	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Siyah	12288506_JCOOLE TEE SS CREW NECK BS	5003253246001	5715825347272	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Beyaz	12288506_JCOOLE TEE SS CREW NECK BS	5003253229002	5715732881081	CB45	1	3	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, XL, Beyaz	12288515_JORSPLASH TEE SS CREW NECK	5003253281005	5715825348170	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	12288515_JORSPLASH TEE SS CREW NECK	5003253281004	5715825348156	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Siyah	12288521_JPRBLULIFE TEE SS CREW NEC	5003253267004	5715825349153	CB45	2	2	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Taş	12288523_JPRBLUPACER TEE SS CREW NE	5003253269001	5715825349528	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Füme	12288525_JCOTONAL TEE SS CREW NECK	5003253316001	5715825347791	GS08	1	1	4231358576
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, 2XL, Taş	12288525_JCOTONAL TEE SS CREW NECK	5003253338001	5715825347746	CB23	1	1	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, L, Füme	12288525_JCOTONAL TEE SS CREW NECK	5003253316002	5715825347777	CB45	1	1	4231358595
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 43, Siyah	19520101 Flyer Flex	5002995013004	4063699707847	CB36	1	1	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 44, Siyah	19520101 Flyer Flex	5002995013005	4063699707779	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 41, Siyah	19520101 Flyer Flex	5002995013001	4063699707854	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 42.5, Siyah	19520101 Flyer Flex	5002995013003	4063699707755	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 42, Siyah	19520101 Flyer Flex	5002995013002	4063699707793	CM84	1	1	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 36, Siyah	19551505 Accent Puma Black-Rose Gol	5003249470001	4063699665932	CB14	1	1	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Beyaz	30966801 Puma Shuffle	5002928293009	4063696285072	CB36	1	1	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	30966801 Puma Shuffle	5002928293005	4063696284952	CB65	1	1	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	30966801 Puma Shuffle	5002928293004	4063696284945	CM84	1	1	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	30966802 Puma Shuffle	5002928279005	4063696285164	CB65	1	1	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Beyaz	30966802 Puma Shuffle	5002928279003	4063696285256	CM34	2	2	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakka, 38, Beyaz - Yeşil	30966813 Puma Shuffle W	5002732048005	4063699648164	CB81	1	1	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Beyaz	30966825 Puma Shuffle	5003170391003	4065452842536	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Beyaz	30966825 Puma Shuffle W	5003170387003	4065452842451	CB57	1	1	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	30966825 Puma Shuffle W	5003170387004	4065452842475	CB67	1	1	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	30966825 Puma Shuffle W	5003170387005	4065452842482	CM29	1	2	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	30966825 Puma Shuffle W	5003170387005	4065452842482	CM64	1	2	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 37, Siyah	31009301 FlexFocus Lite Modern PUMA	5003249473002	4067979256599	CB14	1	1	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 38, Siyah	31009301 FlexFocus Lite Modern PUMA	5003249473004	4067979256612	CB42	1	1	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 40, Siyah	31009301 FlexFocus Lite Modern PUMA	5003249473007	4067979256643	CB59	1	1	4231404756
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 39, Siyah	31009301 FlexFocus Lite Modern PUMA	5003249473006	4067979256636	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 43, Yeşil	31009320 FlexFocus Lite Modern  Gre	5003249435004	4067983561429	CB79	1	1	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Siyah	36681105ST Runner v2 Mesh	5002366182005	4059505533748	CB37	1	1	4231404753
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 45, Siyah	36681105ST Runner v2 Mesh	5002366182006	4059505533946	CB60	9	9	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Krem	36986335 Caracal	5002732085005	4063699619843	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42, Krem	36986335 Caracal	5002732085003	4063699619829	CM84	1	1	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Krem	36986335 Caracal W	5002732069008	4063699619799	CM84	1	1	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakka, 43, Siyah - Beyaz	37112802 Anzarun Lite	5002732100005	4062451631420	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakka, 40, Siyah - Beyaz	37112802 Anzarun Lite W	5002732092008	4062451631253	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38.5, Pembe	37112868 Anzarun Lite Rose Quartz-P	5003249489005	4067983703874	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Pembe	37112868 Anzarun Lite Rose Quartz-P	5003249489007	4067983703881	CB60	1	1	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Pembe	37112868 Anzarun Lite Rose Quartz-P	5003249489006	4067983703812	CB81	1	1	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 36, Pembe	37112868 Anzarun Lite Rose Quartz-P	5003249489001	4067983703850	CB81	1	1	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Pembe	37112868 Anzarun Lite Rose Quartz-P	5003249489004	4067983703805	CB81	2	2	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37, Pembe	37112868 Anzarun Lite Rose Quartz-P	5003249489002	4067983703799	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 43, Siyah	37799501 Redeem Profoam	5002995048005	4065453463068	CB33	1	1	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 38, Siyah	37801601 Transport Modern Fresh PUM	5003249476004	4065453635991	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 38.5, Siyah	37884604 Softride Remi Wns PUMA Bla	5003249502005	4099683328460	CB42	1	1	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Beyaz	38081012 Puma Caven Puma White-Puma	5003249524004	4064536332796	CB33	1	1	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 41, Lacivert	38081023 Puma Caven Parisian  Night	5003249543001	4065452615468	CB21	2	3	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 45, Lacivert	38081023 Puma Caven Parisian  Night	5003249543006	4065452615529	CB33	3	6	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Lacivert	38081023 Puma Caven Parisian  Night	5003249543004	4065452615499	CB42	2	5	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Lacivert	38081023 Puma Caven Parisian  Night	5003249543004	4065452615499	CB59	1	5	4231404756
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42.5, Lacivert	38081023 Puma Caven Parisian  Night	5003249543003	4065452615482	CB65	1	2	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 45, Lacivert	38081023 Puma Caven Parisian  Night	5003249543006	4065452615529	CB65	3	6	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Lacivert	38081023 Puma Caven Parisian  Night	5003249543005	4065452615505	CB79	2	5	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Lacivert	38081023 Puma Caven Parisian  Night	5003249543004	4065452615499	CM29	1	5	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42.5, Lacivert	38081023 Puma Caven Parisian  Night	5003249543003	4065452615482	CM64	1	2	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Lacivert	38081023 Puma Caven Parisian  Night	5003249543005	4065452615505	CM78	2	5	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Lacivert	38081023 Puma Caven Parisian  Night	5003249543004	4065452615499	CM84	1	5	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Lacivert	38081023 Puma Caven Parisian  Night	5003249543005	4065452615505	CM84	1	5	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 41, Lacivert	38081023 Puma Caven Parisian  Night	5003249543001	4065452615468	CM84	1	3	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37, Lacivert	38081023 Puma Caven Parisian Night-	5003249553002	4065452615581	CB21	1	2	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38.5, Lacivert	38081023 Puma Caven Parisian Night-	5003249553005	4065452615352	CB21	1	3	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 36, Lacivert	38081023 Puma Caven Parisian Night-	5003249553001	4065452615574	CB29	2	2	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Lacivert	38081023 Puma Caven Parisian Night-	5003249553007	4065452615413	CB33	1	4	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Lacivert	38081023 Puma Caven Parisian Night-	5003249553006	4065452615383	CB33	1	1	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37, Lacivert	38081023 Puma Caven Parisian Night-	5003249553002	4065452615581	CB33	1	2	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Lacivert	38081023 Puma Caven Parisian Night-	5003249553007	4065452615413	CB36	1	4	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Lacivert	38081023 Puma Caven Parisian Night-	5003249553007	4065452615413	CB37	1	4	4231404753
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37.5, Lacivert	38081023 Puma Caven Parisian Night-	5003249553003	4065452615598	CB57	1	2	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38.5, Lacivert	38081023 Puma Caven Parisian Night-	5003249553005	4065452615352	CB60	1	3	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38.5, Lacivert	38081023 Puma Caven Parisian Night-	5003249553005	4065452615352	CB62	1	3	4231404758
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Lacivert	38081023 Puma Caven Parisian Night-	5003249553007	4065452615413	CB67	1	4	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37.5, Lacivert	38081023 Puma Caven Parisian Night-	5003249553003	4065452615598	CM78	1	2	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38464701 Cassia	5002818155006	4064536228747	CB37	1	1	4231404753
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 45, Beyaz	38638701 PUMA Club FC	5003006039006	4065449561389	CB21	1	3	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	38638701 PUMA Club FC	5003006039001	4065449561198	CB21	1	2	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42, Beyaz	38638701 PUMA Club FC	5003006039003	4065449561259	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	38638701 PUMA Club FC	5003006039001	4065449561198	CB33	1	2	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 45, Beyaz	38638701 PUMA Club FC	5003006039006	4065449561389	CB37	1	3	4231404753
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37, Beyaz	38638701 PUMA Club FC	5003095583002	4065449561099	CB37	1	1	4231404753
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 45, Beyaz	38638701 PUMA Club FC	5003006039006	4065449561389	CB60	1	3	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38.5, Beyaz	38638701 PUMA Club FC	5003095583009	4065449561150	CM24	1	1	4231404763
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38638701 PUMA Club FC	5003095583004	4065449561174	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Beyaz	38638701 PUMA Club FC	5003095583003	4065449561136	CM64	1	2	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Beyaz	38638701 PUMA Club FC	5003095583003	4065449561136	CM78	1	2	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 37, Siyah	38666601 Puma Skye Clean Distressed	5003059861002	4065449550949	CB14	2	2	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Siyah	38666601 Puma Skye Clean Distressed	5003059861004	4065449550963	CB14	4	4	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Siyah	38666601 Puma Skye Clean Distressed	5003059861006	4065449550987	CB36	4	4	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 36, Siyah	38666601 Puma Skye Clean Distressed	5003059861001	4065449550932	CB81	3	3	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38.5, Siyah	38666601 Puma Skye Clean Distressed	5003059861005	4065449550970	CM84	1	1	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	38666602 Puma Skye Clean Distressed	5003059837007	4065449464185	CB42	1	3	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	38666602 Puma Skye Clean Distressed	5003059837007	4065449464185	CB57	2	3	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38666602 Puma Skye Clean Distressed	5003059837006	4065449464161	CB60	1	2	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Beyaz	38666602 Puma Skye Clean Distressed	5003059837004	4065449464123	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38666602 Puma Skye Clean Distressed	5003059837006	4065449464161	CM64	1	2	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Beyaz	38922301 Cassia Via PUMA White-Rose	5003249556007	4065452735876	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 43, Beyaz	38937111 Court Ultra Lite PUMA Whit	5003249497011	4099686597535	CB42	1	1	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38939010 Carina Street	5003118793004	4065454928023	CB33	1	3	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38939010 Carina Street	5003118793004	4065454928023	CB57	1	3	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 39, Beyaz	38939010 Carina Street	5003118793004	4065454928023	CM84	1	3	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 44, Ekru	39229038 Puma Caven 2.0 Alpine  Sno	5003249506005	4067979492645	CB14	1	1	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 40, Gri	39348902 Milenio Tech Suede W	5003170462005	4099683182178	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Krem	39529501 Hypnotic LS Putty-Alpine S	5003249635004	4099686203054	CB60	1	1	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42.5, Beyaz	39610403 Graviton SL Remix  PUMA Wh	5003249583003	4099684920243	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42, Beyaz	39610403 Graviton SL Remix  PUMA Wh	5003249583002	4099684920236	GB08	1	1	4231404769
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42, Bej	40151502 Puma Club SL Suede Frosted	5003249632002	4067982389161	CB21	1	2	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 42, Bej	40151502 Puma Club SL Suede Frosted	5003249632002	4067982389161	CM34	1	2	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Basketbol Ayakkabısı, 42, Siyah	40226201 Rebound v6 Low SD  PUMA Bl	5003249423002	4067983880872	GB08	1	1	4231404769
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Tayt, M, Siyah	52241901 Train Favorite Logo High W	5003249750002	4064537852149	CB81	1	1	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	52590801 M TAD ESSENTIALS SOLID CAT	5003249753002	4067984113610	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Siyah	52590801 M TAD ESSENTIALS SOLID CAT	5003249715002	4067984113573	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Siyah	52590801 M TAD ESSENTIALS SOLID CAT	5003249715001	4067984113627	CB33	1	1	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Beyaz	52655902 GRAPHICS TRAIN CONCEPT TEE	5003249738002	4067984146014	CB67	1	1	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Şort, S, Siyah	52671901 M TAD ESSENTIALS AOP 7 WO	5003249954004	4067984155375	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Şort, XL, Siyah	52671901 M TAD ESSENTIALS AOP 7 WO	5003249954005	4067984155382	CB59	1	1	4231404756
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Siyah	62571901 F1 Polo PUMA Black	5003249771001	4067979067034	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, L, Siyah	62745301 BMW MMS MT7+ SWEAT JACKET	5003249799002	4067981424870	CB33	1	1	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, M, Siyah	62745301 BMW MMS MT7+ SWEAT JACKET	5003249799003	4067981424863	CB65	1	1	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, L, Mavi	62745304BMW MMS MT7+ SWEAT JACKET	5003232251002	4067981325450	CB36	1	1	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, M, Mavi	62745304BMW MMS MT7+ SWEAT JACKET	5003232251003	4067981325443	CB57	1	1	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Mavi	62745404 BMW MMS MT7+ SWEAT PANTS C	5003249674001	4067981274819	CB79	2	2	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, XL, Gri	62750901 BMW MMS ESS+ PANTS FT PUMA	5003249646003	4067981332540	CB65	1	1	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, L, Gri	62750901 BMW MMS ESS+ PANTS FT PUMA	5003249646002	4067981332533	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Gri	62750903 BMW MMS ESS+ PANTS FT Medi	5003249647001	4067981260201	CB14	1	2	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, S, Gri	62750903 BMW MMS ESS+ PANTS FT Medi	5003249647002	4067981260195	CB62	1	2	4231404758
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, S, Gri	62750903 BMW MMS ESS+ PANTS FT Medi	5003249647002	4067981260195	CB81	1	2	4231404762
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Gri	62750903 BMW MMS ESS+ PANTS FT Medi	5003249647001	4067981260201	CM78	1	2	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, M, Siyah	63012101 F1 ESS+ Graphic Hoodie PUM	5003249922001	4067983316623	CB42	1	1	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Beyaz	63062402 BMW MMS CAR GRAPHIC TEE PU	5003249778003	4067984327024	CB57	2	3	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	63062402 BMW MMS CAR GRAPHIC TEE PU	5003249778002	4067984327017	CB62	1	2	4231404758
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	63062402 BMW MMS CAR GRAPHIC TEE PU	5003249778002	4067984327017	CM29	1	2	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Beyaz	63062402 BMW MMS CAR GRAPHIC TEE PU	5003249778003	4067984327024	CM64	1	3	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Mavi	63073504 BMW MMS CAR GRAPHIC TEE 2	5003249787002	4067984327215	CB21	2	3	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Mavi	63073504 BMW MMS CAR GRAPHIC TEE 2	5003249787003	4067984327222	CB29	2	2	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Mavi	63073504 BMW MMS CAR GRAPHIC TEE 2	5003249787002	4067984327215	CB65	1	3	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, 2XL, Mavi	63073504 BMW MMS CAR GRAPHIC TEE 2	5003249787001	4067984327239	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, M, Siyah	67788201 HER Full-Zip Hoodie PUMA B	5003249861002	4099686727758	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, XS, Pembe	67788260 HER Full-Zip Hoodie Grape	5003249862002	4099685624089	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, S, Pembe	67788260 HER Full-Zip Hoodie Grape	5003249862001	4099685624096	CM84	1	1	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Beyaz	67788387 HER Tee	5003118775005	4099686741457	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, XS, Beyaz	67788387 HER Tee	5003118775008	4099686741433	CB60	1	1	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Beyaz	67788387 HER Tee	5003118775006	4099686741440	CB67	1	3	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Beyaz	67788387 HER Tee	5003118775006	4099686741440	CB79	2	3	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, L, Siyah	67788601 HER Crew TR	5003118693002	4099686786038	CB33	1	1	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, XS, Siyah	67788601 HER Crew TR	5003118693006	4099686786007	CB57	1	1	4231404755
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, S, Siyah	67788601 HER Crew TR	5003118693004	4099686786014	CB62	1	1	4231404758
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, M, Siyah	67788601 HER Crew TR	5003118693003	4099686786021	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, M, Siyah	67788660 HER Crew TR Grape Mist	5003249713002	4099685588480	CB36	1	1	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, L, Siyah	67788960 HER High-Waist Pants TR Gr	5003249658001	4099685588336	CB42	1	1	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Siyah	67891301 RAD/CAL Tee	5003118790004	4099686780463	CB23	1	2	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Siyah	67891301 RAD/CAL Tee	5003118790004	4099686780463	CB79	1	2	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, XL, Siyah	67891701 RAD/CAL Sweatpants DK	5003118582007	4099686746407	CM78	1	1	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Mavi	67899217 EVOSTRIPE Tee Cobalt Glaze	5003249820002	4099685479139	CB60	1	1	4231404757
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Siyah	67899701 EVOSTRIPE Pants DK PUMA Bl	5003249700003	4099686962708	CB36	1	2	4231404752
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Siyah	67899701 EVOSTRIPE Pants DK PUMA Bl	5003249700003	4099686962708	CB42	1	2	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Siyah	68017601 GRAPHICS Year of Sports Te	5003249794002	4099685652334	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Yeşil	68017602 GRAPHICS Year of Sports Te	5003249807002	4099685532971	CM34	1	1	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Yeşil	68017686 GRAPHICS Year of Sports Te	5003249759001	4099685565870	CB14	1	3	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Yeşil	68017686 GRAPHICS Year of Sports Te	5003249759002	4099685565863	CB29	1	1	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Yeşil	68017686 GRAPHICS Year of Sports Te	5003249759001	4099685565870	CB29	1	3	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Yeşil	68017686 GRAPHICS Year of Sports Te	5003249759001	4099685565870	CB33	1	3	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Beyaz	68166802 EVOSTRIPE Tee	5003273212002	4067981069491	CB67	1	1	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Beyaz	68166802 EVOSTRIPE Tee	5003273212003	4067981069484	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Krem	68166868 EVOSTRIPE Tee	5003170596003	4067981464128	CB79	1	1	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Beyaz	68237002 ESS No. 1 Logo Tee PUMA Wh	5003249812003	4067983397462	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, L, Siyah	68245947 ESS Small No. 1 Logo Comfo	5003249677001	4067983607387	CB33	1	3	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Siyah	68245947 ESS Small No. 1 Logo Comfo	5003249677002	4067983607394	CB59	3	3	4231404756
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, XL, Siyah	68245947 ESS Small No. 1 Logo Comfo	5003249677003	4067983607356	CB65	1	1	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, XS, Açık Mavi	68245947 ESS Small No. 1 Logo Comfo	5003249684002	4067983607370	CB79	2	2	4231404761
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, S, Açık Mavi	68245947 ESS Small No. 1 Logo Comfo	5003249684001	4067983607349	CM24	4	4	4231404763
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, L, Siyah	68245947 ESS Small No. 1 Logo Comfo	5003249677001	4067983607387	CM84	2	3	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Beyaz	68253202 ESS No. 1 Logo Tee PUMA Wh	5003249840003	4067983297441	CB29	1	1	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68253202 ESS No. 1 Logo Tee PUMA Wh	5003249840002	4067983297434	CB29	1	3	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68253202 ESS No. 1 Logo Tee PUMA Wh	5003249840002	4067983297434	CB42	1	3	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68253202 ESS No. 1 Logo Tee PUMA Wh	5003249840002	4067983297434	CM78	1	3	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, 2XL, Siyah	68253330 ESS No. 1 Logo Tee (s) Gre	5003249831001	4067983300035	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Yeşil	68253330 ESS No. 1 Logo Tee (s) Gre	5003249796002	4067983299964	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, M, Yeşil	68253330 ESS No. 1 Logo Tee (s) Gre	5003249796001	4067983300028	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, XL, Beyaz	68255201 ESS No. 1 Logo Pique Polo	5003249850003	4067983317828	CB65	2	2	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68255201 ESS No. 1 Logo Pique Polo	5003249850002	4067983317866	CB67	1	2	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68255201 ESS No. 1 Logo Pique Polo	5003249850002	4067983317866	CM78	1	2	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68255202 ESS No. 1 Logo Pique Polo	5003249851002	4067983318009	CB65	1	2	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, 2XL, Beyaz	68255202 ESS No. 1 Logo Pique Polo	5003249851001	4067983318023	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Beyaz	68255202 ESS No. 1 Logo Pique Polo	5003249851002	4067983318009	CM84	1	2	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, S, Siyah	68257201 ESS No. 1 Logo Hoodie TR P	5003249723002	4067983611384	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, XL, Beyaz	68257202 ESS No. 1 Logo Hoodie TR P	5003249923005	4067983592478	CB21	1	1	4231404748
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, M, Beyaz	68257202 ESS No. 1 Logo Hoodie TR P	5003249923003	4067983592522	CB67	1	1	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, XL, Gri	68259201 ESS Full-Zip Hoodie TR PUM	5003249816003	4067983598272	CB67	2	4	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, L, Gri	68259201 ESS Full-Zip Hoodie TR PUM	5003249816002	4067983598319	CB67	3	4	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, XL, Gri	68259201 ESS Full-Zip Hoodie TR PUM	5003249816003	4067983598272	CM29	1	4	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, XL, Gri	68259201 ESS Full-Zip Hoodie TR PUM	5003249816003	4067983598272	CM84	1	4	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, L, Gri	68259201 ESS Full-Zip Hoodie TR PUM	5003249816002	4067983598319	CM84	1	4	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, 2XL, Siyah	68259203 ESS Full-Zip Hoodie TR Med	5003249853001	4067983628481	CB14	1	1	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, L, Siyah	68259203 ESS Full-Zip Hoodie TR Med	5003249853002	4067983628467	CB33	1	5	4231404751
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, XL, Siyah	68259203 ESS Full-Zip Hoodie TR Med	5003249853003	4067983628429	CB59	1	1	4231404756
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, L, Siyah	68259203 ESS Full-Zip Hoodie TR Med	5003249853002	4067983628467	CB59	4	5	4231404756
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, M, Gri	68259203 ESS Full-Zip Hoodie TR Med	5003249824001	4067983628474	CB62	1	5	4231404758
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, S, Gri	68259203 ESS Full-Zip Hoodie TR Med	5003249824002	4067983628412	CM84	3	3	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Zip Ceket, M, Gri	68259203 ESS Full-Zip Hoodie TR Med	5003249824001	4067983628474	CM84	4	5	4231404768
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Siyah	68260801 ESS No. 1 Logo Sweatpants	5003249710001	4067983588327	CB23	1	1	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, XL, Gri	68260801 ESS No. 1 Logo Sweatpants	5003249669003	4067983588273	CB65	1	1	4231404759
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, L, Gri	68260801 ESS No. 1 Logo Sweatpants	5003249669002	4067983588310	CB67	2	2	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, S, Siyah	68260801 ESS No. 1 Logo Sweatpants	5003249710002	4067983588266	CM34	1	3	4231404765
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, S, Siyah	68260801 ESS No. 1 Logo Sweatpants	5003249710002	4067983588266	CM64	2	3	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Siyah	68262603 ESS No. 1 Logo Sleeveless	5003249835002	4067983319785	CM29	1	1	4231404764
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Şort, M, Siyah	68266201 ESS No. 1 Logo Cargo Short	5003249729003	4067983629075	CM24	1	1	4231404763
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, L, Siyah	69089401 ESS ELEVATED Tee	5003273266004	4069159043081	CB14	1	1	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, XS, Siyah	69089401 ESS ELEVATED Tee	5003273266008	4069159043074	CB14	1	1	4231404747
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma T-Shirt, S, Siyah	69089401 ESS ELEVATED Tee	5003273266006	4069159043043	CB29	1	1	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, XL, Krem	69090099 ESS ELEVATED Hoodie TR	5003273200007	4069159044804	CM78	1	1	4231404767
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, S, Krem	69090199 ESS ELEVATED ComfortHoodie	5003273203006	4069159046532	CB62	1	1	4231404758
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, L, Krem	69090199 ESS ELEVATED ComfortHoodie	5003273203004	4069159046570	CB67	1	1	4231404760
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, M, Krem	69090199 ESS ELEVATED ComfortHoodie	5003273203005	4069159046587	CM24	1	1	4231404763
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Sweatshirt, XS, Krem	69090199 ESS ELEVATED ComfortHoodie	5003273203008	4069159046563	CM64	1	1	4231404766
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Forma, M, Beyaz	77536802 FSK Away Jersey Replica	5003170229003	4067981368143	CB23	2	2	4231404749
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Forma, L, Beyaz	77536802 FSK Away Jersey Replica	5003170229002	4067981368167	GB08	1	1	4231404769
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Forma, M, Mavi	77537509 FSK Third Jersey Replica	5003170290003	4067981522668	CM24	4	4	4231404763
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Forma, L, Kırmızı	77965001 GSK Home Jersey Replica wo	5003170257002	4067982371265	CB29	2	2	4231404750
-Manuel Transferler Run ID 72150	Active & Outdoor	002Active Apparel	Puma	Puma Eşofman Altı, M, Siyah	84743801 RAD/CAL Pants DK Puma Blac	5003249659002	4064535396966	CM29	1	1	4231404764
-Manuel Transferler Run ID 72149	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Postacı Çantası, Bedensiz, Siyah	ANGELA-CHOLE	5003156131001	8684024345952	CM90	1	1	4231365606
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 38, Siyah	B11006	5003271084001	8682339843149	CB45	1	1	4231347454
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 40, Yeşil	B11039	5003285304002	8682339846690	CB43	1	1	4231347440
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 44, Kırmızı	B11081	5003271131004	8682339852455	CB45	1	1	4231347454
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 38, Siyah	B11090	5003292762001	8682339853995	CB45	1	1	4231347454
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Bikini Takım, 44, Siyah	B11105	5003285320004	8682339860368	CB43	1	1	4231347440
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Siyah	BILTHE	5003234331004	8684024618094	CM79	1	1	4231355174
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 39, Altın	BOBBIE	5003234303004	8684024618520	CM79	1	1	4231355174
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin T-Shirt, S, Lacivert	BONCI	5003254849004	8683858964513	CB62	1	1	4231323842
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Trençkot, 36, Bej	CANNAL	5003254867002	8683858472391	CB62	1	1	4231323842
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Trençkot, 40, Bej	CANNAL	5003254867004	8683858472384	CB62	1	1	4231323842
-Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, S, Lacivert	DEEP	5002660403002	8681940516459	CB46	1	1	4231357749
-Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, M, Siyah	DEEP	5002660359003	8681940515582	CB46	2	10	4231357749
-Manuel Transferler Run ID 72149	Ladies	006Apparel	Fabrika	Fabrika Polo T-Shirt, S, Siyah	DEEP	5002660359002	8681940515575	CB46	9	14	4231357749
-Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 36.5, Gri	FD2723-109 W AIR ZOOM PEGASUS 41	5003247921001	197859153039	CM34	1	1	4231360948
-Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 38, Lila	FD6034-006 WMNS NIKE QUEST 6	5003247895003	197859136957	GS04	1	1	4231360950
-Manuel Transferler Run ID 72149	Active & Outdoor	003Active Shoes	Nike	Nike Koşu Ayakkabısı, 43, Siyah	FJ9509-002 NIKE AIR WINFLO 11	5003277662009	197593760449	CM27	1	1	4231360946
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Koşu Ayakkabısı, 42, Siyah	FLYER RUNNER 19225725	5002542731007	4062451564520	CB14	1	1	4231404747
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, S, Beyaz	GRAPHIC HERITAGE CREW LEVIS FOUNDED	5003239238003	5401157860489	SM34	1	1	4231348475
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Sweatshirt, M, Beyaz	GRAPHIC HERITAGE HOODIET HOODIE LS	5003239228002	5401187175645	SM23	1	1	4231348315
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Havaianas	Havaianas Plaj Terliği, 38, Krem	HAV. YOU PARATY	5003177010004	7909690628057	CM75	1	1	4231378631
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantol, 26-29, Koyu Lacivert	HIGH WAIST MOM JEAN TK MOVING TARGE	5003167887005	5401157067901	SM37	1	1	4231348328
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Denim Pantolon, 38, Siyah	I00000018022001	5003020194003	8683558201109	CB56	1	1	4231399259
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Gömlek, XS, Açık Mavi	ICONIC WESTERN PLUNGE POOLE	5003239300004	5401187107462	SM45	1	1	4231348327
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 36, Açık Natürel	IS1250002356	5003286119002	8683559596938	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 34, Natürel	IS1250002395	5003286154001	8683559613635	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 36, Beyaz	IS1250002426	5003277708002	8683559651989	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 38, Mavi	IS1250002433	5003277709003	8683559654737	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 34, Mavi	IS1250002433	5003277709001	8683559654713	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 36, Pudra	IS1250002442	5003283223002	8683559660073	CB13	1	1	4231399316
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 38, Pudra	IS1250002442	5003283223003	8683559660080	CB13	1	1	4231399316
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 36, Haki	IS1250002459	5003277761002	8683559664897	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 38, Fuşya	IS1250002474	5003280536003	8683559667034	CM22	1	1	4231399309
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 36, Fuşya	IS1250002474	5003280536002	8683559667027	CB13	1	1	4231399316
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Elbise, 36, Çok Renkli	IS1250002489	5003280543001	8683559671482	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 42, Somon	IS1250003107	5003273551005	8683559501338	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 38, Somon	IS1250003107	5003273551003	8683559501314	CB13	1	2	4231399316
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 38, Siyah	IS1250003143	5003267413003	8683559534626	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 36, Siyah	IS1250003143	5003267413002	8683559534619	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 38, Yeşil	IS1250003147	5003264752003	8683559535227	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 36, Yeşil	IS1250003147	5003264752002	8683559535210	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 38, Kahve	IS1250003153	5003284720003	8683559577296	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Pantolon, 36, Kahve	IS1250003153	5003284720002	8683559577289	CM22	1	1	4231399309
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Etek, 38, Siyah	IS1250004063	5003264753002	8683559495354	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Etek, 34, Natürel	IS1250004114	5003286161001	8683559593333	CB47	1	1	4231399320
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Etek, 38, Lacivert	IS1250004138	5003277785003	8683559652412	CB47	1	1	4231399320
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Ceket, 36, Siyah	IS1250005057	5003267454001	8683559499963	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Ceket, M, Sarı	IS1250005058	5003268725001	8683559582603	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Ceket, 40, Lacivert	IS1250005081	5003283205004	8683559577661	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Bluz, 40, Beyaz	IS1250006064	5003267482004	8683559496146	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Bluz, 38, Beyaz	IS1250006064	5003267482003	8683559496139	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Bluz, 36, Tütün	IS1250006137	5003277764001	8683559655444	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Bluz, 38, Tütün	IS1250006137	5003277764002	8683559655451	CM22	1	1	4231399309
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Mont, 36, İndigo	IS1250012012	5003264783002	8683559496542	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Şort, 42, Tütün	IS1250013087	5003282804005	8683559726014	CM22	1	1	4231399309
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Denim Pantolon, 36, Koyu İndigo	IS1250018002	5003267483002	8683559636450	CB55	1	2	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Denim Pantolon, 36, Natürel	IS1250018037	5003267486001	8683559710594	CB56	1	2	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Gömlek, 36, Gri	IS1250025240	5003283177002	8683559674728	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Atlet, L, Sarı	IS1250050043	5003268745001	8683559502984	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Atlet, S, Sarı	IS1250050043	5003268745003	8683559503004	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Atlet, M, Sarı	IS1250050043	5003268745002	8683559502991	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Kazak, M, Ekru	IS1250050087	5003264788002	8683559518718	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Kazak, S, Ekru	IS1250050087	5003264788003	8683559518725	CM22	1	1	4231399309
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, S, Beyaz	IS1250070056	5003264789003	8683559498027	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, M, Beyaz	IS1250070167	5003284721002	8683559610504	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, S, Beyaz	IS1250070167	5003284721003	8683559610511	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, S, Lacivert	IS1250070169	5003282843003	8683559625003	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, M, Beyaz	IS1250070169	5003282796002	8683559617787	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, L, Beyaz	IS1250070169	5003282796001	8683559617770	CM22	1	1	4231399309
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, M, Beyaz	IS1250070219	5003277842002	8683559664545	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, M, Sarı	IS1250070220	5003284688002	8683559664576	CB54	1	1	4231399294
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol T-Shirt, S, Kırık Beyaz	IS1250070226	5003282832003	8683559668857	CB47	1	1	4231399320
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Sweatshirt, L, Siyah	IS1250091021	5003267550001	8683559680903	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Blazer, 38, Koyu Mavi	IS1250106010	5003280556003	8683559813561	CB47	1	1	4231399320
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Blazer, 36, Beyaz	IS1250106026	5003277773002	8683559664705	CB13	1	1	4231399316
-Manuel Transferler Run ID 72150	Ladies	006Apparel	İpekyol	İpekyol Blazer, 38, Beyaz	IS1250106026	5003277773003	8683559664712	CB47	1	1	4231399320
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones T-Shirt, S, Beyaz	JJESTAR JJ TEE SS NOOS	5003120482004	5715424100919	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, L, Siyah	JJSTEEL POLO SS	5003120506002	5715431890780	CB23	2	2	4231358578
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, XL, Beyaz	JJSTEEL POLO SS	5003120497005	5715509486808	CB45	1	4	4231358595
-Manuel Transferler Run ID 72149	Street wear	006Apparel	Jack & Jones	Jack & Jones Polo T-Shirt, S, Beyaz	JJSTEEL POLO SS	5003120497004	5715509486723	CB45	1	1	4231358595
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 37, Ekru	KALLIN	5003098650002	8684024158576	CB22	1	1	4231354503
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Ayakkabı, 37, Siyah	LILY	5003098636002	8684024160302	CM24	1	1	4231355754
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 38, İndigo	M12040	5003292748001	8682339851281	CB43	1	1	4231347440
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 44, İndigo	M12040	5003292748004	8682339851311	CB45	1	1	4231347454
-Manuel Transferler Run ID 72149	Ladies	023Underwear	Louren	Louren Mayo, 46, İndigo	M12040	5003292748005	8682339861600	CB45	1	1	4231347454
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 28-30, Siyah	MILE HIGH SUPER SKINNY T BLACK CELE	5003239340009	5401187087412	SM23	1	1	4231348315
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 37, Siyah	NIKOS	5003098617002	8684024158989	YM02	1	1	4231354230
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Ceket, M, Mavi	ORIGINAL TRUCKER ALL MINE	5002671668003	5400898190961	SM45	1	1	4231348327
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Ceket, XL, Mavi	ORIGINAL TRUCKER ALL MINE	5002671668005	5400898285179	SM37	1	1	4231348328
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 38, Siyah	PARENSO-P	5003255019003	8683858937500	CB62	1	1	4231323842
-Pierre Cardin Transfer Data	Ladies	006Apparel	Pierre Cardin	Pierre Cardin Pantolon, 36, Siyah	PARENSO-P	5003255019002	8683858937463	CB62	1	1	4231323842
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 38, Siyah	PATINGA	5002925775003	8683133532086	YM10	1	1	4231354620
-Manuel Transferler Run ID 72149	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Sneaker, 39, Bej	PATINGA	5002925767004	8683133532178	CM27	2	2	4231354899
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 27-30, Açık Mavi	RIBCAGE FULL LENGTH TR SAMBA TANGO	5003239336009	5401187158976	SM30	1	1	4231347972
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 27-30, Açık Mavi	RIBCAGE FULL LENGTH TR SAMBA TANGO	5003239336009	5401187158976	SM37	1	1	4231348328
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-27, Koyu Mavi	RIBCAGE STRAIGHT ANKLE SALSA DARK S	5003114595002	5401157064450	SM30	1	1	4231347972
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-29, Koyu Mavi	RIBCAGE STRAIGHT ANKLE SALSA DARK S	5003114595003	5401157064467	SM42	1	1	4231348322
-Levis 25SS Transfer Data	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-27, Koyu Mavi	RIBCAGE STRAIGHT ANKLE SALSA DARK S	5003114595002	5401157064450	SM45	1	1	4231348327
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 38, Siyah	ST Runner v2 Mesh 36681105	5002542970003	4059505534424	CB42	3	3	4231404754
-Manuel Transferler Run ID 72150	Active & Outdoor	003Active Shoes	Puma	Puma Lifestyle Ayakkabı, 36, Siyah	ST Runner v2 Mesh 36681105	5002542970001	4059505533465	CB81	1	1	4231404762
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Denim Pantolon, 38, Koyu İndigo	T00000018004AC7	5003020196003	8683558172744	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Denim Pantolon, 36, Siyah	T00000018005001	5003020184002	8683558172829	CB39	1	2	4231399322
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shi, 6-7 Yaş, Lacivert	TP01	5003256306008	8683858667803	CB49	1	1	4231406795
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shi, 7-8 Yaş, Lacivert	TP01	5003256306009	8683858667810	CB49	1	1	4231406795
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-S, 10-11 Yaş, Lacivert	TP01	5003256306001	8683858667735	CB49	3	3	4231406795
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-S, 11-12 Yaş, Lacivert	TP01	5003256306002	8683858667759	CB49	3	3	4231406795
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shi, 5-6 Yaş, Lacivert	TP01	5003256306007	8683858667797	CB49	3	3	4231406795
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shi, 4-5 Yaş, Lacivert	TP01	5003256306006	8683858667780	CB49	4	4	4231406795
-Manuel Transferler Run ID 72150	Kids	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. T-Shi, 3-4 Yaş, Lacivert	TP01	5003256306005	8683858667773	CB49	4	4	4231406795
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 38, Siyah	TS1250002179	5003264664003	8683559473659	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Siyah	TS1250002179	5003264664002	8683559473642	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 34, Kahve	TS1250002182	5003264850001	8683559483504	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Kahve	TS1250002182	5003264850002	8683559483511	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 38, Kahve	TS1250002182	5003264850003	8683559484730	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 40, Siyah	TS1250002193	5003264823004	8683559498768	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Siyah	TS1250002193	5003264823002	8683559498744	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 34, Natürel	TS1250002238	5003268778001	8683559519586	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 40, Sarı	TS1250002239	5003273572004	8683559519661	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Sarı	TS1250002239	5003273572002	8683559519647	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Kobalt	TS1250002344	5003286170002	8683559586700	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 34, Ekru	TS1250002358	5003286136001	8683559737331	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Ekru	TS1250002358	5003286136002	8683559737348	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 34, Pembe	TS1250002365	5003286108001	8683559600949	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Pembe	TS1250002365	5003286108002	8683559600956	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 40, Pembe	TS1250002365	5003286108004	8683559600970	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 38, Pembe	TS1250002365	5003286108003	8683559600963	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Krem	TS1250002432	5003277794002	8683559656205	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Elbise, 36, Kırmızı	TS1250002439	5003282808002	8683559659152	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pantolon, 36, Mint	TS1250003162	5003284722002	8683559586984	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pantolon, 38, Siyah	TS1250003215	5003283164003	8683559662367	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pantolon, 34, Siyah	TS1250003215	5003283164001	8683559662343	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pantolon, 36, Pembe	TS1250003234	5003280571002	8683559676562	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pantolon, 34, Beyaz	TS1250003237	5003277796001	8683559676975	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 38, Taş	TS1250004081	5003267518002	8683559648095	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 34, Kahve	TS1250004092	5003268836001	8683559520605	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 36, Kahve	TS1250004092	5003268836002	8683559520612	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 40, Kahve	TS1250004092	5003268836004	8683559520636	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 34, Natürel	TS1250004108	5003280546001	8683559615028	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 40, Natürel	TS1250004108	5003280546004	8683559615059	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 38, Ekru	TS1250004112	5003284696003	8683559587103	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 40, Ekru	TS1250004112	5003284696004	8683559587110	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Etek, 38, Natürel	TS1250004157	5003280499003	8683559669878	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Ceket, 38, Taş	TS1250005064	5003267562003	8683559648149	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Ceket, 34, Taş	TS1250005064	5003267562001	8683559648125	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Ceket, 34, Ekru	TS1250005068	5003273584001	8683559636245	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 34, Siyah	TS1250006073	5003267527001	8683559506470	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 36, Siyah	TS1250006073	5003267527002	8683559506487	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 36, Lacivert	TS1250006076	5003268508002	8683559511856	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 34, Ekru	TS1250006086	5003268561001	8683559521152	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 36, Natürel	TS1250006098	5003280580002	8683559615134	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 38, Natürel	TS1250006098	5003280580003	8683559615141	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 36, Sarı	TS1250006111	5003286109002	8683559615189	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 40, Sarı	TS1250006111	5003286109004	8683559615202	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Bluz, 38, Sarı	TS1250006111	5003286109003	8683559615196	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Yelek, 38, Ekru	TS1250007042	5003283179003	8683559662688	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pardösü, 38, Taş	TS1250011016	5003264713003	8683559503776	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pardösü, 34, Taş	TS1250011016	5003264713001	8683559503752	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pardösü, 36, Taş	TS1250011016	5003264713002	8683559503769	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Pardösü, 34, Natürel	TS1250011025	5003268800001	8683559521213	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 36, Gri Melanj	TS1250012003	5003264847002	8683559474397	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 34, Gri Melanj	TS1250012003	5003264847001	8683559474380	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 36, Siyah	TS1250012005	5003264871002	8683559578613	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 34, Gri	TS1250012024	5003264882001	8683559635361	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 38, Gri	TS1250012024	5003264882003	8683559635385	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 36, Gri	TS1250012024	5003264882002	8683559635378	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Mont, 36, Açık Natürel	TS1250012028	5003264855002	8683559521275	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Şort, 38, Turuncu	TS1250013013	5003280557003	8683559581934	CM24	1	1	4231399295
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Şort, 36, Turuncu	TS1250013013	5003280557002	8683559581927	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Şort, 34, Turuncu	TS1250013013	5003280557001	8683559581910	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Tulum, 34, Siyah	TS1250014007	5003273594001	8683559512143	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Tulum, 36, Lacivert	TS1250014008	5003268545002	8683559512204	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Tulum, 34, Lacivert	TS1250014008	5003268545001	8683559512198	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Tulum, 38, Lacivert	TS1250014008	5003268545003	8683559512211	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Denim Pantolon, 36, İndigo	TS1250018003	5003268811002	8683559521510	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Denim Pantolon, 38, İndigo	TS1250018003	5003268811003	8683559521527	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Denim Pantolon, 36, Koyu İndigo	TS1250018020	5003264848002	8683559589152	CB14	1	2	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 36, Yağ	TS1250025107	5003273643002	8683559512495	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 34, Mavi	TS1250025113	5003267563001	8683559521749	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 36, Mavi	TS1250025113	5003267563002	8683559521756	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 38, Sarı	TS1250025165	5003286165003	8683559595351	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 34, Ekru	TS1250025188	5003286157001	8683559615325	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 38, Ekru	TS1250025188	5003286157003	8683559615349	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 40, Ekru	TS1250025188	5003286157004	8683559615356	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 36, Mavi	TS1250025201	5003277822002	8683559650555	CB55	2	2	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 38, Mavi	TS1250025222	5003280600003	8683559677231	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 34, Taş	TS1250025224	5003282794001	8683559677330	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 36, Taş	TS1250025224	5003282794002	8683559677347	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 36, Pembe	TS1250025225	5003283187002	8683559677521	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Gömlek, 36, Beyaz	TS1250025227	5003277814002	8683559677705	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Kazak, S, Pembe	TS1250050054	5003273577003	8683559512686	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Kazak, XS, Pembe	TS1250050054	5003273577004	8683559512693	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Kazak, M, Pembe	TS1250050054	5003273577002	8683559512679	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Hırka, M, Sarı	TS1250050059	5003273585002	8683559522517	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Hırka, S, Sarı	TS1250050059	5003273585003	8683559522524	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Kazak, M, Natürel	TS1250050069	5003268748002	8683559523125	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Kazak, L, Natürel	TS1250050069	5003268748001	8683559523118	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Kazak, S, Natürel	TS1250050069	5003268748003	8683559523132	CB48	1	1	4231399330
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, S, Mavi	TS1250070047	5003264896002	8683559474861	CB39	1	1	4231399322
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, L, Mavi	TS1250070053	5003267555001	8683559491073	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, M, Mavi	TS1250070053	5003267555002	8683559491080	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, M, Kahve	TS1250070122	5003284723002	8683559584232	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, M, Ekru	TS1250070137	5003286166002	8683559595436	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, L, Antrasit	TS1250070159	5003287453001	8683559613000	CB56	1	1	4231399259
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, S, Kırmızı	TS1250070239	5003277864003	8683559678160	CB14	1	1	4231399332
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist T-Shirt, M, Kırmızı	TS1250070240	5003277880002	8683559678245	CM79	1	1	4231399352
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Sweatshirt, S, Ekru	TS1250091023	5003267549002	8683559506944	CB70	1	1	4231399264
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Sweatshirt, M, Siyah	TS1250091030	5003268831002	8683559524016	CB55	1	1	4231399307
-Manuel Transferler Run ID 72150	Ladies	006Apparel	Twist	Twist Sweatshirt, L, Siyah	TS1250091030	5003268831001	8683559524009	CB39	1	1	4231399322
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Lacivert	1095547	5003299660005	8683798930678	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Siyah	1095726	5003299628002	8683798946389	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Yelek, 2XL, Gri	1096193	5003299678001	8683798961016	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Taş	1097256	5003299811005	8684782025950	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Takım Elbise, 50-6, Lacivert	1097271	5003299804003	8684782028364	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097287	5003300020004	8684782030206	CB53	1	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 48, Antrasit	1097287	5003299841002	8684782030244	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 56, Siyah	1097287	5003300020006	8684782030220	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Lacivert	1097287	5003299828004	8684782030329	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 48, Siyah	1097287	5003300020002	8684782030183	CB53	1	5	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Koyu Kahve	1097287	5003299827003	8684782030374	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Siyah	1097287	5003300020003	8684782030190	CB53	1	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 56, Siyah	1097288	5003299829006	8684782030466	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 46, Siyah	1097288	5003299829001	8684782030411	CB53	2	5	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Lacivert	1097288	5003299809003	8684782030497	CB53	2	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097288	5003299829004	8684782030442	CB53	3	5	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Siyah	1097288	5003299829003	8684782030435	CB53	3	6	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Gömlek, 39, Beyaz	1097307	5003299870001	8684782032934	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, XL, Haki	1097311	5003300021005	8684782033542	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, M, Haki	1097311	5003300021003	8684782033528	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Ceket, 50-6, Lacivert	1097318	5003299853003	8684782034198	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Denim Pant, 32-30, Koyu Lacivert	1097327	5003299995005	8684782035423	CB53	1	3	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Denim Pant, 33-30, Koyu Lacivert	1097327	5003299995007	8684782035447	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, L, Bej	1097333	5003299856002	8684782036147	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Kırık Beyaz	1097334	5003299876002	8684782036291	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, M, Kırık Beyaz	1097334	5003299876003	8684782036284	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Siyah	1097340	5003299895005	8684782037151	CB53	1	6	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network T-Shirt, 2XL, Siyah	1097358	5003299914001	8684782039209	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network T-Shirt, L, Kırık Beyaz	1097358	5003300040002	8684782039230	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, S, Siyah	1097362	5003299907004	8684782039612	CB53	1	1	4232297901
+Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Siyah	100056008 RI Left Leg Logo OH Pant	5003258894003	4065431362369	YM07	1	1	4232238961
+Manuel Transferler Run ID 72163	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 44, Beyaz	100209145 REEBOK BB 1000	5003185162006	1200161025457	CB59	1	1	4232305081
+Manuel Transferler Run ID 72163	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Gri	102032114 PRIME WALK ULTRA II	5003322444004	8684626687238	YM02	1	1	4232305226
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	117617 WHT	5003255964006	198376869144	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	117617 WHT	5003255964002	198376869106	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	117617 WHT	5003255964005	198376869137	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	117617 WHT	5003255964003	198376869113	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	117617 WHT	5003255964001	198376869090	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	117617 WHT	5003255964007	198376869151	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Siyah	117620 BLK	5003255954007	197976701397	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Siyah	117620 BLK	5003255954005	197976701373	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Siyah	117620 BLK	5003255954001	197976701335	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Siyah	117620 BLK	5003255954003	197976701359	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Siyah	117620 BLK	5003255954002	197976701342	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Siyah	117620 BLK	5003255954006	197976701380	CB81	2	2	4232308951
+Manuel Transferler Run ID 72162	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ay, 39, Beyaz - Siyah	13148 WBK D'LITES	5002742964007	193113227522	CB35	1	2	4232250530
+Manuel Transferler Run ID 72163	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Zip Ceket, S, Siyah	1379497-001 UA Rival Fleece FZ Hood	5003057118003	196883849949	CM44	1	2	4232305374
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 36.5, Siyah	138187 BBK	5003296572002	197976814172	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 39, Kahve	138187 CSNT	5003296573007	198376458867	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 38.5, Kahve	138187 CSNT	5003296573006	198376458850	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 40, Kahve	138187 CSNT	5003296573008	198376458881	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 36.5, Kahve	138187 CSNT	5003296573002	198376458812	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 36, Kahve	138187 CSNT	5003296573001	198376458805	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 37, Kahve	138187 CSNT	5003296573003	198376458829	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 38, Kahve	138187 CSNT	5003296573005	198376458843	CB81	2	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 37.5, Kahve	138187 CSNT	5003296573004	198376458836	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Taba	144756 CSNT	5003178075001	197976640764	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Taba	144756 CSNT	5003178075006	197976640818	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36.5, Taba	144756 CSNT	5003178075002	197976640771	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Taba	144756 CSNT	5003178075007	197976640825	CB81	1	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Taba	144756 CSNT	5003178075004	197976640795	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Taba	144756 CSNT	5003178075003	197976640788	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Taba	144756 CSNT	5003178075005	197976640801	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 40, Lacivert	158488 NVY	5002834669008	195969564226	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 38.5, Lacivert	158488 NVY	5002834669006	195969564196	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 36.5, Lacivert	158488 NVY	5002834669002	195969564158	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 36, Lacivert	158488 NVY	5002834669001	195969564141	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 37, Lacivert	158488 NVY	5002834669003	195969564165	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 39, Lacivert	158488 NVY	5002834669007	195969564202	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 38, Lacivert	158488 NVY	5002834669005	195969564189	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36.5, Siyah	167252 BBK	5003178019002	195204927038	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Siyah	167252 BBK	5003178019005	195204927069	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Siyah	167252 BBK	5003178019001	195204927021	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Siyah	167252 BBK	5003178019004	195204927052	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Siyah	167252 BBK	5003178019006	195204927076	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 40, Siyah	167252 BBK	5003178019008	195204927106	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Siyah	167252 BBK	5003178019007	195204927083	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Siyah	167252 BBK	5003178019003	195204927045	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36.5, Beyaz	167252 WWHT	5003178048002	195969102220	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Beyaz	167252 WWHT	5003178048001	195969102213	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Beyaz	167252 WWHT	5003178048007	195969102275	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Beyaz	167252 WWHT	5003178048006	195969102268	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Beyaz	167252 WWHT	5003178048004	195969102244	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Beyaz	167252 WWHT	5003178048003	195969102237	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Beyaz	167252 WWHT	5003178048005	195969102251	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 40, Siyah	167431 BLK	5002937512008	196642051071	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Siyah	167431 BLK	5002937512006	196642051040	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Siyah	167431 BLK	5002937512003	196642051019	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Siyah	167431 BLK	5002937512001	196642050999	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Siyah	167431 BLK	5002937512005	196642051033	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Siyah	167431 BLK	5002937512004	196642051026	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Siyah	167431 BLK	5002937512007	196642051057	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Natürel	167431 TPE	5003296547004	196642331845	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Natürel	167431 TPE	5003296547005	196642331852	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	177144 OFWT	5003255973001	198739214031	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	177144 OFWT	5003255973002	198739214048	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177144 OFWT	5003255973006	198739214086	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177144 OFWT	5003255973008	198739214116	CB81	1	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177144 OFWT	5003255973007	198739214093	CB81	1	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177144 OFWT	5003255973005	198739214079	CB81	2	5	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177144 OFWT	5003255973004	198739214062	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177144 OFWT	5003255973003	198739214055	CB81	2	5	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Siyah	177200 BLK	5003296579001	198376045234	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Siyah	177200 BLK	5003296579005	198376045272	CB81	1	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Siyah	177200 BLK	5003296579004	198376045265	CB81	1	5	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Siyah	177200 BLK	5003296579003	198376045258	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Siyah	177200 BLK	5003296579002	198376045241	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Siyah	177200 BLK	5003296579007	198376045296	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177200 WHT	5003296600008	198376045593	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	177200 WHT	5003296600002	198376045524	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	177200 WHT	5003296600001	198376045517	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177200 WHT	5003296600006	198376045562	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177200 WHT	5003296600005	198376045555	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177200 WHT	5003296600003	198376045531	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177200 WHT	5003296600004	198376045548	CB81	3	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177200 WHT	5003296600007	198376045579	CB81	3	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	177336 WHT	5003178049001	197976096417	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177336 WHT	5003178049008	197976096493	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	177336 WHT	5003178049002	197976096424	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177336 WHT	5003178049006	197976096462	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177336 WHT	5003178049003	197976096431	CB81	1	1	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177336 WHT	5003178049007	197976096479	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177336 WHT	5003178049004	197976096448	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177336 WHT	5003178049005	197976096455	CB81	2	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177575 WHT	5003296584006	197627201665	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177575 WHT	5003296584008	197627201696	CB81	1	2	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177575 WHT	5003296584003	197627201634	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177575 WHT	5003296584004	197627201641	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177575 WHT	5003296584007	197627201672	CB81	2	4	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177575 WHT	5003296584005	197627201658	CB81	2	4	4232308951
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	606-2	5003299074001	8684024796679	CB78	1	1	4232286085
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	608-5	5003299064001	8684024797027	CB37	1	1	4232286104
+Kurumsal Satış Transfer Data	Active & Outdoor	002Active Apparel	Puma	Puma Forma, L, Kırmızı	77980901 GSK Home Jersey Replica w/	5003293011001	4069157735261	CB27	1	4	4232216425
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	920-4	5003299106001	8684024796778	CB61	1	2	4232286083
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	971-5	5003299098001	8684024796976	CM86	1	2	4232286089
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, L, Siyah	A4917-0000 Siyah T-shirt	5002930853001	5401043915507	SM46	1	3	4232241391
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, M, Siyah	A4917-0000 Siyah T-shirt	5002930853002	5401043915514	SM46	1	2	4232241391
+Manuel Transferler Run ID 72162	Active & Outdoor	001Accessories & Equipments	Blackbörk	Blackbörk Şapka, Standart, Siyah - Bordo	A-7500-121229 TRUCKER	5003268644001	8683295092213	CM32	1	1	4232223115
+Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Siyah	ACE001261528_SYH	5003307496003	8684310978932	CM40	1	3	4232305663
+Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bej	ACE043261438_BEJ	5003308041004	8684310830247	CM40	2	10	4232305663
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	AERO	5003290720001	8684024789251	CB78	2	2	4232286085
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Denim Pantolon, 31-32, Siyah	AKA 3	5002972236003	8683133660505	CB33	1	1	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Denim Pantolon, 33-32, Siyah	AKA 3	5002972236006	8683133660536	CB33	1	1	4232297277
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	ALİSA	5003290648001	8684024789237	CM29	4	4	4232286103
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	ARİA	5003290665001	8684024788780	CB51	2	3	4232286087
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ASHER	5003290711001	8684024789145	CB13	1	2	4232286090
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	AURORA	5003290689001	8684024789121	CB62	2	2	4232286088
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	AVA	5003290663001	8684024788766	CB79	2	2	4232286101
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	AWEN	5003281559001	8684024759315	CM36	2	2	4232286096
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	BONO	5003290678001	8684024789466	CM50	2	5	4232286097
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, 2XL, Lacivert	C4WM-SWT4228	5003160078005	8684024371432	CM40	1	2	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, 2XL, Antrasit	C4WM-SWT4228	5003160055005	8684024369187	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, XL, Antrasit	C4WM-SWT4228	5003160055004	8684024369170	CM40	1	2	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, XL, Lacivert	C4WM-SWT4228	5003160078004	8684024371425	CM40	1	2	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	C4WM-SWT4228	5003160078001	8684024371296	CM40	3	4	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Antrasit	C4WM-SWT4228	5003160055002	8684024369156	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Lacivert	C4WM-SWT4228	5003160078002	8684024371401	CM40	2	3	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Lacivert	C4WM-SWT4228	5003160078003	8684024371418	CM40	2	3	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Antrasit	C4WM-SWT4228	5003160055003	8684024369163	CM40	5	5	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Lacivert	C4WM-SWT4242	5003160087002	8684024371050	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Siyah	C4WM-SWT4256	5003160104002	8684024370688	CM40	1	1	4232230946
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	CARA	5003281567001	8684024759612	CB37	5	5	4232286104
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Pantolon, 46, Antrasit Melanj	CITY- 4	5003277341001	8684024753528	CB33	1	1	4232297277
+Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Mont, L, Siyah	CN 10235 SANTIAGO COAT	5003322671001	8684626499152	CB35	1	1	4232238957
+Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Zip Ceket, 2XL, Siyah	CN 10904 PIER POLAR FZ	5003322679005	8684710124984	CB45	1	1	4232238958
+Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Zip Ceket, L, Gri	CN 10907 PIER POLAR HZ	5003322694001	8684710125097	CB15	1	2	4232238956
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ELVA	5003290675001	8684024789435	CB60	2	2	4232286082
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Chino Pantolon, 56, Siyah	F3WM-PNT902	5003017649006	8683133867881	CB33	2	6	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, 2XL, Gri Melanj	F4WM-GML 2106	5003154796005	8684024327477	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, XL, Gri Melanj	F4WM-GML 2106	5003154796004	8684024327460	CB33	2	4	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek Ceket, L, Lacivert	F4WM-GML 2126	5003154705003	8684024323417	CB33	1	5	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek Ceket, M, Gri Melanj	F4WM-GML 2226	5003156046002	8684024343422	CB33	1	5	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Bej	F4WM-KBN 2046	5003163447004	8684024401900	CB33	1	5	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, L, Bej	F4WM-KBN 2046	5003163447003	8684024401795	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, M, Camel	F4WM-KBN 2077	5003154731002	8684024324445	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, 2XL, Vizon	F4WM-KBN 2734	5003154657005	8684024322113	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Siyah	F4WM-KBN 2755	5003156639004	8684024355302	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Taş	F4WM-KBN 2768	5003167480004	8684024419424	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, S, Bordo Melanj	F4WM-KZK 2841	5003139449001	8684024291730	CB33	1	1	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, S, Gri	F4WM-KZK 2848	5003154757001	8684024326951	CB33	1	1	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, L, Siyah	F4WM-KZK 2848	5003154777003	8684024327347	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Mont, XL, Lacivert	F4WM-MNT 2304	5003154806004	8684024328535	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Pantolon, 50, Antrasit	F4WM-PNT 2766	5003156015003	8684024342272	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, L, Siyah	F4WM-YLK 2756	5003167426003	8684024419370	CB33	1	5	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, S, Bej	F4WM-YLK 2807	5003154689001	8684024324254	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, L, Bej	F4WM-YLK 2807	5003154689003	8684024324278	CB33	1	4	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, XL, Bej	F4WM-YLK 2807	5003154689004	8684024324285	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, L, Siyah	F4WM-YLK 2815	5003154636003	8684024321901	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, M, Ekru	F5WM-KZK 2521	5003277002002	8684024750305	CB33	2	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Mont, M, Haki	F5WM-MNT 2585	5003284869002	8684024766191	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Mont, 2XL, Siyah	F5WM-MNT 2585	5003284911005	8684024766597	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, L, Siyah	FC3WM-KZK335	5003027647003	8683133892272	CB33	1	2	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, S, Lacivert	FC4WM-KBN 2088	5003157900001	8684024361600	CB33	1	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, 2XL, Lacivert	FC4WM-KBN 2088	5003157900005	8684024361648	CB33	2	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, M, Lacivert	FC4WM-KBN 2088	5003157900002	8684024361617	CB33	3	5	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, L, Lacivert	FC4WM-KBN 2088	5003157900003	8684024361624	CB33	4	5	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, XL, Vizon	FC4WM-KZK 2514	5003154842004	8684024329341	CB33	1	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, L, Siyah	FC4WM-KZK 2514	5003154793003	8684024327200	CB33	1	4	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, XL, Siyah	FC4WM-KZK 2514	5003154793004	8684024327217	CB33	2	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, L, Vizon	FC4WM-KZK 2599.	5003273903003	8684024721145	CB33	1	1	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, L, Lacivert	FC4WM-SWT 2115	5003154702003	8684024322762	CB33	1	2	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, M, Lacivert	FC4WM-SWT 2115	5003154702002	8684024322755	CB33	1	2	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatshirt, M, Lacivert	FC4WM-SWT 2116	5003154683002	8684024322366	CB33	1	4	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, L, Lacivert	FC4WM-SWT 2122	5003154665003	8684024323110	CB33	1	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, 2XL, Lacivert	FC4WM-YLK 2089	5003154751005	8684024324896	CB33	1	4	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, S, Lacivert	FC4WM-YLK 2089	5003154751001	8684024324858	CB33	1	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, XL, Lacivert	FC4WM-YLK 2089	5003154751004	8684024324889	CB33	2	4	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, M, Lacivert	FC4WM-YLK 2089	5003154751002	8684024324865	CB33	3	5	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, L, Lacivert	FC4WM-YLK 2089	5003154751003	8684024324872	CB33	4	5	4232306797
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	FELİX	5003290694001	8684024789329	CB79	2	2	4232286101
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	GALE	5003290701001	8684024789503	CB62	2	2	4232286088
+Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, S, Bordo	IM3929 REEBOK IDENTITY FLEECE JO	5003057743004	4066763428754	CB45	1	1	4232238958
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Eşofman Altı, L, Haki	J4WM-EA7226	5003160079003	8684024371463	CM40	2	3	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, 2XL, Haki	J4WM-GML7209	5003161314005	8684024380823	CM40	2	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, S, Haki	J4WM-GML7209	5003161314001	8684024380588	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, L, Haki	J4WM-GML7209	5003161314003	8684024380809	CM40	3	3	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, M, Haki	J4WM-GML7209	5003161314002	8684024380595	CM40	4	4	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, S, Haki	J4WM-KZK4300	5003160091001	8684024370084	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, M, Haki	J4WM-KZK4300	5003160091002	8684024370091	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, L, Taş	J4WM-KZK4300	5003160064003	8684024370428	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, XL, Taş	J4WM-KZK4300	5003160064004	8684024370435	CM40	2	2	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, M, Taş	J4WM-KZK4300	5003160064002	8684024370411	CM40	3	3	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Polar Sweatshırt, S, Ekru	J4WM-SWT4444	5003159989001	8684024368944	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	J4WM-SWT7355	5003161656001	8684024385675	CM40	1	2	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Lacivert	J4WM-SWT7355	5003161656002	8684024385682	CM40	1	2	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Eşofman Altı, XL, Siyah	J5WM-EA7391	5003274604004	8684024731182	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	J5WM-SWT7222	5003261944001	8684024684945	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Lacivert	J5WM-SWT7222	5003261944003	8684024684969	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatmont, L, Siyah	J5WM-SWT7287	5003276447003	8684024744205	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatmont, M, Siyah	J5WM-SWT7287	5003276447002	8684024743796	CM40	2	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatmont, S, Lacivert	J5WM-SWT7399	5003262604001	8684024686550	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Puffer Yelek, L, Haki	J5WM-YLK7893	5003274365003	8684024728014	CM40	1	1	4232230946
+Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Puffer Yelek, M, Haki	J5WM-YLK7893	5003274365002	8684024728007	CM40	1	1	4232230946
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğ, Bedensiz, Açık Gri	JAX	5003290649001	8684024789244	CM29	3	3	4232286103
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğ, Bedensiz, Antrasit	KAİ	5003290677001	8684024789459	CB59	3	3	4232286099
+Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Mont, S, Siyah	LC 1243 RALDINA JACKET	5003322672003	2012002025866	CB45	1	1	4232238958
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	LİO	5003290664001	8684024788773	CM29	1	3	4232286103
+Kurumsal Satış Transfer Data	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, Siyah	LSE 502 TAPER BLR Z8889 BLUE PAT	5002929918006	5401043928491	SM46	1	1	4232241391
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Bordo	LUCKY	5003290702001	8684024789510	CB62	3	3	4232286088
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Göz, Bedensiz, Gri - Beyaz	LUNARİS	5003281575001	8684024759438	CB61	2	2	4232286083
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	LUNX	5003281576001	8684024759445	CB45	3	6	4232286084
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	MİAORA	5003281599001	8684024759780	CM38	1	4	4232286093
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	MİGHTY	5003290712001	8684024789152	CB35	2	2	4232286091
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	MOJA	5003281584001	8684024759223	CB39	1	1	4232286102
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	NAYA	5003290672001	8684024789428	CB60	3	3	4232286082
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	NUBY	5003281579001	8684024759476	CB32	1	1	4232286086
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, M, Kırmızı	PERFECT TEE RHYTHMIC RED JERSEY	5003294760002	5401187529745	SM46	2	2	4232241391
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	RAYA	5003281631001	8684024759902	CB37	1	1	4232286104
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ROUX	5003281642001	8684024760007	CB32	1	2	4232286086
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ROUX	5003281642001	8684024760007	CB13	1	2	4232286090
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Yeşil	SİLA	5003281643001	8684024760014	CB36	1	2	4232286080
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Yeşil	SİLA	5003281643001	8684024760014	CB32	1	2	4232286086
+Manuel Transferler Run ID 72162	Kids	020Shoes	Caterpillar	Caterpillar Bot, 33, Bej	UTAH FUR WP P	5003168002005	8683756277012	CM78	1	1	4232230943
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	VELMO	5003281586001	8684024759247	CB59	2	2	4232286099
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Krem	VİBE	5003290659001	8684024788698	CB36	2	3	4232286080
+Manuel Transferler Run ID 72162	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Çok Renkli	YW0YW01963	5003298524002	8719849619060	CM47	1	1	4232249705
+Manuel Transferler Run ID 72162	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Çok Renkli	YW0YW01963	5003298524003	8719849619077	CM47	1	1	4232249705
