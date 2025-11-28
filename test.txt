@@ -1,5 +1,5 @@
 Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
-Manuel Transferler Run ID 777	Mens	006Apparel	Network	Network Kazak, XL, Lacivert	1095547	5003299660005	8683798930678	CB53	1	1	4232297901
+Manuel Transferler Run ID 888	Mens	006Apparel	Network	Network Kazak, XL, Lacivert	1095547	5003299660005	8683798930678	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Siyah	1095726	5003299628002	8683798946389	CB53	1	2	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Yelek, 2XL, Gri	1096193	5003299678001	8683798961016	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Taş	1097256	5003299811005	8684782025950	CB53	1	1	4232297901
