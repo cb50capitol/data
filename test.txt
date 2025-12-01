@@ -1,258 +1,79 @@
-Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Lacivert	1095547	5003299660005	8683798930678	CB53	1	1	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Siyah	1095726	5003299628002	8683798946389	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Siyah	1095726	5003299628002	8683798946389	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Yelek, 2XL, Gri	1096193	5003299678001	8683798961016	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Taş	1097256	5003299811005	8684782025950	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Takım Elbise, 50-6, Lacivert	1097271	5003299804003	8684782028364	CB53	1	2	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097287	5003300020004	8684782030206	CB53	1	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 48, Siyah	1097287	5003300020002	8684782030183	CB53	1	4	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 48, Antrasit	1097287	5003299841002	8684782030244	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 56, Siyah	1097287	5003300020006	8684782030220	CB53	1	1	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Lacivert	1097287	5003299828004	8684782030329	CB53	1	2	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 48, Siyah	1097287	5003300020002	8684782030183	CB53	1	5	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Koyu Kahve	1097287	5003299827003	8684782030374	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097287	5003300020004	8684782030206	CB53	1	3	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Siyah	1097287	5003300020003	8684782030190	CB53	1	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Antrasit	1097288	5003299842003	8684782030558	CB53	1	-1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 56, Siyah	1097288	5003299829006	8684782030466	CB53	1	2	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 46, Siyah	1097288	5003299829001	8684782030411	CB53	2	5	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Lacivert	1097288	5003299809003	8684782030497	CB53	2	4	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097288	5003299829004	8684782030442	CB53	3	5	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Siyah	1097288	5003299829003	8684782030435	CB53	3	6	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Lacivert	1097288	5003299809003	8684782030497	CB53	2	3	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097288	5003299829004	8684782030442	CB53	3	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Siyah	1097288	5003299829003	8684782030435	CB53	3	4	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Gömlek, 39, Beyaz	1097307	5003299870001	8684782032934	CB53	1	1	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, XL, Haki	1097311	5003300021005	8684782033542	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, M, Haki	1097311	5003300021003	8684782033528	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, XL, Haki	1097311	5003300021005	8684782033542	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Ceket, 50-6, Lacivert	1097318	5003299853003	8684782034198	CB53	1	1	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Denim Pant, 32-30, Koyu Lacivert	1097327	5003299995005	8684782035423	CB53	1	3	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Denim Pant, 33-30, Koyu Lacivert	1097327	5003299995007	8684782035447	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Denim Pant, 32-30, Koyu Lacivert	1097327	5003299995005	8684782035423	CB53	1	3	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, L, Bej	1097333	5003299856002	8684782036147	CB53	1	2	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Kırık Beyaz	1097334	5003299876002	8684782036291	CB53	1	1	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, M, Kırık Beyaz	1097334	5003299876003	8684782036284	CB53	1	1	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Siyah	1097340	5003299895005	8684782037151	CB53	1	6	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network T-Shirt, 2XL, Siyah	1097358	5003299914001	8684782039209	CB53	1	2	4232297901
-Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network T-Shirt, L, Kırık Beyaz	1097358	5003300040002	8684782039230	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, L, Kırık Beyaz	1097334	5003299876002	8684782036291	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Kazak, XL, Siyah	1097340	5003299895005	8684782037151	CB53	1	5	4232297901
 Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, S, Siyah	1097362	5003299907004	8684782039612	CB53	1	1	4232297901
-Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, M, Siyah	100056008 RI Left Leg Logo OH Pant	5003258894003	4065431362369	YM07	1	1	4232238961
 Manuel Transferler Run ID 72163	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 44, Beyaz	100209145 REEBOK BB 1000	5003185162006	1200161025457	CB59	1	1	4232305081
+Manuel Transferler Run ID 72163	Kids	020Shoes	Superfit	Superfit Outdoor Bot, 27, Mavi - Yeşil	1-006047-8030-3	5003305292002	9010925131063	CB33	1	2	4232323490
+Manuel Transferler Run ID 72163	Kids	020Shoes	Superfit	Superfit Kar Botu, 38, Siyah	1-009131-0000-2	5003305217003	9010925187565	CB21	1	1	4232323443
+Manuel Transferler Run ID 72163	Kids	020Shoes	Superfit	Superfit Kar Botu, 36, Siyah	1-009131-0000-2	5003305217001	9010925187541	CB21	2	2	4232323443
 Manuel Transferler Run ID 72163	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Gri	102032114 PRIME WALK ULTRA II	5003322444004	8684626687238	YM02	1	1	4232305226
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	117617 WHT	5003255964006	198376869144	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	117617 WHT	5003255964002	198376869106	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	117617 WHT	5003255964005	198376869137	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	117617 WHT	5003255964003	198376869113	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	117617 WHT	5003255964001	198376869090	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	117617 WHT	5003255964007	198376869151	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Siyah	117620 BLK	5003255954007	197976701397	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Siyah	117620 BLK	5003255954005	197976701373	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Siyah	117620 BLK	5003255954001	197976701335	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Siyah	117620 BLK	5003255954003	197976701359	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Siyah	117620 BLK	5003255954002	197976701342	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Siyah	117620 BLK	5003255954006	197976701380	CB81	2	2	4232308951
 Manuel Transferler Run ID 72162	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ay, 39, Beyaz - Siyah	13148 WBK D'LITES	5002742964007	193113227522	CB35	1	2	4232250530
 Manuel Transferler Run ID 72163	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Zip Ceket, S, Siyah	1379497-001 UA Rival Fleece FZ Hood	5003057118003	196883849949	CM44	1	2	4232305374
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 36.5, Siyah	138187 BBK	5003296572002	197976814172	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 39, Kahve	138187 CSNT	5003296573007	198376458867	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 38.5, Kahve	138187 CSNT	5003296573006	198376458850	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 40, Kahve	138187 CSNT	5003296573008	198376458881	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 36.5, Kahve	138187 CSNT	5003296573002	198376458812	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 36, Kahve	138187 CSNT	5003296573001	198376458805	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 37, Kahve	138187 CSNT	5003296573003	198376458829	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 38, Kahve	138187 CSNT	5003296573005	198376458843	CB81	2	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Babet, 37.5, Kahve	138187 CSNT	5003296573004	198376458836	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Taba	144756 CSNT	5003178075001	197976640764	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Taba	144756 CSNT	5003178075006	197976640818	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36.5, Taba	144756 CSNT	5003178075002	197976640771	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Taba	144756 CSNT	5003178075007	197976640825	CB81	1	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Taba	144756 CSNT	5003178075004	197976640795	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Taba	144756 CSNT	5003178075003	197976640788	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Taba	144756 CSNT	5003178075005	197976640801	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 40, Lacivert	158488 NVY	5002834669008	195969564226	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 38.5, Lacivert	158488 NVY	5002834669006	195969564196	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 36.5, Lacivert	158488 NVY	5002834669002	195969564158	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 36, Lacivert	158488 NVY	5002834669001	195969564141	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 37, Lacivert	158488 NVY	5002834669003	195969564165	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 39, Lacivert	158488 NVY	5002834669007	195969564202	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Düz Ayakkabı, 38, Lacivert	158488 NVY	5002834669005	195969564189	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36.5, Siyah	167252 BBK	5003178019002	195204927038	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Siyah	167252 BBK	5003178019005	195204927069	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Siyah	167252 BBK	5003178019001	195204927021	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Siyah	167252 BBK	5003178019004	195204927052	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Siyah	167252 BBK	5003178019006	195204927076	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 40, Siyah	167252 BBK	5003178019008	195204927106	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Siyah	167252 BBK	5003178019007	195204927083	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Siyah	167252 BBK	5003178019003	195204927045	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36.5, Beyaz	167252 WWHT	5003178048002	195969102220	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Beyaz	167252 WWHT	5003178048001	195969102213	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Beyaz	167252 WWHT	5003178048007	195969102275	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Beyaz	167252 WWHT	5003178048006	195969102268	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Beyaz	167252 WWHT	5003178048004	195969102244	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Beyaz	167252 WWHT	5003178048003	195969102237	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Beyaz	167252 WWHT	5003178048005	195969102251	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 40, Siyah	167431 BLK	5002937512008	196642051071	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38.5, Siyah	167431 BLK	5002937512006	196642051040	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37, Siyah	167431 BLK	5002937512003	196642051019	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Siyah	167431 BLK	5002937512001	196642050999	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Siyah	167431 BLK	5002937512005	196642051033	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Siyah	167431 BLK	5002937512004	196642051026	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Siyah	167431 BLK	5002937512007	196642051057	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 37.5, Natürel	167431 TPE	5003296547004	196642331845	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 38, Natürel	167431 TPE	5003296547005	196642331852	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	177144 OFWT	5003255973001	198739214031	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	177144 OFWT	5003255973002	198739214048	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177144 OFWT	5003255973006	198739214086	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177144 OFWT	5003255973008	198739214116	CB81	1	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177144 OFWT	5003255973007	198739214093	CB81	1	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177144 OFWT	5003255973005	198739214079	CB81	2	5	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177144 OFWT	5003255973004	198739214062	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177144 OFWT	5003255973003	198739214055	CB81	2	5	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Siyah	177200 BLK	5003296579001	198376045234	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Siyah	177200 BLK	5003296579005	198376045272	CB81	1	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Siyah	177200 BLK	5003296579004	198376045265	CB81	1	5	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Siyah	177200 BLK	5003296579003	198376045258	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Siyah	177200 BLK	5003296579002	198376045241	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Siyah	177200 BLK	5003296579007	198376045296	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177200 WHT	5003296600008	198376045593	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	177200 WHT	5003296600002	198376045524	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	177200 WHT	5003296600001	198376045517	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177200 WHT	5003296600006	198376045562	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177200 WHT	5003296600005	198376045555	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177200 WHT	5003296600003	198376045531	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177200 WHT	5003296600004	198376045548	CB81	3	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177200 WHT	5003296600007	198376045579	CB81	3	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36, Beyaz	177336 WHT	5003178049001	197976096417	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177336 WHT	5003178049008	197976096493	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 36.5, Beyaz	177336 WHT	5003178049002	197976096424	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177336 WHT	5003178049006	197976096462	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177336 WHT	5003178049003	197976096431	CB81	1	1	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177336 WHT	5003178049007	197976096479	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177336 WHT	5003178049004	197976096448	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177336 WHT	5003178049005	197976096455	CB81	2	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38.5, Beyaz	177575 WHT	5003296584006	197627201665	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Beyaz	177575 WHT	5003296584008	197627201696	CB81	1	2	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37, Beyaz	177575 WHT	5003296584003	197627201634	CB81	1	3	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177575 WHT	5003296584004	197627201641	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Beyaz	177575 WHT	5003296584007	197627201672	CB81	2	4	4232308951
-Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 38, Beyaz	177575 WHT	5003296584005	197627201658	CB81	2	4	4232308951
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	606-2	5003299074001	8684024796679	CB78	1	1	4232286085
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	608-5	5003299064001	8684024797027	CB37	1	1	4232286104
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177575 WHT	5003296584004	197627201641	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 36.5, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110003	198632938690	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 38.5, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110006	198632938720	CB53	1	1	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 38, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110005	198632938713	CB53	1	1	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 36, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110002	198632938683	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 39, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110007	198632938737	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 37.5, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110004	198632938706	CB53	1	2	4232324704
 Kurumsal Satış Transfer Data	Active & Outdoor	002Active Apparel	Puma	Puma Forma, L, Kırmızı	77980901 GSK Home Jersey Replica w/	5003293011001	4069157735261	CB27	1	4	4232216425
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	920-4	5003299106001	8684024796778	CB61	1	2	4232286083
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	971-5	5003299098001	8684024796976	CM86	1	2	4232286089
-Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, L, Siyah	A4917-0000 Siyah T-shirt	5002930853001	5401043915507	SM46	1	3	4232241391
 Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, M, Siyah	A4917-0000 Siyah T-shirt	5002930853002	5401043915514	SM46	1	2	4232241391
-Manuel Transferler Run ID 72162	Active & Outdoor	001Accessories & Equipments	Blackbörk	Blackbörk Şapka, Standart, Siyah - Bordo	A-7500-121229 TRUCKER	5003268644001	8683295092213	CM32	1	1	4232223115
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, L, Siyah	A4917-0000 Siyah T-shirt	5002930853001	5401043915507	SM46	1	2	4232241391
 Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Siyah	ACE001261528_SYH	5003307496003	8684310978932	CM40	1	3	4232305663
-Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bej	ACE043261438_BEJ	5003308041004	8684310830247	CM40	2	10	4232305663
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	AERO	5003290720001	8684024789251	CB78	2	2	4232286085
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Denim Pantolon, 31-32, Siyah	AKA 3	5002972236003	8683133660505	CB33	1	1	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Denim Pantolon, 33-32, Siyah	AKA 3	5002972236006	8683133660536	CB33	1	1	4232297277
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	ALİSA	5003290648001	8684024789237	CM29	4	4	4232286103
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	ARİA	5003290665001	8684024788780	CB51	2	3	4232286087
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ASHER	5003290711001	8684024789145	CB13	1	2	4232286090
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	AURORA	5003290689001	8684024789121	CB62	2	2	4232286088
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	AVA	5003290663001	8684024788766	CB79	2	2	4232286101
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	AWEN	5003281559001	8684024759315	CM36	2	2	4232286096
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	BONO	5003290678001	8684024789466	CM50	2	5	4232286097
+Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bej	ACE043261438_BEJ	5003308041004	8684310830247	CM40	2	9	4232305663
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, 2XL, Lacivert	C4WM-SWT4228	5003160078005	8684024371432	CM40	1	2	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, 2XL, Antrasit	C4WM-SWT4228	5003160055005	8684024369187	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, XL, Antrasit	C4WM-SWT4228	5003160055004	8684024369170	CM40	1	2	4232230946
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, XL, Lacivert	C4WM-SWT4228	5003160078004	8684024371425	CM40	1	2	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	C4WM-SWT4228	5003160078001	8684024371296	CM40	3	4	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Antrasit	C4WM-SWT4228	5003160055002	8684024369156	CM40	1	1	4232230946
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Lacivert	C4WM-SWT4228	5003160078002	8684024371401	CM40	2	3	4232230946
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Lacivert	C4WM-SWT4228	5003160078003	8684024371418	CM40	2	3	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Antrasit	C4WM-SWT4228	5003160055003	8684024369163	CM40	5	5	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Lacivert	C4WM-SWT4242	5003160087002	8684024371050	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Siyah	C4WM-SWT4256	5003160104002	8684024370688	CM40	1	1	4232230946
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	CARA	5003281567001	8684024759612	CB37	5	5	4232286104
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Pantolon, 46, Antrasit Melanj	CITY- 4	5003277341001	8684024753528	CB33	1	1	4232297277
-Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Mont, L, Siyah	CN 10235 SANTIAGO COAT	5003322671001	8684626499152	CB35	1	1	4232238957
-Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Zip Ceket, 2XL, Siyah	CN 10904 PIER POLAR FZ	5003322679005	8684710124984	CB45	1	1	4232238958
 Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Zip Ceket, L, Gri	CN 10907 PIER POLAR HZ	5003322694001	8684710125097	CB15	1	2	4232238956
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ELVA	5003290675001	8684024789435	CB60	2	2	4232286082
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Chino Pantolon, 56, Siyah	F3WM-PNT902	5003017649006	8683133867881	CB33	2	6	4232297277
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 40, Beyaz	EN0EN02875	5003298565005	8721186797752	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 36, Beyaz	EN0EN02875	5003298565001	8721186796465	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 39, Beyaz	EN0EN02875	5003298565004	8721186797479	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 38, Beyaz	EN0EN02875	5003298565003	8721186797073	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 37, Beyaz	EN0EN02875	5003298565002	8721186796786	CB46	2	2	4232322501
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, 2XL, Gri Melanj	F4WM-GML 2106	5003154796005	8684024327477	CB33	1	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, XL, Gri Melanj	F4WM-GML 2106	5003154796004	8684024327460	CB33	2	4	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek Ceket, L, Lacivert	F4WM-GML 2126	5003154705003	8684024323417	CB33	1	5	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, XL, Gri Melanj	F4WM-GML 2106	5003154796004	8684024327460	CB33	1	3	4232297277
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek Ceket, M, Gri Melanj	F4WM-GML 2226	5003156046002	8684024343422	CB33	1	5	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Bej	F4WM-KBN 2046	5003163447004	8684024401900	CB33	1	5	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, L, Bej	F4WM-KBN 2046	5003163447003	8684024401795	CB33	1	3	4232297277
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, M, Camel	F4WM-KBN 2077	5003154731002	8684024324445	CB33	1	3	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, 2XL, Vizon	F4WM-KBN 2734	5003154657005	8684024322113	CB33	1	3	4232297277
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Siyah	F4WM-KBN 2755	5003156639004	8684024355302	CB33	1	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Taş	F4WM-KBN 2768	5003167480004	8684024419424	CB33	1	3	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, S, Bordo Melanj	F4WM-KZK 2841	5003139449001	8684024291730	CB33	1	1	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, S, Gri	F4WM-KZK 2848	5003154757001	8684024326951	CB33	1	1	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, L, Siyah	F4WM-KZK 2848	5003154777003	8684024327347	CB33	1	3	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Mont, XL, Lacivert	F4WM-MNT 2304	5003154806004	8684024328535	CB33	1	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Pantolon, 50, Antrasit	F4WM-PNT 2766	5003156015003	8684024342272	CB33	1	3	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, L, Siyah	F4WM-YLK 2756	5003167426003	8684024419370	CB33	1	5	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, S, Bej	F4WM-YLK 2807	5003154689001	8684024324254	CB33	1	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, L, Bej	F4WM-YLK 2807	5003154689003	8684024324278	CB33	1	4	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, XL, Bej	F4WM-YLK 2807	5003154689004	8684024324285	CB33	1	3	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Yelek, L, Siyah	F4WM-YLK 2815	5003154636003	8684024321901	CB33	1	3	4232297277
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, M, Ekru	F5WM-KZK 2521	5003277002002	8684024750305	CB33	2	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Mont, M, Haki	F5WM-MNT 2585	5003284869002	8684024766191	CB33	1	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Mont, 2XL, Siyah	F5WM-MNT 2585	5003284911005	8684024766597	CB33	1	2	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, L, Siyah	FC3WM-KZK335	5003027647003	8683133892272	CB33	1	2	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, S, Lacivert	FC4WM-KBN 2088	5003157900001	8684024361600	CB33	1	3	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, 2XL, Lacivert	FC4WM-KBN 2088	5003157900005	8684024361648	CB33	2	3	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, M, Lacivert	FC4WM-KBN 2088	5003157900002	8684024361617	CB33	3	5	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kaban, L, Lacivert	FC4WM-KBN 2088	5003157900003	8684024361624	CB33	4	5	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, XL, Vizon	FC4WM-KZK 2514	5003154842004	8684024329341	CB33	1	3	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, L, Siyah	FC4WM-KZK 2514	5003154793003	8684024327200	CB33	1	4	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Kazak, XL, Siyah	FC4WM-KZK 2514	5003154793004	8684024327217	CB33	2	3	4232306797
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, L, Vizon	FC4WM-KZK 2599.	5003273903003	8684024721145	CB33	1	1	4232297277
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, L, Lacivert	FC4WM-SWT 2115	5003154702003	8684024322762	CB33	1	2	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, M, Lacivert	FC4WM-SWT 2115	5003154702002	8684024322755	CB33	1	2	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatshirt, M, Lacivert	FC4WM-SWT 2116	5003154683002	8684024322366	CB33	1	4	4232306797
 Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, L, Lacivert	FC4WM-SWT 2122	5003154665003	8684024323110	CB33	1	3	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, 2XL, Lacivert	FC4WM-YLK 2089	5003154751005	8684024324896	CB33	1	4	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, S, Lacivert	FC4WM-YLK 2089	5003154751001	8684024324858	CB33	1	3	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, XL, Lacivert	FC4WM-YLK 2089	5003154751004	8684024324889	CB33	2	4	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, M, Lacivert	FC4WM-YLK 2089	5003154751002	8684024324865	CB33	3	5	4232306797
-Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, L, Lacivert	FC4WM-YLK 2089	5003154751003	8684024324872	CB33	4	5	4232306797
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	FELİX	5003290694001	8684024789329	CB79	2	2	4232286101
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	GALE	5003290701001	8684024789503	CB62	2	2	4232286088
-Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Eşofman Altı, S, Bordo	IM3929 REEBOK IDENTITY FLEECE JO	5003057743004	4066763428754	CB45	1	1	4232238958
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, M, Lacivert	FC4WM-YLK 2089	5003154751002	8684024324865	CB33	2	4	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, L, Lacivert	FC4WM-YLK 2089	5003154751003	8684024324872	CB33	2	3	4232306797
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 36, Siyah	FW0FW08795BDS	5003303341001	8721222486565	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 40, Siyah	FW0FW08795BDS	5003303341005	8721222487647	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 38, Siyah	FW0FW08795BDS	5003303341003	8721222487203	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 37, Siyah	FW0FW08795BDS	5003303341002	8721222486794	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 39, Siyah	FW0FW08795BDS	5003303341004	8721222487432	CB46	2	2	4232322501
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Eşofman Altı, L, Haki	J4WM-EA7226	5003160079003	8684024371463	CM40	2	3	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, 2XL, Haki	J4WM-GML7209	5003161314005	8684024380823	CM40	2	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, S, Haki	J4WM-GML7209	5003161314001	8684024380588	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, L, Haki	J4WM-GML7209	5003161314003	8684024380809	CM40	3	3	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Gömlek, M, Haki	J4WM-GML7209	5003161314002	8684024380595	CM40	4	4	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, S, Haki	J4WM-KZK4300	5003160091001	8684024370084	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, M, Haki	J4WM-KZK4300	5003160091002	8684024370091	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, L, Taş	J4WM-KZK4300	5003160064003	8684024370428	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, XL, Taş	J4WM-KZK4300	5003160064004	8684024370435	CM40	2	2	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Kazak, M, Taş	J4WM-KZK4300	5003160064002	8684024370411	CM40	3	3	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Polar Sweatshırt, S, Ekru	J4WM-SWT4444	5003159989001	8684024368944	CM40	1	1	4232230946
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	J4WM-SWT7355	5003161656001	8684024385675	CM40	1	2	4232230946
 Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Lacivert	J4WM-SWT7355	5003161656002	8684024385682	CM40	1	2	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Eşofman Altı, XL, Siyah	J5WM-EA7391	5003274604004	8684024731182	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	J5WM-SWT7222	5003261944001	8684024684945	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Lacivert	J5WM-SWT7222	5003261944003	8684024684969	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatmont, L, Siyah	J5WM-SWT7287	5003276447003	8684024744205	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatmont, M, Siyah	J5WM-SWT7287	5003276447002	8684024743796	CM40	2	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Sweatmont, S, Lacivert	J5WM-SWT7399	5003262604001	8684024686550	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Puffer Yelek, L, Haki	J5WM-YLK7893	5003274365003	8684024728014	CM40	1	1	4232230946
-Manuel Transferler Run ID 72162	Mens	006Apparel	Jeep	Jeep Puffer Yelek, M, Haki	J5WM-YLK7893	5003274365002	8684024728007	CM40	1	1	4232230946
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğ, Bedensiz, Açık Gri	JAX	5003290649001	8684024789244	CM29	3	3	4232286103
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğ, Bedensiz, Antrasit	KAİ	5003290677001	8684024789459	CB59	3	3	4232286099
-Manuel Transferler Run ID 72162	Active & Outdoor	002Active Apparel	Reebok	Reebok Mont, S, Siyah	LC 1243 RALDINA JACKET	5003322672003	2012002025866	CB45	1	1	4232238958
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	LİO	5003290664001	8684024788773	CM29	1	3	4232286103
 Kurumsal Satış Transfer Data	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, Siyah	LSE 502 TAPER BLR Z8889 BLUE PAT	5002929918006	5401043928491	SM46	1	1	4232241391
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Bordo	LUCKY	5003290702001	8684024789510	CB62	3	3	4232286088
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Göz, Bedensiz, Gri - Beyaz	LUNARİS	5003281575001	8684024759438	CB61	2	2	4232286083
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	LUNX	5003281576001	8684024759445	CB45	3	6	4232286084
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	MİAORA	5003281599001	8684024759780	CM38	1	4	4232286093
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	MİGHTY	5003290712001	8684024789152	CB35	2	2	4232286091
 Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	MOJA	5003281584001	8684024759223	CB39	1	1	4232286102
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Siyah	NAYA	5003290672001	8684024789428	CB60	3	3	4232286082
 Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	NUBY	5003281579001	8684024759476	CB32	1	1	4232286086
 Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, M, Kırmızı	PERFECT TEE RHYTHMIC RED JERSEY	5003294760002	5401187529745	SM46	2	2	4232241391
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	RAYA	5003281631001	8684024759902	CB37	1	1	4232286104
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ROUX	5003281642001	8684024760007	CB32	1	2	4232286086
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	ROUX	5003281642001	8684024760007	CB13	1	2	4232286090
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Yeşil	SİLA	5003281643001	8684024760014	CB36	1	2	4232286080
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Yeşil	SİLA	5003281643001	8684024760014	CB32	1	2	4232286086
-Manuel Transferler Run ID 72162	Kids	020Shoes	Caterpillar	Caterpillar Bot, 33, Bej	UTAH FUR WP P	5003168002005	8683756277012	CM78	1	1	4232230943
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	VELMO	5003281586001	8684024759247	CB59	2	2	4232286099
-Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Krem	VİBE	5003290659001	8684024788698	CB36	2	3	4232286080
-Manuel Transferler Run ID 72162	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Çok Renkli	YW0YW01963	5003298524002	8719849619060	CM47	1	1	4232249705
-Manuel Transferler Run ID 72162	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Çok Renkli	YW0YW01963	5003298524003	8719849619077	CM47	1	1	4232249705
