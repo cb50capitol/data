@@ -1,5 +1,69 @@
-Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	adidas	adidas Outdoor Ayakkabısı, 44.5, Siyah	IH0618 TERREX TRAILMAKER 2 GTX	5003290191008	4067898403180	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	adidas	adidas Eşofman Altı, L, Siyah	IN6147 M BL FL TC PT	5003289774001	4067905063871	CM63	1	2	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	adidas	adidas Outdoor, 46, Lacivert - Koyu Gri	JQ2211 TERREX SKYCHASER AX5 GTX	5003290213003	4067903159354	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	adidas	adidas Outdoor Ayakkab, 43.5, Koyu Kahve	JQ2213 TERREX SKYCHASER AX5 GTX	5003290243007	4067903166833	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Polar Swe, M, Siyah	D5WM-SWT3301	5003264342002	8684024690588	CM63	1	4	4232382012
+Cevahir Özel Transferi	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Sweatshir, S, Siyah	D5WM-SWT3986	5003276465001	8684024744564	CM63	1	3	4232382012
+Cevahir Özel Transferi	Active & Outdoor	040Outdoor Apparel	Jack Wolfskin	Jack Wolfskin Zip Ceket, XL, Lacivert	1115311-1010 TAUBENBERG 3IN1 JKT M	5002961247004	4064993502787	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	040Outdoor Apparel	Jack Wolfskin	Jack Wolfskin Mont, L, Koyu Yeşil	A61836PASSAMANI DOWN JKT M	5003212254001	4064886338875	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	040Outdoor Apparel	Jack Wolfskin	Jack Wolfskin Mont, L, Siyah	A61836PASSAMANI DOWN JKT M	5003212246001	4064886338554	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Nike	Nike Training Ayakkab, 44, Siyah - Beyaz	DJ1196-002 NIKE DEFYALLDAY	5002816859006	195237089963	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Nike	Nike Eşofman Altı, M, Siyah	HQ4422-010 M NK CLUB FT OH PANT	5003247583002	197859179312	CM63	2	2	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Reebok	Reebok Mont, 2XL, Siyah	CN 10235 SANTIAGO COAT	5003322671005	8684626499190	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Reebok	Reebok Zip Ceket, L, Gri	CN 10907 PIER POLAR HZ	5003322694001	8684710125097	CM63	1	2	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 43, Siyah	200281 BLK SKECH-LİTE PRO SR - PHAV	5003183141004	197976545144	CM63	1	3	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Skechers	Skechers Bot, 44, Turuncu - Siyah	210900 HNY CAMBERT - BRUİN	5003183092005	198376059965	CM63	1	2	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Skechers	Skechers Lifestyle Ayakkabı, 43, Siyah	232758TK BLK TRACK-LESHUR	5003250100004	8683030715865	CM63	1	5	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Skechers	Skechers Zip Ceket, L, Pembe	S232311-0273 W OUT	5003313497001	8683030953267	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	040Outdoor Apparel	The North Face	The North Face Mont, M, Siyah	NF0A8993GOC1-DIABLO DOWN 2.0 JACKET	5003310117003	197804203260	CM63	1	2	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Zip Ceket, M, Siyah	1371586-003 SHIELD JACKET	5003176721002	196886525048	CM63	1	3	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Eşofman Altı, L, Siyah	1373362-001 UA Armour Fleece Jogger	5002933536001	195253783715	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Eşofman Altı, XL, Siyah	1389353-001 UA Unstoppable Flc Jgr	5003176309004	197778110472	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 46, Siyah	3027000-001 UA Charged Surge 4	5003251282006	196884999919	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Under Armour	Under Armour Lifestyle Ayak, 37.5, Beyaz	3028569-110-UA W Edge LTHR	5003297535004	198632854563	CM63	1	1	4232382012
+Cevahir Özel Transferi	Active & Outdoor	003Active Shoes	Vans	Vans Lifestyle Ayakkabı, 40, Siyah	VN000BCEBA21 UltraRange Neo VR3	5003044690001	196573432710	CM63	1	2	4232382012
+Cevahir Özel Transferi	Kids	006Apparel	Barbie	Barbie Sweatshirt, 7-8 Yaş, Siyah	BRB5WG-SWT6203	5003274474003	8684024730574	CM63	1	2	4232382012
+Cevahir Özel Transferi	Kids	006Apparel	Jeep	Jeep Eşofman Altı, 5-6 Yaş, Siyah	J5WB-EA7783	5003274299001	8684024725907	CM63	1	1	4232382012
+Cevahir Özel Transferi	Kids	006Apparel	Jeep	Jeep Eşofman Altı, 11-12 Yaş, Siyah	J5WB-EA7783	5003274299004	8684024725938	CM63	2	2	4232382012
 Cevahir Özel Transferi	Kids	006Apparel	Mavi	Mavi Eşofman Altı, 7-8 Yaş, Gri	M6010000-70155	5003292020007	8684713753150	CM63	1	1	4232382012
+Cevahir Özel Transferi	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 12-14 Yaş, Siyah	95F087-023-ESS FT BASELINE PANT	5003300373002	198466059790	CM63	1	2	4232382012
+Cevahir Özel Transferi	Kids	003Active Shoes	Nike	Nike Yürüyüş Ayakkabısı, 22, Pembe	HF7006-600-NIKE STAR RUNNER 5 (TD)	5003294007002	198484270085	CM63	1	1	4232382012
+Cevahir Özel Transferi	Kids	003Active Shoes	Nike	Nike Futbol Ayak, 36, Lacivert - Turuncu	HQ2026-800-JR PHANTOM 6 LOW CLUB FG	5003320270006	198482746766	CM63	1	2	4232382012
+Cevahir Özel Transferi	Kids	003Active Shoes	Nike	Nike Futbol Ayak, 33, Lacivert - Turuncu	HQ2026-800-JR PHANTOM 6 LOW CLUB FG	5003320270002	198482604585	CM63	1	2	4232382012
+Cevahir Özel Transferi	Kids	020Shoes	Superfit	Superfit Bot, 25, Lila	GLACIER 1-009226-8510-1	5003059447002	9008518865037	CM63	1	1	4232382012
+Cevahir Özel Transferi	Kids	006Apparel	Tommy Hilfiger	Tommy Hilfiger Puffer, 14 Yaş, Lacivert	KS0KS00652C1G	5003295905003	8721185151494	CM63	1	1	4232382012
+Cevahir Özel Transferi	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 36.5, Siyah	3027103-006-UA BGS Surge 4	5003300026003	198632935873	CM63	1	2	4232382012
+Cevahir Özel Transferi	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 36, Siyah	3027103-006-UA BGS Surge 4	5003300026002	198632935866	CM63	1	1	4232382012
+Cevahir Özel Transferi	Kids	003Active Shoes	Under Armour	Under Armour Basket, 36, Siyah - Kırmızı	3028513-600-UA GS Lockdown 7	5003180075005	196886584700	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Kazak, S, Beyaz	LV047C311GYAS	5003298141003	8719849497132	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Denim Pantolon, 28, Kahve	F3WL-PNT40	5003032767004	8683133912888	CM63	2	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Hırka, L, Siyah	F4WL-HRK0218	5003155517004	8684024332754	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Kazak, S, Ekru	F5WL-KZK0081	5003273304002	8684024713959	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Kazak, XL, Bordo	F5WL-KZK0255	5003273451005	8684024717292	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Sweatshirt, XL, Beyaz	F5WL-SWT0228	5003273313005	8684024714741	CM63	1	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Kazak, XS, Lacivert	KATTEN	5002994964001	8683133826222	CM63	1	4	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Kazak, L, Bordo	PAGOSA	5003259915004	8684024646578	CM63	2	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Kazak, L, Koyu Kahve	PAGOSA	5003259888004	8684024646806	CM63	2	6	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Fabrika	Fabrika Sweatshirt, XS, Siyah	TATAM-Y	5003258156001	8684024645748	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Denim Pantolon, 28, Koyu İndigo	C4WL-PNT4803	5003164566004	8684024409777	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Denim Pantolon, 29, Ekru	J4WL-PNT7093	5003164565005	8684024409722	CM63	1	4	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Denim Pantolon, 27, Ekru	J4WL-PNT7093	5003164565003	8684024409708	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, XL, Siyah	J5WL-KZK7003	5003276309005	8684024739201	CM63	1	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, XS, Lacivert	J5WL-KZK7003	5003276339001	8684024738839	CM63	1	4	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, L, Lacivert	J5WL-KZK7003	5003276339004	8684024738860	CM63	1	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, S, Siyah	J5WL-KZK7003	5003276309002	8684024738679	CM63	1	6	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, XS, Bej	J5WL-KZK7120	5003276327001	8684024739089	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, L, Mürdüm	J5WL-KZK7128	5003276402004	8684024740610	CM63	1	4	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, XL, Gri Melanj	J5WL-KZK7129	5003276404005	8684024740825	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Jeep	Jeep Kazak, L, Gri Melanj	J5WL-KZK7129	5003276404004	8684024740818	CM63	1	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 28-28, Koyu Mavi	501 CROP LOCAL TR APPLY NOW	5003239020012	5401187155135	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-28, Koyu Mavi	501 CROP LOCAL TR APPLY NOW	5003239020005	5401187154176	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 28-32, Koyu Mavi	501 JEANS FOR WOMEN SALSA STONEWASH	5003294598009	5401187528458	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 26-28, Siyah	BOOTCUT OR FLARE TR ON THE TOWN NO	5003239117005	5401187158167	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 27-32, Siyah	BOOTCUT OR FLARE TR ROMANTIC STORY	5003239144010	5401187141060	CM63	3	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Sweatshirt, S, Beyaz	GR HERITAGE SPORT CREW CREW WELL WO	5003294642003	5401187304700	CM63	2	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 29-32, Koyu Mavi	RIBCAGE FULL LENGTH APPLY NOW	5003294836013	5401187580487	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Levis	Levis Denim Pantolon, 25-29, Koyu Mavi	XL STRAIGHT DREAM NICE DREAMS	5003294799002	5401187526348	CM63	1	1	4232382012
 Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 29-30, Koyu Mavi	M1010152-91221	5003322747050	8684713431072	CM63	1	1	4232382012
 Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 26-30, Koyu Mavi	M1010152-91221	5003322747029	8684713430860	CM63	1	1	4232382012
 Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 30-28, Koyu Gri	M1010530-89874 IBIZA Real Blue Koyu	5003291673015	8684518433189	CM63	1	1	4232382012
@@ -19,6 +83,275 @@ Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Kazak, L, Siyah	M1710341-900
 Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Kazak, S, Gri	M1710563-86585 BISIKLET YAKA KAZAK	5003169788005	8684434640869	CM63	1	1	4232382012
 Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Hırka, S, Kırık Beyaz	M1710779-70057 KISA KOLLU HIRKA Kır	5003291778002	8684713274396	CM63	1	3	4232382012
 Cevahir Özel Transferi	Ladies	006Apparel	Mavi	Mavi Sweatshirt, M, Siyah	M1S10388-900 FERMUARLI SWEATSHIRT S	5003291841001	8684713185166	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Mizalle	Mizalle Denim Pantolon, 28, Açık Mavi	M1MZ1010130174	5003289163006	8683421250357	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Mizalle	Mizalle Gömlek, M, Ekru	M2MZ1030130072	5003289023003	8683421262886	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Mizalle	Mizalle Gömlek, S, Taş	M2MZ1030130074	5003290848003	8683421264224	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Mustang	Mustang Denim Pantolon, 28-30, Mavi	LUISE WİDE	5003173211007	8684024438609	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Mustang	Mustang Puffer Mont, S, Siyah	M4WL-MNT-1901	5003167031002	8684024417413	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Mustang	Mustang Denim Pantolon, 25-27, Koyu Mavi	SHELBY SLIM	5003173186001	8684024439132	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Only	Only Mont, S, Kırık Beyaz	ONLASPEN LIFE TEDDY JACKET OTW	5003296134003	5715717220492	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Only	Only Mont, S, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424001	5715425064326	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Only	Only Mont, M, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950002	5715511744194	CM63	1	3	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Ceket, 46, Lacivert	25KSL1547	5003315849005	8682019339108	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Hırka, 48, Siyah	25KSL4160	5003316408003	8682019342450	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 46, Lacivert	25KSL5452	5003315909005	8682019339207	CM63	2	4	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 42, Haki	25KSL5453	5003319773003	8682019344669	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 46, Siyah	25KSL5461	5003315960002	8682019343167	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 44, Kahve	25KSL5463	5003315925004	8682019343334	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 40, Siyah	25KSL5465	5003315935002	8682019346311	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 40, Siyah	25KSL5468	5003315927002	8682019346540	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 38, Siyah	25KSL5490	5003328537001	8682019354552	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 44, Siyah	25KSL5504	5003323579004	8682019358673	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Mont, 42, Lacivert	25KSL6161	5003316002003	8682019346076	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Mont, 40, Kırmızı	25KSL6169	5003315998002	8682019350479	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Mont, 44, Kırmızı	25KSL6169	5003315998004	8682019350493	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 44, Siyah	25KSL8204	5003316094001	8682019338811	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 44, Siyah	25KSL8206	5003316102001	8682019339979	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 40, Bordo	25KSL8219	5003319774002	8682019345307	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 42, Bordo	25KSL8219	5003319774003	8682019345314	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 46, Mavi	25KSL8222	5003316119002	8682019344331	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 50, Siyah	25KSL8245	5003316180004	8682019352923	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 38, Siyah	25KSL8259	5003316222001	8682019354156	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 44, Kahve	25KSL8270	5003316207002	8682019355047	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 42, Kahve	25KSL8270	5003316207001	8682019355030	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 46, Kahve	25KSL8296	5003328516002	8682019357331	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Kaban, 42, Kırmızı	25KSL9510	5003316243003	8682019332390	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Trençkot, 50, Bej	25KSL9521	5003316254004	8682019338767	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Trençkot, 42, Bej	25KSL9522	5003316255003	8682019338354	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Manto, 38, Siyah	25KSL9532	5003316320001	8682019339580	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Ceket, 40, Lacivert	25YSL1449	5003270116002	8682019310503	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Pantolon, 36, Lacivert	25YSL5351	5003270286001	8682019321165	CM63	1	2	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Selen	Selen Bluz, 50, Siyah	25YSL8074-BB	5003270459004	8682019319377	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Tommy Jeans	Tommy Jeans Kazak, S, Kırmızı	DW0DW19336XLE	5003298168003	8721185127093	CM63	2	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Tommy Jeans	Tommy Jeans Hırka, S, Siyah	DW0DW20976BDS	5003298250003	8721186962617	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Tommy Jeans	Tommy Jeans Kazak, S, Kırmızı	DW0DW21678XJP	5003298428003	8721222194965	CM63	1	1	4232382012
+Cevahir Özel Transferi	Ladies	006Apparel	Twist	Twist Kazak, S, Siyah	TW6250050227001	5003329692003	8683559761626	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 48, Lacivert	BBE001261437_LAC	5003307694002	8684310818078	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 50, Lacivert	BBE001261437_LAC	5003307694003	8684310818085	CM63	1	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Denim Pantolo, 50, Vizon	BBE001261520_VIZ	5003307743002	8684932118563	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Pantolon, 56, Antrasit	BBE001261545_ATR	5003307727006	8684932006839	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Palto, 54, Siyah	BBE010261024_SYH	5003307794005	8684310841960	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Palto, 50, Siyah	BBE010261024_SYH	5003307794003	8684310811444	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Gömlek, M, Bej	BBE020261617_BEJ	5003307345002	8684932025915	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Kazak, S, Lacivert	BBE043261417_LAC	5003307114004	8684310850627	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Kazak, L, Siyah	BBE049261378_SYH	5003308083003	8684310963198	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Kazak, XL, Siyah	BBE049261488_SYH	5003307897006	8684932027667	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Kazak, L, Siyah	BBE049261517_SYH	5003307869003	8684310966212	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Sweatshirt, L, Taş	BBE052261054_TAS	5003308636001	8684932105747	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Sweatshirt, L, Lacivert	BBE052261056_LAC	5003308666001	8684932106799	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Sweatshirt, L, Taş	BBE052261057_TAS	5003308675001	8684932107048	CM63	2	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Beymen Business	Beymen Business Sweatshirt, XL, Yeşil	BBE052261058_YSL	5003308692004	8684932107390	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers Mont, M, Bej	BBFW25MJC013	5003324865003	8684497262800	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers Kazak, L, Siyah	BBFW25MKL006	5003324921002	8684497222859	CM63	1	8	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers Pantolon, 54, Haki	BBFW25MPT008	5003320624005	8684497258681	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers Ka, XL, Lacivert - Beyaz	BBSS25MKL020	5003251825006	8684497188926	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Brooks Brothers	Brooks Brothers Pantolon, 54, Gri	BBSS25MPT020	5003252354005	8684497200642	CM63	2	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Calvin Klein	Calvin Klein Mont, M, Lacivert	K10K113476CHW	5003176041002	8720639355600	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Calvin Klein	Calvin Klein Gömlek, M, Siyah	LV04LD119GUB1_LS MELANGE FLANNEL EA	5003297248002	8721187422714	CM63	2	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 38-32, Vizon	36272-0002	5000166379018	5400537642516	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 31, Koyu Lacivert	36272-0005	5001593225003	5400599611628	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-30, Koyu Lacivert	36272-0005	5000166385009	5400537629081	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 38-32, Koyu Lacivert	36272-0005	5000166385018	5400537629197	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 42-34, Siyah	79488-0006	5002463972028	5400816391951	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 34-32, Lacivert	79488-0012	5002463959018	5400816391029	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Kazak, M, Mavi	A1106-0033	5002932909001	5401043207046	CM63	2	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 30-30, Lacivert	A4261-0001	5002994348012	5401105258733	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 34-34, Lacivert	A4264-0003	5002994401035	5401105134075	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 34-32, Gri	A4264-0019	5003298095009	5401187240084	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 32-30, Siyah	A5209-0001	5003171484013	5401157730218	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Kazak, M, Bej	Bej 1/4 Fermuarlı Kazak	5003300526003	5401187463810	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Mont, S, Bej	Bej Microtwill Relaxed Deck Bomber	5003300528003	5401187220611	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Kazak, XL, Bej	Bej Regular Fit Kazak	5003300529005	5401187237183	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Gömlek, M, Beyaz	Beyaz Ultimate Regular Fit Gömlek	5003300509003	5401187465111	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Gömlek, L, Gri	Gri Regular Fit Gömlek-0074	5003300557001	5401187242583	CM63	2	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 34-32, Gri	Gri Smart 360 Flex Workday Slim Fit	5003300559011	5401187209692	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 36-34, Kahve	Kahve Smart 360 Flex Workday Slim F	5003300593015	5401187245638	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Gömlek, L, Lacivert	Lacivert Regular Fit Gömlek	5003300564001	5401187440040	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Gömlek, L, Lacivert	QUARTER ZIP FLEECE REGULAR	5003238089002	5401157784907	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Gömlek, S, Siyah	QUARTER ZIP FLEECE REGULAR	5003238213004	5401157783382	CM63	2	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 36-34, Gri	Signature Stain Defender Slim-0022	5003300611015	5401187237664	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-30, Kahve	Smart 360 Flex Ultimate Chino-0245	5003300620007	5401187226354	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 40-34, Kahve	Smart 360 Flex Ultimate Chino-0245	5003300620018	5401187226460	CM63	2	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-32, Kahve	Smart 360 Flex Ultimate Chino-0245	5003300620008	5401187226361	CM63	3	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 31-32, Kahve	Smart 360 Flex Ultimate Chino-0249	5003300615003	5401187226170	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 32-30, Kahve	Smart 360 Flex Ultimate Chino-0249	5003300615004	5401187226194	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 36-30, Bej	Smart 360 Flex Ultimate Chino-0251	5003300599013	5401187227344	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 38-34, Bej	Smart 360 Flex Ultimate Chino-0251	5003300599017	5401187227382	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 30-32, Gri	Smart 360 Flex Ultimate Chino-0255	5003300585002	5401187247854	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-34, Gri	Smart 360 Flex Ultimate Chino-0255	5003300585009	5401187249223	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-32, Yeşil	Yeşil Smart 360 Flex Ultimate Chino	5003300623008	5401187227849	CM63	2	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Chino Pantolon, 48, Siyah	F3WM-PNT902	5003017649002	8683133867843	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Kazak, XL, Gri Melanj	F4WM-KZK 2598	5003154843004	8684024329396	CM63	1	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Pantolon, 54, Lacivert	F4WM-PNT 2782	5003156045005	8684024343392	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Pantolon, 48, Siyah	F4WM-PNT 2782	5003156016002	8684024343026	CM63	1	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Pantolon, 52, Antrasit Melanj	F4WM-PNT 2817	5003156037004	8684024342883	CM63	1	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Gömlek, 43, Siyah	F5WM-GML 2581	5003284080006	8684024764050	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Hırka, L, Gri Melanj	F5WM-HRK 2578	5003263229003	8684024689124	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Hırka, 2XL, Siyah	F5WM-HRK 2578	5003263228005	8684024688981	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Hırka, XL, Siyah	F5WM-HRK 2578	5003263228004	8684024688974	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Hırka, L, Siyah	F5WM-HRK 2578	5003263228003	8684024688967	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Kazak, 2XL, Bordo Melanj	F5WM-KZK 2553	5003263204005	8684024688134	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Kazak, M, Lacivert	F5WM-KZK 2556	5003263208002	8684024688349	CM63	1	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Kazak, M, Gri Melanj	F5WM-KZK 2883	5003274467002	8684024729714	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Pantolon, 50, Siyah	F5WM-PNT 2537	5003274126003	8684024722821	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Denim Pantolon, 33-32, Lacivert	F5WM-PNT 2770	5003276607005	8684024748364	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Gömlek, L, Mavi	MAYDOS-Y 303	5003274153003	8684024723552	CM63	2	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Fabrika	Fabrika Gömlek, M, Açık Mavi	MAYDOS-Y 430	5003274148002	8684024723781	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Eşofman Altı, M, Antrasit	J4WM-EA7226	5003160046002	8684024369040	CM63	1	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Eşofman Altı, S, Siyah	J4WM-EA7226	5003160038001	8684024368876	CM63	2	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Kazak, S, Siyah	J4WM-KZK4300	5003160101001	8684024370220	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Kazak, M, Siyah	J4WM-KZK4300	5003160101002	8684024370237	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Mont, XL, Siyah	J4WM-MNT7263	5003160358004	8684024374839	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Kaban, L, Haki	J4WM-MNT7322	5003160391003	8684024375003	CM63	1	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Kaban, S, Haki	J4WM-MNT7322	5003160391001	8684024374785	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Lacivert	J4WM-SWT7355	5003161656001	8684024385675	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, S, Antrasit Melanj	J4WM-SWT7355	5003161657001	8684024386023	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Eşofman Altı, L, Haki	J5WM-EA7369	5003276440003	8684024743154	CM63	1	3	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Kazak, S, Kahve	J5WM-KZK7867	5003276405001	8684024740832	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Mont, L, Lacivert	J5WM-MNT7693	5003276399003	8684024742911	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Mont, M, Lacivert	J5WM-MNT7693	5003276399002	8684024742904	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Mont, S, Lacivert	J5WM-MNT7878	5003274385001	8684024727659	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Antrasit	J5WM-SWT7221	5003261956002	8684024685850	CM63	3	7	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, L, Antrasit Melanj	J5WM-SWT7222	5003261906003	8684024685539	CM63	1	5	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Antrasit Melanj	J5WM-SWT7222	5003261906002	8684024685522	CM63	2	6	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, 2XL, Lacivert	J5WM-SWT7223	5003261937005	8684024685706	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Jeep	Jeep Sweatshirt, M, Haki	J5WM-SWT7390	5003262591002	8684024686406	CM63	2	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Network	Network Pantolon, 32-32, Siyah	1097250	5003299768006	8684782025080	CM63	1	2	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Network	Network Kazak, 2XL, Lacivert	1097256	5003299795001	8684782026063	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Network	Network Pantolon, 54, Lacivert	1097288	5003299809005	8684782030510	CM63	1	4	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Ted Baker	Ted Baker Gömlek, XL, Açık Mavi	TBMRSH1010	5003326445004	8684497288527	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Tommy Hilfiger	Tommy Hilfiger Sweatshirt, L, Mavi	MW0MW33639DW5	5003176197001	8720645719359	CM63	1	1	4232382012
+Cevahir Özel Transferi	Mens	006Apparel	Tommy Hilfiger	Tommy Hilfiger Sweatshirt, XL, Mavi	MW0MW33639DW5	5003176197004	8720645719397	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 39, Siyah	BUL-250751	5003211715004	6000040426130	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 36, Siyah	BUL-250752	5003211724001	6000040426222	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Bulldozer	Bulldozer Bot, 40, Siyah	BUL-260004	5003312949001	6000040882356	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Bulldozer	Bulldozer Casual Ayakkabı, 44, Siyah	BUL-260084	5003313003005	6000040980212	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Bulldozer	Bulldozer Bot, 43, Siyah	BUL-260094	5003312985004	6000040982124	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 40, Kahve	BUL-260507	5003311607005	6000040889652	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 38, Kahve	BUL-260507	5003311607003	6000040889638	CM63	2	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 38, Kahve	BUL-260558	5003311624003	6000040935915	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 37, Kahve	BUL-260616	5003311650002	6000040898937	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Bulldozer	Bulldozer Bot, 39, Siyah	BUL-260835	5003311670004	6000040965448	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Siyah	HW0HW02570	5003298480002	8719849351557	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Beyaz	HW0HW02570	5003298437004	8719849352493	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Calvin Klein	Calvin Klein Omuz Ça, Standart, Açık Bej	LV04F3206G	5003298393001	8719849865719	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Beyaz - Siyah	YW0YW01896	5003298512004	8719849344498	CM63	2	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Bej	YW0YW0198701M	5003303345003	8721187089535	CM63	2	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Bordo	YW0YW01995VH2	5003303346003	8721187098476	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Camper	Camper Sneaker, 44, Koyu Kahve	Drift Trail	5003306739005	8433968138706	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Camper	Camper Casual Ayakkabı, 39, Siyah	Pelotas Ariel	5003054874001	8432936646762	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Camper	Camper Casual Ayakkabı, 44, Siyah	Peu Serra	5003306719005	8433968148156	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Camper	Camper Sneaker, 41, Beyaz	TWS	5003306678002	8433968150579	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Caterpillar	Caterpillar Sneaker, 39, Beyaz	013G100955	5003226346002	88450699547	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Caterpillar	Caterpillar Bot, 44, Kahve	ELUDE-X WP	5002752575005	8681531856353	CM63	1	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Clarks	Clarks Sneaker, 41, Lacivert	Courtlite2 Run	5003270222002	5063421039160	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Desigual	Desigual Sırt Çantası, Standart, Siyah	25WAKP012000	5003315843001	8445110716328	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Desigual	Desigual Omuz Çantası, Standart, Siyah	25WAXPA02000	5003315821001	8445110717110	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Discovery Expedition	Discovery Expedition Outdoor Ay, 38, Kum	ARISTA	5003157366003	8684024360382	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Casual Ayakkabı, 41, Bej	AXEL-KAI	5003291097002	8684024790561	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Casual Ayakkabı, 42, Siyah	BALUN	5003287477003	8684024775858	CM63	2	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Casual Ayakkabı, 43, Siyah	BALUN	5003287477004	8684024775865	CM63	2	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	BLAST	5003043375003	8683133975395	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	BLAST	5003043391001	8683133975289	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	BLAST	5003043375002	8683133975388	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	BLAST	5003043375004	8683133975500	CM63	3	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Stiletto, 37, Siyah	CORIA-DENITSA	5003287977002	8684024777692	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Babet, 40, Kahve	D-DERVILA-LEOPAR	5003287935005	8684024778286	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Bot, 37, Vizon	D-DONATA	5003154310002	8684024316457	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Topuklu Bot, 38, Siyah	D-ELAIN	5003154285003	8684024316327	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Bot, 37, Siyah	D-ELLERY	5003154284002	8684024315467	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Loafer, 40, Bordo	FALLON	5003154127005	8684024312985	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Klasik Ayakkabı, 43, Siyah	HENEL-ALGAR	5003155882004	8684024338879	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Klasik Ayakkabı, 43, Siyah	HENEL-ALPHA	5003155885004	8684024339074	CM63	1	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Fabrika	Fabrika Yağmur Botu, 38, Siyah	KATHY-LARISA	5003287936003	8684024778514	CM63	2	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Omuz Çantası, Bedensiz, Taba	KROKO-ALINE	5003156154001	8684024346683	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Sneaker, 43, Siyah	LEON-ALDOUS	5003156241004	8684024349516	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Fabrika	Fabrika Çapraz Çanta, Bedensiz, Siyah	PULLUP-LAYLA	5003156139001	8684024347130	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Klasik Ayakkabı, 42, Siyah	YODER-BRUCE	5003155799003	8684024336646	CM63	1	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Guess	Guess Sneaker, 39, Beyaz	FLPSWOELE12-WHITE	5003248479004	7626741735563	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	031Mens Bags & SLG	Guess	Guess Sırt Çant, Standart, Siyah - Beyaz	HMMICTP5411	5003300744001	7621806188162	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess El Çantası, Standart, Kahve	HWBG8546060-COG	5003298770001	7621806200284	CM63	1	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess El Çantası, Standart, Siyah	HWBG9536060	5003295373001	7628907187827	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Çapraz Çanta, Standart, Siyah	HWBG9536210	5003295381001	7628907187858	CM63	2	5	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess El Çantası, Standart, Kahve	HWOS9672070	5003295404001	7628907192678	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Guess	Guess Tote Çanta, Standart, Siyah	HWZG9207090-BLA	5003298736001	7621806203742	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Guess	Guess Sneaker, 45, Siyah	VINCENT	5003246458006	7620837394528	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Harley Davidson	Harley Davidson Bot, 37, Siyah	025Z100641	5003182093002	8683756324730	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Harley Davidson	Harley Davidson Bot, 39, Siyah	025Z100641	5003182093004	8683756324754	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Harley Davidson	Harley Davidson Bot, 44, Siyah	AMOS	5002909323005	8683756006025	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Harley Davidson	Harley Davidson Bot, 41, Siyah	IRON NEW	5003084255002	8683756009194	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Harley Davidson	Harley Davidson Bot, 44, Kahve	POLPERRO	5003149790005	8683756271058	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Harley Davidson	Harley Davidson Bot, 45, Siyah	TOTI	5003168592006	8683756295085	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Harley Davidson	Harley Davidson Çizme, 36, Siyah	TROUBLE	5002733602001	8681531915791	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Harley Davidson	Harley Davidson Çizme, 39, Siyah	TROUBLE	5002733602004	8681531915821	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 36, Siyah	144756 BBK	5003178070001	197976640634	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Bot, 39, Siyah	144756 BBK	5003178070007	197976640696	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Natürel	158590 DKTP	5003296592008	197976199910	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 40, Siyah	177052 BLK	5003047787008	196642003353	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 39, Siyah	177144 BBK	5003255980007	198376071400	CM63	1	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Siyah	177575 BBK	5003296610004	196989500409	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Omuz Çan, Standart, Bordo	AW0AW17937VLP	5003303338001	8721222004578	CM63	1	5	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sne, 38, Beyaz - Lacivert	EN0EN02815	5003298587003	8721186784776	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 38, Ekru	FW0FW08692	5003298566003	8721185184195	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Bot, 36, Siyah	FW0FW08766BDS	5003303257001	8721222440758	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Bot, 36, Siyah	FW0FW08770BDS	5003303290001	8721222513209	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 42, Lacivert	TH BASKET CORE LITE LTH MIX	5003297657003	8721186802043	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 42, Lacivert	TH COURT LTH DETAIL ESS	5003239774003	8720638281825	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	031Mens Bags & SLG	Tommy Hilfiger	Tommy Hilfiger Sırt Çan, Standart, Siyah	TH FOUNDATION BACKPACK	5003303507001	8721222201571	CM63	1	3	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 43, Lacivert	TH HI VULC CORE LOW LTH II ESS	5003297685004	8721186773077	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	033Mens Shoes	Tommy Hilfiger	Tommy Hilfiger Sneake, 43, Siyah - Beyaz	TJM RETRO BASKET	5003297695004	8721185190479	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Ugg	Ugg Bot, 36, Taba	1144032	5003208917001	8680554291394	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Ugg	Ugg Bot, 39, Taba	1158262	5003208931004	8680554294661	CM63	2	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Ugg	Ugg Bot, 36, Taba	1158263	5003225749001	197634314693	CM63	1	1	4232382012
+Cevahir Özel Transferi	Shoes & Bags	032Ladies Shoes	Valentino	Valentino Sneaker, 39, Siyah	91V1303VIT550	5003152524004	8050162624561	CM63	1	2	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Valentino	Valentino Çapraz Çanta, Standart, Siyah	VBS3KK05R550	5003139933001	8054942227607	CM63	1	4	4232382012
+Cevahir Özel Transferi	Shoes & Bags	030Ladies Bags & SLG	Valentino	Valentino Omuz Çantası, Standart, Bordo	VBS7B305150	5003306074001	8054942813671	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Kazak, S, Kırık Beyaz	LV04RC309GYAS LS EZ COTTON CREWNK S	5003296437003	8719849921545	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Mont, M, Siyah	LV04RC511GUB1 LS NYLON LT WT HOODED	5003296462002	8719849653392	CM63	2	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Calvin Klein Jeans	Calvin Klein Jeans Gömlek, XL, Siyah	LV140EM125UB1 LS SOLID OXFORD CLASS	5003296509004	8719849988999	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Guess Jeans	Guess Jeans Sweatshirt, XL, Siyah	M5BQ35K9V31-JBLK Guess Jeans Erkek	5003297887004	7621806148852	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Guess Jeans	Guess Jeans Denim Pantolon, 30-32, Mavi	M5YA90D5R2A-GJED Guess Jeans Erkek	5003297982001	7620837730630	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Mont, S, Siyah	12238745_JJMAX PUFFER JACKET	5003051978004	5715426645814	CM63	1	4	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Kazak, M, Siyah	12257773_JJEPERFECT KNIT HALF ZIP S	5003293037003	5715602110280	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Mont, S, Siyah	12283517_JJGLOBAL PUFFER JACKET	5003293157004	5715729864028	CM63	2	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Jack & Jones	Jack & Jones Mont, XL, Siyah	12283517_JJGLOBAL PUFFER JACKET	5003293157005	5715729864035	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Sweatshirt, L, Ekru	L212302990 Ekru Sweatshirt	5003317430005	8684555589030	CM63	1	4	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Sweatshirt, S, Kırık Beyaz	L2520099102 Kırık Beyaz Sweatshirt	5003317683003	8684555585131	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Sweatshirt, M, Kırık Beyaz	L2520363102 Kırık Beyaz Sweatshirt	5003317467002	8684555585285	CM63	2	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Kazak, M, Ekru	L2520364104 Ekru Kazak	5003317454006	8684555612288	CM63	2	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Kazak, 3XL, Siyah	L2520373001 Siyah Kazak	5003317446003	8684555614893	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Kazak, S, Lacivert	L2520373410 Lacivert Kazak	5003317720001	8684555614824	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 31-28, Renksiz	L71907658 Luke Denim  Pantolon	5003211486006	8684555082678	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Ceket, L, Haki	LD542302900 Haki Ceket	5003317554001	8684555591026	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Ceket, M, Haki	LD542302900 Haki Ceket	5003317554002	8684555591033	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Chino Pantolon, S, Antrasit	LM0400001003 Antrasit Chino Pantolo	5003317571003	8684555614121	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Lee	Lee Denim Pantolon, 34-32, Antrasit	ML707PYCB Antrasit Denim Pantolon	5003317574017	8684555610680	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 40-32, Siyah	00501-3642_501 LEVIS ORIGINAL NIGHT	5003238308015	5401187109107	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 38-32, Siyah	00501-3642_501 LEVIS ORIGINAL NIGHT	5003238308014	5401187109091	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-32, Koyu Mavi	005HK-0001_578  BAGGY IN MY BAG TOD	5003294350008	5401187511481	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 36-32, İndigo	04511-4497 511 SLIM DARK HOLLOW LOC	5002544747024	5400898099448	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 29-32, İndigo	04511-4886 511 PONCHO AND RIGHTY	5002597505026	5400898685078	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 32-30, Koyu Mavi	04511-5086 511 SLIM LSE_BAND WAGON	5002671954015	5400970179068	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 36-32, Koyu Mavi	04511-6136_511 SLIM PART THE SEA LT	5003238332013	5401157964927	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, İndigo	28833-0642 512 SLIM TAPER DARK HOLL	5002544810018	5400898099134	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 32-32, Siyah	28833-0917 512 SLIM TAPER LSE_RICHM	5002671538013	5400970183799	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Sweatshirt, M, Beyaz	38712-0462_RELAXD GRAPHIC CREW SSNL	5003294365003	5401187319902	CM63	2	4	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Sweatshirt, M, Gri	38712-0471_RELAXD GRAPHIC CREW SSNL	5003294357003	5401187316567	CM63	3	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Sweatshirt, 2XL, Mavi	A1572-0117_LEVIS SWEATS CREW CHARLI	5003294367001	5401187474045	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-32, Renksiz	A2081-0000_LSE_511 SLIM BIOLOGIA AD	5002749694024	5400970621963	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, Renksiz	A2081-0000_LSE_511 SLIM BIOLOGIA AD	5002749694020	5400970621925	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 30-30, Siyah	A2081-0017 LSE511  SLIM NATIVE CALI	5003046294002	5401128469161	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-34, Siyah	A2081-0057_511  SLIM FINALLY WARM	5003294392011	5401187515717	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 31-32, Açık Mavi	A2081-0058_511  SLIM TAKE IT FROM T	5003294401003	5401187513980	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, Açık Mavi	A2081-0064_511  SLIM AMA HIDDEN SPR	5003294393008	5401187517650	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-30, Açık Mavi	A2081-0064_511  SLIM AMA HIDDEN SPR	5003294393009	5401187517667	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-34, Renksiz	A2088-0000_LSE_502 TAPER BIOLOGIA	5002749720019	5400970621161	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-32, Siyah	A2088-0012 LSE502	5003046295008	5401128470693	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-34, Siyah	A2088-0012 LSE502	5003046295009	5401128471201	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, Siyah	A2088-0041_LSE502 TAPER SPACE WALK	5003238392007	5401187153162	CM63	2	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 34-30, Gri	A2088-0058_502  TAPER LA LA LUNA	5003294406008	5401187512068	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Sweatshirt, M, Siyah	A2639-0060_RELAXED GRAPHIC PO ARCHI	5003294430003	5401187497600	CM63	1	4	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Levis	Levis Denim Pantolon, 32-30, Koyu Mavi	A7735-0026_501  LEVI'S  ORIGINAL CH	5003294409003	5401187510552	CM63	1	1	4232382012
 Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 32-34, Renksiz	0035126972 MARCUS DarkF Ma JETBlack	5001634318021	8681858212115	CM63	1	2	4232382012
 Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 36-32, Renksiz	0035126972 MARCUS DarkF Ma JETBlack	5001634318032	8681858212191	CM63	1	2	4232382012
 Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Denim Pantolon, 36-32, Renksiz	0037829624 MARTIN Shaded Blue	5002521479026	8682067346936	CM63	1	4	4232382012
@@ -46,6 +379,139 @@ Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Sweatshirt, M, Gri	M0S1
 Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Sweatshirt, 2XL, Gri	M0S10457-80889_BİSİKLET YAKA SWEATS	5003290531001	8684713302280	CM63	1	2	4232382012
 Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Sweatshirt, XL, Gri	M0S10457-80889_BİSİKLET YAKA SWEATS	5003290531005	8684713302259	CM63	1	1	4232382012
 Cevahir Özel Transferi	Street wear	006Apparel	Mavi	Mavi Sweatshirt, S, Lacivert	M0S10465-80776_MAVİ LOGO BASKILI YA	5003290516004	8684713392335	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Puffer Mont, L, Siyah	M4WM-MNT-1674	5003168741003	8684024425616	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Mont, M, Lacivert	M5WM-CKT1709	5003277326002	8684024755232	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Dış Gömlek, 2XL, Çok Renkli	M5WM-GML1815	5003277298005	8684024753214	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Kazak, M, Bej	M5WM-KZK1540	5003277343002	8684024754143	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Kazak, M, Siyah - Beyaz	M5WM-KZK1547	5003277337002	8684024754747	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Denim Pantolon, 32-32, Mavi	Vegas Slim - 1317	5003168914007	8684024429560	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Denim Pantolon, 31-32, Lacivert	WASHINGTON STRAIGHT-02	5003277308004	8684024754303	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Mustang	Mustang Denim Pantolon, 34-32, Lacivert	WASHINGTON STRAIGHT-02	5003277308010	8684024754365	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Kazak, L, Siyah	DM0DM18895BDS SLIM ESSENTIAL LIGHT	5003175026001	8720646786558	CM63	2	4	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Gömlek, XL, Antrasit	DM0DM21298BDS TJM REG OXFORD SHIRT	5003296604004	8721222075073	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Sweatmont, XL, Siyah	DM0DM22066BDS TJM ESSENTL MIX TEDDY	5003296676004	8721222035961	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Sweatmont, L, Siyah	DM0DM22066BDS TJM ESSENTL MIX TEDDY	5003296676001	8721222035381	CM63	1	3	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Eşofman Altı, M, Siyah	DM0DM22094BDS TJM SLIM RWB FLAG SWE	5003296716002	8721222085423	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Tommy Jeans	Tommy Jeans Denim, 36-32, Koyu Lacivert	DM0DM221541BK SCANTON SLIM DI1263	5003296745010	8721222105763	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 36-32, Siyah	MW12109004 Siyah Denim Pantolon	5003317610009	8684555611601	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 40-32, Siyah	MW12109004 Siyah Denim Pantolon	5003317610011	8684555611625	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Denim Pantolon, 33-32, Siyah	MW12S016100 Siyah Denim Pantolon	5003317594019	8684555608205	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Gömlek, XL, Mint	MW241464303 Mint Yeşili Gömlek	5003317613005	8684555581782	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Gömlek, L, Mint	MW241464303 Mint Yeşili Gömlek	5003317613002	8684555581751	CM63	1	5	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Sweatshirt, XL, Siyah	MW242262001 Siyah Sweatshirt	5003317641004	8684555583274	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Sweatshirt, 2XL, Kahve	MW242262220 Kahverengi Sweatshirt	5003317602001	8684555583632	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Chino Pantolon, 34-30, Lacivert	Texas Slim Jean Pantolon	5002909131012	8682344270671	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Mont, S, Siyah	W2520140001 Siyah Mont	5003317651003	8684555579239	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Mont, L, Kiremit	W2520510222 Kiremit Mont	5003317670002	8684555580235	CM63	1	2	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Sweatshirt, 2XL, Beyaz	W2520534100 Beyaz Sweatshirt	5003317663005	8684555585049	CM63	1	1	4232382012
+Cevahir Özel Transferi	Street wear	006Apparel	Wrangler	Wrangler Gömlek, S, Mavi	W2520583400 Mavi Gömlek	5003317708003	8684555613537	CM63	1	1	4232382012
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözlüğü, Bedensiz, Kahve	MOJA	5003281584001	8684024759223	CB39	1	1	4232286102
+Fabrika Transferi	Accessories (Jwg)	016Sunglasses	Fabrika	Fabrika Güneş Gözl, Bedensiz, Çok Renkli	NUBY	5003281579001	8684024759476	CB32	1	1	4232286086
+Kurumsal Satış Transfer Data	Active & Outdoor	002Active Apparel	Puma	Puma Forma, L, Kırmızı	77980901 GSK Home Jersey Replica w/	5003293011001	4069157735261	CB27	1	4	4232216425
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, M, Siyah	A4917-0000 Siyah T-shirt	5002930853002	5401043915514	SM46	1	2	4232241391
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, L, Siyah	A4917-0000 Siyah T-shirt	5002930853001	5401043915507	SM46	1	2	4232241391
+Kurumsal Satış Transfer Data	Ladies	006Apparel	Levis	Levis T-Shirt, M, Kırmızı	PERFECT TEE RHYTHMIC RED JERSEY	5003294760002	5401187529745	SM46	2	2	4232241391
+Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Siyah	ACE001261528_SYH	5003307496003	8684310978932	CM40	1	3	4232305663
+Kurumsal Satış Transfer Data	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bej	ACE043261438_BEJ	5003308041004	8684310830247	CM40	2	9	4232305663
+Kurumsal Satış Transfer Data	Street wear	006Apparel	Levis	Levis Denim Pantolon, 33-32, Siyah	LSE 502 TAPER BLR Z8889 BLUE PAT	5002929918006	5401043928491	SM46	1	1	4232241391
+Manuel Transferler Run ID 72163	Active & Outdoor	003Active Shoes	Reebok	Reebok Lifestyle Ayakkabı, 44, Beyaz	100209145 REEBOK BB 1000	5003185162006	1200161025457	CB59	1	1	4232305081
+Manuel Transferler Run ID 72163	Active & Outdoor	003Active Shoes	Reebok	Reebok Koşu Ayakkabısı, 43, Gri	102032114 PRIME WALK ULTRA II	5003322444004	8684626687238	YM02	1	1	4232305226
+Manuel Transferler Run ID 72163	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Zip Ceket, S, Siyah	1379497-001 UA Rival Fleece FZ Hood	5003057118003	196883849949	CM44	1	2	4232305374
+Manuel Transferler Run ID 72163	Kids	020Shoes	Superfit	Superfit Outdoor Bot, 27, Mavi - Yeşil	1-006047-8030-3	5003305292002	9010925131063	CB33	1	2	4232323490
+Manuel Transferler Run ID 72163	Kids	020Shoes	Superfit	Superfit Kar Botu, 38, Siyah	1-009131-0000-2	5003305217003	9010925187565	CB21	1	1	4232323443
+Manuel Transferler Run ID 72163	Kids	020Shoes	Superfit	Superfit Kar Botu, 36, Siyah	1-009131-0000-2	5003305217001	9010925187541	CB21	2	2	4232323443
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 38, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110005	198632938713	CB53	1	1	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 38.5, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110006	198632938720	CB53	1	1	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 36.5, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110003	198632938690	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 37.5, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110004	198632938706	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 39, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110007	198632938737	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 36, Pembe	6000232-674-UA GGS Pursuit 4 BL	5003300110002	198632938683	CB53	1	2	4232324704
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, 2XL, Gri Melanj	F4WM-GML 2106	5003154796005	8684024327477	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek, XL, Gri Melanj	F4WM-GML 2106	5003154796004	8684024327460	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Gömlek Ceket, M, Gri Melanj	F4WM-GML 2226	5003156046002	8684024343422	CB33	1	5	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, M, Camel	F4WM-KBN 2077	5003154731002	8684024324445	CB33	1	3	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kaban, XL, Siyah	F4WM-KBN 2755	5003156639004	8684024355302	CB33	1	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, M, Ekru	F5WM-KZK 2521	5003277002002	8684024750305	CB33	2	2	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika	Fabrika Kazak, L, Vizon	FC4WM-KZK 2599.	5003273903003	8684024721145	CB33	1	1	4232297277
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Sweatmont, L, Lacivert	FC4WM-SWT 2122	5003154665003	8684024323110	CB33	1	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, M, Lacivert	FC4WM-YLK 2089	5003154751002	8684024324865	CB33	2	4	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Fabrika Comfort	Fabrika Comfort Yelek, L, Lacivert	FC4WM-YLK 2089	5003154751003	8684024324872	CB33	2	3	4232306797
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Takım Elbise, 50-6, Lacivert	1097271	5003299804003	8684782028364	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 48, Siyah	1097287	5003300020002	8684782030183	CB53	1	4	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097287	5003300020004	8684782030206	CB53	1	3	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Antrasit	1097288	5003299842003	8684782030558	CB53	1	-1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Lacivert	1097288	5003299809003	8684782030497	CB53	1	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 50, Siyah	1097288	5003299829003	8684782030435	CB53	2	3	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Pantolon, 52, Siyah	1097288	5003299829004	8684782030442	CB53	2	2	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Ceket, 50-6, Lacivert	1097318	5003299853003	8684782034198	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Mens	006Apparel	Network	Network Sweatshirt, S, Siyah	1097362	5003299907004	8684782039612	CB53	1	1	4232297901
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Skechers	Skechers Sneaker, 37.5, Beyaz	177575 WHT	5003296584004	197627201641	CB81	1	3	4232308951
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 40, Beyaz	EN0EN02875	5003298565005	8721186797752	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 36, Beyaz	EN0EN02875	5003298565001	8721186796465	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 38, Beyaz	EN0EN02875	5003298565003	8721186797073	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 37, Beyaz	EN0EN02875	5003298565002	8721186796786	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 39, Beyaz	EN0EN02875	5003298565004	8721186797479	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 40, Siyah	FW0FW08795BDS	5003303341005	8721222487647	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 36, Siyah	FW0FW08795BDS	5003303341001	8721222486565	CB46	1	1	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 37, Siyah	FW0FW08795BDS	5003303341002	8721222486794	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 38, Siyah	FW0FW08795BDS	5003303341003	8721222487203	CB46	2	2	4232322501
+Manuel Transferler Run ID 72163	Shoes & Bags	032Ladies Shoes	Tommy Hilfiger	Tommy Hilfiger Sneaker, 39, Siyah	FW0FW08795BDS	5003303341004	8721222487432	CB46	2	2	4232322501
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 8-10 Yaş, Mor	45F143-PAP-WJ BRKN FT CARGO PANT	5003300335004	198466042631	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 8-10 Yaş, Kırmızı	952423JDB JUMPMAN TEE	5002532523004	633716804893	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Kırmızı	952423JDB JUMPMAN TEE	5002532523002	633716804916	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 14-16 Yaş, Beyaz	95A088-001 JDB PRACTICE FLIGHT	5002668823003	677838698626	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman, 8-10 Yaş, Siyah - Kırmızı	95A449-KR5 JDB AIR JORDAN TRICOT SE	5002987864004	742728829036	CB63	1	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman, 12-14 Yaş, Siyah - Kırmızı	95A449-KR5 JDB AIR JORDAN TRICOT SE	5002987864002	742728829050	CB63	2	4	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman, 14-16 Yaş, Siyah - Kırmızı	95A449-KR5 JDB AIR JORDAN TRICOT SE	5002987864003	742728829067	CB63	2	3	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 8-10 Yaş, Siyah	95C479-023 JDB JORDAN HBR FLC PO HO	5003050949004	196327011086	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 12-14 Yaş, Siyah	95C479-023 JDB JORDAN HBR FLC PO HO	5003050949002	196327011109	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 10-12 Yaş, Siyah	95C479-023 JDB JORDAN HBR FLC PO HO	5003050949001	196327011093	CB63	3	3	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Şort, 8-10 Yaş, Siyah	95D313-023-JDB MJ DF SPORT DIAMOND	5003178865004	196923464477	CB63	2	3	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Şort, 12-14 Yaş, Siyah	95D313-023-JDB MJ DF SPORT DIAMOND	5003178865002	196923464491	CB63	2	4	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Şort, 10-12 Yaş, Siyah	95D313-023-JDB MJ DF SPORT DIAMOND	5003178865001	196923464484	CB63	3	6	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Şort, 12-14 Yaş, Kırmızı	95D313-R78-JDB MJ DF SPORT DIAMOND	5003178849002	196923464347	CB63	1	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Şort, 8-10 Yaş, Kırmızı	95D313-R78-JDB MJ DF SPORT DIAMOND	5003178849004	196923464323	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Şort, 10-12 Yaş, Kırmızı	95D313-R78-JDB MJ DF SPORT DIAMOND	5003178849001	196923464330	CB63	1	3	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Siyah	95D728-023-JDB JORDAN SIGNATURE SS	5003255455002	197717165822	CB63	1	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 10-12 Yaş, Siyah	95D728-023-JDB JORDAN SIGNATURE SS	5003255455001	197717165815	CB63	1	3	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 8-10 Yaş, Siyah	95D728-023-JDB JORDAN SIGNATURE SS	5003255455004	197717165808	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Mont, 14-16 Yaş, Siyah	95F009-023-ESSENTIAL MDWT PUFFER	5003300397003	198466163367	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Mont, 14-16 Yaş, Mavi	95F009-BB7-ESSENTIAL MDWT PUFFER	5003300387003	198466163213	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Mont, 8-10 Yaş, Mavi	95F009-BB7-ESSENTIAL MDWT PUFFER	5003300387004	198466163183	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Mont, 10-12 Yaş, Mavi	95F009-BB7-ESSENTIAL MDWT PUFFER	5003300387001	198466163190	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Mont, 12-14 Yaş, Mavi	95F009-BB7-ESSENTIAL MDWT PUFFER	5003300387002	198466163206	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 12-14 Yaş, Siyah	95F098-023-MJ MVP HBR JM FT PANT	5003300374002	198466060499	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 10-12 Yaş, Siyah	95F098-023-MJ MVP HBR JM FT PANT	5003300374001	198466060482	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 8-10 Yaş, Siyah	95F098-023-MJ MVP HBR JM FT PANT	5003300374004	198466060475	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 12-14 Yaş, Siyah	95F099-023-JDB MJ MVP HBR JM FT PO	5003300413002	198466060598	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 10-12 Yaş, Siyah	95F099-023-JDB MJ MVP HBR JM FT PO	5003300413001	198466060581	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 12-14 Yaş, Siyah	95F119-023-JDB MJ BRKLN FT PANT	5003300329002	198466061649	CB63	2	4	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Eşofman Altı, 10-12 Yaş, Siyah	95F119-023-JDB MJ BRKLN FT PANT	5003300329001	198466061632	CB63	2	4	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Mavi	95F166-BB7-JUMP MAN JORDAN BACK SS	5003300470002	198466075684	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 10-12 Yaş, Mavi	95F166-BB7-JUMP MAN JORDAN BACK SS	5003300470001	198466075677	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 8-10 Yaş, Siyah	95F191-023-JDB DISTRESSED CHROME	5003300428004	198466076315	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 10-12 Yaş, Siyah	95F191-023-JDB DISTRESSED CHROME	5003300428001	198466076322	CB63	2	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Siyah	95F191-023-JDB DISTRESSED CHROME	5003300428002	198466076339	CB63	2	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 8-10 Yaş, Kırmızı	95F217-R78-JDB MJ SPORT JERSEY	5003300472004	198466030270	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Kırmızı	95F217-R78-JDB MJ SPORT JERSEY	5003300472002	198466030294	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 14-16 Yaş, Kırmızı	95F217-R78-JDB MJ SPORT JERSEY	5003300472003	198466030300	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 10-12 Yaş, Kırmızı	95F217-R78-JDB MJ SPORT JERSEY	5003300472001	198466030287	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 8-10 Yaş, Kırmızı	95F279-H15-AIR JORDAN HAS LANDED	5003300490004	198466203230	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 10-12 Yaş, Kırmızı	95F279-H15-AIR JORDAN HAS LANDED	5003300490001	198466203247	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike T-Shirt, 12-14 Yaş, Kırmızı	95F279-H15-AIR JORDAN HAS LANDED	5003300490002	198466203254	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 8-10 Yaş, Siyah	95F281-023-AIR JORDAN HAS LANDED PO	5003300441004	198466203339	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 12-14 Yaş, Siyah	95F281-023-AIR JORDAN HAS LANDED PO	5003300441002	198466203353	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 10-12 Yaş, Siyah	95F281-023-AIR JORDAN HAS LANDED PO	5003300441001	198466203346	CB63	2	2	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 8-10 Yaş, Krem	95F281-782-AIR JORDAN HAS LANDED PO	5003300409004	198466203384	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 10-12 Yaş, Krem	95F281-782-AIR JORDAN HAS LANDED PO	5003300409001	198466203391	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	002Active Apparel	Nike	Nike Sweatshirt, 12-14 Yaş, Krem	95F281-782-AIR JORDAN HAS LANDED PO	5003300409002	198466203407	CB63	1	1	4232287275
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 37.5, Siyah	3027103-006-UA BGS Surge 4	5003300026004	198632935880	CM83	1	2	4232380899
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabıs, 36.5, Siyah	3027103-006-UA BGS Surge 4	5003300026003	198632935873	CM83	1	2	4232380899
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 36, Siyah	3027103-006-UA BGS Surge 4	5003300026002	198632935866	CM83	1	1	4232380899
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 39, Siyah	3027103-006-UA BGS Surge 4	5003300026007	198632936115	CM83	2	2	4232380899
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 31, Siyah	3027104-006-UA BPS Surge 4 AC	5003300081003	198632937952	CB45	1	1	4232380850
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 28, Siyah	3027104-006-UA BPS Surge 4 AC	5003300081001	198632937853	CB45	1	1	4232380850
+Manuel Transferler Run ID 72164	Kids	003Active Shoes	Under Armour	Under Armour Koşu Ayakkabısı, 30, Siyah	3027104-006-UA BPS Surge 4 AC	5003300081002	198632937921	CB45	2	4	4232380850
 Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 28-30, Koyu İndigo	M1010600-89936 LEILA Dark Shaded Ma	5003291700010	8684518463131	CM27	1	2	4232384204
 Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 28-28, Koyu İndigo	M1010600-89936 LEILA Dark Shaded Ma	5003291700009	8684518463049	CM27	1	3	4232384204
 Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Denim Pantolon, 27-28, Koyu İndigo	M1010600-89936 LEILA Dark Shaded Ma	5003291700007	8684518462455	CM27	1	3	4232384204
@@ -85,3 +551,253 @@ Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Kazak, M, Çok Renkl
 Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Hırka, XS, Siyah	M1710782-900 KISA KOLLU HIRKA Siyah	5003291832004	8684713577220	CM27	1	2	4232384204
 Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Hırka, S, Siyah	M1710782-900 KISA KOLLU HIRKA Siyah	5003291832003	8684713577442	CM27	2	6	4232384204
 Manuel Transferler Run ID 72164	Ladies	006Apparel	Mavi	Mavi Hırka, M, Siyah	M1710782-900 KISA KOLLU HIRKA Siyah	5003291832002	8684713577626	CM27	2	4	4232384204
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 56, Lacivert	4A1400000101	5002792717006	2850002032688	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 50, Lacivert	4A1400000101	5002792717003	2850002032657	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	4A1400000101	5002792717002	2850002032640	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 46, Lacivert	4A1400000101	5002792717001	2850002032633	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 54, Lacivert	4A1400000101	5002792717005	2850002032671	GB10	2	8	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Lacivert	4A1400000101	5002792717004	2850002032664	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Göml, XL, Açık Mavi	4A2000000050	5002559676004	2850001464183	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, 2XL, Siyah	4A2000000050	5002867054005	2850002253953	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polar Swe, XL, Saks	4A5221100016	5003102521005	8683689382074	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polar Swea, S, Saks	4A5221100016	5003102521004	8683689381947	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polar Swea, L, Saks	4A5221100016	5003102521002	8683689381688	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Polar Swea, M, Saks	4A5221100016	5003102521003	8683689381817	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Siyah	ACE001252246_SYH	5003252740003	8684310655512	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 56, Siyah	ACE001252246_SYH	5003252740006	8684310655697	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Siyah	ACE001252246_SYH	5003252740005	8684310655666	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Siyah	ACE001252246_SYH	5003252740004	8684310655703	GB10	2	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 48, Vizon	ACE001252272_VIZ	5003252765002	8684310674681	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Bej	ACE001252273_BEJ	5003252709005	8684310691121	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 46, Bej	ACE001252273_BEJ	5003252709001	8684310691084	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 48, Bej	ACE001252273_BEJ	5003252709002	8684310691091	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 56, Bej	ACE001252273_BEJ	5003252709006	8684310691138	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Bej	ACE001252273_BEJ	5003252709003	8684310691107	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Bej	ACE001252273_BEJ	5003252709004	8684310691114	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Bej	ACE001252276_BEJ	5003252734003	8684310695327	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 50, Lacivert	ACE001261511_LAC	5003307495003	8684932022891	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 56, Gri	ACE001261525_GRI	5003294261006	8684932111205	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 48, Kahve	ACE001261525_KHV	5003294239002	8684932111342	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 56, Kahve	ACE001261525_KHV	5003294239006	8684932111380	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Kahve	ACE001261525_KHV	5003294239005	8684932111373	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Kahve	ACE001261525_KHV	5003294239004	8684932111366	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 50, Kahve	ACE001261525_KHV	5003294239003	8684932111359	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 56, Vizon	ACE001261525_VIZ	5003294545006	8684932111502	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Vizon	ACE001261525_VIZ	5003294545005	8684932111496	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 46, Lacivert	ACE001261528_LAC	5003307521001	8684310978857	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	ACE001261528_LAC	5003307521002	8684310978864	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 54, Lacivert	ACE001261528_LAC	5003307521005	8684310978895	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 56, Lacivert	ACE001261528_LAC	5003307521006	8684310978901	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 50, Lacivert	ACE001261528_LAC	5003307521003	8684310978871	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Lacivert	ACE001261528_LAC	5003307521004	8684310978888	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 46, Açık Gri	ACE001261530_AGR	5003307512001	8684310985961	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Açık Gri	ACE001261530_AGR	5003307512002	8684310985978	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 50, Açık Gri	ACE001261530_AGR	5003307512003	8684310985985	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Açık Gri	ACE001261530_AGR	5003307512004	8684310985992	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 46, Lacivert	ACE001261530_LAC	5003307497001	8684310985909	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 56, Lacivert	ACE001261530_LAC	5003307497006	8684310985954	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 54, Lacivert	ACE001261530_LAC	5003307497005	8684310985947	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Lacivert	ACE001261530_LAC	5003307497004	8684310985930	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 50, Lacivert	ACE001261530_LAC	5003307497003	8684310985923	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ceket, 54-6, Bej	ACE004261321_BEJ	5003300847005	8684310964676	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ceket, 58-6, Bej	ACE004261321_BEJ	5003300847007	8684310964690	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ceket, 56-6, Bej	ACE004261321_BEJ	5003300847006	8684310964683	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ceket, 52-6, Bej	ACE004261321_BEJ	5003300847004	8684310964669	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ceket, 48-6, Bej	ACE004261321_BEJ	5003300847002	8684310964652	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ceket, 50-6, Bej	ACE004261321_BEJ	5003300847003	8684310815350	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Palto, 54, Lacivert	ACE005261084_LAC	5003307498005	8684932098551	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Palto, 56, Lacivert	ACE005261084_LAC	5003307498006	8684932098568	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Palto, 52, Lacivert	ACE005261084_LAC	5003307498004	8684932098544	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Palto, 50, Lacivert	ACE005261084_LAC	5003307498003	8684932098537	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Lacivert	ACE008261109_LAC	5003307526005	8684310823942	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Lacivert	ACE008261109_LAC	5003307526003	8684310812564	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Lacivert	ACE008261109_LAC	5003307526002	8684310823928	GB10	2	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 5XL, Lacivert	ACE008261127_LAC	5003307518004	8684310833248	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, S, Lacivert	ACE008261127_LAC	5003307518007	8684310833279	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Lacivert	ACE008261127_LAC	5003307518008	8684310833286	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 2XL, Lacivert	ACE008261127_LAC	5003307518001	8684310833293	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Lacivert	ACE008261127_LAC	5003307518006	8684310833262	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Lacivert	ACE008261127_LAC	5003307518005	8684310833255	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Vizon	ACE008261128_VIZ	5003308018005	8684310839714	GB10	1	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, S, Vizon	ACE008261128_VIZ	5003308018004	8684310839707	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Vizon	ACE008261128_VIZ	5003308018003	8684310785332	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Vizon	ACE008261128_VIZ	5003308018002	8684310839691	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 2XL, Vizon	ACE008261128_VIZ	5003308018001	8684310839721	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, S, Antrasit	ACE008261130_ATR	5003307552005	8684310839967	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 3XL, Antrasit	ACE008261130_ATR	5003307552002	8684310839943	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Antrasit	ACE008261130_ATR	5003307552004	8684310812519	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 2XL, Antrasit	ACE008261130_ATR	5003307552001	8684310839981	GB10	2	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Antrasit	ACE008261130_ATR	5003307552006	8684310839974	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Antrasit	ACE008261130_ATR	5003307552003	8684310839950	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Bej	ACE008261130_BEJ	5003307553006	8684310840024	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 3XL, Bej	ACE008261130_BEJ	5003307553002	8684310839998	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 2XL, Bej	ACE008261130_BEJ	5003307553001	8684310840031	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, S, Bej	ACE008261130_BEJ	5003307553005	8684310840017	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Bej	ACE008261130_BEJ	5003307553004	8684310812526	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Bej	ACE008261130_BEJ	5003307553003	8684310840000	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, 2XL, Koyu Lacivert	ACE008261130_KLC	5003307539001	8684310840192	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, 4XL, Koyu Lacivert	ACE008261130_KLC	5003307539003	8684310840147	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics M, S, Koyu Lacivert	ACE008261130_KLC	5003307539007	8684310840178	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, XL, Koyu Lacivert	ACE008261130_KLC	5003307539008	8684310840185	GB10	2	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics M, L, Koyu Lacivert	ACE008261130_KLC	5003307539005	8684310840161	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics M, M, Koyu Lacivert	ACE008261130_KLC	5003307539006	8684310812533	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 2XL, Açık Gri	ACE008261131_AGR	5003307561001	8684310840314	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, 3XL, Açık Gri	ACE008261131_AGR	5003307561002	8684310840277	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, S, Açık Gri	ACE008261131_AGR	5003307561005	8684310840291	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Açık Gri	ACE008261131_AGR	5003307561004	8684310785059	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Açık Gri	ACE008261131_AGR	5003307561006	8684310840307	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Açık Gri	ACE008261131_AGR	5003307561003	8684310840284	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, M, Lacivert	ACE008261132_LAC	5003307528006	8684310785080	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Lacivert	ACE008261132_LAC	5003307528005	8684310819150	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Lacivert	ACE008261132_LAC	5003307528008	8684310819167	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, XL, Siyah	ACE008261132_SYH	5003307529008	8684310819181	GB10	1	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Mont, L, Siyah	ACE008261132_SYH	5003307529005	8684310819211	GB10	1	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, S, Gri	ACE020252040_GRI	5003252801004	8684310750750	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, XL, Gri	ACE020252040_GRI	5003252801005	8684310750767	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, M, Gri	ACE020252040_GRI	5003252801003	8684310750743	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, 2XL, Gri	ACE020252040_GRI	5003252801001	8684310750774	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, L, Gri	ACE020252040_GRI	5003252801002	8684310750736	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics G, 2XL, Beyaz - Bej	ACE020261596_BJZ	5003307602001	8684310943671	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gö, XL, Beyaz - Bej	ACE020261596_BJZ	5003307602005	8684310943664	GB10	1	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Class, 2XL, Antrasit - Beyaz	ACE020261596_BZA	5003307610001	8684310943824	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, S, Antrasit - Beyaz	ACE020261596_BZA	5003307610004	8684310943787	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömle, M, Açık Mavi	ACE020261601_AMV	5003306811002	8684310942957	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Göm, 2XL, Açık Mavi	ACE020261601_AMV	5003306811005	8684310942988	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömle, L, Açık Mavi	ACE020261601_AMV	5003306811001	8684310942971	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, XL, Bej	ACE020261601_BEJ	5003306774004	8684310943015	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, M, Bej	ACE020261601_BEJ	5003306774002	8684310943008	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, 2XL, Bej	ACE020261601_BEJ	5003306774005	8684310943039	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, L, Bej	ACE020261601_BEJ	5003306774001	8684310943022	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, M, Taş	ACE020261603_TAS	5003307426002	8684310943350	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, S, Taş	ACE020261603_TAS	5003307426003	8684310943343	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, L, Taş	ACE020261603_TAS	5003307426001	8684310943367	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, XL, Taş	ACE020261603_TAS	5003307426004	8684310943381	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Bordo	ACE043261432_BRD	5003307325004	8684310841489	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Bordo	ACE043261432_BRD	5003307325005	8684310841496	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Bordo	ACE043261432_BRD	5003307325003	8684310841472	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Bordo	ACE043261432_BRD	5003307325001	8684310841465	GB10	2	7	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bordo	ACE043261432_BRD	5003307325002	8684310824345	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, M, Gri Melanj	ACE043261432_GMJ	5003307406003	8684310824352	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ka, 2XL, Gri Melanj	ACE043261432_GMJ	5003307406006	8684310841397	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, XL, Gri Melanj	ACE043261432_GMJ	5003307406005	8684310841380	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, S, Gri Melanj	ACE043261432_GMJ	5003307406004	8684310841373	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, L, Gri Melanj	ACE043261432_GMJ	5003307406002	8684310841366	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Haki	ACE043261432_HAK	5003307577001	8684310841342	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Haki	ACE043261432_HAK	5003307577005	8684310841328	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Haki	ACE043261432_HAK	5003307577004	8684310824369	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Haki	ACE043261432_HAK	5003307577003	8684310841311	GB10	2	7	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Lacivert	ACE043261432_LAC	5003307113003	8684310824338	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Lacivert	ACE043261432_LAC	5003307113004	8684310841526	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Lacivert	ACE043261432_LAC	5003307113005	8684310841533	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Lacivert	ACE043261432_LAC	5003307113002	8684310841519	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Siyah	ACE043261432_SYH	5003307097006	8684310841243	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Siyah	ACE043261432_SYH	5003307097005	8684310841236	GB10	1	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Siyah	ACE043261432_SYH	5003307097004	8684310841229	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Siyah	ACE043261432_SYH	5003307097003	8684310824383	GB10	3	9	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Lacivert	ACE043261436_LAC	5003307085003	8684310830186	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, 2XL, Lacivert	ACE043261436_LAC	5003307085005	8684310852935	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Siyah	ACE043261436_SYH	5003307088003	8684310830216	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classi, 3XL, Antrasit Melanj	ACE043261438_ANM	5003306812001	8684310847498	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, L, Antrasit Melanj	ACE043261438_ANM	5003306812002	8684310847467	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classi, 2XL, Antrasit Melanj	ACE043261438_ANM	5003306812006	8684310847481	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, M, Antrasit Melanj	ACE043261438_ANM	5003306812003	8684310830230	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, S, Antrasit Melanj	ACE043261438_ANM	5003306812004	8684310847450	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, XL, Antrasit Melanj	ACE043261438_ANM	5003306812005	8684310847474	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Bej	ACE043261438_BEJ	5003308041005	8684310847504	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Bej	ACE043261438_BEJ	5003308041001	8684310847535	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Bej	ACE043261438_BEJ	5003308041006	8684310847528	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Bej	ACE043261438_BEJ	5003308041003	8684310847511	GB10	2	11	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bej	ACE043261438_BEJ	5003308041004	8684310830247	GB10	2	9	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Bordo	ACE043261438_BRD	5003307093004	8684310847658	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 3XL, Bordo	ACE043261438_BRD	5003307093001	8684310847696	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Bordo	ACE043261438_BRD	5003307093003	8684310830278	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Bordo	ACE043261438_BRD	5003307093002	8684310847665	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, S, Gri Melanj	ACE043261438_GMJ	5003307606005	8684310847702	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, XL, Gri Melanj	ACE043261438_GMJ	5003307606006	8684310847726	GB10	2	7	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, M, Gri Melanj	ACE043261438_GMJ	5003307606004	8684310830285	GB10	2	7	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, L, Gri Melanj	ACE043261438_GMJ	5003307606003	8684310847719	GB10	3	9	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Haki	ACE043261438_HAK	5003307595001	8684310847788	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Haki	ACE043261438_HAK	5003307595005	8684310847757	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Kiremit	ACE043261438_KMT	5003307567005	8684310847559	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Kiremit	ACE043261438_KMT	5003307567001	8684310847580	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Kiremit	ACE043261438_KMT	5003307567006	8684310847573	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Kiremit	ACE043261438_KMT	5003307567004	8684310830254	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Kiremit	ACE043261438_KMT	5003307567003	8684310847566	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classi, 2XL, Antrasit Melanj	ACE043261440_ANM	5003308008001	8684932101473	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, S, Antrasit Melanj	ACE043261440_ANM	5003308008004	8684932101459	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, M, Antrasit Melanj	ACE043261440_ANM	5003308008003	8684932101442	GB10	2	7	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, L, Antrasit Melanj	ACE043261440_ANM	5003308008002	8684932101435	GB10	2	8	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Haki	ACE043261440_HAK	5003307568001	8684932101572	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Haki	ACE043261440_HAK	5003307568004	8684932101558	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Haki	ACE043261440_HAK	5003307568005	8684932101565	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Haki	ACE043261440_HAK	5003307568003	8684932101541	GB10	2	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Haki	ACE043261440_HAK	5003307568002	8684932101534	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classi, XL, Lacivert - Bordo	ACE049261478_BRL	5003307632005	8684310944494	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, L, Lacivert - Bordo	ACE049261478_BRL	5003307632002	8684310944487	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Class, 2XL, Lacivert - Bordo	ACE049261478_BRL	5003307632001	8684310944500	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, M, Lacivert - Bordo	ACE049261478_BRL	5003307632003	8684310944470	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics K, 2XL, Siyah - Gri	ACE049261478_SYG	5003307099005	8684310944357	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ka, XL, Siyah - Gri	ACE049261478_SYG	5003307099004	8684310944340	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, M, Siyah - Gri	ACE049261478_SYG	5003307099002	8684310944326	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, L, Siyah - Gri	ACE049261478_SYG	5003307099001	8684310944333	GB10	3	6	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics K, 2XL, Kahve - Bej	ACE049261480_KHJ	5003307075005	8684310946412	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ka, XL, Kahve - Bej	ACE049261480_KHJ	5003307075004	8684310946405	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, M, Kahve - Bej	ACE049261480_KHJ	5003307075002	8684310946382	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, L, Kahve - Bej	ACE049261480_KHJ	5003307075001	8684310946399	GB10	3	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Lacivert	ACE049261482_LAC	5003307647005	8684310961781	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, 2XL, Lacivert	ACE049261482_LAC	5003307647001	8684310961798	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classi, 2XL, Antrasit Melanj	ACE049261483_ANM	5003308033001	8684310945712	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, L, Antrasit Melanj	ACE049261483_ANM	5003308033002	8684310945699	GB10	2	7	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, XL, Antrasit Melanj	ACE049261483_ANM	5003308033005	8684310945705	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics, M, Antrasit Melanj	ACE049261483_ANM	5003308033003	8684310945682	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Ka, 2XL, Gri Melanj	ACE049261483_GMJ	5003307094005	8684310945767	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, M, Gri Melanj	ACE049261483_GMJ	5003307094002	8684310945736	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaz, XL, Gri Melanj	ACE049261483_GMJ	5003307094004	8684310945750	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, L, Gri Melanj	ACE049261483_GMJ	5003307094001	8684310945743	GB10	2	5	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Vizon	ACE049261483_VIZ	5003307660001	8684310945910	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kaza, 2XL, Lacivert	ACE049261484_LAC	5003307633001	8684310954202	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Lacivert	ACE049261484_LAC	5003307633003	8684310954172	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Lacivert	ACE049261484_LAC	5003307633004	8684310954165	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Lacivert	ACE049261484_LAC	5003307633005	8684310954196	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Lacivert	ACE049261484_LAC	5003307633002	8684310954189	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, S, Lacivert - Bordo	ACE049261524_LBR	5003308061004	8684932093822	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Sweats, L, Açık Gri	ACE052261047_AGR	5003308622001	8684310942223	GB10	1	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Swea, 2XL, Açık Gri	ACE052261047_AGR	5003308622005	8684310942247	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Sweats, M, Açık Gri	ACE052261047_AGR	5003308622002	8684310942292	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Sweat, XL, Açık Gri	ACE052261047_AGR	5003308622004	8684310942230	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Ekru	ACE072261068_EKR	5003307681001	8684310961392	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Ekru	ACE072261068_EKR	5003307681004	8684310961354	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Ekru	ACE072261068_EKR	5003307681005	8684310961385	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Ekru	ACE072261068_EKR	5003307681003	8684310961361	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Ekru	ACE072261068_EKR	5003307681002	8684310961378	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 54, Lacivert	ET0100000010_LAC	5003253530005	8683689964683	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	ET0100000010_LAC	5003253530002	8683689964652	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 56, Lacivert	ET0100000010_LAC	5003253530006	8683689964690	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 50, Lacivert	ET0100000010_LAC	5003253530003	8683689964669	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Lacivert	ET0100000010_LAC	5003253530004	8683689964676	GB10	2	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, XL, Bej	PAE090000012_BEJ	5003323490004	8684932313616	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, 2XL, Bej	PAE090000012_BEJ	5003323490005	8684932313623	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, S, Bej	PAE090000012_BEJ	5003323490003	8684932313586	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, M, Bej	PAE090000012_BEJ	5003323490002	8684932313593	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, L, Bej	PAE090000012_BEJ	5003323490001	8684932313609	GB10	2	4	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics T-Shirt, 2XL, Beyaz	PAE090000012_BYZ	5003323473005	8684932313562	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Siyah	HW0HW016810GJ	5003040883004	8720108616287	CM22	2	2	4232372480
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Siyah	HW0HW02540	5003298435004	8719849353094	CM79	2	2	4232372629
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Siyah	HW0HW02540	5003298435002	8719849353018	CM79	2	2	4232372629
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Siyah	HW0HW02540	5003298435003	8719849353063	CM79	2	2	4232372629
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 40, Beyaz - Mavi	YW0YW01846	5003298485005	8719849349653	YM02	1	1	4232372561
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Beyaz - Mavi	YW0YW01846	5003298485004	8719849349578	YM02	2	2	4232372561
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Beyaz - Mavi	YW0YW01846	5003298485003	8719849349509	YM02	2	2	4232372561
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Beyaz - Mavi	YW0YW01846	5003298485002	8719849349332	YM02	2	2	4232372561
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Siyah	YW0YW01872	5003298495002	8719849348526	CB43	1	1	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Siyah	YW0YW01872	5003298495004	8719849348649	CB43	1	1	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Siyah	YW0YW01872	5003298495003	8719849348588	CB43	1	1	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 36, Siyah	YW0YW01872	5003298495001	8719849348458	CB43	1	1	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 40, Siyah	YW0YW01872	5003298495005	8719849348694	CB43	2	2	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 40, Siyah	YW0YW01902	5003298514005	8719849353896	CM22	1	1	4232372480
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Siyah	YW0YW01902	5003298514004	8719849353889	CM22	1	1	4232372480
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 40, Bej	YW0YW0198701M	5003303345005	8721187090265	CB43	2	2	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 36, Bej	YW0YW0198701M	5003303345001	8721187088941	CB43	2	2	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 37, Bej	YW0YW0198701M	5003303345002	8721187089191	CB43	3	3	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 38, Bej	YW0YW0198701M	5003303345003	8721187089535	CB43	4	4	4232372370
+Manuel Transferler Run ID 72164	Shoes & Bags	032Ladies Shoes	Calvin Klein	Calvin Klein Sneaker, 39, Bej	YW0YW0198701M	5003303345004	8721187089832	CB43	4	4	4232372370
