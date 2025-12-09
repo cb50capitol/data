@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Boyner Ürün Görsel Çekici</title>
+</head>
+<body>
+    <h1>Boyner Ürün Görsel Çekici</h1>
+    <form action="/gorsel" method="get">
+        <label for="kod">Ürün Kodu:</label>
+        <input type="text" id="kod" name="kod" required />
+
+        <label for="pixel">İstenen Piksel Boyutu (örnek: 1100):</label>
+        <input type="number" id="pixel" name="pixel" min="50" max="2000" value="1100" required />
+
+        <button type="submit">Görseli Getir</button>
+    </form>
+    <br />
+    <div id="sonuc"></div>
+
+<script>
+    const form = document.querySelector("form");
+    const sonucDiv = document.getElementById("sonuc");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        sonucDiv.innerHTML = "Yükleniyor...";
+        const kod = form.kod.value.trim();
+        const pixel = form.pixel.value.trim();
+        try {
+            const response = await fetch(`/gorsel?kod=${encodeURIComponent(kod)}&pixel=${encodeURIComponent(pixel)}`);
+            const data = await response.json();
+
+            if(data.resimler && Array.isArray(data.resimler)){
+                sonucDiv.innerHTML = data.resimler.map(
+                    url => `<img src="${url}" alt="Ürün Görseli" style="max-width:100%;height:auto;margin-bottom:10px;" />`
+                ).join("");
+            } else if(data.hata){
+                sonucDiv.textContent = "Hata: " + data.hata;
+            } else {
+                sonucDiv.textContent = "Basaramadik aq";
+            }
+        } catch(err) {
+            sonucDiv.textContent = "Hic basaramadik aq";
+        }
+    });
+</script>
+</body>
+</html>
