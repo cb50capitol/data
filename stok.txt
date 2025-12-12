@@ -1,4 +1,3 @@
-Stok Kodu	Barkod	Stok Tanımı	Alan Adı	Lokasyon	Say.Adet
 5000415838001	4009839308413	ZWILLING QUADRO 5 Zwilling Tencere Seti, BEDENSIZ, Renksiz	ALT KAT HOME DEPO	DP-0001	3
 5002757575001	4009839424199	FOCUS 5LI TENCERE SETİ Zwilling Tencere Seti, Bedensiz, Renksiz	ALT KAT HOME DEPO	DP-0001	3
 5003228782001	4009839521263	Zwilling Flow Tencere Seti Zwilling Tencere Seti, Bedensiz, Renksiz	ALT KAT HOME DEPO	DP-0001	4
@@ -73386,3 +73385,275 @@ Stok Kodu	Barkod	Stok Tanımı	Alan Adı	Lokasyon	Say.Adet
 5003175684001	8697733913022	Pierre Cardin Eşar, Standart, Çok Renkli	koli	427061	1
 5003250967001	8697733913350	Pierre Cardin Eşarp, Standart, Pudra	koli	427061	1
 5003331728001	8697733936489	Pierre Cardin Şal, Standart, Lila	koli	427063	1
+5003233062001	8682126149928	19V69 Italia Eşarp, Standart, Gül Kurusu	koli	427082	1
+5000160304001	8697733408146	Aker Eşarp Eşarp, STANDART, Kırmızı	koli	427082	1
+5000160305001	8697733408153	Aker Eşarp Eşarp, STANDART, Şarap	koli	427082	1
+5000160305001	8697733408153	Aker Eşarp Eşarp, STANDART, Şarap	koli	427081	1
+5000160327001	8697733441204	Aker Eşarp Eşarp, STANDART, Açık Toprak	koli	427081	1
+5000160735001	8697733589326	Aker Eşarp Eşarp, STANDART, Pembe	koli	427081	2
+5000214926001	8697733634156	Aker Eşarp Eşarp, STANDART, Mint	koli	427081	1
+5000215826001	8697733634682	Aker Eşarp Eşarp, STANDART, Yeşil	koli	427081	1
+5000217751001	8697733476947	Aker Eşarp Eşarp, STANDART, Kahve	koli	427081	1
+5000220964001	8697733634835	Aker Eşarp Şal, Standart, Koyu Ekru	koli	427081	1
+5000220964001	8697733634835	Aker Eşarp Şal, Standart, Koyu Ekru	koli	427068	1
+5000220971001	8697733634811	Aker Eşarp Şal, Standart, Saks	koli	427082	1
+5000220978001	8697733634903	Aker Eşarp Şal, Standart, Dore	koli	427082	1
+5002388641001	8697733719006	Aker Eşarp Eşarp, Standart, Pudra	koli	427081	1
+5002388803001	8697733719143	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5002403393001	8697733647040	Aker Eşarp Eşarp, Standart, Sarı	koli	427081	1
+5002408305001	8697733719365	Aker Eşarp Şal, Standart, Kırmızı	koli	427081	1
+5002408307001	8697733719389	Aker Eşarp Şal, Standart, Altın	koli	427081	1
+5002408309001	8697733719402	Aker Eşarp Şal, Standart, Kiremit	koli	427081	1
+5002408317001	8697733719488	Aker Eşarp Şal, Standart, Gül Kurusu	koli	427067	1
+5002408455001	8697733719396	Aker Eşarp Şal, Standart, Sarı	koli	427081	1
+5002498042001	8697733746262	Aker Esarp Şal, Standart, Ekru	koli	427081	2
+5002498043001	8697733746279	Aker Esarp Şal, Standart, Lacivert	koli	427068	1
+5002498043001	8697733746279	Aker Esarp Şal, Standart, Lacivert	koli	427082	1
+5002498044001	8697733746330	Aker Esarp Şal, Standart, Antrasit	koli	427081	1
+5002498086001	8697733746361	Aker Esarp Şal, Standart, Mürdüm	koli	427082	2
+5002498103001	8697733746200	Aker Esarp Şal, Standart, Açık Gri	koli	427081	1
+5002498105001	8697733746255	Aker Esarp Şal, Standart, Siyah	koli	427082	1
+5002566260001	8697733745364	Aker Eşarp Eşarp, Standart, Mor	koli	427082	1
+5002590598001	8697733768707	Aker Eşarp Eşarp, Standart, Mor	koli	427082	1
+5002634344001	8697733770465	Aker Eşarp Şal, Standart, Altın	koli	427082	1
+5002634368001	8697733770519	Aker Eşarp Şal, Standart, Mürdüm	koli	427081	1
+5002660470001	8697733785810	Aker Eşarp Şal, Standart, Ekru	koli	427082	1
+5002660471001	8697733785841	Aker Eşarp Şal, Standart, Mürdüm	koli	427068	1
+5002714296001	8697733786657	Aker Eşarp Şal, Standart, Yeşil	koli	427081	1
+5002871267001	8697733844647	Aker Eşarp Eşarp, Standart, Ekru	koli	427081	1
+5002913406001	8697733761418	Aker Eşarp Etol, Standart, Bordo	koli	427068	1
+5003031041001	8697733884223	Aker Eşarp Şal, Standart, Antrasit	koli	427081	1
+5003031094001	8697733883073	Aker Eşarp Eşarp, Standart, Pudra	koli	427068	1
+5003031114001	8697733871131	Aker Eşarp Şal, Standart, Mint	koli	427081	1
+5003034304001	8697733883264	Aker Eşarp Şal, Standart, Kırmızı	koli	427081	1
+5003034305001	8697733883356	Aker Eşarp Şal, Standart, Lacivert	koli	427082	1
+5003034334001	8697733883257	Aker Eşarp Şal, Standart, Kahve	koli	427068	1
+5003055967001	8697733884407	Aker Eşarp Eşarp, Standart, Haki	koli	427068	1
+5003055968001	8697733884421	Aker Eşarp Eşarp, Standart, Gri	koli	427081	2
+5003055992001	8697733887071	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427081	1
+5003055994001	8697733886685	Aker Eşarp Eşarp, Standart, Pudra	koli	427081	1
+5003084589001	8697733887507	Aker Eşarp Şal, Standart, Pudra	koli	427068	1
+5003110445001	8697733884988	Aker Eşarp Şal, Standart, Koyu Lacivert	koli	427082	1
+5003146210001	8697733898848	Aker Eşarp Şal, Standart, Pembe	koli	427068	1
+5003146246001	8697733893171	Aker Eşarp Eşarp, Standart, Lacivert	koli	427082	1
+5003146275001	8697733892754	Aker Eşarp Eşarp, Standart, Siyah	koli	427081	1
+5003146323001	8697733890354	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427082	1
+5003175463001	8697733888115	Aker Eşarp Şal, Standart, Siyah	koli	427080	1
+5003175467001	8697733915071	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427067	1
+5003175479001	8697733888184	Aker Eşarp Şal, Standart, Yeşil	koli	427067	1
+5003175489001	8697733888238	Aker Eşarp Şal, Standart, Çok Renkli	koli	427067	1
+5003175504001	8697733888252	Aker Eşarp Şal, Standart, Çok Renkli	koli	427068	1
+5003175506001	8697733912698	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427067	1
+5003175512001	8697733888207	Aker Eşarp Şal, Standart, Vizon	koli	427080	1
+5003175528001	8697733915088	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003175530001	8697733912681	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427067	1
+5003175544001	8697733902460	Aker Eşarp Eşarp, Standart, Hardal	koli	427082	1
+5003175598001	8697733902323	Aker Eşarp Eşarp, Standart, Mavi	koli	427068	1
+5003226919001	8697733921096	Aker Eşarp Eşarp, Standart, Pudra	koli	427080	1
+5003226935001	8697733921126	Aker Eşarp Eşarp, Standart, Lila	koli	427067	1
+5003226937001	8697733920976	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003226951001	8697733920969	Aker Eşarp Eşarp, Standart, Beyaz	koli	427080	1
+5003226953001	8697733921317	Aker Eşarp Eşarp, Standart, Krem	koli	427080	1
+5003226958001	8697733934409	Aker Eşarp Eşarp, Standart, Lila	koli	427082	1
+5003226985001	8697733920877	Aker Eşarp Eşarp, Standart, Krem	koli	427081	1
+5003226986001	8697733920945	Aker Eşarp Eşarp, Standart, Mor	koli	427081	1
+5003226988001	8697733921461	Aker Eşarp Eşarp, Standart, Haki	koli	427082	1
+5003227010001	8697733921041	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427080	1
+5003227044001	8697733934423	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427082	1
+5003227144001	8697733921423	Aker Eşarp Eşarp, Standart, Altın	koli	427082	1
+5003232458001	8697733915279	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003233457001	8697733897698	Aker Eşarp Eşarp, Standart, Mavi	koli	427067	1
+5003233476001	8697733897759	Aker Eşarp Eşarp, Standart, Yeşil	koli	427068	1
+5003233510001	8697733897681	Aker Eşarp Eşarp, Standart, Saks	koli	427080	1
+5003236607001	8697733935062	Aker Eşarp Şal, Standart, Çok Renkli	koli	427081	1
+5003236649001	8697733896189	Aker Eşarp Şal, Standart, Koyu Kahve	koli	427082	1
+5003236650001	8697733896059	Aker Eşarp Şal, Standart, Siyah	koli	427081	1
+5003236672001	8697733896165	Aker Eşarp Şal, Standart, Vizon	koli	427068	1
+5003236709001	8697733935161	Aker Eşarp Şal, Standart, Çok Renkli	koli	427081	1
+5003236711001	8697733936830	Aker Eşarp Şal, Standart, Çok Renkli	koli	427081	1
+5003250917001	8697733921676	Aker Eşarp Şal, Standart, Koyu Gri	koli	427082	1
+5003250919001	8697733921799	Aker Eşarp Şal, Standart, Çok Renkli	koli	427067	1
+5003250944001	8697733921720	Aker Eşarp Şal, Standart, Çok Renkli	koli	427067	1
+5003250945001	8697733921744	Aker Eşarp Şal, Standart, Çok Renkli	koli	427067	1
+5003250947001	8697733921850	Aker Eşarp Şal, Standart, Çok Renkli	koli	427067	1
+5003250951001	8697733921737	Aker Eşarp Şal, Standart, Saks	koli	427068	1
+5003250954001	8697733921942	Aker Eşarp Şal, Standart, Gümüş	koli	427067	1
+5003250956001	8697733921980	Aker Eşarp Şal, Standart, Vizon	koli	427082	1
+5003250961001	8697733921935	Aker Eşarp Şal, Standart, Gri	koli	427082	1
+5003250972001	8697733921782	Aker Eşarp Şal, Standart, Kahve	koli	427080	1
+5003262144001	8697733897124	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003280636001	8697733895786	Aker Eşarp Eşarp, Standart, Siyah	koli	427081	1
+5003280637001	8697733896004	Aker Eşarp Eşarp, Standart, Gri	koli	427082	1
+5003280647001	8697733913381	Aker Eşarp Şal, Standart, Kırık Beyaz	koli	427081	1
+5003280671001	8697733896011	Aker Eşarp Eşarp, Standart, Açık Gri	koli	427080	1
+5003280680001	8697733895984	Aker Eşarp Eşarp, Standart, Vizon	koli	427081	1
+5003280688001	8697733910427	Aker Eşarp Şal, Standart, Lacivert	koli	427081	1
+5003287517001	8697733896035	Aker Eşarp Şal, Standart, Fuşya	koli	427068	1
+5003287540001	8697733897261	Aker Eşarp Şal, Standart, Bordo	koli	427081	1
+5003287544001	8697733897803	Aker Eşarp Şal, Standart, Açık Gri	koli	427080	1
+5003287573001	8697733897834	Aker Eşarp Şal, Standart, Taş	koli	427082	1
+5003294809001	8697733785117	Aker Eşarp Şal, Standart, Lacivert	koli	427081	1
+5003294838001	8697733785186	Aker Eşarp Şal, Standart, Lacivert	koli	427067	1
+5003294847001	8697733785230	Aker Eşarp Şal, Standart, Kırmızı	koli	427068	1
+5003294862001	8697733785063	Aker Eşarp Fular, Standart, Yeşil	koli	427081	1
+5003294863001	8697733785094	Aker Eşarp Fular, Standart, Şeftali	koli	427081	1
+5003294871001	8697733785445	Aker Eşarp Fular, Standart, Lacivert	koli	427081	1
+5003294881001	8697733785261	Aker Eşarp Şal, Standart, Mor	koli	427080	1
+5003294883001	8697733785421	Aker Eşarp Şal, Standart, Şeftali	koli	427080	1
+5003294890001	8697733785384	Aker Eşarp Şal, Standart, Lacivert	koli	427080	1
+5003305633001	8697733890057	Aker Eşarp Şal, Standart, Siyah	koli	427081	1
+5003236690001	8697733935116	Aker Eşarp Şal, Standart, Çok Renkli	koli	427081	1
+5003236652001	8697733935109	Aker Eşarp Şal, Standart, Çok Renkli	koli	427081	2
+5003226911001	8697733921492	Aker Eşarp Eşar, Standart, Zümrüt Yeşili	koli	427080	1
+5003226956001	8697733921607	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427080	1
+5003226949001	8697733920808	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427080	1
+5003227012001	8697733921454	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427080	1
+5003226977001	8697733921003	Aker Eşarp Eşarp, Standart, Yeşil	koli	427080	1
+5003227173001	8697733921164	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427080	1
+5003280655001	8697733895922	Aker Eşarp Eşarp, Standart, Yeşil	koli	427080	1
+5003280744001	8697733910786	Aker Eşarp Eşarp, Standart, Krem	koli	427080	1
+5003280749001	8697733936069	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427080	1
+5003280804001	8697733936168	Aker Eşarp Eşarp, Standart, Yeşil	koli	427080	1
+5003282648001	8697733905867	Aker Eşarp Eşarp, Standart, Mavi	koli	427080	1
+5003287529001	8697733897865	Aker Eşarp Şal, Standart, Natürel	koli	427080	1
+5003287551001	8697733897872	Aker Eşarp Şal, Standart, Krem	koli	427080	1
+5003294853001	8697733785155	Aker Eşarp Şal, Standart, Kırık Beyaz	koli	427080	1
+5003294849001	8697733785391	Aker Eşarp Şal, Standart, Gri	koli	427080	1
+5003294882001	8697733785407	Aker Eşarp Şal, Standart, Vizon	koli	427080	1
+5003296192001	8697733910519	Aker Eşarp Şal, Standart, Koyu Kahve	koli	427080	1
+5003296182001	8697733910533	Aker Eşarp Şal, Standart, Turuncu	koli	427080	1
+5003296148001	8697733910823	Aker Eşarp Eşarp, Standart, Toprak	koli	427080	1
+5003226965001	8697733921232	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427067	1
+5003226946001	8697733921546	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427067	1
+5003262148001	8697733934973	Aker Eşarp Eşarp, Standart, Lila	koli	427067	1
+5003280714001	8697733910588	Aker Eşarp Şal, Standart, Hardal	koli	427067	1
+5003280826001	8697733936205	Aker Eşarp Eşarp, Standart, Pembe	koli	427067	1
+5003280982001	8697733936175	Aker Eşarp Eşarp, Standart, Turkuaz	koli	427067	1
+5003287550001	8697733897629	Aker Eşarp Şal, Standart, Fuşya	koli	427067	1
+5003287545001	8697733897858	Aker Eşarp Şal, Standart, Füme	koli	427067	1
+5003294854001	8697733785223	Aker Eşarp Şal, Standart, Şeftali	koli	427067	1
+5003296147001	8697733910793	Aker Eşarp Eşarp, Standart, Bej	koli	427067	1
+5003296200001	8697733910892	Aker Eşarp Eşarp, Standart, Buz Mavisi	koli	427067	1
+5002590636001	8697733768349	Aker Eşarp Eşarp, Standart, Siyah	koli	427081	1
+5003146239001	8697733892730	Aker Eşarp Eşarp, Standart, Siyah	koli	427081	1
+5003175578001	8697733902101	Aker Eşarp Eşarp, Standart, Gri	koli	427081	1
+5003226889001	8697733921393	Aker Eşarp Eşarp, Standart, Bordo	koli	427081	1
+5003226915001	8697733920778	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427081	1
+5003226936001	8697733921331	Aker Eşarp Eşarp, Standart, Toprak	koli	427081	1
+5003226969001	8697733920990	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003227005001	8697733921218	Aker Eşarp Eşarp, Standart, Beyaz	koli	427081	1
+5003227034001	8697733934300	Aker Eşarp Eşarp, Standart, Bej	koli	427081	1
+5003233456001	8697733897445	Aker Eşarp Şal, Standart, Toprak	koli	427081	1
+5003233485001	8697733897476	Aker Eşarp Şal, Standart, Bej	koli	427081	1
+5003233500001	8697733897704	Aker Eşarp Eşarp, Standart, Toprak	koli	427081	1
+5003236660001	8697733896066	Aker Eşarp Şal, Standart, Füme	koli	427081	2
+5003236608001	8697733935093	Aker Eşarp Şal, Standart, Çok Renkli	koli	427081	1
+5003236608001	8697733935093	Aker Eşarp Şal, Standart, Çok Renkli	koli	427082	1
+5003262161001	8697733897179	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	2
+5003262162001	8697733936847	Aker Eşarp Şal, Standart, Yeşil	koli	427081	1
+5003262162001	8697733936847	Aker Eşarp Şal, Standart, Yeşil	koli	427082	1
+5003262129001	8697733934997	Aker Eşarp Eşarp, Standart, Gül Kurusu	koli	427081	1
+5003262170001	8697733935000	Aker Eşarp Eşarp, Standart, Krem	koli	427081	1
+5003262159001	8697733935017	Aker Eşarp Eşarp, Standart, Açık Krem	koli	427081	1
+5003268177001	8697733920662	Aker Eşarp Şal, Standart, Ekru	koli	427081	1
+5003280665001	8697733895793	Aker Eşarp Eşarp, Standart, Füme	koli	427081	1
+5003280725001	8697733910403	Aker Eşarp Şal, Standart, Siyah	koli	427081	1
+5003280726001	8697733910441	Aker Eşarp Şal, Standart, Açık Mavi	koli	427081	1
+5003280706001	8697733910465	Aker Eşarp Şal, Standart, Açık Krem	koli	427081	1
+5003280753001	8697733910816	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003280792001	8697733935857	Aker Eşarp Eşarp, Standart, Gri	koli	427081	1
+5003280822001	8697733936038	Aker Eşarp Eşarp, Standart, İndigo	koli	427081	1
+5003280797001	8697733936090	Aker Eşarp Eşarp, Standart, Beyaz	koli	427081	1
+5003280972001	8697733936021	Aker Eşarp Eşarp, Standart, Pembe	koli	427081	1
+5003287505001	8697733895892	Aker Eşarp Şal, Standart, Krem	koli	427081	1
+5003287525001	8697733895946	Aker Eşarp Şal, Standart, Turuncu	koli	427081	1
+5003287506001	8697733895953	Aker Eşarp Şal, Standart, Hardal	koli	427081	1
+5003287526001	8697733895960	Aker Eşarp Şal, Standart, Vizon	koli	427081	1
+5003287499001	8697733897520	Aker Eşarp Şal, Standart, Hardal	koli	427081	1
+5003287534001	8697733897599	Aker Eşarp Şal, Standart, Füme	koli	427081	1
+5003287571001	8697733897780	Aker Eşarp Şal, Standart, Bordo	koli	427081	1
+5003287572001	8697733897810	Aker Eşarp Şal, Standart, Gri	koli	427081	1
+5003287561001	8697733897841	Aker Eşarp Şal, Standart, Koyu Gri	koli	427081	1
+5003287750001	8697733897766	Aker Eşarp Şal, Standart, Gri	koli	427081	1
+5003294870001	8697733785131	Aker Eşarp Şal, Standart, Yeşil	koli	427081	1
+5003294880001	8697733785254	Aker Eşarp Şal, Standart, Hardal	koli	427081	1
+5003296139001	8697733785278	Aker Eşarp Fular, Standart, Kahve	koli	427081	1
+5003296145001	8697733785353	Aker Eşarp Fular, Standart, Pembe	koli	427081	1
+5003296146001	8697733910526	Aker Eşarp Şal, Standart, Kırmızı	koli	427081	1
+5003296177001	8697733910762	Aker Eşarp Eşarp, Standart, Mavi	koli	427081	1
+5003296195001	8697733910779	Aker Eşarp Eşarp, Standart, Açık Mavi	koli	427081	1
+5003296178001	8697733910830	Aker Eşarp Eşarp, Standart, Açık Gri	koli	427081	1
+5003296184001	8697733910854	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427081	1
+5003296157001	8697733917457	Aker Eşarp Eşarp, Standart, Bej	koli	427081	1
+5003296202001	8697733917211	Aker Eşarp Eşarp, Standart, Siyah	koli	427081	1
+5003296215001	8697733902071	Aker Eşarp Eşarp, Standart, Beyaz	koli	427081	1
+5003296223001	8697733912971	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003296280001	8697733917266	Aker Eşarp Eşarp, Standart, Lacivert	koli	427081	1
+5003296248001	8697733917501	Aker Eşarp Eşarp, Standart, Vizon	koli	427081	1
+5003296258001	8697733911103	Aker Eşarp Eşarp, Standart, Krem	koli	427081	1
+5003296302001	8697733917280	Aker Eşarp Eşarp, Standart, Gri	koli	427081	1
+5003296295001	8697733917310	Aker Eşarp Eşarp, Standart, Krem	koli	427081	1
+5003296279001	8697733917709	Aker Eşarp Eşarp, Standart, Açık Vizon	koli	427081	1
+5003296296001	8697733932771	Aker Eşarp Eşarp, Standart, Vizon	koli	427081	1
+5003296299001	8697733917365	Aker Eşarp Eşarp, Standart, Gri	koli	427081	1
+5003296340001	8697733932160	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427081	1
+5003296341001	8697733932061	Aker Eşarp Eşarp, Standart, Krem	koli	427081	1
+5003296332001	8697733932214	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427081	1
+5003227013001	8697733921577	Aker Eşarp Eşarp, Standart, Füme	koli	427068	1
+5003262180001	8697733935031	Aker Eşarp Eşarp, Standart, Mor	koli	427068	1
+5003262190001	8697733935048	Aker Eşarp Eşarp, Standart, Pembe	koli	427068	1
+5003262191001	8697733935055	Aker Eşarp Eşarp, Standart, Fuşya	koli	427068	1
+5003280704001	8697733910410	Aker Eşarp Şal, Standart, Beyaz	koli	427068	1
+5003280707001	8697733910502	Aker Eşarp Şal, Standart, Gri	koli	427068	1
+5003280740001	8697733910571	Aker Eşarp Şal, Standart, Çok Renkli	koli	427068	1
+5003280752001	8697733910731	Aker Eşarp Eşarp, Standart, Siyah	koli	427068	1
+5003280729001	8697733910748	Aker Eşarp Eşarp, Standart, Beyaz	koli	427068	1
+5003280786001	8697733935932	Aker Eşarp Eşarp, Standart, Siyah	koli	427068	1
+5003280789001	8697733936052	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427068	1
+5003280827001	8697733936212	Aker Eşarp Eşarp, Standart, Haki	koli	427068	1
+5003287530001	8697733895861	Aker Eşarp Şal, Standart, Açık Kahve	koli	427068	1
+5003287552001	8697733897889	Aker Eşarp Şal, Standart, Fuşya	koli	427068	1
+5003294864001	8697733785179	Aker Eşarp Şal, Standart, Siyah	koli	427068	1
+5003296153001	8697733785292	Aker Eşarp Fular, Standart, Kırmızı	koli	427068	1
+5003296193001	8697733910755	Aker Eşarp Eşarp, Standart, Lacivert	koli	427068	1
+5003296230001	8697733902606	Aker Eşarp Eşarp, Standart, Yeşil	koli	427068	1
+5003296234001	8697733912988	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427068	1
+5003296291001	8697733917013	Aker Eşarp Eşarp, Standart, Siyah	koli	427068	1
+5003296333001	8697733932887	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427068	1
+5003175464001	8697733888160	Aker Eşarp Şal, Standart, Çok Renkli	koli	427082	1
+5003226952001	8697733921263	Aker Eşarp Eşarp, Standart, Beyaz	koli	427082	1
+5003226945001	8697733921201	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427082	1
+5003227021001	8697733920815	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427082	1
+5003227026001	8697733934447	Aker Eşarp Eşarp, Standart, Mavi	koli	427082	1
+5003227060001	8697733934522	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427082	1
+5003227145001	8697733930241	Aker Eşarp Eşarp, Standart, Açık Mavi	koli	427082	1
+5003233483001	8697733897384	Aker Eşarp Şal, Standart, Siyah	koli	427082	1
+5003233449001	8697733897483	Aker Eşarp Şal, Standart, Kırmızı	koli	427082	1
+5003233458001	8697733897728	Aker Eşarp Eşarp, Standart, Krem	koli	427082	1
+5003236617001	8697733896097	Aker Eşarp Şal, Standart, İndigo	koli	427082	1
+5003256785001	8697733917617	Aker Eşarp Eşarp, Standart, Vizon	koli	427082	1
+5003262157001	8697733934928	Aker Eşarp Eşarp, Standart, Şeftali	koli	427082	1
+5003262135001	8697733935024	Aker Eşarp Eşarp, Standart, Pembe	koli	427082	1
+5003280679001	8697733910557	Aker Eşarp Şal, Standart, Açık Yeşil	koli	427082	1
+5003280708001	8697733910564	Aker Eşarp Şal, Standart, Natürel	koli	427082	1
+5003280801001	8697733935871	Aker Eşarp Eşarp, Standart, Pembe	koli	427082	1
+5003280748001	8697733935949	Aker Eşarp Eşarp, Standart, Beyaz	koli	427082	1
+5003280788001	8697733935970	Aker Eşarp Eşarp, Standart, Füme	koli	427082	1
+5003280794001	8697733935987	Aker Eşarp Eşarp, Standart, Lacivert	koli	427082	1
+5003280803001	8697733936076	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427082	1
+5003282649001	8697733917273	Aker Eşarp Eşarp, Standart, Kırmızı	koli	427082	1
+5003287487001	8697733895915	Aker Eşarp Şal, Standart, Koyu Kahve	koli	427082	1
+5003287543001	8697733897582	Aker Eşarp Şal, Standart, Koyu Gri	koli	427082	1
+5003294848001	8697733785377	Aker Eşarp Şal, Standart, Siyah	koli	427082	1
+5003294885001	8697733785544	Aker Eşarp Şal, Standart, Mor	koli	427082	1
+5003296165001	8697733785285	Aker Eşarp Fular, Standart, Siyah	koli	427082	1
+5003296179001	8697733910885	Aker Eşarp Eşarp, Standart, Açık Yeşil	koli	427082	1
+5003296185001	8697733917228	Aker Eşarp Eşarp, Standart, Siyah	koli	427082	1
+5003296199001	8697733902316	Aker Eşarp Eşarp, Standart, Lacivert	koli	427082	1
+5003296208001	8697733932832	Aker Eşarp Eşarp, Standart, Pembe	koli	427082	1
+5003296242001	8697733912964	Aker Eşarp Eşarp, Standart, Çok Renkli	koli	427082	1
+5003296255001	8697733917006	Aker Eşarp Eşarp, Standart, Siyah	koli	427082	1
+5003296300001	8697733917518	Aker Eşarp Eşarp, Standart, Vizon	koli	427082	1
+5003296307001	8697733933969	Aker Eşarp Eşarp, Standart, Vizon	koli	427082	1
+5003296352001	8697733932412	Aker Eşarp Eşarp, Standart, Yeşil	koli	427082	1
+5003296342001	8697733932542	Aker Eşarp Eşarp, Standart, Kahve	koli	427082	1
