@@ -1,4 +1,11 @@
 Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Siyah	15260002	5002927051004	5715312109369	CB38	1	2	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	15260002	5002927051001	5715312109376	CB38	1	2	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	15260047	5002927033001	5715318882617	CM84	1	1	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	15260047	5002927033003	5715318882594	CM84	2	2	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	15260047	5002927033002	5715318882600	CM84	3	3	4232476455
+Manuel Transferler Run ID 72165	Active & Outdoor	003Active Shoes	Asics	Asics Koşu Ayakkabısı, 37.5, Siyah	1012B757-002 JOLT 5	5003302711001	4570158255882	GS06	1	2	4232454784
+Manuel Transferler Run ID 72165	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Şort, L, Mavi	1379507-410-UA M Challenger Train	5003297748001	196883814893	GS06	1	2	4232454784
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 40.5, Gri - Beyaz	1906 M1906REE-Lifestyle Women Shoes	5003279010007	197375272092	CB55	1	1	4232465077
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 45, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946007	198686029832	CM85	1	1	4232464970
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946002	198686029788	CM24	2	2	4232465022
@@ -12,18 +19,17 @@ Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New B
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 43, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189004	198688407997	CM83	2	2	4232465029
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44.5, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189006	198688408017	CM22	1	1	4232465035
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 42, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189002	198688407973	CM32	1	2	4232465109
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 45, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189007	198688408024	CB53	1	1	4232465129
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 46.5, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189008	198688408048	CB53	1	1	4232465129
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 45, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189007	198688408024	CB53	1	1	4232465129
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 44, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189005	198688408000	CB53	2	2	4232465129
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 42, Gri	408 ML408SN-NB Lifestyle Men Shoes	5003320189002	198688407973	GS06	1	2	4232465244
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 44, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084005	197375137698	CM29	2	4	4232464945
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 44, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084005	197375137698	CB49	1	4	4232464989
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 44, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084005	197375137698	CM29	2	3	4232464945
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 44, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084005	197375137698	CB49	1	3	4232464989
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyl, 44.5, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084006	197375137704	CB58	2	2	4232464997
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 45, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084007	197375137711	GS04	1	1	4232465004
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyl, 46.5, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084008	197375137735	CB15	1	2	4232465008
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyl, 42.5, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084003	197375137674	CB53	1	1	4232465129
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 42, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084002	197375137667	CM79	1	1	4232465194
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 44, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084005	197375137698	CB45	1	4	4232465197
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 44, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084005	197375137698	CB45	1	3	4232465197
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyl, 46.5, Beyaz - Mavi	408 ML408WN-NB MEN'S RUNNING SHOES	5003107084008	197375137735	CB38	1	2	4232465214
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 46.5, Beyaz	408 ML408WS-NB PERFORM	5003175531008	197375138275	CB15	1	2	4232465008
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42, Beyaz	408 ML408WS-NB PERFORM	5003175531002	197375138206	CM38	1	1	4232465016
@@ -50,17 +56,81 @@ Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New B
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 36.5, Gri	565 WL565GRY LIFESTYLE WOMENS SHOES	5003032794001	196652674727	CM64	1	1	4232465176
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 38, Gri	565 WL565GRY LIFESTYLE WOMENS SHOES	5003032794004	196652674758	CM50	1	2	4232465182
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakka, 39.5, Krem	574 ML574EVW LIFESTYLE WOMEN SHOES	5003181812005	195907805305	CM85	1	1	4232464970
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 45, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187007	198688404125	CB23	1	1	4232464967
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 46.5, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187008	198688404149	CB23	1	1	4232464967
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 45, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187007	198688404125	CB23	1	1	4232464967
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 44, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187005	198688404101	CB23	2	2	4232464967
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42.5, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187003	198688404088	CB15	1	2	4232465008
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 42, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187002	198688404071	CB55	1	2	4232465077
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 42, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187002	198688404071	CB45	1	2	4232465197
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkabı, 43, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187004	198688404095	CM82	1	1	4232465337
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44.5, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187006	198688404118	CB44	1	1	4232465368
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42.5, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187003	198688404088	CB44	1	2	4232465368
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 39.5, Beyaz	U327LX-NB LIFESTYLE WOMEN SHOES	5003318158005	196941017662	CB63	1	1	4232465097
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Koşu Ayakkabısı, 39, Mavi	WFCXPB5-NB Running Women Shoes	5003327680004	198686835495	CM27	1	1	4232465336
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 44.5, Gri	878 CM878GG1-NB Lifestyle Men Shoes	5003320187006	198688404118	CB44	1	1	4232465368
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Bej	ACE001252273_BEJ	5003252709005	8684310691121	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Bej	ACE001252273_BEJ	5003252709004	8684310691114	GB10	1	3	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Bej	ACE001252276_BEJ	5003252734003	8684310695327	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	ACE001261528_LAC	5003307521002	8684310978864	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Palto, 54, Lacivert	ACE005261084_LAC	5003307498005	8684932098551	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, 2XL, Bej	ACE020261601_BEJ	5003306774005	8684310943039	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, S, Taş	ACE020261603_TAS	5003307426003	8684310943343	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Bordo	ACE043261438_BRD	5003307093004	8684310847658	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Kiremit	ACE043261438_KMT	5003307567004	8684310830254	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Lacivert	ACE049261484_LAC	5003307633004	8684310954165	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Ekru	ACE072261068_EKR	5003307681005	8684310961385	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Ekru	ACE072261068_EKR	5003307681004	8684310961354	GB10	1	1	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Ekru	ACE072261068_EKR	5003307681001	8684310961392	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Ekru	ACE072261068_EKR	5003307681002	8684310961378	GB10	2	4	4232381125
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	BLAST	5003043375003	8683133975395	CB46	1	1	4232472983
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Kahve	BLAST	5003043391005	8683133975623	CM47	1	2	4232472984
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	BLAST	5003043375003	8683133975395	CM47	2	1	4232472984
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	BLAST	5003043391002	8683133975296	CM27	1	1	4232472985
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	BLAST	5003043391001	8683133975289	CM22	1	1	4232472986
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Kahve	BLAST	5003043391003	8683133975609	CM22	1	1	4232472986
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	BLAST	5003043391004	8683133975616	CM63	2	3	4232472987
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	BLAST	5003043391004	8683133975616	CM83	1	3	4232472988
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Kahve	BLAST	5003043391006	8684024306335	CB56	1	2	4232472989
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XL, Siyah	D3WL-EA3	5003276317005	8684024738037	CM22	1	1	4232419870
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D4SL-EA3018	5003101178003	8684024176877	YM02	1	3	4232419874
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, L, Gri Melanj	D4WL-EA3008	5003162357004	8684024391454	CM22	1	1	4232419870
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, L, Siyah	D4WM-EA3073	5003162380003	8684024389697	CB49	1	1	4232419868
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D4WM-EA3073	5003162380002	8684024389680	CB45	1	1	4232419867
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, S, Siyah	D4WM-EA3215	5003162292001	8684024386979	CM22	1	1	4232419870
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XL, Siyah	D5WM-EA3814	5003276431004	8684024742065	CM47	1	2	4232419872
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, L, Siyah	D5WM-EA3814	5003276431003	8684024742058	CB45	1	2	4232419867
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expeditio, XL, Antrasit Melanj	D5WM-EA3828	5003276331004	8684024736965	CM68	1	2	4232419873
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, 2XL, Siyah	D5WM-EA3834	5003276473005	8684024745721	CM68	1	1	4232419873
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofma, S, Lacivert	D5WM-EA3942	5003264289001	8684024690106	CB49	1	1	4232419868
+Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, 2XL, Antrasit	D5WM-EA3985	5003276418005	8684024745219	CM40	1	1	4232419871
+AGP Transferi	Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayakk, 44, Beyaz - Mavi	EG2654 STRUTTER	5002813192003	4051043344442	CB21	1	1	4232406865
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	ET0100000010_LAC	5003253530002	8683689964652	GB10	1	2	4232381125
+Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Lacivert	ET0100000010_LAC	5003253530004	8683689964676	GB10	1	2	4232381125
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Fabrika	Fabrika Kazak, M, Ekru	F5WL-KZK0081	5003273304003	8684024713966	CM24	2	2	4232476128
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Fabrika	Fabrika Kazak, S, Ekru	F5WL-KZK0082	5003273305002	8684024714505	CM24	1	2	4232476128
+Dockers Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 34-30, Gri	Gri Smart 360 Comfort Knit Slim Fit	5003300581010	5401187621166	CM24	1	4	4232407824
+Dockers Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 38-32, Gri	Gri Smart 360 Comfort Knit Slim Fit	5003300581016	5401187621227	CB06	1	2	4232408172
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Siyah	HENEL-BODHI	5003155826001	8684024337216	CB46	1	2	4232472983
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Siyah	HENEL-BODHI	5003155826006	8684024337261	CM47	1	3	4232472984
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Taba	HENEL-BODHI	5003155846003	8684024337971	CM27	2	2	4232472985
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Taba	HENEL-BODHI	5003155846005	8684024337995	CM22	1	2	4232472986
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Taba	HENEL-BODHI	5003155846006	8684024338107	CM83	1	2	4232472988
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HENEL-BODHI	5003155826003	8684024337230	CB56	1	5	4232472989
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Taba	HENEL-BODHI	5003155846004	8684024337988	CB56	2	2	4232472989
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	HENEL-BODHI	5003155826005	8684024337254	CB43	1	2	4232472990
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	HENEL-BODHI	5003155826002	8684024337223	CB43	1	3	4232472990
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	HENEL-BODHI	5003155826004	8684024337247	CB43	2	1	4232472990
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Taba	HENEL-BODHI	5003155846006	8684024338107	CB22	1	2	4232472991
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	HENEL-BODHI	5003155826005	8684024337254	CB22	1	2	4232472991
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Taba	HENEL-BODHI	5003155846002	8684024337964	CB22	1	3	4232472991
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HENEL-BODHI	5003155826003	8684024337230	CB54	4	5	4232472992
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Taba	HENEL-BODHI	5003155846002	8684024337964	CM79	2	3	4232472993
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Taba	HENEL-BODHI	5003155846001	8684024337957	CM79	2	2	4232472993
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HUGO-EGART	5003287476003	8684024775803	CB46	1	2	4232472983
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	HUGO-EGART	5003287455001	8684024775902	CM47	2	3	4232472984
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	HUGO-EGART	5003287455001	8684024775902	CM27	1	3	4232472985
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	HUGO-EGART	5003287476004	8684024775810	CM27	1	1	4232472985
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	HUGO-EGART	5003287455002	8684024775919	CB43	1	2	4232472990
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HUGO-EGART	5003287476003	8684024775803	CB54	1	2	4232472992
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	HUGO-EGART	5003287476005	8684024775827	CB38	1	1	4232472994
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	HUGO-EGART	5003287455002	8684024775919	CB38	1	2	4232472994
 Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakkabısı, 30, Mavi	IE5989-Tensaur Run 3.0 EL C	5003167291003	4067888409055	CB54	1	1	4232462477
 Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Ay, 37, Açık Mavi - Pembe	JP7125-GAZELLE J	5003243566002	4067904572305	CM27	1	1	4232462915
 Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Aya, 25, Açık Gri - Gümüş	JP7808 X_PLRPATH EL I	5003291372005	4068801504574	CM22	1	1	4232462881
@@ -75,47 +145,146 @@ Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Aya
 Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayak, 26.5, Pembe - Beyaz	JR5104-GRAND COURT 2.0 CF I	5003243624009	4067892757661	CM44	1	1	4232462884
 Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakka, 27, Pembe - Beyaz	JR5104-GRAND COURT 2.0 CF I	5003243624007	4067892757616	CB45	1	1	4232462887
 Adidas Active Shoes Transferi	Kids	003Active Shoes	adidas	adidas Yürüyüş Ayakka, 25, Pembe - Beyaz	JR5104-GRAND COURT 2.0 CF I	5003243624005	4067892757623	CB38	1	1	4232462882
-AGP Transferi	Active & Outdoor	003Active Shoes	adidas	adidas Lifestyle Ayakk, 44, Beyaz - Mavi	EG2654 STRUTTER	5002813192003	4051043344442	CB21	1	1	4232406865
-Dockers Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 34-30, Gri	Gri Smart 360 Comfort Knit Slim Fit	5003300581010	5401187621166	CM24	1	4	4232407824
-Dockers Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 38-32, Gri	Gri Smart 360 Comfort Knit Slim Fit	5003300581016	5401187621227	CB06	1	2	4232408172
-Dockers Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-32, Gri	Signature Stain Defender Slim-0021	5003300595008	5401187238197	CM24	1	1	4232407824
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	BLAST	5003043375003	8683133975395	CB46	1	1	4232472983
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Kahve	BLAST	5003043391005	8683133975623	CM47	1	2	4232472984
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	BLAST	5003043375003	8683133975395	CM47	2	1	4232472984
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	BLAST	5003043391002	8683133975296	CM27	1	1	4232472985
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	BLAST	5003043391001	8683133975289	CM22	1	1	4232472986
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Kahve	BLAST	5003043391003	8683133975609	CM22	1	1	4232472986
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	BLAST	5003043391004	8683133975616	CM63	2	3	4232472987
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	BLAST	5003043391004	8683133975616	CM83	1	3	4232472988
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Kahve	BLAST	5003043391006	8684024306335	CB56	1	2	4232472989
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Siyah	HENEL-BODHI	5003155826001	8684024337216	CB46	1	2	4232472983
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Siyah	HENEL-BODHI	5003155826006	8684024337261	CM47	1	3	4232472984
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Taba	HENEL-BODHI	5003155846003	8684024337971	CM27	2	2	4232472985
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Taba	HENEL-BODHI	5003155846005	8684024337995	CM22	1	2	4232472986
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Taba	HENEL-BODHI	5003155846006	8684024338107	CM83	1	2	4232472988
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HENEL-BODHI	5003155826003	8684024337230	CB56	1	5	4232472989
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Taba	HENEL-BODHI	5003155846004	8684024337988	CB56	2	2	4232472989
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	HENEL-BODHI	5003155826002	8684024337223	CB43	1	3	4232472990
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	HENEL-BODHI	5003155826005	8684024337254	CB43	1	2	4232472990
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	HENEL-BODHI	5003155826004	8684024337247	CB43	2	1	4232472990
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Taba	HENEL-BODHI	5003155846006	8684024338107	CB22	1	2	4232472991
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	HENEL-BODHI	5003155826005	8684024337254	CB22	1	2	4232472991
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Taba	HENEL-BODHI	5003155846002	8684024337964	CB22	1	3	4232472991
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HENEL-BODHI	5003155826003	8684024337230	CB54	4	5	4232472992
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Taba	HENEL-BODHI	5003155846002	8684024337964	CM79	2	3	4232472993
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Taba	HENEL-BODHI	5003155846001	8684024337957	CM79	2	2	4232472993
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HUGO-EGART	5003287476003	8684024775803	CB46	1	2	4232472983
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	HUGO-EGART	5003287455001	8684024775902	CM47	2	3	4232472984
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	HUGO-EGART	5003287476004	8684024775810	CM27	1	1	4232472985
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	HUGO-EGART	5003287455001	8684024775902	CM27	1	3	4232472985
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	HUGO-EGART	5003287455002	8684024775919	CB43	1	2	4232472990
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	HUGO-EGART	5003287476003	8684024775803	CB54	1	2	4232472992
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	HUGO-EGART	5003287455002	8684024775919	CB38	1	2	4232472994
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	HUGO-EGART	5003287476005	8684024775827	CB38	1	1	4232472994
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	L47111500_REELAX MOC 6.0	5003002669007	195751218139	CB56	1	1	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47111500_REELAX MOC 6.0	5003002669004	195751218122	CB56	1	1	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45, Siyah	L47111500_REELAX MOC 6.0	5003002669005	195751218146	CB56	2	2	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	L47111500_REELAX MOC 6.0	5003002669002	195751218092	CB56	4	4	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Koşu Ayakkabısı, 43, Siyah	L47147200SENSE RIDE 5 GTX	5003204028003	195751227995	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201001	195751578882	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201006	195751578752	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201004	195751578776	CB21	2	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201002	195751578875	CB21	3	3	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201003	195751578783	CB21	4	3	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 41, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184001	195751581578	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 45, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184005	195751581660	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 43, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184003	195751581639	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakk, 44.5, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184008	195751581608	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakk, 42.5, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184007	195751581615	CM83	2	2	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 42, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184002	195751581554	CM83	3	3	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 44, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184004	195751581585	CM83	4	4	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 45, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064005	195751555500	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon O, 42.5, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064006	195751555470	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon O, 44.5, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064007	195751555524	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 41, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064001	195751555609	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 43, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064003	195751555517	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 44, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064004	195751555494	CM83	2	2	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 42, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064002	195751555593	CM83	2	2	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 45, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115005	195751703611	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 41, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115001	195751703666	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor, 44.5, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115008	195751703550	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor, 42.5, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115007	195751703567	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 42, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115002	195751703635	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 44, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115004	195751703543	CB21	4	4	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Siyah	L47725500_X ULTRA 5 GORE-TEX	5003314293005	195751946728	CM27	2	2	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47725500_X ULTRA 5 GORE-TEX	5003314293002	195751946681	CM27	2	2	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	L47725500_X ULTRA 5 GORE-TEX	5003314293001	195751946704	CM27	2	2	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376006	195751887281	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376005	195751887267	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376001	195751887182	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 45.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376007	195751887199	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376002	195751887274	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376004	195751887250	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376003	195751887175	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403003	195751944960	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 45.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403007	195751945004	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403006	195751945035	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403004	195751945042	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403001	195751944939	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403002	195751945028	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403005	195751945059	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabı, 42.5, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296004	195751947022	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabı, 44.5, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296006	195751947084	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabı, 45.5, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296007	195751947060	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296002	195751947077	CM83	2	2	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296001	195751947152	CM83	2	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Siyah	L47802100_ALPHAGLIDE GORE-TEX	5003314297003	195751906227	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47802100_ALPHAGLIDE GORE-TEX	5003314297002	195751906180	CM83	2	2	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257004	195751917681	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257007	195751917643	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257006	195751917650	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257003	195751917575	CM27	1	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257005	195751917674	CM27	2	1	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257001	195751917568	CM27	2	2	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257002	195751917667	CM27	2	2	4232482936
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301006	198720109070	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301004	198720109100	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301003	198720108981	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301002	198720109063	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301001	198720109117	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301005	198720109087	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279007	198720176362	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279004	198720176461	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279003	198720176386	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279006	198720176447	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279002	198720176478	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279001	198720176423	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279005	198720176454	CB21	2	2	4232482868
+Kurumsal Satış Transfer Data	Mens	006Apparel	U.S. Polo Assn.	U.S. Polo Assn. Denim Pant, 34-33, Yeşil	MATLO	5003312167013	8683859535491	CB73	1	1	4232485260
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	MENGA-ANITA	5003155855005	8684024338756	CM83	1	1	4232472988
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Siyah	MENGA-ANITA	5003155855006	8684024338763	CB43	1	1	4232472990
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	MENGA-ANITA	5003155855004	8684024338749	CB43	2	2	4232472990
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	MENGA-ANITA	5003155855003	8684024338732	CM79	2	4	4232472993
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLAGNETE FAUX LEATHER  BIKER JKT C	5003202595001	5715312109383	CB38	1	1	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137001	5715507771678	CB56	1	1	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137004	5715507771647	CB56	1	1	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137005	5715613228202	CB56	1	1	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137003	5715507771654	CB56	2	2	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137002	5715507771661	CB56	2	2	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLMERCEDES AOP PUFFER LIFE OTW	5003202699001	5715608839925	CB46	1	2	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLMERCEDES AOP PUFFER LIFE OTW	5003202699002	5715608839918	CB46	1	3	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLMERCEDES AOP PUFFER LIFE OTW	5003202699003	5715608839901	CB46	1	3	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Krem	ONLNEWAMANDA SHORT JACKET CC OTW	5003056162002	5715425045684	CM84	2	2	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Krem	ONLNEWAMANDA SHORT JACKET CC OTW	5003056162001	5715425045691	CM84	3	3	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170004	5715425345494	CB56	1	2	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170002	5715425344954	CB35	1	1	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170001	5715425344961	CB35	1	1	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170005	5715425344923	CB35	1	1	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170004	5715425345494	CM84	1	2	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170003	5715425344947	CM84	1	1	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLNEWDIANA LIFE AVIATOR JACKET CC	5003296269003	5715601810761	CB35	1	2	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLNEWDIANA LIFE AVIATOR JACKET CC	5003296269001	5715601810778	CB35	1	2	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLNEWDIANA LIFE AVIATOR JACKET CC	5003296269002	5715601810785	CB35	1	3	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Taş	ONLNEWKATY PARKA LIFE OTW CC	5003296400001	5715726287448	CB35	1	2	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, S, Taş	ONLNEWKATY PARKA LIFE OTW CC	5003296400003	5715726287509	CB35	1	2	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Taş	ONLNEWKATY PARKA LIFE OTW CC	5003296400002	5715726287479	CB35	2	3	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Antrasit	ONLNEWLUNA QUILTED JACKET CC OTW	5003202765005	5715425982309	CB38	1	1	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Antrasit	ONLNEWLUNA QUILTED JACKET CC OTW	5003202765003	5715425982316	CB38	1	1	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Antrasit	ONLNEWLUNA QUILTED JACKET CC OTW	5003202765002	5715425982323	CB38	1	2	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, XS, Siyah	ONLNEWPRISKA PARKA JACKET CC OTW	5003056172005	5715425056840	CB46	1	1	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Siyah	ONLNEWPRISKA PARKA JACKET CC OTW	5003056172001	5715425056888	CB46	1	1	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Siyah	ONLNEWPRISKA PARKA JACKET CC OTW	5003056172002	5715425056871	CB46	4	4	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424002	5715425064333	CB46	1	1	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424004	5715425064319	CB46	1	1	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424001	5715425064326	CB46	1	1	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064407003	5715425064197	CM84	1	1	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064407001	5715425064173	CM84	2	1	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064407002	5715425064180	CM84	4	4	4232476455
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Ceket, S, Açık Kahve	ONLPISA FUR JACKET OTW	5003202813003	5715601694972	CB56	2	2	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Ceket, M, Açık Kahve	ONLPISA FUR JACKET OTW	5003202813002	5715601694958	CB56	3	3	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Kırık Beyaz	ONLPOP TEDDY JACKET OTW	5003202830002	5715601062047	CB56	1	3	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Açık Kahve	ONLVIDA FUR HOODED JACKET CC OTW	5003296362001	5715826162386	CB35	1	1	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Açık Kahve	ONLVIDA FUR HOODED JACKET CC OTW	5003296362002	5715826162379	CB35	3	3	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156001	5715424853273	CB46	1	1	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156005	5715424853266	CB46	2	2	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156003	5715414214848	CB46	2	2	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156002	5715414214800	CB46	2	2	4232476429
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950001	5715601850873	CB38	1	1	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950002	5715511744194	CB38	1	1	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950003	5715511744200	CB38	2	2	4232476452
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363001	5715601795426	CB56	1	1	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, XS, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363004	5715601795402	CB56	1	1	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363002	5715601795433	CB56	2	2	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, S, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363003	5715601795419	CB56	2	2	4232476404
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Kahve	ONLYLVA BONDED COLLAR COAT CC OTW	5003203232001	5715601795457	CB35	1	1	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, S, Kahve	ONLYLVA BONDED COLLAR COAT CC OTW	5003203232003	5715511574869	CB35	2	2	4232476438
+Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Kahve	ONLYLVA BONDED COLLAR COAT CC OTW	5003203232002	5715511588743	CB35	3	3	4232476438
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44.5, Siyah	OUTsnap CSWP	5002489318001	193128079406	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 45, Siyah	OUTsnap CSWP	5002489318002	193128079413	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41, Siyah	OUTsnap CSWP	5002489318005	193128079109	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Siyah	OUTsnap CSWP	5002489318007	193128079123	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Siyah	OUTsnap CSWP	5002489318006	193128079116	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Siyah	OUTsnap CSWP	5002489318009	193128079147	CM83	1	1	4232482934
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43, Siyah	OUTsnap CSWP	5002489318008	193128079130	CM83	1	1	4232482934
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	RIOS-PAOLA	5003287490002	8684024775520	CB46	1	2	4232472983
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Kahve	RIOS-PAOLA	5003287490002	8684024775520	CM47	1	2	4232472984
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	RIOS-PAOLA	5003287481005	8684024775629	CM47	1	2	4232472984
@@ -123,14 +292,21 @@ Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Kahve	RIOS
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Siyah	RIOS-PAOLA	5003287481001	8684024775087	CM22	1	1	4232472986
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	RIOS-PAOLA	5003287481002	8684024775094	CM83	1	2	4232472988
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	RIOS-PAOLA	5003287481005	8684024775629	CM83	1	2	4232472988
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	RIOS-PAOLA	5003287481004	8684024775612	CB56	1	1	4232472989
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Siyah	RIOS-PAOLA	5003287481006	8684024775636	CB56	1	1	4232472989
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	RIOS-PAOLA	5003287481004	8684024775612	CB56	1	1	4232472989
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Kahve	RIOS-PAOLA	5003287490005	8684024775551	CB56	1	1	4232472989
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Kahve	RIOS-PAOLA	5003287490006	8684024775568	CB43	1	1	4232472990
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	RIOS-PAOLA	5003287490004	8684024775544	CB43	2	2	4232472990
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	RIOS-PAOLA	5003287481002	8684024775094	CB22	1	2	4232472991
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	RIOS-PAOLA	5003287481003	8684024775605	CB22	1	2	4232472991
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	RIOS-PAOLA	5003287481002	8684024775094	CB22	1	2	4232472991
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	RIOS-PAOLA	5003287490001	8684024775513	CB22	1	1	4232472991
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801008	195751105682	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801003	195751105651	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801001	195751105637	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801006	195751105699	CB21	1	1	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801005	195751105675	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801002	195751105644	CB21	2	2	4232482868
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801004	195751105668	CB21	2	2	4232482868
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Antrasit	SEKA-ARES	5003287448002	8684024775247	CM22	1	2	4232472986
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Antrasit	SEKA-ARES	5003287448004	8684024775261	CM22	2	2	4232472986
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Lacivert	SEKA-ARES	5003287467003	8684024775728	CM63	2	2	4232472987
@@ -139,17 +315,25 @@ Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Lacivert	S
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Antrasit	SEKA-ARES	5003287448002	8684024775247	CB22	1	2	4232472991
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Lacivert	SEKA-ARES	5003287467002	8684024775711	CB22	2	2	4232472991
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Antrasit	SEKA-ARES	5003287448003	8684024775254	CM79	2	2	4232472993
+Dockers Transferi	Mens	006Apparel	Dockers	Dockers Pantolon, 33-32, Gri	Signature Stain Defender Slim-0021	5003300595008	5401187238197	CM24	1	1	4232407824
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Kahve	SOREN-ARLO	5003291111001	8684024790394	CB46	1	1	4232472983
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	SOREN-ARLO	5003291096004	8684024790523	CM47	1	2	4232472984
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	SOREN-ARLO	5003291111004	8684024790622	CM22	2	2	4232472986
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Kahve	SOREN-ARLO	5003291111005	8684024790639	CM63	1	1	4232472987
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	SOREN-ARLO	5003291096002	8684024790509	CM63	1	2	4232472987
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Kahve	SOREN-ARLO	5003291111005	8684024790639	CM63	1	1	4232472987
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	SOREN-ARLO	5003291096004	8684024790523	CM63	1	2	4232472987
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	SOREN-ARLO	5003291096003	8684024790516	CM83	3	3	4232472988
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Kahve	SOREN-ARLO	5003291111006	8684024790646	CB22	1	1	4232472991
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	SOREN-ARLO	5003291096002	8684024790509	CB22	1	2	4232472991
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Kahve	SOREN-ARLO	5003291111006	8684024790646	CB22	1	1	4232472991
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Siyah	SOREN-ARLO	5003291096006	8684024790547	CM79	1	1	4232472993
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	SOREN-ARLO	5003291096005	8684024790530	CB38	1	1	4232472994
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	SUPERCROSS 4 GTX	5002944187002	195751085199	CB56	1	1	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45, Siyah	SUPERCROSS 4 GTX	5002944187007	195751085243	CB56	2	1	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41, Siyah	SUPERCROSS 4 GTX	5002944187001	195751085182	CB56	2	1	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	SUPERCROSS 4 GTX	5002944187005	195751085229	CB56	3	3	4232482870
+Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43, Siyah	SUPERCROSS 4 GTX	5002944187004	195751085212	CB56	3	3	4232482870
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 39.5, Beyaz	U327LX-NB LIFESTYLE WOMEN SHOES	5003318158005	196941017662	CB63	1	1	4232465097
+Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Koşu Ayakkabısı, 39, Mavi	WFCXPB5-NB Running Women Shoes	5003327680004	198686835495	CM27	1	1	4232465336
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	YODER-BOWEN	5003155817002	8684024337735	CB46	1	1	4232472983
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	YODER-BOWEN	5003155817003	8684024337742	CM22	1	2	4232472986
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	YODER-BOWEN	5003155817005	8684024337766	CB43	1	1	4232472990
@@ -157,198 +341,9 @@ Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	YODE
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 41, Siyah	YODER-DEWEY	5003155853002	8684024338565	CB46	2	2	4232472983
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Siyah	YODER-DEWEY	5003155853004	8684024338589	CM47	3	3	4232472984
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Siyah	YODER-DEWEY	5003155853003	8684024338572	CM27	3	3	4232472985
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	YODER-DEWEY	5003155853005	8684024338596	CM83	2	2	4232472988
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 40, Siyah	YODER-DEWEY	5003155853001	8684024338558	CM83	2	2	4232472988
+Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Siyah	YODER-DEWEY	5003155853005	8684024338596	CM83	2	2	4232472988
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Siyah	YODER-DEWEY	5003155853006	8684024338701	CM79	2	2	4232472993
-Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 43, Kahve	YODER-DEWEY-SUET	5003287503004	8684024776930	CM22	1	1	4232472986
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 42, Kahve	YODER-DEWEY-SUET	5003287503003	8684024776923	CM63	1	1	4232472987
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 44, Kahve	YODER-DEWEY-SUET	5003287503005	8684024776947	CB43	1	1	4232472990
 Fabrika Transferi	Shoes & Bags	033Mens Shoes	Fabrika	Fabrika Bot, 45, Kahve	YODER-DEWEY-SUET	5003287503006	8684024776954	CB22	1	1	4232472991
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XL, Siyah	D3WL-EA3	5003276317005	8684024738037	CM22	1	1	4232419870
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D4SL-EA3018	5003101178003	8684024176877	YM02	1	3	4232419874
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, L, Gri Melanj	D4WL-EA3008	5003162357004	8684024391454	CM22	1	1	4232419870
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, L, Siyah	D4WM-EA3073	5003162380003	8684024389697	CB49	1	1	4232419868
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, M, Siyah	D4WM-EA3073	5003162380002	8684024389680	CB45	1	1	4232419867
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, S, Siyah	D4WM-EA3215	5003162292001	8684024386979	CM22	1	1	4232419870
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, XL, Siyah	D5WM-EA3814	5003276431004	8684024742065	CM47	1	2	4232419872
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman A, L, Siyah	D5WM-EA3814	5003276431003	8684024742058	CB45	1	2	4232419867
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expeditio, XL, Antrasit Melanj	D5WM-EA3828	5003276331004	8684024736965	CM68	1	2	4232419873
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofman, 2XL, Siyah	D5WM-EA3834	5003276473005	8684024745721	CM68	1	1	4232419873
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşofma, S, Lacivert	D5WM-EA3942	5003264289001	8684024690106	CB49	1	1	4232419868
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition, L, Antrasit Melanj	D5WM-EA3942	5003264277003	8684024689438	YM02	1	1	4232419874
-Manuel Transferler Run ID 72164	Active & Outdoor	040Outdoor Apparel	Discovery Expedition	Discovery Expedition Eşof, 2XL, Antrasit	D5WM-EA3985	5003276418005	8684024745219	CM40	1	1	4232419871
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 54, Bej	ACE001252273_BEJ	5003252709005	8684310691121	GB10	1	2	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Bej	ACE001252273_BEJ	5003252709004	8684310691114	GB10	1	3	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Pantolon, 52, Bej	ACE001252276_BEJ	5003252734003	8684310695327	GB10	1	2	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	ACE001261528_LAC	5003307521002	8684310978864	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Palto, 54, Lacivert	ACE005261084_LAC	5003307498005	8684932098551	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, 2XL, Bej	ACE020261601_BEJ	5003306774005	8684310943039	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Gömlek, S, Taş	ACE020261603_TAS	5003307426003	8684310943343	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Bordo	ACE043261438_BRD	5003307093004	8684310847658	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, M, Kiremit	ACE043261438_KMT	5003307567004	8684310830254	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Lacivert	ACE049261484_LAC	5003307633004	8684310954165	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classic, S, Lacivert - Bordo	ACE049261524_LBR	5003308061004	8684932093822	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, XL, Ekru	ACE072261068_EKR	5003307681005	8684310961385	GB10	1	2	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, S, Ekru	ACE072261068_EKR	5003307681004	8684310961354	GB10	1	1	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, 2XL, Ekru	ACE072261068_EKR	5003307681001	8684310961392	GB10	1	2	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Kazak, L, Ekru	ACE072261068_EKR	5003307681002	8684310961378	GB10	2	4	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 48, Lacivert	ET0100000010_LAC	5003253530002	8683689964652	GB10	1	2	4232381125
-Manuel Transferler Run ID 72164	Mens	006Apparel	Altınyıldız Classics	Altınyıldız Classics Panto, 52, Lacivert	ET0100000010_LAC	5003253530004	8683689964676	GB10	1	2	4232381125
-Manuel Transferler Run ID 72165	Active & Outdoor	003Active Shoes	Asics	Asics Koşu Ayakkabısı, 37.5, Siyah	1012B757-002 JOLT 5	5003302711001	4570158255882	GS06	1	2	4232454784
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47111500_REELAX MOC 6.0	5003002669004	195751218122	CB56	1	1	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	L47111500_REELAX MOC 6.0	5003002669007	195751218139	CB56	1	1	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45, Siyah	L47111500_REELAX MOC 6.0	5003002669005	195751218146	CB56	2	2	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	L47111500_REELAX MOC 6.0	5003002669002	195751218092	CB56	4	4	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Koşu Ayakkabısı, 43, Siyah	L47147200SENSE RIDE 5 GTX	5003204028003	195751227995	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201001	195751578882	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201004	195751578776	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201006	195751578752	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201002	195751578875	CB21	3	3	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43, Siyah - Gri	L47447600X ULTRA 360 MID GTX	5003204201003	195751578783	CB21	4	4	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 41, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184001	195751581578	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakk, 44.5, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184008	195751581608	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 45, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184005	195751581660	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 43, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184003	195751581639	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakk, 42.5, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184007	195751581615	CM83	2	2	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 42, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184002	195751581554	CM83	3	3	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkab, 44, Siyah - Gri	L47453200X ULTRA 360 GTX	5003204184004	195751581585	CM83	4	4	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 41, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064001	195751555609	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 45, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064005	195751555500	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon O, 42.5, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064006	195751555470	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 43, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064003	195751555517	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon O, 44.5, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064007	195751555524	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 42, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064002	195751555593	CM83	2	2	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Out, 44, Beyaz - Mavi - Lacivert	L47462300SUPERCROSS 4 GTX	5003204064004	195751555494	CM83	2	2	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor, 44.5, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115008	195751703550	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 45, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115005	195751703611	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 41, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115001	195751703666	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor, 42.5, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115007	195751703567	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 42, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115002	195751703635	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ay, 44, Lacivert - Siyah	L47687000X ULTRA 360 GTX	5003204115004	195751703543	CB21	4	4	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	L47725500_X ULTRA 5 GORE-TEX	5003314293001	195751946704	CM27	2	2	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Siyah	L47725500_X ULTRA 5 GORE-TEX	5003314293005	195751946728	CM27	2	2	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47725500_X ULTRA 5 GORE-TEX	5003314293002	195751946681	CM27	2	2	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376002	195751887274	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376001	195751887182	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376006	195751887281	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376005	195751887267	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376003	195751887175	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 45.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376007	195751887199	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Antrasit	L47743300_X ULTRA 360 MID GORE-TEX	5003314376004	195751887250	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403004	195751945042	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403006	195751945035	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403003	195751944960	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 45.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403007	195751945004	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403001	195751944939	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403002	195751945028	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43.5, Antrasit	L47754300_X ULTRA 5 MID GORE-TEX	5003314403005	195751945059	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabı, 44.5, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296006	195751947084	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabı, 45.5, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296007	195751947060	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabı, 42.5, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296004	195751947022	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296002	195751947077	CM83	2	2	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Antrasit	L47797800_X ULTRA 5 GORE-TEX	5003314296001	195751947152	CM83	2	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	L47802100_ALPHAGLIDE GORE-TEX	5003314297006	195751906197	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Siyah	L47802100_ALPHAGLIDE GORE-TEX	5003314297003	195751906227	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47802100_ALPHAGLIDE GORE-TEX	5003314297002	195751906180	CM83	2	2	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257003	195751917575	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257006	195751917650	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257007	195751917643	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257004	195751917681	CM27	1	1	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257002	195751917667	CM27	2	2	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257001	195751917568	CM27	2	2	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Gri	L47817500_XA PRO 3D V9 GORE-TEX	5003314257005	195751917674	CM27	2	2	4232482936
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301006	198720109070	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301004	198720109100	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301007	198720109056	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301003	198720108981	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301005	198720109087	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301001	198720109117	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	L47853800_SPEEDCROSS PEAK GORE-TEX	5003314301002	198720109063	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279006	198720176447	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279007	198720176362	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279004	198720176461	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279003	198720176386	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279001	198720176423	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43.5, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279005	198720176454	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Gri	L47975300_ALPHAGLIDE GORE-TEX	5003314279002	198720176478	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 45, Siyah	OUTsnap CSWP	5002489318002	193128079413	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44, Siyah	OUTsnap CSWP	5002489318009	193128079147	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 44.5, Siyah	OUTsnap CSWP	5002489318001	193128079406	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 41, Siyah	OUTsnap CSWP	5002489318005	193128079109	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 43, Siyah	OUTsnap CSWP	5002489318008	193128079130	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42, Siyah	OUTsnap CSWP	5002489318006	193128079116	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Bot, 42.5, Siyah	OUTsnap CSWP	5002489318007	193128079123	CM83	1	1	4232482934
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801006	195751105699	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44.5, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801008	195751105682	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42.5, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801003	195751105651	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801001	195751105637	CB21	1	1	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801005	195751105675	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801004	195751105668	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	Salomon SPEEDCROSS 6 GTX	5003068801002	195751105644	CB21	2	2	4232482868
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 42, Siyah	SUPERCROSS 4 GTX	5002944187002	195751085199	CB56	1	1	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 41, Siyah	SUPERCROSS 4 GTX	5002944187001	195751085182	CB56	2	1	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 45, Siyah	SUPERCROSS 4 GTX	5002944187007	195751085243	CB56	2	2	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 44, Siyah	SUPERCROSS 4 GTX	5002944187005	195751085229	CB56	3	3	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	041Outdoor Shoes	Salomon	Salomon Outdoor Ayakkabısı, 43, Siyah	SUPERCROSS 4 GTX	5002944187004	195751085212	CB56	3	3	4232482870
-Manuel Transferler Run ID 72165	Active & Outdoor	002Active Apparel	Under Armour	Under Armour Şort, L, Mavi	1379507-410-UA M Challenger Train	5003297748001	196883814893	GS06	1	2	4232454784
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Fabrika	Fabrika Kazak, M, Ekru	F5WL-KZK0081	5003273304003	8684024713966	CM24	2	3	4232476128
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Fabrika	Fabrika Kazak, S, Ekru	F5WL-KZK0082	5003273305002	8684024714505	CM24	1	2	4232476128
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Siyah	15260002	5002927051004	5715312109369	CB38	1	2	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	15260002	5002927051001	5715312109376	CB38	1	2	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	15260047	5002927033001	5715318882617	CM84	1	1	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	15260047	5002927033003	5715318882594	CM84	2	2	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	15260047	5002927033002	5715318882600	CM84	3	3	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLAGNETE FAUX LEATHER  BIKER JKT C	5003202595001	5715312109383	CB38	1	1	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137005	5715613228202	CB56	1	1	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137001	5715507771678	CB56	1	1	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137004	5715507771647	CB56	1	1	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137003	5715507771654	CB56	2	2	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLECE PUFFER JACKET CS OTW	5003056137002	5715507771661	CB56	2	2	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLMERCEDES AOP PUFFER LIFE OTW	5003202699003	5715608839901	CB46	1	3	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLMERCEDES AOP PUFFER LIFE OTW	5003202699002	5715608839918	CB46	1	3	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLMERCEDES AOP PUFFER LIFE OTW	5003202699001	5715608839925	CB46	1	2	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Krem	ONLNEWAMANDA SHORT JACKET CC OTW	5003056162002	5715425045684	CM84	2	2	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Krem	ONLNEWAMANDA SHORT JACKET CC OTW	5003056162001	5715425045691	CM84	3	3	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170004	5715425345494	CB56	1	2	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170002	5715425344954	CB35	1	1	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170005	5715425344923	CB35	1	1	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170001	5715425344961	CB35	1	1	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XL, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170004	5715425345494	CM84	1	2	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLNEWCOOL PUFFER JACKET CC OTW	5003056170003	5715425344947	CM84	1	1	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLNEWDIANA LIFE AVIATOR JACKET CC	5003296269003	5715601810761	CB35	1	2	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLNEWDIANA LIFE AVIATOR JACKET CC	5003296269001	5715601810778	CB35	1	2	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLNEWDIANA LIFE AVIATOR JACKET CC	5003296269002	5715601810785	CB35	1	3	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, S, Taş	ONLNEWKATY PARKA LIFE OTW CC	5003296400003	5715726287509	CB35	1	2	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Taş	ONLNEWKATY PARKA LIFE OTW CC	5003296400001	5715726287448	CB35	1	2	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Taş	ONLNEWKATY PARKA LIFE OTW CC	5003296400002	5715726287479	CB35	2	3	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Antrasit	ONLNEWLUNA QUILTED JACKET CC OTW	5003202765005	5715425982309	CB38	1	1	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Antrasit	ONLNEWLUNA QUILTED JACKET CC OTW	5003202765003	5715425982316	CB38	1	1	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Antrasit	ONLNEWLUNA QUILTED JACKET CC OTW	5003202765002	5715425982323	CB38	1	2	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, XS, Siyah	ONLNEWPRISKA PARKA JACKET CC OTW	5003056172005	5715425056840	CB46	1	1	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Siyah	ONLNEWPRISKA PARKA JACKET CC OTW	5003056172001	5715425056888	CB46	1	1	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Siyah	ONLNEWPRISKA PARKA JACKET CC OTW	5003056172002	5715425056871	CB46	4	4	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424004	5715425064319	CB46	1	1	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424002	5715425064333	CB46	1	1	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Sarı	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064424001	5715425064326	CB46	1	1	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Siyah	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064407003	5715425064197	CM84	1	1	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Siyah	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064407001	5715425064173	CM84	2	2	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Siyah	ONLNEWVIDA FAUX FUR JACKET CC OTW	5003064407002	5715425064180	CM84	4	4	4232476455
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Ceket, S, Açık Kahve	ONLPISA FUR JACKET OTW	5003202813003	5715601694972	CB56	2	2	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Ceket, M, Açık Kahve	ONLPISA FUR JACKET OTW	5003202813002	5715601694958	CB56	3	3	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Kırık Beyaz	ONLPOP TEDDY JACKET OTW	5003202830002	5715601062047	CB56	1	4	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Açık Kahve	ONLVIDA FUR HOODED JACKET CC OTW	5003296362001	5715826162386	CB35	1	1	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Açık Kahve	ONLVIDA FUR HOODED JACKET CC OTW	5003296362002	5715826162379	CB35	3	3	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156001	5715424853273	CB46	1	1	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156003	5715414214848	CB46	2	2	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, XS, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156005	5715424853266	CB46	2	2	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Krem	ONLWANJA FUR PUFFER MIX JACKET CC O	5003056156002	5715414214800	CB46	2	2	4232476429
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, L, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950001	5715601850873	CB38	1	1	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, M, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950002	5715511744194	CB38	1	1	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Mont, S, Açık Kahve	ONLWANJA FUR PUFFER MIX JACKET CC O	5003202950003	5715511744200	CB38	2	2	4232476452
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363001	5715601795426	CB56	1	1	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, XS, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363004	5715601795402	CB56	1	1	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, S, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363003	5715601795419	CB56	2	2	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Krem	ONLYLVA BONDED COLLAR COAT CC OTW	5003296363002	5715601795433	CB56	2	2	4232476404
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, L, Kahve	ONLYLVA BONDED COLLAR COAT CC OTW	5003203232001	5715601795457	CB35	1	1	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, S, Kahve	ONLYLVA BONDED COLLAR COAT CC OTW	5003203232003	5715511574869	CB35	2	2	4232476438
-Manuel Transferler Run ID 72165	Ladies	006Apparel	Only	Only Kaban, M, Kahve	ONLYLVA BONDED COLLAR COAT CC OTW	5003203232002	5715511588743	CB35	3	3	4232476438
