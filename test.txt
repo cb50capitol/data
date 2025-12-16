@@ -1,5 +1,3 @@
-Transfer	Kategori	Alt Kat.	Marka	Ürün	Model	Malzeme	Barkod	Lokasyon	Adet	Stok	Is Emri
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle, 40.5, Gri - Beyaz	1906 M1906REE-Lifestyle Women Shoes	5003279010007	197375272092	CB55	1	1	4232465077
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 45, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946007	198686029832	CM85	1	1	4232464970
 Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakkab, 42, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946002	198686029788	CM24	2	2	4232465022
-Adidas Active Shoes Transferi	Active & Outdoor	003Active Shoes	New Balance	New Balance Lifestyle Ayakk, 42.5, Gümüş	408 ML408GS-NB Lifestyle Men Shoes	5003251946003	198686029795	CM83	2	2	4232465029
