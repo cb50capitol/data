@@ -1,0 +1,71 @@
+# Gerekli kütüphaneler
+!pip install requests beautifulsoup4 pandas --quiet
+
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
+import random
+from IPython.display import display
+
+HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+def get_image_fast(code):
+    """
+    Arama sayfasından doğrudan ürünün küçük resim URL'sini çeker.
+    Tek HTTP isteği ile hızlı çalışır.
+    """
+    try:
+        search_url = f"https://www.boyner.com.tr/search?q={code}"
+        r = requests.get(search_url, headers=HEADERS, timeout=10)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        # Arama sayfasında ilk ürünün resmi
+        img = soup.select_one('img[src^="https://statics-"]')
+        return img["src"] if img else ""
+    except Exception as e:
+        print(f"Hata {code} için: {e}")
+        return ""
+
+# ----------------------------
+# Buraya Excel'den kopyaladığın ürün kodlarını yapıştır
+urun_kodlari_text = """
+5002988750
+
+"""
+# ----------------------------
+
+# Çok satırlı stringi listeye çevir
+urun_kodlari = [line.strip() for line in urun_kodlari_text.strip().splitlines() if line.strip()]
+
+sonuclar = []
+failed = []
+
+for idx, code in enumerate(urun_kodlari, 1):
+    url = get_image_fast(code)
+    if not url:
+        failed.append(code)
+    sonuclar.append({"urun_kodu": code, "resim_url": url})
+
+    # 0.1-0.3 saniye rastgele bekle (hızlı)
+    time.sleep(random.uniform(0.1, 0.3))
+
+    # Her 100 üründe geçici CSV kaydet
+    if idx % 100 == 0:
+        df_temp = pd.DataFrame(sonuclar)
+        df_temp.to_csv("urun_resimleri_temp.csv", index=False)
+        print(f"{idx} ürün işlendi, geçici CSV kaydedildi.")
+
+# Son DataFrame
+df = pd.DataFrame(sonuclar)
+display(df)
+
+# Kalıcı CSV kaydet
+df.to_csv("urun_resimleri.csv", index=False)
+print("Tüm ürünler işlendi. CSV kaydedildi: urun_resimleri.csv")
+
+# Başarısız ürünleri göster
+if failed:
+    print("\nBaşarısız ürünler (tekrar deneyebilirsiniz):")
+    print(failed)
